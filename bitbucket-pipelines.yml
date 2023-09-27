@@ -1,0 +1,21 @@
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    pipeline-config-push:
+      - step:
+          name: Sync          
+          script:
+            - git clone https://${USERNAME}:${PASSWORD}@bitbucket.org/brevilledigital/breville-aem-brands.git orig
+            - git -C orig checkout develop
+            - git clone https://${ADOBEUSERNAME}:${ADOBEPASSWORD}@git.cloudmanager.adobe.com/breville/BrevilleGroupLimitedProgram2-p34580/ upstream
+            - ls -lrt
+            - git -C upstream checkout develop
+            - cd upstream
+            - rm -rf *
+            - cd ..
+            - cp -r orig/* upstream/
+            - git -C upstream add --all
+            - git config --global user.email "${GITUSERMAIL}" && git -C upstream commit -m "sync"
+            #- git config --global push.default matching
+            - git -C upstream push
