@@ -1,0 +1,102 @@
+.questionnaire__container {
+  margin: 0 auto;
+  align-items: center;
+  padding: $cs-spacing-40 $cs-spacing-20 $cs-spacing-35;
+
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-60 0 $cs-spacing-50;
+  }
+
+  ol {
+    list-style-position: outside;
+    padding-inline-start: inherit;
+    margin-bottom: $cs-spacing-40;
+
+    .questionnaire__mobile {
+      @extend %cs-form-selectbox;
+      @extend %cs-font-p-4;
+      display: flex;
+      max-width: 260px;
+      padding-right: $cs-spacing-30;
+      text-overflow: ellipsis !important;   
+    }
+    
+    @media (min-width: $cs-screen-md) {    
+      max-width: 560px;
+      padding: 0 0 $cs-spacing-20;
+      margin: 0 auto;  
+    }
+
+  
+    .questionnaire__desktop {
+      display: none;
+    }
+    @media (min-width: $cs-screen-md) {
+      .questionnaire__desktop {
+        margin: 0 auto;
+        display: inline;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .questionnaire__mobile {
+        display: none;
+      }
+    }
+
+    .questionnaire__item {
+      margin-bottom: $cs-spacing-30;
+
+      &.questionnaire__item--disabled {
+        margin-bottom: $cs-spacing-25;
+        
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: $cs-spacing-40;
+        }
+      }
+
+      .questionnaire__button {
+        @extend %cs-font-p-4;
+        display: none;
+
+        &:focus {          
+          background-color: $cs-dark-purple;
+          color: $cs-white;
+        }
+        
+        @media (min-width: $cs-screen-md) {
+          margin: 0 $cs-spacing-10 $cs-spacing-10 0;
+          display: inline-block;
+        }
+      }
+
+      &::marker {
+        @extend %cs-font-h10;
+        font-weight: $cs-font-weight-bold;
+      }      
+
+      .questionnaire__question {
+        @extend %cs-font-h10;
+        margin-bottom: $cs-spacing-20;
+
+        @media (min-width: $cs-screen-md) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: $cs-spacing-25;
+        }
+      }
+    }
+  }
+
+  .questionnaire__btn-find-coffee {
+    @extend %cs-button-green-fill-medium;
+    @extend %cs-font-p-2;
+    width: 100%;
+    @media (min-width: $cs-screen-md) {
+      margin: 0 auto;
+      display: flex;
+      max-width: 17.5rem;
+    }
+  }
+}

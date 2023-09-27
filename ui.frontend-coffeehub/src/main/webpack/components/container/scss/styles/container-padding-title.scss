@@ -1,0 +1,14 @@
+.cmp-container--padding-title {
+  padding-bottom: $spacing-sm;
+  
+  .cmp-container {
+    padding: $spacing-md $spacing-sm;
+      
+    @media (min-width: $screen-md) {
+      padding-top: $spacing-xxl;
+      padding-right: $spacing-xxl;
+      padding-left: $spacing-xxl;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.cmp-questionnaire-result-overview {
+  min-width: 280px;
+  margin: 0 auto;
+  padding: $cs-spacing-25 $cs-spacing-20 $cs-spacing-20;
+
+  @media (min-width: $cs-screen-md) {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $cs-spacing-35 $cs-spacing-10;   
+  }
+
+  &--label-choice {
+    @extend %cs-font-h11;
+    margin-bottom: $cs-spacing-10;
+
+    white-space: nowrap;
+
+    @media (min-width: $cs-screen-md) {
+      display: inline;
+      margin-bottom: 0;
+      padding: 0 $cs-spacing-15 0 0;
+
+      line-height: $cs-line-height-p;
+    }
+   
+  }
+
+  &--answer {   
+    @extend %cs-font-p-5;
+    display: inline-block;
+    align-items: center;
+    margin: 0 $cs-spacing-5 $cs-spacing-10 0;
+    padding: $cs-spacing-5 $cs-spacing-10;
+
+    line-height: $cs-line-height-h14;
+
+    border: solid 1px $cs-light-grey;
+    border-radius: $cs-border-radius-8;
+
+    @media (min-width: $cs-screen-md) {   
+      margin-bottom: 0;
+    }    
+  }
+
+  &--link {   
+    @extend %cs-link-bold-underline;
+    margin-left: $cs-spacing-10;
+    padding: $cs-spacing-10 !important; // !important to override the button component styles
+
+    color: $cs-color-primary;
+    white-space: nowrap;
+
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+    @media (min-width: $cs-screen-md) {   
+      margin-left: $cs-spacing-15;
+      padding: 0 !important; // !important to override the button component styles
+    }
+  }
+}

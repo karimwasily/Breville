@@ -1,0 +1,279 @@
+.bundle-conf__container {
+  // todo: styles are draft for mock
+  --max-width: 345px;
+  
+  @media (min-width: $cs-screen-md) {
+    --max-width: 1200px;
+  }
+
+  .bundle-conf__header {
+    max-width: 100vw;
+    margin: auto $cs-spacing-15;
+    padding-top: $cs-spacing-40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    @media (min-width: $cs-screen-xxl) {
+      max-width: var(--max-width);
+      margin: auto;
+      padding-top: $cs-spacing-50;
+    }
+
+    .bundle-conf__header-title {
+      @extend %cs-font-h4;
+      margin-bottom: 0;
+      padding-right: $cs-spacing-10;
+  
+      @media (min-width: $cs-screen-md) {
+        padding-right: 0;
+      }
+    }
+
+    .bundle-conf__header-add-btn {
+      display: none;
+      
+      @media (min-width: $cs-screen-md) {
+        display: inline;
+      }
+    }
+  }
+
+  .bundle-conf__content {
+    max-width: 100vw;
+    margin: auto $cs-spacing-15;
+
+    @media (min-width: $cs-screen-xxl) {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    .bundle-conf__summary {
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: repeat(2, 1fr);
+      margin: $cs-spacing-25 auto;
+      border-radius: $cs-border-radius-16;
+      border: 1px solid $cs-gainsboro;
+      padding: $cs-spacing-40 $cs-spacing-40 $cs-spacing-25 $cs-spacing-15;
+      
+      @media (min-width: $cs-screen-lg) {
+        display: grid;
+        padding: $cs-spacing-40 $cs-spacing-40 $cs-spacing-45 $cs-spacing-40;  
+      }
+      
+
+      .summary-machine {
+        display: flex;
+        margin-bottom: $cs-spacing-40;
+        @media (min-width: $cs-screen-lg) {
+          margin-bottom: 0;
+        }
+
+        &__image {
+          // explicit width applied to image to avoid overflow of images on different device
+          width: 100px;
+          height: fit-content;
+          object-fit: cover;
+          margin-right: $cs-spacing-15;
+         
+          @media (min-width: $cs-screen-md) { 
+            width: 200px;
+            margin-right: $cs-spacing-30;                              
+          }   
+        }
+
+        &__content {
+          .summary-machine__title {
+            @extend %cs-font-h8;
+            margin-bottom: $cs-spacing-5;           
+          }
+  
+          .summary-machine__price {
+            @extend %cs-font-h10;
+            margin-bottom: $cs-spacing-15;             
+          }
+  
+          .summary-machine__link {
+            @extend %cs-link-underline;        
+            @extend %cs-font-p-4;
+            white-space: nowrap;
+          }        
+        }
+      }
+
+      .summary-coffee {
+        display: flex;
+        
+        &__image {
+          object-fit: cover;
+          // explicit width applied to image to avoid overflow of images on different device
+          width: 100px;
+          height: fit-content;
+          margin-right: $cs-spacing-15;
+         
+          @media (min-width: $cs-screen-md) { 
+            width: 200px;
+            margin-right: $cs-spacing-30;                         
+          }        
+        }
+
+        &__content {
+          @extend %cs-font-h11;  
+         
+          .summary-coffee__title_group {
+            display: flex;
+            flex-direction: column-reverse;
+            @media (min-width: $cs-screen-md) {   
+              display: flex;
+              flex-direction: row;                  
+            }
+  
+            .summary-coffee__title {
+              @extend %cs-font-h8;
+              margin-bottom: $cs-spacing-10;
+              white-space: nowrap;
+            }
+    
+            .summary-coffee__badge {
+              @extend %cs-badge;
+              @extend %cs-font-p-5;
+              width: $cs-spacing-70;
+              height: $cs-spacing-20;
+              white-space: nowrap;
+              margin-bottom: $cs-spacing-5;
+
+              @media (min-width: $cs-screen-md) {   
+                margin: $cs-spacing-5 0 0 $cs-spacing-5;     
+              }                              
+            }
+  
+          }
+
+          .summary-coffee__item {                   
+            margin-bottom: $cs-spacing-5;           
+          }
+  
+          .summary-coffee__desc {
+            margin-bottom: $cs-spacing-5;           
+          }
+  
+          .summary-coffee__price-info {
+            .summary-coffee__price-before {              
+              text-decoration: line-through;              
+            }
+  
+            .summary-coffee__price-amount {
+              @extend %cs-font-h10;
+              margin-bottom: $cs-spacing-20;
+              padding-left: $cs-spacing-5;             
+            }  
+
+            .summary-coffee__price-total {
+              @extend %cs-font-p-4;
+              padding-left: $cs-spacing-5;
+              display: none;
+              @media (min-width: $cs-screen-md) { 
+                display: inline;
+              }
+            }
+          }
+  
+          .summary-coffee__link {
+            @extend %cs-link-underline;        
+            @extend %cs-font-p-4;      
+          }          
+        } 
+      }
+    }
+
+    .bundle-conf__free-title {
+      @extend %cs-font-h4;
+      margin: $cs-spacing-25 0 $cs-spacing-30;
+
+      @media (min-width: $cs-screen-md) {
+        margin-top: $cs-spacing-70;
+      }
+    }
+
+    .showcase {
+      &__content {
+      }
+
+      &__feature {
+      }
+
+      .showcase__carousel-list {
+        .showcase__carousel-list-item {
+        }
+      }
+
+      .showcase__badge {
+      }
+
+      .showcase__img {
+      }
+
+      .showcase__title {
+      }
+
+      .showcase__desc {
+      }
+
+      .showcase__carousel {
+      }
+
+      .showcase__video {
+      }
+    }
+  }
+
+  .bundle-conf__footer {
+    background-color: $cs-color-gray-60;
+
+    .bundle-conf__footer-wrapper {
+      max-width: var(--max-width);
+      margin: auto;
+      
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 6rem;
+  
+      .bundle-conf__footer-content {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        flex-direction: column;
+        align-items: left;
+        margin-right: $cs-spacing-20;
+  
+        @media (min-width: $cs-screen-md) {
+          flex-direction: row;
+          align-items: center;
+          margin-left: 0;
+          margin-right: 0;
+        }
+  
+        .bundle-conf__footer-info {
+          @extend %cs-font-h9;
+          font-weight: $cs-font-weight-bold;
+          margin-bottom: $cs-spacing-5;
+  
+          @media (min-width: $cs-screen-md) {
+            margin-bottom: 0;
+            margin-right: $cs-spacing-10;
+          }
+        }
+  
+        .bundle-conf__footer-badge {
+          @extend %cs-badge-xsmall;
+  
+          @media (min-width: $cs-screen-md) {
+            margin-right: $cs-spacing-30;
+          }
+        }
+      }
+    }
+  }
+}

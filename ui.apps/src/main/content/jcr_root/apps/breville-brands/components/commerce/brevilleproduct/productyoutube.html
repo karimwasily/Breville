@@ -1,0 +1,11 @@
+<template data-sly-template.youtube="${@ youtubeJson}">
+    <section class="product-video">
+        <div class="reactVideo cmp-reactvideo--embed">
+        <div data-react-app="ReactVideo" id="reactvideo" class="cmp-reactvideo--hero" data-cmp-is="reactvideo">
+            <script type="application/json">            
+                ${youtubeJson @context="scriptComment"}
+            </script>
+        </div>
+        </div>
+    </section>
+</template>

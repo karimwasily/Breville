@@ -1,0 +1,11 @@
+<sly data-sly-use.focusPoint="focuspointimage.js"/>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${properties.fileReference}"
+     class="cmp-focuspoint">
+    <div class="cmp-focuspoint-container"
+         data-sly-include="image.html"
+         data-focus-x="${focusPoint.coordinateX}"
+         data-focus-y="${focusPoint.coordinateY}">
+    </div>
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

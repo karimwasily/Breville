@@ -1,0 +1,34 @@
+.cmp-teaser--explorer-category {
+  padding: $spacing-xxs;
+  text-align: center;
+
+  .cmp-teaser {
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      background-color: $gainsboro;
+      border-radius: $border-radius-base;
+    }
+
+    .cmp-teaser__image {
+      .cmp-image__image {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+      }
+    }
+
+    .cmp-teaser__title {
+      @extend %font-h5;
+      margin-bottom: 0;
+      @media (min-width: $screen-md) {
+        font-size: $font-size-h4;
+        line-height: $line-height-h4;
+      }
+    }
+  }
+}

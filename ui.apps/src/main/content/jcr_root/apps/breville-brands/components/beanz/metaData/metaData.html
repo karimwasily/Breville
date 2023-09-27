@@ -1,0 +1,37 @@
+<sly data-sly-use.webmetadata="com.breville.aem.brands.core.models.BeanzWebsiteMetadataProvider">
+<link rel="canonical" href="${webmetadata.URL @ context='html'}"/>
+<link rel="mask-icon" href="/content/dam/marketplace/favicon/favicon-mask.svg" color="#68d3d3">
+
+<sly data-sly-test ="${!webmetadata.PdpPage}"> 
+
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org/",
+              "@type": "WebSite",
+              "name": "Beanz",
+              "url": "${webmetadata.canonicalUrl @ context='html'}",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.beanz.com/BrevilleUSMP/beans/marketplace_US_EN/filter?indent=on&q=suggestion:{search_string}",
+                "query-input": "required name=search_string"
+              },
+              "image":  "${webmetadata.image @ context='html'}",
+              "description": "${webmetadata.description  @ context='html'}",
+                 "sameAs": [
+                   "https://www.facebook.com/BeanzDeliveredUS/?modal=admin_todo_tour"
+                  ]
+            }
+        </script>
+
+</sly>
+
+<sly data-sly-test="${'twitter' in pageProperties.socialMedia}">
+   <meta name="twitter:card" content="summary"/>
+   <meta name="twitter:url" content="${webmetadata.URL}"/>
+   <meta name="twitter:title" content="${webmetadata.title}"/>
+   <meta name="twitter:description" content="${webmetadata.description}"/>
+   <meta name="twitter:image" content="${webmetadata.image}"/>
+</sly>
+
+
+<meta name="robots" content="${webmetadata.RobotsMetaTagLive  @ context='html'}"/>

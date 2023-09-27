@@ -1,0 +1,8 @@
+.pdp-reviews__wrapper {
+  max-width: $cs-max-width;
+  margin: $cs-spacing-20 $cs-spacing-15 $cs-spacing-10;
+
+  @media (min-width: $cs-screen-md) {
+    margin: $cs-spacing-50 auto;
+  }
+}

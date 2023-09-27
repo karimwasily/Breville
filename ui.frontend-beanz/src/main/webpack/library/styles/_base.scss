@@ -1,0 +1,955 @@
+//== Base
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+}
+
+body {
+  color: $color-foreground;
+  background: $color-background;
+}
+
+.root.container {
+  overflow: hidden; // TODO: remove when header responsive
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+}
+  
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-green {
+  color: $violet;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+%font-heading-small {
+  font-family: $font-family-secondary;
+  font-size: $font-size-large;
+  line-height: $line-height-base;
+  @include breakpoint-up(md) {
+    font-size: $font-size-xlarge;
+  }
+}
+%font-title-small {
+  font-family: $font-family-secondary;
+  font-size: $font-size-mlarge;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+}
+%font-title-xl {
+  font-family: $font-family-secondary;
+  font-size: $font-size-card-title;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-xxlarge;
+  }
+}
+%font-h3 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(md) {
+    font-size: $font-size-medium;
+  }
+}
+%font-medium-h3 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(md) {
+    font-size: $font-size-mlarge;
+  }
+}
+%font-title-large {
+  font-size: $font-size-h2;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-h1;
+  }
+}
+
+%font-h2 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-card-title;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-base;
+  font-size: $font-size-large;
+  @include breakpoint-up(md) {
+    font-size: $font-size-h2;
+  }
+  @include breakpoint-up(sm) {
+    font-size: $font-size-xlarge;
+  }
+}
+%font-h3-lage {
+  font-family: $font-family-secondary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $black;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-h3;
+  }
+}
+%font-h3 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(md) {
+    font-size: $font-size-medium;
+  }
+}
+%font-h3-large {
+  font-family: $font-family-secondary;
+  font-size: $font-size-h3;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(xl) {
+    font-size: $font-size-card-title;
+  }
+}
+%font-h4 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-base-title;
+  line-height: $line-height-base;
+  font-weight: $font-weight-bold;
+}
+%font-h4-small {
+  font-size: $font-size-small;
+  font-family: $font-family-secondary;
+  line-height: $line-height-base;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-base-title;
+  }
+}
+%font-green-anchor {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium-bold;
+  text-decoration: underline;
+  color: $violet;
+}
+
+%font-green-secondary-anchor {
+  font-family: $font-family-secondary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium-bold;
+  color: $violet;
+}
+
+%font-p {
+  font-size: $font-size-base;
+  font-family: $font-family-primary;
+  line-height: $line-height-base;
+  font-weight: $font-weight-normal;
+  letter-spacing: $letter-spacing-base;
+}
+%font-bold-green-anchor {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  text-decoration: underline;
+  color: $violet;
+}
+%font-bold-p {
+  font-size: $font-size-base;
+  font-family: $font-family-primary;
+  line-height: $line-height-base;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+}
+%font-semi-bold-p {
+  font-size: $font-size-base;
+  font-family: $font-family-primary;
+  line-height: $line-height-base;
+  font-weight: $font-weight-medium-bold;
+  letter-spacing: $letter-spacing-base;
+}
+
+%font-base-medium-bold-p {
+  font-size: $font-size-small;
+  font-family: $font-family-primary;
+  line-height: $line-height-base;
+  font-weight: $font-weight-medium-bold;
+  letter-spacing: $letter-spacing-base;
+  @include breakpoint-up(md) {
+    font-size: $font-size-base;
+  }
+}
+
+%font-base-bold-p {
+  font-size: $font-size-small;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  @include breakpoint-up(md) {
+    font-size: $font-size-base;
+  }
+}
+
+%font-medium-p {
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-medium;
+  }
+}
+%font-secondary-medium-p {
+  font-family: $font-family-secondary;
+  font-size: $font-size-small;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-medium;
+  }
+}
+%font-green-bold-p {
+  @extend %font-p;
+  font-weight: $font-weight-bold;
+  color: $violet;
+}
+
+%font-primary-medium-h4 {
+  font-family: $font-family-primary;
+  font-size: $font-size-base-title;
+  line-height: $line-height-base;
+  font-weight: $font-weight-medium-bold;
+}
+
+%font-base-medium-h4 {
+  font-family: $font-family-base;
+  font-size: $font-size-base-title;
+  line-height: $line-height-base;
+  font-weight: $font-weight-medium-bold;
+}
+
+%font-primary-teaser-title {
+  font-size: $font-size-large;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(sm) {
+    font-size: $font-size-card-title;
+  }
+  @include breakpoint-up(md) {
+    font-size: $font-size-h1;
+  }
+}
+%font-primary-teaser-description {
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  line-height: $line-height-base;
+  font-weight: $font-weight-medium-bold;
+  @include breakpoint-up(sm) {
+    font-size: $font-size-base;
+  }
+  @include breakpoint-up (md) {
+    font-size: $font-size-base-title;
+  }
+}
+%font-xsmall-p {
+  font-size: $font-size-xsmall;
+  font-family: $font-family-primary;
+  line-height: $line-height-small;
+  font-weight: $font-weight-normal;
+  letter-spacing: $letter-spacing-base;
+}
+%font-bold-xsmall-p {
+  font-size: $font-size-xsmall;
+  font-family: $font-family-primary;
+  line-height: $line-height-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+}
+%font-bold-xxsmall-p {
+  font-size: $font-size-xxsmall;
+  font-family: $font-family-primary;
+  line-height: $line-height-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+}
+%font-bitter-xsmall-p {
+  font-family: $font-family-secondary;
+  font-size: $font-size-xsmall;
+  line-height: $line-height-small;
+}
+%font-bitter-bold-small-p {
+  font-family: $font-family-secondary;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  font-weight: $font-weight-bold;
+}
+%font-small-medium-bold-p {
+  font-family: $font-family-primary;
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-medium-bold;
+  line-height: $line-height-base;
+  @include breakpoint-up (md) {
+    font-size: $font-size-small;
+  }
+}
+
+%font-breadcrumb-green-anchor {
+  @extend %font-green-anchor;
+  font-size: $font-size-xsmall;
+  text-decoration: none;
+  @include breakpoint-up(md) {
+    font-size: $font-size-small;
+  }
+  @include breakpoint-up(lg) {
+    font-size: $font-size;
+  }
+}
+
+%font-breadcrumb-active-green-anchor {
+  @extend %font-green-anchor;
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  @include breakpoint-up(md) {
+    font-size: $font-size-small;
+  }
+  @include breakpoint-up(lg) {
+    font-size: $font-size;
+  }
+}
+
+%font-brown-bold-p {
+  @extend %font-p;
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-bold;
+  color: $font-brown;
+  @include breakpoint-up(md) {
+    font-size: $font-size-base;
+  }
+  
+}
+%font-bold-large-p {
+  font-family: $font-family-primary;
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+%font-bold-small-p {
+  font-size: $font-size-small;
+  font-family: $font-family-primary;
+  line-height: $line-height-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+}
+%font-bitter-p {
+  font-family: $font-family-secondary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+%font-bitter-small-p {
+  font-family: $font-family-secondary;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+}
+%font-bitter-large-p {
+  font-family: $font-family-secondary;
+  font-size: $font-size-large;
+}
+%font-small-p {
+  font-family: $font-family-primary;
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  @include breakpoint-up (md) {
+    font-size: $font-size-small;
+  }
+}
+
+%solid-green-btn {
+  font-size: $font-size-base-title;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $white;
+  background-color: $violet;
+  border: 1px solid $violet;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  line-height: $line-height-base;
+
+  &:hover {
+    color: $violet;
+    background-color: $white;
+  }
+}
+%border-green-btn {
+  font-size: $font-size-large;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $violet;
+  background-color: $white;
+  border: 2px solid $violet;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  line-height: $line-height-base;
+  padding: $spacing-xs $spacing-sm;
+  width: 100%;
+}
+
+%border-base-green-btn {
+  font-size: $font-size-base-title;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $violet;
+  background-color: $white;
+  border: 2px solid $violet;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  line-height: $line-height-base;
+
+  &:hover {
+    color: $white;
+    background-color: $violet;
+  }
+}
+
+%border-green-plp-btn {
+  font-size: $font-size-base-title;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $violet;
+  line-height: $line-height-xsmall;
+  background-color: $white;
+  border: 2px solid $violet;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  padding: $spacing-xs $spacing-sm;
+  width: 110px;
+  
+  @include breakpoint-up(lg) {
+    font-size: $font-size-large;
+    line-height: $line-height-base;
+    width: 100%;
+  }
+}
+
+%solid-green-plp-btn {
+  font-size: $font-size-base-title;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $white;
+  line-height: $line-height-xsmall;
+  background-color: $violet;
+  border: 2px solid $violet;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  padding: $spacing-xs $spacing-sm;
+  width: 200px;
+  
+  @include breakpoint-up(lg) {
+    font-size: $font-size-large;
+    line-height: $line-height-base;
+    width: 100%;
+  }
+}
+%solid-green-base-size-btn {
+  @extend %solid-green-btn;
+  height: 40px;
+  border: 2px solid $violet;
+  font-size: $font-size-base;
+}
+%border-green-base-size-btn {
+  @extend %border-green-btn;
+  height: 40px;
+  font-size: $font-size-base;
+  color: $black;
+}
+
+
+%form-input-border-bottom {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-medium-bold;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid $gray-suva;
+  color: $gray-dark;
+  display: block;
+  font-size: $font-size-base;
+  margin-top: $spacing-ml;
+  outline: 0;
+  padding: 0 $spacing-xs $spacing-xxs 0;
+  width: 100%;
+}
+%form-label-border-bottom-input {
+  font-family: $font-family-primary;
+  display: block;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  left: 0;
+  margin: 0;
+  padding: $spacing-sm $spacing-xs 0 0;
+  position: absolute;
+  top: 0;
+  transition: all $animation-duration;
+  width: 100%;
+  color: $gray-dove;
+  font-weight: $font-weight-light;
+  text-transform: uppercase;
+}
+%form-green-border-select-input {
+  font-family: $font-family-primary;
+  letter-spacing: $letter-spacing-base;
+  font-weight: $font-weight-medium-bold;
+  padding: $spacing-xs;
+  width: 100%;
+  text-align: left;
+  border-radius: $border-radius-base;
+  border: solid 1px $violet;
+  color: $black;
+  background-color: $seashell;
+}
+%form-account-select-input {
+  @extend %green-arrow;
+  font-family: $font-family-primary;
+  letter-spacing: $letter-spacing-base;
+  font-weight: $font-weight-normal;
+  padding: $spacing-xs;
+  width: 100%;
+  text-align: left;
+  border-radius: $border-radius-base;
+  border: solid 1px $violet;
+  color: $black;
+  background-color: $gray-lighter;
+  padding: $spacing-xxs $spacing-md $spacing-xxs  $spacing-xxs;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: right $spacing-xxs top 50%;
+}
+%light-green-btn {
+  font-size: $font-size-base-title;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  background-color: $oyster-bay;
+  border: 0;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  line-height: $line-height-base;
+  color: $violet;
+  height: 50px;
+  padding: $spacing-xxs $spacing-sm;
+  width: 100%;
+}
+%light-green-large-btn {
+  @extend %light-green-btn;
+  font-size: $font-size-base;
+  margin: auto;
+  display: block;
+  height: 40px;
+  max-width: 300px;
+  @include breakpoint-up(md) {
+    font-size: $font-size-large;
+    height: 50px;
+    width: 100%; 
+  }
+}
+
+%font-nav-menu {
+  @include font-size($font-size-navmenu-mobile);
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  color: $font-brown;
+  @include breakpoint-up(md) {
+    @include font-size($font-size-navmenu-mobile);
+    color: var(--foreground-color);
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-navmenu;
+  }
+  @include breakpoint-up(lg) {
+    @include font-size($font-size-navmenu);
+  }
+}
+
+
+%action-link {
+  @include font-size($font-size-h4);
+  color: $white;
+  background-color: $background-overlay;
+  backdrop-filter: blur(4px);
+  border: 2px solid $button-border;
+  max-width: 340px;
+  border-radius: $border-radius-base;
+  font-family: $font-family-primary;
+  letter-spacing: $letter-spacing-base;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  margin: auto;
+  line-height: $line-height-base;
+  text-decoration: none;
+  text-transform: none;
+  width: 200px;
+  min-width: 210px;
+  padding: $spacing-xxs 0;
+  @include breakpoint-up (md) {
+    @include font-size($font-size-large);
+    min-width: 240px;
+    padding: $spacing-sm $spacing-lg;
+  }
+}
+
+%container-with-button {
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-md;
+}
+
+.hidden {
+  display: none !important;
+}
+
+%btn-text {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-paragraph;
+  letter-spacing: $letter-spacing-base;
+  text-align: center;
+  cursor: pointer;
+  @include breakpoint-up (md) {
+    font-size: $font-size-large;
+  }
+}
+
+%font-nav-menu {
+  @include font-size($font-size-navmenu-mobile);
+  font-weight: $font-weight-bold;
+  color: $font-brown;
+  @include breakpoint-up(md) {
+    @include font-size($font-size-navmenu-mobile);
+    color: var(--foreground-color);
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-navmenu;
+  }
+  @include breakpoint-up(lg) {
+    @include font-size($font-size-navmenu);
+  }
+}
+
+%container-with-button {
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-md;
+}
+
+
+%solid-large-green-btn {
+  font-size: $font-size-medium;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $white;
+  background-color: $violet;
+  border: 2px solid $violet;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  line-height: $line-height-base;
+  padding: $spacing-sm;
+  width: 100%;
+  max-width: 300px;
+  @include breakpoint-up(sm) {
+    font-size: $font-size-large;
+  }
+}
+
+%solid-light-green-large-btn {
+  font-size: $font-size-large;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  background-color: $oyster-bay;
+  border: 0;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  line-height: $line-height-base;
+  color: $violet;
+  padding: $spacing-sm $spacing-sm;
+  width: 100%;
+  border: 2px solid $oyster-bay;
+}
+
+%large-green-btn {
+  font-size: $font-size-medium;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-base;
+  color: $violet;
+  background-color: $white;
+  border: 2px solid $violet;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  line-height: $line-height-base;
+  padding: $spacing-sm;
+  width: 100%;
+  max-width: 300px;
+  @include breakpoint-up(sm) {
+    font-size: $font-size-large;
+  }
+}
+
+%light-green-small-btn {
+  @extend %light-green-btn;
+  font-size: $font-size-base;
+  height: 40px;
+}
+
+%btn-transition {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+%font-label {
+  font-family: $font-family-secondary;
+  letter-spacing: $letter-spacing-base;
+  font-size: $font-size-playerlink;
+  letter-spacing: normal;
+}
+
+%btn {
+  @extend %btn-transition;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  line-height: $line-height-base;
+  border-radius: $border-radius-base;
+}
+%dropdown-arrow {
+  &::before,
+  &::after {
+    position: absolute;
+    right: $spacing-xxs;
+    content: ' ';
+    height: 9px;
+    width: 2px;
+    background-color: $black;
+    top: 50%;
+    margin-top: -$spacing-xxs;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    margin-right: $spacing-xxs;
+    transform: rotate(-45deg);
+  }
+}
+
+%font-search-input {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-bold;
+  color: $violet;
+  @include breakpoint-up(md) {
+    font-size: $font-size-base-title;
+  }
+}
+
+%font-sarech-category-title {
+  @extend %font-p;
+  font-size: $font-size-xsmall;
+  @include breakpoint-up(md) {
+    font-size: $font-size-base;
+  }
+}
+
+%font-sarech-category-item-p {
+  @extend %font-primary-medium-h4;
+  color: $violet;
+  font-size: $font-size-base;
+  @include breakpoint-up(md) {
+    font-size: $font-size-base-title;
+  }
+}
+
+%font-title-medium {
+  font-size: $font-size-card-title;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-h2;
+  }
+}
+
+%change-coffee-header-title {
+  font-size: $font-size-medium;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  @include breakpoint-up(md) {
+    font-size: $font-size-h2;
+  }
+}
+
+%change-coffee-btn {
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  border: 1px solid $white;
+  margin: $spacing-xs;
+  width: 70px;
+  padding: $spacing-xxs $spacing-xs;
+  border-radius: 7px;
+  background: $jaguar;
+  color: $white;
+  font-weight: $font-weight-medium-bold;
+  cursor: pointer;
+  @include breakpoint-up(md) {
+    font-size: $font-size-medium;
+    margin: $spacing-md $spacing-sm;
+    padding: $spacing-xs;
+    width: 150px;
+    border: 2px solid $white;
+  }
+}
+
+%font-medium-bold-small-p {
+  font-size: $font-size-small;
+  font-family: $font-family-primary;
+  line-height: $line-height-small;
+  font-weight: $font-weight-medium-bold;
+  letter-spacing: $letter-spacing-base;
+}
+
+%font-roaster-pdp-title {
+  font-family: $font-family-secondary;
+  letter-spacing: $letter-spacing-base;
+  color: $jaguar;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  margin-top: 0;
+  font-size: $font-size-large;
+  @include breakpoint-up (lg) {
+    font-size: $font-size-h2;
+  }
+  
+}
+
+%font-roaster-detail-label {
+  @extend %font-semi-bold-p;
+  color: $violet;
+  font-size: $font-size-small;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-base;
+  }
+}
+
+%font-roaster-detail-p {
+  @extend %font-bold-p;
+  color: $jaguar;
+  font-size: $font-size-small;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-base;
+  }
+}
+
+%font-h4-primary {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-bold;
+  @include breakpoint-up(lg) {
+    font-size: $font-size-base-title;
+  }
+}
+
+%font-pdp-title {
+  font-size: $font-size-large !important;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-secondary;
+  color: $jaguar;
+  line-height: initial;
+  @include breakpoint-up (lg) {
+    font-size: $font-size-h2 !important;
+  }
+}
+
+%font-roaster-title {
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-primary;
+  color: $font-brown;
+  line-height: initial;
+  @include breakpoint-up (md) {
+    font-size: $font-size-base;
+  }
+  @include breakpoint-up (lg) {
+    font-size: $font-size-medium;
+  }
+}
+
+%font-roaster-sub-title {
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-medium-bold;
+  font-family: $font-family-primary;
+  color: $jaguar;
+  line-height: initial;
+  @include breakpoint-up (md) {
+    font-size: $font-size-base;
+  }
+  @include breakpoint-up (lg) {
+    font-size: $font-size-medium;
+  }
+}

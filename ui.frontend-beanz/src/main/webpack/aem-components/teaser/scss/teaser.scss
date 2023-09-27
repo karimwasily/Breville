@@ -1,0 +1,61 @@
+@import 'styles/teaser-hero';
+@import 'styles/teaser-hero-reduced-content-width';
+@import 'styles/teaser-hero-boxed-content';
+@import 'styles/teaser-hero-small-title';
+@import 'styles/teaser-hero-compact-full-width';
+@import 'styles/teaser-image-left';
+@import 'styles/teaser-image-right';
+@import 'styles/teaser-tile';
+@import 'styles/teaser-image-left-perfectbeans';
+@import 'styles/teaser-image-right-perfectbeans';
+@import 'styles/teaser-helpbeanz';
+@import 'styles/teaser-livechat';
+
+.cmp-teaser {
+  .cmp-teaser__pretitle {
+    font-weight: bold;
+  }
+
+  .cmp-teaser__content {
+    float: left;
+  }
+
+  .cmp-teaser__title {
+    font-family: $font-family-base;
+    margin: 0.5em 0;
+  }
+
+  .cmp-teaser__title-link {
+    color: $teaser-dark-color;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .cmp-teaser__description {
+    font-size: $font-size-base;
+    margin: 0;
+    line-height: 1.75;
+
+    p {
+      line-height: 1.75;
+      font-size: $font-size-base;
+    }
+  }
+
+  .cmp-teaser__action-container {
+    margin: 1em 0;
+    float: left;
+  }
+
+  .cmp-teaser__action-link {
+    @include font-size($font-size-small);
+    background-color: $brand-primary;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+    float: left;
+  }
+}

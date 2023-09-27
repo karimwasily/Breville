@@ -1,0 +1,38 @@
+.cmp-container--promo {
+  background-color: $wine-berry;
+}
+
+.cmp-text--promo {
+  display: flex;
+  justify-content: center;
+
+  p {
+    @extend %cs-font-p-4;
+    margin: $cs-spacing-5 auto;
+  }
+
+  a {
+    color: $white;
+    font-size: $font-size-medium;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &::after {
+    @extend %close-icon;
+    content: '';
+    height: 0.875rem;
+    width: 0.875rem;
+    position: absolute;
+    top: 0.5rem;
+    right: $cs-spacing-10;
+    background-color: $cs-white;
+
+    @media (min-width: $cs-screen-md) {
+      right: $cs-spacing-25;
+    }
+  }
+}
+

@@ -1,0 +1,106 @@
+%facet-price-container {
+  .facet-price {
+    max-width: 500px;
+
+    .rheostat.rheostat_1 {
+      top: $cs-spacing-10;
+
+      .DefaultBackground.DefaultBackground_1.DefaultBackground_background__horizontal.DefaultBackground_background__horizontal_2 {
+        border: 0;
+        height: 2px;
+        top: -$cs-spacing-15;
+      
+        background-color: $cs-gainsboro;
+     
+        @media (min-width: $cs-screen-md) {
+          
+          margin-left: $cs-spacing-35 !important;
+        }
+      }
+
+      .handleContainer.handleContainer_1 {
+       
+        @media (min-width: $cs-screen-md) {
+          
+          margin-left: $cs-spacing-35 !important;
+        }
+
+        .DefaultHandle_handle.DefaultHandle_handle_1.DefaultHandle_handle__horizontal.DefaultHandle_handle__horizontal_2 {
+          position: absolute;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background-color 250ms ease-in-out;
+          transition: background-color 250ms ease-in-out;
+          top: -$cs-spacing-15;
+          margin-top: -$cs-spacing-5;
+          height: 15px;
+          width: 15px;
+          border: 1px solid $cs-forest-green;
+          background-color: $cs-forest-green;
+          outline: 0;
+          z-index: 1;           
+        }
+      }
+
+      .DefaultHandle_handle__horizontal::before {
+        top: 0;
+        height: 0;
+        width: 0;
+        left: 0;
+      }
+
+      .DefaultHandle_handle__horizontal::after {
+        top: 0;
+        height: 0;
+        width: 0;
+        left: 0;
+      }
+
+      .DefaultProgressBar_progressBar.DefaultProgressBar_progressBar_1.DefaultProgressBar_background__horizontal.DefaultProgressBar_background__horizontal_2 {
+        border: 0;
+        height: 2px;
+        background-color: $cs-forest-green;
+        top: -$cs-spacing-15;
+        
+        @media (min-width: $cs-screen-md) {          
+          margin-left: $cs-spacing-35 !important;
+        }
+      }
+
+      .rheostat-marker {
+        &--large-left,
+        &--large-right {
+          height: 0;
+
+          .rheostat-value {           
+            padding-left: 0;
+            top: -$cs-spacing-15;
+      
+            label {
+              @extend %cs-font-p-4-bold;             
+              border: 1px solid $cs-gainsboro;
+              border-radius: $cs-border-radius-8;
+              width: 75px;
+              height: 35px;
+              position: absolute;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: $cs-spacing-10;
+
+            }
+
+            span {
+              padding-right: $cs-spacing-5;
+            }
+          
+              
+          } 
+        }      
+
+      }
+    }
+
+  }
+  
+}

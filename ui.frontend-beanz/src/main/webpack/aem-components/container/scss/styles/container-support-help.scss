@@ -1,0 +1,12 @@
+.cmp-container--support-help {
+  .cmp-container {
+    padding-bottom: 2rem;
+    @include breakpoint-up(xl) {
+      display: block;
+      max-width: $max-width !important;
+      float: unset !important;
+      margin: 0 auto !important;
+      clear: both !important;
+    }
+  }
+}

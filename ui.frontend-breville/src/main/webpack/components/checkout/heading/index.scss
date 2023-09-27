@@ -1,0 +1,6 @@
+.form-heading {
+  @extend %cs-font-h2;
+  text-align: left;
+  color: $cs-color-primary;
+  margin-bottom: $cs-spacing-20;
+}

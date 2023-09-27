@@ -1,0 +1,17 @@
+%thumbnail {
+  @include column-overflow-scroll();
+  width: 100%;
+  margin: auto;
+  margin-top: $cs-spacing-15;
+  padding-bottom: $cs-spacing-10;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  text-align: center;
+  scroll-behavior: smooth;
+
+  @media (min-width: $cs-screen-md) { 
+    margin-top: $cs-spacing-30;       
+  } 
+}

@@ -1,0 +1,172 @@
+.cmp-teaser--round-tile {
+  $tile-size-mobile: rem(90px);
+  $tile-size-tablet: rem(128px);
+  $tile-size-desktop: rem(256px);
+  $tile-size-extra-large: rem(300px);
+
+  clear: both;
+  border: 1px solid $gray-95;
+
+  &:not(:last-of-type) {
+    border-bottom: 0;
+  }
+
+  .cmp-teaser {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background: $white;
+
+    .cmp-teaser__image {
+      position: relative;
+      margin-right: 1.5rem;
+      overflow: hidden;
+      width: $tile-size-mobile;
+      height: $tile-size-mobile;
+      transition: transform $transition-speed-slow $transition-easing;
+
+      .cmp-image__link {
+        display: block;
+        position: absolute;
+        left: 50%;
+
+        .cmp-image__image {
+          position: relative;
+          display: block;
+          width: auto;
+          height: $tile-size-mobile;
+          left: -50%;
+          @media (min-width: $screen-md) {
+            height: $tile-size-tablet;
+          }
+          @media (min-width: $screen-lg) {
+            height: $tile-size-desktop;
+            width: auto;
+            left: -50%;
+          }
+          @media (min-width: $screen-xl) {
+            height: $tile-size-extra-large;
+          }
+        }
+        @media (min-width: $screen-lg) {
+          position: absolute;
+          left: 50%;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        width: $tile-size-tablet;
+        height: $tile-size-tablet;
+      }
+      @media (min-width: $screen-lg) {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .cmp-teaser__content {
+      .cmp-teaser__title {
+        .cmp-teaser__title-link {
+          @include arrow-icon($wine-berry);
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 0;
+          left: $tile-size-mobile;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          padding-left: 1.5rem;
+          color: $wine-berry;
+          font-size: $font-size-h3-mobile;
+          font-weight: $font-weight-bold;
+          background-color: $white;
+          background-position: 97% center;
+          background-size: 60px;
+          transition: background-color $transition-speed-semi-slow $transition-easing, background-position $transition-speed-semi-slow $transition-easing;
+          @media (min-width: $screen-md) {
+            background-position: 96% center;
+            left: $tile-size-tablet;
+          }
+          @media (min-width: $screen-lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $white;
+            background-image: none;
+            background-color: $black-transparent;
+            top: -50%;
+            font-size: $font-size-h3;
+            line-height: $line-height-h3;
+            padding: 1rem 2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: $tile-size-desktop;
+            z-index: 2;
+            text-align: center;
+            text-shadow: $text-shadow;
+            transition: none;
+
+            &::after {
+              display: block;
+              content: '';
+              height: 4px;
+              width: 24px;
+              background-color: $white;
+              margin: 1rem auto;
+            }
+          }
+          @media (min-width: $screen-xl) {
+            height: $tile-size-extra-large;
+          }
+        }
+        @media (min-width: $screen-lg) {
+          position: absolute;
+          width: $tile-size-desktop;
+          top: 50%;
+        }
+        @media (min-width: $screen-xl) {
+          width: $tile-size-extra-large;
+        }
+      }
+    }
+
+    &:hover {
+      .cmp-teaser__content .cmp-teaser__title .cmp-teaser__title-link {
+        background-color: $gray-95;
+        background-position: 98% center;
+        @media (min-width: $screen-md) {
+          background-position: 97%;
+        }
+        @media (min-width: $screen-lg) {
+          background-color: $black-transparent;
+        }
+      }
+    }
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+      overflow: hidden;
+      width: $tile-size-desktop;
+      height: $tile-size-desktop;
+      border-radius: 50%;
+      margin: 1rem 2rem;
+
+      &:hover .cmp-teaser__image {
+        transform: scale(1.15);
+      }
+    }
+    @media (min-width: $screen-xl) {
+      width: $tile-size-extra-large;
+      height: $tile-size-extra-large;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    display: inline-block;
+    border: 0;
+  }
+}

@@ -1,0 +1,158 @@
+.cmp-container--coffeelowdown {
+  background-color: $azure;
+
+  & > .cmp-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: $spacing-xl;
+    @include breakpoint-up (md) {
+      padding: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    &>.title {
+      padding-bottom: $spacing-md;
+    }
+
+    &>.image {
+      img {
+        max-width: 1140px;
+        max-height: 320px;
+        display: flex;
+        margin: auto;
+        object-fit: cover;
+        @include breakpoint-down (sm) {
+          max-width: 400px;
+        }
+      }
+    }
+
+    .cmp-teaser__content {
+      .cmp-teaser__title {
+        @extend %font-heading-small;
+        margin-top: -$beanz-spacing-10;
+        margin-bottom: $spacing-md;
+        font-weight: $font-weight-bold;
+        line-height: normal;
+      }
+
+      .cmp-teaser__description {
+        &>p {
+          @extend %font-medium-h3;
+          margin-bottom: $spacing-ml;
+          font-weight: $font-weight-normal;
+          @include breakpoint-up (md) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &>* {
+      flex: 1 1 100%;
+    }
+
+    .teaser {
+      flex: 1 1 50%;
+    }
+
+    .button {
+      text-align: center;
+      padding: $spacing-md 0 $spacing-xl;
+      display: flex;
+      justify-content: center;
+      @include breakpoint-up (md) {
+        padding: $spacing-coffee-lowdown 0;
+      }
+
+      &.cmp-button--background-blue,
+      &.cmp-button--background-white {
+        padding: 0;
+      }
+    }
+
+    .cmp-teaser {
+      &__content {
+        padding: 0 $spacing-md;
+        @include breakpoint-up (md) {
+          padding: 0 $spacing-xl;
+        }
+
+        .cmp-teaser__title {
+          @include font-size($font-size-large);
+          color: $jaguar;
+          @include breakpoint-up (md) {
+            @include font-size($font-size-h2);
+          }
+          @include breakpoint-up (lg) {
+            @include font-size($font-size-h1);
+          }
+        }
+
+        .cmp-teaser__description {
+          &>p {
+            @include font-size($font-size-xsmall);
+            font-family: $font-family-primary;
+            @include breakpoint-up (md) {
+              @include font-size($font-size-medium);
+            }
+          }
+        }
+      }
+    }
+
+    .cmp-title {
+      text-align: center;
+
+      &>h2 {
+        @include font-size($font-size-h2);
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-bold;
+        color: $jaguar;
+        text-decoration: none;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-base;
+        @include breakpoint-up (md) {
+          @include font-size($font-size-heading);
+        }
+      }
+    }
+
+    .cmp-button {
+      @include font-size($font-size-h4);
+      color: $cyan;
+      background-color: $oyster-bay;
+      backdrop-filter: blur(4px);
+      border: transparent;
+      border-radius: $spacing-xxs;
+      font-family: $font-family-primary;
+      letter-spacing: $letter-spacing-base;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      padding: $spacing-xxs $spacing-xs;
+      line-height: $line-height-base;
+      text-decoration: none;
+      text-transform: none;
+      @include breakpoint-up (md) {
+        @include font-size($font-size-large);
+        padding: $spacing-sm $spacing-lg;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        outline: none;
+      }
+    }
+  }
+}
+

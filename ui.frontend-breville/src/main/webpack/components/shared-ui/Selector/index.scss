@@ -1,0 +1,24 @@
+.selectitem {
+  display: flex;
+  align-items: flex-start;
+
+  .selectitem__img-wrap {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: $cs-spacing-10;
+    overflow: hidden;
+  }
+
+  .selectitem__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .selectitem__input {
+    @extend %cs-font-p-4;
+    border: 0;
+    margin-bottom: $cs-spacing-10;
+    background-color: $cs-white;
+  }
+}

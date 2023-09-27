@@ -1,0 +1,90 @@
+.cmp-focuspoint-container {
+  .cmp-focuspoint__image-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    .cmp-focuspoint__image {
+      width: 65%;
+      @media (min-width: $screen-md) {
+        width: 77%;
+      } 
+      @media (min-width: $screen-xxxl) {
+        width: 79%;
+      }
+    }
+
+    .cmp-focuspoint__button {
+      @include button-remove-style;
+      position: absolute;
+      width: rem(50px);
+      height: rem(50px);
+      z-index: 2;
+      background-color: $green;
+      border-radius: 50%;
+
+      &::before {
+        content: '+';
+        display: inline-block;
+        position: relative;
+        z-index: 4;
+        display: grid;
+        place-items: center;
+        height: 100%;
+        align-items: center;
+        font-size: 2.75em;
+        line-height: 1;
+        transform: scale(0.85);
+        transform-origin: center;
+        transition: transform 100ms linear;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $green;
+        border-radius: 50%;
+        z-index: 1;
+        background-color: transparent;
+        transform: scale(1.3);
+        border: 2px solid $green;
+        opacity: 1;
+        animation: pulse 2.5s infinite;
+  
+        @keyframes pulse {
+          0% {
+            opacity: 1;
+            transform: scale(0.95);
+          }
+  
+          100% {
+            opacity: 0;
+            transform: scale(1.5);
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $sandrift;
+
+        &::before {
+          transform: scale(1.1);
+          opacity: 1;
+        }      
+      }
+
+      &:focus,
+      &:active {
+        outline: 1px auto;
+      }
+
+      .cmp-focuspoint__icon-outter-cirle {
+        font-size: 0;
+      }
+    }
+  }
+}

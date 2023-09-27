@@ -1,0 +1,31 @@
+////////////////////
+// TRANSITIONS
+////////////////////
+$cs-transition-speed-250: 250ms;
+
+$cs-transition-easing: ease-in-out; // unconfirmed
+
+$cs-transition-scale-108: 1.08;
+$cs-transition-scale-110: 1.1;
+$cs-transition-scale-130: 1.3;
+
+$cs-social-overlay: rgba(0, 0, 0, 0.6);
+
+$cs-opacity-dark: 1;
+$cs-opacity-light: 0.5;
+
+
+////////////////////
+// ANIMATION KEYFRAMES
+////////////////////
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-5px);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

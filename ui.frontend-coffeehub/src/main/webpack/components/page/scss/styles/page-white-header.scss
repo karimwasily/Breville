@@ -1,0 +1,9 @@
+// applied to body tag when in the home page
+
+.cmp-page--white-header {
+  // modify header to float above content set to top
+  header.experiencefragment {
+    @extend %cmp-experiencefragment-header--light;
+    @include bg-contrast($white);
+  }
+}

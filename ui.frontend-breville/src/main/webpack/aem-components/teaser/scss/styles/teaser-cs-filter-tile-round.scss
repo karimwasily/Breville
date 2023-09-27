@@ -1,0 +1,32 @@
+// Teaser Component - Filter Tile Round
+.cmp-teaser--cs-filter-tile-round {
+  $tile-size-mobile: 130px;
+  $tile-size-desktop: 170px;
+  @extend %cmp-teaser--cs-category-tile-round;
+
+  .cmp-teaser {
+    align-items: center;
+
+    .cmp-teaser__image {
+      border-radius: 50%;
+      overflow: hidden;
+      width: $tile-size-mobile;
+      height: $tile-size-mobile;
+      transition: transform $cs-transition-speed-250 $cs-transition-easing;
+
+      .cmp-image {
+        padding: 0;
+      }
+
+      .cmp-image__link {
+        .cmp-image__image {
+          object-fit: cover;
+        }
+      }
+      @media (min-width: $screen-md) {
+        width: $tile-size-desktop;
+        height: $tile-size-desktop;
+      }
+    }
+  }
+}

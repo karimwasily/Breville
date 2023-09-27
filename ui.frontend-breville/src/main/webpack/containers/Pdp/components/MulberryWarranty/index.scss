@@ -1,0 +1,96 @@
+.mulberry-warranty__wrapper {
+  --mulberry-option-width: 180px;
+
+  margin: $cs-spacing-20 $cs-spacing-15 0;
+
+  @media (min-width: $cs-screen-md) {
+    margin: $cs-spacing-60 $cs-spacing-50 0;
+  }
+
+  .mulberry-warranty__title {
+    @extend %cs-font-h7;
+    margin-bottom: 0;
+  }
+
+  .mulberry-warranty__description {
+    --mulberry-logo-width: 70px;
+    --mulberry-logo-height: 20px;
+
+    display: flex;
+    flex-direction: column;
+    margin: $cs-spacing-10 0 0;
+
+    @media (min-width: $cs-screen-md) {
+      flex-direction: row;
+      margin: $cs-spacing-15 0 0;
+    }
+
+    .mulberry-warranty__description-text {
+      @extend %cs-font-p-2;
+    }
+
+    .mulberry-warranty__description-icon {
+      @extend %powered-by-mulberry-logo;
+      width: var(--mulberry-logo-width);
+      height: var(--mulberry-logo-height);
+
+      margin-top: $cs-spacing-15;
+
+      background-color: $cs-silver-dark;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+      @media (min-width: $cs-screen-md) {
+        margin-top: 0;
+        margin-left: $cs-spacing-15;
+      }
+    }
+  }
+
+  .mulberry-warranty__options {
+    @include flex-gap($cs-spacing-20);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--mulberry-option-width));
+    margin-top: $cs-spacing-25;
+
+    @media (max-width: $cs-screen-md) {
+      grid-template-columns: 1fr 1fr;
+      margin-top: $cs-spacing-20;
+    }
+
+    .mulberry-warranty__option-item {
+      @extend %cs-font-p-2-bold;
+
+      position: relative;
+
+      padding: $cs-spacing-15 0;
+
+      background-color: $cs-white;
+      border-color: $cs-gunmetal;
+
+      &--selected {
+        border-color: $cs-forest-green;
+      }
+
+      .mulberry-warranty__option-item_tick {
+        --icon-size: 16px;
+
+        @extend %selected-circled-small-icon;
+
+        position: absolute;
+
+        top: calc(var(--icon-size) / -2);
+        right: calc(var(--icon-size) / -2);
+
+        width: var(--icon-size);
+        height: var(--icon-size);
+
+        background-repeat: no-repeat;
+        background-size: contain;
+
+      }
+    }
+  }
+}

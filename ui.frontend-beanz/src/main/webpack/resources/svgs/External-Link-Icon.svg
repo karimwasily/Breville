@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>External Link Icon</title>
+    <g id="External-Link-Icon-svg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="External-Link-Icon" transform="translate(0.000000, 1.000000)" stroke="#008391">
+            <path d="M10.5,6.74990464 L10.5,11.5000545 C10.5,12.0526129 10.0520924,12.5 9.77255885,12.5 L1.77288579,12.5 C0.947907585,12.5 0.5,12.0526129 0.5,11.5000545 L0.5,3.49994551 C0.5,2.94738706 0.947907585,2.5 1.50043592,2.5 L5.94681779,2.5" id="Stroke-1"></path>
+            <line x1="12" y1="1" x2="4" y2="9" id="Stroke-3" stroke-width="1.25"></line>
+            <polyline id="Stroke-5" stroke-width="1.1" points="8.5 0.5 12.5 0.5 12.5 4.5"></polyline>
+        </g>
+    </g>
+</svg>

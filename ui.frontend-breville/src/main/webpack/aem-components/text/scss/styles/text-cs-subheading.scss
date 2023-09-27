@@ -1,0 +1,6 @@
+.cmp-text--cs-subheading {
+  p {
+    @extend %cs-font-p-2;
+    margin-bottom: $cs-spacing-15;
+  }
+}

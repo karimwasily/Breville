@@ -1,0 +1,221 @@
+// this style wrapper relies on a TEASER (with CTA) component
+.cmp-teaser--hero-banner {
+  .cmp-teaser {
+    position: relative;
+    background-color: $black;
+    // * prevent header absolute overlaying on to hero banner text
+    min-height: 400px;
+
+    // HERO IMAGE
+    &__image {
+      position: relative;
+      z-index: 0;
+      // decide how much of the view for hero image to cover with text overflowing
+      height: 90%;
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        height: 100%;
+      }
+
+      .cmp-image {
+        height: 100%;
+        width: 100%;
+
+        &__image {
+          height: 100%;
+          // force portrait view on mobile view
+          width: 100%;
+          object-position: center;
+          object-fit: cover;
+        }
+
+        // background image overlay to fade to black to meet content background seamlessly
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: $black;
+          background: linear-gradient(180deg, transparent 0%, transparent 90%, $black 100%);
+
+          @media (min-width: $screen-md) {
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    // TEXT CONTENT
+    &__content {
+      --text-content-width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+      padding: $spacing-md;
+
+      @media (min-width: $screen-md) {
+        --text-content-width: 70%;
+        padding: $spacing-xxl;
+      }
+      @media (min-width: $screen-lg) {
+        --text-content-width: 60%;
+      }
+      @media (min-width: $screen-xl) {
+        --text-content-width: 40%;
+      }
+
+      .cmp-teaser__title {
+        @extend %font-h1;
+        color: $white;
+        width: var(--text-content-width);
+        text-shadow: $text-shadow;
+        line-height: normal;
+        @media (min-width: $screen-sm) {
+          line-height: $line-height-h1;
+        }
+      }
+
+      .cmp-teaser__description {
+        @extend %font-h1-subtext;
+        color: $white;
+        margin-top: $spacing-sm;
+        width: var(--text-content-width);
+        @media (min-width: $screen-md) {
+          width: calc(var(--text-content-width) - 10%);
+          margin-top: $spacing-md;
+        }
+
+        * {
+          @extend %font-h1-subtext;
+          color: $white;
+          text-shadow: $text-shadow;
+          line-height: $line-height-body;
+          @media (min-width: $screen-sm) {
+            line-height: $line-height-h1-subtext;
+          }
+        }
+      }
+
+      .cmp-teaser__title-link {
+        @extend %font-h1;
+        color: $white;
+        line-height: normal;
+        @media (min-width: $screen-sm) {
+          line-height: $line-height-h1;
+        }
+      }
+
+      .cmp-teaser__action-container {
+        position: relative;
+        margin-top: $spacing-md;
+        margin-bottom: $spacing-xs;
+        z-index: 1;
+
+        @media (min-width: $screen-md) {
+          margin-top: $spacing-lg;
+        }
+
+        .cmp-teaser__action-link {
+          @extend %font-cta;
+          position: relative;
+          overflow: hidden;
+          width: fit-content;
+          z-index: 1;
+          padding: $spacing-md;
+          display: inline-block;
+          height: 100%;
+          color: $white;
+          border: 1px solid $white;
+          padding-left: $spacing-xxl;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(to right, $white 0%, $white 50%, rgba($white, 0) 100%);
+            left: 0;
+            top: 0;
+            transform: translate3d(-100%, 0, 0);
+            z-index: -1;
+
+            transition: transform $transition-speed ease-in-out;
+          }
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+            color: $black;
+            border: 1px solid $black;
+
+            &::before {
+              transform: translate3d(0, 0, 0);
+              pointer-events: none;
+            }
+
+            &::after {
+              @include play-icon($color: $black);
+              transform: translate3d(5px, -50%, 0);
+            }
+          }
+
+          &::after {
+            @include play-icon($color: $white);
+            content: '';
+
+            position: absolute;
+            left: $spacing-md;
+            top: 50%;
+            display: inline-block;
+            z-index: 1;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            transform: translate3d(0, -50%, 0);
+
+            transition: transform $transition-speed ease-in-out;
+          }
+        }
+
+        .cmp-teaser__action-link:last-child {
+          color: transparent;
+          position: absolute;
+          overflow: inherit;
+          width: auto;
+          z-index: 1;
+          padding: inherit;
+          display: inline-block;
+          height: 100%;
+          right: $spacing-xl;
+          bottom: -$spacing-md;
+          border: 0;
+          font-size: 0;
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            @include arrow-right-icon($color: $white);
+            content: '';
+            transform: rotate(90deg) scale(2.5);
+
+            @media (max-width: $screen-sm) {
+              display: none;
+            }
+          }
+
+          &:focus::after {
+            outline: 1px solid $white;
+          }
+        }
+      }
+    }
+  }
+}

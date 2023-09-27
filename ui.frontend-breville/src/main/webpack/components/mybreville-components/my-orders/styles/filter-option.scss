@@ -1,0 +1,96 @@
+.my-orders__filter-option {
+  @extend %cs-button-purple-large;
+  display: inline-block;
+  min-width: 100%;
+  margin: 0 $cs-spacing-15 $cs-spacing-15 0;
+  padding: unset;
+
+  background-color: $cs-whitesmoke;
+  border: 1px solid $cs-light-grey;
+    
+  @media(min-width: $cs-screen-xl) {
+    min-width: calc(25% - #{$cs-spacing-15});
+  }
+
+  &-label {
+    cursor: pointer;
+    
+    &:hover,
+    &:focus {
+      .my-orders__filter-option-labelText {
+        color: $cs-white;
+      }
+
+      .my-orders__filter-option-count {
+        color: $cs-white;
+      }
+    }  
+
+    .my-orders__filter-option-checkbox {
+      display: none;
+    }
+
+    .my-orders__filter-option-labelText {
+      @extend %cs-font-p-4;
+      display: flex;
+      flex-direction: row;
+      padding: $cs-spacing-10 $cs-spacing-15;
+
+      color: $cs-gunmetal;
+    }
+
+    .my-orders__filter-option-count {
+      @extend %cs-font-p-4;
+      float: right;
+      margin: -$cs-spacing-30 0;
+      padding-right: $cs-spacing-10;
+
+      color: $cs-monsoon;
+
+      &::before {
+        content: '(';
+      }
+
+      &::after {
+        content: ')';
+      }
+    }
+  }
+
+  &--selected {
+    @extend %cs-button-purple-fill-small;
+    margin-bottom: 0 $cs-spacing-15 $cs-spacing-15 0;
+    padding: 0;
+
+    color: $cs-white;
+
+    background-color: $cs-dark-purple;
+
+    &:hover,
+    &:focus {
+      color: $cs-white !important;
+
+      background-color: $cs-dark-purple;
+    } 
+
+    .my-orders__filter-option-label {
+      .my-orders__filter-option-labelText {
+        color: $cs-white;
+      }
+
+      .my-orders__filter-option-count {
+        color: $cs-white;
+      }
+
+      .my-orders__filter-option-cancel {
+        --icon-size: 0.5rem;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        margin-left: $cs-spacing-10;
+
+        background-color: #000;
+        cursor: pointer;
+      }
+    }
+  } 
+}

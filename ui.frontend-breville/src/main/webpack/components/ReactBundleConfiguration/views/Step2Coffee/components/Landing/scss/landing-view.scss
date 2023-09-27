@@ -1,0 +1,119 @@
+.cmp-teaser--landing-view {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $cs-screen-sm) {
+    flex-direction: row-reverse;
+  }
+
+  .cmp-teaser__image {
+    width: 100%;
+
+    @media (min-width: $cs-screen-sm) {
+      width: 57%;
+    }
+
+    .cmp-image {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        @extend %beanz-by-breville-logo-v2-icon;
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: $cs-color-primary;
+      }
+
+      .cmp-image__image {
+        vertical-align: middle;
+        height: 230px;
+        object-fit: cover;
+
+        @media (min-width: $cs-screen-sm) {
+          height: 640px;
+        }
+      }
+    }
+  }
+
+  .cmp-teaser__content {
+    align-self: center;
+    width: 100%;
+    padding: $cs-spacing-30 $cs-spacing-25 $cs-spacing-35;
+    @media (min-width: $cs-screen-sm) {
+      width: 43%;
+      padding: 0 $cs-spacing-25 0 $cs-spacing-15;
+    }
+
+    @media (min-width: $cs-screen-lg) {
+      padding: 0 $cs-spacing-15 0 $cs-spacing-110;
+    }
+
+    @media (min-width: $cs-screen-xxl) {
+      padding: 0 0 0 $cs-spacing-110;
+    }
+
+    .cmp-teaser__pretitle {
+      @extend %cs-font-h2;
+      margin-bottom: $cs-spacing-10;
+      color: $cs-black;
+    }
+
+    .cmp-teaser__title {
+      @extend %cs-font-p-price;
+      color: $cs-black;
+      margin-bottom: $cs-spacing-40;
+      font-weight: normal;
+
+      @media (min-width: $cs-screen-md) {
+        margin: 0 $cs-spacing-35 $cs-spacing-60 0;
+      }
+    }
+
+    .cmp-teaser__description {
+      margin-bottom: $cs-spacing-20;
+
+      @media (min-width: $cs-screen-xxl) {
+        min-width: 25rem;
+      }
+      
+      p {
+        @extend %cs-font-h10;
+        color: $cs-black;
+        font-weight: $cs-font-weight-bold;
+        margin-bottom: 0;
+      }
+    }
+
+    .cmp-teaser__action-container {
+      @media (min-width: $cs-screen-md) {
+        max-width: 276px;
+      }
+
+      a,
+      span {
+        display: block;
+      }
+
+      .cmp-teaser__action-link {
+        @extend %cs-font-h11;
+        font-weight: $cs-font-weight-bold;
+        border: 1px solid $cs-color-commercial;
+        border-radius: $cs-border-radius-base;
+        text-align: center;
+        padding: $cs-spacing-15;
+        color: $cs-color-commercial;
+      }
+
+      .cmp-teaser__action-link-divider {
+        @extend %cs-font-p-4;
+        text-align: center;
+        font-style: italic;
+        padding: $cs-spacing-10;
+      }
+    }
+  }
+}

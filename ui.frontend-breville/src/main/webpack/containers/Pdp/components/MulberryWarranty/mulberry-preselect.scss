@@ -1,0 +1,31 @@
+.mulberry-preselect__plus-sign {
+  margin: $cs-spacing-30 0;
+
+  @media (min-width: $cs-screen-lg) {
+    margin: 0 $cs-spacing-60 0 $cs-spacing-100;
+  }
+}
+
+.mulberry-preselect__content-wrapper {
+  display: flex;
+
+  .mulberry-preselect__logo {
+    --plus-size: 90px;
+
+    width: var(--plus-size);
+    height: var(--plus-size);
+
+    margin-right: $cs-spacing-35;
+  }
+
+  .mulberry-preselect__content {
+    .mulberry-preselect__title {
+      @extend %cs-font-p-2-bold;
+      margin: $cs-spacing-5 0 $cs-spacing-20 0;
+    }
+
+    .mulberry-preselect__description {
+      @extend %cs-font-p-2;
+    }
+  }
+}

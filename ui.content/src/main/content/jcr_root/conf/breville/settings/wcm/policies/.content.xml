@@ -1,0 +1,1844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <breville jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <form jcr:primaryType="nt:unstructured">
+                <container jcr:primaryType="nt:unstructured">
+                    <form-container
+                        jcr:description="Allows the form components to be dropped into this form container."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Form"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/breville-brands/components/form/button,/apps/breville-brands/components/form/hidden,/apps/breville-brands/components/form/options,/apps/breville-brands/components/form/text]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </form-container>
+                </container>
+            </form>
+            <languagenavigation jcr:primaryType="nt:unstructured">
+                <policy_xfm
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Brands Language Navigation - Experience Fragment"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    navigationRoot="/content/breville"
+                    structureDepth="1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_xfm>
+            </languagenavigation>
+            <image jcr:primaryType="nt:unstructured">
+                <policy_651483963895698
+                    jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Image"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
+                    allowUpload="false"
+                    altValueFromDAM="true"
+                    disableLazyLoading="false"
+                    displayPopupTitle="true"
+                    isDecorative="false"
+                    jpegQuality="{Long}85"
+                    titleValueFromDAM="true"
+                    uuidDisabled="true">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <plugins jcr:primaryType="nt:unstructured">
+                        <crop
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <aspectRatios jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Wide Landscape"
+                                    ratio="0.6180"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Landscape"
+                                    ratio="0.8284"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Square"
+                                    ratio="1"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Portrait"
+                                    ratio="1.6180"/>
+                            </aspectRatios>
+                        </crop>
+                        <rotate
+                            jcr:primaryType="nt:unstructured"
+                            features="right"/>
+                        <flip
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                    </plugins>
+                </policy_651483963895698>
+            </image>
+            <text jcr:primaryType="nt:unstructured">
+                <policy_641562756958017
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Text"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <formats
+                                jcr:primaryType="nt:unstructured"
+                                override="true">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Paragraph"
+                                    tag="p"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Quote"
+                                    tag="blockquote"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Preformatted"
+                                    tag="pre"/>
+                            </formats>
+                        </paraformat>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="-">
+                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                <chars
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;copy;"
+                                        name="copyright"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;euro;"
+                                        name="euro"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;reg;"
+                                        name="registered"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;trade;"
+                                        name="trademark"/>
+                                </chars>
+                            </specialCharsConfig>
+                        </misctools>
+                        <edit
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <findreplace
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <undo
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <spellcheck
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <table
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="bold,italic"/>
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            features="modifylink,unlink"/>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                    </rtePlugins>
+                </policy_641562756958017>
+            </text>
+            <title jcr:primaryType="nt:unstructured">
+                <policy_641475696923109
+                    jcr:description="Allows only H1 and disallows links for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Title"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="h1"
+                    linkDisabled="true"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_641475696923109>
+                <policy_641528232375303
+                    jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Title"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="[h2,h3,h4,h5,h6]"
+                    linkDisabled="false"
+                    type="h2">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_641528232375303>
+            </title>
+            <experiencefragment jcr:primaryType="nt:unstructured">
+                <policy_header
+                    cq:styleDefaultElement="header"
+                    jcr:description="Sets a &lt;header> element on the page header experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Header"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content
+                        cq:lastReplicated="{Date}2021-02-23T12:01:49.728+11:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
+                </policy_header>
+                <policy_footer
+                    cq:styleDefaultElement="footer"
+                    jcr:description="Sets a &lt;footer> element on the page footer experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Footer"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content
+                        cq:lastReplicated="{Date}2021-02-23T12:01:49.728+11:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
+                </policy_footer>
+            </experiencefragment>
+            <container jcr:primaryType="nt:unstructured">
+                <policy_1574694950110
+                    jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Root"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Breville Brands - Content,/apps/breville-brands/components/form/container,group:Breville Brands - Structure]">
+                    <jcr:content
+                        cq:lastReplicated="{Date}2021-02-23T12:01:49.728+11:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575024218483
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="breville-brands/components/image"/>
+                            <mapping_1575030843388
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="breville-brands/components/experiencefragment"/>
+                            <mapping_1575030853128
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="breville-brands/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1574694950110>
+                <policy_1574695586800
+                    jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor) for Breville"
+                    jcr:lastModified="{Date}2021-02-15T00:39:31.560-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Generic Page Content"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="[/apps/breville-brands/components/button,/apps/breville-brands/components/container,/apps/breville-brands/components/image,/apps/breville-brands/components/list,/apps/breville-brands/components/teaser,/apps/breville-brands/components/text,/apps/breville-brands/components/title,/apps/breville-brands/components/form/container]"
+                    layout="responsiveGrid"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="product"
+                                assetMimetype="image/*"
+                                droptarget="product-data-reference"
+                                resourceType="breville-brands/components/commerce/productteaser"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="breville-brands/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="breville-brands/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1574695586800>
+                <policy_649128221558427
+                    cq:styleDefaultElement="main"
+                    jcr:description="Sets a &lt;main> element on the page content area."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Main"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_649128221558427>
+                <policy_1575040440977
+                    jcr:lastModified="{Date}2021-03-11T07:48:46.815-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Beanz Exp Fragment"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Breville Brands - Commerce,group:Breville Brands - Content,/apps/breville-brands/components/form/container,/apps/breville-brands/components/form/text]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575024218483
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="breville-brands/components/image"/>
+                            <mapping_1575030843388
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="breville-brands/components/experiencefragment"/>
+                            <mapping_1575030853128
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="breville-brands/components/contentfragment"/>
+                            <mapping_1590416532200
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="product"
+                                droptarget="product-data-reference"
+                                resourceType="breville-brands/components/commerce/productteaser"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1575040440977>
+                <policy_1613427667762
+                    jcr:description="A policy specific to all the commerce related pages on the site"
+                    jcr:lastModified="{Date}2021-02-16T09:55:32.106+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Commerce Page Content"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="[group:Breville Brands - Commerce,group:Breville Brands - Content,/apps/breville-brands/components/form/container]"
+                    layout="responsiveGrid"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="product"
+                                assetMimetype="image/*"
+                                droptarget="product-data-reference"
+                                resourceType="breville-brands/components/commerce/productteaser"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="breville-brands/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="breville-brands/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1613427667762>
+            </container>
+            <teaser jcr:primaryType="nt:unstructured">
+                <policy_1575031387650
+                    jcr:description="Sets the title size to H3."
+                    jcr:lastModified="{Date}2021-02-15T03:39:55.082-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Beanz Teaser"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    showTitleType="true"
+                    titleType="h2">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Style"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--hero"
+                                    cq:styleId="1613372734804"
+                                    cq:styleLabel="Hero"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--tile"
+                                    cq:styleId="1613372839914"
+                                    cq:styleLabel="Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-teaser--image-left"
+                                    cq:styleId="1613372883038"
+                                    cq:styleLabel="Image Left"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-teaser--image-right"
+                                    cq:styleId="1613372905614"
+                                    cq:styleLabel="Image Right"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1575031387650>
+            </teaser>
+            <download jcr:primaryType="nt:unstructured">
+                <policy_1575032193319
+                    jcr:description="Sets the title size to H3."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Download"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowUpload="false"
+                    displayFilename="true"
+                    displayFormat="true"
+                    displaySize="true"
+                    titleType="h3">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1575032193319>
+            </download>
+            <page jcr:primaryType="nt:unstructured">
+                <policy
+                    jcr:description="Includes the required client libraries."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Generic Page"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[breville-brands.dependencies,breville-brands.site]"
+                    clientlibsJsHead="breville-brands.dependencies">
+                    <jcr:content
+                        cq:lastReplicated="{Date}2021-02-23T12:01:49.728+11:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
+                </policy>
+            </page>
+            <commerce jcr:primaryType="nt:unstructured">
+                <productlist jcr:primaryType="nt:unstructured">
+                    <default
+                        cq:styleDefaultClasses="category__style_grid"
+                        jcr:lastModified="{Date}2021-02-22T11:20:17.756+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Product List"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        showImage="true"
+                        showTitle="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Layout"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="category__style_grid"
+                                        cq:styleId="1570700958199"
+                                        cq:styleLabel="Grid"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="category__style_list"
+                                        cq:styleId="1570700958900"
+                                        cq:styleLabel="List"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </default>
+                </productlist>
+                <productcarousel jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-09-28T15:37:21.146+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Product Carousel"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </productcarousel>
+                <relatedproducts jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-09-28T15:37:21.146+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Related Products"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </relatedproducts>
+                <featuredcategorylist jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-09-28T15:37:21.146+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Featured Category List"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </featuredcategorylist>
+                <categorycarousel jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-10-15T10:12:01.134+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Category Carousel"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </categorycarousel>
+                <teaser jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2020-10-28T17:35:15.554+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM CIF Core Components Commerce Teaser"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        titleType="h3">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </default>
+                </teaser>
+            </commerce>
+        </components>
+    </breville>
+    <breville-brands jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <separator jcr:primaryType="nt:unstructured">
+                <policy_1623741054194
+                    jcr:lastModified="{Date}2021-06-15T14:29:32.295+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Separator"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Spacing"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-separator--cs-spacer-30"
+                                    cq:styleId="1631240227916"
+                                    cq:styleLabel="Spacer 30"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-separator--cs-spacer-50"
+                                    cq:styleId="1623741262719"
+                                    cq:styleLabel="Spacer 50"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-separator--cs-spacer-70"
+                                    cq:styleId="1623741269572"
+                                    cq:styleLabel="Spacing 70"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-separator--cs-spacer-90"
+                                    cq:styleId="1623742146142"
+                                    cq:styleLabel="Spacing 90"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-separator--cs-spacer-110"
+                                    cq:styleId="1623742146763"
+                                    cq:styleLabel="Spacing 110"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-separator--cs-spacer-130"
+                                    cq:styleId="1623742147368"
+                                    cq:styleLabel="Spacing 130"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1623741054194>
+            </separator>
+            <teaser jcr:primaryType="nt:unstructured">
+                <policy_1614814247454
+                    jcr:lastModified="{Date}2021-05-04T20:15:54.058-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Teaser"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    showTitleType="true"
+                    titleLinkHidden="true">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Hero Layouts"
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--hero"
+                                    cq:styleId="1614814251169"
+                                    cq:styleLabel="Hero - Default"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--hero-reduced-content-width"
+                                    cq:styleId="1614814654786"
+                                    cq:styleLabel="Reduced Container"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Other Layouts"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--tile"
+                                    cq:styleId="1614814668148"
+                                    cq:styleLabel="Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--left-image"
+                                    cq:styleId="1614814669426"
+                                    cq:styleLabel="Left Image"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-teaser--right-image"
+                                    cq:styleId="1614814693388"
+                                    cq:styleLabel="Right Image"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-teaser--image-top"
+                                    cq:styleId="1616473215819"
+                                    cq:styleLabel="Top Image"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-teaser--support-case"
+                                    cq:styleId="1614814775492"
+                                    cq:styleLabel="Support Case"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-teaser--livechat"
+                                    cq:styleId="1615955845405"
+                                    cq:styleLabel="Live Chat"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-teaser--round-tile"
+                                    cq:styleId="1616474217680"
+                                    cq:styleLabel="Round Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="cmp-teaser--support-tile"
+                                    cq:styleId="1616474218752"
+                                    cq:styleLabel="Support Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="cmp-teaser--left-image-fix"
+                                    cq:styleId="1617011389436"
+                                    cq:styleLabel="Teaser Left Image Fix"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="cmp-teaser--explorer-category"
+                                    cq:styleId="1617086115717"
+                                    cq:styleLabel="Explorer Category"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item10
+                                    cq:styleClasses="cmp-teaser--right-image-fix"
+                                    cq:styleId="1617253134641"
+                                    cq:styleLabel="Right Image Fix"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="Common Class"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="liveagent"
+                                    cq:styleId="1616495095589"
+                                    cq:styleLabel="Live Agent"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Coffee Solution"
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--cs-hero"
+                                    cq:styleId="1618373976707"
+                                    cq:styleLabel="Hero"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--cs-hero-scroll"
+                                    cq:styleId="1619079200070"
+                                    cq:styleLabel="Hero Scroll"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-teaser--cs-category-tile-round"
+                                    cq:styleId="1618373998692"
+                                    cq:styleLabel="Round Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-teaser--cs-image-left"
+                                    cq:styleId="1618374013416"
+                                    cq:styleLabel="Left Image"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-teaser--cs-image-right"
+                                    cq:styleId="1618374037147"
+                                    cq:styleLabel="Right Image"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-teaser--cs-typography"
+                                    cq:styleId="1618976109153"
+                                    cq:styleLabel="Coffee Typography"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-teaser--cs-text-right"
+                                    cq:styleId="1619078639814"
+                                    cq:styleLabel="Text Right"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="cmp-teaser--cs-image-top"
+                                    cq:styleId="1619079578102"
+                                    cq:styleLabel="Image Top"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="cmp-teaser--cs-image-top-small"
+                                    cq:styleId="1620174448145"
+                                    cq:styleLabel="Image Top Small"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="cmp-teaser--cs-image-top-small-beanz"
+                                    cq:styleId="1623889459634"
+                                    cq:styleLabel="Image Top Small Beanz"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item10
+                                    cq:styleClasses="cmp-teaser--cs-product-bundle-tiles"
+                                    cq:styleId="1620174621771"
+                                    cq:styleLabel="Bundle Tiles"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item11
+                                    cq:styleClasses="cmp-teaser--cs-hero-banner-plp"
+                                    cq:styleId="1620817462829"
+                                    cq:styleLabel="PLP Hero Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item12
+                                    cq:styleClasses="cmp-teaser--cs-hero-banner-beanz"
+                                    cq:styleId="1623134994487"
+                                    cq:styleLabel="Beanz Hero Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item13
+                                    cq:styleClasses="cmp-teaser--cs-banner-center-right"
+                                    cq:styleId="1623135094989"
+                                    cq:styleLabel="Center Right"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item14
+                                    cq:styleClasses="cmp-teaser--beanz-logo-watermark"
+                                    cq:styleId="1623732778261"
+                                    cq:styleLabel="Beanz Logo Watermark"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item15
+                                    cq:styleClasses="cmp-teaser--empty-cart"
+                                    cq:styleId="1628180758013"
+                                    cq:styleLabel="Empty Cart Teaser"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item3>
+                        <item4
+                            cq:styleGroupLabel="MyBreville"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--mybreville-support-tile"
+                                    cq:styleId="1631163082804"
+                                    cq:styleLabel="Support Tile Text Only"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--mybreville-support-tile-with-image"
+                                    cq:styleId="1631164458909"
+                                    cq:styleLabel="Support Tile With Image"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-teaser--mybreville-support-product-banner"
+                                    cq:styleId="1631247060935"
+                                    cq:styleLabel="Support Product Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item4>
+                        <item5
+                            cq:styleGroupLabel="MyBreville Title Icon"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--mybreville-support-tile-chat"
+                                    cq:styleId="1631164456789"
+                                    cq:styleLabel="Support Tile Chat Icon"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-teaser--mybreville-support-tile-call"
+                                    cq:styleId="1631164595546"
+                                    cq:styleLabel="Support Tile Call Icon"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item5>
+                    </cq:styleGroups>
+                </policy_1614814247454>
+            </teaser>
+            <title jcr:primaryType="nt:unstructured">
+                <policy_1614814413481
+                    jcr:lastModified="{Date}2021-03-31T22:52:38.084-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Title"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="[h2,h3,h4,h5,h6]"
+                    linkDisabled="false"
+                    type="h2">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-text--support-case"
+                                    cq:styleId="1615955248324"
+                                    cq:styleLabel="Support Case"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-title--italic"
+                                    cq:styleId="1617249148210"
+                                    cq:styleLabel="Italic"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Coffee Solutions"
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-title--less-padding"
+                                    cq:styleId="1622597450495"
+                                    cq:styleLabel="Less Padding"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="Experience Hub"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-title--base-h2"
+                                    cq:styleId="1631239867848"
+                                    cq:styleLabel="H2 Base"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                    </cq:styleGroups>
+                </policy_1614814413481>
+            </title>
+            <text jcr:primaryType="nt:unstructured">
+                <policy_1614814496573
+                    jcr:lastModified="{Date}2021-03-31T22:52:15.472-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Context Text"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="-">
+                            <formats
+                                jcr:primaryType="nt:unstructured"
+                                override="true">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Paragraph"
+                                    tag="p"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 1"
+                                    tag="h1"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 2"
+                                    tag="h2"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 3"
+                                    tag="h3"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 4"
+                                    tag="h4"/>
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 5"
+                                    tag="h5"/>
+                                <item6
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 6"
+                                    tag="h6"/>
+                                <item7
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Quote"
+                                    tag="blockquote"/>
+                                <item8
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Horizontal Rule (visual line break)"
+                                    tag="hr"/>
+                                <item9
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Preformatted"
+                                    tag="pre"/>
+                            </formats>
+                        </paraformat>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="sourceedit">
+                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                <chars
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;copy;"
+                                        name="copyright"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;euro;"
+                                        name="euro"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;reg;"
+                                        name="registered"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;trade;"
+                                        name="trademark"/>
+                                </chars>
+                            </specialCharsConfig>
+                        </misctools>
+                        <edit
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <findreplace
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <undo
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <spellcheck
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="bold,italic,underline"/>
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            features="modifylink,unlink"/>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <table
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-text--vertical-link-list"
+                                    cq:styleId="1614932450550"
+                                    cq:styleLabel="Vertical Link List"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-text-copyright-link-list"
+                                    cq:styleId="1614932516565"
+                                    cq:styleLabel="Copyright Link List"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-text--livechat"
+                                    cq:styleId="1615955398263"
+                                    cq:styleLabel="Live Chat"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-text--signup"
+                                    cq:styleId="1615957838063"
+                                    cq:styleLabel="Sign Up"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-text--livechat-home"
+                                    cq:styleId="1616482609516"
+                                    cq:styleLabel="Live Chat Home"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-text--horizontal-link-list"
+                                    cq:styleId="1615980285988"
+                                    cq:styleLabel="Horizontal Link List"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-text--black-background"
+                                    cq:styleId="1615980330925"
+                                    cq:styleLabel="Text Black Background"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="cmp-text--footer-left-align"
+                                    cq:styleId="1615980892930"
+                                    cq:styleLabel="Footer Align Text"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="cmp-text--footer"
+                                    cq:styleId="1615986414496"
+                                    cq:styleLabel="Footer Text"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="cmp-form-container--signup"
+                                    cq:styleId="1616747526202"
+                                    cq:styleLabel="Breville Sign-up Form"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item10
+                                    cq:styleClasses="cmp-text--promo"
+                                    cq:styleId="1617249103138"
+                                    cq:styleLabel="Promo"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item11
+                                    cq:styleClasses="cmp-text--download-links"
+                                    cq:styleId="1617249121183"
+                                    cq:styleLabel="Download Links"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-text--padding-bottom"
+                                    cq:styleId="1616127141878"
+                                    cq:styleLabel="Bottom Padding"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-text--links"
+                                    cq:styleId="1616127182012"
+                                    cq:styleLabel="Coloured Links"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-text--list"
+                                    cq:styleId="1616127209202"
+                                    cq:styleLabel="Unordered List"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="Breville Signup Popup Response"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-text--popup-title"
+                                    cq:styleId="1616494982017"
+                                    cq:styleLabel="Breville Signup Popup title"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-text--popup-body-text"
+                                    cq:styleId="1616495042397"
+                                    cq:styleLabel="Breville Signup Popup body text"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Coffee Solutions"
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-text--cs-subheading"
+                                    cq:styleId="1622543884415"
+                                    cq:styleLabel="Subheading"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-text--cs-subtitle"
+                                    cq:styleId="1622543899070"
+                                    cq:styleLabel="Subtitle"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-text--cs-subtitle-2"
+                                    cq:styleId="1624323120040"
+                                    cq:styleLabel="Subtitle Bottom"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item3>
+                    </cq:styleGroups>
+                </policy_1614814496573>
+            </text>
+            <container jcr:primaryType="nt:unstructured">
+                <policy_1614814851527
+                    jcr:lastModified="{Date}2021-06-07T19:49:59.303-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Container"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="[/apps/breville-brands/components/breville/beanzroaster,/apps/breville-brands/components/breville/productCompare,/apps/breville-brands/components/button,/apps/breville-brands/components/carouselwithtext,/apps/breville-brands/components/beanz/cart,/apps/breville-brands/components/container,/apps/breville-brands/components/download,/apps/breville-brands/components/image,/apps/breville-brands/components/list,/apps/breville-brands/components/modal,/apps/breville-brands/components/productslist,/apps/breville-brands/components/reactCarousel,/apps/breville-brands/components/reactVideo,/apps/breville-brands/components/tabs,/apps/breville-brands/components/teaser,/apps/breville-brands/components/teaserTile,/apps/breville-brands/components/text,/apps/breville-brands/components/title,/apps/breville-brands/components/breville/search-results,/apps/breville-brands/components/reactBundleConfiguration,group:Breville Brands - Form]"
+                    layout="simple"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container--support-help"
+                                    cq:styleId="1614814925981"
+                                    cq:styleLabel="Support Help"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="container--grid-wrapper"
+                                    cq:styleId="1614814935796"
+                                    cq:styleLabel="Grid Wrapper"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-container--responsive-center-aligned"
+                                    cq:styleId="1614814944587"
+                                    cq:styleLabel="Responsive Center Aligned"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-container--half-width"
+                                    cq:styleId="1616473018105"
+                                    cq:styleLabel="Half Width"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-container--background-light-grey"
+                                    cq:styleId="1616473508056"
+                                    cq:styleLabel="Background Light Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-container--support-tile"
+                                    cq:styleId="1616474053781"
+                                    cq:styleLabel="Support Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-container--livechat"
+                                    cq:styleId="1615955535360"
+                                    cq:styleLabel="Live Chat"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="cmp-container--explorer-category"
+                                    cq:styleId="1617086206665"
+                                    cq:styleLabel="Explorer Category"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="cmp-container--round-tile"
+                                    cq:styleId="1617152940395"
+                                    cq:styleLabel="Round Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="cmp-container--promo"
+                                    cq:styleId="1617249071127"
+                                    cq:styleLabel="Promo"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item10
+                                        cq:styleClasses="cmp-container--cs-empty-cart"
+                                        cq:styleId="1628495307124"
+                                        cq:styleLabel="Empty Cart Container"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Layouts"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container--cs-layout-6-6"
+                                    cq:styleId="1618975915546"
+                                    cq:styleLabel="Layout-6-6"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container--cs-layout-4-4-4 "
+                                    cq:styleId="1618975950119"
+                                    cq:styleLabel="Layout-4-4-4"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-container--cs-layout-3-3-3-3"
+                                    cq:styleId="1618976013671"
+                                    cq:styleLabel="Layout-3-3-3-3"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-container--cs-layout-5-7"
+                                    cq:styleId="1618976038548"
+                                    cq:styleLabel="Layout-5-7"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-container--cs-layout-7-5"
+                                    cq:styleId="1618976059706"
+                                    cq:styleLabel="Layout-7-5"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-container--cs-layout-6-6-mobile"
+                                    cq:styleId="1622092734083"
+                                    cq:styleLabel="Layout-6-6-Mobile"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="Coffee Solution"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container--cs-video-annotation"
+                                    cq:styleId="1619079422425"
+                                    cq:styleLabel="Video Annotation"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container--cs-centered"
+                                    cq:styleId="1619079442556"
+                                    cq:styleLabel="Centered"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-container--cs-community"
+                                    cq:styleId="1619134604744"
+                                    cq:styleLabel="Community"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-container--cs-download-app"
+                                    cq:styleId="1620177385413"
+                                    cq:styleLabel="Download App"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-container--cs-ar-teaser"
+                                    cq:styleId="1622589306776"
+                                    cq:styleLabel="AR Teaser"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-container--cs-video-teaser"
+                                    cq:styleId="1622545538991"
+                                    cq:styleLabel="Teaser Video"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-container--cs-bundle-columns"
+                                    cq:styleId="1622597000586"
+                                    cq:styleLabel="Bundle Columns"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="cmp-container--cs-bundle-beanz"
+                                    cq:styleId="1623135152046"
+                                    cq:styleLabel="Bundle Beanz"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Experience Hub"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container--eh-layout-12"
+                                    cq:styleId="1631237778600"
+                                    cq:styleLabel="Layout 12"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container--eh-layout-6-6"
+                                    cq:styleId="1631237769969"
+                                    cq:styleLabel="Layout 6-6"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-container--eh-layout-8-4"
+                                    cq:styleId="1631247864472"
+                                    cq:styleLabel="Layout 8-4"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-container--eh-layout-4-8"
+                                    cq:styleId="1631247936289"
+                                    cq:styleLabel="Layout 4-8"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-container-eh-background-light-grey"
+                                    cq:styleId="1631240963585"
+                                    cq:styleLabel="Background-Light-Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item3>
+                    </cq:styleGroups>
+                </policy_1614814851527>
+                <policy_78391971282000
+                    jcr:lastModified="{Date}2021-06-14T19:22:04.014+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Exp Fragment"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/apps/breville-brands/components/button,/apps/breville-brands/components/carouselwithtext,/apps/breville-brands/components/container,/apps/breville-brands/components/contentfragment,/apps/breville-brands/components/header,/apps/breville-brands/components/image,/apps/breville-brands/components/teaser,/apps/breville-brands/components/text,/apps/breville-brands/components/title,group:Breville Brands - Form]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container--footer-top"
+                                    cq:styleId="1615470764418"
+                                    cq:styleLabel="Footer Top"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container--footer-middle"
+                                    cq:styleId="1615980370034"
+                                    cq:styleLabel="Footer Middle"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-container--footer-bottom"
+                                    cq:styleId="1615980375161"
+                                    cq:styleLabel="Footer Bottom"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-container--footer-logo"
+                                    cq:styleId="1615990019303"
+                                    cq:styleLabel="Footer Container Logo"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-container--footer-list"
+                                    cq:styleId="1615990040920"
+                                    cq:styleLabel="Footer Container List"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-container--signup-success"
+                                    cq:styleId="1616494736557"
+                                    cq:styleLabel="Breville Signup Success"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-container--signup-failure"
+                                    cq:styleId="1616494752035"
+                                    cq:styleLabel="Breville Signup Failure"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="cmp-container--promo"
+                                    cq:styleId="1617257328604"
+                                    cq:styleLabel="Promo"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_78391971282000>
+                <policy_443255570522600
+                    jcr:description="Product Page Main Container Sets Main element"
+                    jcr:lastModified="{Date}2021-06-20T12:41:59.576+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Product Page Main Container"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_443255570522600>
+                <policy_443799907372600
+                    jcr:lastModified="{Date}2021-08-16T13:09:38.191+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Product Page Container"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/apps/breville-brands/components/commerce/brevilleproduct,/apps/breville-brands/components/container,/apps/breville-brands/components/productinformation,/apps/breville-brands/components/reactVideo,/apps/breville-brands/components/breville/sfcustomerform,/apps/breville-brands/components/teaser,/apps/breville-brands/components/teaserTile,/apps/breville-brands/components/teaserTwoImages,/apps/breville-brands/components/text,/apps/breville-brands/components/title]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_443799907372600>
+                <policy_34353674571386
+                    jcr:lastModified="{Date}2021-07-07T17:02:44.123+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="MyBreville Page Container"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="/apps/breville-brands/components/myBreville"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_34353674571386>
+            </container>
+            <button jcr:primaryType="nt:unstructured">
+                <policy_1614815021168
+                    jcr:lastModified="{Date}2021-08-06T09:10:09.077+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Button"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-button--no-background"
+                                    cq:styleId="1616474492393"
+                                    cq:styleLabel="No Background"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-button--livechat"
+                                    cq:styleId="1616482695976"
+                                    cq:styleLabel="Live Chat Button"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-btn--popup-close-btn"
+                                    cq:styleId="1616495449933"
+                                    cq:styleLabel="Breville Signup Popup Close Btn"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-btn--popup-close-icon-btn"
+                                    cq:styleId="1616495486338"
+                                    cq:styleLabel="Breville Signup Close Icon"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                        cq:styleClasses="cmp-button--continue-shopping"
+                                        cq:styleId="1628221197087"
+                                        cq:styleLabel="Continue Shopping  Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Common Class"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="liveagent"
+                                    cq:styleId="1616495125116"
+                                    cq:styleLabel="Live Agent"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="Coffee Solution"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-button--cs-commercial"
+                                    cq:styleId="1619079540490"
+                                    cq:styleLabel="Commercial"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-button--cs-white-purple"
+                                    cq:styleId="1622543119100"
+                                    cq:styleLabel="White Purple"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-button--cs-gunmetal-medium-transparent"
+                                    cq:styleId="1623135176063"
+                                    cq:styleLabel="Gunmetal Transparent"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                    </cq:styleGroups>
+                </policy_1614815021168>
+            </button>
+            <download jcr:primaryType="nt:unstructured">
+                <policy_1614819106306
+                    jcr:lastModified="{Date}2021-03-15T17:40:50.907-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Download"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowUpload="false"
+                    displayFilename="false"
+                    displayFormat="false"
+                    displaySize="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured"/>
+                    </cq:styleGroups>
+                </policy_1614819106306>
+            </download>
+            <form jcr:primaryType="nt:unstructured">
+                <text jcr:primaryType="nt:unstructured">
+                    <policy_1615470630111
+                        jcr:lastModified="{Date}2021-03-11T07:51:18.447-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Beanz Form Text"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-form-text--beanz-signup"
+                                        cq:styleId="1615470650519"
+                                        cq:styleLabel="Beanz Signup Text"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-form-text--signup-first-name"
+                                        cq:styleId="1616747828073"
+                                        cq:styleLabel="Firstname"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="cmp-form-text--signup-last-name"
+                                        cq:styleId="1616747835404"
+                                        cq:styleLabel="Lastname"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="cmp-form-text--signup-email"
+                                        cq:styleId="1616747843064"
+                                        cq:styleLabel="Email"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1615470630111>
+                </text>
+                <container jcr:primaryType="nt:unstructured">
+                    <policy_1615957887428
+                        jcr:lastModified="{Date}2021-03-17T00:12:10.963-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form Container"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-form-container--signup"
+                                        cq:styleId="1615957897776"
+                                        cq:styleLabel="Sign Up"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1615957887428>
+                </container>
+                <button jcr:primaryType="nt:unstructured">
+                    <policy_1616747104032
+                        jcr:lastModified="{Date}2021-03-26T14:08:55.229+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Breville Newsletter Submit"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-form-button-signup-button"
+                                        cq:styleId="1616747107739"
+                                        cq:styleLabel="Submit Form"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1616747104032>
+                </button>
+            </form>
+            <page jcr:primaryType="nt:unstructured">
+                <policy_1615848276219
+                    jcr:lastModified="{Date}2021-03-31T20:25:43.029-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Generic Page"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[breville.dependencies,breville.site]"
+                    clientlibsJsHead="breville.dependencies">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1615848276219>
+            </page>
+            <xfpage jcr:primaryType="nt:unstructured">
+                <policy_1615950965477
+                    jcr:lastModified="{Date}2021-03-16T22:16:30.375-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Exp fragment"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[breville.dependencies,breville.site]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1615950965477>
+            </xfpage>
+            <image jcr:primaryType="nt:unstructured">
+                <policy_1616127235302
+                    jcr:lastModified="{Date}2021-03-19T09:46:36.298+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Content Image"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowUpload="true"
+                    altValueFromDAM="true"
+                    disableLazyLoading="true"
+                    displayPopupTitle="true"
+                    isDecorative="false"
+                    jpegQuality="{Long}1"
+                    titleValueFromDAM="true"
+                    uuidDisabled="true">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <plugins jcr:primaryType="nt:unstructured">
+                        <crop
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <aspectRatios jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Wide Landscape"
+                                    ratio="0.6180"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Landscape"
+                                    ratio="0.8284"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Square"
+                                    ratio="1"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    name="Portrait"
+                                    ratio="1.6180"/>
+                            </aspectRatios>
+                        </crop>
+                        <rotate
+                            jcr:primaryType="nt:unstructured"
+                            features="right"/>
+                        <flip
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                    </plugins>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-image--width-auto"
+                                    cq:styleId="1616127382355"
+                                    cq:styleLabel="Auto Width"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-image--livechat"
+                                    cq:styleId="1616482492915"
+                                    cq:styleLabel="Live Chat Image"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-image--footer-logo"
+                                    cq:styleId="1615983145420"
+                                    cq:styleLabel="Footer Logo"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1616127235302>
+            </image>
+            <tabs jcr:primaryType="nt:unstructured">
+                <policy_1617087119791
+                    jcr:lastModified="{Date}2021-03-30T01:54:12.728-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Tabs"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-tabs--secondary"
+                                    cq:styleId="1617087132582"
+                                    cq:styleLabel="Tab Secondary"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1617087119791>
+            </tabs>
+            <teaserTile jcr:primaryType="nt:unstructured">
+                <policy_1617152312724
+                    jcr:description="This component enable whole tile to be clickable"
+                    jcr:lastModified="{Date}2021-03-30T20:08:39.759-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Teaser Tile"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    showTitleType="true">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-teaser--round-tile"
+                                    cq:styleId="1617152857762"
+                                    cq:styleLabel="Round Tile"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1617152312724>
+            </teaserTile>
+            <reactVideo jcr:primaryType="nt:unstructured">
+                <policy_1618976143262
+                    cq:styleDefaultClasses="cmp-reactvideo--embed"
+                    jcr:lastModified="{Date}2021-04-22T03:09:12.994-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Video"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-videoteaser--hero"
+                                    cq:styleId="1618976157688"
+                                    cq:styleLabel="Hero"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-reactvideo--cs-cta-text"
+                                    cq:styleId="1631518622478"
+                                    cq:styleLabel="CTA Text"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1618976143262>
+            </reactVideo>
+            <reactCarousel jcr:primaryType="nt:unstructured">
+                <policy_1619078847585
+                    cq:styleDefaultClasses="cmp-reactcarousel--slick-theme-default"
+                    jcr:lastModified="{Date}2021-04-22T18:27:43.771-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="React Carousel"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    autopauseDisabled="false"
+                    autoplay="false"
+                    delay="5000">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Coffee Solution"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-reactcarousel--cs-testimonial"
+                                    cq:styleId="1619078867455"
+                                    cq:styleLabel="Testimonial"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-reactcarousel--cs-community"
+                                    cq:styleId="1619078885722"
+                                    cq:styleLabel="Community"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1619078847585>
+            </reactCarousel>
+            <modal jcr:primaryType="nt:unstructured">
+                <policy_1623718978081
+                    cq:styleDefaultClasses="cmp-modal--cs-fullscreen"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Modal policy"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Coffee Solution Modal"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-modal--cs-fullscreen"
+                                    cq:styleId="1623719197506"
+                                    cq:styleLabel="Fullscreen Modal"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-modal--cs-overlay"
+                                    cq:styleId="1623719204255"
+                                    cq:styleLabel="Overlay Modal"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Coffee Solution Button"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-button--cs-commercial"
+                                    cq:styleId="1619079540490"
+                                    cq:styleLabel="Commercial"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-button--cs-white-purple"
+                                    cq:styleId="1622543119100"
+                                    cq:styleLabel="White Purple"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-button--cs-gunmetal-medium"
+                                    cq:styleId="1623135176063"
+                                    cq:styleLabel="Gunmetal"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                    </cq:styleGroups>
+                </policy_1623718978081>
+            </modal>
+            <carouselwithtext jcr:primaryType="nt:unstructured">
+                <policy_1623979053937
+                    jcr:lastModified="{Date}2021-06-18T08:18:33.958+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Breville Carousel With Text"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    autopauseDisabled="false"
+                    autoplay="false"
+                    delay="5000">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Coffee Solution"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-carouselwithtext--cs-barista-starter-kit"
+                                    cq:styleId="1623979073340"
+                                    cq:styleLabel="Barista Starter Kit"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1623979053937>
+            </carouselwithtext>
+            <experiencefragment jcr:primaryType="nt:unstructured">
+                <policy_1625632209047
+                    cq:styleDefaultElement="footer"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="MyBreville Footer Experience Fragment"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1625632209047>
+                <policy_16384654177041
+                    cq:styleDefaultElement="header"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="MyBreville Header Experience Fragment"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_16384654177041>
+            </experiencefragment>
+        </components>
+    </breville-brands>
+</jcr:root>

@@ -1,0 +1,66 @@
+[
+  {
+    "type": "icon",
+    "label": "controlType",
+    "name": "WEB_TS_CONTROL",
+    "iconUrl": "/content/dam/breville-brands/coffee-solution/svg/manual-control.svg",
+    "iconUrl2": "/content/dam/breville-brands/coffee-solution/svg/automatic-ease.svg",
+    "value": "[Manual Control]"
+  },
+  {
+    "type": "icon",
+    "label": "GrinderType",
+    "name": "WEB_TS_GRINDER",
+    "iconUrl": "/content/dam/breville-brands/coffee-solution/svg/grinder.svg",
+    "value": "[Integrated Conical Burr Grinder]"
+  },
+  {
+    "type": "icon",
+    "label": "HeatupType",
+    "name": "WEB_TS_HEATUP",
+    "iconUrl": "/content/dam/breville-brands/coffee-solution/svg/3-sec-heatup.svg",
+    "value": "[3 Sec Thermojet Heatup]"
+  },
+  {
+    "type": "icon",
+    "label": "FoamType",
+    "name": "WEB_TS_FOAM",
+    "iconUrl": "/content/dam/breville-brands/coffee-solution/svg/milk-texture-wand.svg",
+    "value": "[Microfoam Milk Texture Wand]"
+  },
+  {
+    "type": "icon",
+    "label": "MilkType",
+    "name": "WEB_TS_MILK",
+    "iconUrl": "/content/dam/breville-brands/coffee-solution/svg/auto-milk.svg",
+    "value": "[Hands Free Milk Texturing]"
+  },
+  {
+    "type": "icon",
+    "label": "ScreenType",
+    "name": "WEB_TS_SCREEN",
+    "iconUrl": "/content/dam/breville-brands/coffee-solution/svg/lcd-interface.svg",
+    "value": "[Intuitive LCD Interface]"
+  },
+  {
+    "type": "text",
+    "label": "Dimensions (WxDxH):",
+    "name": "WEB_TS_DIMENSIONS",
+    "iconUrl": "/content/dam/breville-brands/coffee-solution/svg/dimensions.svg",
+    "value": "[13.9\" x 16.1\" x 16\"]"
+  },
+  {
+    "type": "text",
+    "label": "Warranty",
+    "name": "WEB_TS_WARRANTY",
+    "iconUrl": "",
+    "value": "[2 Year Limited Product Warranty]"
+  },
+  {
+    "type": "text",
+    "label": "Capacity",
+    "name": "WEB_TS_CAPACITY",
+    "iconUrl": "",
+    "value": "[67 fl.oz Water Tank, ½ lb Bean Hopper]"
+  }
+]

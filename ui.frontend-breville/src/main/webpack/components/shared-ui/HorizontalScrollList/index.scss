@@ -1,0 +1,19 @@
+.horizontal-list {
+  @include column-overflow-scroll();
+
+  padding: $cs-spacing-20 0;
+  display: grid;
+  grid-auto-flow: column;
+  max-width: var(--max-width);
+
+  .horizontal-list__spacer {
+    width: var(--gutter-width);
+    margin: 0;
+  }
+
+  > * {
+    width: var(--tile-size);
+    margin: 0 var(--gutter-width);
+  }
+}
+

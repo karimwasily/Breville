@@ -1,0 +1,119 @@
+%cmp-teaser--hero {
+  overflow: hidden;
+  height: 25.25rem;
+  @media (min-width: $screen-md) {
+    height: auto;
+  }
+  
+  .cmp-teaser {
+    position: relative;
+    background-color: $black;
+    height: 100%;
+  
+    &__image {
+      position: relative;
+      height: 100%;
+  
+      .cmp-image {
+        height: 100%;
+          
+        &__image {
+          height: 100%;
+          width: 100%;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+    }
+  
+    &__content {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 90%;
+      max-width: 32rem;
+      margin: auto;
+      text-align: center;
+      text-shadow: $text-shadow;
+  
+      .cmp-teaser__title {
+        font-size: 1.37rem;
+        font-family: $font-family-primary;
+        font-weight: $font-weight-bold;
+        line-height: 2.06rem;
+        text-align: center;
+        color: $white;
+
+        @media (min-width: $screen-sm) {
+          @include font-size($font-size-h1);
+          line-height: $line-height-h1;
+        }
+
+        &::after {
+          display: block;
+          content: '';
+          height: 4px;
+          width: 24px;
+          background-color: $white;
+          margin: $spacing-sm auto;
+        }
+      }
+  
+      .cmp-teaser__description {
+        color: $white;
+
+        * {
+          color: $white;
+        }
+      }
+
+      .cmp-teaser__action-container {
+        padding: $spacing-sm;
+
+        a.cmp-teaser__action-link {
+          @extend %action-link;
+          display: inline-block;
+          width: auto;
+          color: $white;
+          vertical-align: middle;
+          user-select: none;
+          border: 1px solid;
+          padding: $spacing-md;
+          transition: color $transition-speed-fast $transition-easing, background-color $transition-speed-fast $transition-easing, border $transition-speed-fast $transition-easing, border-color $transition-speed-fast $transition-easing, text-shadow $transition-speed-fast $transition-easing, outline $transition-speed-fast $transition-easing;
+          border-radius: 6px;
+          white-space: nowrap;
+          @media (min-width: $screen-sm) {
+            min-width: 18.75rem;
+          }
+
+          &:focus,
+          &:hover {
+            color: $gunmetal;
+            background-color: $white;
+            border: 1px solid;
+            border-color: $white;
+            text-shadow: none;
+            outline: 0;
+          }
+        }
+      }
+    }
+    
+    &::after {
+      content: '';
+      z-index: 0;
+      background-color: $background-overlay;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.cmp-teaser--hero {
+  @extend %cmp-teaser--hero;
+}

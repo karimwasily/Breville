@@ -1,0 +1,86 @@
+.carousel-product-list {
+  // * dynamically creating left and right side space for arrows so that they do not overlap the items
+  --arrow-spacer: #{$cs-spacing-45};
+  --arrow-page-gutter: #{$cs-spacing-5};
+
+  // * --item-width is used for max and min dependent on whether carousel is rendering or within flex container
+  // * --container-width is also specified from react
+  --item-width: 320px;
+  --container-width: #{$cs-max-width};
+
+  // conditional class to specify max-width of container
+  max-width: var(--container-width) !important;
+
+  margin: auto;
+  padding-bottom: $cs-spacing-40;
+
+  .splide__slide {
+    // * prevent overflow hiding item border
+    padding: 2px 1px;
+  }
+
+  &.carousel-product-list--no-arrows {
+    --arrow-spacer: auto;
+    --arrow-page-gutter: 0;
+    max-width: $cs-max-width;
+  }
+
+  .carousel-product-list__carousel-hidden {
+    display: flex;
+    // keep item images aligned to the top
+    align-items: flex-start;
+    justify-content: center;
+
+    .item {
+      align-self: stretch;
+      max-width: var(--item-width);
+      margin-right: var(--item-gap);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  > div {
+    @media (min-width:$cs-screen-sm) {
+      margin-right: var(--arrow-spacer);
+      margin-left: var(--arrow-spacer);
+    }
+  }
+
+
+  .splide__arrow--prev {
+    left: calc((var(--arrow-spacer) - var(--arrow-page-gutter)) * -1);
+  }
+
+  .splide__arrow--next {
+    right: calc((var(--arrow-spacer) - var(--arrow-page-gutter) ) * -1);
+  }
+
+  // pagination / dots indicator
+  .splide__pagination {
+    bottom: -$cs-spacing-30;
+
+    // horizontal spacing
+    li {
+      margin: 0 $cs-spacing-10;
+    }
+
+    .splide__pagination__page {
+      --size: 15px;
+      width: var(--size);
+      height: var(--size);
+
+      background-color: $cs-white;
+      box-shadow: inset 0 0 0 1px $cs-color-primary, inset 0 0 0 4px $cs-white;
+
+      &.is-active {
+        background-color: $cs-black;
+        box-shadow: inset 0 0 0 1px $cs-color-primary, inset 0 0 0 4px $cs-white;
+        transform: unset;
+      }
+    }
+  }
+
+}

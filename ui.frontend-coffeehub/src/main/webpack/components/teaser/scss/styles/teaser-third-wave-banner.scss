@@ -1,0 +1,38 @@
+// this style wrapper modifies '.cmp-teaser--tile-banner'
+.cmp-teaser--third-wave-banner {
+  $tile-banner-background: transparent;
+  @extend %cmp-teaser--tile-banner;
+  
+  .cmp-teaser {
+    background-color: $tile-banner-background;
+  
+    &__content {
+      color: white;
+      
+      .cmp-teaser__pretitle {
+        @extend %font-h5;
+        width: 100%;
+        padding-bottom: $spacing-md;
+        border-bottom: solid 1px white;
+        @media (min-width: $screen-md) {
+          padding-bottom: $spacing-ml;
+        }
+      }
+
+      .cmp-teaser__title {
+        margin-top: $spacing-md;
+
+        @media (min-width: $screen-md) {
+          margin-top: $spacing-ml;
+        }
+      }
+
+      .cmp-teaser__description {
+        margin-top: 0;
+        @media (min-width: $screen-md) {
+          margin-top: $spacing-lg;
+        }
+      }
+    }
+  }
+}

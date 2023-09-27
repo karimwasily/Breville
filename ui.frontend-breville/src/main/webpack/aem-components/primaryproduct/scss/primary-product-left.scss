@@ -1,0 +1,68 @@
+%cmp-primary-product-left {
+  .cmp-primary-product--react-carousel {   
+    margin-top: $cs-spacing-30;
+    @media (min-width: $screen-md) {       
+      position: absolute;
+      margin-top: 0;   
+    }
+    
+    .hero-pdp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 75% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;; 
+      }
+
+    }
+
+    .cmp-primary-product--color-variant {
+      margin-top: $cs-spacing-20;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-color-name {
+        @extend %cs-font-p-bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;       
+      }
+    
+    }  
+
+    .cmp-primary-product--thumbnail {
+      @include column-overflow-scroll();
+      display: flex;
+      align-items: center;
+      margin: auto;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      overflow-y: hidden;
+      max-width: 350px;
+      margin-top: $cs-spacing-15;
+      padding-bottom: $cs-spacing-10;
+      @media (max-width: $screen-md) {       
+        max-width: 350px;        
+      }
+      @media (min-width: $screen-md) { 
+        margin-top: $cs-spacing-30;
+        max-width: 365px;        
+      }
+      @media (min-width: $screen-lg) {
+        max-width: 440px;  
+      }
+      @media (min-width: $screen-xl) {
+        overflow-x: unset;
+        max-width: unset;
+        justify-content: center;
+      }
+    }
+  }
+
+      
+}

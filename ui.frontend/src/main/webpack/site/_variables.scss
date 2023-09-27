@@ -1,0 +1,74 @@
+////////////////////
+// COLORS
+////////////////////
+$white: #fff;
+$aubergine: #3a1537;
+$black: #000;
+$light-violet: #a492a3;
+$mardi-gras: #2e112d;
+$mardi-gras-dark: #211020;
+
+$footer-background: $aubergine;
+
+////////////////////
+// TYPOGRAPHY
+////////////////////
+$font-family-primary: 'Arial', sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
+
+$font-size-base: rem(16px);
+$font-size-xs: rem(12px);
+$font-size-sm: rem(14px);
+$font-size-h5-footer: rem(16px);
+$font-size-body: rem(18px);
+
+///////////////////////////
+
+$line-height-base: rem(24px);
+$line-height-h5-footer: rem(22.86px);
+$line-height-body: rem(27px);
+
+///////////////////////////
+
+$font-weight-bold: 700;
+////////////////////
+// BREAKPOINTS
+////////////////////
+
+$screen-xs: 375px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1440px;
+$screen-xxxl: 1920px;
+
+////////////////////
+// LAYOUT
+////////////////////
+$max-width: $screen-xxxl;
+
+$footer-height: rem(350px);
+$footer-mobile-height: rem(800px);
+
+////////////////////
+// SPACING
+////////////////////
+$spacing-xxs: rem(5px);
+$spacing-xs: rem(10px);
+$spacing-sm: rem(15px);
+$spacing-md: rem(20px);
+$spacing-lg: rem(30px);
+$spacing-xl: rem(40px);
+$spacing-xxl: rem(50px);
+$spacing-xxxl: rem(70px);
+
+$spacing-page-gutter: $spacing-xxl;
+$spacing-page-gutter-mobile: $spacing-md;
+
+////////////////////
+// ANIMATION
+////////////////////
+
+$transition-speed: 0.3s;
+$transition-ease: ease-in-out;

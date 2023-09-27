@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2019-02-12T05:50:29.767Z"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-09-26T05:16:56.013Z"
+        cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Luxembourg"
+        jcr:uuid="c4cce64f-1e30-4b76-9b5b-4e26a098188a"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <item
+                jcr:created="{Date}2018-04-04T06:54:25.486Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-12T05:50:22.890Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="German"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="de;https://www.sageappliances.com/eu/de/home/index.html?reg=lu"/>
+            <item_495810396
+                jcr:created="{Date}2018-05-07T06:34:52.486Z"
+                jcr:createdBy="akaur13"
+                jcr:lastModified="{Date}2019-02-12T05:50:29.765Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="French"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="Default:fr;https://www.sageappliances.com/eu/fr/home/index.html?reg=lu"/>
+        </list>
+    </jcr:content>
+</jcr:root>

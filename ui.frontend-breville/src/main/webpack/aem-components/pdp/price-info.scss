@@ -1,0 +1,43 @@
+%price-info {  
+  margin: $cs-spacing-35 0 $cs-spacing-35;
+  @media (min-width: $cs-screen-md) {
+    margin: $cs-spacing-15 0 $cs-spacing-25;
+  } 
+
+  .primary-product-container__price {
+    @extend %cs-font-h14;
+    margin: auto 0;
+    padding-right: $cs-spacing-10;
+
+    .primary-product-container__slash {
+      @extend %cs-font-h5;
+      padding-left: $cs-spacing-10;
+
+      color: $cs-light-grey;
+      font-weight: $cs-font-weight-normal !important;     
+    } 
+  }
+
+  .primary-product-container__affirm {    
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: $cs-spacing-2;
+
+    p {
+      @extend %cs-font-p-4;
+      margin-bottom: 0;
+
+      a {
+        @extend %cs-link-underline;
+        @extend %cs-font-p-4;
+        text-decoration: underline solid $cs-gunmetal 1px;
+      }
+    }
+
+  }
+
+  .primary-product-container__affirm-icon-info {
+    margin: auto 0;
+    padding-left: $cs-spacing-10;
+  }
+}

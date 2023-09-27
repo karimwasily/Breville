@@ -1,0 +1,61 @@
+.cmp-teaser--cs-hero-banner-beanz {
+  @extend %cmp-teaser--cs-hero;
+
+  .cmp-teaser {
+    display: flex;
+    height: fit-content;
+    min-height: 420px;
+    margin-bottom: $cs-spacing-35;
+    @media (min-width: $cs-screen-lg) {
+      min-height: 500px;
+      margin-bottom: $cs-spacing-45;
+    } 
+    
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 685px;
+      padding: 0 $cs-spacing-5;
+
+      @media (min-width: $cs-screen-md) {
+        padding: 0 $cs-spacing-30;
+      }     
+
+      .cmp-teaser__pretitle {           
+        @extend %cs-font-h14;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        color: $cs-white;
+        white-space: nowrap;
+        height: 1.6875rem; // To set the Beanz logo height
+        
+        &::before {
+          @extend %logo-beanz-icon; 
+          content: '';
+          margin-right: $cs-spacing-10;
+          transform: translateY(1px);
+        }
+      }
+       
+
+      .cmp-teaser__title {        
+        margin: $cs-spacing-25 0 0;
+        @media (min-width: $cs-screen-md) {
+          margin-top: $cs-spacing-10;
+        }
+      }
+
+      .cmp-teaser__description {
+        margin-top: $cs-spacing-15;
+        // To override the general paragraph margin bottom
+        p {
+          @extend %cs-font-p-6;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

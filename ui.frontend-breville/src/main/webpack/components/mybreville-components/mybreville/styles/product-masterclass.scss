@@ -1,0 +1,27 @@
+.masterclasses__list {
+  display: grid;
+  grid-auto-columns: 80%;
+  grid-auto-flow: column;
+  grid-gap: $cs-spacing-10;
+  margin: $cs-spacing-35 0 $cs-spacing-40;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  @media (min-width: $cs-screen-md) {
+    grid-auto-columns: unset;
+    grid-auto-flow: unset;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: unset;
+  }
+
+  @media (min-width: $cs-screen-lg) {
+    grid-gap: $cs-spacing-20;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,104 @@
+.address-form__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: rgba($cs-black, 0.5);
+
+  @media (min-width: $cs-screen-xl) {
+    justify-content: center;
+  }
+
+  .address-form__modal {
+    overflow-y: auto;
+  }
+
+  .address-form__container {
+    position: relative;
+  
+    width: 375px;
+    max-width: 100%;
+    padding: $cs-spacing-50 $cs-spacing-30;
+  
+    background-color: $cs-white;
+  
+    @media (min-width: $cs-screen-xl) {
+      width: 700px;
+      padding: $cs-spacing-50 $cs-spacing-70 $cs-spacing-50 $cs-spacing-50;
+    }
+    
+    @media (min-width: $cs-screen-xl) {
+      width: 939px;
+    }
+    
+    .address-form__header {
+      margin-bottom: $cs-spacing-20;
+  
+      .address-form__title {
+        @extend %cs-font-h4;
+      }
+  
+      .address-form__close-icon {
+        position: absolute;
+        top: $cs-spacing-20;
+        right: $cs-spacing-20;
+
+        @media (min-width: $cs-screen-xl) {
+          top: $cs-spacing-40;
+          right: $cs-spacing-40;
+        }
+      }
+    }
+  
+    .address-form__content {
+      @extend %cs-font-p-2;
+      margin-bottom: $cs-spacing-30;
+
+      .cmp-address__grid {
+        padding: 0;
+      }
+
+      .cmp-form--buttons {
+        display: flex;
+        gap: $cs-spacing-10;
+      
+        .cmp-button {
+          @extend %cs-font-p-2-bold;
+          width: 100% !important;
+          height: 54px;
+
+          color: $cs-gunmetal;
+          font-size: $cs-font-size-base;
+          text-align: center;
+
+          background: transparent;
+          border-color: $cs-gunmetal !important;
+        }
+
+        .cmp-button:hover {
+          color: $cs-white;
+
+          background-color: $cs-dark-purple;
+        }
+      
+        .form-button {
+          width: 100% !important;
+          height: 54px;
+          margin-top: 0;
+        }
+      
+        .button-text {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+// this relies on the vue blog-listing-article component markup
+// styles a single row (standard)
+.cmp-v-blog-listing--article-one-row {
+  .cmp-v-blog-listing__article {
+    .cmp-article {
+      @media (min-width: $screen-md) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      // ARTICLE IMAGE
+      .cmp-article__image {
+        @media (min-width: $screen-md) {
+          align-self: center;
+          flex: 6;
+          margin-right: $spacing-lg;
+        }
+
+        .cmp-image {
+          // slighly later to change image dimensions due to excess white space
+          @media (min-width: $screen-lg) {
+            padding-top: 60%;
+          }
+
+          &__image {
+          }
+        }
+      }
+
+      // ARTICLE CONTENT
+      &__content {
+
+        @media (min-width: $screen-md) {
+          flex: 4;
+          margin: 0 $spacing-xxl;
+        }
+
+        .cmp-article__category-wrapper {
+          @media (min-width: $screen-md) {
+            border-bottom: 1px solid black;
+          }
+
+          .cmp-article__category {
+            @media (min-width: $screen-md) {
+              margin-top: 0;
+              padding-top: $spacing-xxl !important;
+              padding-bottom: $spacing-lg;
+            } 
+          }
+        }
+
+        .cmp-article__title {
+          @media (min-width: $screen-md) {
+            margin-top: 0;
+            padding-top: $spacing-md;
+          }
+        }
+
+        .cmp-article__description {
+        }
+
+        .cmp-article__action-container {
+          .cmp-article__action-link {
+          }
+        }
+      }
+    }
+  }
+}

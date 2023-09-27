@@ -1,0 +1,26 @@
+.cmp-teaser--hero.cmp-teaser--hero-compact-full-width {
+    .cmp-teaser__content {
+        .cmp-teaser__title {
+            @include breakpoint-up (md) {
+                @include font-size(54px);
+            }
+            @include breakpoint-up (lg) {
+                margin: 0 auto 20px;
+            }
+        }
+        .cmp-teaser__description {
+            @include breakpoint-up (lg) {
+                max-width: 1440px;
+                margin: auto;
+                padding: 0 35px;
+            }
+            p {
+                @include breakpoint-up (md) {
+                    @include font-size(30px);
+                }
+                @include breakpoint-up (lg) {
+                }
+            }
+        }
+    }
+}

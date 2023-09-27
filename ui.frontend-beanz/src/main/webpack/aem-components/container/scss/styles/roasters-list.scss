@@ -1,0 +1,38 @@
+.container--responsive-center-aligned.container--roasters-list {
+    margin-top: 140px;
+}
+.container--roasters-list {
+    .cmp-container > div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding-bottom: 50px;
+        @include breakpoint-up (md) {
+            padding-top: 20px;
+            padding-bottom: 0;
+        }
+
+        .image {
+            width: 100%;
+            @include breakpoint-up (md) {
+                width: 33.333% !important;
+                padding-bottom: 50px;
+            }
+            @include breakpoint-up (lg) {
+                padding-bottom: 50px;
+            }
+            .cmp-image {
+                display: flex;
+                justify-content: center;
+                img.cmp-image__image {
+                    width: 136px;
+                    height: 136px;
+                    @include breakpoint-up (lg) {
+                        width: 260px;
+                        height: 260px;
+                    }
+                }
+            }
+        }
+    }
+}

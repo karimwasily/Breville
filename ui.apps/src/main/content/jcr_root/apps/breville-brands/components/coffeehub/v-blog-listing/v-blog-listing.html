@@ -1,0 +1,10 @@
+<sly data-sly-use.model="com.breville.aem.brands.core.models.BlogListing"></sly>
+<div data-vue-cmp="v-blog-listing">
+  <script type="application/json">
+    ${model.asJson @ context='unsafe'}
+  </script>
+</div>
+<!--/* Following line forces the VueJS clientlibs to be included later on the page */-->
+<sly
+  data-sly-use.attribs="${'com.breville.aem.brands.core.models.Attribs' @ attrib='include-vue', value='true'}"
+/>

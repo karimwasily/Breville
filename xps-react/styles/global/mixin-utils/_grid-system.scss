@@ -1,0 +1,58 @@
+/* stylelint-disable max-nesting-depth -- turn off for conditional Sass code */
+
+@use 'sass:math';
+
+// Grid system
+// Generate semantic grid columns with these mixins.
+
+@mixin make-container() {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Define grid behavior at different breakpoints
+@mixin make-container-mqs($breakpoints: $breakpointMap) {
+    @each $bp in map-keys($breakpoints) {
+        @include mq-min($bp) {
+            $page-margin: map-get($breakpoints, $bp, 'pageMargin');
+            $column-gutter: map-get($breakpoints, $bp, 'columnGutter');
+            $container-gutter: $page-margin - math.div($column-gutter, 2);
+            padding-right: $container-gutter;
+            padding-left: $container-gutter;
+            @if $bp == lg {
+                max-width: map-get($breakpoints, $bp, 'contentMax');
+            }
+        }
+    }
+}
+
+@mixin make-row($breakpoints: $breakpointMap) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin make-col-ready() {
+    position: relative;
+    // Prevent columns from becoming too narrow when at smaller grid tiers by
+    // always setting `width: 100%;`. This works because we use `flex` values
+    // later on to override this initial width.
+    width: 100%;
+    min-height: 1px; // Prevent collapsing
+    $sidePadding: $grid-gutter-width / 2;
+    padding-right: $sidePadding;
+    padding-left: $sidePadding;
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+    flex: 0 0 percentage(math.div($size, $columns));
+    // Add a `max-width` to ensure content within each column does not blow out
+    // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+    // do not appear to require this.
+    max-width: percentage(math.div($size, $columns));
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+    $num: math.div($size, $columns);
+    margin-left: if($num == 0, 0, percentage($num));
+}

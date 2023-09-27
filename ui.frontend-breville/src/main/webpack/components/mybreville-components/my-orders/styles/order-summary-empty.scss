@@ -1,0 +1,24 @@
+.ordersummary-empty {
+
+  text-align: center;
+
+  .ordersummary-empty__label {
+    @extend %cs-font-p-bold;
+    margin-bottom: $cs-spacing-40;
+  }
+
+  .ordersummary-empty__button {
+    padding: $cs-spacing-15 $cs-spacing-70;
+
+    font-weight: $cs-font-weight-bold;
+    font-size: $cs-font-size-base;
+  }
+
+  @media screen and (min-width: $cs-screen-xl) {
+    text-align: left;
+
+    .ordersummary-empty__label {
+      line-height: $line-height-base;
+    }
+  }
+}

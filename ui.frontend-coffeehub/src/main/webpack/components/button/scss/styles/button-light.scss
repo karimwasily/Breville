@@ -1,0 +1,12 @@
+.cmp-button--light {
+  @extend %cmp-button--default;
+
+  .cmp-button {
+    --foreground: #{$white};
+    --background: #{$black};
+
+    &__icon {
+      @include arrow-right-icon($color: $white);
+    }
+  }
+}

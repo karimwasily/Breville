@@ -1,0 +1,51 @@
+@import './primary-product-header';
+@import './primary-product-left';
+@import './primary-product-right';
+@import './quantity-input';
+
+
+.cmp-primary-product-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .cmp-primary-product {
+    flex: 1;
+    max-width: $cs-max-width;
+    margin: auto;
+    // * vertical spacing as per design is split for top and bottom
+    padding: $cs-spacing-35 $cs-spacing-15;
+    
+
+    @media (min-width: $cs-screen-md) {
+      
+      display: grid;
+      // * 7 + 5 = 12 column layout
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      padding: $cs-spacing-45 $cs-spacing-35 $cs-spacing-45;
+      grid-template-areas: 
+        'hero title'
+        'hero content';
+
+    }
+
+    .cmp-primary-product--machine-header {
+      @extend %cmp-primary-product--machine-header;
+      grid-area: title;
+    }
+
+    .cmp-primary-product-left {
+      @extend %cmp-primary-product-left;
+      grid-area: hero;
+      position: relative;
+    }
+
+    .cmp-primary-product-right {
+      @extend %cmp-primary-product-right;
+      grid-area: content;
+    }
+  }
+
+}

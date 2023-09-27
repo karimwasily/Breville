@@ -1,0 +1,10 @@
+// Beanz service user mapper
+{
+  "Factory PID": "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl",	
+  "require.validation":true,
+  "user.enable.default.mapping":false,
+  "user.mapping":[
+    "breville-aem-brands.core:brevilleservice=brevillesystemuser"
+  ],
+  "user.default":""
+}

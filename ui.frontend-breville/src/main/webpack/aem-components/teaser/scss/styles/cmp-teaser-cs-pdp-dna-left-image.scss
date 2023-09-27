@@ -1,0 +1,74 @@
+%cmp-teaser--cs-pdp-dna-left-image {
+  .cmp-teaser {
+    @media (min-width: $cs-screen-md) {
+      display: grid;
+      // * 4 + 8 = 12 column layout
+      grid-template-columns: 4fr 8fr;
+      padding: 0 $cs-spacing-10;     
+    }
+
+    &__image {
+      margin-bottom: $cs-spacing-25;
+      
+      @media (min-width: $cs-screen-md) {
+        margin-bottom: 0;
+      }
+
+      .cmp-image {
+        height: 100%;
+
+        &__image {
+          width: 100%;
+          height: 100%;
+          max-height: 200px;
+          object-fit: contain;
+
+          vertical-align: middle;
+
+          @media (min-width: $cs-screen-md) {
+            min-width: 335px;
+            min-height: 335px;
+          }
+        }
+      }
+    }
+
+    &__content {
+      margin: auto 0;
+      padding: 0 $cs-spacing-15;
+
+      @media (min-width: $cs-screen-md) {
+        padding-left: $cs-spacing-20;
+      }
+
+      @media (min-width: $cs-screen-lg) {
+        padding-left: $cs-spacing-50;
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-h4;
+        margin-bottom: $cs-spacing-15;
+
+        text-align: center;
+     
+        @media (min-width: $cs-screen-md) {
+          text-align: left;
+        }
+      }
+
+      .cmp-teaser__description {
+        text-align: center;
+
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: 0;
+
+          text-align: left;
+        }
+
+        p {
+          @extend %cs-font-p-2;
+        }
+      }
+    }
+  }
+}

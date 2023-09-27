@@ -1,0 +1,50 @@
+.cmp-breadcrumb {
+  margin: $spacing-md 0;
+
+  &__list {
+    display: inline-block;
+    list-style-type: none;
+
+    .cmp-breadcrumb__item {
+      span,
+      a {
+        @extend %font-menu-nav-breadcrumb;
+        text-transform: uppercase;
+      }
+
+      &--active {
+        font-weight: bold;
+
+        &::before {
+          // fix for DASH on any BOLD items
+          margin-bottom: 1px !important;
+        }
+      }
+
+      // FIRST NAV ITEM
+      &:first-child::before {
+        @include arrow-right-icon();
+        margin-right: $spacing-sm;
+        transform: rotate(180deg);
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        // fix for svg icon 
+        margin-bottom: 4px;
+      }
+
+      // ALL OTHER ITEMS
+      &:not(:first-child)::before {
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: rem(10px);
+        background-color: $black;
+        margin: 0 $spacing-xs;
+        vertical-align: middle;
+        // fix for DASH
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

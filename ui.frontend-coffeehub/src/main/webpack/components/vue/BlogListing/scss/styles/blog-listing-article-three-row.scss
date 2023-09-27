@@ -1,0 +1,61 @@
+// this relies on the vue blog-listing-article component markup
+// styles a two article row
+.cmp-v-blog-listing--article-three-row {
+  // * ALL STYLES APPLIED AFTER BREAKPOINT!
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+    padding: 0 $spacing-xxl $spacing-xxl;
+
+    .cmp-v-blog-listing__article {
+      height: 100%;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+
+      .cmp-article {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        // ARTICLE IMAGE
+        .cmp-article__image {
+          .cmp-image {
+            &__image {
+            }
+          }
+        }
+
+        // ARTICLE CONTENT
+        &__content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 0 !important;
+
+          .cmp-article__category {
+            padding-top: $spacing-lg !important;  
+          }
+
+          .cmp-article__title {
+            margin-top: $spacing-md !important;  
+          }
+
+          .cmp-article__description {
+            margin: $spacing-md 0 !important;  
+          }
+
+          .cmp-article__action-container {
+            flex: 1;
+            display: flex;
+            margin-top: 0 !important;
+
+            .cmp-article__action-link {
+              align-self: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

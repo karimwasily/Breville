@@ -1,0 +1,89 @@
+.cmp-teaser--teaser-helpbeanz {
+  .cmp-teaser {
+    position: relative;
+    width: 100%;
+    margin: 0 auto !important;
+    padding-top: 1.875rem;
+
+    &__content {
+      max-width: 22rem;
+      margin: 0 auto !important;
+      padding-top: 1.875rem;
+      padding: 0 2rem;
+      float: none !important;
+      @include breakpoint-up(lg) {
+        max-width: 528px;
+      }
+
+      .cmp-teaser__title {
+        font-size: $font-size-large;
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-bold;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: $cyan;
+        @include breakpoint-up(md) {
+          font-size: $font-size-h2;
+        }
+        @include breakpoint-up(lg) {
+          font-size: $font-size-xlarge;
+        }
+      }
+
+      .cmp-teaser__description {
+        p {
+          font-size: $font-size !important;
+          font-weight: $font-weight-medium-bold;
+          max-width: 300px !important;
+          margin: 1.25rem auto;
+          line-height: 1.33;
+          letter-spacing: normal;
+          color: $jaguar;
+          font-family: $font-family-primary;
+          text-align: center;
+          @include breakpoint-up(md) {
+            max-width: 250px !important;
+            font-size: $font-size-medium;
+            margin: 1.875rem auto;
+          }
+
+          @include breakpoint-up(lg) {
+            max-width: 326px !important;
+            font-size: $font-size-medium;
+            margin: 1.875rem auto;
+          }
+        }
+      }
+
+      .cmp-teaser__action-container {
+        float: none !important;
+
+        .cmp-teaser__action-link {
+          border-radius: 4px;
+          background-color: $oyster-bay;
+          display: block;
+          margin: auto;
+          line-height: 1.33;
+          font-family: $font-family-primary;
+          font-size: $font-size;
+          font-weight: $font-weight-bold;
+          color: $cyan;
+          text-align: center;
+          text-decoration: none;
+          text-transform: capitalize;
+          width: 63%;
+          margin-left: 1rem;
+          margin-bottom: 1.5rem;
+          @include breakpoint-up(md) {
+            width: 200px;
+          }
+          @include breakpoint-up(lg) {
+            width: 290px;
+            margin-left: 4rem;
+          }
+        }
+      }
+    }
+  }
+}

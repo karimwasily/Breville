@@ -1,0 +1,313 @@
+@use 'sass:math';
+
+.cmp-complete-coffee-bundle {
+  --machine-image-dimension-mobile: 180px;
+  --machine-image-dimension-desktop: 355px;
+  --tile-image-height-mobile: 100px;
+  --tile-image-width-mobile: 140px;
+  --tile-image-height-desktop: 120px;
+  --tile-image-width-desktop: 165px;
+  --button-width: 230px;
+
+  // Main Layout Grid
+  display: grid;
+  grid-template-areas: 
+    'area-title'
+    'area-machine'
+    'area-plus'
+    'area-bundles';
+  
+  // Main Layout Styles
+  max-width: $cs-max-width;
+  margin: auto;
+  padding: math.div($cs-spacing-90, 2) 0;
+
+  @media (min-width: $cs-screen-xxl) { // Desktop (1440px) and greater
+    grid-template-areas: 
+      'area-title area-title area-title'
+      'area-machine area-plus area-bundles';
+    gap: $cs-spacing-30;
+  }
+
+  .cmp-complete-coffee-bundle__area-title {
+    @extend %cs-font-h2; // 25px (Mobile) 35px (Desktop)
+    grid-area: area-title;
+    margin: 0 $cs-spacing-10 $cs-spacing-40;
+
+    text-align: center;
+
+    // Between Mobile (375px) and Desktop (1440px) size
+    @media (min-width: $cs-screen-md) {
+      margin: 0 $cs-spacing-35 $cs-spacing-30;
+    }
+
+    // Desktop (1440px) size and greater
+    @media (min-width: $cs-screen-xxl) {
+      margin: 0 $cs-spacing-35 $cs-spacing-10;
+    }
+  }
+  
+  .cmp-complete-coffee-bundle__area-machine {
+
+    // Center image
+    display: grid;
+    grid-area: area-machine;
+    margin: 0 $cs-spacing-15 $cs-spacing-25;
+    padding: 0 $cs-spacing-30;
+
+    background-color: $cs-color-gray-60;
+    border-radius: $cs-border-radius-16;
+    place-items: center;
+
+    // Between Mobile (375px) and Desktop (1440px) size
+    @media (min-width: $cs-screen-md) {
+      margin: 0 $cs-spacing-35 $cs-spacing-25;
+    }
+    
+    // Desktop (1440px) size and greater
+    @media (min-width: $cs-screen-xxl) {
+      margin: 0;
+      margin-left: $cs-spacing-35;
+      padding: 0 $cs-spacing-40;
+    }
+
+    .cmp-complete-coffee-bundle__image-machine {
+      max-width: var(--machine-image-dimension-mobile);
+      max-height: var(--machine-image-dimension-mobile);
+      margin: $cs-spacing-20;
+
+      // Desktop (1440px) size and greater
+      @media (min-width: $cs-screen-xxl) {
+        max-width: var(--machine-image-dimension-desktop);
+        max-height: var(--machine-image-dimension-desktop);
+      }
+    }
+  }
+
+  .cmp-complete-coffee-bundle__area-plus {
+
+    // Center image
+    display: grid;
+    grid-area: area-plus;
+    margin: 0 $cs-spacing-15 $cs-spacing-25;
+    place-items: center;
+
+    // Desktop (1440px) size and greater
+    @media (min-width: $cs-screen-xxl) {
+      margin: 0 $cs-spacing-30;
+    }
+  }
+
+  .cmp-complete-coffee-bundle__area-bundles {
+    grid-area: area-bundles;
+    margin: 0 $cs-spacing-15 0;
+
+    background-color: $cs-color-gray-60;
+    border-radius: $cs-border-radius-16;
+
+    // Between Mobile (375px) and Desktop (1440px) size
+    @media (min-width: $cs-screen-md) {
+      margin: 0 $cs-spacing-35 $cs-spacing-25;
+    }
+
+    // Desktop (1440px) size and greater
+    @media (min-width: $cs-screen-xxl) {
+      margin: 0;
+      margin-right: $cs-spacing-35;
+    }
+
+    .cmp-complete-coffee-bundle__area-bundles-bundles {
+      @include flex-gap($cs-spacing-35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      justify-content: space-evenly;
+      padding: $cs-spacing-35 $cs-spacing-10 $cs-spacing-50;
+
+      // Between Mobile (375px) and Desktop (1440px) size
+      @media (min-width: $cs-screen-md) {
+        @include flex-gap($cs-spacing-10);
+        flex-direction: row;
+        justify-content: center;
+        padding: $cs-spacing-50 $cs-spacing-10 $cs-spacing-50;
+      }
+
+      // Desktop (1440px) size and greater
+      @media (min-width: $cs-screen-xxl) {
+        @include flex-gap($cs-spacing-5);
+        padding: $cs-spacing-50 $cs-spacing-30 $cs-spacing-50;
+      }
+
+      .cmp-complete-coffee-bundle__area-bundles-bundles-tiles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-image {
+          max-width: var(--tile-image-width-mobile);
+          max-height: var(--tile-image-height-mobile);
+
+          // Mobile (375px) size and greater
+          @media (min-width: $cs-screen-md) {
+            max-width: var(--tile-image-width-desktop);
+            max-height: var(--tile-image-height-desktop);
+          }
+        }
+
+        .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-title {
+          @extend %cs-font-p-6; // 14px (Mobile) 16px (Desktop)
+          margin-top: $cs-spacing-15;
+
+          font-weight: $cs-font-weight-bold;
+        }
+
+        .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-description {
+          @extend %cs-font-p-4; // 14px (Mobile & Desktop)
+          margin-top: $cs-spacing-5;
+
+          text-align: center;
+
+          @media (min-width: $cs-screen-md) {
+            padding: 0 $cs-spacing-20;
+          }
+        }
+
+        .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-price {
+          @extend %cs-font-p-6; // 14px (Mobile) 16px (Desktop)
+          margin-top: $cs-spacing-10;
+        }
+
+        .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-action-container {
+          .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-action-link {
+            @extend %cs-font-p-4; // 14px (Mobile & Desktop)
+            @extend %cs-link-underline;
+            outline: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .cmp-complete-coffee-bundle__area-bundles-shop-this-bundle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 $cs-spacing-50 $cs-spacing-30;
+
+      background-color: $cs-color-gray-60;
+      border-radius: $cs-border-radius-16;
+
+      // Between Mobile (375px) and Desktop (1440px) size
+      @media (min-width: $cs-screen-md) {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 $cs-spacing-20 $cs-spacing-50;
+      }
+
+      // Desktop (1440px) size and greater
+      @media (min-width: $cs-screen-xxl) {
+        padding: 0 $cs-spacing-50 $cs-spacing-50;
+      }
+
+      // Button Style
+      .cmp-button--cs-commercial {
+        margin: 0;
+        margin-top: $cs-spacing-25;
+
+        @media (min-width: $cs-screen-md) {
+          margin-top: 0;
+          margin-left: $cs-spacing-15;
+        }
+
+        .cmp-button {
+          .cmp-button__text {
+            width: var(--button-width);
+
+            // Mobile (375px) size and greater
+            @media (min-width: $cs-screen-md) {
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.complete-coffee-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background: $cs-black-transparent;
+
+  .coffee-bundle-modal {
+    @include create-scrollbar(
+      $foreground: $cs-color-gray-40,
+      $background: $cs-white,
+      $border-width: 2px
+    );
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+
+    max-height: 100%;
+    padding: $cs-spacing-20;
+    overflow-y: auto;
+
+    background-color: $cs-color-gray-60;
+    outline: none;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $cs-screen-md) {
+      width: auto;
+      max-height: calc(100vh - 60px);
+
+      padding: $cs-spacing-30;
+    }
+
+    @media (min-width: $cs-screen-xxl) {
+      width: 100%;
+      max-width: $cs-max-width-bundle-config;
+    }
+
+    .cmp-complete-coffee-bundle__modal-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $cs-spacing-15;
+
+      .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-modal-title {
+        @extend %cs-font-h10;
+        margin-right: $cs-spacing-20;
+        margin-bottom: 0;
+      }
+
+      .complete-bundle-modal__close-icon {
+        .close-icon-button__btn {
+          background-color: $cs-color-gray-60 !important;
+        }
+      }
+    }
+
+    .cmp-complete-coffee-bundle__area-bundles-bundles-tiles-modal-desc {
+      @extend %cs-font-p-4;
+
+      .showcase {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

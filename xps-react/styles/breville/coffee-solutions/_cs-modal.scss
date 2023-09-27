@@ -1,0 +1,40 @@
+%cs-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $cs-black-transparent;
+  z-index: 3001;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%cs-modal-content {
+  background-color: white;
+  max-width: $cs-max-width;
+}
+
+%cs-modal-close-btn {
+  --btn-size: 24px;
+  --btn-distance-to-corner: 20px;
+
+  @media (min-width: $cs-screen-md) {
+    --btn-distance-to-corner: 40px;
+  }
+
+  @extend  %close-icon-svg;
+  position: absolute;
+
+  top: var(--btn-distance-to-corner);
+  right: var(--btn-distance-to-corner);
+
+  width: var(--btn-size);
+  height: var(--btn-size);
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}

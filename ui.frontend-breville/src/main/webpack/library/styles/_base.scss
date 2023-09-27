@@ -1,0 +1,288 @@
+//== Base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// * these css custom properties are used for JS to detect SCSS settings
+:root {
+  --breakpoint-xs: #{strip-unit($screen-xs)};
+  --breakpoint-sm: #{strip-unit($screen-sm)};
+  --breakpoint-md: #{strip-unit($screen-md)};
+  --breakpoint-lg: #{strip-unit($screen-lg)};
+  --breakpoint-xl: #{strip-unit($screen-xl)};
+  --breakpoint-xxl: #{strip-unit($screen-xxl)};
+  --breakpoint-xxxl: #{strip-unit($screen-xxxl)};
+}
+
+html {
+  font-size: 100%;
+  font-family: $font-family-secondary;
+  line-height: $line-height-base;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  color: $text-color;
+  background: $background-color;
+}
+
+%font-a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a {
+  @extend %font-a;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+%font-h1 {
+  @include font-size($font-size-h1-mobile);
+  line-height: $line-height-h1-mobile;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-extra-bold;
+  font-style: normal;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h1);
+    line-height: $line-height-h1;
+  }
+}
+
+%font-h2 {
+  @include font-size($font-size-h2-mobile);
+  line-height: $line-height-h2-mobile;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-extra-bold;
+  font-style: normal;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h2);
+    line-height: $line-height-h2;
+  }
+}
+
+%font-h3 {
+  @include font-size($font-size-h3-mobile);
+  line-height: $line-height-h3-mobile;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h3);
+    line-height: $line-height-h3;
+  }
+}
+
+%font-h4 {
+  @include font-size($font-size-h4-mobile);
+  line-height: $line-height-h4-mobile;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h4);
+    line-height: $line-height-h4;
+  }
+}
+
+%font-h5 {
+  @include font-size($font-size-h5);
+  line-height: $line-height-h5;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+}
+
+%font-h6 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-h6;
+  line-height: $line-height-h6;
+  font-weight: $font-weight-bold;
+}
+
+%font-p {
+  font-family: $font-family-secondary;
+  line-height: $line-height-base;
+  margin-bottom: 0.8rem;
+}
+
+%dark-purple-btn {
+  font-size: $font-size-h4;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  color: $white;
+  background-color: $dark-purple;
+  border: 1px solid $dark-purple;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: normal;
+
+  &:hover {
+    color: $dark-purple;
+    background-color: $white;
+  }
+}
+%font-signup-description {
+  font-family: $font-family-arial;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+%font-teaser-title-fix {
+  font-family: $font-family-ArcherSSm;
+  font-size: $font-size-h2-mobile;
+  margin-bottom: $spacing-ml;
+  font-weight: $font-weight-bold;
+  @media(min-width: $screen-lg) {
+    font-size: $font-size-h1;
+  }
+}
+
+%font-teaser-description-fix {
+  font-family: $font-family-primary-light;
+  font-size: $font-size-base;
+}
+
+h1 {
+  @extend %font-h1;
+}
+
+h2 {
+  @extend %font-h2;
+}
+
+h3 {
+  @extend %font-h3;
+}
+
+h4 {
+  @extend %font-h4;
+}
+
+h5 {
+  @extend %font-h5;
+}
+
+h6 {
+  @extend %font-h6;
+}
+
+p {
+  @extend %font-p;
+}
+
+// todo: overwrite
+// %font-menu-nav {
+//   @include font-size($font-size-navmenu);
+//   font-family: $font-family-secondary;
+//   font-weight: $font-weight-normal;
+//   line-height: $line-height-navmenu;
+// }
+
+// %font-menu-nav-breadcrumb {
+//   @include font-size($font-size-navmenu-breadcrumb);
+//   font-family: $font-family-primary;
+//   line-height: $line-height-navmenu-breadcrumb;
+// }
+
+// %font-cta {
+//   @include font-size($font-size-cta);
+//   font-family: $font-family-secondary;
+//   font-weight: $font-weight-normal;
+//   line-height: $line-height-cta;
+// }
+
+%page-gutter {
+  padding-left: $spacing-page-gutter-mobile;
+  padding-right: $spacing-page-gutter-mobile;
+
+  @media (min-width: $screen-sm) {
+    padding-left: $spacing-page-gutter;
+    padding-right: $spacing-page-gutter;
+  }
+}
+
+// Some defaults brought over from Breville.com v1
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+:focus {
+  outline: $black dotted 1px;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+dd,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
+
+ol,
+ul {
+  list-style-position: inside;
+  line-height: 2.125rem;
+}
+
+ol ul,
+ul ul {
+  list-style-type: circle;
+}
+
+%action-link {
+  font-family: $font-family-secondary;
+  font-size: $font-size-h4;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-h6;
+}

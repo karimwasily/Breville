@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Purchase Details"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        size="L">
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Purchase Details"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <purchasesHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Purchases Heading"
+                                name="./purchasesHeading"/>
+                            <ordersHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Order Section Heading"
+                                name="./ordersHeading"/>
+                            <subscriptionsHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Subscriptions Section Heading"
+                                name="./subscriptionsHeading"/>
+                            <editBtnLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Edit button label"
+                                name="./editBtnLabel"/>
+                            <viewMoreLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="View More"
+                                name="./viewMoreLabel"/>
+                            <recurringMsg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Recurring Message"
+                                name="./recurringMsg"/>
+                            <amendmentsMsg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Amendments Message"
+                                name="./amendmentsMsg"/>
+                            <perDeliveryLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Per Delivery"
+                                name="./perDeliveryLbl"/>
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Purchase page status tags"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <nextOrderLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Next Order"
+                                name="./nextOrderLbl"/>
+                            <processingLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Processing"
+                                name="./processingLbl"/>
+                            <orderNo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Order No."
+                                name="./orderNo"/>
+                            <cancelledLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cancelled"
+                                name="./cancelledLbl"/>
+                            <pausedLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Paused"
+                                name="./pausedLbl"/>
+                            <shipsToLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="SHIPS TO"
+                                name="./shipsToLbl"/>
+                            <billedToLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="BILLED TO"
+                                name="./billedToLbl"/>
+                            <paymentLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Payment"
+                                name="./paymentLbl"/>
+                            <paymentDataLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Payment Date"
+                                name="./paymentDataLbl"/>
+                        </items>
+                    </column>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Purchase Page Buttons"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <pauseLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Pause"
+                                name="./pauseLbl"/>
+                            <editPauseLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Edit Pause"
+                                name="./editPauseLbl"/>
+                            <historyLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="History"
+                                name="./historyLbl"/>
+                            <cancelSubscription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cancel Subscription"
+                                name="./cancelSubscription"/>
+                            <saveLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Save"
+                                name="./saveLbl"/>
+                            <cancelLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cancel"
+                                name="./cancelLbl"/>
+                        </items>
+                    </column>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Product Labels"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <orderLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Order"
+                                name="./orderLbl"/>
+                            <everyLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Every..."
+                                name="./everyLbl"/>
+                            <sendMeLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Send me..."
+                                name="./sendMeLbl"/>
+                            <grindLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Grind..."
+                                name="./grindLbl"/>
+                            <costLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cost"
+                                name="./costLbl"/>
+                            <discountLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Discount"
+                                name="./discountLbl"/>
+                            <shippingLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Shipping"
+                                name="./shippingLbl"/>
+                            <taxesLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Taxes"
+                                name="./taxesLbl"/>
+                            <subTotalLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Sub Total"
+                                name="./subTotalLbl"/>
+                            <orderTotalLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Order Total"
+                                name="./orderTotalLbl"/>
+                        </items>
+                    </column>
+                </items>
+            </tab4>
+            <tab5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Product Labels"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <addressLine1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Address Line 1 label" 
+                                name="./addressLine1"/>
+                            <addressLine2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Address Line 2 label"
+                                name="./addressLine2"/>
+                            <cityTown
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="City / Town label"
+                                name="./cityTown"/>
+                            <zipCode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Zipcode label"
+                                name="./zipCode"/>
+                        </items>
+                    </column>
+                </items>
+            </tab5>
+            <tab6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Subscription Popup Details"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <pauseSubscriptionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Pause Subscription?" 
+                                name="./pauseSubscriptionHeading"/>
+                            <pauseSubscriptionMsg1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Pause Subscription Msg1"
+                                name="./pauseSubscriptionMsg1"/>
+                            <pauseSubscriptionMsg2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Pause Subscription Msg2"
+                                name="./pauseSubscriptionMsg1"/>
+                            <pauseYesLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Yes, Pause it"
+                                name="./pauseYesLbl"/>
+                            <pauseNoLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="No, don't pause it"
+                                name="./pauseNoLbl"/>
+                            <editPauseSubscriptionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Edit Pause" 
+                                name="./editPauseSubscriptionHeading"/>
+                            <editPauseSubscriptionMsg1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Edit Pause Subscription Msg1"
+                                name="./editPauseSubscriptionMsg1"/>
+                            <editPauseSubscriptionMsg2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Edit Pause Subscription Msg2"
+                                name="./editPauseSubscriptionMsg2"/>
+                            <cancelSubscriptionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cancel Subscription"
+                                name="./cancelSubscriptionHeading"/>
+                            <cancelSubscriptionMsg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cancel Subscription Message"
+                                name="./cancelSubscriptionMsg"/>
+                            <cancelYesLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Yes, cancel it"
+                                name="./cancelYesLbl"/>
+                            <cancelNoLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="No,keep it"
+                                name="./cancelNoLbl"/>
+                        </items>
+                    </column>
+                </items>
+            </tab6>
+            <tab7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Coffee Selection Popup"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <coffeeSelectionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Popup Heading"
+                                name="./coffeeSelectionHeading"/>
+                            <coffeeSelectionDescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Popup Dexcription"
+                                name="./coffeeSelectionDescription"/>
+                            <quizHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Quiz Heading"
+                                name="./quizHeading"/>
+                            <quizDescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Quiz Description"
+                                name="./quizDescription"/>
+                            <quizPageLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Quiz Page Path"
+                                rootPath="/content/beanz"
+                                name="./quizPageLink"/>
+                            <beanzHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Beanz Heading"
+                                name="./beanzHeading"/>
+                            <beanzDescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Beanz Description"
+                                name="./beanzDescription"/>
+                            <beanzPageLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Beanz Page Path"
+                                rootPath="/content/beanz"
+                                name="./beanzPageLink"/>
+                            <beanzImagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Beanz Image Path"
+                                rootPath="/content"
+                                name="./beanzImagePath"/>
+                            <discoveryBeanzHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Discovery Beanz Heading"
+                                name="./discoveryBeanzHeading"/>
+                            <discoveryBeanzDescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Discovery Beanz Description"
+                                name="./discoveryBeanzDescription"/>
+                            <discoverybeanzPageLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Discovery Beanz Page Path"
+                                rootPath="/content/beanz"
+                                name="./discoverybeanzPageLink"/>
+                            <discoveryBeanzImagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Discovery Beanz Image Path"
+                                rootPath="/content"
+                                name="./discoveryBeanzImagePath"/>
+                            <popupBtnLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Popup button label"
+                                name="./popupBtnLbl"/>
+                        </items>
+                    </column>
+                </items>
+            </tab7>
+            <tab8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Bundle Subscription Popup"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <bundleSubscriptionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Bundle Subscription Popup Heading"
+                                name="./bundleSubscriptionHeading"/>
+                            <bundleSubscriptionTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Bundle Subscription Title"
+                                name="./bundleSubscriptionTitle"/>
+                            <bundleSubscriptionInfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Bundle Subscription Info"
+                                name="./bundleSubscriptionInfo"/>
+                            <bundleSubscriptionOk
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Bundle Subscription Ok label"
+                                name="./bundleSubscriptionOk"/>
+                        </items>
+                    </column>
+                </items>
+            </tab8>
+        </items>
+    </content>
+</jcr:root>

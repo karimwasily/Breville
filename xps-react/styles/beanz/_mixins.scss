@@ -1,0 +1,61 @@
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+//media queries
+@mixin breakpoint-down($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width:575.98px) { @content; };
+  }
+  @if $breakpoint == sm {
+    @media (max-width:767.98px) { @content; };
+  }
+  @if $breakpoint == md {
+    @media (max-width: 991.98px) { @content; };
+  }
+  @if $breakpoint == lg {
+    @media (max-width: 1199.98px) { @content; };
+  }
+  @if $breakpoint == xl {
+    @media (max-width: 1365px) { @content; };
+  }
+}
+
+// mobile first with min-widths
+@mixin breakpoint-up($breakpoint) {
+  @if $breakpoint == xs {
+    // Extra small devices (landscape phones, 375px and up)
+    @media (min-width: 375px) { @content; };
+  }
+  @if $breakpoint == sm {
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { @content; };
+  }
+  @if $breakpoint == md {
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { @content; };
+  }
+  @if $breakpoint == lg {
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { @content; };
+  }
+  @if $breakpoint == xl-2 {
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1024px) { @content; };
+  }
+  @if $breakpoint == xl {
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { @content; };
+  }
+  @if $breakpoint == xxl {
+    // Extra large devices (large desktops, 1365px and up)
+    @media (min-width: 1440px) { @content; };
+  }
+}
+
+// Border animation
+@mixin label-active() {
+  font-size: $font-size-xxsmall;
+  transform: translateY(-14px);
+}

@@ -1,0 +1,7 @@
+<div data-sly-use.beanzCart="com.breville.aem.brands.core.models.BeanzCart">
+<div data-react-app="Cart" class="${properties.class || 'cart'}">
+    <script type="application/json">
+        ${beanzCart.asJson @context="unsafe"}
+    </script>
+</div> 
+</div>

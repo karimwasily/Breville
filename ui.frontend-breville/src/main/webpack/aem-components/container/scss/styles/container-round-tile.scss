@@ -1,0 +1,18 @@
+.cmp-container--round-tile {
+  .cmp-container {
+    text-align: center;
+    margin: $cs-spacing-20 0 $cs-spacing-60;
+    @media (min-width: $cs-screen-md) {
+      margin: $cs-spacing-60 0 $cs-spacing-60;
+    }
+
+    .title {
+      .cmp-title {
+        &__text {
+          @extend %cs-font-h4;
+          margin: 0 $cs-spacing-15;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+%cmp-reactquestionnaire--full-page {
+  --transition-speed: 200ms;
+  --transition-speed-slow: 500ms;
+
+  .cmp-container {
+    position: relative;
+
+    .cmp-teaser {
+      position: relative;
+      height: 100vh;
+
+      // * max-height to fix AEM author mode 100vh bug (infinitely expands vertically)
+      max-height: 2000px !important;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        .cmp-image {
+          height: 100%;
+
+          &__image {
+            z-index: 0;
+            height: 100%;
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+            filter: brightness(50%);
+          }
+        }
+      }
+
+      &__content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .cmp-teaser__pretitle {
+          color: $white;
+          font-size: 1.5rem;
+          text-align: center;
+          width: 100%;
+        }
+
+        .cmp-teaser__title {
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          width: 100%;
+          margin-top: 0;
+        }
+
+        .cmp-teaser__description {
+          width: 100%;
+
+          p {
+          }
+        }
+
+        .cmp-teaser__action-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .cmp-teaser__action-link {
+            @extend %action-link;
+            position: relative;
+            // overriding properties in %action-link
+            margin: 0.5rem;
+            border-radius: 0.625rem;
+            width: auto;
+            line-height: $line-height-medium;
+            max-width: unset;
+            padding: $spacing-xs $spacing-sm;
+
+            transition: transform var(--transition-speed), background-color var(--transition-speed);
+            @include breakpoint-up (md) {
+              padding: $spacing-sm $spacing-lg;
+            }
+
+            &:hover,
+            &:focus {
+              background-color: $black;
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // this class is enabled on completion
+  // this is the startover teaser
+  .cmp-reactquestionnaire--complete {
+    .cmp-teaser {
+      height: auto;
+      padding: $spacing-xxl 0;
+    }
+  }
+
+  // here are the product results
+  .result {
+    .cmp-result {
+      background-color: $seashell;
+      color: $black;
+      padding: 2rem;
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+
+  // animations
+  // * react-transition-group applied classes for all animation staging events
+  .transition--enter {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 0;
+    }
+
+    .cmp-teaser__image {
+      opacity: 0.5;
+    }
+  }
+
+  .transition--exit {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 1;
+    }
+
+    .cmp-teaser__image {
+      opacity: 1;
+    }
+  }
+
+  .transition--enter-active {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 1;
+    }
+
+    .cmp-teaser__image {
+      opacity: 1;
+    }
+  }
+
+  .transition--exit-active {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 0;
+    }
+
+    .cmp-teaser__image {
+      opacity: 0.5;
+    }
+  }
+
+  .transition--enter-active,
+  .transition--exit-active {
+    .cmp-teaser__image {
+      transition: opacity var(--transition-speed-slow);
+    }
+
+    .cmp-teaser__content {
+      transition: opacity var(--transition-speed);
+    }
+
+    .cmp-result {
+      transition: opacity var(--transition-speed-slow) !important;
+    }
+  }
+
+}
+
+.cmp-reactquestionnaire--full-page {
+  @extend %cmp-reactquestionnaire--full-page;
+}

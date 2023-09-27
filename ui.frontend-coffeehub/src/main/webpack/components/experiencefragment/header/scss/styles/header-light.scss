@@ -1,0 +1,29 @@
+// this wrapper is an ADDITIONAL MODIFIER to default 'header.scss'
+// convert to SCSS PLACEHOLDER so we can also use in 'page-white-floating-header.scss'
+
+%cmp-experiencefragment-header--light {
+  .cmp-experiencefragment {
+    // nested css variable to override default
+    --foreground-color: #{$white};
+
+    .cmp-navigation--mobile-menu-active {
+      background-color: darken($creme, 50%) !important;
+      @media (min-width: $screen-md) {
+        background-color: transparent !important;
+      }
+    }
+
+    .image {
+      .cmp-image {
+        &__image {
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+}
+
+// standard style wrapper
+.cmp-experiencefragment-header--light {
+  @extend %cmp-experiencefragment-header--light;
+}

@@ -1,0 +1,57 @@
+.product-warranty-card {
+  display: flex;
+  align-items: center;
+  padding: $cs-spacing-20 0;
+
+  background-color: $cs-color-gray-60;
+  border-radius: $cs-spacing-10;
+
+  .breakdown__wrty-description {
+    display: flex;
+    align-items: center;
+    padding: 0 $cs-spacing-15;
+
+    .breakdown__wrty-detail {
+      h5 {
+        @extend %cs-font-p-4-bold;
+        margin-bottom: $cs-spacing-5;
+      }
+
+      p {
+        @extend %cs-font-p-4;
+        margin-bottom: $cs-spacing-20;
+
+        @media (min-width: $cs-screen-sm) {
+          margin-bottom: 0;
+        }
+
+        button {
+          padding: 0;
+
+          vertical-align: unset;
+        }
+      }
+    }
+  }
+
+  .breakdown__button-add {
+    @extend %cs-button-purple-small;
+    margin-left: $cs-spacing-90;
+
+    font-weight: $cs-font-weight-bold;
+
+    background-color: transparent;
+
+    @media (min-width: $cs-screen-sm) {
+      margin-left: 0;
+    }
+  }
+
+  .breakdown__button-add-wrap {
+    @media (min-width: $cs-screen-sm) {
+      padding-right: $cs-spacing-35;
+
+      text-align: right;
+    }
+  }
+}

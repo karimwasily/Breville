@@ -1,0 +1,360 @@
+{
+    "full_info": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "/content/recipe-detail_full-info",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "blank_info": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "blank_recipe_info": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "/content/recipe-detail_recipe-blank-info",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "blank_cf_info": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "/content/recipe-detail_cf-blank-info",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "recipe-detail_full-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "fb9967aa-e204-4186-88da-2edd70e0574e"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "fb9967aa-e204-4186-88da-2edd70e0574e",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "lastFragmentSave": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "heroImage": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png",
+                    "recipeDescription": "<p>With a Macchiato coffee, the idea is to place a dash of nicely steamed, microfoam (bubbly) milk on top of an espresso shot, to add a touch of sweetness. Macchiato roughly translates as ‘mark’ or ‘spot’ in Italian, reflecting the mark or ‘stain’ left by the milk so Baristas could quickly distinguish it from an Espresso.&nbsp;&nbsp;</p>\n",
+                    "recipeIntroText": "The point of this drink is to have an espresso slightly moderated or subdued by a splash of milk.",
+                    "recipeDescription@ContentType": "text/html",
+                    "recipeName": "Macchiato",
+                    "heroThumbnail": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png",
+                    "stepInstructionList": [
+                        "/content/step_full-info"
+                    ]
+                }
+            }
+        }
+    },
+    "recipe-detail_blank-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "fb9967aa-e204-4186-88da-2edd70e0574e"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "fb9967aa-e204-4186-88da-2edd70e0574e",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "lastFragmentSave": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "heroImage": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png",
+                    "recipeDescription": "<p>With a Macchiato coffee, the idea is to place a dash of nicely steamed, microfoam (bubbly) milk on top of an espresso shot, to add a touch of sweetness. Macchiato roughly translates as ‘mark’ or ‘spot’ in Italian, reflecting the mark or ‘stain’ left by the milk so Baristas could quickly distinguish it from an Espresso.&nbsp;&nbsp;</p>\n",
+                    "recipeIntroText": "The point of this drink is to have an espresso slightly moderated or subdued by a splash of milk.",
+                    "recipeDescription@ContentType": "text/html",
+                    "recipeName": "Macchiato",
+                    "heroThumbnail": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png",
+                    "stepInstructionList": [
+                        "/content/step_blank-info"
+                    ]
+                }
+            }
+        }
+    },
+    "recipe-detail_recipe-blank-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "fb9967aa-e204-4186-88da-2edd70e0574e"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "fb9967aa-e204-4186-88da-2edd70e0574e",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "lastFragmentSave": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ]
+                }
+            }
+        }
+    },
+    "recipe-detail_cf-blank-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "fb9967aa-e204-4186-88da-2edd70e0574e"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "fb9967aa-e204-4186-88da-2edd70e0574e",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "lastFragmentSave": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "heroImage": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png",
+                    "recipeDescription": "<p>With a Macchiato coffee, the idea is to place a dash of nicely steamed, microfoam (bubbly) milk on top of an espresso shot, to add a touch of sweetness. Macchiato roughly translates as ‘mark’ or ‘spot’ in Italian, reflecting the mark or ‘stain’ left by the milk so Baristas could quickly distinguish it from an Espresso.&nbsp;&nbsp;</p>\n",
+                    "recipeIntroText": "The point of this drink is to have an espresso slightly moderated or subdued by a splash of milk.",
+                    "recipeDescription@ContentType": "text/html",
+                    "recipeName": "Macchiato",
+                    "heroThumbnail": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png",
+                    "ingredientList": [
+                        "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/ingredient-usage/espresso-shot",
+                        "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/ingredient-usage/cold-milk"
+                    ],
+                    "stepInstructionList": [
+                        "/content/step_blank-info"
+                    ],
+                    "equipmentList": [
+                        "/content/dam/coffeehub/en/us/recipes/recipes-detail/equipment/espresso--machine",
+                        "/content/dam/coffeehub/en/us/recipes/recipes-detail/equipment/coffee--grinder",
+                        "/content/dam/coffeehub/en/us/recipes/recipes-detail/equipment/small-glass-or-demitasse"
+                    ]
+                }
+            }
+        }
+    },
+    "step_full-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "82aeb691-ff7a-433f-9051-0d8cbcd2d676",
+        "jcr:predecessors": [
+            "a3dfd176-b889-4233-9252-22c7c465315d"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "a3dfd176-b889-4233-9252-22c7c465315d",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "75a1805c-b82c-4441-8585-55a449af9b81",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Step 1",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "step-1",
+            "jcr:lastModified": "Thu Mar 04 2021 09:00:13 GMT+0700",
+            "lastFragmentSave": "Thu Mar 04 2021 09:00:13 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/instruction-steps",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-step-instruction",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "stepImage": "/content/dam/assets.jpeg",
+                    "stepText@ContentType": "text/html",
+                    "stepVideoLink": "https://www.youtube.com",
+                    "stepTitle": "1",
+                    "stepText": "<p>Extract a single Espresso into a serving glass or cup</p>",
+                    "startMinute": 1,
+                    "startSecond": 10,
+                    "endMinute": 1,
+                    "endSecond": 15,
+                    "stepGoal": "test goal",
+                    "stepTip": "test tip"
+                }
+            }
+        }
+    },
+    "step_blank-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "82aeb691-ff7a-433f-9051-0d8cbcd2d676",
+        "jcr:predecessors": [
+            "a3dfd176-b889-4233-9252-22c7c465315d"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "a3dfd176-b889-4233-9252-22c7c465315d",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "75a1805c-b82c-4441-8585-55a449af9b81",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Step 1",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "step-1",
+            "jcr:lastModified": "Thu Mar 04 2021 09:00:13 GMT+0700",
+            "lastFragmentSave": "Thu Mar 04 2021 09:00:13 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/instruction-steps",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-step-instruction",
+                "master": {}
+            }
+        }
+    }
+}

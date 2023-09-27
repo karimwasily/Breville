@@ -1,0 +1,11 @@
+.cmp-text--cs-subtitle { // New text style which can be used for subtitles/subheadings, e.g. underneath title component "title-less-padding"
+  p {
+    @extend %cs-font-p-6; // Desktop 16px, Mobile 14px
+    padding: 0 $cs-spacing-15 $cs-spacing-30;
+    margin-bottom: 0;
+    
+    @media (min-width: $cs-screen-md) {
+      padding: 0 $cs-spacing-15 $cs-spacing-40;
+    }
+  }
+}

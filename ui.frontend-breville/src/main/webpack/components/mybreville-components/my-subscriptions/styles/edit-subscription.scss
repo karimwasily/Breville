@@ -1,0 +1,142 @@
+.mybreville__edit_subscription {
+  .mybreville__edit_subscription__page-title {
+    display: none;
+    margin-top: -$cs-spacing-80;
+    margin-bottom: $cs-spacing-50;
+    padding-bottom: $cs-spacing-20;
+
+    font-weight: $cs-font-weight-bold;
+    text-align: right;
+
+    border-bottom: 1px solid $cs-light-grey;
+    @media (min-width: $cs-screen-xl) {
+      display: block;
+
+    }
+
+    .status-label {
+      display: none;
+      @media (min-width: $cs-screen-xl) {
+        display: inline-block;
+
+        font-weight: $cs-font-weight-bold;
+  
+        &.status--active {
+          color: $cs-forest-green;
+        }
+  
+        &.status--cancelled {
+          color: $cs-summer-sky;
+        }
+  
+        &.status--paused {
+          display: none;
+  
+          @media (min-width: $cs-screen-xl) {
+            display: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .mybreville__edit_subscription-box {
+    margin-top: $cs-spacing-30;
+    margin-bottom: $cs-spacing-50; 
+  }
+
+  h4 {
+    @extend %cs-font-h10; // Helvetica-Neue 18px (Desktop) 16px (Mobile)
+    width: auto;
+    margin-bottom: 0;
+    padding-bottom: $spacing-md;
+
+    color: $gunmetal;
+    line-height: $line-height-base;
+  }
+
+  section ~ section,
+  section ~ .edit-subscription-form {
+    margin-top: $cs-spacing-50; 
+  }
+
+  .grid-container {
+    max-width: unset;
+  }
+
+  .cmp-edit-sub-grid {
+    padding-right: 0;
+    padding-left: 0;
+
+    > .sub-row {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: $cs-spacing-10;
+      max-width: 1170px;
+
+      &.mt-20 {
+        margin-top: $cs-spacing-20;
+      }
+
+      @media (min-width: $cs-screen-xl) {
+        display: flex;
+
+        > .col ~ .col {
+          margin-left: $cs-spacing-20;
+        }
+      }
+
+      .form-select {
+        padding: 0 $cs-spacing-40 0 $cs-spacing-20;
+      }
+    }
+
+  }
+
+  .btn-cta-link {
+    padding: 0;
+  }
+
+  .btn-big-cta {
+    font-weight: $cs-font-weight-bold;
+    font-size: 1rem;
+  }
+
+  .cmp-form-buttons {
+    display: flex;
+    flex-direction: row;
+
+    .cmp-button {
+      @extend %cs-font-p-2-bold;
+      width: 100% !important;
+      height: 54px;
+
+      font-size: $cs-font-size-base;
+      text-align: center;
+
+      &.cancel {
+        color: $cs-gunmetal;
+
+        background: transparent;
+        border-color: $cs-gunmetal !important;
+
+        &:hover {
+          color: $cs-white;
+
+          background-color: $cs-dark-purple;
+        }
+      }
+
+      &.save {
+        width: 100% !important;
+        height: 54px;
+        margin-top: 0;
+      }
+    }
+  
+
+    .cmp-button ~ .cmp-button {
+      margin-left: $cs-spacing-10;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2020-11-12T14:32:12.545Z"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2021-05-31T08:29:38.837Z"
+        cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Ireland"
+        jcr:uuid="5a8e3d9e-c6be-426e-a494-ca3aac914c14"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            cq:lastReplicated="{Date}2021-05-31T08:29:41.212Z"
+            cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+            cq:lastReplicationAction="Activate"
+            jcr:mixinTypes="[cq:ReplicationStatus]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <item
+                cq:lastReplicated="{Date}2021-05-31T08:29:41.443Z"
+                cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+                cq:lastReplicationAction="Activate"
+                jcr:created="{Date}2020-11-12T14:31:59.154Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-11-12T14:32:12.543Z"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ireland"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="ie"/>
+        </list>
+    </jcr:content>
+</jcr:root>

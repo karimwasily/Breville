@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="/conf/breville/settings/wcm/templates/page-content"
+        cq:lastModified="{Date}2021-02-16T12:46:57.797+11:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2021-03-08T19:49:46.218-06:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:redirectTarget="/content/breville/us/en"
+        cq:template="/conf/breville/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Language Masters"
+        jcr:uuid="d639e495-5d9c-4f87-bcfc-58cd0ad00cb6"
+        sling:resourceType="foundation/components/redirect"
+        hideInNav="true"/>
+    <en/>
+</jcr:root>

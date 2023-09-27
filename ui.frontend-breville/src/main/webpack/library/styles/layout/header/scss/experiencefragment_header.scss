@@ -1,0 +1,47 @@
+header.experiencefragment {
+  @extend %page-gutter;
+  color: $header-foreground;
+  padding-top: $spacing-page-gutter-mobile;
+  background-color: $header-background;
+
+  @media (min-width: $screen-sm) {
+    padding-top: $spacing-page-gutter;
+  }
+
+  .cmp-container {
+
+    // todo: handle language navigation
+    .languagenavigation {
+      display: none;
+    }
+
+    // LOGO
+    .image {
+      .cmp-image {
+        &__image {
+        }
+      }
+    }
+
+    // NAV
+    .navigation {
+      .cmp-navigation {
+        &__group {
+        }
+
+        .cmp-navigation__item {
+          &--active {
+            .cmp-navigation__item-link {
+            }
+            
+            .cmp-navigation__item-link {
+            }
+          }
+
+          &-link {
+          }
+        }
+      }
+    }
+  }
+}

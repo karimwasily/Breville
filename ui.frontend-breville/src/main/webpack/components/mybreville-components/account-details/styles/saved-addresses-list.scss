@@ -1,0 +1,104 @@
+.cmp-mybreville__saved-addresses-list {
+  .cmp-button {
+    display: flex;
+    flex-direction: row;
+    margin-top: $cs-spacing-20;
+    padding: 0 0 $cs-spacing-25 0;
+    @media (min-width: $cs-screen-xl) {
+      flex-direction: row-reverse;
+    }
+
+    .react-button {
+      @extend %cs-font-p-2-bold;
+      display: flex;
+      align-items: center;
+      height: 40px;
+      padding: $cs-spacing-5 $cs-spacing-25;
+
+      color: $cs-gunmetal;
+      font-size: $cs-font-size-base;
+
+      background: transparent;
+      border-color: $cs-gunmetal !important;
+    }
+
+    .react-button:hover {
+      color: $cs-white;
+
+      background: $cs-dark-purple;
+    }
+  }
+  
+  .cmp-mybreville__address-tile-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-sm;
+    @media (min-width: $cs-screen-xl) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-md;
+    }
+  
+    .cmp-mybreville__address-tile {
+      display: block;
+      flex: 0 0 calc(50% - (#{$cs-spacing-10}/2));
+      padding: $cs-spacing-20;
+
+      background: $cs-white;
+      border-radius: $cs-border-radius-8;
+      
+      @media (min-width: $cs-screen-xl) {
+        padding: $cs-spacing-25;
+      }
+
+      .cmp-mybreville__address-text {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $cs-spacing-5;
+
+        .cmp-text {
+          p {
+            @extend %cs-font-p-4;
+            margin: 0;
+          }
+        }
+        
+        .edit-buttons {
+          text-align: end;
+
+          .link:hover {
+            color: $cs-forest-green !important;
+          }
+        
+          .default {
+            margin-top: $cs-spacing-10;
+          }
+
+          .react-button {
+            padding: 0 !important;
+          }
+
+          .cmp-mybreville__address-default {
+            display: none;
+          }   
+
+          .cmp-mybreville__address-tile-default {
+            display: block;
+            
+            .cmp-mybreville__address-default {
+              @extend %cs-font-p-4;
+              display: block;
+              margin: 0;
+
+              color: $cs-gunmetal;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .default-tile {
+      border: 1px solid $cs-gunmetal !important;
+    }
+  }
+}

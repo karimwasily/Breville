@@ -1,0 +1,122 @@
+.cmp-layout-container--modal {
+  background: $creme;
+  box-shadow: (0 0 34px rgba(0, 0, 0, 0.25));
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: $spacing-xxl;
+  overflow-y: auto;
+  max-height: 600px;
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  // Text Components
+  .cmp-text {
+    color: $black;
+
+    h3 {
+      padding-bottom: 10px;
+    }
+
+    p {
+      color: #1e111d;
+    }
+  }
+
+  // Image Components
+  .cmp-image {
+    &__image {
+      width: inherit;
+    }
+  }
+
+  .modal-button__close {
+    .modal-button__close--icon {
+      --background-color: #{$black};
+      --width: 1.25rem;
+      --height: 1.25rem;
+      cursor: pointer;
+      border: 0;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: var(--width);
+      height: var(--height);
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 9px;
+        height: var(--height);
+        width: 2px;
+        background-color: var(--background-color);
+        transition: transform 0.25s ease-out;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &:hover {
+        &::before {
+          transform: rotate(45deg);
+          background-color: $black;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          background-color: $black;
+        }
+      }
+
+      &:focus {
+        outline: 1px auto;
+      }
+    }
+  }
+}
+
+#bb-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+
+  .cmp-layout-container--modal {
+    @media (min-width: $screen-lg) {
+      width: 600px;
+    }
+    @media (max-width: $screen-lg) {
+      width: 94vw;
+    }
+  }
+
+  .cmp-layout-container--modal-full {
+    width: 100vw;
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999998;
+  background-color: $black;
+  opacity: 0.5;
+}
+
+.modal-overflow-hidden {
+  overflow-y: hidden;
+}

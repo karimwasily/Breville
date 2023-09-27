@@ -1,0 +1,40 @@
+.buttonmodallist-cmp {
+  padding: $cs-spacing-20;
+    
+  background-color: $cs-white;
+  border-radius: $cs-border-radius-8;
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-25;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    @media (min-width: $cs-screen-md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__header {
+    @extend %cs-font-p-bold;
+    margin: 0 0 $cs-spacing-20;
+    @media (min-width: $cs-screen-md) {
+      margin: 0 0 $cs-spacing-30;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: $cs-spacing-20 !important;
+    padding-left: $cs-spacing-20 !important;
+
+    font-size: $cs-font-size-small;
+
+    border-color: $cs-gainsboro !important;
+  }
+}

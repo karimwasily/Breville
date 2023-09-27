@@ -1,0 +1,22 @@
+%title {
+  margin: $cs-spacing-70 0 $cs-spacing-40;
+  padding: 0;
+
+  @media (min-width: $screen-md) {
+    margin: $cs-spacing-90 0 $cs-spacing-30;
+  }
+
+  .cmp-title__text {
+    @extend %cs-font-h2;
+    flex-grow: 0;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $cs-color-primary;
+  }
+}
+
+.title {
+  @extend %title;
+}

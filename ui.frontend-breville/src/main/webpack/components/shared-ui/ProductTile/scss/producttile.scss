@@ -1,0 +1,5 @@
+// ! be very careful adjusting styles for ProductTile, it is used in many places
+.producttile {
+  // ui.frontend-breville/src/main/webpack/aem-components/commerce/producttile/scss/producttile.scss
+  @extend %cmp-producttile--base;
+}

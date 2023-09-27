@@ -1,0 +1,36 @@
+.cmp-beanz-subscription {
+  .cmp-beanz-subscription__description {
+    @extend %cs-font-p-4;
+  }
+
+  .cmp-cart-subscription-summary {
+    padding: $cs-spacing-20 0;
+    border-radius: $cs-spacing-10;
+    border: solid 1px $cs-silver;
+  }
+
+  .cmp-beanz-subscription__wrapper {
+    padding: $cs-spacing-20;
+    border-radius: $cs-spacing-10;
+    border: solid 1px $cs-silver;
+  }
+
+  .cmp-beanz-subscription__cvv {
+    position: relative;
+  }
+
+  .cmp-beanz-subscription__question {
+    position: absolute;
+    left: $cs-spacing-35;
+    top: -$cs-spacing-5;
+  }
+
+  .cmp-beanz-subscription__creditcard-wrapper {
+    border-radius: $cs-spacing-10;
+    border: solid 1px $cs-silver;
+  }
+
+  @media (min-width: $cs-screen-md) {
+    max-width: 500px;
+  }
+}

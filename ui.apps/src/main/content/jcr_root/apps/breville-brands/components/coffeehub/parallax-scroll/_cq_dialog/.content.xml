@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Parallax Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <backgroundColor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                name="./backgroundColor"
+                                showSwatches="{Boolean}true"
+                                showProperties="{Boolean}true"
+                                showDefaultColors="{Boolean}false"/>
+                            <backgroundMargin
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Addition background bottom"
+                                min="{Double}0"
+                                value="0"
+                                name="./bottomBackground"
+                                required="{Boolean}true"/>
+                            <location
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Location selection"
+                                fieldDescription="Select location for the paragraph system relative to the component"
+                                name="./location">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <top
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Top"
+                                        value="top"
+                                        selected="true"/>
+                                    <middle
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Middle"
+                                        value="middle"/>
+                                    <bottom
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Bottom"
+                                        value="bottom">
+                                    </bottom>
+                                </items>
+                            </location>
+                        </items>
+                    </general>
+                    <images
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Images Setting"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <imageSetting
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Image setting"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <location
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Image location - mobile"
+                                                        fieldDescription="Select location for the image relative to the component"
+                                                        name="./imageLocation">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <top
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Top"
+                                                                value="top"
+                                                                selected="true"/>
+                                                            <middle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Middle"
+                                                                value="middle"/>
+                                                            <bottom
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Bottom"
+                                                                value="bottom">
+                                                            </bottom>
+                                                        </items>
+                                                    </location>
+                                                    <multifield
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                        composite="{Boolean}true"
+                                                        fieldLabel="List of background images"
+                                                        fieldDescription="Add a background image">
+                                                        <field
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                            margin="{Boolean}true"
+                                                            name="./imageList">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <image
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    jcr:title="Image"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <file
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                            allowUpload="{Boolean}false"
+                                                                            autoStart="{Boolean}false"
+                                                                            class="cq-droptarget"
+                                                                            fileNameParameter="./fileName"
+                                                                            fileReferenceParameter="./fileReference"
+                                                                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                            multiple="{Boolean}false"
+                                                                            name="./file"
+                                                                            title="Upload image asset"
+                                                                            uploadUrl="${suffix.path}"
+                                                                            useHTML5="{Boolean}true"/>
+                                                                        <scrollConfiguration
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                            fieldLabel="Scroll configuration"
+                                                                            name="./scrollConfiguration">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <increaseSpeed
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    text="Increase Scroll Speed"
+                                                                                    value="increase"
+                                                                                    selected="{Boolean}true"/>
+                                                                                <decreaseSpeed
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    text="Decrease Scroll Speed"
+                                                                                    value="decrease"/>
+                                                                            </items>
+                                                                        </scrollConfiguration>
+                                                                        <scrollSpeed
+                                                                            cq:showOnCreate="{Boolean}true"
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                            fieldDescription="Scroll speed for the background image (in percentage)."
+                                                                            fieldLabel="Scroll Speed (%)"
+                                                                            max="{Long}100"
+                                                                            min="{Long}0"
+                                                                            value="0"
+                                                                            name="./scrollSpeed"
+                                                                            step="0.01"
+                                                                            required="{Boolean}true"/>
+                                                                        <alt
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Alternative Text"
+                                                                            fieldDescription="The alternative text for the image."
+                                                                            name="./alt">
+                                                                        </alt>
+                                                                    </items>
+                                                                </image>
+                                                            </items>
+                                                        </field>
+                                                    </multifield>
+                                                </items>
+                                            </imageSetting>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </images>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

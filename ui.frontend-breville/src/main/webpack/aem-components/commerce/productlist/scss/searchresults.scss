@@ -1,0 +1,153 @@
+.productlistbreville {
+  %icon-rotation {
+    position: relative;
+    width: 0.625rem;
+    height: 0.625rem;
+    left: $spacing-lg;
+    transform: rotate(90deg);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .plp__navigation {
+    position: relative;
+    width: 100%;
+    float: left;
+    background: $white;
+
+    :is(.search__filters,.gallery__sort,.gallery__compare) {
+      position: relative;
+      background-color: $white;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      width: calc(100% / 3);
+      float: left;
+      border: 0;
+      border-bottom: 2px solid $gainsboro;
+      padding: $spacing-xs 0;
+      cursor: pointer;
+      text-align: center;
+      @media (min-width: $screen-md) {
+        padding: $spacing-sm 0;
+        width: 11rem;
+        border-bottom: 0;
+      }
+
+      &:hover {
+        background-color: $wine-berry;
+        color: $white;
+
+        .icon {
+          fill: $white;
+        }
+      }
+    }
+
+    .icon {
+      vertical-align: middle;
+      width: 1.375rem;
+      height: 1.375rem;
+      display: none;
+      @media (min-width: $screen-md) {
+        display: inline-block;
+      }
+    }
+
+    .icon__down-arrow {
+      @extend %icon-rotation;
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+
+    :is(.compare-icon,.filter-icon,.sort-icon ) {
+      position: absolute;
+      left: $spacing-sm;
+      top: $spacing-md;
+    }
+
+    .search__filters {
+      @media (min-width: $screen-md) {
+        padding: $spacing-sm 0;
+        width: 11rem;
+        border-bottom: 0;
+      }
+    }
+
+    .gallery__sort {
+      border-left: 2px solid $gainsboro;
+      border-right: 2px solid $gainsboro;
+      @media (min-width: $screen-md) {
+        width: 26rem;
+      }
+
+      &.activeMenu {
+        position: unset;
+        background-color: $wine-berry;
+        color: $white;
+        border: 0;
+        @media (min-width: $screen-md) {
+          position: inherit;
+        }
+        
+        .icon {
+          fill: $white;
+        }
+
+        .icon__down-arrow {
+          transform: rotate(270deg);
+        }
+      }
+    }
+
+    .sort-gallery {
+      position: absolute;
+      background-color: $wine-berry;
+      clear: both;
+      color: $white;
+      z-index: 2;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      @media (min-width: $screen-sm) {
+        width: 26rem;
+        left: unset;
+      }
+
+      ul {
+        margin: 0;
+
+        a {
+          border-bottom: 1px solid $white-transparent;
+          padding: $spacing-xxs;
+          color: $white;
+          text-align: center;
+          cursor: pointer;
+          display: list-item;
+
+          &:hover {
+            background-color: $white;
+            color: $wine-berry;
+          }
+        }
+
+        a[selected] {
+          &::before {
+            position: absolute;
+            left: $spacing-sm;
+            content: '\2713'; //the tick symbol which applies when the product will pick.
+          }
+        }
+      }
+    }
+
+    .gallery__compare {
+      float: right;
+      border-left: unset;
+      @media (min-width: $screen-lg) {
+        border-left: 2px solid $gainsboro;
+      }
+    }
+  }
+}

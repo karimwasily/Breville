@@ -1,0 +1,61 @@
+//== XF Footer style, used on page template
+@import 'styles/footer-top';
+@import 'styles/footer-middle';
+@import 'styles/footer-bottom';
+@import 'styles/footer-social-icon';
+@import 'styles/footer-newsletter';
+@import 'styles/footer-font-size';
+
+.cmp-breville-brand--footer {
+  &.experiencefragment {
+    padding-bottom: $spacing-page-gutter-mobile;
+    min-height: $footer-mobile-height;
+    background-color: $footer-background;
+    color: $light-violet;
+
+    @media (min-width: $screen-sm) {
+      min-height: $footer-height;
+      padding-bottom: $spacing-page-gutter;
+    }
+
+    .cmp-separator__horizontal-rule {
+      border: 0;
+      height: 2px;
+      background-color: $mardi-gras;
+    }
+
+    //== Base
+    
+    %font-a {
+      text-decoration: none;
+    }
+
+    a {
+      @extend %font-a;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    %font-h5 {
+      @include font-size($font-size-h5-footer);
+      line-height: $line-height-h5-footer;
+      font-family: $font-family-primary;
+    }
+
+    %font-p {
+      @include font-size($font-size-body);
+      font-family: $font-family-secondary;
+      line-height: $line-height-body;
+    }
+
+    h5 {
+      @extend %font-h5;
+    }
+
+    p {
+      @extend %font-p;
+    }
+  }
+}

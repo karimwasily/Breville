@@ -1,0 +1,18 @@
+.cmp-teaser--hero-reduced-content-width {
+  @extend %cmp-teaser--hero;
+
+  .cmp-teaser__content {
+    top: 60%;
+  
+    .cmp-teaser__title {
+      @media (min-width: $screen-md) {
+        font-size: $font-size-h2;
+        line-height: $line-height-h2;
+      }
+  
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+}

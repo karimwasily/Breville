@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="MyBreville Application"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <rootBeanzUrl
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Root Beanz URL"
+                                                fieldDescription="The external link to beanz with its locale that we use for redirection purposes. (e.g. https://beanz.com/en)"
+                                                name="./rootBeanzUrl"/>
+                                            <eventBriteUrl
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="EventBrite URL"
+                                                fieldDescription="The external link to EventBrite."
+                                                name="./eventBriteUrl"/>
+                                            <brevilleSupportUrl
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Breville Support URL"
+                                                fieldDescription="The external link to Support Hub."
+                                                name="./brevilleSupportUrl"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </general>
+                    <dashboard
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="MyBreville settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <beanzSubscriptionGroup
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <beanzSubscription
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Beanz Subscription"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <beanzSubscriptionImage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                allowUpload="{Boolean}false"
+                                                                autoStart="{Boolean}false"
+                                                                class="cq-droptarget"
+                                                                fileNameParameter="./dashboardBeanzSubscription"
+                                                                fileReferenceParameter="./dashboardBeanzSubscriptionImageSrc"
+                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                multiple="{Boolean}false"
+                                                                name="./dashboardBeanzSubscription"
+                                                                title="Upload image asset"
+                                                                uploadUrl="${suffix.path}"
+                                                                useHTML5="{Boolean}true"
+                                                                required="{Boolean}true"/>
+                                                            <beanzSubscriptionAlt
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Image Alt Text"
+                                                                name="./dashboardBeanzSubscriptionAlt"/>
+                                                            <beanzSubscriptionText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Banner Text"
+                                                                name="./dashboardBeanzSubscriptionText"/>
+                                                            <beanzSubscriptionUrl
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Beanz Subscriptions URL"
+                                                                name="./dashboardBeanzSubscriptionUrl"/>
+                                                            <beanzSubscriptionLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Aria Label"
+                                                                name="./dashboardBeanzSubscriptionLabel"/>
+                                                        </items>
+                                                    </beanzSubscription>
+                                                </items>
+                                            </beanzSubscriptionGroup>
+                                            <maintenanceSuppliesGroup
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <beanzSubscription
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Maintenance Supplies"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <maintenanceSuppliesImage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                allowUpload="{Boolean}false"
+                                                                autoStart="{Boolean}false"
+                                                                class="cq-droptarget"
+                                                                fileNameParameter="./dashboardMaintenanceSupplies"
+                                                                fileReferenceParameter="./dashboardMaintenanceSuppliesImageSrc"
+                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                multiple="{Boolean}false"
+                                                                name="./dashboardMaintenanceSupplies"
+                                                                title="Upload image asset"
+                                                                uploadUrl="${suffix.path}"
+                                                                useHTML5="{Boolean}true"
+                                                                required="{Boolean}true"/>
+                                                            <maintenanceSuppliesAlt
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Image Alt Text"
+                                                                name="./dashboardMaintenanceSuppliesAlt"/>
+                                                            <maintenanceSuppliesText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Banner Text"
+                                                                name="./dashboardMaintenanceSuppliesText"/>
+                                                            <maintenanceSuppliesUrl
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Maintenance Supplies URL"
+                                                                name="./dashboardMaintenanceSuppliesUrl"/>
+                                                            <maintenanceSuppliesLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Aria Label"
+                                                                name="./dashboardMaintenanceSuppliesLabel"/>
+                                                        </items>
+                                                    </beanzSubscription>
+                                                </items>
+                                            </maintenanceSuppliesGroup>                          
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </dashboard>
+                    <mySubscription
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="MySubscription settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <beanzSubscriptionGroup
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <beanzSubscription
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Beanz Subscription"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <beanzSubscriptionImage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                allowUpload="{Boolean}false"
+                                                                autoStart="{Boolean}false"
+                                                                class="cq-droptarget"
+                                                                fileNameParameter="./subscriptionBeanzSubscription"
+                                                                fileReferenceParameter="./subscriptionBeanzSubscriptionImageSrc"
+                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                multiple="{Boolean}false"
+                                                                name="./subscriptionBeanzSubscription"
+                                                                title="Upload image asset"
+                                                                uploadUrl="${suffix.path}"
+                                                                useHTML5="{Boolean}true"
+                                                                required="{Boolean}true"/>
+                                                            <beanzSubscriptionAlt
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Image Alt Text"
+                                                                name="./subscriptionBeanzSubscriptionAlt"/>
+                                                            <beanzSubscriptionText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Banner Text"
+                                                                name="./subscriptionBeanzSubscriptionText"/>
+                                                            <beanzSubscriptionUrl
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Beanz Subscriptions URL"
+                                                                name="./subscriptionBeanzSubscriptionUrl"/>
+                                                            <beanzSubscriptionLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Aria Label"
+                                                                name="./subscriptionBeanzSubscriptionLabel"/>
+                                                        </items>
+                                                    </beanzSubscription>
+                                                </items>
+                                            </beanzSubscriptionGroup>
+                                            <maintenanceSuppliesGroup
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <beanzSubscription
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Maintenance Supplies"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <maintenanceSuppliesImage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                allowUpload="{Boolean}false"
+                                                                autoStart="{Boolean}false"
+                                                                class="cq-droptarget"
+                                                                fileNameParameter="./subscriptionMaintenanceSupplies"
+                                                                fileReferenceParameter="./subscriptionMaintenanceSuppliesImageSrc"
+                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                multiple="{Boolean}false"
+                                                                name="./subscriptionMaintenanceSupplies"
+                                                                title="Upload image asset"
+                                                                uploadUrl="${suffix.path}"
+                                                                useHTML5="{Boolean}true"
+                                                                required="{Boolean}true"/>
+                                                            <maintenanceSuppliesAlt
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Image Alt Text"
+                                                                name="./subscriptionMaintenanceSuppliesAlt"/>
+                                                            <maintenanceSuppliesText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Banner Text"
+                                                                name="./subscriptionMaintenanceSuppliesText"/>
+                                                            <maintenanceSuppliesUrl
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Maintenance Supplies URL"
+                                                                name="./subscriptionMaintenanceSuppliesUrl"/>
+                                                            <maintenanceSuppliesLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Aria Label"
+                                                                name="./subscriptionMaintenanceSuppliesLabel"/>
+                                                        </items>
+                                                    </beanzSubscription>
+                                                </items>
+                                            </maintenanceSuppliesGroup>
+                                            <beanzSubscriptionEditGroup
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <beanzSubscription
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Edit Beanz Subscriptions"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <beanzSubscriptionEditUrl
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Edit Beanz Subscriptions URL"
+                                                                name="./subscriptionBeanzSubscriptionEditUrl"/>
+                                                            <beanzSubscriptionEditLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Label Text"
+                                                                name="./subscriptionBeanzSubscriptionEditLabel"/>
+                                                        </items>
+                                                    </beanzSubscription>
+                                                </items>
+                                            </beanzSubscriptionEditGroup>                                            
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </mySubscription>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

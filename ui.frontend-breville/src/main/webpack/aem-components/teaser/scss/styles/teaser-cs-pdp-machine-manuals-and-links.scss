@@ -1,0 +1,54 @@
+%cmp-teaser--cs-pdp-machine-manuals-and-links {
+  --tile-height-mobile: 175px;
+  --tile-height-desktop: 180px;
+  --icon-height: 40px;
+  height: var(--tile-height-mobile);
+
+  text-align: center;
+
+  background-color: $cs-color-gray-60;
+  border-radius: $cs-border-radius-8;
+
+  @media (min-width: $cs-screen-md) {
+    height: var(--tile-height-desktop);
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: $cs-color-gray-50;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .cmp-teaser {
+    margin: 0 $cs-spacing-25 $cs-spacing-35;
+    padding-top: $cs-spacing-35;
+
+    @media (min-width: $cs-screen-md) {
+      margin: 0 auto $cs-spacing-50;
+      padding-top: $cs-spacing-50;
+    }
+    
+    .cmp-teaser__image {
+      .cmp-image {
+        height: var(--icon-height);
+        
+        .cmp-image__image {
+          height: var(--icon-height);
+        }
+      }
+    }
+      
+    .cmp-teaser__title {
+      @extend %cs-font-h10; // Helvetica-Neue 18px (Desktop) 16px (Mobile)
+      margin-top: $cs-spacing-15;
+      margin-bottom: 0;
+      padding-right: $cs-spacing-10;
+      padding-left: $cs-spacing-10;
+    }
+  }
+}
+
+.cmp-teaser--cs-pdp-machine-manuals-and-links {
+  @extend %cmp-teaser--cs-pdp-machine-manuals-and-links;
+}

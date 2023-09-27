@@ -1,0 +1,260 @@
+// todo: replace logo with SVG and alter color & ammend 'header-light.scss'
+
+@import 'styles/header-light';
+@import 'styles/header-dark';
+
+header.experiencefragment {
+  // scoped css variables
+  --foreground-color: #{$black};
+  --transition-speed: 250ms;
+
+  .cmp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: $spacing-md;
+    color: var(--foreground-color);
+
+    @media (min-width: $screen-md) {
+      padding-top: $spacing-lg;
+      padding-left: $spacing-xxl;
+      padding-bottom: $spacing-lg;
+    }
+    @media (min-width: $screen-xxxl) {
+      max-width: $max-width;
+      margin: auto;
+    }
+
+    // todo: handle language navigation
+    .languagenavigation {
+      display: none;
+    }
+
+    // LOGO
+    .image {
+      display: inline-block;
+      z-index: 9999;
+
+      .cmp-image {
+        width: rem(150px);
+
+        &__image {
+          width: 70%;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    // NAV
+    .navigation {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        // small fix for positioning relative to logo and edges
+        margin-top: $spacing-xs;
+        margin-right: $spacing-xs;
+      }
+
+      .cmp-navigation {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        
+
+        @keyframes show-mobile-menu {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @media (min-width: $screen-md) {
+          opacity: 1;
+          position: unset;
+          height: auto;
+          width: auto;
+          background: unset;
+          pointer-events: all;
+        }
+
+        //  JS ADDED CLASS WHEN MOBILE MENU IS ACTIVE
+        &--mobile-menu-active {
+          opacity: 1;
+          animation: show-mobile-menu var(--transition-speed) ease-in-out;
+          pointer-events: all;
+          background-color: $creme;
+          @media (min-width: $screen-md) {
+            background-color: transparent;
+          }
+
+          .cmp-navigation__toggle {
+            &-inner {
+              background-color: transparent;
+
+              &::before {
+                transform: rotate(45deg);
+              }
+
+              &::after {
+                transform: rotate(-45deg);
+              }
+            }
+          }
+        }
+
+        &__group {
+          @media (min-width: $screen-md) {
+            display: flex;
+          }
+        }
+
+        .cmp-navigation__item {
+          margin: $spacing-md;
+
+          @media (min-width: $screen-md) {
+            margin: 0;
+            padding: 0 $spacing-xs;
+          }
+          @media (min-width: $screen-lg) {
+            margin: 0;
+            padding: 0 $spacing-md;
+          }
+
+          &--active {
+            .cmp-navigation__item-link {
+              font-weight: bold;
+            }
+            
+            .cmp-navigation__item-link {
+              // underline is static on active link
+              &::after {
+                transform: scale(1) !important;
+                opacity: 1 !important;
+              }
+            }
+          }
+
+          &-link {
+            position: relative;
+            font-size: $font-size-navmenu-mobile;
+            padding-bottom: $spacing-md;
+            color: var(--foreground-color);
+            @media (min-width: $screen-md) {
+              @include font-size($font-size-navmenu);
+              font-family: $font-family-secondary;
+              font-weight: $font-weight-normal;
+              line-height: $line-height-navmenu;
+            }
+
+            // ANIMATED UNDERLINE ON HOVER
+            &::after {
+              content: '';
+              height: 3px;
+              width: 100%;
+              position: absolute;
+              // half of padding
+              left: 0;
+              bottom: $spacing-sm;
+              display: inline-block;
+              background-color: var(--foreground-color);
+              transition: transform var(--transition-speed) ease-in-out;
+              opacity: 0;
+              transform: scale(0);
+            }
+
+            &:hover {
+              outline: 0;
+
+              &::after {
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
+
+            &:focus {
+              outline-offset: 1px;
+              outline: 1px dotted;
+
+              &::after {
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      // JS ADDED NAV TOGGLE
+      .cmp-navigation__toggle {
+        position: absolute;
+        top: 1rem;
+        right: 0.5rem;
+        z-index: 9999;
+        margin: $spacing-md;
+        padding: $spacing-xs;
+        width: 31px;
+        cursor: pointer;
+
+        @media (min-width: $screen-md) {
+          display: none;
+        }
+
+        &-inner {
+          position: absolute;
+          display: inline-block;
+          width: 100%;
+          height: 4px;
+          left: 0;
+          top: 50%;
+          border-radius: 1px;
+          transition: background-color var(--transition-speed) ease-in-out;
+          background-color: var(--foreground-color);
+
+          @media (min-width: $screen-md) {
+            background-color: transparent;
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            border-radius: 1px;
+            width: 100%;
+            display: inline-block;
+            height: 4px;
+            background-color: var(--foreground-color);
+            transition: transform var(--transition-speed) ease-in-out;
+          }
+
+          &::before {
+            top: -10px;
+            transform-origin: left top;
+          }
+
+          &::after {
+            bottom: -10px;
+            background-color: var(--foreground-color);
+            transform-origin: left bottom;
+          }
+        }
+      }
+    }
+  }
+}

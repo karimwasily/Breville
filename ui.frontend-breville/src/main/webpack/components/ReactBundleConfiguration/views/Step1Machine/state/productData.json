@@ -1,0 +1,320 @@
+[
+  {
+    "productbrand": "Breville",
+    "productSalesRegion": "",
+    "color": "BSS (Brushed Stainless Steel)",
+    "voltage": "120V / 60 Hz",
+    "plug": "UL 3-pin",
+    "packout": "US and Canada with BOM defining the Instruction Booklet and any other pack out",
+    "version": "N/A",
+    "refurbished": "",
+    "searchName": "BWM602BSS",
+    "productName": "the Smart Waffle 2-Slice",
+    "giftBoxID": "",
+    "productDimensionGroup": "",
+    "itemModelGroup": "MAV (Moving Average)",
+    "itemGroupID": "FG (Finished Goods)",
+    "productionType": "(4) - BOM",
+    "productType": "Item",
+    "productSubType": "Product",
+    "ratingLabelID": "",
+    "parentItemID": "BWM602",
+    "marketingParentItemID": "",
+    "productCategory": "Moat Waffle Makers",
+    "WAXNMFCCode": "",
+    "sparePartUseType": "",
+    "primaryWebCategory": "WAFFLEMAKERS",
+    "serviceContractUseType": "",
+    "parentItemDescription": "",
+    "retailPrice": 179.95,
+    "variant-codes": ["BWM602BSSUSC"],
+    "variant-colors": ["BSS (Brushed Stainless Steel)"],
+    "document": "https://www.breville.com/content/dam/breville/us/assets/miscellaneous/instruction-manual/waffle-makers/BWM602-instruction-manual.pdf",
+    "pdp": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bwm/bwm602bssusc/pdp.jpg",
+    "tile": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bwm/bwm602bssusc/tile.jpg",
+    "checkout": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bwm/bwm602bssusc/checkout.jpg",
+    "cart": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bwm/bwm602bssusc/cart.jpg",
+    "objectID": "BWM602BSSUSC",
+    "_highlightResult": {
+      "color": {
+        "value": "BSS (Brushed Stainless Steel)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "searchName": {
+        "value": "BWM602BSS",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "productName": {
+        "value": "the Smart Waffle 2-Slice",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "itemGroupID": {
+        "value": "FG (Finished Goods)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "parentItemID": {
+        "value": "BWM602",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "primaryWebCategory": {
+        "value": "WAFFLEMAKERS",
+        "matchLevel": "none",
+        "matchedWords": []
+      }
+    },
+    "__position": 18,
+    "key": "BWM602BSSUSC",
+    "image": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bwm/bwm602bssusc/tile.jpg",
+    "price": 179.95,
+    "title": "the Smart Waffle 2-Slice"
+  },
+  {
+    "productbrand": "Breville",
+    "productSalesRegion": "",
+    "color": "BTR (Black Truffle)",
+    "voltage": "120V / 60 Hz",
+    "plug": "UL 3-pin",
+    "packout": "US with BOM defining the Instruction Booklet and any other pack out",
+    "version": "N/A",
+    "refurbished": "",
+    "searchName": "BES880BTR",
+    "productName": "the Barista Touch Black Truffle",
+    "giftBoxID": "",
+    "productDimensionGroup": "",
+    "itemModelGroup": "MAV (Moving Average)",
+    "itemGroupID": "FG (Finished Goods)",
+    "productionType": "(4) - BOM",
+    "productType": "Item",
+    "productSubType": "Product",
+    "ratingLabelID": "",
+    "parentItemID": "BES880",
+    "marketingParentItemID": "",
+    "productCategory": "Automatic Espresso Machines",
+    "WAXNMFCCode": "",
+    "sparePartUseType": "",
+    "primaryWebCategory": "ESPRESSO",
+    "serviceContractUseType": "",
+    "parentItemDescription": "",
+    "retailPrice": 999.95,
+    "variant-codes": ["BES880BSS1BUS1", "BES880BTR1BUS1", "BES880BST1BUS1"],
+    "variant-colors": [
+      "BSS (Brushed Stainless Steel)",
+      "BTR (Black Truffle)",
+      "BSS (Brushed Stainless Steel)"
+    ],
+    "document": "https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/Instruction-Booklets/USCM/BES880_Instruction_Manual.pdf",
+    "pdp": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes880btr1bus1/pdp.jpg",
+    "tile": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes880btr1bus1/tile.jpg",
+    "checkout": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes880btr1bus1/checkout.jpg",
+    "cart": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes880btr1bus1/cart.jpg",
+    "objectID": "BES880BTR1BUS1",
+    "_highlightResult": {
+      "color": {
+        "value": "BTR (Black Truffle)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "searchName": {
+        "value": "BES880BTR",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "productName": {
+        "value": "the Barista Touch Black Truffle",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "itemGroupID": {
+        "value": "FG (Finished Goods)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "parentItemID": {
+        "value": "BES880",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "primaryWebCategory": {
+        "value": "ESPRESSO",
+        "matchLevel": "none",
+        "matchedWords": []
+      }
+    },
+    "__position": 3,
+    "key": "BES880BTR1BUS1",
+    "image": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes880btr1bus1/tile.jpg",
+    "price": 999.95,
+    "title": "the Barista Touch Black Truffle"
+  },
+  {
+    "productbrand": "Breville",
+    "productSalesRegion": "",
+    "color": "OYS (Oyster Shell)",
+    "voltage": "120V / 60 Hz",
+    "plug": "UL 3-pin",
+    "packout": "US with BOM defining the Instruction Booklet and any other pack out",
+    "version": "N/A",
+    "refurbished": "",
+    "searchName": "BES878OYS",
+    "productName": "the Barista Pro Oyster Shell",
+    "giftBoxID": "",
+    "productDimensionGroup": "",
+    "itemModelGroup": "MAV (Moving Average)",
+    "itemGroupID": "FG (Finished Goods)",
+    "productionType": "(4) - BOM",
+    "productType": "Item",
+    "productSubType": "Product",
+    "ratingLabelID": "",
+    "parentItemID": "BES878",
+    "marketingParentItemID": "",
+    "productCategory": "Automatic Espresso Machines",
+    "WAXNMFCCode": "",
+    "sparePartUseType": "",
+    "primaryWebCategory": "ESPRESSO",
+    "serviceContractUseType": "",
+    "parentItemDescription": "",
+    "retailPrice": 799.95,
+    "variant-codes": [
+      "BES878BSS1BUS1",
+      "BES878BTR1BUS1",
+      "BES878DBL1BUS1",
+      "BES878OYS1BUS1",
+      "BES878RCH1BUS1",
+      "BES878SHY1BUS1",
+      "BES878SST1BUS1",
+      "BES878BST1BUS1"
+    ],
+    "variant-colors": [
+      "BSS (Brushed Stainless Steel)",
+      "BTR (Black Truffle)",
+      "DBL (Damson Blue)",
+      "OYS (Oyster Shell)",
+      "RCH (Royal Champagne)",
+      "SHY (Smoked Hickory)",
+      "SST (Sea Salt)",
+      "BSS (Brushed Stainless Steel)"
+    ],
+    "document": "https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/Instruction-Booklets/USCM/BES878_Instruction_Manual.pdf",
+    "pdp": "https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES878/BES878OYSUS/pdp.jpg",
+    "tile": "https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES878/BES878OYSUS/tile.jpg",
+    "checkout": "https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES878/BES878OYSUS/checkout.jpg",
+    "cart": "https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES878/BES878OYSUS/cart.jpg",
+    "objectID": "BES878OYS1BUS1",
+    "_highlightResult": {
+      "color": {
+        "value": "OYS (Oyster Shell)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "searchName": {
+        "value": "BES878OYS",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "productName": {
+        "value": "the Barista Pro Oyster Shell",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "itemGroupID": {
+        "value": "FG (Finished Goods)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "parentItemID": {
+        "value": "BES878",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "primaryWebCategory": {
+        "value": "ESPRESSO",
+        "matchLevel": "none",
+        "matchedWords": []
+      }
+    },
+    "__position": 4,
+    "key": "BES878OYS1BUS1",
+    "image": "https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES878/BES878OYSUS/tile.jpg",
+    "price": 799.95,
+    "title": "the Barista Pro Oyster Shell"
+  },
+  {
+    "productbrand": "Breville",
+    "productSalesRegion": "",
+    "color": "BSS (Brushed Stainless Steel)",
+    "voltage": "120V / 60 Hz",
+    "plug": "UL 3-pin",
+    "packout": "US with BOM defining the Instruction Booklet and any other pack out",
+    "version": "N/A",
+    "refurbished": "",
+    "searchName": "BES400XL",
+    "productName": "ikon Espresso Machine",
+    "giftBoxID": "",
+    "productDimensionGroup": "",
+    "itemModelGroup": "MAV (Moving Average)",
+    "itemGroupID": "FG (Finished Goods)",
+    "productionType": "(4) - BOM",
+    "productType": "Item",
+    "productSubType": "Product",
+    "ratingLabelID": "",
+    "parentItemID": "BES400",
+    "marketingParentItemID": "",
+    "productCategory": "Manual Espresso Machines",
+    "WAXNMFCCode": "",
+    "sparePartUseType": "",
+    "primaryWebCategory": "ESPRESSO",
+    "serviceContractUseType": "",
+    "parentItemDescription": "",
+    "retailPrice": 9999.99,
+    "variant-codes": ["BES400XL"],
+    "variant-colors": ["BSS (Brushed Stainless Steel)"],
+    "document": "https://www.breville.com/content/dam/breville/us/assets/miscellaneous/instruction-manual/espresso/BES400-instruction-manual.pdf",
+    "pdp": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes400xl/pdp.jpg",
+    "tile": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes400xl/tile.jpg",
+    "checkout": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes400xl/checkout.jpg",
+    "cart": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes400xl/cart.jpg",
+    "objectID": "BES400XL",
+    "_highlightResult": {
+      "color": {
+        "value": "BSS (Brushed Stainless Steel)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "searchName": {
+        "value": "BES400XL",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "productName": {
+        "value": "ikon Espresso Machine",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "itemGroupID": {
+        "value": "FG (Finished Goods)",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "parentItemID": {
+        "value": "BES400",
+        "matchLevel": "none",
+        "matchedWords": []
+      },
+      "primaryWebCategory": {
+        "value": "ESPRESSO",
+        "matchLevel": "none",
+        "matchedWords": []
+      }
+    },
+    "__position": 13,
+    "key": "BES400XL",
+    "image": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes400xl/tile.jpg",
+    "price": 9999.99,
+    "title": "ikon Espresso Machine"
+  }
+]

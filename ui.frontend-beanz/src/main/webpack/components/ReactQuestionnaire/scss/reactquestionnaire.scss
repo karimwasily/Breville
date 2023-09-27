@@ -1,0 +1,240 @@
+@import 'styles/reactquestionnaire-full-page';
+
+// * the author can also specify custom selectors for each question view
+
+// this is the template for the questionnaire react app
+// copy this to create a custom style
+.questionnaire-result__root {
+  padding: $spacing-sm;
+  @include breakpoint-up(lg) {
+    padding: $spacing-lg;
+  }
+  @include breakpoint-up(xl) {
+    padding: $spacing-xxl;
+  }
+
+  .cmp-container__questionnaire-result {
+    padding: $spacing-sm;
+    border: 2px solid $max-blue-green;
+    background-color: $white;
+    @include breakpoint-up(lg) {
+      padding: $spacing-lg;
+    }
+    @include breakpoint-up(xl) {
+      padding: $spacing-xxl;
+    }
+
+    .cmp-container__questionnaire-result--row {
+      display: flex;
+      flex-wrap: wrap;
+
+      .cmp-container__questionnaire-result--column {
+        width: 100%;
+        @include breakpoint-up(md) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        .cmp-container__questionnaire-result--price-large-screen {
+          display: none;
+          @include breakpoint-up(lg) {
+            display: block;
+          }
+        }
+
+        &.cmp-container__questionnaire-result--price-small-screen {
+          display: block;
+          max-width: 100%;
+          flex: 0 0 100%;
+          @include breakpoint-up(lg) {
+            display: none;
+          }
+        }
+
+        .cmp-text__questionnaire-result--roast-category {
+          @extend %font-brown-bold-p;
+          margin: 0;
+          padding: 0;
+        }
+
+        .cmp-text__questionnaire-result--title {
+          @extend %font-title-xl;
+          margin: $spacing-xs 0;
+          @include breakpoint-up(md) {
+            margin: $spacing-md 0;
+          }
+        }
+
+        .cmp-text__questionnaire-result--roast-details {
+          @extend %font-medium-p;
+          color: $gray-davy;
+        }
+
+        .cmp-text__questionnaire-result--price {
+          display: table;
+          margin: auto;
+          @include breakpoint-up(md) {
+            display: block;
+          }
+
+          .cmp-text__questionnaire-result--price-h3 {
+            @extend %font-title-large;
+            color: $font-brown;
+            margin: $spacing-sm 0;
+            display: inline-block;
+          }
+
+          .cmp-text__questionnaire-result--price-label {
+            @extend %font-small-p;
+            padding-left: $spacing-xs;
+            font-weight: $font-weight-bold;
+            color: $gray-davy;
+          }
+        }
+
+        .cmp-container__questionnaire-result--btn-row {
+          display: flex;
+          flex-wrap: wrap;
+          width: auto;
+          margin: 0 -$spacing-xs;
+
+          .cmp-container__questionnaire-result--btn-column {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: $spacing-xs;
+            @include breakpoint-up(md) {
+              flex: 0 0 50%;
+              max-width: 50%;
+            }
+
+            .cmp-button__questionnaire-result--buy-now {
+              @extend %solid-large-green-btn;
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .cmp-button__questionnaire-result--find-out-more {
+              @extend %solid-light-green-large-btn;
+            }
+          }
+        }
+
+        .cmp-image__questionnaire-result {
+          height: auto;
+          display: block;
+          margin: auto;
+          max-width: 100%;
+          max-height: 480px;
+        }
+      }
+    }
+  }
+}
+
+.cmp-reactquestionnaire {
+  --transition-speed: 200ms;
+  --transition-speed-slow: 500ms;
+  @extend %cmp-reactquestionnaire--full-page;
+
+  .cmp-container {
+    .cmp-teaser {
+      .cmp-teaser__image {
+        .cmp-image {
+          .cmp-image__image {
+          }
+        }
+      }
+
+      .cmp-teaser__content {
+        .cmp-teaser__title {
+        }
+
+        .cmp-teaser__description {
+          p {
+          }
+        }
+
+        .cmp-teaser__action-container {
+          .cmp-teaser__action-link {
+          }
+        }
+      }
+    }
+  }
+
+  // this class is enabled on completion
+  // this is the startover teaser
+  .cmp-reactquestionnaire--complete {
+    .cmp-teaser {
+    }
+  }
+
+  // here are the product results
+  .result {
+    .cmp-result {
+    }
+  }
+
+  // animations
+  // * react-transition-group applied classes for all animation staging events
+  .transition--enter {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 0;
+    }
+
+    .cmp-teaser__image {
+      opacity: 0.5;
+    }
+  }
+
+  .transition--exit {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 1;
+    }
+
+    .cmp-teaser__image {
+      opacity: 1;
+    }
+  }
+
+  .transition--enter-active {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 1;
+    }
+
+    .cmp-teaser__image {
+      opacity: 1;
+    }
+  }
+
+  .transition--exit-active {
+    .cmp-teaser__content,
+    .cmp-result {
+      opacity: 0;
+    }
+
+    .cmp-teaser__image {
+      opacity: 0.5;
+    }
+  }
+
+  .transition--enter-active,
+  .transition--exit-active {
+    .cmp-teaser__image {
+      // slower transition speed for image to provide load time
+      transition: opacity var(--transition-speed-slow);
+    }
+
+    .cmp-teaser__content {
+      // faster transition speed to distract user with text while bg image loads
+      transition: opacity var(--transition-speed);
+    }
+
+    .cmp-result {
+      transition: opacity var(--transition-speed-slow) !important;
+    }
+  }
+}

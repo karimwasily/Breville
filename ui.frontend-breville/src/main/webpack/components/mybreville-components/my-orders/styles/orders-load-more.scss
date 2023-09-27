@@ -1,0 +1,28 @@
+.cmp-button-load-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: $cs-spacing-40;
+  @media (min-width: $screen-md) {
+    margin-top: $cs-spacing-50;
+  }
+
+  .react-button {
+    @extend %cs-font-p-3;
+    width: fit-content;
+    padding: $cs-spacing-15 $cs-spacing-70;
+
+    color: $cs-gunmetal;
+    font-weight: $cs-font-weight-bold;
+    text-align: center;
+
+    background: transparent;
+    border-color: $cs-gunmetal !important;
+  }
+
+  .react-button:hover {
+    color: $white;
+
+    background-color: $cs-dark-purple;
+  }
+}

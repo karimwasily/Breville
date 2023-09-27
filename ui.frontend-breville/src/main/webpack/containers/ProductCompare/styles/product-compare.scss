@@ -1,0 +1,28 @@
+.product-compare {
+  max-width: $cs-max-width;
+  margin: $cs-spacing-40 auto 0;
+
+  .product-compare__header {
+    padding-bottom: $cs-spacing-50;
+
+    text-align: center;
+  }
+
+  .product-compare__breadcrumb {
+    @extend %cs-font-p-2; 
+  }
+
+  .product-compare__title {
+    @extend %cs-font-h2;
+  }
+
+  .producttile-add-to-cart__btn {
+    margin-top: $cs-spacing-20;
+  }
+
+  .cmp-producttile {
+    border-radius: $cs-border-radius-16;
+  }
+
+  .product-compare__remove {}
+}

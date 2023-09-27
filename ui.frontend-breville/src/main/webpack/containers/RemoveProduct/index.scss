@@ -1,0 +1,94 @@
+.cart-bundle-summary__remove {
+  position: absolute;
+  top: 2px;
+  right: 0;
+
+  button {
+    vertical-align: unset !important;
+  }
+}
+
+.modal-remove-product {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.overlay-remove-product {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: Rgba(0, 0, 0, 0.5);
+
+  @media (min-width: $screen-md) {
+    justify-content: center;
+  }
+}
+
+.remove-product__container {
+  position: relative;
+
+  max-width: 500px;
+  margin: auto;
+  padding: $cs-spacing-50 $cs-spacing-30;
+
+  background-color: $cs-white;
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-50;
+  }
+  
+  .remove-product__header {
+    margin-bottom: $cs-spacing-20;
+
+    .remove-product__title {
+      @extend %cs-font-h4;
+    }
+
+    .remove-product__close-icon {
+      position: absolute;
+      top: $cs-spacing-20;
+      right: $cs-spacing-20;
+      @media (min-width: $cs-screen-md) {
+        top: $cs-spacing-40;
+        right: $cs-spacing-40;
+      }
+    }
+  }
+
+  .remove-product__content {
+    @extend %cs-font-p-2;
+    margin-bottom: $cs-spacing-30;
+  }
+
+  .remove-product__footer {
+    .react-flex {
+      gap: $cs-spacing-10;
+      padding: 0;
+
+      button {
+        width: 100%;
+        padding: $cs-spacing-15 !important;
+        @media (min-width: $cs-screen-md) {
+          width: 50%;
+        }
+      }
+
+      .remove-product__button--cancel {
+        @extend %cs-button-purple-large; 
+        
+      }
+
+      .remove-product__button--remove {
+        @extend %cs-button-purple-fill-large; 
+      }
+    }
+  }
+}

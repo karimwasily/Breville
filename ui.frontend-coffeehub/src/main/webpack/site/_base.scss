@@ -1,0 +1,177 @@
+//== Base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: $font-family-secondary;
+  line-height: $line-height-base;
+  color: $text-color;
+  background: $background-color;
+  scroll-behavior: smooth;
+}
+
+%font-a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a {
+  @extend %font-a;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h4,
+h6 {
+  @extend %disallowed-element;
+}
+
+%font-h1 {
+  @include font-size($font-size-h1-mobile);
+  line-height: $line-height-h1-mobile;
+  font-family: $font-family-primary;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h1);
+    line-height: $line-height-h1;
+  }
+}
+
+%font-h2 {
+  @include font-size($font-size-h2-mobile);
+  line-height: $line-height-h2-mobile;
+  font-family: $font-family-primary;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h2);
+    line-height: $line-height-h2;
+  }
+}
+
+%font-h3 {
+  @include font-size($font-size-h3-mobile);
+  line-height: $line-height-h3-mobile;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-h3-bold;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h3);
+    line-height: $line-height-h3;
+  }
+}
+
+%font-h5 {
+  @include font-size($font-size-h5-subcategory);
+  line-height: $line-height-h5-subcategory;
+  font-family: $font-family-primary;
+}
+
+%font-p {
+  @include font-size($font-size-body);
+  font-family: $font-family-secondary;
+  line-height: $line-height-body;
+}
+
+%font-cta-body {
+  @include font-size($font-size-body);
+  font-family: $font-family-secondary;
+  line-height: $line-height-cta-body;
+  color: $text-color;
+}
+
+h1 {
+  @extend %font-h1;
+}
+
+h2 {
+  @extend %font-h2;
+}
+
+h3 {
+  @extend %font-h3;
+}
+
+h5 {
+  @extend %font-h5;
+}
+
+p {
+  @extend %font-p;
+}
+
+// * use @extend %font-subcategory within your style wrappers to utilize these...
+// eg: .custom-font-styles { @extend %font-subcategory }
+// h5 subcategory
+%font-subcategory {
+  @include font-size($font-size-h5-subcategory);
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-h5-subcategory;
+}
+%font-player-text-links {
+  @include font-size($font-size-playerlink);
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-playerlink;
+}
+// h1 subtext
+%font-h1-subtext {
+  @include font-size($font-size-h1-subtext-mobile);
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-h1-subtext-mobile;
+
+  @media (min-width: $screen-sm) {
+    @include font-size($font-size-h1-subtext);
+    line-height: $line-height-h1-subtext;
+  }
+}
+%font-large-text {
+  @include font-size($font-size-largetext);
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-largetext;
+}
+%font-menu-nav {
+  @include font-size($font-size-navmenu);
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-navmenu;
+}
+%font-menu-nav-breadcrumb {
+  @include font-size($font-size-navmenu-breadcrumb);
+  font-family: $font-family-primary;
+  line-height: $line-height-navmenu-breadcrumb;
+}
+%font-cta {
+  @include font-size($font-size-cta);
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-cta;
+}
+
+%page-gutter {
+  padding-left: $spacing-page-gutter-mobile;
+  padding-right: $spacing-page-gutter-mobile;
+
+  @media (min-width: $screen-sm) {
+    padding-left: $spacing-page-gutter;
+    padding-right: $spacing-page-gutter;
+  }
+}

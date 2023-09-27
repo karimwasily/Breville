@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/subscription-o-20</title>
+    <g id="icon/subscription-o-20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0.500000, 2.500000)" fill="#CA4F04">
+            <path d="M16.998,7.367 L17,7.5 C17,11.6421356 13.6421356,15 9.5,15 C7.14560692,15 5.04459575,13.9151431 3.66957753,12.2180403 L5.70213535,11.4782314 C6.68941224,12.421019 8.02709199,13 9.5,13 C12.332455,13 14.6648267,10.8588893 14.9668979,8.10688532 L16.998,7.367 Z M9.5,0 C12.0486056,0 14.3003025,1.2712173 15.6556105,3.2141717 L13.6848138,3.93089739 C12.6760232,2.74921216 11.1755055,2 9.5,2 C6.47745151,2 4.02436245,4.43814567 4.00018034,7.45498951 L2.02974305,8.17252419 C2.01005492,7.95097905 2,7.72666375 2,7.5 C2,3.35786438 5.35786438,0 9.5,0 Z" id="Combined-Shape"></path>
+            <polygon id="Rectangle-5" points="0 7 6 7 3 10"></polygon>
+            <polygon id="Rectangle-5-Copy" transform="translate(16.000000, 7.500000) rotate(180.000000) translate(-16.000000, -7.500000) " points="13 6 19 6 16 9"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,5 @@
+// CORS policy as specified by its configuration
+{
+	"Factory PID": "com.adobe.granite.cors.impl.CORSPolicyImpl",
+	"alloworigin": ["https://coderydev1-mybreville.cs196.force.com/", "https://coderydev2-mybreville.cs196.force.com/", "https://coderydev3-mybreville.cs196.force.com/", "https://coderydev4-mybreville.cs196.force.com/"]
+}

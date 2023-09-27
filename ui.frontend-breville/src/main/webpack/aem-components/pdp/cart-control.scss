@@ -1,0 +1,18 @@
+
+%cart-control {
+  .primary-product-container__add_to_cart { 
+    flex: 1;
+
+    .react-button.react-button--color-scheme-green {
+      width: 100%;
+      height: 3.1875rem;
+      @media(min-width:$cs-screen-md) {
+        padding: $cs-spacing-15 $cs-spacing-20;
+      }
+
+      .cmp-button__text {
+        @extend %cs-font-h10;
+      }
+    }
+  }
+}

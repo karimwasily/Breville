@@ -1,0 +1,184 @@
+////////////////////
+// LAYOUT
+////////////////////
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: floor(($gutter / 2));
+  padding-right: ceil(($gutter / 2));
+}
+
+@mixin container-content() {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $gutter-padding;
+  float: unset !important;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// provide font-size with px fallback
+@mixin font-size($rem) {
+  font-size: rem-to-px($rem);
+  font-size: $rem;
+}
+
+// polyfill so we can use 'gap' when using flex
+@mixin flex-gap ($gap: 1rem) {
+  --gap: #{$gap};
+  --column-gap: var(--gap);
+  --row-gap: var(--gap);
+  margin: calc(var(--row-gap) / -2) calc(var(--column-gap) / -2);
+
+  > * {
+    margin: calc(var(--row-gap) / 2) calc(var(--column-gap) / 2);
+  }
+}
+
+%hide-scrollbar {
+  // There is a CSS rule that can hide scrollbars in IE 10+.
+  -ms-overflow-style: none;
+
+  /* this will hide the scrollbar in mozilla based browsers */
+  overflow: -moz-scrollbars-none;
+  scrollbar-color: transparent transparent;
+  
+  // Use -ms-autohiding-scrollbar if you wish to display on hover.
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
+  
+  // There used to be a CSS rule that could hide scrollbars in Firefox, but it has since been deprecated.
+  // scrollbar-width: none;
+  // https://blogs.msdn.microsoft.com/kurlak/2013/11/03/hiding-vertical-scrollbars-with-pure-css-in-chrome-ie-6-firefox-opera-and-safari/
+  // There is a CSS rule that can hide scrollbars in Webkit-based browsers (Chrome and Safari).
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+////////////////////
+// HELPERS
+////////////////////
+// front end dev helper utility for layout
+@mixin dev($borders: false) {
+  @if $borders {
+    border: 1px solid red;
+
+    * {
+      border: 1px solid red;
+    }
+  }
+
+  &::before {
+    content: 'XS';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: darkorange;
+    color: white;
+    padding: 1rem;
+    z-index: 9999999;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 1rem;
+
+    @media (min-width: $screen-sm) {
+      content: 'SM';
+      background-color: teal;
+      color: white;
+    }
+    @media (min-width: $screen-md) {
+      content: 'MD';
+      background-color: salmon;
+      color: white;
+    }
+    @media (min-width: $screen-lg) {
+      content: 'LG';
+      background-color: burlywood;
+      color: white;
+    }
+    @media (min-width: $screen-xl) {
+      content: 'XL';
+      background-color: cornflowerblue;
+      color: white;
+    }
+    @media (min-width: $screen-xxl) {
+      content: 'XXL';
+      background-color: lightcoral;
+      color: white;
+    }
+  }
+}
+
+// NOTIFY DEVELOPER IF USING A DISALLOWED ELEMENT
+%disallowed-element {
+  $disallowedElement-color: rgba(255, 0, 0, 1);
+  // background-color: $disallowedElement-color;
+  outline: 5px solid $disallowedElement-color;
+  animation: alerter 1.5s ease-in-out infinite;
+
+  &::before {
+    content: '<ELEMENT NOT ALLOWED>';
+    padding: 1rem;
+  }
+
+  @keyframes alerter {
+    0% {
+      background-color: $disallowedElement-color;
+    }
+
+    50% {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    100% {
+      background-color: $disallowedElement-color;
+    }
+  }
+}
+
+@mixin arrow-icon($color: black) {
+  mask: url('../resources/svgs/arrow-right.svg') no-repeat 50% 50%;
+  background-color: $color;  
+}
+
+%arrow-right-icon-small {
+  background-image: url('../resources/svgs/arrow-right.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%arrow-down-icon-small {
+  background-image: url('../resources/svgs/arrow-down-small.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+//Visibilty helpers
+.visible-md-up {
+  display: block;
+  @media (max-width: $screen-md) {
+    display: none;
+  }
+}
+
+.visible-xl-up {
+  display: none;
+  @media (min-width: $screen-xl) {
+    display: block;
+  }
+}
+
+.hidden-xl-up {
+  display: block;
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+}

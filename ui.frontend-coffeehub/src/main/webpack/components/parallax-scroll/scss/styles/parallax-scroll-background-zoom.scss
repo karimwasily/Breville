@@ -1,0 +1,16 @@
+.cmp-parallax-scroll--background-zoom {
+  .cmp-parallax-scroll {
+    overflow: hidden;
+
+    .cmp-parallax-scroll__background {
+      > img {
+        left: -115%;
+        width: 310%;
+        @media (min-width: $screen-md) {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// ! import order is important due to scss placeholders
+@import 'styles/teaser-content-tile-zoom';
+@import 'styles/teaser-content-tile-zoom-large';
+@import 'styles/teaser-tile-banner';
+@import 'styles/teaser-tile-banner-flip';
+@import 'styles/teaser-tile-banner-middle';
+@import 'styles/teaser-hero-banner';
+@import 'styles/teaser-content-wave-number';
+@import 'styles/teaser-content-wave-description';
+@import 'styles/teaser-content-you-may-like';
+@import 'styles/teaser-third-wave-main';
+@import 'styles/teaser-third-wave-banner';
+@import 'styles/teaser-mapbox';
+
+.cmp-teaser {
+  &__content {
+    .cmp-teaser__pretitle {
+    }
+
+    .cmp-teaser__title {
+    }
+
+    .cmp-teaser__description {
+    }
+
+    p {
+    }
+  }
+}

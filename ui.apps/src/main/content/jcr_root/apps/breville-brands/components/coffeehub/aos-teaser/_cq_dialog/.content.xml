@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="AOS Teaser">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <aos
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Teaser Text Animation"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <pretitleanimation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required animation"
+                                                fieldLabel="Pretitle Animation"
+                                                name="./pretitleanimation">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectfade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Fade"
+                                                        value=""/>
+                                                    <fade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade"
+                                                        value="fade"/>
+                                                    <fadeup
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Up"
+                                                        value="fade-up"/>
+                                                    <fadedown
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Down"
+                                                        value="fade-down"/>
+                                                    <fadeleft
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Left"
+                                                        value="fade-left"/>
+                                                    <faderight
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Right"
+                                                        value="fade-right"/>
+                                                </items>
+                                            </pretitleanimation>
+                                            <pretitleanchorplacement
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required anchor placement"
+                                                fieldLabel="Pretitle Anchor Placement"
+                                                name="./pretitleanchorplacement">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectanchor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Anchor Placement"
+                                                        value=""/>
+                                                    <top-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Bottom"
+                                                        value="top-bottom"/>
+                                                    <top-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Center"
+                                                        value="top-center"/>
+                                                    <top-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Top"
+                                                        value="top-top"/>
+                                                    <center-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Bottom"
+                                                        value="center-bottom"/>
+                                                    <center-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Center"
+                                                        value="center-center"/>
+                                                    <center-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Top"
+                                                        value="center-top"/>
+                                                    <bottom-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Bottom"
+                                                        value="bottom-bottom"/>
+                                                    <bottom-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Center"
+                                                        value="bottom-center"/>
+                                                    <bottom-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Top"
+                                                        value="bottom-top"/>
+                                                </items>
+                                            </pretitleanchorplacement>
+                                            <pretitleeasing
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="You can choose one of these timing function to animate elements nicely"
+                                                fieldLabel="Pretitle Easing"
+                                                name="./pretitleeasing">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selecteasing
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Easing"
+                                                        value=""/>
+                                                    <linear
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Linear"
+                                                        value="linear"/>
+                                                    <ease
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease"
+                                                        value="ease"/>
+                                                    <ease-in
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease In"
+                                                        value="ease-in"/>
+                                                    <ease-out
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease Out"
+                                                        value="ease-out"/>
+                                                </items>
+                                            </pretitleeasing>
+                                            <pretitledelay
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Pretitle delay(Milliseconds)"
+                                                name="./pretitledelay"/>
+                                            <pretitleoffset
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Pretitle offset(pixels)"
+                                                name="./pretitleoffset"/>
+                                            <pretitleduration
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Pretitle Duration(Milliseconds)"
+                                                name="./pretitleduration"/>
+                                            <hrlineanimation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required animation"
+                                                fieldLabel="Horizontal Line Animation"
+                                                name="./hrlineanimation">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectfade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Fade"
+                                                        value=""/>
+                                                    <fade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade"
+                                                        value="fade"/>
+                                                    <line-animation
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Line Animation"
+                                                        value="line-animation"/>
+                                                </items>
+                                            </hrlineanimation>
+                                            <hrlineanchorplacement
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required anchor placement"
+                                                fieldLabel="Horizontal Line Anchor Placement"
+                                                name="./hrlineanchorplacement">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectanchor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Anchor Placement"
+                                                        value=""/>
+                                                    <top-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Bottom"
+                                                        value="top-bottom"/>
+                                                    <top-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Center"
+                                                        value="top-center"/>
+                                                    <top-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Top"
+                                                        value="top-top"/>
+                                                    <center-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Bottom"
+                                                        value="center-bottom"/>
+                                                    <center-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Center"
+                                                        value="center-center"/>
+                                                    <center-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Top"
+                                                        value="center-top"/>
+                                                    <bottom-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Bottom"
+                                                        value="bottom-bottom"/>
+                                                    <bottom-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Center"
+                                                        value="bottom-center"/>
+                                                    <bottom-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Top"
+                                                        value="bottom-top"/>
+                                                </items>
+                                            </hrlineanchorplacement>
+                                            <hrlineeasing
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="You can choose one of these timing function to animate elements nicely"
+                                                fieldLabel="Horizontal Line Easing"
+                                                name="./hrlineeasing">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selecteasing
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Easing"
+                                                        value=""/>
+                                                    <linear
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Linear"
+                                                        value="linear"/>
+                                                    <ease
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease"
+                                                        value="ease"/>
+                                                    <ease-in
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease In"
+                                                        value="ease-in"/>
+                                                    <ease-out
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease Out"
+                                                        value="ease-out"/>
+                                                </items>
+                                            </hrlineeasing>
+                                            <hrlinedelay
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Horizontal Line delay(Milliseconds)"
+                                                name="./hrlinedelay"/>
+                                            <hrlineoffset
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Horizontal Line offset(pixels)"
+                                                name="./hrlineoffset"/>
+                                            <hrlineduration
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Horizontal Line Duration(Milliseconds)"
+                                                name="./hrlineduration"/>
+                                            <titleanimation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required animation"
+                                                fieldLabel="Title Animation"
+                                                name="./titleanimation">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectfade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Fade"
+                                                        value=""/>
+                                                    <fade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade"
+                                                        value="fade"/>
+                                                    <fadeup
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Up"
+                                                        value="fade-up"/>
+                                                    <fadedown
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Down"
+                                                        value="fade-down"/>
+                                                    <fadeleft
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Left"
+                                                        value="fade-left"/>
+                                                    <faderight
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Right"
+                                                        value="fade-right"/>
+                                                </items>
+                                            </titleanimation>
+                                            <titleanchorplacement
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required anchor placement"
+                                                fieldLabel="Title Anchor Placement"
+                                                name="./titleanchorplacement">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectanchor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Anchor Placement"
+                                                        value=""/>
+                                                    <top-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Bottom"
+                                                        value="top-bottom"/>
+                                                    <top-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Center"
+                                                        value="top-center"/>
+                                                    <top-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Top"
+                                                        value="top-top"/>
+                                                    <center-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Bottom"
+                                                        value="center-bottom"/>
+                                                    <center-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Center"
+                                                        value="center-center"/>
+                                                    <center-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Top"
+                                                        value="center-top"/>
+                                                    <bottom-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Bottom"
+                                                        value="bottom-bottom"/>
+                                                    <bottom-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Center"
+                                                        value="bottom-center"/>
+                                                    <bottom-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Top"
+                                                        value="bottom-top"/>
+                                                </items>
+                                            </titleanchorplacement>
+                                            <titleeasing
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="You can choose one of these timing function to animate elements nicely"
+                                                fieldLabel="Title Easing"
+                                                name="./titleeasing">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selecteasing
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Easing"
+                                                        value=""/>
+                                                    <linear
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Linear"
+                                                        value="linear"/>
+                                                    <ease
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease"
+                                                        value="ease"/>
+                                                    <ease-in
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease In"
+                                                        value="ease-in"/>
+                                                    <ease-out
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease Out"
+                                                        value="ease-out"/>
+                                                </items>
+                                            </titleeasing>
+                                            <titledelay
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title delay(Milliseconds)"
+                                                name="./titledelay"/>
+                                            <titleoffset
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title offset(pixels)"
+                                                name="./titleoffset"/>
+                                            <titleduration
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title Duration(Milliseconds)"
+                                                name="./titleduration"/>
+                                            <descriptionanimation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required animation"
+                                                fieldLabel="Description Animation"
+                                                name="./descriptionanimation">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectfade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Fade"
+                                                        value=""/>
+                                                    <fade
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade"
+                                                        value="fade"/>
+                                                    <fadeup
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Up"
+                                                        value="fade-up"/>
+                                                    <fadedown
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Down"
+                                                        value="fade-down"/>
+                                                    <fadeleft
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Left"
+                                                        value="fade-left"/>
+                                                    <faderight
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Fade Right"
+                                                        value="fade-right"/>
+                                                </items>
+                                            </descriptionanimation>
+                                            <descriptionanchorplacement
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please configure the required anchor placement"
+                                                fieldLabel="Description Anchor Placement"
+                                                name="./descriptionanchorplacement">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selectanchor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Anchor Placement"
+                                                        value=""/>
+                                                    <top-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Bottom"
+                                                        value="top-bottom"/>
+                                                    <top-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Center"
+                                                        value="top-center"/>
+                                                    <top-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Top Top"
+                                                        value="top-top"/>
+                                                    <center-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Bottom"
+                                                        value="center-bottom"/>
+                                                    <center-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Center"
+                                                        value="center-center"/>
+                                                    <center-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Center Top"
+                                                        value="center-top"/>
+                                                    <bottom-bottom
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Bottom"
+                                                        value="bottom-bottom"/>
+                                                    <bottom-center
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Center"
+                                                        value="bottom-center"/>
+                                                    <bottom-top
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bottom Top"
+                                                        value="bottom-top"/>
+                                                </items>
+                                            </descriptionanchorplacement>
+                                            <descriptioneasing
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="You can choose one of these timing function to animate elements nicely"
+                                                fieldLabel="Description Easing"
+                                                name="./descriptioneasing">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <selecteasing
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Easing"
+                                                        value=""/>
+                                                    <linear
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Linear"
+                                                        value="linear"/>
+                                                    <ease
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease"
+                                                        value="ease"/>
+                                                    <ease-in
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease In"
+                                                        value="ease-in"/>
+                                                    <ease-out
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Ease Out"
+                                                        value="ease-out"/>
+                                                </items>
+                                            </descriptioneasing>
+                                            <descriptiondelay
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Description delay(Milliseconds)"
+                                                name="./descriptiondelay"/>
+                                            <descriptionoffset
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Description offset(pixels)"
+                                                name="./descriptionoffset"/>
+                                            <descriptionduration
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Description Duration(Milliseconds)"
+                                                name="./descriptionduration"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </aos>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

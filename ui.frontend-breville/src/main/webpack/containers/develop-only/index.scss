@@ -1,0 +1,42 @@
+
+.develop-only {
+  padding: 30px;
+};
+
+
+.develop-only__btn {
+  width: 200px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.develop-only__lnk {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* unvisited link */
+.develop-only__lnk:link {
+  color: blue;
+}
+
+/* visited link */
+.develop-only__lnk:visited {
+  color: blue;
+}
+
+/* mouse over link */
+.develop-only__lnk:hover {
+  color: #999;
+}
+
+/* selected link */
+.develop-only__lnk:active {
+  color: #333;
+}
+
+
+.develop-only__form-wrap {
+  width: 400px;
+}

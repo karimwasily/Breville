@@ -1,0 +1,33 @@
+.cmp-download--beanz-return {
+  .cmp-download__title {
+    margin-bottom: 2.5rem;
+
+    .cmp-download__title-link {
+      width: 80%;
+      display: block;
+      color: $cyan;
+      background-color: $oyster-bay;
+      min-width: 201px;
+      font-size: $font-size;
+      padding: 7px;
+      max-width: 480px;
+      border-radius: 4px;
+      font-family: $font-family-primary;
+      letter-spacing: $letter-spacing-base;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      margin: auto;
+      line-height: $line-height-base;
+      border: 0;
+      text-decoration: none;
+
+      @include breakpoint-up(md) {
+        min-width: 300px;
+        height: 35px;
+        font-size: $font-size-large !important;
+        padding: 1.1rem 0.5rem;
+        max-width: 480px;
+      }
+    }
+  }
+}

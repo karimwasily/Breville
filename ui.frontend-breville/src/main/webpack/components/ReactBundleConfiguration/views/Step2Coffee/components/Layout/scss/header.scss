@@ -1,0 +1,128 @@
+.coffee-conf-header {
+  max-width: $cs-max-width-bundle-config;
+  margin: $cs-spacing-35 auto $cs-spacing-15;
+  padding: 0 $cs-spacing-15;
+
+  @media (min-width: $cs-screen-xxl) {
+    padding: 0;
+  }
+
+  .coffee-conf-header__title {
+    @extend %cs-font-h2;
+    margin: 0;
+    padding-bottom: $cs-spacing-25;
+
+    border-bottom: 1px solid $cs-light-grey;
+
+    span {
+      @extend %cs-font-h3;
+      display: block;
+
+      font-weight: $cs-font-weight-normal;
+      @media (min-width:$screen-md) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .coffee-conf-header__content {
+    @extend %cs-layout-7-5;
+    align-items: center;
+    @media (min-width:$screen-md) {
+      margin-bottom: $cs-spacing-40;
+    }
+
+    .coffee-conf-header__logo {
+      @extend %cs-font-h6;
+      margin-top: $cs-spacing-25;
+      margin-bottom: $cs-spacing-25;
+
+      font-family: $cs-font-family-paragraph;
+
+      @media (min-width:$screen-md) {
+        margin-bottom: $cs-spacing-5;
+      }
+
+      &::before {
+        display: inline-flex;
+        width: $cs-spacing-70;
+        height: $cs-spacing-25;
+        margin-right: $cs-spacing-5;
+
+        background-color: $cs-color-primary;
+
+        content: '';
+        mask-image: url('/content/dam/breville-brands/coffee-solution/beanz-page/logo-beanz.png');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+      }
+
+    }
+
+    .coffee-conf-header__info {
+      min-width: 100%;
+      padding-right: $cs-spacing-25;
+
+      @media (min-width: $cs-screen-xxl) {
+        min-width: 45.625rem;
+        padding: 0;
+      }
+
+      .coffee-conf-header__logo {
+        display: none;
+        @media (min-width:$screen-md) {
+          display: block;
+        }
+      }
+
+      .coffee-conf-header__desc {
+        @extend %cs-font-h10;
+      }
+    }
+
+    .coffee-conf-header__price-info {
+      grid-row: 1;
+      margin-bottom: $cs-spacing-20;
+      @media (min-width:$screen-md) {
+        grid-row: unset;
+        margin-bottom: 0;
+
+        text-align: right;
+
+        .coffee-conf-header__logo {
+          display: none;
+        }
+      }
+
+      .coffee-conf-header__offer {
+        @extend %cs-font-p-6 ;
+        display: inline-block;
+        margin-bottom: $cs-spacing-10;
+        padding: $cs-spacing-5 $cs-spacing-10;
+
+        color: $white;
+
+        background-color: $cs-gunmetal;
+        border-radius: $cs-border-radius-3;
+      }
+
+      .coffee-conf-header__price-amount {
+        @extend %cs-font-p ;
+        margin-bottom: $cs-spacing-5;
+
+        .tooltip {
+          margin-left: 1ch;
+        }
+      }
+
+      .coffee-conf-header__total {
+        @extend %cs-font-p-4 ;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+

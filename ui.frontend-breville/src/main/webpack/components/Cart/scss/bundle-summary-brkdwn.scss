@@ -1,0 +1,29 @@
+.coffee-bundle {
+  margin-left: $cs-spacing-40;
+  @media (min-width: $cs-screen-md) {
+    margin-left: 0;
+  }
+
+  .coffee-bundle-breakdown {
+    min-width: 100%;
+    padding: 0;
+    @media (min-width: $cs-screen-md) {
+      .row {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &--mobile-hide {
+    display: none;
+    @media (min-width: $cs-screen-md) {
+      display: block;
+    }
+  }
+
+  hr.my-40 {
+    @media (max-width: $cs-screen-sm) {
+      margin: $cs-spacing-30 0;
+    }
+  }
+}

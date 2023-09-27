@@ -1,0 +1,418 @@
+<div class="beanzproducts" data-sly-use.beanzProducts="com.breville.aem.brands.core.models.BeanzProduct"
+   data-sly-use.webmetadata="com.breville.aem.brands.core.models.BeanzWebsiteMetadataProvider">
+   <script id="pdpData" type="application/json">
+      ${beanzProducts.jsonResponse @context="scriptComment"}
+   </script>
+   <script id="subscriptionData" type="application/json">
+      ${beanzProducts.subscriptionResponse @context="scriptComment"}
+   </script>
+   <script id="discoveryData" type="application/json">
+      ${beanzProducts.discoveryData @context="scriptComment"}
+   </script>
+   <script type="text/javascript">
+      digitalData = window.digitalData || {};
+      digitalData.products = JSON.parse("${beanzProducts.productDetailAnalyticsData @context='scriptString'}");
+      digitalData.page.pageInfo.hierarchy = "${beanzProducts.pageHierarchy @context='scriptString'}";
+      digitalData.page.pageInfo.pageName = "${beanzProducts.pageName @context='scriptString'}";
+      digitalData.page.pageInfo.siteSection = "${beanzProducts.siteSection @context='scriptString'}";
+      digitalData.page.pageInfo.siteSubSection1 = "${beanzProducts.siteSection1 @context='scriptString'}";
+      digitalData.page.pageInfo.siteSubSection2 = "${beanzProducts.siteSection2 @context='scriptString'}";
+      digitalData.page.pageInfo.url = "${beanzProducts.pageUrl @context='scriptString'}";
+      digitalData.page.pageInfo.pageType = "pdp";
+   </script>
+   <sly data-sly-list.resultsItem="${beanzProducts.results}">
+      <script type="application/ld+json">
+         {
+           "@context": "https://schema.org/",
+           "@type": "Product",
+           "name": "${resultsItem.masterData.current.name @context = 'html'}", 
+         "url": "${beanzProducts.pageUrl @context='html'}",
+         "image": "${beanzProducts.pdpImagePath @context='html'}",
+           "category": "${beanzProducts.flavourNotes @context='html'}",
+         "additionalProperty": "${beanzProducts.BestWith @context='html'}",
+         "description": "${resultsItem.masterData.current.description @context='html'}",
+         "sku": "${beanzProducts.beanzSkuId @context='html'}",
+         "brand": {
+             "@type": "Thing",
+             "name": "${beanzProducts.vendorName @context='html'}",
+         "image": "TBD"		
+           },
+         "offers": [{
+           "@type": "Offer",
+           "sku": "${beanzProducts.beanzSkuId @context='html'}",
+           "price": "TBD",
+         "priceCurrency": "USD",
+         "availability": "http://schema.org/InStock",
+         "url": "${beanzProducts.pageUrl @context='html'}"		
+           }],
+         
+          "identifier": {
+          "@type": "PropertyValue",
+         "propertyID": "Breville",
+         "value":"${beanzProducts.pageUrl @context='html'}"
+         }
+         
+         }
+      </script>
+   </sly>
+   <form class="productFullDetail__root hidden" data-configurable="" data-cmp-is="product" data-locale="en"
+      data-load-client-price="" data-sku="${beanzProducts.beanzSkuId}"
+      data-discoverysku="${beanzProducts.isDiscoveryBean}" data-webstatus="${beanzProducts.webStatus}"
+      data-currencysymbol="${beanzProducts.currencySymbol}" data-pagetype="${properties.coffeeSelectionPdp}" data-subscriptionpath="${properties.subscriptionPagePath}" data-cartpagepath="${properties.cartPagePath}" data-quantitytext="${properties.quantityText}" data-flavourtext="${properties.flavourText}" data-frequencytext="${properties.frequencyText}" data-weighttext="${properties.weightText}" data-grindtext="${properties.grindText}" data-methodtext="${properties.methodText}">
+      <sly data-sly-test="${!properties.coffeeSelectionPdp}">
+         <sly
+            data-sly-resource="${'customBreadCrumb' @ resourceType='/apps/breville-brands/components/custombreadcrumb'}">
+         </sly>
+      </sly>
+      <div class="row">
+         <section class="productFullDetail__imageCarousel">
+            <div class="carousel__root" data-gallery-role="galleryroot">
+               <div class="carousel__imageContainer">
+                  <img class="carousel__currentImage" alt='Carousel Current Image' src="${beanzProducts.pdpImagePath}"
+                     alt="${resultsItem.masterData.current.name}" data-gallery-role="currentimage">
+               </div>
+            </div>
+         </section>
+         <div class="light-brown-background">
+            <section class="productFullDetail__title">
+               <h1 class="productFullDetail__productName">
+                  <span role="name">
+                     <sly data-sly-list.resultsItem="${beanzProducts.results}">
+                        <h1 class="cmp-producttile__title">${resultsItem.masterData.current.name @context = 'text'}
+                        </h1>
+                     </sly>
+                  </span>
+               </h1>
+            </section>
+            <section data-sly-test=${!beanzProducts.isDiscoveryBean} data-sly-test=${beanzProducts.tastingNotes}
+               class="productFullDetail__category">
+               <h2 class="productFullDetail__productCategory">${beanzProducts.tastingNotes}</h2>
+            </section>
+            <section data-sly-test=${!beanzProducts.isDiscoveryBean}
+               class="productFullDetail__tagLine productFullDetail__section">
+               <span data-sly-test="${beanzProducts.decaf}" class="productFullDetail__tagLine--span">
+                  ${beanzProducts.decaf}
+               </span>
+               <span data-sly-test="${beanzProducts.brewMethod}" class="productFullDetail__tagLine--span">
+                  ${beanzProducts.brewMethod}
+               </span>
+               <span data-sly-test="${beanzProducts.roastLevel}" class="productFullDetail__tagLine--span">
+                  ${beanzProducts.roastLevel}
+               </span>
+               <span data-sly-test="${beanzProducts.webType}" class="productFullDetail__tagLine--span">
+                  ${beanzProducts.webType}
+               </span>
+            </section>
+            <section class="productFullDetail__description productFullDetail__section">
+               <div class="richText__root" role="description">
+                  <sly data-sly-list.resultsItem="${beanzProducts.results}">
+                     <span>${resultsItem.masterData.current.description @context = 'html'}</span>
+                  </sly>
+               </div>
+            </section>
+            <section class="productFullDetail__options" data-variants="">
+               <script id="flavourTemplate" type="text/x-handlebars-template">
+                  <div class="flavourTemplate" id="flavour">
+                         <div class="option__root">
+                            <h3 class="option__title"><span></span></h3>
+                            <div class="tileList__root" data-id="web_flavour">
+                               <div class="drop-down">
+                                  <div class="options button-option">
+                                    <ul class="button-option-list">
+                                      {{#each this}}
+                                      <li class="selectedOption" tabindex="0">
+                                        {{this}}
+                                      </li>
+                                      {{/each}}
+                                    </ul>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>                              
+                        </div>
+               </script>
+               <script id="discoveryTemplate" type="text/x-handlebars-template">
+                  <div class="discoveryTemplate" id="discovery">
+                         <div class="option__root">
+                            <h3 class="option__title"><span></span></h3>
+                            <div class="tileList__root" data-id="web_discovery">
+                               <div class="drop-down">
+                                  <div class="options button-option">
+                                    <ul class="button-option-list">
+                                      {{#each this}}
+                                      <li class="selectedOption" tabindex="0" data-frequency={{this.frequency}}>
+                                        {{this.key}}
+                                      </li>
+                                      {{/each}}
+                                    </ul>
+                                  </div>
+                                  <div class="input-info-secondary cmp-info--order-help-btn-discovery">?</div>
+                               </div>
+                            </div>
+                         </div>                              
+                        </div>
+               </script>
+               <script id="subscriptionTemplate" type="text/x-handlebars-template">
+                  <div class="subscriptionTemplate" id="subscription">
+                         <div class="option__root subscriptionTemplate">
+                            <h3 class="option__title option__title--frequency"><span></span></h3>
+                            <div class="tileList__root" data-id="web_subscription">
+                               <div class="drop-down">
+                                  <div class="options button-option">
+                                     <ul class="button-option-list">
+                                        {{#each this}}
+                                        <li class="frequency selectedOption" tabindex="0" data-subscriptionName={{this.subscriptionName}} data-frequency={{this.frequency}}>
+                                          {{this.displayNumber}}{{this.displayName}}
+                                        </li>
+                                        {{/each}}
+                                     </ul>
+                                  </div>
+                                  <div class="input-info-secondary cmp-info--order-help-btn">?</div>
+                               </div>
+                               <p class="input-info">Subscribe and get free shipping</p>
+                            </div>
+                         </div>                              
+                        </div>
+                        
+               </script>
+               <p class="bagSize hidden">${beanzProducts.bagSize}</p>
+               <script id="bagcountTemplate" type="text/x-handlebars-template">
+                  <div class="bagcountTemplate" id="bagcount">
+                  
+                  <div class="option__root bagcountTemplate">
+                     <h3 class="option__title"><span></span></h3>
+                     <div class="tileList__root" data-id="web_bagcount">
+                        <div class="drop-down">
+                           <div class="options button-option">
+                              <ul class="button-option-list"> 
+                                 {{#each this}}
+                                    <li class="selectedOption tile__root_selected" tabindex="0">
+                                       {{this}}
+                                    </li>
+                                    {{/each}}                               
+                              </ul>
+                           </div>
+                        </div>                                    
+                     </div>
+                  </div>
+                  
+                  </div>
+               </script>
+               <script id="quantityTemplate" type="text/x-handlebars-template">
+                  <div class="quantityTemplate" id="quantity">
+                  <div class="option__root quantityTemplate">
+                     <h3 class="option__title"><span></span></h3>
+                     <div class="tileList__root" data-id="web_sendme">
+                        <div class="drop-down">
+                           <div class="options button-option">
+                              <ul class="button-option-list"> 
+                                 {{#each this}}
+                                    <li tabindex="0"  class="selectedOption">
+                                       {{this}}
+                                    </li>
+                                    {{/each}}                               
+                              </ul>
+                           </div>
+                        </div>                                    
+                        <p class="input-info">Want 1 bag? Select 'Just one time' from 'Every...'</p>
+                     </div>
+                  </div>
+                  </div>
+               </script>
+               <script id="grindTemplate" type="text/x-handlebars-template">
+                  <div class="grindTemplate" id="grind">
+                                                  
+                      <div class="option__root grindTemplate" >
+                         <h3 class="option__title"><span></span></h3>
+                         <div class="tileList__root" data-id="web_grind">
+                            <div class="drop-down collapse-dropdown">
+                               <div class="selected">
+                                  <div class="selectedOption" tabindex="0"><span id="grindvalue" class="defaultvalue">
+                                     <span></span>
+                                     </span>
+                                  </div>
+                               </div>
+                               <div class="options">
+                                  <ul style="display: none;">
+                                     {{#each this}}
+                                     <li tabindex="0"  class="selectedOption">
+                                        {{this}}
+                                     </li>
+                                     {{/each}}
+                                  </ul>
+                               </div>
+                            </div>                                          
+                         </div>
+                      </div>    
+                    </div>                                
+               </script>
+            </section>
+            <section class="productFullDetail__price productFullDetail__section">
+               <div class="price range" data-product-sku=""><span class="productprice"></span></div>
+            </section>
+            <div class="priceinfo">
+               <p>Per Bag Per Delivery</p>
+            </div>
+            <sly data-sly-test="${!properties.coffeeSelectionPdp}">
+               <section class="productFullDetail__cartActions productFullDetail__section">
+                  <button class="button__root_highPriority button__root clickable__root button__filled" type="button">
+                     <img class="loadingSpinner hidden"
+                        src="/content/dam/marketplace/global/icons/processing-circle-white.svg" alt="loadingSpinner" />
+                     <span class="button__content"><span id="cu-addtocartbtn">Add to Cart</span></span></button>
+               </section>
+               <section class="productFullDetail__section productFullDetail__emptyInventory">
+                  <p class="emptyInventory outOfStock hidden">Out of stock</p>
+                  <p class="emptyInventory unavailable hidden">Unavailable</p>
+               </section>
+            </sly>
+            <sly data-sly-test="${properties.coffeeSelectionPdp}">
+               <section class="productFullDetail__selectCoffee productFullDetail__section">
+                  <button class="button__root_highPriority button__root clickable__root button__filled" type="button">
+                     <span class="button__content"><span id="cu-addtocartbtn">Select</span></span></button>
+               </section>
+               <section class="productFullDetail__section productFullDetail__emptyInventory">
+                  <p class="emptyInventory outOfStock hidden">Out of stock</p>
+                  <p class="emptyInventory unavailable hidden">Unavailable</p>
+               </section>
+            </sly>
+         </div>
+      </div>
+      <section class="productFullDetail__details productFullDetail__section" style="display: none;">
+      </section>
+      <!-- Discovery Beanz condition added for Details and roaster notes section -->
+      <sly data-sly-test=${!beanzProducts.isDiscoveryBean}>
+         <section
+            class="productFullDetail__roasterNotes productFullDetail__section productFullDetail__roasterNotes--row">
+            <div class="productFullDetail__roasterNotes--col">
+               <div class="productFullDetail__roasterNotes--contrnt-box">
+                  <div class="productfullDetail__heading">
+                     <div class="roasterLogo">
+                        <img src="/content/dam/marketplace/global/icons/sparrows-coffee.png" alt="Klatch"
+                           class="rounded-circle">
+                     </div>
+                     <h2 class="roasterNotesTitle">Roaster Notes</h2>
+                  </div>
+                  <div class="productFullDetail__notes">
+                     <div class="productFullDetail__roaster_notes">
+                        <p class="productFullDetail__content">${beanzProducts.roasterNotes}</p>
+                        <a href="#" class="productFullDetail__content--a">More from this Roaster</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="productFullDetail__roasterNotes--col">
+               <div class='productFullDetail__roasterNotes--feature-container'>
+                  <div class="productFullDetail__roasterNotes--row">
+                     <div data-sly-test=${beanzProducts.varietal} class="productFullDetail__roasterNotes--col">
+                        <div class="productFullDetail__roaster--media">
+                           <img src="/content/dam/marketplace/global/icons/variatal-icon.svg"
+                              class="productFullDetail__roaster--media-img" />
+                           <div class="productFullDetail__roaster--media-body">
+                              <p class="productFullDetail__roaster--label">Varietal</p>
+                              <p class="productFullDetail__roaster--detail">${beanzProducts.varietal}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-sly-test=${beanzProducts.processOption} class="productFullDetail__roasterNotes--col">
+                        <div class="productFullDetail__roaster--media">
+                           <img src="/content/dam/marketplace/global/icons/process-icon.svg"
+                              class="productFullDetail__roaster--media-img" />
+                           <div class="productFullDetail__roaster--media-body">
+                              <p class="productFullDetail__roaster--label">Process</p>
+                              <p class="productFullDetail__roaster--detail">${beanzProducts.processOption}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-sly-test=${beanzProducts.country} class="productFullDetail__roasterNotes--col">
+                        <div class="productFullDetail__roaster--media">
+                           <img src="/content/dam/marketplace/global/icons/sub-region-icon.svg"
+                              class="productFullDetail__roaster--media-img" />
+                           <div class="productFullDetail__roaster--media-body">
+                              <p class="productFullDetail__roaster--label">Country</p>
+                              <p class="productFullDetail__roaster--detail">${beanzProducts.country}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-sly-test=${beanzProducts.region} class="productFullDetail__roasterNotes--col">
+                        <div class="productFullDetail__roaster--media">
+                           <img src="/content/dam/marketplace/global/icons/sub-region-icon.svg"
+                              class="productFullDetail__roaster--media-img" />
+                           <div class="productFullDetail__roaster--media-body">
+                              <p class="productFullDetail__roaster--label">Region</p>
+                              <p class="productFullDetail__roaster--detail">${beanzProducts.region}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-sly-test=${beanzProducts.elevationFrom} class="productFullDetail__roasterNotes--col">
+                        <div class="productFullDetail__roaster--media">
+                           <img src="/content/dam/marketplace/global/icons/elevation-icon.svg"
+                              class="productFullDetail__roaster--media-img" />
+                           <div class="productFullDetail__roaster--media-body">
+                              <p class="productFullDetail__roaster--label">Elevation</p>
+                              <p class="productFullDetail__roaster--detail">${beanzProducts.elevation}</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </sly>
+   </form>
+   <!-- add to cart popup -->
+   <div id="id-add-to-cart-popup" class="add-to-cart-popup">
+      <div class="add-to-cart-popup--main-content">
+         <div class="add-to-cart-popup--container">
+            <div class="add-to-cart-popup--close">
+               <button id="add-to-cart-popup-close" class="add-to-cart-popup--close-button"></button>
+            </div>
+            <div class="cmp-text--add-to-cart-heading">
+               Added to Cart
+            </div>
+            <div class="add-to-cart-popup--content">
+               <img class="add-to-cart-popup-content--image" src="" alt="">
+               <div class="add-to-cart-popup-content--details">
+                  <div class="modalDetailTopList">
+                     <span> ${beanzProducts.vendorName} </span>
+                     <span> ${beanzProducts.webType} </span>
+                  </div>
+                  <div class="add-to-cart-popup-content--title"></div>
+                  <div class="add-to-cart-popup-content--sub-title">
+                     <span id="popupbagsize" class="subscriptionQuantityID"
+                        data-sly-test="${!beanzProducts.isDiscoveryBean}">12 oz</span>
+                     <span id="popupbags" class="subscriptionQuantityID">2 Bags</span>
+                     <span id="popupsubscriptionfrequency" class="subscriptionFrequencyID">2 Weeks</span>
+                     <span id="popupgrind" class="subscriptionGrindID">Whole bean</span>
+                  </div>
+               </div>
+            </div>
+            <div class="add-to-cart-popup--footer">
+               <a href="${properties.cartPagePath}" id="c-GoToCart"
+                  class="btn btn-primary fluid">Go to cart</a>
+               <button id="KS-btn-primary-faded" type="button" class="btn btn-primary-faded fluid"
+                  data-dismiss="modal">Keep Shopping</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- add to cart popo up end  -->
+   <sly data-sly-include="coffeeSelectionPDPPopup.html" />
+</div>
+<div class="pageNotFound hidden">
+   <div class="title">
+      <div class="cmp-title">
+         <h2 class="cmp-title__text">That page doesn't exist</h2>
+      </div>
+   </div>
+   <div class="text cmp-text--popup-title">
+      <div class="cmp-text">
+         <p> Sorry, the page you were looking for could not be found.</p>
+      </div>
+   </div>
+   <br/>
+   <div class="button cmp-button--background-blue">
+      <a class="cmp-button" href="${properties.plpPagePath}.html">
+         <span class="cmp-button__text">Shop coffee</span>
+      </a>
+   </div>
+</div>

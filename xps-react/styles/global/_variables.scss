@@ -1,0 +1,40 @@
+// BREAKPOINTS
+$breakpointMap: (
+  xs: (
+    name: xs,
+    min: 0,
+    max: 575.98px,
+    columnGutter: 1rem,
+    pageMargin: 1.5rem,
+    contentMin: 360px,
+  ),
+  sm: (
+    name: sm,
+    min: 576,
+    max: 767.98px,
+    columnGutter: 1rem,
+    pageMargin: 1.5rem,
+    contentMin: 360px,
+  ),
+  md: (
+    name: md,
+    min: 768px,
+    max: 991.98.98px,
+    // max: null,
+    columnGutter: 2rem,
+    pageMargin: 2.5rem,
+  ),
+  lg: (
+    name: lg,
+    min: 1200px,
+    max: null,
+    columnGutter: 4rem,
+    pageMargin: 4.5rem,
+    contentMax: 1380px,
+  ),
+);
+
+$breakpoints: map-keys($breakpointMap);
+$grid-columns: 12 !default;
+$grid-gutter-width: 2rem !default;
+$enable-grid-classes: true !default;

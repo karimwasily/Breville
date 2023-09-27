@@ -1,0 +1,26 @@
+// default splide carousel style
+.splide {
+  @extend %splide-arrows;
+}
+
+%splide-arrows {
+  .splide__arrow--prev,
+  .splide__arrow--next {
+    padding: $cs-spacing-15;
+    background-color: $cs-color-gray-60;
+    border: 2px solid $cs-color-primary;
+    border-radius: 50%;
+
+    svg {
+      display: none;
+    }
+  }
+
+  .splide__arrow--prev {
+    @include reactcarousel-arrow($direction: 'left', $arrowImgSize: '10px');
+  }
+
+  .splide__arrow--next {
+    @include reactcarousel-arrow($direction: 'right', $arrowImgSize: '10px');
+  }
+}

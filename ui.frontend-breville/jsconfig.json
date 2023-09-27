@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "containers/*": [
+        "./src/main/webpack/containers/*"
+      ],
+      "components/*": [
+        "./src/main/webpack/components/*"
+      ],
+      "shared-ui/*": [
+        "./src/main/webpack/components/shared-ui/*"
+      ],
+      "library/*": [
+        "./src/main/webpack/library/*"
+      ],
+      "router": [
+        "./src/main/webpack/library/router"
+      ],
+      "redux-utils": [
+        "./src/main/webpack/library/utils/redux-utility"
+      ],
+      "resources": [
+        "./src/main/webpack/resources"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "public",
+    "build",
+    "gradle",
+    "build",
+    "gradle"
+  ],
+  "extends": "./dev.jsconfig.json"
+}

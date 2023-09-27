@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <settings
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Carousel Settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <id
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Id"
+                                                name="./id"/>
+                                            <showDots
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Show dots in carousel"
+                                                name="./dots"
+                                                text="Show Dots"
+                                                checked="{Boolean}true"
+                                                value="true"/>
+                                            <showArrows
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Show arrows for previous and next slides"
+                                                name="./arrows"
+                                                text="Show Arrows"
+                                                checked="{Boolean}true"
+                                                value="true"/>
+                                            <infinite
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Infinite"
+                                                name="./infinite"
+                                                text="Infinite"
+                                                checked="{Boolean}true"
+                                                value="true"/>
+                                            <playSpeed
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                fieldDescription="Time in milliseconds until the next slide is shown."
+                                                fieldLabel="Play Speed (ms)"
+                                                min="{Long}0"
+                                                defaultValue="250"
+                                                name="./speed"/>
+                                            <slidesToShowMobile
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                fieldDescription="Slides to show at a time on Mobile view"
+                                                fieldLabel="Slides to show on Mobile"
+                                                min="{Long}1"
+                                                defaultValue="1"
+                                                name="./slidesToShowMobile"/>
+                                            <slidesToShowTablet
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                fieldDescription="Slides to show at a time on Tablet view"
+                                                fieldLabel="Slides to show on Tablet"
+                                                min="{Long}1"
+                                                defaultValue="2"
+                                                name="./slidesToShowTablet"/>
+                                            <slidesToShowDesktop
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                fieldDescription="Slides to show at a time on Desktop view"
+                                                fieldLabel="Slides to show on Desktop"
+                                                min="{Long}1"
+                                                defaultValue="3"
+                                                name="./slidesToShowDesktop"/>
+                                            <slidesToShow
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                fieldDescription="Slides to show on any other view"
+                                                fieldLabel="Slides to show (default)"
+                                                min="{Long}1"
+                                                defaultValue="4"
+                                                name="./slidesToShow"/>
+                                            <centerMode
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Allow previous and next slides to be slightly revealed"
+                                                name="./centerMode"
+                                                text="Allow Center Mode"
+                                                checked="{Boolean}true"
+                                                value="true"/>
+                                            <centerPadding
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="The amount to reveal previous and next slides"
+                                                fieldLabel="Amount to reveal prev and next"
+                                                value="50px"
+                                                name="./centerPadding"/>
+                                            <useCenterPaddingRatio
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Allow dynamic center padding percentage applied across all screen sizes"
+                                                name="./useCenterPaddingRatio"
+                                                text="Allow Center Padding Ratio"
+                                                checked="{Boolean}false"
+                                                value="true"/>
+                                            <centerPaddingRatio
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                fieldDescription="A percentage ratio based on the viewport size to reveal previous and next slides"
+                                                fieldLabel="Ratio to reveal prev and next slides (0 - 100)"
+                                                min="{Long}0"
+                                                max="{Long}100"
+                                                defaultValue="20"
+                                                name="./centerPaddingRatio"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </settings>
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:hideResource="{Boolean}true"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true"/>
+                    <accessibility
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Accessibility"
+                        sling:hideResource="{Boolean}true"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

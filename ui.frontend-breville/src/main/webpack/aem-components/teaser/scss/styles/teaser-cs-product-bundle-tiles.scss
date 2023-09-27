@@ -1,0 +1,124 @@
+@use 'sass:math';
+
+.cmp-teaser--cs-product-bundle-tiles {
+  // * tiles are being controlled by a an overflow scroll layout, thus explicitly setting the width across breakpoints
+  --tile-width-mobile: 275px;
+  --tile-width-desktop: 435px;
+  width: var(--tile-width-mobile);
+  height: 100%;
+
+  @media (min-width: $cs-screen-md) {
+    width: var(--tile-width-desktop);
+  }
+
+  .cmp-teaser {
+    border: 1px $cs-gainsboro solid;
+    margin: $cs-spacing-15 $cs-spacing-15 $cs-spacing-40 $cs-spacing-15;
+    margin: 0;
+    height: 100%;
+  
+    &__image {
+      position: relative;
+      overflow: hidden;
+      padding-top: math.div(326, 435) * 100%; // aspect ratio based on images in design
+
+      .cmp-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        &__image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    &__content {
+      padding: $cs-spacing-30 $cs-spacing-25;
+
+      @media (min-width: $cs-screen-md) {
+        padding-left: $cs-spacing-50;
+        padding-right: $cs-spacing-50;
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-h6;
+      }
+
+      .cmp-teaser__description {
+        border-bottom: 1px solid $cs-gainsboro; // horizontal line after description
+        margin-bottom: $cs-spacing-25;
+
+        ul {
+          @extend %cs-font-bundle-tiles;
+          margin-left: $cs-spacing-20;
+          margin-bottom: $cs-spacing-15;
+
+          li {
+            padding-bottom: $cs-spacing-10;
+
+            button {
+              @include button-remove-style;
+            }
+
+            span {
+              position: relative;
+              visibility: visible;
+            }
+
+            // replace tooltip span with tooltip svg icon
+            span::before {
+              @extend %question-icon;
+              background: $cs-black;
+              position: relative;
+              visibility: visible;
+              display: inline-block;
+              content: '';
+              width: 1.375rem;
+              height: 1.375rem;
+              vertical-align: text-bottom;
+            }
+
+            a {
+              text-decoration: underline;
+            }
+          }
+
+          // check mark SVG
+          li::before {
+            @extend %check-list-icon;
+            display: inline-block;
+            content: '';
+            background-color: $cs-color-secondary;
+            background-repeat: no-repeat;
+            margin-right: $cs-spacing-10;
+            margin-left: -$cs-spacing-20; // offset to align <li> text after check mark
+            height: 0.5em; // vertical align check marks
+          }
+        }
+      }
+      
+      .cmp-teaser__action-container {
+        .cmp-teaser__action-link {
+          @extend %cs-button-purple-fill-medium;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+          font-weight: 700;
+
+          // control button width
+          padding: $cs-spacing-15 $cs-spacing-25;
+          @media (min-width: $cs-screen-md) {
+            // * revert to original btn style
+            padding: $cs-spacing-15 $cs-spacing-50;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-09T13:48:28.885+10:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/coffeehub/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Recipes"
+        sling:resourceType="breville-brands/components/coffeehub/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <container
+                        cq:styleIds="[1614647409546,1614664735377]"
+                        jcr:created="{Date}2021-03-02T13:15:16.753+10:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-02T13:15:16.753+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/container">
+                        <teaser
+                            cq:styleIds="[1614647608174,1614647663505]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser>
+                        <teaser_copy
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy>
+                        <teaser_copy_copy
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy>
+                        <teaser_copy_copy_1090378591
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_1090378591>
+                        <teaser_copy_copy_1580194569
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_1580194569>
+                        <teaser_copy_copy_786329088
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_786329088>
+                        <teaser_copy_copy_949115944
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_949115944>
+                        <teaser_copy_copy_749181332
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_749181332>
+                        <teaser_copy_copy_1641436819
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_1641436819>
+                        <teaser_copy_copy_2055530123
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_2055530123>
+                        <teaser_copy_copy_2143000640
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_2143000640>
+                        <teaser_copy_copy_2011941400
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_2011941400>
+                        <teaser_copy_copy_1798716013
+                            cq:styleIds="[1614647608174]"
+                            jcr:created="{Date}2021-03-02T13:15:33.762+10:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-02T13:25:35.587+10:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="true"
+                            fileReference="/content/dam/coffeehub/en/us/recipes/Maple Dalgona Coffee (Whipped Coffee).jpg"
+                            linkURL="/"
+                            textIsRich="true"
+                            titleFromPage="true">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="#"
+                                    text="CTA Text"/>
+                            </actions>
+                        </teaser_copy_copy_1798716013>
+                    </container>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+    <macchiato/>
+</jcr:root>

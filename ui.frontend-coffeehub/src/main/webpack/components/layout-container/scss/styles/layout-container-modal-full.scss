@@ -1,0 +1,102 @@
+.cmp-layout-container--modal-full {
+  background: $white;
+  box-shadow: (0 0 34px rgba(0, 0, 0, 0.25));
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  overflow-y: auto;
+  height: 100vh;
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  // Text Components
+  .cmp-text {
+    color: $black;
+    margin: $spacing-md;
+
+    @media (min-width: $screen-md) {
+      margin: $spacing-xxl;
+    }
+
+    h3 {
+      padding-bottom: 10px;
+    }
+
+    p {
+      color: #1e111d;
+    }
+  }
+
+  // Image Components
+  .cmp-image {
+    &__image {
+      margin: 0;
+      padding: 0;
+      display: inherit;
+    }
+  }
+
+  .modal-full-button__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    .modal-button__close--icon {
+      --foreground-color: #{$aubergine};
+      --background-color: #{$white};
+      --size: 1.5rem;
+
+      position: relative;
+      width: calc(var(--size) * 2);
+      height: calc(var(--size) * 2);
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      border-radius: 32px;
+      border: 0;
+      transition: background-color 0.25s ease-out;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 48%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        width: var(--size);
+        height: 2px;
+        background-color: var(--foreground-color);
+        transform-origin: center;
+        transition: transform 0.25s ease-out;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &:hover {
+        background: var(--foreground-color);
+
+        &::before {
+          transform: rotate(45deg);
+          background-color: var(--background-color);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          background-color: var(--background-color);
+        }
+      }
+
+      &:focus {
+        outline: 1px auto;
+      }
+    }
+  }
+}

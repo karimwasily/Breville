@@ -1,0 +1,309 @@
+//size of the arrow icon
+$arrow-image-size: 10px;
+//direction variables
+$left: 'left';
+$right: 'right';
+
+@keyframes slide-fade-effect {
+  0% {opacity: 0;}
+  25% {opacity: 0.5;}
+  50% {opacity: 0.75;}
+  75% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+.cmp-brandcontent {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding: $cs-spacing-30 $cs-spacing-20 $cs-spacing-80;
+
+  color: $cs-white;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: $cs-border-radius-base;
+
+  transition: background 1s linear;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $background-overlay;
+
+    content: '';
+  }
+  
+  @media (min-width: $cs-screen-md) {
+    flex-direction: row;
+    padding: $cs-spacing-50;
+
+    border-radius: 0;
+  }
+
+  .cmp-brandcontent__content-wrapper {
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $cs-screen-sm) {
+      flex-direction: row;
+    }
+
+    .cmp-brandcontent__info-content {
+      display: flex;
+      flex-direction: column;
+      width: 18.75rem;
+
+      text-align: left;
+    
+      @media (min-width: $cs-screen-md) {
+        margin-right: $cs-spacing-30;
+      }
+    
+      @media (min-width: $cs-screen-lg) {
+        margin-right: $cs-spacing-150;
+      }
+
+      .cmp-brandcontent__match-count {
+        @extend %cs-font-h13;
+        margin-bottom: $cs-spacing-20;
+      }
+
+      .cmp-brandcontent__logo {
+        display: none;
+        @media (min-width: $cs-screen-md) {
+          display: block;
+          padding-bottom: $cs-spacing-25;
+    
+          .cmp-image {
+            img {
+              width: 171px;
+              height: 96px;
+            }
+          }
+        }
+      }
+    
+      .cmp-brandcontent__description {
+        @extend %cs-font-p-4;
+        padding-bottom: $cs-spacing-25;
+      }
+    
+      .cmp-brandcontent__roaster-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: $cs-spacing-20;
+    
+        .cmp-brandcontent__roaster-logo {
+          margin-right: $cs-spacing-25;
+    
+          .cmp-image {
+            img {
+              width: $cs-spacing-70;
+              height: $cs-spacing-70;
+              object-fit: contain;
+            }
+          }
+        }
+    
+        .cmp-brandcontent__roaster-info {
+          .cmp-brandcontent__product-name {
+            @extend %cs-font-h8;
+            margin: 0 0 $cs-spacing-5;
+          }
+    
+          .cmp-brandcontent__roaster-name {
+            @extend %cs-font-p-4;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .cmp-brandcontent__product-info-content {
+      width: 18.75rem;
+
+      .slick-slider {
+        @extend %cmp-reactcarousel--slick-theme-default;
+        width: 100%;
+        padding: 0;
+
+        // carousel arrows
+        .slick-prev,
+        .slick-next {
+          @media (min-width: $cs-screen-md) {
+            width: auto !important;
+            height: auto !important;
+            padding: $cs-spacing-15 !important;
+
+            background-color: $cs-color-gray-60 !important;
+            border: 2px solid $cs-color-primary !important;
+            border-radius: 50%;
+          }
+        }
+
+        .slick-prev {
+          @include reactcarousel-arrow($left, $arrow-image-size);
+          left: -$cs-spacing-20;
+
+          &::before {
+            content: none !important;
+          }
+    
+          @media (min-width: $cs-screen-md) {
+            &::before {
+              content: '' !important;
+            }
+          }
+        }
+
+        .slick-list {
+          .slick-slide {
+            margin: 0;
+            padding: 0;
+
+            &.slick-active.slick-current {
+              animation: slide-fade-effect 1s linear 0s 1 both;
+            }
+          }
+        }
+
+        .slick-next {
+          @include reactcarousel-arrow($right, $arrow-image-size);
+          right: -$cs-spacing-20;
+
+          &.next-arrow {
+            position: absolute;
+            top: unset;
+            right: 0;
+            bottom: -$cs-spacing-60;
+            left: 0;
+
+            display: block;
+            width: auto;
+            margin-right: auto;
+            margin-left: auto;
+
+            text-align: center;
+      
+            &::before {
+              content: none !important;
+            }
+
+            button {
+              @extend %cs-font-p-4;
+              margin: 0 auto;
+              padding: 0;
+
+              color: $cs-white;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    
+      .cmp-brandcontent__product-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 $cs-spacing-30;
+
+        color: $cs-monsoon;
+
+        @media (min-width: $cs-screen-md) {
+          flex-direction: row;
+          gap: $cs-spacing-10;
+        }
+
+        .coffee-product-tile {
+          max-width: 15rem;
+
+          border-radius: $cs-font-size-base;
+
+          .coffee-product-tile__image {
+            margin-bottom: $cs-spacing-30;
+
+            .image__image {
+              width: $cs-spacing-150;
+              height: $cs-spacing-150;
+            }
+          }
+
+          .coffee-product-tile__info {
+            .coffee-product-tile__brand {
+              @extend %cs-font-p-4;
+            }
+
+            .coffee-product-tile__title {
+              font-weight: $cs-font-weight-medium;
+              font-size: $cs-font-size-medium;
+              font-family: $cs-font-family;
+              line-height: $cs-line-height-medium;
+            }
+
+            .coffee-product-tile__price {
+              @extend %cs-font-p-4-bold;
+            }
+
+            .coffee-product-tile__select {
+              margin-top: $cs-spacing-15;
+
+              .coffee-product-tile__select-button {
+                @extend %cs-font-p-4-bold;
+                position: relative;
+                top: 0;
+                right: 0;
+
+                width: auto;
+                height: auto;
+                padding: $cs-spacing-10 $cs-spacing-45;
+                overflow: visible;
+
+                text-indent: 0;
+
+                background-color: $cs-white;
+                border-radius: 0.5rem;
+
+                &--selected {
+                  width: 1.375rem;
+                  height: 1.375rem;
+                  margin: $cs-spacing-10 0;
+                  padding: 0;
+                  overflow: hidden;
+
+                  text-indent: 100%;
+
+                  background-color: $cs-color-primary;
+                  border-radius: 50%;
+
+                  &-label {
+                    @extend %cs-font-p-4-bold;
+                    position: relative;
+                    top: 0;
+                    right: 0;
+
+                    margin-left: $cs-spacing-10;
+                  }
+                }
+
+                &:focus {
+                  border: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

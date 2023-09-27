@@ -1,0 +1,60 @@
+.my-orders__filter-bar--desktop {
+  display: none;
+
+  @media (min-width: $cs-screen-xl) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $cs-spacing-25;
+  }
+
+  .my-orders__filter-bar-left {
+    display: flex;
+    flex: 1;
+
+    > *:not(:last-child) {
+      margin-right: $cs-spacing-30;
+    }
+
+    .my-orders__filters {
+      display: inline-block;
+    }
+  }
+
+  .my-orders__filter-bar-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    > *:not(:last-child) {
+      margin-right: $cs-spacing-30;
+    }
+
+    .my-orders__filter-title--right {
+      margin-right: -$cs-spacing-40;
+    }
+
+    .select-box {
+      margin: 0;
+      
+      .select-box__current {
+        margin-top: -$cs-spacing-5;
+
+
+        .select-box__value {
+          padding-right: $cs-spacing-25;
+
+          .select-box__input-text {
+            background-color: inherit;
+          }
+        }
+        
+        .select-box__icon {
+          @extend %arrow-down-selectbox;
+          margin-right: -$cs-spacing-10;      
+        }            
+      }      
+    }
+  }
+
+  
+}

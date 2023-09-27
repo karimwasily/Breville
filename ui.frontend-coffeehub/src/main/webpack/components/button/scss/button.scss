@@ -1,0 +1,11 @@
+// import order is important due to usage of scss placeholders
+@import 'styles/button-default';
+@import 'styles/button-light';
+@import 'styles/button-dark';
+@import 'styles/button-pulse';
+@import 'styles/button-back-to-top';
+
+.cmp-button {}
+.cmp-button__text {}
+.cmp-button__icon {}
+//.cmp-button__icon--myIcon {}

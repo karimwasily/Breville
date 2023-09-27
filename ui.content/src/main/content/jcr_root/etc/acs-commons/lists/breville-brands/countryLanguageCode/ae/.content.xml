@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2020-08-11T08:10:33.660Z"
+        cq:lastModifiedBy="pradeep.mc@breville.com"
+        cq:lastReplicated="{Date}2020-08-12T07:55:45.611Z"
+        cq:lastReplicatedBy="pradeep.mc@breville.com"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="UAE"
+        jcr:uuid="b328caec-aad0-4e56-8c94-96b5669651db"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <item
+                jcr:created="{Date}2020-08-11T08:09:57.027Z"
+                jcr:createdBy="pradeep.mc@breville.com"
+                jcr:lastModified="{Date}2020-08-11T08:10:33.659Z"
+                jcr:lastModifiedBy="pradeep.mc@breville.com"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="English"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="Default:en;https://www.sageappliances.ae/ae/en/home/index.html"/>
+        </list>
+    </jcr:content>
+</jcr:root>

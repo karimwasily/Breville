@@ -1,0 +1,166 @@
+.modal-open {
+  overflow: hidden;
+}
+
+.page {
+  .cmp-container--order-help,
+ 
+  .cmp-container--order-help-discovery {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $transition-speed;
+    background-color: $background-overlay;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cmp-container {
+      margin-top: 0;
+      background-color: $white;
+      background-clip: padding-box;
+      border: 1px solid $background-overlay;
+      border-radius: 0.3rem;
+      padding-bottom: $spacing-md;
+      width: auto;
+      max-width: 100%;
+      opacity: 0;
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      align-items: flex-start;
+      @include breakpoint-up (sm) {
+        width: 100%;
+        max-width: 540px;
+      }
+
+      .cmp-text--order-help-heading {
+        p {
+          @extend %font-p;
+          font-size: $font-size-mlarge;
+          font-family: $font-family-secondary;
+          text-align: center;
+          color: $jaguar;
+          width: auto;
+          margin: $spacing-sm 0;
+          border-bottom: 1px solid $gray80;
+          padding-bottom: $spacing-md;
+          padding-top: $spacing-xxs;
+          font-weight: $font-weight-bold;
+
+          @include breakpoint-up(sm) {
+            margin: $spacing-sm -80px;
+          }
+        }
+      }
+
+      .cmp-text--order-help-title {
+        width: 30% !important;
+        flex: 0 0 30%;
+
+        p {
+          @extend %font-p;
+          font-size: $font-size-base;
+          font-weight: $font-weight-bold;
+          margin: 0;
+        }
+      }
+
+      .cmp-text--order-help-description {
+        @extend %font-small-p;
+        width: 70% !important;
+        flex: 0 0 70%;
+        display: table-cell;
+        list-style: none;
+        margin: 0;
+        padding: $spacing-xxs $spacing-xs;
+        width: 80%;
+        color: $black;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      hr {
+        &.cmp-separator__horizontal-rule {
+          height: 1px;
+          border: 0;
+          background-color: $gray80;
+        }
+      }
+
+      .cmp-btn--order-help-close {
+        position: absolute;
+        width: 40px !important;
+        height: 40px;
+        display: block;
+        top: 10px;
+        right: -4px;
+        cursor: pointer;
+        opacity: 0.7;
+        @include breakpoint-up(sm) {
+          right: -70px;
+        }
+
+        button {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          border: 0;
+          background: $gray-davy;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 2px;
+            margin-top: -1px;
+            top: 50%;
+            left: 6px;
+            right: 6px;
+            background: $white;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      .aem-Grid {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: auto;
+        margin: 0 $spacing-sm;
+        @include breakpoint-up(sm) {
+          margin: 0 80px;
+        }
+      }
+    }
+
+    &.shown {
+      visibility: visible;
+      opacity: 1;
+
+      .cmp-container {
+        opacity: 1;
+      }
+    }
+  }
+}

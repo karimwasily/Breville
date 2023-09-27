@@ -1,0 +1,31 @@
+<ol class="custom-breadcrumb__root"
+   data-sly-use.breadcrumbmodel="com.breville.aem.brands.core.models.CustombreadcrumbModel"
+   data-sly-use.beanzProducts="com.breville.aem.brands.core.models.BeanzProduct"
+   data-sly-list.breadcrumb="${breadcrumbmodel.breadcrumbList}">
+   <sly data-sly-test="${breadcrumb.name !='product-page'}">
+      <li class="cmp-container__custom-breadcrumb-li ${breadcrumbList.last? 'active' : ''}">
+         <sly data-sly-test="${!breadcrumbList.last}">
+            <a class="cmp-text__custom-breadcrumb-item--a" href="${breadcrumb.path @ extension='html'}">
+               ${breadcrumb.navigationTitle || breadcrumb.title || breadcrumb.name}
+            </a>
+         </sly>
+         <sly data-sly-test="${breadcrumbList.last && breadcrumb.name !='product-page'}">
+            ${breadcrumb.navigationTitle ||
+            breadcrumb.title || breadcrumb.name}
+         </sly>
+      </li>
+   </sly>
+   <sly data-sly-test="${breadcrumbList.last && breadcrumb.name =='product-page'}">
+      <sly data-sly-list.resultsItem="${beanzProducts.results}">
+         <li class="cmp-container__custom-breadcrumb-li">
+            <a class="cmp-text__custom-breadcrumb-item--a" x-cq-linkchecker="skip"
+               href="${breadcrumbmodel.roasterUrl @ extension='html'}">
+               ${beanzProducts.vendorName}
+            </a>
+         </li>
+         <li class="cmp-container__custom-breadcrumb-li active">
+            ${resultsItem.masterData.current.name @context =
+            'unsafe'}</li>
+      </sly>
+   </sly>
+</ol>

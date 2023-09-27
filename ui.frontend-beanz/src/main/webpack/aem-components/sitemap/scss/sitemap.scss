@@ -1,0 +1,80 @@
+.cmp__sitemap--root {
+  margin: $spacing-xxl auto;
+  max-width: 100%;
+  padding: $spacing-sm;
+
+  @include breakpoint-up(sm) {
+    max-width: 560px;
+  }
+
+  @include breakpoint-up(md) {
+    max-width: 720px;
+  }
+
+  @include breakpoint-up(lg) {
+    max-width: 960px;
+  }
+
+  @include breakpoint-up(xl) {
+    max-width: 1140px;
+  }
+
+  .cmp-text__sitemap--header {
+    @extend %font-heading-small ;
+    color: $font-brown;
+    margin-bottom: $spacing-sm;
+    text-align: center;
+    display: block;
+  }
+
+  .cmp-container__sitemap-row {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+	
+    .cmp-container__sitemap-column {
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      @include breakpoint-up(md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+      @include breakpoint-up(lg) {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+
+      .cmp-text__sitemap-item-title {
+        @extend %font-secondary-medium-p;
+        margin-top: $spacing-md;
+        color: $violet;
+        margin-bottom: $spacing-md;
+        display: block;
+      }
+
+      .cmp-container__sitemap-ul {
+        .cmp-container__sitemap-li {
+          padding-left: $spacing-sm;
+          list-style: none;
+          line-height: $line-height-base;
+	
+          .cmp-text__sitemap-item-a {
+            @extend %font-medium-p;
+            color: $violet;
+          }
+        }
+      }
+	
+    }
+  }
+
+
+
+  
+
+
+ 
+ 
+}

@@ -1,0 +1,25 @@
+.cmp-shipping {
+  border-radius: $cs-spacing-15;
+  background: $cs-whitesmoke;
+  padding: $cs-spacing-30 $cs-spacing-25;
+  margin-bottom: $cs-spacing-25;
+
+  &__title {
+    @extend %cs-font-h8;
+    font-weight: $cs-font-weight-bold;
+  }
+
+  &__line-separator {
+    margin: $cs-spacing-25 0;
+  }
+
+  &__subtitle {
+    @extend %cs-font-p-2-bold;
+    margin: $cs-spacing-20 0 $cs-spacing-10 0;
+  }
+  
+  &__paragraph {
+    @extend %cs-font-p-4;
+    margin: 0;
+  }
+}

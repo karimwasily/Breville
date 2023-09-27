@@ -1,0 +1,138 @@
+.cmp-teaser--cs-text-right {
+  max-width: $cs-max-width-banners;
+  margin: 0 auto $cs-spacing-35;
+  @media (min-width: $cs-screen-md) {
+    margin: 0 auto $cs-spacing-45;
+  }
+
+  .cmp-teaser {
+    position: relative;
+    @media (min-width:$cs-screen-lg) {
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__image {
+      @media (min-width:$cs-screen-lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .cmp-image {
+        overflow: hidden;
+
+        &__image {
+          width: 100%;
+          min-width: 32.5rem;
+          @media (min-width:$cs-screen-xs) {
+            min-width: 37.5rem;
+          }
+        }
+        @media (min-width:$cs-screen-lg) {
+          height: 100%;
+
+          &__image {
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  
+    &__content {
+      padding: $cs-spacing-30 $cs-spacing-15;
+      @media (min-width:$cs-screen-lg) {
+        position: relative;
+        z-index: 1;
+        padding: $cs-spacing-50 0;
+        width: 100%;
+        max-width: 24rem;
+        margin-left: auto;
+        margin-right: $cs-spacing-40;
+      }
+      @media (min-width:$cs-screen-xl) {
+        padding: $cs-spacing-150 0;
+        max-width: 30rem;
+        margin-right: $cs-spacing-50;
+      }
+      @media (min-width:$cs-screen-xxl) {
+        margin-right: $cs-spacing-110;
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-h2;
+        color: $cs-gunmetal;
+        margin-bottom: $cs-spacing-20;
+        @media (min-width:$cs-screen-lg) {
+          color: $cs-white;
+        }
+      }
+
+      .cmp-teaser__description {
+        h1 {
+          margin-bottom: $cs-spacing-15;
+          line-height: unset;
+
+          img {
+            // * breville x beanz logo
+            height: 1.5625rem;
+
+            @media (min-width:$cs-screen-lg) {
+              height: unset;
+              filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+          }  
+        }
+      
+        h2 {
+          @extend %cs-font-h2;
+          color: $cs-gunmetal;
+          margin-bottom: $cs-spacing-20;
+          @media (min-width:$cs-screen-lg) {
+            color: $cs-white;
+          }
+        }
+
+        p {
+          @extend %cs-font-h7;
+          margin-bottom: 0;
+          @media (min-width:$cs-screen-lg) {
+            color: $cs-white;
+          }
+        }
+      }
+
+      .cmp-teaser__action-container {
+        .cmp-teaser__action-link {
+          @extend %cs-button-purple-large-bold;
+          display: inline-block;
+          width: auto;
+          padding: $cs-spacing-15 $cs-spacing-60;
+          margin-top: $cs-spacing-30;
+          transition: background-color $cs-transition-speed-250 $cs-transition-easing;
+          @media (min-width:$cs-screen-lg) {            
+            color: $cs-white;
+            background-color: transparent;
+            border-color: $cs-white;
+
+            &:hover,
+            &:focus {
+              background-color: $cs-white;
+              color: $cs-dark-purple;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

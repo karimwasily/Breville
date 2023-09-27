@@ -1,0 +1,57 @@
+.account__grid {
+  padding: 0;
+}
+
+.account__warranty {
+  display: flex;
+}
+
+.account__icon-wrap {
+  margin-right: $cs-spacing-15;
+}
+
+.account__txt {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  text-align: left;
+  color: $cs-color-primary;
+  margin-bottom: 0;
+}
+
+.account__title {
+  @extend %cs-font-h8;
+  margin-bottom: $cs-spacing-15;
+  color: $cs-color-primary;
+}
+
+.account__note {
+  @extend %cs-font-p-5;
+  color: $cs-color-gray-10;
+}
+
+.form-checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.form-checkbox-wrap--top {
+  align-items: flex-start;
+}
+
+.form-checkbox {
+  width: 22px;
+  min-width: 22px;
+  height: 22px;
+  margin-right: $cs-spacing-10;
+}
+  
+.form-checkbox-label {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  text-align: left;
+  color: $cs-color-primary;
+}
+
+.form-underline {
+  text-decoration: underline;
+}

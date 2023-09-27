@@ -1,0 +1,7 @@
+# Created by https://www.gitignore.io/api/eclipse,java,maven
+
+# Webpack
+build/
+dist/
+node_modules
+yarn-error.log

@@ -1,0 +1,17 @@
+
+.cmp-teaser--beanz-logo-watermark {
+  .cmp-teaser {
+    &__image {
+      .cmp-image {
+        position: relative;
+  
+        &::before { 
+          @extend %logo-beanz-by-breville-icon;
+          position: absolute;
+          content: '';
+          margin: $cs-spacing-20;
+        }
+      }
+    }   
+  }
+}

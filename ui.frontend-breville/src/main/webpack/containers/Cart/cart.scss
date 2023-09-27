@@ -1,0 +1,27 @@
+
+.cart {
+  margin-bottom: $cs-spacing-50;
+
+  &__grid {
+    padding: 0;
+    max-width: 1135px;
+  }
+
+  &__table {
+    @media (min-width: $cs-screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__summary {
+    position: sticky;
+    top: $cs-spacing-10;
+    //todo,
+    // creatd for timebeing, will be Modified when merging the summary section
+
+    @media (min-width: $cs-screen-xl) {
+      margin-left: $cs-spacing-60;
+    }
+  }
+
+}

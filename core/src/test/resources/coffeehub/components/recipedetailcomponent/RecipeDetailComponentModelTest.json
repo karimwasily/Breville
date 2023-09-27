@@ -1,0 +1,145 @@
+{
+    "full_info" : {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "/content/recipe-detail_full-info",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "blank_cf_info" : {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "/content/recipe-detail_blank-info",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "blank_page_info" : {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "null_value" : {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {}
+    },
+    "recipe-detail_full-info" : {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "aaaabddb-8a91-4860-a390-0c5de0755d0b",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "recipe-detail",
+            "contentFragment": true,
+            "cq:name": "recipe-detail",
+            "cq:parentPath": "/content/dam/coffeehub/recipe",
+            "renditions": {
+            "jcr:primaryType": "nt:folder"
+            },
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "modelNumbers": "0123456789",
+                    "heroImage": "/content/dam/coffeehub/asset.jpg",
+                    "recipeDescription": "<p>This is recipe description</p>\n",
+                    "recipeIntroText": "This is the recipe intro text (for carousel)",
+                    "region": "Australia",
+                    "recipeDescription@ContentType": "text/html",
+                    "totalTime": 6.0,
+                    "recipeName": "This is recipe name",
+                    "heroThumbnail": "/content/dam/coffeehub/asset.jpg",
+                    "yield": 98,
+                    "ingredientList": [
+                        "/content/dam/coffeehub/recipe/ingredient-usage/ingredient-usage",
+                        "/content/dam/coffeehub/recipe/ingredient-usage/ingredient-usage-2"
+                    ],
+                    "stepInstructionList": [
+                        "/content/dam/coffeehub/recipe/step-instruction/step-1",
+                        "/content/dam/coffeehub/recipe/step-instruction/step-2"
+                    ],
+                    "recipeAuthor": "This is recipe author",
+                    "skillLevel": "intermediate",
+                    "recipeOwner": "this is recipe owner",
+                    "equipmentList": [
+                        "/content/dam/coffeehub/recipe/equipment-detail/machine-1",
+                        "/content/dam/coffeehub/recipe/equipment-detail/machine-2"
+                    ]
+                }
+            }
+        }
+    },
+    "recipe-detail_blank-info" : {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "aaaabddb-8a91-4860-a390-0c5de0755d0b",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "recipe-detail",
+            "contentFragment": true,
+            "cq:name": "recipe-detail",
+            "cq:parentPath": "/content/dam/coffeehub/recipe",
+            "renditions": {
+            "jcr:primaryType": "nt:folder"
+            },
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "modelNumbers": "",
+                    "heroImage": "",
+                    "recipeDescription": "",
+                    "recipeIntroText": "",
+                    "region": "",
+                    "recipeDescription@ContentType": "text/html",
+                    "totalTime": "",
+                    "recipeName": "",
+                    "heroThumbnail": "",
+                    "yield": "",
+                    "ingredientList": [],
+                    "stepInstructionList": [],
+                    "recipeAuthor": "",
+                    "skillLevel": "",
+                    "recipeOwner": "",
+                    "equipmentList": []
+                }
+            }
+        }
+    }
+}

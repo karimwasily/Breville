@@ -1,0 +1,71 @@
+//size of the arrow icon
+$arrow-image-size: 10px;
+//direction variables
+$left: 'left';
+$right: 'right';
+
+// * use of !important tags throughout to overwrite specificity of react-slick default theme
+.brandcarousel {
+  --image-height: 90px;
+
+  @extend %cmp-reactcarousel--slick-theme-default;
+  padding: 30px;
+
+  // carousel arrows
+  .slick-prev,
+  .slick-next {
+    padding: $cs-spacing-15 !important;
+    height: auto !important;
+    width: auto !important;
+    background-color: $cs-color-gray-60 !important;
+    border-radius: 50%;
+    border: 2px solid $cs-color-primary !important;
+  }
+
+  .slick-prev {
+    @include reactcarousel-arrow($left, $arrow-image-size);
+    left: 0 !important;
+  }
+
+  .slick-next {
+    @include reactcarousel-arrow($right, $arrow-image-size);
+    right: 0 !important;
+  }
+
+  // * set height of the carousel list to be the same as the image itself (but slightly taller to include the item border)
+  .slick-list {
+    height: calc(var(--image-height) + #{$cs-spacing-5});
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    // avoid overlap of prev/next slide items and nav icons
+    @media (min-width: $screen-md) {
+      width: 90%;
+    }
+  }
+
+  // select border
+  .slick-current {
+    .carousel-item__item {
+      @media (min-width: $screen-sm) {
+        border: solid 2px $cs-gunmetal;
+        border-radius: $cs-border-radius-8;
+      }
+    }
+  }
+
+  .carousel-item__wrapper {
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    vertical-align: middle;
+
+    .carousel-item__item {
+      width: 100%;
+      height: var(--image-height);
+      object-fit: contain;
+      padding: $cs-spacing-5;
+    }
+  }
+}

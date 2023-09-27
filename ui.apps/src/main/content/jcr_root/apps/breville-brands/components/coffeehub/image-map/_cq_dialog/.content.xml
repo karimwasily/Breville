@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Image Map"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.authoring.dialog]"
+    trackingFeature="core-components:image:v2">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items  
+                    jcr:primaryType="nt:unstructured"
+                    sling:hideChildren="[metadata,asset]">
+                    <desktoptab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Desktop settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <tabs
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                                maximized="{Boolean}false">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <asset
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Image"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <file
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                allowUpload="{Boolean}false"
+                                                                autoStart="{Boolean}false"
+                                                                class="cq-droptarget"
+                                                                fileNameParameter="./fileNameDesktop"
+                                                                fileReferenceParameter="./fileReferenceDesktop"
+                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                multiple="{Boolean}false"
+                                                                name="./fileDesktop"
+                                                                title="Upload image asset"
+                                                                uploadUrl="${suffix.path}"
+                                                                useHTML5="{Boolean}true"
+                                                                required="{Boolean}true"/>
+                                                            <imageAltText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Image Alternative Text"
+                                                                name="./imageAltTextDesktop"/>
+                                                            <location
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldLabel="Location selection"
+                                                                name="./imageLocationDesktop">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <left
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Left"
+                                                                        value="left"
+                                                                        selected="true"/>
+                                                                    <right
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Right"
+                                                                        value="right"/>
+                                                                    <center
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Center"
+                                                                        value="center">
+                                                                    </center>
+                                                                </items>
+                                                            </location>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </asset>
+                                    <buttons
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Buttons"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <multifield
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                fieldLabel="List of CTA buttons"
+                                                                composite="{Boolean}true"
+                                                                fieldDescription="Add a CTA button">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    margin="{Boolean}true"
+                                                                    name="./buttonListDesktop">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <button
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            jcr:title="Button"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <focuspoint
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="breville-brands/components/form/focuspoint"
+                                                                                    className="focusPointDesktop"
+                                                                                    name="./focusPoint"
+                                                                                    rootPath="/apps/"/>
+                                                                                <modalurl
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Modal Url"
+                                                                                    fieldDescription="The Experience Fragment to display as a modal when the button is clicked"
+                                                                                    rootPath="/content/experience-fragments"
+                                                                                    name="./modalUrl"/>
+                                                                                <accessibilityLabel
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Aria label"
+                                                                                    name="./accessibilityLabel"/>
+                                                                            </items>
+                                                                        </button>
+                                                                    </items>
+                                                                </field>
+                                                            </multifield>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </buttons>
+                                </items>
+                            </tabs>
+                        </items>
+                    </desktoptab>
+                    <mobiletab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Mobile settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <tabs
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                                maximized="{Boolean}false">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <asset
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Image"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        margin="{Boolean}true"
+                                        required="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <file
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                allowUpload="{Boolean}false"
+                                                                autoStart="{Boolean}false"
+                                                                class="cq-droptarget"
+                                                                fileNameParameter="./fileNameMobile"
+                                                                fileReferenceParameter="./fileReferenceMobile"
+                                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                multiple="{Boolean}false"
+                                                                name="./fileMobile"
+                                                                title="Upload image asset"
+                                                                uploadUrl="${suffix.path}"
+                                                                useHTML5="{Boolean}true"/>
+                                                            <imageAltText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Image Alternative Text"
+                                                                name="./imageAltTextMobile"/>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </asset>
+                                    <buttons
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Buttons"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <multifield
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                fieldLabel="List of CTA buttons"
+                                                                composite="{Boolean}true"
+                                                                fieldDescription="Add a CTA button">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    margin="{Boolean}true"
+                                                                    name="./buttonListMobile">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <button
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            jcr:title="Button"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <focuspoint
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="breville-brands/components/form/focuspoint"
+                                                                                    className="focusPointMobile"
+                                                                                    name="./focusPoint"
+                                                                                    rootPath="/apps/"/>
+                                                                                <modalurl
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Modal Url"
+                                                                                    fieldDescription="The Experience Fragment to display as a modal when the button is clicked"
+                                                                                    rootPath="/content/experience-fragments"
+                                                                                    name="./modalUrl"/>
+                                                                                <accessibilityLabel
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Aria label"
+                                                                                    name="./accessibilityLabel"/>
+                                                                            </items>
+                                                                        </button>
+                                                                    </items>
+                                                                </field>
+                                                            </multifield>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </buttons>
+                                </items>
+                            </tabs>
+                        </items>
+                    </mobiletab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

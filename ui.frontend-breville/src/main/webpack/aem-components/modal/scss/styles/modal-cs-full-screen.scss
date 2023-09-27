@@ -1,0 +1,13 @@
+.cmp-modal--cs-fullscreen {
+  .cmp-modal {
+    display: none;
+
+    .cmp-container {
+
+    }
+  }
+
+  .cmp-modal--open {
+    display: block;
+  }
+}

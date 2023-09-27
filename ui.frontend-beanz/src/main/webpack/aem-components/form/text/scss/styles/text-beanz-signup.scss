@@ -1,0 +1,116 @@
+.cmp-container--beanz-signup {
+  .cmp-form-text--beanz-signup {
+    margin-left: 0% !important;
+    max-width: 100% !important;
+    width: 100%;
+    font-size: $font-size-large;
+    @include breakpoint-down (md) {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin-left: 0% !important;
+    }
+    @include breakpoint-up (md) {
+      max-width: 55.3333333333% !important;
+      width: 55.3333333333% !important;
+      margin-left: 0% !important;
+    }
+    @include breakpoint-up (lg) {
+      font-size: $font-size;
+      max-width: 25.333% !important;
+      width: 25.333%;
+      margin-left: 13% !important;
+    }
+
+    .cmp-form-text {
+      position: relative;
+      overflow: hidden;
+
+      &.is-completed {
+        label {
+          font-size: $font-size-xsmall;
+          transform: translateY(-9px);
+        }
+      }
+
+      label {
+        font-family: $font-family-primary;
+        display: block;
+        font-weight: $font-weight-medium-bold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 18px 12px 0 0;
+        transition: all 0.4s;
+        width: 100%;
+        color: $gray-dove;
+        font-size: $font-size-h4;
+        transform: translateY(7px);
+        transition: all 0.5s;
+      }
+
+      input {
+        font-family: $font-family-primary;
+        display: block;
+        outline: none;
+        box-shadow: none;
+        border: solid $silver-chalice;
+        border-width: 0 0 1px;
+        font-size: $font-size;
+        font-weight: $font-weight-medium-bold;
+        padding: 15px 12px 0 0;
+        margin-top: 11px;
+        line-height: $line-height-base;
+        letter-spacing: $letter-spacing-base;
+        color: $jaguar;
+        background-color: transparent;
+        max-width: 330px;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        @include breakpoint-up (md) {
+          max-width: 330px;
+        }
+        @media screen and (max-width:991px) and (min-width:768px) {
+          max-width: 100%;
+        }
+
+        &::input-placeholder {
+          opacity: 0;
+        }
+
+        &::placeholder {
+          opacity: 0;
+        }
+
+        &:input-placeholder {
+          opacity: 0;
+        }
+
+        &:placeholder {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .text {
+    .cmp-text {
+      p {
+        font-family: $font-family-primary;
+        font-size: $font-size;
+        font-weight: $font-weight-normal;
+        line-height: $line-height-paragraph;
+        letter-spacing: normal;
+        color: $jaguar;
+        padding-top: 22px;
+        margin: 0;
+
+        a {
+          color: $violet;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

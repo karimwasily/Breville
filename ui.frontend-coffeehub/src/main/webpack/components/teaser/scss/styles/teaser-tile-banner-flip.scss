@@ -1,0 +1,18 @@
+// this style wrapper modifies '.cmp-teaser--tile-banner'
+.cmp-teaser--tile-banner-flip {
+  @extend %cmp-teaser--tile-banner;
+
+  .cmp-teaser {
+    background: $light-grey;
+
+    &__content {
+      @media (min-width: $screen-md) {
+        justify-self: self-start;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      direction: rtl;
+    }
+  }
+}

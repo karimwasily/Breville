@@ -1,0 +1,38 @@
+.title {
+  @include breakpoint-up (xl) {}
+  padding-top: 40px;
+  @include breakpoint-up (lg) {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    margin: auto;
+  }
+
+  .cmp-title {
+    .cmp-title__text {
+      letter-spacing: $letter-spacing-base;
+      line-height: normal;
+    }
+        
+    h2.cmp-title__text {
+      @include font-size($font-size-large);
+      text-align: center;
+      font-family: $font-family-secondary;
+      font-weight: bold;
+      margin: 0;
+      @include breakpoint-up (sm) {
+        @include font-size($font-size-h2);
+      }
+      @include breakpoint-up (lg) {
+        @include font-size($font-size-xlarge);
+      }
+    }
+
+    h6.cmp-title__text {
+      @include font-size($font-size-medium);
+      font-weight: normal;
+      text-transform: capitalize;
+      line-height: $line-height-small;
+    }
+  }
+}

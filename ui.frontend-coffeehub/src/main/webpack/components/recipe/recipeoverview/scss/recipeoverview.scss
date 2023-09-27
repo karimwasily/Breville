@@ -1,0 +1,46 @@
+.cmp-recipeoverview {
+  display: block;
+  margin: 0 0 $spacing-lg 0;
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: $spacing-lg 0 $spacing-xl 0;
+  }
+
+  &__video {
+    margin-top: $spacing-lg;
+    height: 100%;
+    @media (min-width: $screen-md) {
+      flex: 7;
+      margin: 0;
+    }
+
+    .cmp-v-video {
+      height: 100%;
+
+      &__overlay,
+      &__underlay {
+        @media (min-width: $screen-md) {
+          height: auto;
+        }
+      }
+
+      &__player {
+        @media (min-width: $screen-md) {
+          height: 100% !important;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @media (min-width: $screen-md) {
+      flex: 5;
+      margin-right: $spacing-md;
+    }
+
+    .cmp-recipeoverview__title {
+      margin: rem(15px) 0 rem(10px);
+    }
+  }
+}

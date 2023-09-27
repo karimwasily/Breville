@@ -1,0 +1,14 @@
+// provide font-size with px fallback
+@mixin font-size($rem) {
+  font-size: rem-to-px($rem);
+  font-size: $rem;
+}
+
+// todo: use webpack to convert iconography
+// base 64 version of 'right arrow' svg
+@mixin arrow-right-small-icon {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MTQgMTAyNCc+PHBhdGggZD0nTTM3NC42NDMgNTE3LjIwNUw1Mi4wMzMgODI5LjQwOWMtNDEuNjI3IDQxLjYyNy00MS42MjcgMTA0LjA2OCAwIDE0NS42OTVzMTA0LjA2OCA0MS42MjcgMTQ1LjY5NSAwbDM5NS40NTgtMzg1LjA1MXMxMC40MDctMTAuNDA3IDEwLjQwNy0yMC44MTRTNjE0IDU1OC44MzIgNjE0IDU0OC40MjV2LTgzLjI1NmMwLTEwLjQwNy0xMC40MDctMTAuNDA3LTEwLjQwNy0yMC44MTRzLTEwLjQwNy0xMC40MDctMTAuNDA3LTIwLjgxNEwxODcuMzIxIDM4LjQ5Yy0yMC44MTQtMjAuODE0LTQxLjYyNy0zMS4yMi03Mi44NDctMzEuMjJTNjIuNDQgMTcuNjc3IDQxLjYyNyAzOC40OUMwIDgwLjExNyAwIDE0Mi41NTggNDEuNjI3IDE4NC4xODVsMzMzLjAxNyAzMzMuMDE3eicvPjwvc3ZnPg==');
+  background-repeat: no-repeat;
+  width: 0.438rem;
+  height: 0.688rem;
+}

@@ -1,0 +1,288 @@
+@import './quantity-control';
+@import './cart-control';
+@import './thumbnail';
+@import './ratings';
+@import './basic-info';
+@import './price-info';
+@import './espresso-cta';
+
+.breadcrumb {
+  @extend %cs-font-p-2;
+  max-width: $cs-max-width;
+  padding-left: $cs-spacing-15;
+
+  text-decoration: underline solid $cs-gunmetal 1px;
+  @media(min-width: $cs-screen-md) {
+    padding-left: $cs-spacing-35;
+  }
+
+  a::before {
+    @extend %arrow-right-icon;
+    margin-right: $cs-spacing-5;
+
+    background-color: $cs-gunmetal;
+    transform: rotate(180deg);
+
+    content: '';
+  }
+}
+
+.primary-product-container {
+  position: relative;
+
+  max-width: $cs-max-width;
+  margin: auto;
+  // * vertical spacing as per design is split for top and bottom
+  padding: $cs-spacing-20 $cs-spacing-15;
+
+  @media(min-width: $cs-screen-md) {
+    display: grid;
+    grid-template-areas:
+      'image title'
+      'image content'
+      'tracker tracker';
+    grid-template-rows: auto 1fr;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    padding: $cs-spacing-35 $cs-spacing-10;
+
+    column-gap: 2vw;    
+  }
+
+  .primary-product-container__title {
+    h2 {
+      @extend %cs-font-h1;
+      margin-bottom: $cs-spacing-25;
+  
+      @media (min-width: $cs-screen-md) { 
+        grid-area: title;
+        margin-bottom: 0; //To avaoid default margin
+        margin-left: $cs-spacing-20;
+      }
+    }    
+  }
+
+  .primary-product-container__image_wrapper {
+    @media (min-width: $cs-screen-md) {
+      grid-area: image;
+    }
+
+    .primary-product-container__hero_image { 
+      .hero-pdp {
+        position: relative;
+
+        width: 100%;
+        margin: auto;
+        // 1:1 ratio container
+        padding-bottom: 100%;
+
+
+        > * {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          width: 100%;
+          height: 100%;
+
+          transform: translate(-50%, -50%);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .cmp-reactvideo--embed {
+          width: 100%;
+
+          background-color: $cs-white;
+
+          // position the video inside the 1:1 square container
+          > div {
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            width: 100%;
+
+            transform: translateY(-50%);
+          }
+        }  
+      }
+
+      .primary-product-container__thumbnails {
+        @extend %thumbnail;        
+      }
+    }
+  }
+
+  .primary-product-container__right-content {
+    grid-area: content;
+    @media (min-width: $cs-screen-md) {
+      display: flex;
+      flex-direction: column;
+      margin-left: $cs-spacing-20;
+    }
+  }
+
+  .primary-product-container__side_by_side {
+    display: flex;
+  }
+
+  .primary-product-container__add_to_cart {
+    width: 100%;
+  }
+
+  .primary-product-container__controls {
+    @extend %quantity-control;
+    @extend %cart-control;
+    display: flex;
+    grid-area: controls;
+    padding-top: $cs-spacing-35;
+
+    border-top: 1px solid $cs-gainsboro;
+
+    &.cmp-primary-product--machine-detail--sticky {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      z-index: 10;
+
+      padding: $cs-spacing-15 $cs-spacing-10;
+
+      background-color: $cs-white;
+
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+
+      animation: slide-in-from-top 0.2s;
+
+      @media (min-width: $cs-screen-md) {
+        padding: $cs-spacing-10 $cs-spacing-35;
+      }
+
+      .primary-product-container__product_quantity {
+        display: none;
+        margin-left: $cs-spacing-5;
+
+        @media (min-width: $cs-screen-md) {
+          display: block;
+        }
+      }
+
+      .cmp-button--cart,
+      .cmp-button--notify-me {
+        padding: $cs-spacing-10;
+
+        @media (min-width: $cs-screen-md) {
+          padding: $cs-spacing-10 $cs-spacing-35;
+        }
+      }
+
+      .cmp-button--cart,
+      .cmp-button--notify-me,
+      .primary-product-container__product_quantity {
+        flex: 0;
+
+        height: 54px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    .cmp-button--cart,
+    .cmp-button--notify-me {
+      flex: 1;
+      margin-left: $cs-spacing-15;
+    }
+
+    .react-button {
+      @extend %cs-font-p-bold;
+    }
+
+    .react-button:disabled {
+      @extend %cs-font-p-bold;
+      color: $cs-silver-dark;
+
+      background-color: $cs-whitesmoke;
+      border: 0;
+    }
+  }
+
+  .primary-product-container__controls > button {
+    @extend %cs-font-p-bold;
+    //To avoid the overflow of button in tab view
+    width: 100%;
+    padding: $cs-spacing-15 $cs-spacing-35;
+    @media (min-width: $cs-screen-md) {
+      padding: $cs-spacing-15 $cs-spacing-30;
+    }   
+  } 
+
+  .primary-product-container__basic_info {
+    @extend %basic-info ;
+    flex-direction: column;
+    align-items: baseline;
+    @media (min-width: $cs-screen-md) {
+      grid-area: basic-info;
+    }
+    @media (min-width: $cs-screen-lg) {
+      flex-direction: row;
+    }
+  }
+
+  .primary-product-container__swatch {
+    margin-top: $cs-spacing-5;
+    @media (min-width: $cs-screen-md) {
+      grid-area: swatch;
+      margin-top: 0;
+    }
+  }
+
+  .primary-product-container__social {
+    @extend %ratings;
+    align-items: center;
+    @media (min-width: $cs-screen-md) {
+      grid-area: social;
+      order: -1;
+    }
+  }
+
+  .primary-product-container__price_info {
+    @extend %price-info;    
+    @media (min-width: $cs-screen-md) {
+      grid-area: price-info;
+    }
+  }
+
+  .primary-product-container__coffee_cta {    
+    @extend %cta;    
+    @media (min-width: $cs-screen-md) {
+      grid-area: coffee-cta;
+    }    
+  }
+
+  .primary-product-container__bundle_cta {
+    margin-top: $cs-spacing-35;
+    @media (min-width: $cs-screen-md) {
+      grid-area: bundle-cta;
+    }
+  }
+
+  .primary-product-container__tracker {
+    position: relative;
+
+    grid-area: tracker;
+
+    .sticky-header__tracker {
+      position: absolute;
+      bottom: 0;
+
+      height: 50px;
+
+      pointer-events: none;
+    }
+  }
+}

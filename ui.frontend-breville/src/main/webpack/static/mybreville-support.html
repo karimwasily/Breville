@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MyBreville Dashboard</title>
+
+  <meta name="template" content="page-content" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--/* <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&amp;display=swap"
+      rel="stylesheet"
+    /> */-->
+
+  <link rel="stylesheet" href="/etc.clientlibs/breville-brands/clientlibs/clientlib-base.min.css" type="text/css" />
+
+  <script src="/etc.clientlibs/breville-brands/clientlibs/clientlib-breville-dependencies.min.js"></script>
+
+  <link rel="stylesheet" href="/etc.clientlibs/breville-brands/clientlibs/clientlib-breville-dependencies.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="/etc.clientlibs/breville-brands/clientlibs/clientlib-dependencies.min.css"
+    type="text/css" />
+
+  <!--/* ! WEBPACK LOADS CLIENTLIB DYNAMICALLY, AEM LOCAL VERSION NOT REQUIRED */-->
+  <!--/* <link
+      rel="stylesheet"
+      href="/etc.clientlibs/breville-brands/clientlibs/clientlib-breville-site.min.css"
+      type="text/css"
+    /> */-->
+</head>
+
+<body id="page-ae2a17175d" class="page basicpage">
+  <!--/* REACT MOUNT POINT */-->
+  <div id="react-root"></div>
+  <!--/* END: REACT MOUNT POINT */-->
+
+  <div class="root container responsivegrid">
+    <div id="container" class="cmp-container">
+      <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+
+        <!-- /* PAGE HEADER -->
+        <!--/* AEM COMMON CONFIG */-->
+        <header id="aemConfig" class="experiencefragment" data-locale="en-US" data-country="us" data-language="en"
+          data-brand="Breville" data-webchannel="breville-web-us"
+          data-siterootpath="/content/breville/language-masters/en" data-currencysymbol="$"
+          data-sfNotifyMeUrl="https://psldevint-brevilleusa.cs19.force.com/eComm/services/apexrest/NotifyMe" data-sfNotiyMeEnable="true"
+          data-currencyCode="USD" data-algoliaAppId="S83ELHQBRF" data-algoliaApiKey="44058c048e8d17645eb9c8cfae7609c4"
+          data-algoliaBrevilleIndex="Breville_BUS" data-algoliaBeanzIndex="Beanz"
+          data-mulberryPublicToken="SiATyFKVA4RQ_SAVodWj9hY_lN0" data-mulberryCoverageKey="3ad613a5"
+          data-recaptchsitekey="6Le66UMUAAAAAIioFFNz914RvaoUExvyYSHMQaF6" data-auth0-domain="iden-dev.us.auth0.com"
+          data-auth0-client-id="uHPMqwBWWYIdRlNwM5uqBCsQqKEsNj3H"
+          data-auth0-audience="https://iden-dev.us.auth0.com/api/v2/"
+          data-base-page="">
+          <script src="https://apps.bazaarvoice.com/deployments/brevilleusa/main_site/staging/en_US/bv.js"
+            defer></script>
+          <div class="awsAPIconfig"
+            data-aws-api-config="{&quot;awsApiUrl&quot;:&quot;https://dev-api.foodthinkers.com&quot;,&quot;projectKey&quot;:&quot;breville-dev&quot;, &quot;clientSecret&quot;:&quot;secret&quot;, &quot;clientId&quot;: &quot;id&quot;,&quot;authUrl&quot;: &quot;api&quot;,&quot;apiUrl&quot;: &quot;api&quot;,&quot;scopes&quot;: &quot;scopes&quot;,&quot;cartUrl&quot;: &quot;/content/beanz/language_master/en/cart.html&quot;,&quot;distributionId&quot;: &quot;distribution&quot;,&quot;currencySymbol&quot;: &quot;$&quot;,&quot;grindId&quot;: &quot;Beanz&quot;,&quot;supplyChannelId&quot;: &quot;supply&quot;}"
+            data-auth0-api-domain="https://iden-dev.us.auth0.com">
+          </div>
+          <!--/* END: AEM COMMON CONFIG */-->
+          <div id="experiencefragment-489479c098" class="cmp-experiencefragment cmp-experiencefragment--header">
+            <div id="container-b54d3bd51d" class="cmp-container">
+              <div class="header"><a class="cmp-skip-main_content" href="#skip-nav-holder" tabindex="0">Skip to main
+                  content</a>
+                <header class="experiencefragment">
+                  <div class="cmp-header-container">
+                    <!-- Nav menu item left side end -->
+                    <ul class="cmp-navigation cmp-navigation--left">
+                      <!-- logo start -->
+                      <li class="cmp-navigation__item cmp-navigation__item--logo">
+                        <a href="#.html" class="cmp-navigation__link">
+                          <img class="cmp-navigation-item__logo"
+                            src="/content/dam/breville-brands/coffee-solution/Logotype@3x.png" alt="Brevile logo">
+                        </a>
+                      </li>
+                      <!-- Products dropdown menu start -->
+                      <li class="cmp-navigation__item cmp-navigation__item--products visible-md-up">
+                        <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                          <span class="cmp-navigation__title">Products</span>
+                          <!-- todo icon dropdown markup -->
+                        </button>
+                        <div class="cmp-dropdown__menu" role="menu">
+                          <div class="cmp-dropdown__content--products_parts">
+                            <!-- Todo product category listing html -->
+                            <div class="cmp-container">
+                              <div class="cmp-category-grid">
+                                <div class="cmp-category-grid__item">
+                                  <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                    class="cmp-item__link">
+                                    <img src="/content/dam/breville-brands/coffee-solution/category-tiles/espresso.jpg"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Espresso Machine</p>
+                                  </a>
+                                </div>
+                                <div class="cmp-category-grid__item">
+                                  <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                    class="cmp-item__link">
+                                    <img src="/content/dam/breville-brands/coffee-solution/category-tiles/nespresso.jpg"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Nespresso Machine</p>
+                                  </a>
+                                </div>
+                                <div class="cmp-category-grid__item">
+                                  <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                    class="cmp-item__link">
+                                    <img src="/content/dam/breville-brands/coffee-solution/category-tiles/ovens.jpg"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Ovens</p>
+                                  </a>
+                                </div>
+                                <div class="cmp-category-grid__item">
+                                  <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                    class="cmp-item__link">
+                                    <img src="/content/dam/breville-brands/coffee-solution/category-tiles/coffee.jpg"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Coffee</p>
+                                  </a>
+                                </div>
+                                <div class="cmp-category-grid__item">
+                                  <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                    class="cmp-item__link">
+                                    <img src="/content/dam/breville-brands/coffee-solution/coffee-grinders.jpg"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Coffee Grinders</p>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Parts and Accessories dropdown menu start -->
+                      <li class="cmp-navigation__item cmp-navigation__item--parts visible-md-up">
+                        <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                          <span class="cmp-navigation__title">Parts and Accessories</span>
+                          <!-- todo icon dropdown markup -->
+                        </button>
+                        <div class="cmp-dropdown__menu" role="menu">
+                          <div class="cmp-dropdown__content--products_parts">
+                            <!-- Todo product category listing html -->
+                            <div class="cmp-container">
+                              <div class="cmp-category-grid">
+                                <div class="cmp-category-grid__item">
+                                  <a href="#" class="cmp-item__link">
+                                    <img src="/content/dam/breville-brands/coffee-solution/espresso.jpg"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Espresso Machine Parts</p>
+                                  </a>
+                                </div>
+                                <div class="cmp-category-grid__item">
+                                  <a href="#" class="cmp-item__link">
+                                    <img
+                                      src="/content/dam/breville-brands/coffee-solution/TEMP-Espresso-Machine-576x576-Transparent.png"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Nespresso Machine Parts</p>
+                                  </a>
+                                </div>
+                                <div class="cmp-category-grid__item">
+                                  <a href="#" class="cmp-item__link">
+                                    <img
+                                      src="/content/dam/breville-brands/coffee-solution/TEMP-Espresso-Machine-576x576-Transparent.png"
+                                      class="cmp-item__image" alt="">
+                                    <p class="cmp-item__title">Ovens Parts</p>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Recipes -->
+                      <li class="cmp-navigation__item visible-xl-up">
+                        <a href="http://www.foodthinkers.com" class="cmp-navigation__link" target="_blank"
+                          rel="noopener">
+                          <span class="cmp-navigation__title">Recipes</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- Nav menu item right side start -->
+                    <ul class="cmp-navigation cmp-header-navigation--right">
+                      <!-- Call nav item -->
+                      <li class="cmp-navigation__item cmp-navigation__item--call">
+                        <a href="#" class="cmp-navigation__link" target="_blank" rel="noopener">
+                          <div class="cmp-item__call-tooltip">18662738455</div>
+                          <div class="cmp-item__content">
+                            <img class="cmp-navigation-item__call"
+                              src="/content/dam/breville-brands/coffee-solution/svg/call.svg" alt="Call icon">
+                            <span class="cmp-navigation__title visible-xl-up">Call</span>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- search nav item dropdown-->
+                      <li class="cmp-navigation__item cmp-navigation__item--search">
+                        <!-- <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                          <span class="cmp-item__content cmp-item--search">
+                            <img class="cmp-navigation-item__search"
+                              src="/content/dam/breville-brands/coffee-solution/svg/search.svg" alt="Search icon">
+                            <span class="cmp-navigation__title visible-xl-up">Search</span>
+                          </span>
+                          <span class=" cmp-item__content cmp-item--close">
+                            <img class="cmp-item__icon icon-close" alt="Search icon">
+                            <span class="cmp-navigation__title visible-xl-up">Close</span>
+                          </span>
+                        </button> -->
+                        <div class="cmp-dropdown__menu" role="menu">
+                          <div class="cmp-container">
+                            <div class="cmp-dropdown__content--search">
+                              <form class="cmp-search__form">
+                                <label for="cmp-seach__input">Search</label>
+                                <input type="search" placeholder="Type here" id="cmp-seach__input" name="search"
+                                  class="cmp-seach__input" autofocus="" autocomplete="off">
+                                <ul class="cmp-search-list">
+                                  <li class="cmp-search-list__item">BES990BSS1BUS1</li>
+                                  <li class="cmp-search-list__item">BES990BSS1BUS1</li>
+                                  <li class="cmp-search-list__item">BES990BSS1BUS1</li>
+                                </ul>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Country nav item dropdown -->
+
+                      <!-- Desktop view of regions and languages menu -->
+                      <li class="cmp-navigation__item cmp-navigation__item--country visible-xl-up">
+                        <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                          <span class="cmp-item__content"><img class="cmp-item__icon icon-country">
+                            <span class="cmp-navigation__title"></span>
+                          </span>
+                        </button>
+                        <div class="cmp-dropdown__menu" role="menu">
+                          <div class="cmp-dropdown__content--country">
+                            <form action="" class="cmp-region__form">
+                              <label class="cmp-region__label" aria-label="Select region"></label>
+                              <select class="cmp-region__select" title="region-select" data-default-country-code="us"
+                                data-default-lang-code="en" required="required">
+                                <option data-default-url="https://www.breville.com/us/en/home/index.html" value="us"
+                                  data-default-lang-code="en" data-default-country="true" selected="">
+                                  United States
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/uk/en/home/index.html"
+                                  value="uk" data-default-lang-code="en" data-default-country="false">
+                                  United Kingdom
+                                </option>
+                                <option data-default-url="https://www.breville.com/au/en/home/index.html" value="au"
+                                  data-default-lang-code="en" data-default-country="false">
+                                  Australia
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/de/home/index.html?reg=at"
+                                  value="at" data-default-lang-code="de" data-default-country="false">
+                                  Austria
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/nl/home/index.html?reg=be"
+                                  value="be" data-default-lang-code="nl" data-default-country="false">
+                                  Belgium
+                                </option>
+                                <option data-default-url="https://www.breville.com/ca/en/home/index.html" value="ca"
+                                  data-default-lang-code="en" data-default-country="false">
+                                  Canada
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/de/home/index.html?reg=de"
+                                  value="de" data-default-lang-code="de" data-default-country="false">
+                                  Deutschland
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/fr/home/index.html?reg=fr"
+                                  value="fr" data-default-lang-code="fr" data-default-country="false">
+                                  France
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/ie/en/home/index.html"
+                                  value="ie" data-default-lang-code="en" data-default-country="false">
+                                  Ireland
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/it/home/index.html?reg=it"
+                                  value="it" data-default-lang-code="it" data-default-country="false">
+                                  Italy
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/fr/home/index.html?reg=lu"
+                                  value="lu" data-default-lang-code="fr" data-default-country="false">
+                                  Luxembourg
+                                </option>
+                                <option data-default-url="https://www.breville.com/mx/es/home/index.html" value="mx"
+                                  data-default-lang-code="es" data-default-country="false">
+                                  Mexico
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/nl/home/index.html?reg=nl"
+                                  value="nl" data-default-lang-code="nl" data-default-country="false">
+                                  Netherlands
+                                </option>
+                                <option data-default-url="https://www.breville.com/nz/en/home/index.html" value="nz"
+                                  data-default-lang-code="en" data-default-country="false">
+                                  New Zealand
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/pt/home/index.html?reg=pt"
+                                  value="pt" data-default-lang-code="pt" data-default-country="false">
+                                  Portugal
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/eu/es/home/index.html?reg=es"
+                                  value="es" data-default-lang-code="es" data-default-country="false">
+                                  Spain
+                                </option>
+                                <option data-default-url="https://www.sageappliances.com/ch/de/home/index.html"
+                                  value="ch" data-default-lang-code="de" data-default-country="false">
+                                  Switzerland
+                                </option>
+                                <option data-default-url="https://www.sageappliances.ae/ae/en/home/index.html"
+                                  value="ae" data-default-lang-code="en" data-default-country="false">
+                                  UAE
+                                </option>
+                              </select>
+                              <label class="cmp-region__label" aria-label="lang-select"></label>
+                              <select class="cmp-region__select" title="lang-select" data-supported-lang="[ {
+              &quot;label&quot; : &quot;United States&quot;,
+              &quot;value&quot; : &quot;us&quot;,
+              &quot;countryLabel&quot; : &quot;USA&quot;,
+              &quot;defaultLanguage&quot; : &quot;English&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/us/en/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.breville.com/us/en/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;United Kingdom&quot;,
+              &quot;value&quot; : &quot;uk&quot;,
+              &quot;countryLabel&quot; : &quot;&quot;,
+              &quot;defaultLanguage&quot; : &quot;English&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/uk/en/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/uk/en/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Australia&quot;,
+              &quot;value&quot; : &quot;au&quot;,
+              &quot;countryLabel&quot; : &quot;AUS&quot;,
+              &quot;defaultLanguage&quot; : &quot;English&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/au/en/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.breville.com/au/en/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Austria&quot;,
+              &quot;value&quot; : &quot;at&quot;,
+              &quot;countryLabel&quot; : &quot;AUT&quot;,
+              &quot;defaultLanguage&quot; : &quot;Deutsch&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=at&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;de&quot;,
+                &quot;label&quot; : &quot;Deutsch&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=at&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Belgium&quot;,
+              &quot;value&quot; : &quot;be&quot;,
+              &quot;countryLabel&quot; : &quot;BEL&quot;,
+              &quot;defaultLanguage&quot; : &quot;Dutch&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=be&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;de&quot;,
+                &quot;label&quot; : &quot;German&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=be&quot;
+              }, {
+                &quot;value&quot; : &quot;fr&quot;,
+                &quot;label&quot; : &quot;French&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=be&quot;
+              }, {
+                &quot;value&quot; : &quot;nl&quot;,
+                &quot;label&quot; : &quot;Dutch&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=be&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Canada&quot;,
+              &quot;value&quot; : &quot;ca&quot;,
+              &quot;countryLabel&quot; : &quot;CAN&quot;,
+              &quot;defaultLanguage&quot; : &quot;English&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/ca/en/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.breville.com/ca/en/home/index.html&quot;
+              }, {
+                &quot;value&quot; : &quot;fr&quot;,
+                &quot;label&quot; : &quot;French&quot;,
+                &quot;url&quot; : &quot;https://www.breville.com/ca/fr/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Deutschland&quot;,
+              &quot;value&quot; : &quot;de&quot;,
+              &quot;countryLabel&quot; : &quot;DEU&quot;,
+              &quot;defaultLanguage&quot; : &quot;Deutsch&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=de&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;de&quot;,
+                &quot;label&quot; : &quot;Deutsch&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=de&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;France&quot;,
+              &quot;value&quot; : &quot;fr&quot;,
+              &quot;countryLabel&quot; : &quot;FRA&quot;,
+              &quot;defaultLanguage&quot; : &quot;France&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=fr&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;fr&quot;,
+                &quot;label&quot; : &quot;France&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=fr&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Ireland&quot;,
+              &quot;value&quot; : &quot;ie&quot;,
+              &quot;countryLabel&quot; : &quot;IRL&quot;,
+              &quot;defaultLanguage&quot; : &quot;English&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/ie/en/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/ie/en/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Italy&quot;,
+              &quot;value&quot; : &quot;it&quot;,
+              &quot;countryLabel&quot; : &quot;ITA&quot;,
+              &quot;defaultLanguage&quot; : &quot;Italian&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/it/home/index.html?reg=it&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;it&quot;,
+                &quot;label&quot; : &quot;Italian&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/it/home/index.html?reg=it&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Luxembourg&quot;,
+              &quot;value&quot; : &quot;lu&quot;,
+              &quot;countryLabel&quot; : &quot;LUX&quot;,
+              &quot;defaultLanguage&quot; : &quot;French&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=lu&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;de&quot;,
+                &quot;label&quot; : &quot;German&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=lu&quot;
+              }, {
+                &quot;value&quot; : &quot;fr&quot;,
+                &quot;label&quot; : &quot;French&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=lu&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Mexico&quot;,
+              &quot;value&quot; : &quot;mx&quot;,
+              &quot;countryLabel&quot; : &quot;MEX&quot;,
+              &quot;defaultLanguage&quot; : &quot;Spanish&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/mx/es/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;es&quot;,
+                &quot;label&quot; : &quot;Spanish&quot;,
+                &quot;url&quot; : &quot;https://www.breville.com/mx/es/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Netherlands&quot;,
+              &quot;value&quot; : &quot;nl&quot;,
+              &quot;countryLabel&quot; : &quot;NLD&quot;,
+              &quot;defaultLanguage&quot; : &quot;Dutch&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=nl&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;nl&quot;,
+                &quot;label&quot; : &quot;Dutch&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=nl&quot;
+              }, {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/en/home/index.html?reg=nl&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;New Zealand&quot;,
+              &quot;value&quot; : &quot;nz&quot;,
+              &quot;countryLabel&quot; : &quot;NZL&quot;,
+              &quot;defaultLanguage&quot; : &quot;English&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/nz/en/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.breville.com/nz/en/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Portugal&quot;,
+              &quot;value&quot; : &quot;pt&quot;,
+              &quot;countryLabel&quot; : &quot;PRT&quot;,
+              &quot;defaultLanguage&quot; : &quot;Portuguese&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/pt/home/index.html?reg=pt&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;pt&quot;,
+                &quot;label&quot; : &quot;Portuguese&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/pt/home/index.html?reg=pt&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Spain&quot;,
+              &quot;value&quot; : &quot;es&quot;,
+              &quot;countryLabel&quot; : &quot;ESP&quot;,
+              &quot;defaultLanguage&quot; : &quot;Spanish&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/es/home/index.html?reg=es&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;es&quot;,
+                &quot;label&quot; : &quot;Spanish&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/eu/es/home/index.html?reg=es&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;Switzerland&quot;,
+              &quot;value&quot; : &quot;ch&quot;,
+              &quot;countryLabel&quot; : &quot;CHE&quot;,
+              &quot;defaultLanguage&quot; : &quot;German&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/ch/de/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;de&quot;,
+                &quot;label&quot; : &quot;German&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/ch/de/home/index.html&quot;
+              }, {
+                &quot;value&quot; : &quot;fr&quot;,
+                &quot;label&quot; : &quot;French&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/ch/fr/home/index.html&quot;
+              }, {
+                &quot;value&quot; : &quot;it&quot;,
+                &quot;label&quot; : &quot;Italian&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.com/ch/it/home/index.html&quot;
+              } ]
+            }, {
+              &quot;label&quot; : &quot;UAE&quot;,
+              &quot;value&quot; : &quot;ae&quot;,
+              &quot;countryLabel&quot; : &quot;ARE&quot;,
+              &quot;defaultLanguage&quot; : &quot;English&quot;,
+              &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.ae/ae/en/home/index.html&quot;,
+              &quot;language&quot; : [ {
+                &quot;value&quot; : &quot;en&quot;,
+                &quot;label&quot; : &quot;English&quot;,
+                &quot;url&quot; : &quot;https://www.sageappliances.ae/ae/en/home/index.html&quot;
+              } ]
+            } ]" required="required">
+
+
+
+
+
+
+                                <option value="en" data-url="https://www.breville.com/us/en/home/index.html"
+                                  selected="">
+                                  English</option>
+
+                              </select>
+                            </form>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- Mobile view  of regions and languages menu -->
+
+
+                      <!-- Cart nav item -->
+                      <li class="cmp-navigation__item cmp-navigation__item--cart">
+                        <a href="/content/breville/language-masters/en/my-breville.html" class="cmp-navigation__link"
+                          rel="noopener">
+                          <div class="cmp-item__content">
+                            <img class="cmp-navigation-item__cart"
+                              src="/content/dam/breville-brands/coffee-solution/svg/cart.svg" alt="Cart icon">
+                            <span class="cmp-navigation__title visible-xl-up">Cart</span>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Account nav item dropdown -->
+                      <li class="cmp-navigation__item cmp-navigation__item--accounts visible-xl-up">
+                        <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                          <span class="cmp-item__content">
+                            <svg viewBox="0 0 977 1024" class="cmp-item__icon icon-profile" id="icn-profile">
+                              <path
+                                d="M97.588 930.908h781.777c-14.196-184.739-111.895-347.927-252.09-414.953-14.755-7.075-24.762-21.411-26.298-37.795-1.489-16.291 5.725-32.209 19.037-41.844 50.083-36.445 78.801-92.3 78.801-153.274 0-104.727-85.225-189.952-189.952-189.952s-189.905 85.225-189.905 189.952c0 54.737 24.529 107.101 67.258 143.686a46.416 46.416 0 0115.686 43.148c-2.746 16.105-13.777 29.649-29.044 35.561-153.786 59.904-260.701 227.561-275.27 425.472zm830.091 93.091H49.32c-25.693 0-46.545-20.806-46.545-46.545 0-229.702 108.87-434.083 276.62-530.199-34.49-47.663-53.527-104.96-53.527-164.212C225.868 126.976 352.797 0 508.864 0s283.043 126.976 283.043 283.043c0 66.793-24.25 131.165-66.932 181.76 153.228 102.493 249.251 296.401 249.251 512.652 0 25.74-20.806 46.545-46.545 46.545z">
+                              </path>
+                            </svg>
+                            <span class="cmp-navigation__title"></span>
+                            <span class="cmp-navigation__title" style="display: none;"></span>
+                          </span>
+                        </button>
+                        <div class="cmp-dropdown__menu" role="menu">
+                          <div class="cmp-dropdown__content--login-menu">
+                            <button class="cmp-dropdown__button--signup"></button>
+                            <hr class="cmp-button__hr">
+                            <button class="cmp-dropdown__button--login">
+                              <span>
+                                <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow">
+                                  <path
+                                    d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z">
+                                  </path>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="cmp-dropdown__content--loggedin-menu">
+                            <!-- Todo loggedin html -->
+                          </div>
+                        </div>
+                      </li>
+                      <li class="cmp-navigation__item cmp-navigation__item--hamburger hidden-xl-up">
+                        <div role="button" tabindex="0" class="cmp-navigation__link" aria-haspopup="true"
+                          aria-expanded="false" aria-label="main menu navigation">
+                          <svg role="img" class="icon cmp-icon_menu" focusable="false" aria-hidden="true">
+                            <title id="title"></title>
+                            <desc id="desc">Recipes, Sign up for Newsletter, and Country selection menu</desc>
+                            <use xlink:href="#HamburgerMenu">
+                              <svg version="1.1" id="HamburgerMenu" x="0" y="0" viewBox="0 0 20.1 16.2"
+                                xml:space="preserve">
+                                <g id="aeSymbols">
+                                  <g id="aeMain-Top-Nav" transform="translate(-285 -79)">
+                                    <g id="aeGroup-4">
+                                      <g id="aeGroup-5" transform="translate(0 64)">
+                                        <g id="aetop-Nav">
+                                          <g id="aePage-1" transform="translate(285.667 15)">
+                                            <path class="aest0"
+                                              d="M18.4 2.1H.4c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.5 1-1 1z"
+                                              id="aeStroke-1"></path>
+                                            <path class="aest0"
+                                              d="M18.4 9.1h-15c-.6 0-1-.4-1-1s.4-1 1-1h15c.6 0 1 .4 1 1s-.5 1-1 1z"
+                                              id="aeStroke-1_1_"></path>
+                                            <path class="aest0"
+                                              d="M18.4 16.1h-12c-.6 0-1-.4-1-1s.4-1 1-1h12c.6 0 1 .4 1 1s-.5 1-1 1z"
+                                              id="aeStroke-1_2_"></path>
+                                          </g>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                            </use>
+                          </svg>
+                        </div>
+                        <div class="cmp-hamburger__menu" role="menu">
+                          <div class="cmp-hamburger__header">
+                            <p class="cmp-header__title"></p>
+                            <button class="cmp-hamburger_close">
+                              <svg viewBox="0 0 1024 1024" class="icon-close">
+                                <path
+                                  d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z">
+                                </path>
+                                <path
+                                  d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z">
+                                </path>
+                              </svg>
+                            </button>
+                          </div>
+                          <nav>
+                            <ul class="cmp-hamburger__menu-item">
+                              <li class="cmp-hamburger__item--signup ">
+                                <button class="cmp-hamburger__button"></button>
+                              </li>
+                              <li class="cmp-hamburger__item">
+                                <a href="#" class="cmp-hamburger__link">
+                                  <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow">
+                                    <path
+                                      d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z">
+                                    </path>
+                                  </svg>
+                                </a>
+                              </li>
+                              <li class="cmp-hamburger__item">
+                                <a href="#" class="cmp-hamburger__link">Products
+                                  <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow">
+                                    <path
+                                      d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="cmp-hamburger__menu-overlay">
+                                  <div class="cmp-hamburger__menu-header">
+                                    <div class="cmp-menu_title-content">
+                                      <svg viewBox="0 0 444.531 444.531" class="cmp-icon-back " id="left-arrow">
+                                        <path
+                                          d="M213.13 222.409L351.88 83.653c7.05-7.043 10.567-15.657 10.567-25.841 0-10.183-3.518-18.793-10.567-25.835l-21.409-21.416C323.432 3.521 314.817 0 304.637 0s-18.791 3.521-25.841 10.561L92.649 196.425c-7.044 7.043-10.566 15.656-10.566 25.841s3.521 18.791 10.566 25.837l186.146 185.864c7.05 7.043 15.66 10.564 25.841 10.564s18.795-3.521 25.834-10.564l21.409-21.412c7.05-7.039 10.567-15.604 10.567-25.697 0-10.085-3.518-18.746-10.567-25.978L213.13 222.409z">
+                                        </path>
+                                      </svg>
+                                      <span class="cmp-menu__title">Products</span>
+                                    </div>
+                                    <button type="button" class="cmp-menu__close">
+                                      <svg viewBox="0 0 1024 1024" class="cmp-icon-close">
+                                        <path
+                                          d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z">
+                                        </path>
+                                        <path
+                                          d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z">
+                                        </path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="cmp-dropdown__content cmp-hamburger__menu--products_parts">
+                                    <div class="cmp-dropdown__content--products_parts">
+                                      <div class="cmp-container">
+                                        <div class="cmp-category-grid">
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                              class="cmp-item__link">
+                                              <img
+                                                src="/content/dam/breville-brands/coffee-solution/category-tiles/espresso.jpg"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Espresso Machine</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                              class="cmp-item__link">
+                                              <img
+                                                src="/content/dam/breville-brands/coffee-solution/category-tiles/nespresso.jpg"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Nespresso Machine</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                              class="cmp-item__link">
+                                              <img
+                                                src="/content/dam/breville-brands/coffee-solution/category-tiles/ovens.jpg"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Ovens</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                              class="cmp-item__link">
+                                              <img
+                                                src="/content/dam/breville-brands/coffee-solution/category-tiles/coffee.jpg"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Coffee</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="https://dev-new.breville.com/content/breville/language-masters/en/plp.html"
+                                              class="cmp-item__link">
+                                              <img
+                                                src="/content/dam/breville-brands/coffee-solution/coffee-grinders.jpg"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Coffee Grinders</p>
+                                            </a>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="cmp-hamburger__item">
+                                <a href="#" class="cmp-hamburger__link">Parts and Accessories
+                                  <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow">
+                                    <path
+                                      d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="cmp-hamburger__menu-overlay">
+                                  <div class="cmp-hamburger__menu-header">
+                                    <div class="cmp-menu_title-content">
+                                      <svg viewBox="0 0 444.531 444.531" class="cmp-icon-back " id="left-arrow">
+                                        <path
+                                          d="M213.13 222.409L351.88 83.653c7.05-7.043 10.567-15.657 10.567-25.841 0-10.183-3.518-18.793-10.567-25.835l-21.409-21.416C323.432 3.521 314.817 0 304.637 0s-18.791 3.521-25.841 10.561L92.649 196.425c-7.044 7.043-10.566 15.656-10.566 25.841s3.521 18.791 10.566 25.837l186.146 185.864c7.05 7.043 15.66 10.564 25.841 10.564s18.795-3.521 25.834-10.564l21.409-21.412c7.05-7.039 10.567-15.604 10.567-25.697 0-10.085-3.518-18.746-10.567-25.978L213.13 222.409z">
+                                        </path>
+                                      </svg>
+                                      <span class="cmp-menu__title">Parts and Accessories</span>
+                                    </div>
+                                    <button type="button" class="cmp-menu__close">
+                                      <svg viewBox="0 0 1024 1024" class="cmp-icon-close">
+                                        <path
+                                          d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z">
+                                        </path>
+                                        <path
+                                          d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z">
+                                        </path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="cmp-dropdown__content cmp-hamburger__menu--products_parts">
+                                    <div class="cmp-dropdown__content--products_parts">
+                                      <div class="cmp-container">
+                                        <div class="cmp-category-grid">
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="#" class="cmp-item__link">
+                                              <img src="/content/dam/breville-brands/coffee-solution/espresso.jpg"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Espresso Machine Parts</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="#" class="cmp-item__link">
+                                              <img
+                                                src="/content/dam/breville-brands/coffee-solution/TEMP-Espresso-Machine-576x576-Transparent.png"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Nespresso Machine Parts</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="cmp-category-grid__item">
+                                            <a href="#" class="cmp-item__link">
+                                              <img
+                                                src="/content/dam/breville-brands/coffee-solution/TEMP-Espresso-Machine-576x576-Transparent.png"
+                                                class="cmp-item__image" alt="">
+                                              <p class="cmp-item__title">Ovens Parts</p>
+                                            </a>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="cmp-hamburger__item">
+                                <a href="http://www.foodthinkers.com" class="cmp-hamburger__link">Recipes
+                                  <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow">
+                                    <path
+                                      d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z">
+                                    </path>
+                                  </svg>
+                                </a>
+                              </li>
+                              <!-- Country nav item dropdown -->
+
+                              <!-- Desktop view of regions and languages menu -->
+
+                              <!-- Mobile view  of regions and languages menu -->
+
+                              <li class="cmp-hamburger__item">
+                                <a href="#" class="cmp-hamburger__link cmp-hamburger_link--country">
+                                  <span class="cmp-icon">
+                                    <img class="cmp-item__icon icon-country">
+                                    <span></span>
+                                  </span>
+                                  <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow">
+                                    <path
+                                      d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="cmp-hamburger__menu-overlay cmp-hamburger__menu-overlay--country">
+                                  <div class="cmp-hamburger__menu-header">
+                                    <div class="cmp-menu_title-content">
+                                      <svg viewBox="0 0 444.531 444.531" class="cmp-icon-back " id="left-arrow">
+                                        <path
+                                          d="M213.13 222.409L351.88 83.653c7.05-7.043 10.567-15.657 10.567-25.841 0-10.183-3.518-18.793-10.567-25.835l-21.409-21.416C323.432 3.521 314.817 0 304.637 0s-18.791 3.521-25.841 10.561L92.649 196.425c-7.044 7.043-10.566 15.656-10.566 25.841s3.521 18.791 10.566 25.837l186.146 185.864c7.05 7.043 15.66 10.564 25.841 10.564s18.795-3.521 25.834-10.564l21.409-21.412c7.05-7.039 10.567-15.604 10.567-25.697 0-10.085-3.518-18.746-10.567-25.978L213.13 222.409z">
+                                        </path>
+                                      </svg>
+                                      <span class="cmp-menu__title"></span>
+                                    </div>
+                                    <button type="button" class="cmp-menu__close">
+                                      <svg viewBox="0 0 1024 1024" class="cmp-icon-close">
+                                        <path
+                                          d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z">
+                                        </path>
+                                        <path
+                                          d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z">
+                                        </path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="cmp-dropdown__content--country">
+                                    <form class="cmp-region__form">
+                                      <label class="cmp-region__label" aria-label="region-select"></label>
+                                      <select aria-labelledby="region-select-label" title="header-region-select"
+                                        class="select js-header-region-select" data-default-country-code="us"
+                                        data-default-lang-code="en" required="required">
+                                        <option data-default-url="https://www.breville.com/us/en/home/index.html"
+                                          value="us" data-default-lang-code="en" data-default-country="true"
+                                          selected="">
+                                          United States
+                                        </option>
+                                        <option data-default-url="https://www.sageappliances.com/uk/en/home/index.html"
+                                          value="uk" data-default-lang-code="en" data-default-country="false">
+                                          United Kingdom
+                                        </option>
+                                        <option data-default-url="https://www.breville.com/au/en/home/index.html"
+                                          value="au" data-default-lang-code="en" data-default-country="false">
+                                          Australia
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/de/home/index.html?reg=at"
+                                          value="at" data-default-lang-code="de" data-default-country="false">
+                                          Austria
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/nl/home/index.html?reg=be"
+                                          value="be" data-default-lang-code="nl" data-default-country="false">
+                                          Belgium
+                                        </option>
+                                        <option data-default-url="https://www.breville.com/ca/en/home/index.html"
+                                          value="ca" data-default-lang-code="en" data-default-country="false">
+                                          Canada
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/de/home/index.html?reg=de"
+                                          value="de" data-default-lang-code="de" data-default-country="false">
+                                          Deutschland
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/fr/home/index.html?reg=fr"
+                                          value="fr" data-default-lang-code="fr" data-default-country="false">
+                                          France
+                                        </option>
+                                        <option data-default-url="https://www.sageappliances.com/ie/en/home/index.html"
+                                          value="ie" data-default-lang-code="en" data-default-country="false">
+                                          Ireland
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/it/home/index.html?reg=it"
+                                          value="it" data-default-lang-code="it" data-default-country="false">
+                                          Italy
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/fr/home/index.html?reg=lu"
+                                          value="lu" data-default-lang-code="fr" data-default-country="false">
+                                          Luxembourg
+                                        </option>
+                                        <option data-default-url="https://www.breville.com/mx/es/home/index.html"
+                                          value="mx" data-default-lang-code="es" data-default-country="false">
+                                          Mexico
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/nl/home/index.html?reg=nl"
+                                          value="nl" data-default-lang-code="nl" data-default-country="false">
+                                          Netherlands
+                                        </option>
+                                        <option data-default-url="https://www.breville.com/nz/en/home/index.html"
+                                          value="nz" data-default-lang-code="en" data-default-country="false">
+                                          New Zealand
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/pt/home/index.html?reg=pt"
+                                          value="pt" data-default-lang-code="pt" data-default-country="false">
+                                          Portugal
+                                        </option>
+                                        <option
+                                          data-default-url="https://www.sageappliances.com/eu/es/home/index.html?reg=es"
+                                          value="es" data-default-lang-code="es" data-default-country="false">
+                                          Spain
+                                        </option>
+                                        <option data-default-url="https://www.sageappliances.com/ch/de/home/index.html"
+                                          value="ch" data-default-lang-code="de" data-default-country="false">
+                                          Switzerland
+                                        </option>
+                                        <option data-default-url="https://www.sageappliances.ae/ae/en/home/index.html"
+                                          value="ae" data-default-lang-code="en" data-default-country="false">
+                                          UAE
+                                        </option>
+                                      </select>
+                                      <label class="cmp-region__label" aria-label="lang-select"></label>
+                                      <select aria-labelledby="language-select-label" title="header-lang-select"
+                                        class="select js-header-lang-select" data-supported-lang="[ {
+                                            &quot;label&quot; : &quot;United States&quot;,
+                                            &quot;value&quot; : &quot;us&quot;,
+                                            &quot;countryLabel&quot; : &quot;USA&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;English&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/us/en/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.breville.com/us/en/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;United Kingdom&quot;,
+                                            &quot;value&quot; : &quot;uk&quot;,
+                                            &quot;countryLabel&quot; : &quot;&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;English&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/uk/en/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/uk/en/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Australia&quot;,
+                                            &quot;value&quot; : &quot;au&quot;,
+                                            &quot;countryLabel&quot; : &quot;AUS&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;English&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/au/en/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.breville.com/au/en/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Austria&quot;,
+                                            &quot;value&quot; : &quot;at&quot;,
+                                            &quot;countryLabel&quot; : &quot;AUT&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Deutsch&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=at&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;de&quot;,
+                                              &quot;label&quot; : &quot;Deutsch&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=at&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Belgium&quot;,
+                                            &quot;value&quot; : &quot;be&quot;,
+                                            &quot;countryLabel&quot; : &quot;BEL&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Dutch&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=be&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;de&quot;,
+                                              &quot;label&quot; : &quot;German&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=be&quot;
+                                            }, {
+                                              &quot;value&quot; : &quot;fr&quot;,
+                                              &quot;label&quot; : &quot;French&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=be&quot;
+                                            }, {
+                                              &quot;value&quot; : &quot;nl&quot;,
+                                              &quot;label&quot; : &quot;Dutch&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=be&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Canada&quot;,
+                                            &quot;value&quot; : &quot;ca&quot;,
+                                            &quot;countryLabel&quot; : &quot;CAN&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;English&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/ca/en/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.breville.com/ca/en/home/index.html&quot;
+                                            }, {
+                                              &quot;value&quot; : &quot;fr&quot;,
+                                              &quot;label&quot; : &quot;French&quot;,
+                                              &quot;url&quot; : &quot;https://www.breville.com/ca/fr/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Deutschland&quot;,
+                                            &quot;value&quot; : &quot;de&quot;,
+                                            &quot;countryLabel&quot; : &quot;DEU&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Deutsch&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=de&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;de&quot;,
+                                              &quot;label&quot; : &quot;Deutsch&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=de&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;France&quot;,
+                                            &quot;value&quot; : &quot;fr&quot;,
+                                            &quot;countryLabel&quot; : &quot;FRA&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;France&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=fr&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;fr&quot;,
+                                              &quot;label&quot; : &quot;France&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=fr&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Ireland&quot;,
+                                            &quot;value&quot; : &quot;ie&quot;,
+                                            &quot;countryLabel&quot; : &quot;IRL&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;English&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/ie/en/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/ie/en/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Italy&quot;,
+                                            &quot;value&quot; : &quot;it&quot;,
+                                            &quot;countryLabel&quot; : &quot;ITA&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Italian&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/it/home/index.html?reg=it&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;it&quot;,
+                                              &quot;label&quot; : &quot;Italian&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/it/home/index.html?reg=it&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Luxembourg&quot;,
+                                            &quot;value&quot; : &quot;lu&quot;,
+                                            &quot;countryLabel&quot; : &quot;LUX&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;French&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=lu&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;de&quot;,
+                                              &quot;label&quot; : &quot;German&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/de/home/index.html?reg=lu&quot;
+                                            }, {
+                                              &quot;value&quot; : &quot;fr&quot;,
+                                              &quot;label&quot; : &quot;French&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/fr/home/index.html?reg=lu&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Mexico&quot;,
+                                            &quot;value&quot; : &quot;mx&quot;,
+                                            &quot;countryLabel&quot; : &quot;MEX&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Spanish&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/mx/es/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;es&quot;,
+                                              &quot;label&quot; : &quot;Spanish&quot;,
+                                              &quot;url&quot; : &quot;https://www.breville.com/mx/es/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Netherlands&quot;,
+                                            &quot;value&quot; : &quot;nl&quot;,
+                                            &quot;countryLabel&quot; : &quot;NLD&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Dutch&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=nl&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;nl&quot;,
+                                              &quot;label&quot; : &quot;Dutch&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/nl/home/index.html?reg=nl&quot;
+                                            }, {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/en/home/index.html?reg=nl&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;New Zealand&quot;,
+                                            &quot;value&quot; : &quot;nz&quot;,
+                                            &quot;countryLabel&quot; : &quot;NZL&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;English&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.breville.com/nz/en/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.breville.com/nz/en/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Portugal&quot;,
+                                            &quot;value&quot; : &quot;pt&quot;,
+                                            &quot;countryLabel&quot; : &quot;PRT&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Portuguese&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/pt/home/index.html?reg=pt&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;pt&quot;,
+                                              &quot;label&quot; : &quot;Portuguese&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/pt/home/index.html?reg=pt&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Spain&quot;,
+                                            &quot;value&quot; : &quot;es&quot;,
+                                            &quot;countryLabel&quot; : &quot;ESP&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;Spanish&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/eu/es/home/index.html?reg=es&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;es&quot;,
+                                              &quot;label&quot; : &quot;Spanish&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/eu/es/home/index.html?reg=es&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;Switzerland&quot;,
+                                            &quot;value&quot; : &quot;ch&quot;,
+                                            &quot;countryLabel&quot; : &quot;CHE&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;German&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.com/ch/de/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;de&quot;,
+                                              &quot;label&quot; : &quot;German&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/ch/de/home/index.html&quot;
+                                            }, {
+                                              &quot;value&quot; : &quot;fr&quot;,
+                                              &quot;label&quot; : &quot;French&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/ch/fr/home/index.html&quot;
+                                            }, {
+                                              &quot;value&quot; : &quot;it&quot;,
+                                              &quot;label&quot; : &quot;Italian&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.com/ch/it/home/index.html&quot;
+                                            } ]
+                                          }, {
+                                            &quot;label&quot; : &quot;UAE&quot;,
+                                            &quot;value&quot; : &quot;ae&quot;,
+                                            &quot;countryLabel&quot; : &quot;ARE&quot;,
+                                            &quot;defaultLanguage&quot; : &quot;English&quot;,
+                                            &quot;defaultLanguageUrl&quot; : &quot;https://www.sageappliances.ae/ae/en/home/index.html&quot;,
+                                            &quot;language&quot; : [ {
+                                              &quot;value&quot; : &quot;en&quot;,
+                                              &quot;label&quot; : &quot;English&quot;,
+                                              &quot;url&quot; : &quot;https://www.sageappliances.ae/ae/en/home/index.html&quot;
+                                            } ]
+                                          } ]" required="required">
+                                        <option value="en" data-url="https://www.breville.com/us/en/home/index.html"
+                                          selected="">
+                                          English</option>
+                                      </select>
+                                    </form>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </header>
+                <div id="skip-nav-holder"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- /* END: PAGE HEADER -->
+
+        <!-- /* PAGE MAIN -->
+        <main class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">
+          <div id="container-250f7f0996" class="cmp-container">
+             <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                <div class="container responsivegrid cmp-container-eh-background-light-grey aem-GridColumn aem-GridColumn--default--12">
+                   <div id="container-04f1d026ce" class="cmp-container">
+                      <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+
+                        <!-- /* SEPARATOR COMPONENT -->
+                        <div class="separator cmp-separator--cs-spacer-50 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="separator-4697227697" class="cmp-separator">
+                            <hr class="cmp-separator__horizontal-rule">
+                          </div>
+                        </div>
+                        <!-- /* END: SEPARATOR COMPONENT -->
+
+                        <!-- /* CONTAINER COMPONENT -->
+                        <div class="container responsivegrid cmp-container--eh-layout-12 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="container-49f983cdea" class="cmp-container">
+
+                            <!-- /* TITLE COMPONENT -->
+                            <div class="title cmp-title--base-h2">
+                              <div data-cmp-data-layer="{&quot;title-93e7d88f6a&quot;:{&quot;@type&quot;:&quot;breville-brands/components/title&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-16T02:41:13Z&quot;,&quot;dc:title&quot;:&quot;How can we help you?&quot;}}" id="title-93e7d88f6a" class="cmp-title">
+                                <h2 class="cmp-title__text">How can we help you?</h2>
+                              </div>
+                            </div>
+                            <!-- /* END: TITLE COMPONENT -->
+                            
+                          </div>
+                        </div>
+                        <!-- /* END: CONTAINER COMPONENT -->
+
+                        <!-- /* SEPARATOR COMPONENT -->
+                        <div class="separator cmp-separator--cs-spacer-50 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="separator-4697227697" class="cmp-separator">
+                            <hr class="cmp-separator__horizontal-rule">
+                          </div>
+                        </div>
+                        <!-- /* END: SEPARATOR COMPONENT -->
+
+                        <!-- /* CONTAINER COMPONENT -->
+                        <div class="container responsivegrid cmp-container--eh-layout-8-4 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="container-2eb0603a83" class="cmp-container">
+
+                            <!-- /* REGISTERED PRODUCT COMPONENT -->
+                            <div class="registeredProducts">
+                              <div data-react-app="RegisteredProductsSupport" id="registeredProducts" class="cmp-registeredproducts" data-cmp-is="registeredproducts">
+                                <script type="application/json">
+                                  {"productGuideLink":"http://google.com/"}
+                                </script>
+                              </div>
+                            </div>
+                            <!-- /* END: REGISTERED PRODUCT COMPONENT -->
+
+                            <!-- /* TEASER COMPONENT -->
+                            <div class="teaser cmp-teaser--mybreville-support-tile">
+                              <div id="teaser-5091f458ff" class="cmp-teaser" data-cmp-data-layer="{&quot;teaser-5091f458ff&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-16T02:41:13Z&quot;,&quot;dc:title&quot;:&quot;Quick Links&quot;,&quot;dc:description&quot;:&quot;<ul>\r\n<li><a href=\&quot;https://brevilleusa.secure.force.com/reg/productregistrationWeb?param=US&amp;amp;language=en_US&amp;amp;brand=Breville\&quot;>New Product Registration</a></li>\r\n<li><a href=\&quot;https://www.breville.com/us/en/parts-accessories/clp.html\&quot;>Get Replacement Parts</a></li>\r\n<li><a href=\&quot;https://mybreville.force.com/BrevilleCustomerCommunity/s/?language=en_US&amp;amp;region=us&amp;amp;brand=breville\&quot;>Book a Machine Service</a></li>\r\n</ul>\r\n&quot;}}">
+                                <div class="cmp-teaser__content">
+                                  <h2 class="cmp-teaser__title">
+                                    Quick Links
+                                  </h2>
+                                  <div class="cmp-teaser__description">
+                                    <ul>
+                                      <li><a href="https://brevilleusa.secure.force.com/reg/productregistrationWeb?param=US&amp;language=en_US&amp;brand=Breville">New Product Registration</a></li>
+                                      <li><a href="https://www.breville.com/us/en/parts-accessories/clp.html">Get Replacement Parts</a></li>
+                                      <li><a href="https://mybreville.force.com/BrevilleCustomerCommunity/s/?language=en_US&amp;region=us&amp;brand=breville">Book a Machine Service</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /* END: TEASER COMPONENT -->
+                          </div>
+                        </div>
+                        <!-- /* END: CONTAINER COMPONENT -->
+
+                        <!-- /* CONTAINER COMPONENT -->
+                        <div class="container responsivegrid cmp-container--eh-layout-12 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="container-2eb0603a83" class="cmp-container">
+
+                            <!-- /* BUTTON MODAL LIST COMPONENT -->
+                            <div class="buttonmodallist">
+                              <div data-react-app="ButtonModalList" id="buttonModalList" class="cmp-buttonmodallist" data-cmp-is="buttonmodallist">
+                                <script type="application/json">
+                                  { 
+                                    "title" : "FAQ",
+                                    "buttonList" : [{"buttonLabel":"Shipping \u0026 Delivery","experienceFragmentPath":"#"},{"buttonLabel":"Orders \u0026 Returns","experienceFragmentPath":"#"},{"buttonLabel":"Trouble Shooting","experienceFragmentPath":"#"},{"buttonLabel":"Warranty","experienceFragmentPath":"#"},{"buttonLabel":"Registration","experienceFragmentPath":"#"},{"buttonLabel":"Machine Servicing","experienceFragmentPath":"#"}] ,
+                                    "faqButtonLink" : "https://google.com/"
+                                  }
+                                </script>
+                              </div>
+                            </div>
+                            <!-- /* END: BUTTON MODAL LIST COMPONENT -->
+
+                          </div>
+                        </div>
+                        <!-- /* END: CONTAINER COMPONENT -->
+
+                        <!-- /* CONTAINER COMPONENT -->
+                        <div class="container responsivegrid cmp-container--eh-layout-12 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="container-2abe0f9eb0" class="cmp-container">
+
+                            <!-- /* TEASER COMPONENT -->
+                            <div class="teaser cmp-teaser--mybreville-support-product-banner">
+                              <div id="teaser-9669947549" class="cmp-teaser" data-cmp-data-layer="{&quot;teaser-9669947549&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T02:50:46Z&quot;,&quot;dc:title&quot;:&quot;Product Tutorials&quot;,&quot;dc:description&quot;:&quot;<p>Explore product tutorials and learn how to setup, calibrate, use and repair your machine</p>\r\n&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}">
+                                <div class="cmp-teaser__image">
+                                  <div data-cmp-lazythreshold="0" data-cmp-src="/content/breville/language-masters/en/mybreville-support/_jcr_content/root/container/container/container_1464458814/teaser.coreimg{.width}.png/1631242246188/screen-shot-2021-03-05-at-3.36-1.png" data-asset="/content/dam/breville-brands/mybreville/Screen Shot 2021-03-05 at 3.36 1.png" id="image-9669947549" data-cmp-data-layer="{&quot;image-9669947549&quot;:{&quot;@type&quot;:&quot;breville-brands/components/image&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T02:50:46Z&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;eddebf4c-c9a9-4ba5-8684-db4e872de30c&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T02:48:06Z&quot;,&quot;@type&quot;:&quot;image/png&quot;,&quot;repo:path&quot;:&quot;/content/dam/breville-brands/mybreville/Screen Shot 2021-03-05 at 3.36 1.png&quot;,&quot;xdm:tags&quot;:[]}}}" class="cmp-image" itemscope="" itemtype="http://schema.org/ImageObject">
+                                    <img src="/content/dam/breville-brands/mybreville/Screen%20Shot%202021-03-05%20at%203.36%201.png" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image">
+                                  </div>
+                                </div>
+                                <div class="cmp-teaser__content">
+                                  <h2 class="cmp-teaser__title">
+                                    Product Tutorials
+                                  </h2>
+                                  <div class="cmp-teaser__description">
+                                    <p>Explore product tutorials and learn how to setup, calibrate, use and repair your machine</p>
+                                  </div>
+                                  <div class="cmp-teaser__action-container">
+                                    <a class="cmp-teaser__action-link" href="#" id="teaser-9669947549-cta-afc937a0e5" data-cmp-data-layer="{&quot;teaser-9669947549-cta-afc937a0e5&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser/cta&quot;,&quot;dc:title&quot;:&quot;Explore Tutorials&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}" data-cmp-clickable="">Explore Tutorials</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- /* END: TEASER COMPONENT -->
+                          </div>
+                        </div>
+                        <!-- /* END: CONTAINER COMPONENT -->
+
+                        <!-- /* SEPARATOR COMPONENT -->
+                        <div class="separator cmp-separator--cs-spacer-90 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="separator-72ec942080" class="cmp-separator">
+                            <hr class="cmp-separator__horizontal-rule">
+                          </div>
+                        </div>
+                        <!-- /* END: SEPARATOR COMPONENT -->
+
+                        <!-- /* CONTAINER COMPONENT -->
+                        <div class="container responsivegrid cmp-container--eh-layout-12 aem-GridColumn aem-GridColumn--default--12">
+                          <div id="container-a1a5b76793" class="cmp-container">
+
+                            <!-- /* TITLE COMPONENT -->
+                            <div class="title cmp-title--base-h2">
+                              <div data-cmp-data-layer="{&quot;title-fd53264368&quot;:{&quot;@type&quot;:&quot;breville-brands/components/title&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T02:07:56Z&quot;,&quot;dc:title&quot;:&quot;Need More Assistance?&quot;}}" id="title-fd53264368" class="cmp-title">
+                                <h2 class="cmp-title__text">Need More Assistance?</h2>
+                              </div>
+                            </div>
+                            <!-- /* END: TITLE COMPONENT -->
+
+                          </div>
+                        </div>
+                        <!-- /* END: CONTAINER COMPONENT -->
+
+                        <!-- /* SEPARATOR COMPONENT -->
+                        <div class="separator cmp-separator--cs-spacer-50 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0">
+                          <div id="separator-bfc4bd467f" class="cmp-separator">
+                            <hr class="cmp-separator__horizontal-rule">
+                          </div>
+                        </div>
+                        <!-- /* END: SEPARATOR COMPONENT -->
+
+                         <!-- /* CONTAINER COMPONENT -->
+                         <div class="container responsivegrid cmp-container--eh-layout-6-6 aem-GridColumn aem-GridColumn--default--12">
+                            <div id="container-0e17d73b9b" class="cmp-container">
+
+                              <!-- /* TEASER COMPONENT -->
+                               <div class="teaser cmp-teaser--mybreville-support-tile cmp-teaser--mybreville-support-tile-chat">
+                                  <div id="teaser-e660aab292" class="cmp-teaser" data-cmp-data-layer="{&quot;teaser-e660aab292&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T00:25:32Z&quot;,&quot;dc:title&quot;:&quot;Live Chat&quot;,&quot;dc:description&quot;:&quot;<p>Live Chat with one of our Breville Support Assistants</p>\r\n&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}">
+                                     <div class="cmp-teaser__content">
+                                        <h2 class="cmp-teaser__title">
+                                           Live Chat
+                                        </h2>
+                                        <div class="cmp-teaser__description">
+                                           <p>Live Chat with one of our Breville Support Assistants</p>
+                                        </div>
+                                        <div class="cmp-teaser__action-container">
+                                           <a class="cmp-teaser__action-link" href="#" id="teaser-e660aab292-cta-608461d624" data-cmp-data-layer="{&quot;teaser-e660aab292-cta-608461d624&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser/cta&quot;,&quot;dc:title&quot;:&quot;Chat Now&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}" data-cmp-clickable="">Chat Now</a>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <!-- /* END: TEASER COMPONENT -->
+
+                               <!-- /* TEASER COMPONENT -->
+                               <div class="teaser cmp-teaser--mybreville-support-tile cmp-teaser--mybreville-support-tile-call">
+                                  <div id="teaser-68151abc4f" class="cmp-teaser" data-cmp-data-layer="{&quot;teaser-68151abc4f&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T00:26:55Z&quot;,&quot;dc:title&quot;:&quot;Contact Us&quot;,&quot;dc:description&quot;:&quot;<p>1.866.273.8455</p>\r\n<p>Monday - Friday from 8AM - 4:30PM PT</p>\r\n<p>Or send us an email:&nbsp;<a href=\&quot;mailto:support@breville.com\&quot;>support@breville.com</a></p>\r\n&quot;}}">
+                                     <div class="cmp-teaser__content">
+                                        <h2 class="cmp-teaser__title">
+                                           Contact Us
+                                        </h2>
+                                        <div class="cmp-teaser__description">
+                                           <p><u>1.866.273.8455</u></p>
+                                           <p>Monday - Friday from 8AM - 4:30PM PT</p>
+                                           <p>Or send us an email:&nbsp;<a href="mailto:support@breville.com">support@breville.com</a></p>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <!-- /* END: TEASER COMPONENT -->
+
+                            </div>
+                         </div>
+                         <!-- /* END: CONTAINER COMPONENT -->
+
+                        <!-- /* CONTAINER COMPONENT -->
+                         <div class="container responsivegrid cmp-container--eh-layout-6-6 aem-GridColumn aem-GridColumn--default--12">
+                            <div id="container-46203628f1" class="cmp-container">
+
+                              <!-- /* TEASER COMPONENT -->
+                               <div class="teaser cmp-teaser--mybreville-support-tile">
+                                  <div id="teaser-a52f961ede" class="cmp-teaser" data-cmp-data-layer="{&quot;teaser-a52f961ede&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T00:27:14Z&quot;,&quot;dc:title&quot;:&quot;Have an open Inquiry?&quot;,&quot;dc:description&quot;:&quot;<p>For customers who want to update an open Breville case (must have your case number available)</p>\r\n&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}">
+                                     <div class="cmp-teaser__content">
+                                        <h2 class="cmp-teaser__title">
+                                           Have an open Inquiry?
+                                        </h2>
+                                        <div class="cmp-teaser__description">
+                                           <p>For customers who want to update an open Breville case (must have your case number available)</p>
+                                        </div>
+                                        <div class="cmp-teaser__action-container">
+                                           <a class="cmp-teaser__action-link" href="#" id="teaser-a52f961ede-cta-5561282728" data-cmp-data-layer="{&quot;teaser-a52f961ede-cta-5561282728&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser/cta&quot;,&quot;dc:title&quot;:&quot;View Open Inquiry&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}" data-cmp-clickable="">View Open Inquiry</a>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <!-- /* END: TEASER COMPONENT -->
+
+                               <!-- /* TEASER COMPONENT -->
+                               <div class="teaser cmp-teaser--mybreville-support-tile">
+                                  <div id="teaser-bbd10d0e7e" class="cmp-teaser" data-cmp-data-layer="{&quot;teaser-bbd10d0e7e&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T00:27:27Z&quot;,&quot;dc:title&quot;:&quot;Have a new Inquiry?&quot;,&quot;dc:description&quot;:&quot;<p>For customers who want to create a new type of inquiry (creating more than one inquiry will not get a faster response)</p>\r\n&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}">
+                                     <div class="cmp-teaser__content">
+                                        <h2 class="cmp-teaser__title">
+                                           Have a new Inquiry?
+                                        </h2>
+                                        <div class="cmp-teaser__description">
+                                           <p>For customers who want to create a new type of inquiry (creating more than one inquiry will not get a faster response)</p>
+                                        </div>
+                                        <div class="cmp-teaser__action-container">
+                                           <a class="cmp-teaser__action-link" href="#" id="teaser-bbd10d0e7e-cta-035fcfdea2" data-cmp-data-layer="{&quot;teaser-bbd10d0e7e-cta-035fcfdea2&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser/cta&quot;,&quot;dc:title&quot;:&quot;Create New Inquiry&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}" data-cmp-clickable="">Create New Inquiry</a>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <!-- /* END: TEASER COMPONENT -->
+
+                            </div>
+                         </div>
+                         <!-- /* END: CONTAINER COMPONENT -->
+
+                         <!-- /* CONTAINER COMPONENT -->
+                          <div class="container responsivegrid cmp-container--eh-layout-12 aem-GridColumn aem-GridColumn--default--12">
+                            <div id="container-0e17d73b9b" class="cmp-container">
+
+                              <!-- /* TEASER COMPONENT -->
+                              <div class="teaser cmp-teaser--mybreville-support-tile-with-image aem-GridColumn aem-GridColumn--default--12">
+                                <div id="teaser-1e9ca9f07c" class="cmp-teaser" data-cmp-data-layer="{&quot;teaser-1e9ca9f07c&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T00:29:12Z&quot;,&quot;dc:title&quot;:&quot;We can help you with any question&quot;,&quot;dc:description&quot;:&quot;<p>Explore our in-depth knowledge base, product guides and Instruction manuals.</p>\r\n&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}">
+                                  <div class="cmp-teaser__image">
+                                      <div data-cmp-lazythreshold="0" data-cmp-src="/content/breville/language-masters/en/testing/_jcr_content/root/container/container/teaser.coreimg{.width}.jpeg/1631233752867/beanz-subscriptions.jpeg" data-asset="/content/dam/breville-brands/mybreville/beanz-subscriptions.jpg" id="image-1e9ca9f07c" data-cmp-data-layer="{&quot;image-1e9ca9f07c&quot;:{&quot;@type&quot;:&quot;breville-brands/components/image&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-10T00:29:12Z&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;893a05cb-5024-49b2-bd85-e3ac663fadeb&quot;,&quot;repo:modifyDate&quot;:&quot;2021-09-08T03:43:09Z&quot;,&quot;@type&quot;:&quot;image/jpeg&quot;,&quot;repo:path&quot;:&quot;/content/dam/breville-brands/mybreville/beanz-subscriptions.jpg&quot;,&quot;xdm:tags&quot;:[]}}}" class="cmp-image" itemscope="" itemtype="http://schema.org/ImageObject">
+                                        <img src="/content/dam/breville-brands/mybreville/BCG400SIL_FOP__JPEG_High_Res_custom-proxy%201.png" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image">
+                                      </div>
+                                  </div>
+                                  <div class="cmp-teaser__content">
+                                      <h2 class="cmp-teaser__title">
+                                        We can help you with any question
+                                      </h2>
+                                      <div class="cmp-teaser__description">
+                                        <p>Explore our in-depth knowledge base, product guides and Instruction manuals.</p>
+                                      </div>
+                                      <div class="cmp-teaser__action-container">
+                                        <a class="cmp-teaser__action-link" href="#" id="teaser-1e9ca9f07c-cta-a7918b76b1" data-cmp-data-layer="{&quot;teaser-1e9ca9f07c-cta-a7918b76b1&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser/cta&quot;,&quot;dc:title&quot;:&quot;View Product Guides&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}" data-cmp-clickable="">View Product Guides</a>
+                                        <a class="cmp-teaser__action-link" href="#" id="teaser-1e9ca9f07c-cta-658e404292" data-cmp-data-layer="{&quot;teaser-1e9ca9f07c-cta-658e404292&quot;:{&quot;@type&quot;:&quot;breville-brands/components/teaser/cta&quot;,&quot;dc:title&quot;:&quot;Search for Specific Issue&quot;,&quot;xdm:linkURL&quot;:&quot;#&quot;}}" data-cmp-clickable="">Search for Specific Issue</a>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- /* END: TEASER COMPONENT -->
+
+                              <!-- /* END: SEPARATOR COMPONENT -->
+                              <div class="separator cmp-separator--cs-spacer-130 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0">
+                                <div id="separator-15d87d5389" class="cmp-separator">
+                                    <hr class="cmp-separator__horizontal-rule">
+                                </div>
+                              </div>
+                              <!-- /* END: SEPARATOR COMPONENT -->
+
+                            </div>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </main>
+        <!-- /* END: PAGE MAIN -->
+
+        <!-- /* PAGE FOOTER -->
+        <footer class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+          <div id="experiencefragment-d08b014174" class="cmp-experiencefragment cmp-experiencefragment--footer">
+            <div id="container-95d97d9a65" class="cmp-container">
+              <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+                <div
+                  class="container responsivegrid cmp-container--footer-top aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0">
+                  <div id="container-39eae8a1ff" class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+                      <div
+                        class="text cmp-text--footer aem-GridColumn--phone--none aem-GridColumn--phone--6 aem-GridColumn aem-GridColumn--default--newline aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
+                        <div
+                          data-cmp-data-layer="{&quot;text-e729715289&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-18T14:51:27Z&quot;,&quot;xdm:text&quot;:&quot;<p><a href=\&quot;https://support.breville.com/us/\&quot;>Product</a></p>\r\n&quot;}}"
+                          id="text-e729715289" class="cmp-text">
+                          <p><a href="https://support.breville.com/us/">Product</a></p>
+                        </div>
+                      </div>
+                      <div
+                        class="text cmp-text--footer aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--6 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
+                        <div
+                          data-cmp-data-layer="{&quot;text-1c8f4e9536&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-18T14:51:52Z&quot;,&quot;xdm:text&quot;:&quot;<p><a href=\&quot;https://support.breville.com/us/\&quot;>Parts &amp;amp; Accessories</a></p>\r\n&quot;}}"
+                          id="text-1c8f4e9536" class="cmp-text">
+                          <p><a href="https://support.breville.com/us/">Parts &amp; Accessories</a></p>
+
+                        </div>
+                      </div>
+                      <div
+                        class="text cmp-text--footer-left-align aem-GridColumn--default--none aem-GridColumn--phone--6 aem-GridColumn--offset--phone--3 aem-GridColumn--phone--newline aem-GridColumn aem-GridColumn--offset--default--1 aem-GridColumn--default--1">
+                        <div
+                          data-cmp-data-layer="{&quot;text-6412248ff4&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-16T11:10:29Z&quot;,&quot;xdm:text&quot;:&quot;<p><a href=\&quot;https://support.breville.com/us/\&quot;>Troubleshoot</a></p>\r\n&quot;}}"
+                          id="text-6412248ff4" class="cmp-text">
+                          <p><a href="https://support.breville.com/us/">Troubleshoot</a></p>
+                        </div>
+                      </div>
+                      <div
+                        class="text cmp-text--black-background aem-GridColumn--default--none aem-GridColumn--phone--12 aem-GridColumn--phone--newline aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--1">
+                        <div
+                          data-cmp-data-layer="{&quot;text-a374733ca9&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-04-01T08:46:28Z&quot;,&quot;xdm:text&quot;:&quot;<p><a title=\&quot;Newsletter\&quot; id=\&quot;signup-modal-btn\&quot; href=\&quot;/content/breville/language-masters/en.html\&quot; target=\&quot;_self\&quot;>Sign up for Newsletter</a></p>\r\n&quot;}}"
+                          id="text-a374733ca9" class="cmp-text">
+                          <p><a title="Newsletter" id="signup-modal-btn"
+                              href="/content/breville/language-masters/en.html" target="_self">Sign up for
+                              Newsletter</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container responsivegrid cmp-container--footer-middle aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0">
+                  <div id="container-327147fc28" class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+                      <div
+                        class="container responsivegrid cmp-container--footer-logo aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--10 aem-GridColumn aem-GridColumn--offset--phone--1 aem-GridColumn--default--3 aem-GridColumn--offset--default--1">
+                        <div id="container-a95455722c" class="cmp-container">
+                          <div class="aem-Grid aem-Grid--3 aem-Grid--default--3 aem-Grid--phone--10 ">
+                            <div
+                              class="text cmp-text--footer aem-GridColumn--phone--hide aem-GridColumn aem-GridColumn--default--newline aem-GridColumn--phone--2 aem-GridColumn--offset--phone--2 aem-GridColumn--offset--default--0 aem-GridColumn--default--1">
+                              <div
+                                data-cmp-data-layer="{&quot;text-a8526e51e8&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-17T09:36:47Z&quot;,&quot;xdm:text&quot;:&quot;<p>Follow Us:</p>\r\n&quot;}}"
+                                id="text-a8526e51e8" class="cmp-text">
+                                <p>Follow Us:</p>
+                              </div>
+                            </div>
+                            <div
+                              class="image aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--offset--phone--2 aem-GridColumn--offset--default--0 aem-GridColumn--default--1 aem-GridColumn--phone--1">
+                              <div data-cmp-lazythreshold="0"
+                                data-cmp-src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/image.coreimg{.width}.svg/1620632755806/facebook.svg"
+                                data-asset="/content/dam/breville/global/logos/facebook.svg"
+                                data-asset-id="c3904850-25fb-4afa-b7a6-bacb14bde9ed" id="image-dcbb7d2364"
+                                data-cmp-data-layer="{&quot;image-dcbb7d2364&quot;:{&quot;@type&quot;:&quot;breville-brands/components/image&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-17T05:22:34Z&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;c3904850-25fb-4afa-b7a6-bacb14bde9ed&quot;,&quot;repo:modifyDate&quot;:&quot;2021-05-10T07:45:55Z&quot;,&quot;@type&quot;:&quot;image/svg+xml&quot;,&quot;repo:path&quot;:&quot;/content/dam/breville/global/logos/facebook.svg&quot;,&quot;xdm:tags&quot;:[]}}}"
+                                class="cmp-image" itemscope="" itemtype="http://schema.org/ImageObject">
+                                <img
+                                  src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/image.coreimg.svg/1620632755806/facebook.svg"
+                                  class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image">
+                              </div>
+                            </div>
+                            <div
+                              class="image aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--1 aem-GridColumn--phone--1">
+                              <div data-cmp-lazythreshold="0"
+                                data-cmp-src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/Copy%20of%20Copy%20of%20image.coreimg{.width}.svg/1620632755806/facebook.svg"
+                                data-asset="/content/dam/breville/global/logos/facebook.svg"
+                                data-asset-id="c3904850-25fb-4afa-b7a6-bacb14bde9ed" id="image-cea1c989f5"
+                                data-cmp-data-layer="{&quot;image-cea1c989f5&quot;:{&quot;@type&quot;:&quot;breville-brands/components/image&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-17T05:22:59Z&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;c3904850-25fb-4afa-b7a6-bacb14bde9ed&quot;,&quot;repo:modifyDate&quot;:&quot;2021-05-10T07:45:55Z&quot;,&quot;@type&quot;:&quot;image/svg+xml&quot;,&quot;repo:path&quot;:&quot;/content/dam/breville/global/logos/facebook.svg&quot;,&quot;xdm:tags&quot;:[]}}}"
+                                class="cmp-image" itemscope="" itemtype="http://schema.org/ImageObject">
+                                <img
+                                  src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/Copy%20of%20Copy%20of%20image.coreimg.svg/1620632755806/facebook.svg"
+                                  class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image">
+                              </div>
+                            </div>
+                            <div
+                              class="image aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--1 aem-GridColumn--phone--1">
+                              <div data-cmp-lazythreshold="0"
+                                data-cmp-src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/Copy%20of%20Copy%20of%20Copy%20of%20image.coreimg{.width}.svg/1620632755806/facebook.svg"
+                                data-asset="/content/dam/breville/global/logos/facebook.svg"
+                                data-asset-id="c3904850-25fb-4afa-b7a6-bacb14bde9ed" id="image-801705df05"
+                                data-cmp-data-layer="{&quot;image-801705df05&quot;:{&quot;@type&quot;:&quot;breville-brands/components/image&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-17T05:23:09Z&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;c3904850-25fb-4afa-b7a6-bacb14bde9ed&quot;,&quot;repo:modifyDate&quot;:&quot;2021-05-10T07:45:55Z&quot;,&quot;@type&quot;:&quot;image/svg+xml&quot;,&quot;repo:path&quot;:&quot;/content/dam/breville/global/logos/facebook.svg&quot;,&quot;xdm:tags&quot;:[]}}}"
+                                class="cmp-image" itemscope="" itemtype="http://schema.org/ImageObject">
+                                <img
+                                  src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/Copy%20of%20Copy%20of%20Copy%20of%20image.coreimg.svg/1620632755806/facebook.svg"
+                                  class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image">
+                              </div>
+                            </div>
+                            <div
+                              class="image aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--1 aem-GridColumn--phone--1">
+                              <div data-cmp-lazythreshold="0"
+                                data-cmp-src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/Copy%20of%20Copy%20of%20Copy%20of%20Copy%20of%20image.coreimg{.width}.svg/1620632755806/facebook.svg"
+                                data-asset="/content/dam/breville/global/logos/facebook.svg"
+                                data-asset-id="c3904850-25fb-4afa-b7a6-bacb14bde9ed" id="image-ba0b1d31c5"
+                                data-cmp-data-layer="{&quot;image-ba0b1d31c5&quot;:{&quot;@type&quot;:&quot;breville-brands/components/image&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-17T05:23:09Z&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;c3904850-25fb-4afa-b7a6-bacb14bde9ed&quot;,&quot;repo:modifyDate&quot;:&quot;2021-05-10T07:45:55Z&quot;,&quot;@type&quot;:&quot;image/svg+xml&quot;,&quot;repo:path&quot;:&quot;/content/dam/breville/global/logos/facebook.svg&quot;,&quot;xdm:tags&quot;:[]}}}"
+                                class="cmp-image" itemscope="" itemtype="http://schema.org/ImageObject">
+                                <img
+                                  src="/content/experience-fragments/breville/language-masters/en/site/footer/master/_jcr_content/root/Copy%20of%20container_copy/container/Copy%20of%20Copy%20of%20Copy%20of%20Copy%20of%20image.coreimg.svg/1620632755806/facebook.svg"
+                                  class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="container responsivegrid cmp-container--footer-list aem-GridColumn--default--none aem-GridColumn--phone--12 aem-GridColumn--phone--newline aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--1">
+                        <div id="container-8231590244" class="cmp-container">
+                          <div class="aem-Grid aem-Grid--6 aem-Grid--default--6 aem-Grid--phone--12 ">
+                            <div
+                              class="text cmp-text--vertical-link-list aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--phone--4 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
+                              <div
+                                data-cmp-data-layer="{&quot;text-0fda911f91&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-16T11:35:34Z&quot;,&quot;xdm:text&quot;:&quot;<ul>\r\n<li><a href=\&quot;https://brevillegroup.com/\&quot;>Breville Group Limited</a></li>\r\n<li><a href=\&quot;https://www.beanz.com/us/en.html\&quot;>Beanz Coffee Subscription</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Remanufactured Sales</a></li>\r\n</ul>\r\n&quot;}}"
+                                id="text-0fda911f91" class="cmp-text">
+                                <ul>
+                                  <li><a href="https://brevillegroup.com/">Breville Group Limited</a></li>
+                                  <li><a href="https://www.beanz.com/us/en.html">Beanz Coffee Subscription</a></li>
+                                  <li><a href="https://remanufactured.brevilleusa.com/">Remanufactured Sales</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div
+                              class="text cmp-text--vertical-link-list aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--phone--4 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
+                              <div
+                                data-cmp-data-layer="{&quot;text-a0dbe17827&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-18T15:12:37Z&quot;,&quot;xdm:text&quot;:&quot;<p>Learn More</p>\r\n<ul>\r\n<li><a href=\&quot;https://brevillegroup.com/\&quot;>About Us</a></li>\r\n<li><a href=\&quot;https://www.beanz.com/us/en.html\&quot;>Patents</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Find a Retailer</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Breville Affiliate</a></li>\r\n</ul>\r\n&quot;}}"
+                                id="text-a0dbe17827" class="cmp-text">
+                                <p>Learn More</p>
+                                <ul>
+                                  <li><a href="https://brevillegroup.com/">About Us</a></li>
+                                  <li><a href="https://www.beanz.com/us/en.html">Patents</a></li>
+                                  <li><a href="https://remanufactured.brevilleusa.com/">Find a Retailer</a></li>
+                                  <li><a href="https://remanufactured.brevilleusa.com/">Breville Affiliate</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div
+                              class="text cmp-text--vertical-link-list aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--phone--4 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
+                              <div
+                                data-cmp-data-layer="{&quot;text-9d7764724c&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-18T15:14:15Z&quot;,&quot;xdm:text&quot;:&quot;<p>Breville Support</p>\r\n<ul>\r\n<li><a href=\&quot;https://brevillegroup.com/\&quot;>Warranty</a></li>\r\n<li><a href=\&quot;https://www.beanz.com/us/en.html\&quot;>Register a Product</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Returns Policy</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Support</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Retailer Terms and Conditions</a></li>\r\n</ul>\r\n&quot;}}"
+                                id="text-9d7764724c" class="cmp-text">
+                                <p>Breville Support</p>
+                                <ul>
+                                  <li><a href="https://brevillegroup.com/">Warranty</a></li>
+                                  <li><a href="https://www.beanz.com/us/en.html">Register a Product</a></li>
+                                  <li><a href="https://remanufactured.brevilleusa.com/">Returns Policy</a></li>
+                                  <li><a href="https://remanufactured.brevilleusa.com/">Support</a></li>
+                                  <li><a href="https://remanufactured.brevilleusa.com/">Retailer Terms and
+                                      Conditions</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container responsivegrid cmp-container--footer-bottom aem-GridColumn aem-GridColumn--default--12">
+                  <div id="container-8689b28f2a" class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+                      <div
+                        class="text cmp-text-copyright-link-list aem-GridColumn--phone--none aem-GridColumn aem-GridColumn--default--newline aem-GridColumn--phone--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--1 aem-GridColumn--default--2">
+                        <div
+                          data-cmp-data-layer="{&quot;text-8a4c458a60&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-16T11:57:50Z&quot;,&quot;xdm:text&quot;:&quot;<p>© 2021 Breville USA, Inc. All rights reserved.</p>\r\n&quot;}}"
+                          id="text-8a4c458a60" class="cmp-text">
+                          <p>© 2021 Breville USA, Inc. All rights reserved.</p>
+                        </div>
+                      </div>
+                      <div
+                        class="text aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--7 aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--default--3 aem-GridColumn--offset--phone--0">
+                        <div
+                          data-cmp-data-layer="{&quot;text-ba1837ff85&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-18T15:16:09Z&quot;,&quot;xdm:text&quot;:&quot;<ul>\r\n<li><a href=\&quot;https://brevillegroup.com/\&quot;>Terms of Use</a></li>\r\n<li><a href=\&quot;https://www.beanz.com/us/en.html\&quot;>Privacy Policy</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Cookie Policy</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Social Responsibility</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Modern Slavery Act</a></li>\r\n<li><a href=\&quot;https://remanufactured.brevilleusa.com/\&quot;>Site Map</a></li>\r\n</ul>\r\n&quot;}}"
+                          id="text-ba1837ff85" class="cmp-text">
+                          <ul>
+                            <li><a href="https://brevillegroup.com/">Terms of Use</a></li>
+                            <li><a href="https://www.beanz.com/us/en.html">Privacy Policy</a></li>
+                            <li><a href="https://remanufactured.brevilleusa.com/">Cookie Policy</a></li>
+                            <li><a href="https://remanufactured.brevilleusa.com/">Social Responsibility</a></li>
+                            <li><a href="https://remanufactured.brevilleusa.com/">Modern Slavery Act</a></li>
+                            <li><a href="https://remanufactured.brevilleusa.com/">Site Map</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container responsivegrid cmp-container--signup-success aem-GridColumn aem-GridColumn--default--12">
+                  <div id="container-aac65dade1" class="cmp-container">
+                    <div class="text cmp-text--popup-title">
+                      <div
+                        data-cmp-data-layer="{&quot;text-183a446757&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:11:34Z&quot;,&quot;xdm:text&quot;:&quot;<p>You are one step away!</p>\r\n&quot;}}"
+                        id="text-183a446757" class="cmp-text">
+                        <p>You are one step away!</p>
+                      </div>
+                    </div>
+                    <div class="text cmp-text--popup-body-text">
+                      <div
+                        data-cmp-data-layer="{&quot;text-59d8c1cb33&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:12:21Z&quot;,&quot;xdm:text&quot;:&quot;<p>Thanks for providing your information. In order to complete your subscription, please check your email to validate your address.</p>\r\n&quot;}}"
+                        id="text-59d8c1cb33" class="cmp-text">
+                        <p>Thanks for providing your information. In order to complete your subscription, please check
+                          your email to validate your address.</p>
+                      </div>
+                    </div>
+                    <div class="button cmp-btn--popup-close-btn">
+                      <button type="button" class="cmp-button button-0b4ef1a3a9" data-cmp-clickable=""
+                        data-cmp-data-layer="{&quot;button-0b4ef1a3a9&quot;:{&quot;@type&quot;:&quot;breville-brands/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:12:27Z&quot;,&quot;dc:title&quot;:&quot;Close&quot;}}">
+                        <span class="cmp-button__text">Close</span>
+                      </button>
+                    </div>
+                    <div class="button cmp-btn--popup-close-icon-btn">
+                      <button type="button" class="cmp-button button-871371e44b" data-cmp-clickable=""
+                        data-cmp-data-layer="{&quot;button-871371e44b&quot;:{&quot;@type&quot;:&quot;breville-brands/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:09:31Z&quot;}}">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container responsivegrid cmp-container--signup-failure aem-GridColumn aem-GridColumn--default--12">
+                  <div id="container-c8c4a1a65d" class="cmp-container">
+                    <div class="text cmp-text--popup-title">
+                      <div
+                        data-cmp-data-layer="{&quot;text-12b03d15f6&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:10:37Z&quot;,&quot;xdm:text&quot;:&quot;<p>oops!</p>\r\n&quot;}}"
+                        id="text-12b03d15f6" class="cmp-text">
+                        <p>oops!</p>
+                      </div>
+                    </div>
+                    <div class="text cmp-text--popup-body-text">
+                      <div
+                        data-cmp-data-layer="{&quot;text-46d0d411d2&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:10:47Z&quot;,&quot;xdm:text&quot;:&quot;<p>Something went wrong!</p>\r\n&quot;}}"
+                        id="text-46d0d411d2" class="cmp-text">
+                        <p>Something went wrong!</p>
+                      </div>
+                    </div>
+                    <div class="button cmp-btn--popup-close-btn">
+                      <button type="button" class="cmp-button button-d733465204" data-cmp-clickable=""
+                        data-cmp-data-layer="{&quot;button-d733465204&quot;:{&quot;@type&quot;:&quot;breville-brands/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:10:56Z&quot;,&quot;dc:title&quot;:&quot;Close&quot;}}">
+                        <span class="cmp-button__text">Close</span>
+                      </button>
+                    </div>
+                    <div class="button cmp-btn--popup-close-icon-btn">
+                      <button type="button" class="cmp-button button-bc5d435c28" data-cmp-clickable=""
+                        data-cmp-data-layer="{&quot;button-bc5d435c28&quot;:{&quot;@type&quot;:&quot;breville-brands/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-23T10:10:12Z&quot;}}">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container responsivegrid cmp-form-container--signup aem-GridColumn aem-GridColumn--default--12"
+                  style="display: none;">
+                  <form method="POST" action="/content/breville/language-masters/en/my-breville/mybreville-test.html"
+                    id="form-container--signup" name="form-container--signup" enctype="multipart/form-data"
+                    class="cmp-form aem-Grid aem-Grid--12 aem-Grid--default--12">
+                    <input type="hidden" name=":formstart"
+                      value="/content/experience-fragments/breville/language-masters/en/site/footer/master/jcr:content/root/container_167">
+                    <input type="hidden" name="_charset_" value="utf-8">
+                    <div class="text cmp-text--popup-title aem-GridColumn aem-GridColumn--default--12">
+                      <div
+                        data-cmp-data-layer="{&quot;text-56e58d9284&quot;:{&quot;@type&quot;:&quot;breville-brands/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2021-04-01T10:31:05Z&quot;,&quot;xdm:text&quot;:&quot;<h3>Breville Emails</h3>\r\n<p class=\&quot;cmp-text__subtitle\&quot;>join our community</p>\r\n<p class=\&quot;cmp-text__description\&quot;>Get&amp;nbsp;emails from Breville about recipes, tips &amp;amp; techniques, and other product innovation news. You can unsubscribe at any time.&amp;nbsp;<a href=\&quot;https://www.breville.com/us/en/legal/privacy-policy.html\&quot;>View Breville's Privacy Policy</a></p>\r\n&quot;}}"
+                        id="text-56e58d9284" class="cmp-text">
+                        <h3>Breville Emails</h3>
+                        <p class="cmp-text__subtitle">join our community</p>
+                        <p class="cmp-text__description">Get&nbsp;emails from Breville about recipes, tips &amp;
+                          techniques, and other product innovation news. You can unsubscribe at any time.&nbsp;<a
+                            href="https://www.breville.com/us/en/legal/privacy-policy.html">View Breville's Privacy
+                            Policy</a></p>
+                      </div>
+                    </div>
+                    <div class="text cmp-form-text--signup-first-name aem-GridColumn aem-GridColumn--default--12">
+                      <div class="cmp-form-text">
+                        <label for="form-text-396919387">Firstname</label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text"
+                          id="form-text-396919387" name="Firstname">
+                      </div>
+                    </div>
+                    <div class="text cmp-form-text--signup-last-name aem-GridColumn aem-GridColumn--default--12">
+                      <div class="cmp-form-text">
+                        <label for="form-text-45629012">Lastname</label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text"
+                          id="form-text-45629012" name="Lastname">
+                      </div>
+                    </div>
+                    <div class="text cmp-form-text--signup-email aem-GridColumn aem-GridColumn--default--12">
+                      <div class="cmp-form-text" data-cmp-required-message="Email required !!">
+                        <label for="form-text-556743826">Email </label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text"
+                          id="form-text-556743826" name="Email" required="">
+                      </div>
+                    </div>
+                    <div class="button aem-GridColumn aem-GridColumn--default--12">
+                      <button type="BUTTON" id="form-button-341635548" class="cmp-form-button" name="Sign Up">Sign
+                        Up</button>
+                    </div>
+                    <div class="button aem-GridColumn aem-GridColumn--default--12">
+                      <button type="button" class="cmp-button button-cda613c1ed" aria-label="Close"
+                        data-cmp-clickable=""
+                        data-cmp-data-layer="{&quot;button-cda613c1ed&quot;:{&quot;@type&quot;:&quot;breville-brands/components/button&quot;,&quot;repo:modifyDate&quot;:&quot;2021-03-16T09:56:38Z&quot;,&quot;dc:title&quot;:&quot;Close&quot;}}">
+                        <span class="cmp-button__text">Close</span>
+                      </button>
+                    </div>
+                    <div class="hidden aem-GridColumn aem-GridColumn--default--12">
+                      <input type="hidden" id="form-hidden-501835860" name="Brand" value="Breville">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- /* END: PAGE FOOTER -->
+      </div>
+    </div>
+
+    <script src="/etc.clientlibs/breville-brands/clientlibs/clientlib-dependencies.min.js"></script>
+    <!--/* <script src="/etc.clientlibs/breville-brands/clientlibs/clientlib-breville-site.min.js"></script> */-->
+    <script src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.js"></script>
+    <script src="/etc.clientlibs/breville-brands/clientlibs/clientlib-base.min.js"></script>
+</body>
+
+</html>

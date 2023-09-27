@@ -1,0 +1,14 @@
+@import 'container-content-tiles-base';
+
+.cmp-container--content-tiles {
+  @extend %multimedia-base;
+
+  .cmp-container {
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    @media (min-width: $screen-lg) {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+}

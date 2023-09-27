@@ -1,0 +1,11 @@
+.cmp-container--height-sm {
+  > .cmp-container:first-child {
+    @media (min-width: $screen-md) {
+      min-height: 37.5rem;
+    }
+    @media (min-width: $screen-xxxl) {
+      min-height: 50rem;
+    }
+  }
+}
+

@@ -1,0 +1,61 @@
+.mobile-filter-select {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $cs-white;
+  z-index: 10;
+  padding: 0 $cs-spacing-15;
+
+  %common-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $cs-spacing-25 0;
+    border-bottom: 1px solid $cs-color-gray-40;
+  }
+
+  .mobile-filter-select__header {
+    @extend %common-style;
+
+    .mobile-filter-select__left {
+      display: flex;
+      align-items: center;
+
+      .mobile-filter-select__back-btn {
+        @extend %arrow-right-icon;
+        background-color: $cs-black;
+        // * make the '<' arrow slightly larger than default
+        width: 0.6rem;
+        height: 0.9rem;
+        transform: rotate(180deg);
+        cursor: pointer;
+      }
+
+      .mobile-filter-select__title {
+        @extend %cs-font-h2;
+        margin-bottom: 0;
+        margin-left: $cs-spacing-15;
+        text-transform: capitalize;
+      }
+    }
+
+    .mobile-filter-select__cancel {
+      @extend %close-icon;
+      background-color: $cs-black;
+      cursor: pointer;
+    }
+  }
+
+  .mobile-filter-select__body {
+    padding: $cs-spacing-25 0;
+  }
+
+  .mobile-filter-select__apply-btn {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - #{$cs-spacing-15}* 2);
+    margin: $cs-spacing-25 auto;
+  }
+}

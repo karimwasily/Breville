@@ -1,0 +1,33 @@
+.variant-thumbnail {
+  --size: #{$cs-spacing-70} !important;
+  --insetSize: #{$cs-spacing-50};
+  --gap: #{$cs-spacing-15} !important;
+  @extend %variant-picker-base;
+  position: unset !important;
+  @media (min-width: $cs-screen-md) {
+    --size: #{$cs-spacing-70} !important;
+    --insetSize: #{$cs-spacing-60};
+    --gap: #{$cs-spacing-15} !important;
+  }
+  
+
+  .variant-thumbnail__item {   
+    margin-right: var(--gap);
+
+    .variant-btn {
+      img {
+        width: var(--size);
+        height: 73px;
+           
+      }
+
+      // double inset ring
+      &--selected {
+        img {
+          width: var(--insetSize);
+          height: var(--insetSize);      
+        }
+      }
+    }
+  }
+}

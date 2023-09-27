@@ -1,0 +1,60 @@
+.my-orders__filter-options-wrapper {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: $cs-spacing-25;
+  padding: $cs-spacing-40 $cs-spacing-60 $cs-spacing-50;
+
+  background-color: $cs-whitesmoke;
+  box-shadow: 0 100px 50px 20px rgba(0, 0, 0, 0.05);
+
+  @media(min-width: $cs-screen-xl) {
+    flex-direction: row-reverse;
+  }
+
+  .my-orders__close-button {
+    @extend %cs-font-p-2;
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+    padding-top: $cs-spacing-5;
+
+    white-space: nowrap;
+
+
+    background-color: unset;
+    border: 0 none;
+    outline: 0 none;
+    cursor: pointer;
+
+    @media(min-width: $cs-screen-xl) {
+      display: block;
+    }
+
+    &-text {
+      display: none;
+
+      @media(min-width: $cs-screen-xl) {
+        display: inline-block;
+      }
+    }
+
+    &-icon {
+      @extend %close-icon;
+      width: 0.6875rem;
+      height: 0.6875rem;
+      margin-right: $cs-spacing-10;
+
+      background-color: $cs-gunmetal;
+    }
+  }
+
+  .my-orders__filter-options {
+    width: 100%;
+  }
+
+}

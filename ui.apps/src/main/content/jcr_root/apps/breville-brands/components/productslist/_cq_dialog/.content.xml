@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Products List"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        size="L">
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Products List Inputs"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <skus
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Author SKUs">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./objectIDList">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="SKU"
+                                            name="text"
+                                            required="{Boolean}true">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                cmp-teaser-v1-dialog-edit-hook="actionTitle"/>
+                                        </text>
+                                    </items>
+                                </field>
+                            </skus>
+                            <tileTitles
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Titles for product tiles">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./tileTitles">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="Product Tile Title"
+                                            name="text"
+                                            required="{Boolean}true">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                cmp-teaser-v1-dialog-edit-hook="actionTitle"/>
+                                        </text>
+                                    </items>
+                                </field>
+                            </tileTitles>
+                            <algoliaindex
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                emptyText="Breville_BUS"
+                                fieldLabel="Provide the Algolia Index Name"
+                                name="./indexName"/>
+                            <limit
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldDescription="Number of products tiles to be displayed from response."
+                                fieldLabel="Limit Number of Product Tiles"
+                                max="100"
+                                min="1"
+                                name="./limit"
+                                step="1"
+                                value="${not empty cqDesign.startLevel ? cqDesign.startLevel : 2}"/>
+                            <useCoffeeProductTile
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Use the coffee product tiles instead"
+                                name="./useCoffeeProductTile"
+                                text="Use Coffee Product Tiles Instead"
+                                checked="{Boolean}false"
+                                value="true"/>
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>

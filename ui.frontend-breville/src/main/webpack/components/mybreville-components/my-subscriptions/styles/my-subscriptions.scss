@@ -1,0 +1,43 @@
+.mybreville__my_subscriptions {
+  $circle-padding: $cs-spacing-5 + $cs-spacing-3;
+
+  .subscription-strip {
+    @extend %cs-font-p-bold;
+    display: flex;
+    flex-direction: row;
+    min-width: 235px;
+    margin-top: $cs-spacing-50;
+    margin-bottom: $cs-spacing-30;
+    padding-bottom: $cs-spacing-20;
+
+    border-bottom: 1px solid $cs-light-grey;
+ 
+    %subscritpions-count {
+      @extend %cs-font-p-5;
+      margin-left: $circle-padding;
+      padding: $cs-spacing-3 $circle-padding;
+
+      color: $cs-white;
+      font-weight: $cs-font-weight-bold;
+
+      background-color: $cs-monsoon;
+      border: 1px solid $cs-monsoon;
+      border-radius: 50%;
+    } 
+
+    .subscription-count {
+      @extend %subscritpions-count;
+    }
+
+    .cancel-subscription-count {
+      @extend %subscritpions-count;
+      background-color: $cs-gunmetal;
+
+      border: 1px solid $cs-gunmetal;
+    }
+  }
+
+  .no-subscriptions {
+    @extend %cs-font-p-bold;
+  }
+}

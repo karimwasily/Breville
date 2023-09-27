@@ -1,0 +1,372 @@
+////////////////////
+// TYPOGRAPHY
+////////////////////
+$cs-font-size-base: cs-rem(16px);
+$cs-font-size-medium: cs-rem(18px);
+$cs-font-size-small: cs-rem(14px);
+$cs-font-size-xsmall: cs-rem(12px);
+
+$cs-font-family: 'Archer-Book', sans-serif;
+$cs-font-family-bold: 'Archer-Ssm', sans-serif;
+$cs-font-family-italic: 'ArcherSSm-BookItalic', sans-serif;
+$cs-font-family-paragraph: 'Helvetica-Neue', Arial, -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+
+$cs-font-size-h1: cs-rem(55px);
+$cs-font-size-h1-mobile: cs-rem(35px);
+$cs-line-height-h1: 1.09;
+$cs-line-height-h1-mobile: 1.14;
+
+$cs-font-size-h2: cs-rem(35px);
+$cs-font-size-h2-mobile: cs-rem(25px);
+$cs-line-height-h2: 1.2;
+$cs-line-height-h2-mobile: 1.28;
+
+$cs-font-size-h3: cs-rem(35px);
+$cs-font-size-h3-mobile: cs-rem(25px);
+$cs-line-height-h3: 1.14;
+$cs-line-height-h3-mobile: 1.28;
+
+$cs-font-size-h4: cs-rem(30px);
+$cs-font-size-h4-mobile: cs-rem(20px);
+$cs-line-height-h4: 1.27;
+$cs-line-height-h4-mobile: 1.3;
+
+$cs-font-size-h5: cs-rem(30px);
+$cs-line-height-h5: 1.2;
+
+$cs-font-size-h6: cs-rem(24px);
+$cs-line-height-h6: 1.33;
+
+$cs-font-size-h7: cs-rem(21px);
+$cs-line-height-h7: 1.43;
+
+$cs-font-size-h8: cs-rem(22px);
+$cs-font-size-h8-mobile: cs-rem(18px);
+$cs-line-height-h8: 1.36;
+$cs-line-height-h8-mobile: 1.44;
+
+$cs-font-size-h9: cs-rem(18px);
+$cs-line-height-h9: 1.44;
+$cs-font-size-h9-mobile: cs-rem(14px);
+$cs-line-height-h9-mobile: 1.57;
+
+$cs-font-size-h10: cs-rem(18px);
+$cs-line-height-h10: 1.44;
+$cs-font-size-h10-mobile: cs-rem(16px);
+$cs-line-height-h10-mobile: 1.5;
+
+$cs-font-size-h12-mobile: cs-rem(16px);
+$cs-line-height-h12-mobile: 1.5;
+$cs-font-size-h12: cs-rem(20px);
+$cs-line-height-h12: 1.4;
+
+$cs-font-size-h13: cs-rem(22px);
+$cs-line-height-h13: 1.36;
+
+$cs-font-size-h14: cs-rem(24px);
+$cs-line-height-h14: 1.33;
+
+$cs-line-height-medium: 1.44;
+$cs-line-height-xsmall: 1;
+$cs-line-height-p: 1.5;
+
+$cs-line-height-testimonial: 1.65;
+
+$cs-font-weight-normal: 400;
+$cs-font-weight-medium: 500; // unconfirmed
+$cs-font-weight-semi-bold: 600; // unconfirmed
+$cs-font-weight-bold: 700;
+
+%cs-font-h1 {
+  font-family: $cs-font-family;
+  font-size: $cs-font-size-h1-mobile;
+  line-height: $cs-line-height-h1-mobile;
+  font-weight: $cs-font-weight-normal;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h1;
+    line-height: $cs-line-height-h1;
+  }
+}
+
+%cs-font-h2 {
+  font-family: $cs-font-family-bold;
+  font-size: $cs-font-size-h2-mobile;
+  font-weight: $cs-font-weight-bold;
+  line-height: $cs-line-height-h2-mobile;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h2;
+    line-height: $cs-line-height-h2;
+  }
+}
+
+%cs-font-h3 {
+  font-family: $cs-font-family;
+  font-size: $cs-font-size-h3-mobile;
+  line-height: $cs-line-height-h3-mobile;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h3;
+    line-height: $cs-line-height-h3;
+  }
+}
+
+%cs-font-h4 {
+  font-family: $cs-font-family-bold;
+  font-size: $cs-font-size-h4-mobile;
+  font-weight: $cs-font-weight-bold;
+  line-height: $cs-line-height-h4-mobile;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h4;
+    line-height: $cs-line-height-h4;
+  }
+}
+
+%cs-font-h5 {
+  font-family: $cs-font-family;
+  font-size: $cs-font-size-h5;
+  line-height: $cs-line-height-h5;
+}
+
+%cs-font-h6 {
+  font-family: $cs-font-family-bold;
+  font-size: $cs-font-size-h6;
+  font-weight: $cs-font-weight-bold;
+  line-height: $cs-line-height-h6;
+}
+
+%cs-font-h7 {
+  font-family: $cs-font-family-bold;
+  font-size: $cs-font-size-h7;
+  font-weight: $cs-font-weight-bold;
+  line-height: $cs-line-height-h7;
+}
+
+// Helvetica Neue Regular - Normal - 22px (Desktop) - 18px (Mobile)
+%cs-font-h8 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-h8-mobile;
+  line-height: $cs-line-height-h8-mobile;
+  font-weight: $cs-font-weight-bold;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h8;
+    line-height: $cs-line-height-h8;
+  }
+}
+
+// Helvetica Neue Regular - Bold - 22px (Desktop) - 18px (Mobile)
+%cs-font-h8-bold {
+  @extend %cs-font-h8;
+  font-weight: $cs-font-weight-bold;
+}
+
+// Helvetica Neue Regular - Normal - 18px (Desktop) - 14px (Mobile)
+%cs-font-h9 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-h9-mobile;
+  line-height: $cs-line-height-h9-mobile;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h9;
+    line-height: $cs-line-height-h9;
+  }
+}
+
+// Title with 18 and 16px
+%cs-font-h10 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-h10-mobile;
+  line-height: $cs-line-height-h10-mobile;
+  
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h10;
+    line-height: $cs-line-height-h10;
+  }
+}
+
+// paragraph with viewport
+%cs-font-h11 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-small;
+  line-height: $cs-line-height-p;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-base;
+  }
+}
+
+
+%cs-font-h12-bold {
+  font-family: $cs-font-family-bold;
+  font-size: $cs-font-size-h12-mobile;
+  line-height: $cs-line-height-h12-mobile;
+  font-weight: $cs-font-weight-bold;
+  
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h12;
+    line-height: $cs-line-height-h12;
+  }
+}
+
+%cs-font-h12-medium {
+  font-family: $cs-font-family;
+  font-size: $cs-font-size-h12-mobile;
+  line-height: $cs-line-height-h12-mobile;
+  font-weight: $cs-font-weight-medium;
+  
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h12;
+    line-height: $cs-line-height-h12;
+  }
+}
+
+// Helvetica Neue Bold - Normal - 22px (Desktop & Mobile)
+%cs-font-h13 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-h13;
+  font-weight: $cs-font-weight-bold;
+  line-height: $cs-line-height-h13;
+}
+
+// Helvetica Neue Bold - Normal - 24px (Desktop & Mobile)
+%cs-font-h14 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-h14;
+  font-weight: $cs-font-weight-bold;
+  line-height: $cs-line-height-h14;
+}
+
+
+// Title with 16 and 12px
+%cs-font-h15 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-xsmall;
+  line-height: $cs-line-height-p;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-base;
+  }
+}
+
+
+
+
+// Paragraphs
+
+// Helvetica Neue Regular - Normal - Desktop-18px - Mobile-16px
+%cs-font-p {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-base;
+  line-height: $cs-line-height-medium;
+  
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-medium;
+  }
+}
+
+// Helvetica Neue Regular - Bold - Desktop-18px - Mobile-16px
+%cs-font-p-bold {
+  @extend %cs-font-p;
+  font-weight: $cs-font-weight-bold;
+}
+
+// Helvetica Neueu Regular - Normal - 14px on Mobile - 16px on Desktop
+%cs-font-p-2 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-small;
+  line-height: $cs-line-height-p;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-base; 
+  }
+}
+// Helvetica Neueu Regular - Bold - 14px on Mobile - 16px on Desktop
+%cs-font-p-2-bold {
+  @extend %cs-font-p-2;
+  font-weight: $cs-font-weight-bold;
+}
+
+// Archer - Normal - 16px
+%cs-font-p-3 {
+  font-family: $cs-font-family;
+  font-size: $cs-font-size-base;
+  line-height: $cs-line-height-p;
+}
+
+%cs-font-small-p {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-xsmall;
+  line-height: $cs-line-height-p;
+}
+
+// Helvetica Neueu Regular - Normal - 14px
+%cs-font-p-4 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-small;
+  line-height: $cs-line-height-p;
+}
+
+// Helvetica Neueu Regular - Normal - 14px - bold
+%cs-font-p-4-bold {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-bold;
+}
+
+// Helvetica Neueu Regular - Normal - 14px on mobile - 16px on desktop
+%cs-font-p-price {
+  @extend %cs-font-p-4; 
+
+  @media (min-width: $screen-md) {
+    font-size: $cs-font-size-base;
+  }
+
+}
+
+// Helvetica Neueu Regular - Normal - 12px
+%cs-font-p-5 {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-xsmall;
+  line-height: $cs-line-height-p;
+}
+
+// Helvetica Neueu Regular - Normal - Desktop-16px - mobile-14px
+%cs-font-p-6 {
+  @extend %cs-font-p-4;
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-base;
+  }
+}
+
+// Helvetica Neueu Regular - Normal - Desktop-16px - mobile-14px- bold
+%cs-font-p-6-bold {
+  @extend %cs-font-p-6;
+  font-weight: $cs-font-weight-bold;
+}
+
+
+// Testimonial (carousel)
+%cs-font-testimonial {
+  font-family: $cs-font-family-italic;
+  font-size: $cs-font-size-base;
+  font-weight: $cs-font-weight-normal;
+  line-height: $cs-line-height-testimonial;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-h6;
+    line-height: $cs-line-height-p;
+  }
+}
+
+// Bundle Tiles unique case where paragraph text shrinks on mobile
+%cs-font-bundle-tiles {
+  font-family: $cs-font-family-paragraph;
+  font-size: $cs-font-size-small;
+  line-height: $cs-line-height-p;
+
+  @media (min-width: $cs-screen-md) {
+    font-size: $cs-font-size-base;
+  }
+}

@@ -1,0 +1,110 @@
+//== XF Footer style, used on page template
+footer.experiencefragment {
+  border-top: 1px solid $color-foreground;
+  background-color: $jaguar;
+  padding: 15px 0;
+
+  .cmp-separator__horizontal-rule {
+    margin: 0;
+    border: 0;
+  }
+
+  .cmp-experiencefragment--footer {
+    padding: 0 20px;
+  }
+
+  .image {
+    img {
+      max-width: 110px;
+      cursor: pointer;
+      width: auto;
+    }
+  }
+
+  .cmp-text--vertical-link-list {
+    padding: 30px 0;
+    padding-right: 15px;
+
+    &__list {
+      position: relative;
+      padding-top: 15px;
+      @media (min-width: 992px) {
+        width: 16.6666666667%;
+        float: left;
+      }
+    }
+
+    p {
+      color: $white;
+      margin: 5px 0;
+      text-transform: capitalize;
+      font-family: $font-family-primary;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-normal;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-family: $font-family-primary;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-normal;
+
+        a {
+          color: $roman;
+          line-height: $line-height-medium;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .cmp-text-copyright-link-list {
+    padding-top: 30px;
+    font-family: $font-family-primary;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    color: $white;
+    font-size: $font-size-xsmall;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      line-height: $line-height-base;
+      list-style: none;
+
+      li {
+        position: relative;
+        display: inline-block;
+        color: $white;
+
+        &:not(:last-child)::after {
+          content: '|';
+          margin: 0 5px;
+        }
+
+        a {
+          color: $white;
+          font-size: $font-size-xsmall;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .cmp-container--footer-buttons {
+    padding-top: $spacing-lg;
+
+    .text {
+      p {
+        color: $white;
+        font-family: $font-family-primary;
+        letter-spacing: $letter-spacing-base;
+        font-size: $font-size-xsmall;
+      }
+    }
+  }
+}

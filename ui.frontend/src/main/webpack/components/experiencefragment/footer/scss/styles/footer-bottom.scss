@@ -1,0 +1,59 @@
+.cmp-experiencefragment--footer-bottom {
+  .cmp-container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-auto-flow: dense;
+    gap: $spacing-xs;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-xs;
+    margin: auto;
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: auto auto;
+      gap: $spacing-md;
+    }
+    @media (min-width: $screen-xl) {
+      padding: $spacing-xs $spacing-xxl;
+      max-width: $screen-xl;
+    }
+    @media (min-width: $screen-xxl) {
+      max-width: $screen-xxl;
+    }
+
+    .cmp-text {
+      p {
+        font-size: $font-size-xs;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      @media (min-width: $screen-xl) {
+        justify-content: flex-end;
+      }
+
+      li {
+        padding-right: $spacing-md;
+        flex: inherit;
+
+        a {
+          color: $light-violet;
+
+          &:hover {
+            color: $white;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    div:first-child {
+      order: 2;
+      @media (min-width: $screen-md) {
+        order: inherit;
+      }
+    }
+  }
+}

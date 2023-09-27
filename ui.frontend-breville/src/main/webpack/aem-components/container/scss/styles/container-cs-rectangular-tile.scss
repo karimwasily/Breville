@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+.cmp-container--rectangular-tile {
+  margin: auto;
+
+  .cmp-container {
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); // Evenly space the two column layout
+    gap: $cs-spacing-15;
+    max-width: $cs-max-width;
+    margin: 0 auto $cs-spacing-45;
+    padding-right: $cs-spacing-15;
+    padding-left: $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+
+      grid-template-columns: repeat(4, minmax(0, 1fr)); // Evenly space the four column layout
+      margin: 0 auto $cs-spacing-60;
+      padding-right: $cs-spacing-35;
+
+      padding-left: $cs-spacing-35;
+    }
+  }
+}

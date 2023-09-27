@@ -1,0 +1,12 @@
+.cmp-container--background-light-grey {
+  background-color: #f2f2f2;
+  padding: 0 25px;
+
+  .cmp-teaser--image-top {
+    margin: 0;
+
+    @media (min-width: $screen-md) {
+      margin: 0 0.625rem;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+// AEM Environment Indicator configurations
+{
+  "PID": "com.adobe.acs.commons.wcm.impl.AemEnvironmentIndicatorFilter",
+  "always-include-base-css":"false",
+  "browser-title-prefix":"Breville Stage Instance",
+  "excluded-wcm-modes":"",
+  "css-color":"Orange",
+  "always-include-color-css":"false",
+  "inner-html":"Stage Instance",
+  "css-override":"#acs-commons-env-indicator {background-color:blue;color:#FFF;position:fixed;right:10px;bottom:0;width:125px; }"
+}

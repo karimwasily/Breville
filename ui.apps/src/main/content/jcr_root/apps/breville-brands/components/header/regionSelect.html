@@ -1,0 +1,156 @@
+<template data-sly-template.regionSelect="${ @ switch, type}">
+   <!-- Desktop view of regions and languages menu -->
+   <sly data-sly-test="${type =='mainmenu'}">
+      <li class="cmp-navigation__item cmp-navigation__item--country visible-xl-up">
+         <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+            <span class="cmp-item__content"><img src="${properties.countryFlag}" class="cmp-item__icon icon-country"
+                  alt="${properties.countryLabel}" />
+               <span class="cmp-navigation__title">${properties.countryLabel}</span>
+            </span>
+         </button>
+         <div class="cmp-dropdown__menu" role="menu">
+            <div class="cmp-dropdown__content--country">
+               <form action="" class="cmp-region__form">
+                  <label class="cmp-region__label" aria-label="Select region">${properties.regionLabel}</label>
+                  <select class="cmp-region__select cmp-region__region-select--desktop" title="region-select"
+                     data-default-country-code="${switch.currentCountryCode}"
+                     data-default-lang-code="${switch.currentLanguageCode}" required="required">
+                     <sly data-sly-list.outer="${switch.countriesLanguageList}">
+                        <sly data-sly-list.inner="${outer.language}">
+                           <sly data-sly-test="${inner.label == outer.defaultLanguage}">
+                              <option data-default-url="${outer.defaultLanguageUrl}" value="${outer.value}"
+                                 data-default-url="${outer.defaultLanguageUrl}"
+                                 data-sly-attribute.selected="${outer.value == switch.currentCountryCode}"
+                                 data-sly-attribute.data-default-country="${outer.value == switch.currentCountryCode ? 'true' : 'false'}"
+                                 data-sly-attribute.data-default-lang-code="${inner.value}">
+                                 ${outer.label @i18n}
+                              </option>
+                           </sly>
+                        </sly>
+                     </sly>
+                  </select>
+                  <label class="cmp-region__label" aria-label="lang-select">${properties.languageLabel}</label>
+                  <select class="cmp-region__select cmp-region__language-select--desktop" title="lang-select"
+                     data-supported-lang="${switch.regionLanguageJson}" required="required">
+                     <sly data-sly-test="${properties.isRegion}">
+                        <sly data-sly-list.outer="${switch.regionLanguage}">
+                           <sly data-sly-test="${outer.value == switch.currentCountryCode}">
+                              <sly data-sly-list.inner="${outer.language}">
+                                 <option value="${inner.value}" data-url="${inner.url}"
+                                    data-sly-attribute.selected="${inner.value == switch.currentLanguageCode}">
+                                    ${inner.label @i18n}
+                                 </option>
+                              </sly>
+                           </sly>
+                        </sly>
+                     </sly>
+                     <sly data-sly-test="${!properties.isRegion}">
+                        <sly data-sly-list.outer="${switch.countriesLanguageList}">
+                           <sly data-sly-list.inner="${outer.language}">
+                              <sly data-sly-test="${outer.value == switch.currentCountryCode}">
+                                 <sly data-sly-list.inner="${outer.language}">
+                                    <option value="${inner.value}" data-url="${inner.url}"
+                                       data-sly-attribute.selected="${inner.value == switch.currentLanguageCode}">
+                                       ${inner.label
+                                       @i18n}</option>
+                                 </sly>
+                              </sly>
+                           </sly>
+                        </sly>
+                     </sly>
+                  </select>
+               </form>
+            </div>
+         </div>
+      </li>
+   </sly>
+   <!-- Mobile view  of regions and languages menu -->
+   <sly data-sly-test="${type =='hamburger'}">
+      <li class="cmp-hamburger__item region_hamburger_menu_item">
+        <a href='#' class="cmp-hamburger__link cmp-hamburger_link--country">
+          <span class="cmp-icon">
+              <img src="${properties.countryFlag}" class="cmp-item__icon icon-country"
+                alt="${properties.countryLabel}" />
+              <span>${properties.countryLabel}</span>
+          </span>
+          <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow">
+              <path
+                d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z">
+              </path>
+          </svg>
+        </a>
+        <div class="cmp-hamburger__menu-overlay cmp-hamburger__country-overlay">
+          <div class="cmp-hamburger__menu-header cmp-hamburger__menu-header--region">
+              <div class="cmp-menu_title-content">
+                <svg viewBox="0 0 444.531 444.531" class="cmp-icon-back " id="left-arrow">
+                    <path
+                      d="M213.13 222.409L351.88 83.653c7.05-7.043 10.567-15.657 10.567-25.841 0-10.183-3.518-18.793-10.567-25.835l-21.409-21.416C323.432 3.521 314.817 0 304.637 0s-18.791 3.521-25.841 10.561L92.649 196.425c-7.044 7.043-10.566 15.656-10.566 25.841s3.521 18.791 10.566 25.837l186.146 185.864c7.05 7.043 15.66 10.564 25.841 10.564s18.795-3.521 25.834-10.564l21.409-21.412c7.05-7.039 10.567-15.604 10.567-25.697 0-10.085-3.518-18.746-10.567-25.978L213.13 222.409z">
+                    </path>
+                </svg>
+                <span class="cmp-menu__title">${properties.mobileHeaderLabel}</span>
+              </div>
+              <button type="button" class="cmp-menu__close">
+                <svg viewBox="0 0 1024 1024" class="cmp-icon-close">
+                    <path
+                      d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z">
+                    </path>
+                    <path
+                      d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z">
+                    </path>
+                </svg>
+              </button>
+          </div>
+          <div class="cmp-dropdown__content cmp-dropdown__content--country">
+              <form class="cmp-region__form">
+                <label class="cmp-region__label" aria-label="region-select">${properties.regionLabel}</label>
+                <select aria-labelledby="region-select-label" title="header-region-select"
+                    class="cmp-region__select cmp-region__region-select--mobile" data-default-country-code="${switch.currentCountryCode}"
+                    data-default-lang-code="${switch.currentLanguageCode}" required="required">
+                    <sly data-sly-list.outer="${switch.countriesLanguageList}">
+                      <sly data-sly-list.inner="${outer.language}">
+                          <sly data-sly-test="${inner.label == outer.defaultLanguage}">
+                            <option data-default-url="${outer.defaultLanguageUrl}" value="${outer.value}"
+                                data-default-url="${outer.defaultLanguageUrl}"
+                                data-sly-attribute.selected="${outer.value == switch.currentCountryCode}"
+                                data-sly-attribute.data-default-country="${outer.value == switch.currentCountryCode ? 'true' : 'false'}"
+                                data-sly-attribute.data-default-lang-code="${inner.value}">
+                                ${outer.label @i18n}
+                            </option>
+                          </sly>
+                      </sly>
+                    </sly>
+                </select>
+                <label class="cmp-region__label" aria-label="lang-select">${properties.languageLabel}</label>
+                <select aria-labelledby="language-select-label" title="header-lang-select"
+                    class="cmp-region__select cmp-region__language-select--mobile" data-supported-lang="${switch.regionLanguageJson}"
+                    required="required">
+                    <sly data-sly-test="${switch.isRegion}">
+                      <sly data-sly-list.outer="${switch.regionLanguage}">
+                          <sly data-sly-test="${outer.value == switch.currentCountryCode}">
+                            <sly data-sly-list.inner="${outer.language}">
+                                <option value="${inner.value}" data-url="${inner.url}"
+                                  data-sly-attribute.selected="${inner.value == switch.currentLanguageCode}">
+                                  ${inner.label @i18n}
+                                </option>
+                            </sly>
+                          </sly>
+                      </sly>
+                    </sly>
+                    <sly data-sly-test="${!switch.isRegion}">
+                      <sly data-sly-list.outer="${switch.countriesLanguageList}">
+                          <sly data-sly-test="${outer.value == switch.currentCountryCode}">
+                            <sly data-sly-list.inner="${outer.language}">
+                                <option value="${inner.value}" data-url="${inner.url}"
+                                  data-sly-attribute.selected="${inner.value == switch.currentLanguageCode}">
+                                  ${inner.label @i18n}</option>
+                            </sly>
+                          </sly>
+                      </sly>
+                    </sly>
+                </select>
+              </form>
+          </div>
+        </div>
+      </li>
+   </sly>
+</template>

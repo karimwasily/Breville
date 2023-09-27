@@ -1,0 +1,45 @@
+.my-orders__filter-dropdown {
+  .my-orders__filter-controller {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    cursor: pointer;
+
+    .my-orders__filter-controller-button {
+      @extend %cs-font-bundle-tiles;
+      padding: 0 0 $cs-spacing-5 !important;
+
+      .my-orders__filter-controller-icon {
+        @extend %arrow-down-selectbox;
+        margin-left: $cs-spacing-5;
+        padding-bottom: $cs-spacing-5;
+
+        content: '';         
+      }
+    }
+
+    &--active {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+
+      border-bottom: 1px solid $cs-gunmetal;
+
+      .my-orders__filter-controller-button {
+        @extend %cs-font-bundle-tiles;
+        padding: 0 !important;   
+          
+      }
+
+      .my-orders__filter-controller-icon {
+        @extend %arrow-down-selectbox;
+        padding-bottom: $cs-spacing-5;
+
+        transform: rotate(-180deg);
+
+        content: '';         
+      }
+    }
+  }
+}

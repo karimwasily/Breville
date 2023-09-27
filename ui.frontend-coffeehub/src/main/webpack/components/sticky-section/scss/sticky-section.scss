@@ -1,0 +1,42 @@
+.aem-AuthorLayer-Edit {
+  .cmp-sticky-section {
+    &__content--float {
+      display: hidden;
+    }
+  }
+}
+
+.cmp-sticky-section {
+  max-width: $max-width;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  &__top {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+
+    .cmp-secondary-navigation__group      {
+    }
+  }
+
+  &__content {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 10000;
+    transition: opacity 600ms linear;
+  }
+
+  &__content--float {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 600ms linear;
+  }
+}

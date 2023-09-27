@@ -1,0 +1,285 @@
+{
+  "bundleDiscountPercentage": 20,
+  "numOfCoffeeBags": 12,
+  "questionnaire": {
+    "questionAnswers": [
+      {
+        "serial": "1/4",
+        "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+        "imageAltText": "Quiz image",
+        "customClass": "cmp-questionnaire--q1",
+        "facet": "WEB_ESPRESSO_en_US",
+        "question": "What kind of coffee brewer are you at home?",
+        "answers": [
+          {
+            "ansText": "I love espresso",
+            "ansId": "1",
+            "ansHeading": "Espresso",
+            "ansDescription": "i love espresso",
+            "facetAnswer": "yes"
+          },
+          {
+            "ansText": "It's drip or pourover coffee for me",
+            "ansId": "2",
+            "ansHeading": "drip",
+            "ansDescription": "drip or pour",
+            "facetAnswer": "no"
+          }
+        ]
+      },
+      {
+        "serial": "2/4",
+        "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+        "imageAltText": "Quiz image",
+        "customClass": "cmp-questionnaire--q1",
+        "facet": "WEB_FLAVOURNOTES_en_US",
+        "question": "What flavors do you look for in your coffee beans?",
+        "answers": [
+          {
+            "ansText": "Chocolate and caramel",
+            "ansId": "1",
+            "ansHeading": "cream",
+            "ansDescription": "cream",
+            "facetAnswer": "Chocolate | Caramel"
+          },
+          {
+            "ansText": "Citrus and floral",
+            "ansId": "2",
+            "ansHeading": "Citrus",
+            "ansDescription": "Citrus and floral",
+            "facetAnswer": "Citrus | Floral"
+          },
+          {
+            "ansText": "Nutty and spice",
+            "ansId": "3",
+            "ansHeading": "Nutty",
+            "ansDescription": "Nutty and Spice",
+            "facetAnswer": "Nutty | Spice"
+          },
+          {
+            "ansText": "Fruity",
+            "ansId": "4",
+            "ansHeading": "Fruity",
+            "ansDescription": "Fruity",
+            "facetAnswer": "Fruity"
+          },
+          {
+            "ansText": "I can't decide! Let's skip this question.",
+            "ansId": "5",
+            "ansHeading": "Fruity",
+            "ansDescription": "Fruity",
+            "facetAnswer": "any"
+          }
+        ]
+      },
+      {
+        "serial": "3/4",
+        "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+        "imageAltText": "Quiz image",
+        "customClass": "cmp-questionnaire--q1",
+        "facet": "WEB_BEST_en_US",
+        "question": "Any particular way you like to serve your brew?",
+        "answers": [
+          {
+            "ansText": "I like it black.",
+            "ansId": "1",
+            "ansHeading": "Black",
+            "ansDescription": "Black",
+            "facetAnswer": "as Black Coffee"
+          },
+          {
+            "ansText": "Milk or a non-dairy milk alternative is best for me.",
+            "ansId": "2",
+            "ansHeading": "Milk",
+            "ansDescription": "Milk",
+            "facetAnswer": "with Milk"
+          },
+          {
+            "ansText": "Cream and sugar, all the way.",
+            "ansId": "3",
+            "ansHeading": "Cream",
+            "ansDescription": "Cream sugar",
+            "facetAnswer": "with Cream and Sugar"
+          },
+          {
+            "ansText": "All of the above! Let's skip this question.",
+            "ansId": "4",
+            "ansHeading": "Any Flavour",
+            "ansDescription": "Any Flavour",
+            "facetAnswer": "any"
+          }
+        ]
+      },
+      {
+        "serial": "4/4",
+        "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+        "imageAltText": "Quiz image",
+        "customClass": "cmp-questionnaire--q1",
+        "facet": "WEB_DECAF_en_US",
+        "question": "Caffeine or decaf?",
+        "answers": [
+          {
+            "ansText": "Give me the buzz, please.",
+            "ansId": "1",
+            "ansHeading": "buzz",
+            "ansDescription": "buzz1",
+            "facetAnswer": "no"
+          },
+          {
+            "ansText": "Decaf's how I like it.",
+            "ansId": "2",
+            "ansHeading": "decaf",
+            "ansDescription": "decaf",
+            "facetAnswer": "yes"
+          }
+        ]
+      }
+    ]
+  },
+  "roasters": [
+    {
+      "id": "VEN31327",
+      "title": "Onyx",
+      "primaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/single-origin.jpg",
+      "primaryImgAlt": "Onyx Right Image",
+      "description": "Onyx takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/breville-brands/coffee-solution/beanz-page/logo-onyx.png",
+      "brandImgAlt": "Onyx",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31847",
+      "title": "Verve",
+      "primaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/barista.jpg",
+      "primaryImgAlt": "Verve Right Image",
+      "description": "Onyx takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/breville-brands/coffee-solution/beanz-page/logo-verve.png",
+      "brandImgAlt": "Verve",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31826",
+      "title": "Joe",
+      "primaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/barista.jpg",
+      "primaryImgAlt": "Joe Right Image",
+      "description": "Joe takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/breville-brands/coffee-solution/beanz-page/logo-joecoffee.png",
+      "brandImgAlt": "Joe",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31827",
+      "title": "Bluestone",
+      "primaryImg": "/content/dam/marketplace/us/roasting-brands/roasters/roaster-images/onyx-coffee-lab/newonyx.dna2.jpg",
+      "primaryImgAlt": "Bluestone Right Image",
+      "description": "Bluestone takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/marketplace/us/roasting-brands/roasters/OnyxCoffeeLab_200.jpg",
+      "brandImgAlt": "Bluestone",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31829",
+      "title": "Equator",
+      "primaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/barista.jpg",
+      "primaryImgAlt": "Equator Right Image",
+      "description": "Equator takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/breville-brands/coffee-solution/beanz-page/logo-equator.png",
+      "brandImgAlt": "Equator",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31828",
+      "title": "Coffee-Project-NY",
+      "primaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/barista.jpg",
+      "primaryImgAlt": "Coffee-Project-NY Right Image",
+      "description": "Coffee-Project-NY takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/breville-brands/coffee-solution/beanz-page/logo-coffeeproject.png",
+      "brandImgAlt": "Coffee-Project-NY",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31676",
+      "title": "Portola",
+      "primaryImg": "/content/dam/marketplace/us/roasting-brands/roasters/roaster-images/onyx-coffee-lab/newonyx.dna2.jpg",
+      "primaryImgAlt": "Portola Right Image",
+      "description": "Portola takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/marketplace/us/roasting-brands/roasters/OnyxCoffeeLab_200.jpg",
+      "brandImgAlt": "Portola",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31830",
+      "title": "Camber",
+      "primaryImg": "/content/dam/marketplace/us/roasting-brands/roasters/roaster-images/onyx-coffee-lab/newonyx.dna2.jpg",
+      "primaryImgAlt": "Camber Right Image",
+      "description": "Camber takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/marketplace/us/roasting-brands/roasters/OnyxCoffeeLab_200.jpg",
+      "brandImgAlt": "Camber",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31825",
+      "title": "KLLR",
+      "primaryImg": "/content/dam/marketplace/us/roasting-brands/roasters/roaster-images/onyx-coffee-lab/newonyx.dna2.jpg",
+      "primaryImgAlt": "KLLR Right Image",
+      "description": "KLLR takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/marketplace/us/roasting-brands/roasters/OnyxCoffeeLab_200.jpg",
+      "brandImgAlt": "KLLR",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31878",
+      "title": "Olympia",
+      "primaryImg": "/content/dam/marketplace/us/roasting-brands/roasters/roaster-images/onyx-coffee-lab/newonyx.dna2.jpg",
+      "primaryImgAlt": "Olympia Right Image",
+      "description": "Onyx takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/marketplace/us/roasting-brands/roasters/OnyxCoffeeLab_200.jpg",
+      "brandImgAlt": "Olympia",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31831",
+      "title": "Madcap",
+      "primaryImg": "/content/dam/marketplace/us/roasting-brands/roasters/roaster-images/onyx-coffee-lab/newonyx.dna2.jpg",
+      "primaryImgAlt": "Madcap Right Image",
+      "description": "Onyx takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/marketplace/us/roasting-brands/roasters/OnyxCoffeeLab_200.jpg",
+      "brandImgAlt": "Onyx",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    },
+    {
+      "id": "VEN31188",
+      "title": "Klatch",
+      "primaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/single-origin.jpg",
+      "primaryImgAlt": "KlatchRight Image",
+      "description": "Klatch takes the concept of coffee transparency to great lengths, publishing their roasting and trade data on their website for curious customers to read over. They roast sustainably sourced coffees every weekday from their carbon-neutral, solar-powered facility, and live by the motto \"Never Settle for Good Enough\"",
+      "location": "Roastery\r\n101 E Walnut Ave\r\nRogers, AR 72756",
+      "brandImg": "/content/dam/breville-brands/coffee-solution/beanz-page/logo-klatch.png",
+      "brandImgAlt": "Onyx",
+      "secondaryImg": "/content/dam/breville-brands/coffee-solution/beanz-page/brooklyn.jpg",
+      "secondaryImgAlt": "Location alt text"
+    }
+  ]
+}

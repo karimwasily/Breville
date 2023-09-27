@@ -1,0 +1,158 @@
+.cmp-mybreville__edit-address {
+  max-width: 750px;
+
+  .cmp-address__grid {
+    padding: 0;
+  }
+
+  .cmp-link {
+    margin-bottom: $cs-spacing-25;
+    @media (min-width: $screen-md) {
+      margin-top: $cs-spacing-20;
+      margin-bottom: $cs-spacing-40;
+    }  
+  
+    .link {
+      @extend %cs-font-p-6-bold;
+      padding-left: 0;
+    }
+  }
+
+  
+  .cmp-form--buttons {
+    display: flex;
+    gap: $cs-spacing-10;
+  
+    .cmp-button {
+      @extend %cs-font-p-2-bold;
+      width: 100% !important;
+      height: 54px;
+
+      color: $cs-gunmetal;
+      font-size: $cs-font-size-base;
+      text-align: center;
+
+      background: transparent;
+      border-color: $cs-gunmetal !important;
+    }
+
+    .cmp-button:hover {
+      color: $white;
+
+      background-color: $cs-dark-purple;
+    }
+  
+    .form-button {
+      width: 100% !important;
+      height: 54px;
+      margin-top: 0;
+    }
+  
+    .button-text {
+      padding: 0;
+    }
+  }
+  
+  .cmp-container-address {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-xs;
+    @media (min-width:$screen-md) {
+      display: flex;
+    }
+  
+    .ml-10 {
+      margin-left: 0 !important;
+      @media (min-width:$screen-md) {
+        margin-left: unset;          
+      }
+    }  
+  }
+}
+
+// for the remove address modal
+.remove-address__modal {
+  overflow-y: auto;
+}
+
+.remove-address__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: Rgba(0, 0, 0, 0.5);
+
+  @media (min-width: $screen-md) {
+    justify-content: center;
+  }
+}
+
+.remove-address__container {
+  position: relative;
+
+  max-width: 500px;
+  padding: $cs-spacing-50 $cs-spacing-30;
+
+  background-color: $cs-white;
+
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-50;
+  }
+  
+  .remove-address__header {
+    margin-bottom: $cs-spacing-20;
+
+    .remove-address__title {
+      @extend %cs-font-h4;
+    }
+
+    .remove-address__close-icon {
+      position: absolute;
+      top: $cs-spacing-20;
+      right: $cs-spacing-20;
+      @media (min-width: $cs-screen-md) {
+        top: $cs-spacing-40;
+        right: $cs-spacing-40;
+      }
+    }
+  }
+
+  .remove-address__content {
+    @extend %cs-font-p-2;
+    margin-bottom: $cs-spacing-30;
+  }
+
+  .remove-address__footer {
+    .remove-address__button-wrapper {
+      display: flex;
+      gap: $cs-spacing-10;
+      justify-content: center;
+      padding: 0;
+
+      button {
+        width: 100%;
+        padding: $cs-spacing-15 !important;
+        @media (min-width: $cs-screen-md) {
+          width: 50%;
+        }
+      }
+    
+      .remove-address__button--cancel {
+        @extend %cs-button-purple-large; 
+        
+      }
+
+      .remove-address__button--remove {
+        @extend %cs-button-purple-fill-large; 
+      }
+    }
+  }
+}

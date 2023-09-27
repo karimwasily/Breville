@@ -1,0 +1,102 @@
+.beanzRoasters__root {
+  background-color: $seashell;
+  
+  .cmp-container-roasters__container {
+    max-width: $max-width;
+    margin: auto;
+    display: block;
+    padding: $spacing-xl $spacing-md;
+    @include breakpoint-up (lg) {
+      padding: $spacing-xl $spacing-xxs;
+    }
+
+    @include breakpoint-up (xl) {
+      padding: $spacing-xl $spacing-xxs;
+    }
+
+    .cmp-container-roasters__content--row {
+      display: flex;
+      flex-wrap: wrap;
+      width: auto;
+      margin-left: -$spacing-xs;
+      margin-right: -$spacing-xs;
+      justify-content: center;
+      @include breakpoint-up (lg) {
+        margin-left: -$spacing-xs;
+        margin-right: -$spacing-xs;
+      }
+  
+      .cmp-container-roasters__content--col {
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 50%;
+        padding: $spacing-xs;
+        @include breakpoint-up (md) {
+          flex: 0 0 33.33%;
+          max-width: 33.33%;
+          width: 33.33%;
+        }
+        @include breakpoint-up (lg) {
+          flex: 0 0 25%;
+          max-width: 25%;
+          width: 25%;
+          padding: $spacing-ml;
+        }
+  
+        .cmp-card-roasters__item {
+          display: block;
+          padding: $spacing-md;
+          width: 100%;
+          border-radius: $border-radius-12px;
+          box-shadow: $card-box-shadow;
+          background-color: $white;
+          text-align: center;
+          padding: $spacing-xs;
+          @include breakpoint-up (md) {
+            padding: $spacing-ml;
+          }
+  
+          .cmp-image-roasters__item--img {
+            width: 100%;
+            padding: $spacing-xs;
+            max-width: 110px;
+            margin-top: $spacing-xs;
+            object-fit: contain;
+            @include breakpoint-up (md) {
+              max-width: 150px;
+              padding: $spacing-md;
+              margin-top: 0;
+            }
+            @include breakpoint-up (lg) {
+              max-width: 220px;
+            }
+          }
+          
+          .cmp-text-roasters__item--title,
+          .cmp-text-roasters__item--sub-title {
+            margin-bottom: 0;
+            height: 35px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            @include breakpoint-up (md) {
+              height: 40px;
+            }
+            @include breakpoint-up (lg) {
+              height: 60px;
+            }
+          }
+
+          .cmp-text-roasters__item--title {
+            @extend %font-roaster-title;
+          }
+  
+          .cmp-text-roasters__item--sub-title {
+            @extend %font-roaster-sub-title;
+          }
+        }
+      }
+    }
+  }
+}

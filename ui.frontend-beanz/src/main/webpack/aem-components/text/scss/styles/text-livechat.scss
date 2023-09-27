@@ -1,0 +1,18 @@
+.cmp-text--livechat {
+  .cmp-text {
+    p {
+      font-size: $font-size-xsmall;
+      font-family: $font-family-secondary;
+      color: $text;
+      letter-spacing: $letter-spacing-base;
+      line-height: $line-height-small;
+      margin: 4rem 0 0;
+      @include breakpoint-up (md) {
+        font-size: $font-size;
+      }
+      @include breakpoint-up (lg) {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+}

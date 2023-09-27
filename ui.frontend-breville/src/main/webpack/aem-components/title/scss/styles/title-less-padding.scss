@@ -1,0 +1,8 @@
+.cmp-title--less-padding {
+  padding: $cs-spacing-30 0 $cs-spacing-15; // 30px top, 0px left/right, 15px bottom
+  
+  .cmp-title__text {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}

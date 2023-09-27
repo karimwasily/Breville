@@ -1,0 +1,237 @@
+.mobile-filter-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $cs-white;
+
+  %common-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $cs-color-gray-40;
+  }
+
+  .mobile-filter-menu__header {
+    @extend %common-style;
+    margin-right: $cs-spacing-15;
+    margin-left: $cs-spacing-15;
+    padding: $cs-spacing-25 0;
+
+    .mobile-filter-menu__title {
+      @extend %cs-font-h2;
+      margin-bottom: 0;
+    }
+
+    .mobile-filter-menu__cancel {
+      @extend %close-icon;
+      background-color: $cs-black;
+      cursor: pointer;
+    }
+  }
+
+  .mobile-filter-menu__list {
+    flex: 1;
+    margin: 0 $cs-spacing-15;
+    overflow-y: auto;
+
+    .ais-RefinementList-list {
+      padding-bottom: $cs-spacing-25;
+    }
+
+    li {      
+      line-height: $cs-spacing-10;
+    }
+
+    .mobile-filter-menu__item {
+      @extend %common-style;
+      display: block;
+
+      cursor: pointer;
+
+      // utility to hide show algolia widgets whilst preserving their state
+      &.hidden {
+        display: none;
+      }
+
+      .mobile-filter-menu__item-text {
+        @extend %cs-font-p-bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+        padding: $cs-spacing-25 0;
+      }
+
+      .mobile-filter-menu__item-icon {
+        @extend %arrow-right-icon;
+        position: relative;
+        // * make the '>' arrow slightly larger than default
+        width: 0.5rem;
+        height: 0.8rem;
+        margin-right: $cs-spacing-15;
+
+        background-color: $cs-black;
+        transform: rotate(-270deg);
+      }
+
+      .mobile-filter-menu__item-icon-active {
+        @extend %arrow-right-icon;
+        position: relative;
+        // * make the '>' arrow slightly larger than default
+        width: 0.5rem;
+        height: 0.8rem;
+        margin-right: $cs-spacing-15;
+
+        background-color: $cs-black;
+        transform: rotate(-90deg);
+      }
+
+      .feature-container {
+        @extend %facet-feature-container;
+        position: fixed;
+        position: relative;
+        top: $cs-spacing-15;
+        bottom: -$cs-spacing-10;
+
+        display: block;
+
+        .ais-RefinementList {
+          .ais-RefinementList-list {
+            height: 100%;
+            max-height: 100%;
+
+            .ais-RefinementList-item {                      
+              display: block !important;
+              margin: unset !important;
+              margin-bottom: $cs-spacing-15 !important;
+              
+              .ais-RefinementList-label {
+                .ais-RefinementList-labelText {
+                  @extend %cs-font-p-4;
+                  padding: $cs-spacing-10 $cs-spacing-10 !important;
+                }
+    
+                .ais-RefinementList-count {
+                  float: right;
+                  padding-right: $cs-spacing-10;
+
+                  color: $cs-white;           
+                }
+              }
+            }
+          }         
+        }      
+      }
+    }
+
+    .facet-container {
+      @extend %facet-price-container;
+      position: relative;
+
+      margin: $cs-spacing-70 0 $cs-spacing-25 $cs-spacing-15;
+      padding: $cs-spacing-5  $cs-spacing-35 0  $cs-spacing-35;
+
+      .facet-price {
+        display: inline;
+        margin-bottom: -$cs-spacing-20;
+        padding: 0 $cs-spacing-30;
+    
+        .rheostat.rheostat_1 {
+          top: $cs-spacing-10;
+
+          .rheostat-marker {
+            right: $cs-spacing-5;
+
+            &--large {
+              &-left {        
+                top: -$cs-spacing-90;
+                left: -$cs-spacing-10;
+
+                margin-left: -$cs-spacing-5;
+
+              }
+      
+              &-right {      
+                top: -$cs-spacing-90;
+                right: $cs-spacing-80;
+
+                margin-right: -$cs-spacing-5;
+
+              }   
+            }  
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-filter-fixed-buttons {
+    .mobile-filter-select__actions {
+      bottom: $cs-spacing-50;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: $cs-spacing-15 $cs-spacing-20 0 $cs-spacing-20;
+
+      border-top: 1px solid $cs-color-gray-40;
+   
+      button {
+        border: 0;
+
+        &:focus,
+        &:hover {
+          border: 1px solid $cs-forest-green;
+        }
+      }
+    
+      .mobile-filter-select__apply-btn {
+        @extend %cs-button-green-fill-medium;
+        width: 100%;
+        margin-bottom: $cs-spacing-15;
+
+        border: 0;
+      }
+    }
+
+    .mobile-filter-clear__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-height: 50px;
+
+      text-align: center;
+
+      background-color: $cs-white;
+
+      .current-refinements {
+        margin-bottom: $cs-spacing-15 !important;
+
+        .current-refinements__inner {
+          .current-refinements__item {
+            display: none;       
+          }
+
+          .current-refinements__reset {
+            @extend %cs-font-p-2;
+        
+            left: 45%;
+
+            text-decoration: none !important;     
+          }
+        }
+      }
+    }
+  }
+}

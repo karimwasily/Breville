@@ -1,0 +1,11 @@
+// applied to body tag when in the home page
+.cmp-page--floating-header {
+  // modify header to float above content set to top
+  header.experiencefragment {
+    @include bg-contrast($black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}

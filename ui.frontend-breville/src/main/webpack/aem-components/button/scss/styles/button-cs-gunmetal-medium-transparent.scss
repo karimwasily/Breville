@@ -1,0 +1,22 @@
+.cmp-button--cs-gunmetal-medium-transparent {
+  display: flex;
+  justify-content: center;
+  margin: $cs-spacing-5 0 $cs-spacing-60;
+
+  @media (min-width: $screen-md) {
+    margin: $cs-spacing-35 0 $cs-spacing-110;
+  }
+
+  .cmp-button {
+    display: flex;
+    text-align: center;
+    border: 0;
+    background-color: transparent;
+
+    .cmp-button__text {
+      @extend %cs-button-gunmetal-medium-transparent;
+      font-weight: $cs-font-weight-bold;
+    }
+  }
+ 
+}

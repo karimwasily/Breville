@@ -1,0 +1,74 @@
+.helpful-access-card {
+  width: 100%;
+  border-radius: $cs-spacing-10;
+  background-color: $cs-color-gray-60;
+  padding: $cs-spacing-30;
+  text-align: left;
+  
+  &__title {
+    @extend %cs-font-h10;
+    font-weight: $cs-font-weight-bold;
+    margin-bottom: $cs-spacing-5;
+  }
+  
+  &__subtitle {
+    @extend %cs-font-p-4;
+    margin-bottom: $cs-spacing-30;
+  }
+  
+  &__product {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $cs-spacing-25;
+    @media (min-width: $screen-sm) {
+      margin-bottom: $cs-spacing-15;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__thumbnail {
+    width: $cs-spacing-100;
+    height: $cs-spacing-100;
+    border-radius: $cs-spacing-5;
+    overflow: hidden;
+  }
+  
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  &__content {
+    margin-left: $cs-spacing-20;
+  
+    @media (min-width: $screen-sm) {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+    }     
+  }
+  
+  &__name {
+    font-family: $cs-font-family-bold;
+    font-size: $cs-font-size-medium;
+    line-height: $cs-line-height-h9;
+    margin-bottom: $cs-spacing-5;
+  }
+  
+  &__price {
+    @extend %cs-font-h11;
+    font-weight: $cs-font-weight-bold;
+    margin-bottom: $cs-spacing-10;
+  }
+  
+  .helpful-access-card__btn {
+    background: transparent;
+  }
+}
+
+
+

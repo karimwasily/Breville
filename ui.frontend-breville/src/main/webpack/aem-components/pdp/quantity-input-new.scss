@@ -1,0 +1,121 @@
+// this is used in primaryproductright
+%quantity-input {
+  .quantity input[type=number] {
+    border: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+    
+  .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    
+  }
+
+  .quantity input[type=number]::-webkit-inner-spin-button,
+  .quantity input[type=number]::-webkit-outer-spin-button {
+    display: none;
+  }
+    
+  .quantity button {
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    background-color: transparent;
+    border: unset;
+    cursor: pointer;
+
+    appearance: none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+    
+  .quantity button::before,
+  .quantity button::after {
+    position: absolute;
+
+    display: inline-block;
+    height: 2px;
+
+    transform: translate(-50%, -50%);
+
+    content: '';
+  }
+    
+  .quantity button.plus::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .quantity button.plus-active::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+    
+  .quantity input[type=number] {
+    text-align: center;
+  }
+    
+  .quantity {
+    width: 2rem;
+
+    border: 1px solid $cs-dark-silver;
+    border-radius: $cs-border-radius-8;
+  }
+    
+  .quantity button {
+    width: 14px;
+    height: 14px;
+    padding-right: 0;
+  }
+    
+  .quantity button.minus {
+    padding-left: 0;
+  }
+    
+  button.minus::before {
+    width: 0.7rem;
+
+    background-color: $cs-silver;
+  }
+
+  button.minus-active::before {
+    width: 0.7rem;
+
+    background-color: $cs-gunmetal;
+   
+  }
+
+  button.plus::before,
+  button.plus::after {
+    width: 0.7rem;
+
+    background-color: $cs-silver;
+  }
+
+  button.plus-active::before,
+  button.plus-active::after {
+    width: 0.7rem;
+
+    background-color: $cs-gunmetal;
+  }
+    
+  .quantity input[type=number] {
+    @extend %cs-font-p-bold;
+    min-width: 3rem;
+    max-width: $cs-spacing-20;
+    padding: $cs-spacing-15;
+
+    color: $cs-gunmetal;
+
+    background-color: transparent;
+  }
+  
+}

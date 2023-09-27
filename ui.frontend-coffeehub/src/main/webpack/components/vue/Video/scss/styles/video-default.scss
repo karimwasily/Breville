@@ -1,0 +1,176 @@
+%video-default {
+  .cmp-v-video {
+    --aspect-ratio: 56.25%;
+    --aspect-ratio-mobile: 100%;
+    position: relative;
+    
+    // COVER VIDEO (UNDERLAY > VIDEO > OVERLAY)
+    // * using underlay so when video loads we don't see a moment of no element
+    &__underlay,
+    &__overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 0;
+      padding-top: var(--aspect-ratio-mobile);
+      @media screen and (min-width: $screen-md) {
+        padding-top: var(--aspect-ratio);
+      }
+    
+    
+      .cmp-v-video__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+        
+    }
+    
+    &__underlay {
+      z-index: 0;
+    }
+    
+    // IMAGE OVERLAY
+    &__overlay {
+      cursor: pointer;
+      z-index: 3;
+      animation: overlay-animation 0.5s;
+    
+      @keyframes overlay-animation {
+        0% {
+          opacity: 0;
+        }
+    
+        100% {
+          opacity: 1;
+        }
+      }
+    
+      .cmp-v-video__image {
+        z-index: 1;
+      }
+    
+      // PARENT CONTAINER FOR ICON AND TITLE
+      .cmp-v-video__parent {
+        position: absolute;
+        width: fit-content;
+        max-width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+        @media screen and (min-width: $screen-md) {
+          max-width: 40%;
+        }
+    
+        // ARROW ICON
+        .cmp-v-video__icon-wrapper {
+          $size-mobile: 10px;
+          $size: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            
+          .cmp-v-video__icon-play {
+            position: absolute;
+            width: 0;
+            height: 0;
+            margin-left: rem(6px);
+            border-left: $size solid white;
+            border-top: $size*0.7 solid transparent;
+            border-bottom: $size*0.7 solid transparent;
+          }
+    
+          // CIRCLE ICON
+          .cmp-v-video__icon-circle {
+            position: relative;
+            width: $size*2.6;
+            height: $size*2.5;
+            background-color: transparent;
+            border: 1px solid $white;
+            border-radius: 50%;
+          }
+        }
+    
+        .cmp-v-video__title {
+          @extend %font-h3;
+          margin-bottom: $spacing-xs;
+          color: $white;
+        }
+      }
+    
+      .cmp-v-video__parent-background {
+        padding: $spacing-lg;
+        background-color: rgba(0, 0, 0, 0.65);
+        @media screen and (min-width: $screen-md) {
+          padding: $spacing-xxl;
+        }
+      }
+    }
+    
+    // YOUTUBE PLAYER
+    .cmp-v-video__player {
+      position: relative;
+      height: 0;
+      padding-top: var(--aspect-ratio-mobile);
+      overflow: hidden;
+      @media screen and (min-width: $screen-md) {
+        padding-top: var(--aspect-ratio);
+      }
+    
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    &__disclaimer {
+      position: absolute;
+      transform: translateY(-100%);
+      pointer-events: none;
+      z-index: 4;
+      width: 100%;
+      height: fit-content;
+      background-color: rgba(0, 0, 0, 0.65);
+      text-align: center;
+      padding: $spacing-xxs;
+      animation: overlay-animation 0.5s;
+      color: $white;
+
+      .cmp-v-video__disclaimer-text {
+        font-size: $font-size-base;
+      }
+    }
+    
+    &__chapter {
+      padding: $spacing-ml;
+      background-color: $white;
+    
+      .cmp-v-video__timestamp-wrapper {
+        width: 100%;
+        display: flex;
+        margin-bottom: $spacing-sm;
+    
+        .cmp-v-video__timestamp-time {
+          @include button-remove-style;
+          color: $aubergine;
+          margin-right: $spacing-lg;
+          align-self: flex-start;
+          text-decoration: underline;
+          font-size: $font-size-body;
+        }
+      }
+    }
+  }
+}

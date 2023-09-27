@@ -1,0 +1,125 @@
+.cmp-teaser--cs-hero-scroll {
+  @extend %cmp-teaser--cs-hero;
+
+  .cmp-teaser {
+    display: flex;
+    height: fit-content;
+    min-height: 540px;
+    margin-bottom: $cs-spacing-40;
+    @media (min-width: $cs-screen-md) {
+      min-height: 640px;
+      margin-bottom: $cs-spacing-60;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 $cs-spacing-10;
+      @media (min-width: $cs-screen-md) {
+        padding: 0 $cs-spacing-30;
+      }
+
+      .cmp-teaser__pretitle {
+        display: none;
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-h6;
+        font-weight: $cs-font-weight-bold;
+        margin: 0;
+        padding-top: $cs-spacing-15;
+        @media (min-width: $cs-screen-md) {
+          padding-top: $cs-spacing-20;
+        }
+      }
+
+      &::before {
+        --logo-size: 0.9;
+        @extend %breville-x-beanz-icon;
+        content: '';
+        margin-top: $cs-spacing-110;
+        width: calc(15.1875rem * var(--logo-size));
+        height: calc(1.75rem * var(--logo-size));
+
+        @media (min-width: $cs-screen-md) {
+          --logo-size: 1;
+          margin-top: $cs-spacing-120;
+        }
+      }
+
+      .cmp-teaser__description {
+        @extend %cs-font-h3;
+        color: $cs-white;
+        margin-top: $cs-spacing-35;
+
+        @media (min-width: $cs-screen-md) {
+          margin-top: $cs-spacing-45;
+        }
+      }
+
+      .cmp-teaser__action-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        padding-top: $cs-spacing-15;
+        margin-bottom: $cs-spacing-110;
+
+        @media (min-width: $cs-screen-md) {
+          padding-top: $cs-spacing-50;
+          margin-bottom: $cs-spacing-110;
+        }
+      }
+
+      // Default action link (button/s)
+      .cmp-teaser__action-link {
+        @extend %cs-button-inverted-transparent-medium;
+        font-weight: $cs-font-weight-bold;
+        margin-bottom: $cs-spacing-60;
+        width: 15rem;
+
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: $cs-spacing-90;
+        }
+      }
+
+      .cmp-teaser__action-link:last-child {
+        @extend %cs-font-h11;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        border: 0;
+        font-weight: $cs-font-weight-normal !important;
+        margin-bottom: $cs-spacing-20;
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: $cs-spacing-40;
+        }
+
+        &::after {
+          @extend %arrow-down-banner-icon;
+          position: relative;
+          display: inline-block;
+          content: '';
+          vertical-align: middle;
+          left: 0;
+          top: $cs-spacing-10;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          border-color: none;
+          color: $cs-white;
+
+          &::after {
+            background-color: $cs-white;
+          }
+        }
+      }
+    }
+  }
+}

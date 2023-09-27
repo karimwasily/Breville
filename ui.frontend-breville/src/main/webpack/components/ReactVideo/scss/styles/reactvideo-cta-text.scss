@@ -1,0 +1,102 @@
+
+.cmp-reactvideo--cs-cta-text {
+  .player-wrapper { 
+    @extend %popup-player-style;
+  }
+
+  .teaser {
+    margin: $cs-spacing-30 auto;
+
+    .cmp-teaser {
+      &__image {
+        display: none;
+      }
+
+      &__content {
+        .cmp-teaser__title {
+          display: none;
+        }
+
+        .cmp-teaser__subtitle {
+          display: none;
+        }
+
+        .cmp-teaser__description {
+          display: none;
+        }
+
+        .cmp-teaser__action-container {
+          .button {
+            // * WATCH VIDEO BUTTON
+            .cmp-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              background-color: transparent;
+              border: 0;
+              cursor: pointer;
+
+              &__text {
+                @extend %cs-font-p-2;
+                margin-right: $cs-spacing-10;
+
+                font-weight: $cs-font-weight-bold;
+              }
+
+              // PLAY ICON
+              &::after {
+                @extend  %play-button-hover-svg-black;
+                display: inline-block;
+                width: 1.5rem;
+                height: 1.5rem;
+
+                background-color: transparent;
+                background-repeat: no-repeat;
+                border: 0;
+                cursor: pointer;
+
+                transition: transform $cs-transition-speed-250 $cs-transition-easing;
+
+                content: '';
+              }
+
+              &:hover {
+                // PLAY ICON ANIMATION
+                &::after {
+                  transform: scale($cs-transition-scale-130);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cmp-reactvideo-close-button {
+    @extend  %close-icon-svg;
+    position: fixed;
+    top: $cs-spacing-30;
+    right: $cs-spacing-30;
+    z-index: 99999;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    .cmp-button {
+      border: 0;
+    }
+
+    @media (min-width: $cs-screen-lg) {
+      top: 48%;
+      right: 5%;
+
+      transform: translateY(-50%);
+    }
+  }
+}

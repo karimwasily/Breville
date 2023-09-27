@@ -1,0 +1,11 @@
+.cmp-container--fixed-width {
+  padding: 0;
+
+  @media (min-width: $screen-xl) {
+    display: block;
+    max-width: $max-width !important;
+    float: unset !important;
+    margin: 0 auto !important;
+    clear: both !important;
+  }
+}

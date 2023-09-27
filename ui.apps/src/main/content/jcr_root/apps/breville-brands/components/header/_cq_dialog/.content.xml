@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        size="L">
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Header General"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <productsLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Products Label"
+                                name="./productsLbl"/>
+                            <partsAccessoryLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Parts And Accessories Label"
+                                name="./partsAccessoryLbl"/>
+                            <recipeLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Recipe Label"
+                                name="./recipeLbl"/>
+                            <recipeLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Recipe Link"
+                                name="./recipeLink"/>
+                            <homePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Home Path"
+                                name="./homePath"
+                                required="{Boolean}true"/>
+                            <logoAlt
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Logo Label"
+                                name="./logoAlt"/>
+                            <logoPath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Logo Path"
+                                name="./logoPath"
+                                required="{Boolean}true"
+                                rootPath="/content/dam"/>
+                            <phoneLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Phone Label"
+                                name="./phoneLabel"/>
+                            <phoneNumber
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Add Phone Number"
+                                name="./phoneNumber"/>
+                            <closeLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Close Button Label"
+                                name="./closeLabel"/>
+                            <closeIconPath
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                    fieldLabel="Close Icon Path"
+                                    name="./closeIconPath"
+                                    required="{Boolean}true"
+                                    value="/content/dam/breville-brands/coffee-solution/svg/close.svg"
+                                    rootPath="/content/dam"/>
+                            <cartLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cart Button Label"
+                                name="./cartLabel"/>
+                            <cartIconPath
+                                  jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                  fieldLabel="Cart Icon Path"
+                                  name="./cartPath"
+                                  required="{Boolean}true"
+                                  rootPath="/content/dam"/>
+                            <cartPagePath
+                                  jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                  fieldLabel="Cart Page Path"
+                                  name="./cartPagePath"
+                                  rootPath="/content/breville"/>
+                            <phonePath
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                    fieldLabel="Phone Path"
+                                    name="./phonePath"
+                                    required="{Boolean}true"
+                                    rootPath="/content/dam"/>
+                            <mainmenuLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Main Menu Label"
+                                name="./mainmenuLbl"/>
+                            <loginOrCreateAccountLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Create Or Login Button Lable"
+                                name="./loginOrCreateAccountLbl"
+                                value="Create account / Log in"/>
+                            <mybrevilleLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="My Breville Label"
+                                name="./mybrevilleLbl"
+                                value="My breville"/>
+                            <createAccountLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Create Account Button Label"
+                                name="./createAccountLbl"
+                                value="Create account"/>
+                            <createurl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Create Account URL"
+                                name="./createUrl"
+                                required="{Boolean}false"
+                                rootPath="/content/breville"/>
+                            <loginLbl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Login Button Label"
+                                name="./loginLbl"
+                                value="Login"/>
+                            <loginurl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Login URL"
+                                name="./loginUrl"
+                                required="{Boolean}false"
+                                rootPath="/content/breville"/>
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Header Navigation"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <products-nav
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Products Navigation Header Experience Fragment Path"
+                                name="./productsNavExpLink"
+                                rootPath="/content/experience-fragments"/>
+                            <partsAndAccessories-nav
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Parts And Accessories Navigation Header Experience Fragment Path"
+                                name="./partsAndAccessoriesNavExpLink"
+                                rootPath="/content/experience-fragments"/>
+                        </items>
+                    </column>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Region and Language Selector"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <countryLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Country Label"
+                                maxlength="{Long}3"
+                                name="./countryLabel"
+                                required="{Boolean}true"
+                                value="USA"/>
+                            <regionLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Region Label"
+                                name="./regionLabel"
+                                value="Region"
+                                required="{Boolean}true"/>
+                            <languageLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Language Label"
+                                name="./languageLabel"
+                                value="Language"
+                                required="{Boolean}true"/>
+                            <mobileHeaderLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Header Label"
+                                name="./mobileHeaderLabel"
+                                value="Region and Language"
+                                required="{Boolean}true"/>
+                            <regionOverlayTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Overlay Title"
+                                name="./regionOverlayTitle"
+                                value="Update location"
+                                required="{Boolean}true"/>
+                            <regionOverlaySubCopy
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Overlay Sub-Copy"
+                                name="./regionOverlaySubCopy"
+                                value="Do you wish to change region"
+                                required="{Boolean}true"/>
+                            <continueButtonLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Continue Button Label"
+                                name="./continueButtonLabel"
+                                value="Continue"
+                                required="{Boolean}true"/>
+                            <cancelButtonLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Cancel Button Label"
+                                name="./cancelButtonLabel"
+                                value="Cancel"
+                                required="{Boolean}true"/>
+                            <regionflag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Enable checkbox if this is a region site (Tick for EU region)"
+                                name="./isRegion"
+                                text="Is Region Flag"
+                                value="true"/>
+                            <countryFlag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Flag"
+                                fieldLabel="Country Flag"
+                                name="./countryFlag">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="/bin/breville/servlets/countryflagdropdownListing"
+                                    rootPath="/apps/breville-brands/clientlibs/clientlib-breville-site/resources/svgs/flags"/>
+                            </countryFlag>
+                        </items>
+                    </columns>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Search Configuration"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <searchLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Search Label"
+                                name="./searchLabel"/>
+                            <searchPath
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                    fieldLabel="Search Icon Path"
+                                    name="./searchPath"
+                                    required="{Boolean}true"
+                                    rootPath="/content/dam"/>
+                            <charStart
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldDescription="Number of Char Start to be displayed from response."
+                                fieldLabel="Char Start (Algolia Config)"
+                                max="100"
+                                min="0"
+                                name="./charStart"
+                                step="1"
+                                value="${not empty cqDesign.startLevel ? cqDesign.startLevel : 3}"/>
+                            <searchPlaceholder
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Search Placeholder"
+                                value="Type here"
+                                name="./searchPlaceholder"/>
+                            <distinct
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldDescription="Number of distinct to be displayed from response."
+                                fieldLabel="Distinct (Algolia Config)"
+                                max="100"
+                                min="0"
+                                name="./distinct"
+                                step="1"
+                                value="${not empty cqDesign.startLevel ? cqDesign.startLevel : 0}"/>
+                            <length
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldDescription="Number of length to be displayed from response."
+                                fieldLabel="Length (Algolia Config)"
+                                max="100"
+                                min="0"
+                                name="./length"
+                                step="1"
+                                value="${not empty cqDesign.startLevel ? cqDesign.startLevel : 3}"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab4>
+        </items>
+    </content>
+</jcr:root>

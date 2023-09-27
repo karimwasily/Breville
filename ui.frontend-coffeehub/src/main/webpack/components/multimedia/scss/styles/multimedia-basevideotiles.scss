@@ -1,0 +1,111 @@
+%multimedia-video {
+  .cmp-multimedia {
+    position: relative;
+    @media (min-width: $screen-md) {
+      cursor: pointer;
+    }
+
+    .cmp-teaser {
+      &__image {
+        .cmp-image {
+          &__image {
+            width: 100%;
+          }
+        }
+      }
+
+      &__content {
+        margin-top: $spacing-md;
+        @media (min-width: $screen-md) {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: $black;
+          padding: $spacing-lg;
+        }
+
+        .cmp-teaser__pretitle {
+        }
+
+        .cmp-teaser__title {
+          a {
+            @extend %font-h3;
+            @media (min-width: $screen-md) {   
+              color: $white;
+            }
+          }
+        }
+
+        .cmp-teaser__description {
+          p {
+            @extend %font-large-text;
+            margin-top: $spacing-xxs;
+            @media (min-width: $screen-md) {   
+              color: $white;
+            }
+          }
+        }
+
+        .cmp-teaser__action-container {
+          max-width: 100%;
+          margin-top: $spacing-md;
+          margin-bottom: $spacing-xs;
+          position: relative;
+          display: flex;
+          cursor: pointer;
+          transition: $transition-speed-tile-zoom;
+          @media (min-width: $screen-md) {
+            max-width: 340px;
+          }
+
+          a {  
+            @extend %font-cta-body;
+            width: 100%;
+            padding: $spacing-md;
+            padding-right: $spacing-xxl;
+            word-break: break-word;
+            hyphens: auto;
+          }
+
+          &:hover {
+            background-color: $grey;
+
+            a {
+              color: $white;
+            }
+          }
+          
+        }
+
+        .cmp-teaser__action-container::after {
+          content: '';
+          width: 1rem;
+          height: 1rem;
+          position: absolute;
+          top: 50%;
+          right: $spacing-md;
+          transform: translateY(-50%);
+          z-index: 1;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .cmp-teaser__action-container:hover::after {
+          @include arrow-right-icon($color: $white);
+          transform: translate3d(5px, -50%, 0);
+        }
+      }
+
+      .homepage {
+        display: inline !important;
+
+        .cmp-multimedia--video {
+          display: inline !important;
+        }
+      }
+    }
+  }
+}

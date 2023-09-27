@@ -1,0 +1,7 @@
+// this wrapper is an ADDITIONAL MODIFIER to default 'header.scss'
+.cmp-experiencefragment-header--dark {
+  .cmp-experiencefragment {
+    // nested css variable to override default
+    --foreground-color: #{$black}; 
+  }
+}

@@ -1,0 +1,99 @@
+.cmp-container--bg-position-bottom-repeat {
+  > .cmp-container:first-child {
+    background-size: contain !important;
+    background-position: bottom;
+    @media (min-width: $screen-xl) {
+      background-repeat: repeat-x !important;
+      background-size: auto !important;
+      background-position: bottom left;
+    }
+  }
+}
+
+.cmp-container--bg-position-bottom {
+  > .cmp-container:first-child {
+    align-items: inherit;
+    background-size: 60% !important;
+    @media (max-width: $screen-md) {
+      background-position: left bottom;
+    }
+    @media (min-width: $screen-md) {
+      background-position: 37% bottom;
+      align-items: flex-end;
+      background-size: 40% !important;
+    }
+    @media (min-width: $screen-xl) {
+      align-items: inherit;
+    }
+    @media (min-width: $screen-xxl) {
+      background-position: 37% bottom;
+      align-items: inherit;
+    }
+  }
+}
+
+.cmp-container--bg-position-left {
+  .cmp-container {
+    background-size: contain !important;
+    position: relative;
+    @media (min-width: $screen-md) {
+      background-position: top left;
+    }
+  }
+}
+
+.cmp-container--bg-position-left-mobile {
+  .cmp-container {
+    background-size: 50% !important;
+    background-position: -20% 42%;
+    @media (min-width: $screen-md) {
+      background-size: 30% !important;
+    }
+    @media (min-width: $screen-lg) {
+      background-size: auto !important;
+      background-position: top left;
+    }
+  }
+}
+
+.cmp-container--bg-position-center {
+  .cmp-container {
+    background-position: 72% (-$spacing-tw-sm);
+    @media (min-width: $screen-md) {
+      background-position: center;
+      background-size: 90% !important;
+    }
+  }
+}
+
+.cmp-image--position-right-mobile {
+  .cmp-image__image {
+    position: relative;
+    right: -50%;
+    width: 80%;
+    @media (min-width: $screen-md) {
+      position: inherit;
+      right: inherit;
+      width: 100%;
+    }
+  }
+}
+
+.cmp-container--mapbox {
+  > .cmp-container:first-child {
+    background-color: $sandrift;
+    background-position: top;
+    background-size: 200% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: auto;
+    @media (min-width: $screen-md) {
+      background-size: inherit !important;
+      background-position: center;
+    }
+    @media (min-width: $screen-xl) {
+      min-height: 896px;
+    }
+  }
+}

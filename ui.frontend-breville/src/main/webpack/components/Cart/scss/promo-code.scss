@@ -1,0 +1,85 @@
+.cmp-cart-order-summary-promo-code {
+  .form-group {
+    margin: $cs-spacing-15 0;
+  }
+
+  &__input-wrapper {
+    position: relative;
+  }
+  
+  &__link {
+    padding: 0 !important;
+
+    text-decoration: none !important;
+
+    &__link-text {
+      text-decoration: underline;
+    }
+
+    &::before {
+      background-color: transparent !important;
+
+      content: '+ ';
+    }
+  }
+
+  &__code-input {
+    padding-right: $cs-spacing-60;
+  }
+
+  &__apply {
+    @extend %cs-font-p-4;
+    position: absolute;
+    top: 30%;
+    right: 1em;
+
+    padding: 0 !important;
+
+    color: $cs-gunmetal !important;
+    text-decoration: underline;
+
+    background-color: transparent !important;
+    border: 0 !important;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 0 !important;
+  }
+
+  &:focus &__apply {
+    color: $cs-scarlet;
+  }
+
+  .form-error,
+  .form-success {
+    @extend %cs-font-p-4;
+    position: relative;
+
+    transform: none;
+  }
+
+  .form-success {
+    padding-right: $cs-spacing-60;
+  }
+  
+  &__discount {
+    @extend %cs-font-p-4;
+    margin: $cs-spacing-15 0;
+
+    &-amount {
+      @extend %cs-font-p-4;
+      float: right;
+
+      color: $cs-forest-green;
+      font-weight: $cs-font-weight-bold;
+    }
+  }
+}

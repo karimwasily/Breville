@@ -1,0 +1,94 @@
+.cmp-multimedia-default {
+  .cmp-multimedia {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    .cmp-teaser {
+      &__image {
+        .cmp-image {
+          &__image {
+            display: block;
+            width: 100%;
+            @media (min-width: $screen-md) {  
+              transition: all linear 0.5s;
+            }
+          }
+        }
+      }
+
+      .cmp-teaser__image-secondary-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all linear 0.5s;
+      }
+
+      &__content {
+        .cmp-teaser__pretitle {
+        }
+
+        .cmp-teaser__title {
+          a {
+          }
+        }
+
+        .cmp-teaser__description {
+        }
+
+        p {
+        }
+
+        .cmp-teaser__action-container {
+          height: 100%;
+
+          a {
+            @extend %font-h3;
+            position: absolute;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            padding: $spacing-sm;
+            background-color: rgba(0, 0, 0, 0.65);
+            transform: translate(-50%, -50%);
+            width: fit-content;
+            backdrop-filter: blur(4px);
+            z-index: 1;
+          }
+        }
+      }
+
+      .content-tiles {
+        display: inline !important;
+      }
+    }
+
+    .cmp-multimedia--video {
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all linear 0.5s;
+      }
+    }
+  }
+  @media (min-width: $screen-md) {
+    .cmp-multimedia:hover .cmp-image__image {
+      opacity: 0;
+    }
+
+    .cmp-multimedia:hover .cmp-teaser__image-secondary-image {
+      opacity: 1;
+    }
+
+    .cmp-multimedia:hover .video {
+      opacity: 1;
+    }
+  }
+}

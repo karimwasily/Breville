@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-16T19:20:49.406-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/breville/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Our Smart Ovens Story"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <video
+                        jcr:created="{Date}2021-03-16T09:48:53.573-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-16T09:48:53.573-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/video"/>
+                    <container
+                        jcr:created="{Date}2021-03-16T18:50:51.093-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-16T18:50:51.093-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/container">
+                        <teaser
+                            jcr:created="{Date}2021-03-16T18:51:09.344-05:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>We all have different needs when it comes to oven cooking. Take the quiz below to find your perfect match.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-03-16T18:51:52.600-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Find the Smart Oven that's right for you"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            textIsRich="true"
+                            titleFromPage="false"
+                            titleType="h2"/>
+                    </container>
+                    <video_copy
+                        jcr:created="{Date}2021-03-16T09:48:53.573-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-16T09:48:53.573-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/video"/>
+                    <container_2062676076
+                        jcr:created="{Date}2021-03-16T18:55:02.835-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-16T18:55:02.835-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/container">
+                        <teaser
+                            jcr:created="{Date}2021-03-16T18:55:40.592-05:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>&lt;a>&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Anything ovens can do, our Smart Ovens can do better.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;/a>&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-03-16T18:57:43.135-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Element IQ® System"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/breville/smart-ovens/our-smart-ovens-story---home/resupplied/featureTile-1.png"
+                            textIsRich="true"
+                            titleFromPage="false"
+                            titleType="h2">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="/content/breville/language-masters/en"
+                                    text="Element IQ"/>
+                            </actions>
+                        </teaser>
+                        <teaser_249581900
+                            jcr:created="{Date}2021-03-16T18:55:46.070-05:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>&lt;a>&lt;/a>&lt;/p>&lt;p> &lt;/p>&#xd;&#xa;&lt;p>Compare the Smart Oven range&lt;/p>&#xd;&#xa;&lt;p> &lt;/p>&#xd;&#xa;&lt;p>&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-03-16T18:59:04.809-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Compare our Smart Ovens"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/breville/smart-ovens/our-smart-ovens-story---home/resupplied/featureTile-2.png"
+                            textIsRich="true"
+                            titleFromPage="false"
+                            titleType="h2">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="/content/breville/language-masters/en"
+                                    text="Compare"/>
+                            </actions>
+                        </teaser_249581900>
+                    </container_2062676076>
+                    <teaser_841338441
+                        jcr:created="{Date}2021-03-16T18:59:43.062-05:00"
+                        jcr:createdBy="admin"
+                        jcr:description="&lt;p>&lt;a>&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Smart Oven recipes for every occasion.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;/a>&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2021-03-16T19:00:54.776-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Recipes"
+                        sling:resourceType="breville-brands/components/teaser"
+                        actionsEnabled="true"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/breville/smart-ovens/our-smart-ovens-story---home/resupplied/featureTile-3.png"
+                        textIsRich="true"
+                        titleFromPage="false"
+                        titleType="h2">
+                        <actions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/breville/language-masters/en"
+                                text="Inspiration"/>
+                        </actions>
+                    </teaser_841338441>
+                    <container_2102710220
+                        jcr:created="{Date}2021-03-16T19:02:46.498-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-16T19:02:46.498-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/container">
+                        <teaser
+                            jcr:created="{Date}2021-03-16T19:03:04.815-05:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>See what people are saying about our highly acclaimed Smart Ovens range.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-03-16T19:03:33.183-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Smart reviews"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            textIsRich="true"
+                            titleFromPage="false"
+                            titleType="h2"/>
+                        <carousel
+                            jcr:created="{Date}2021-03-16T19:09:43.536-05:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-16T19:09:43.536-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/carousel">
+                            <text
+                                jcr:created="{Date}2021-03-16T19:10:33.080-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2021-03-16T19:20:49.182-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="breville-brands/components/text"
+                                text="&lt;p>&amp;quot;The Smart Oven Air performed flawlessly.&amp;quot;&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 120px;&quot;>Source: Digitaltrends.com&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 120px;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_11931940
+                                jcr:created="{Date}2021-03-16T19:11:28.536-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2021-03-16T19:16:14.733-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="breville-brands/components/text"
+                                text="&lt;p>&amp;quot;Only a bagel connoisseur or a chef would make the distinction between toasting bread vs. toasting a bagel! That’s precisely why I love Breville’s products.&amp;quot;&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 160px;&quot;>Source: Steamykitchen.com&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_72010098
+                                jcr:created="{Date}2021-03-16T19:11:42.228-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2021-03-16T19:13:43.158-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="breville-brands/components/text"
+                                text="&lt;p>&amp;quot;The Breville Smart Oven Pro isn't a toaster oven, it's an oven to replace your full size oven.&amp;quot;&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 160px;&quot;>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Source: Gadget Review&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </carousel>
+                    </container_2102710220>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,58 @@
+.cmp-tabs--secondary {
+  .cmp-tabs {
+    &__tablist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $hd-orange;
+      border-bottom: $hd-orange;
+      color: $white;
+      padding: 0 $spacing-ml;
+      @media screen and (min-width:$screen-md) {
+        flex-direction: row;
+        padding: 0 $spacing-sm;
+      }
+      @media screen and (min-width: $screen-lg) {
+        padding: 0 $spacing-ml;
+      }
+    }
+
+    &__tab {
+      display: none;
+      font-family: $font-family-primary-light;
+      padding: $spacing-sm $spacing-ml;
+      @media screen and (min-width:$screen-md) {
+        display: block;
+        padding: $spacing-sm;
+      }
+      @media screen and (min-width: $screen-lg) {
+        padding: $spacing-sm $spacing-ml;
+      }
+
+    }
+
+    &__tab--active {
+      display: block;
+      @media screen and (min-width:$screen-md) {
+        border-bottom: 3px solid $white;
+        font-weight: $font-weight-bold;
+      }  
+    }
+
+    //adding down arrow 
+    &__tab--show-arrow {
+      &::after {
+        content: '';
+        border: solid $white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: $spacing-xxxs;
+        transform: rotate(45deg);
+        margin: 0 0 $spacing-xxs $spacing-ml;
+        @media screen and (min-width:$screen-md) {
+          display: none;
+        }
+      }
+    }
+  }
+}

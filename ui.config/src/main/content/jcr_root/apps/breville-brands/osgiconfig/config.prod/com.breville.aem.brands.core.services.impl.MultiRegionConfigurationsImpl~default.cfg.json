@@ -1,0 +1,28 @@
+// Multiregion default configurations
+{	
+	"Factory PID": "com.breville.aem.brands.core.services.impl.MultiRegionConfigurationsImpl",
+	"aws.api.url":	"test",
+	"commercetools.stoerkey" :"test",
+	"login.url" :"test",
+	"checkout.url" :"test",
+	"gmapkey" :"test",
+	"signup.url" :"test",
+	"newsletter.sf.url" :"test",
+	"notifyme.sf.url" :"test",
+	"adyen.environment.type" :"test",
+	"externalizer.key" :"test",
+	"cart.product.limit" :"test",
+	"credit.card.encoded.value" :"test",
+	"paypal.encoded.value" :"test",
+	"google.predictive.address" :"test",
+	"predictive.address.flag" :"test",
+	"pdp.product.count" :"test",
+	"livechat.org.id" :"test",
+	"livechat.deployment.id" :"test",
+	"livechat.deployment.js.url" :"test",
+	"livechat.js.url" :"test",
+	"livechat.button.id" :"test",
+	"livechat.offline.url" :"test",
+	"sitemap.flag" :"test",
+	"currency.symbol":"test"
+}

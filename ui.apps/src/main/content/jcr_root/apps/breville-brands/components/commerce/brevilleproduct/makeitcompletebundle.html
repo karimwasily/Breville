@@ -1,0 +1,53 @@
+<template data-sly-template.completeBundle="${ @ items}"> 
+    <section id="complete-coffee-bundle" class="cmp-complete-coffee-bundle">
+        <h2 class="cmp-complete-coffee-bundle__area-title">${'pdp-make-complete-bundle' @ i18n}</h2>
+        <div class="cmp-complete-coffee-bundle__area-machine">
+        <div data-react-app="CoffeeBundleHeroPDP"></div>
+        </div>
+        <div class="cmp-complete-coffee-bundle__area-plus">
+        <img 
+            class="image-plus"
+            src="/content/dam/breville-brands/coffee-solution/svg/plus.svg"
+            alt="Plus sign image"
+            />
+        </div>
+        <div class="cmp-complete-coffee-bundle__area-bundles">        
+        <div class="cmp-complete-coffee-bundle__area-bundles-bundles">
+            <sly data-sly-list.itemsInfo="${items}">
+                <div class="cmp-complete-coffee-bundle__area-bundles-bundles-tiles">
+                    <img
+                        class="cmp-complete-coffee-bundle__area-bundles-bundles-tiles-image"
+                        src="${itemsInfo.itemImgPath}"
+                        alt="${itemsInfo.itemImgAlt}"
+                        />
+                    <div class="cmp-complete-coffee-bundle__area-bundles-bundles-tiles-title">
+                        ${itemsInfo.itemTitle}
+                    </div>
+                    <div class="cmp-complete-coffee-bundle__area-bundles-bundles-tiles-description">
+                        ${itemsInfo.itemDescription}
+                    </div>
+                    <div class="cmp-complete-coffee-bundle__area-bundles-bundles-tiles-price">
+                        <del>${itemsInfo.itemPrice}</del> <strong>${itemsInfo.itemPromotionPrice}</strong>
+                    </div>
+                    <div data-react-app="ModalRenderer" class="cmp-complete-coffee-bundle__area-bundles-bundles-tiles-action-container">
+                        <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=itemsInfo.id}">
+                            <script type="application/json">
+                                ${brevilleUtil.idJson @context = 'scriptComment'}
+                            </script>
+                        </sly>
+					</div>
+                </div>
+            </sly>
+        </div>
+        <div class="cmp-complete-coffee-bundle__area-bundles-shop-this-bundle">
+            <a href="${properties.link}">
+                <div class="cmp-button--cs-commercial">
+                    <button type="button" class="cmp-button">
+                    <span class="cmp-button__text">${'pdp-shopThisBundle' @ i18n}</span>
+                    </button>
+                </div>
+            </a>
+        </div>
+        </div>
+    </section>
+</template>

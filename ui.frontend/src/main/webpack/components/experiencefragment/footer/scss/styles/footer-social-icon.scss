@@ -1,0 +1,21 @@
+.cmp-experiencefragment--social-icon {
+  width: unset !important;
+  margin: 0 $spacing-xs;
+  @media (min-width: $screen-lg) {
+    margin: 0 $spacing-sm;
+  }
+
+  .cmp-image {
+    &__link {
+      filter: invert(59%) sepia(9%) saturate(454%) hue-rotate(253deg) brightness(99%) contrast(94%);
+
+      .cmp-image__image {
+        width: 42px;
+      }
+
+      &:hover {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+      }
+    }
+  }
+}

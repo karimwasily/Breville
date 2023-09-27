@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2020-09-16T06:46:04.219Z"
+        cq:lastModifiedBy="aravind.seenivasan@nirman.io"
+        cq:lastReplicated="{Date}2020-09-16T06:46:18.064Z"
+        cq:lastReplicatedBy="aravind.seenivasan@nirman.io"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Canada"
+        jcr:uuid="9c9dedb5-17ec-4393-829b-ade7751e119a"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <item
+                cq:lastReplicated="{Date}2020-09-16T06:34:24.405Z"
+                cq:lastReplicatedBy="aravind.seenivasan@nirman.io"
+                cq:lastReplicationAction="Activate"
+                jcr:created="{Date}2018-06-01T10:52:11.429Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-16T06:46:04.217Z"
+                jcr:lastModifiedBy="aravind.seenivasan@nirman.io"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Canada"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="^[A-Za-z]\\d[A-Za-z][ ]?\\d[A-Za-z]\\d$"/>
+        </list>
+    </jcr:content>
+</jcr:root>

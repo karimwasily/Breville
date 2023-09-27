@@ -1,0 +1,16 @@
+.related-items {
+  @include column-overflow-scroll(
+    $tile-width-mobile: 240px, 
+    $tile-width-desktop: 435px, 
+    $gap-mobile: $cs-spacing-10, 
+    $gap-desktop: $cs-spacing-30
+  );
+
+  .ais-Hits {
+    .ais-Hits-list {
+      .ais-Hits-item {
+      }
+    }
+  }
+
+}

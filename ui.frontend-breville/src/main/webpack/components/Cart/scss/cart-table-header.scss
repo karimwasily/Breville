@@ -1,0 +1,45 @@
+.cart-table-header {
+  margin-bottom: $cs-spacing-40;
+  padding: 0 0 $cs-spacing-15 0;
+
+  color: $cs-gunmetal;
+
+  border-bottom: 1px solid $cs-gainsboro;
+  @media (min-width: $cs-screen-md) {
+    color: $cs-monsoon;
+  }
+
+  &__title {
+    @extend %cs-font-p-4-bold;
+
+    &--quantity {
+      @extend %cs-font-p-4-bold;
+      width: 100%;
+
+      text-align: center;
+    }
+
+    &--total {
+      @extend %cs-font-p-4-bold;
+      width: 100%;
+
+      text-align: right;
+    }
+    
+  }
+  @media (min-width: $cs-screen-md) {
+    >.row {
+      &.no-gutters > [class*=col-] {
+        padding: 0 $cs-spacing-10;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

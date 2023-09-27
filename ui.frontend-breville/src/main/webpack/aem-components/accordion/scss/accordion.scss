@@ -1,0 +1,49 @@
+.cmp-accordion {
+  .cmp-accordion__item {
+    .cmp-accordion__header {
+      font-weight: $font-weight-normal;
+      font-size: $font-size-base;
+      font-family: $font-family-primary-light;
+
+      button {
+        display: flex;
+        justify-content: space-between;
+        color: $black;
+        background-color: transparent;
+        border: 0;
+        padding: $spacing-xs $spacing-sm;
+        outline: none;
+
+        &:hover {
+          color: $white;
+          background-color: $black;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: '\002B'; // "+" sign
+          font-weight: $font-weight-bold;
+          float: right;
+          padding-left: $spacing-xs;
+        }
+
+        &.cmp-accordion__button--expanded {
+          color: $white;
+          background-color: $black;
+
+          &::after {
+            content: '\2212'; // "-" sign
+          }
+        }
+      }
+    }
+
+    .cmp-container {
+      padding: $spacing-sm 0;
+
+      p {
+        font-family: $font-family-primary-light;
+      }
+    }
+  }
+}

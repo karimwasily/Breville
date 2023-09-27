@@ -1,0 +1,78 @@
+// this style wrapper modifies '.cmp-teaser--content-you-may-like'
+.cmp-teaser--content-you-may-like {
+  padding-bottom: $spacing-xxl;
+
+  .cmp-teaser {
+    display: block;
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+
+    &__image {
+      max-width: 110px;
+      min-width: 110px;
+      @media (min-width: $screen-md) {
+        margin-top: $spacing-md;
+      }
+    }
+
+    &__content {
+      margin-top: $spacing-md;
+      @media (min-width: $screen-md) {
+        margin-left: $spacing-xxl;
+      }
+
+      .cmp-teaser__title-link {
+        @extend %font-h3;
+        margin-bottom: $spacing-sm;
+      }
+
+      .cmp-teaser__description {
+        margin-top: $spacing-sm;
+        margin-bottom: $spacing-sm;
+      }
+      
+      .cmp-teaser__action-container {
+        max-width: 100%;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid $black;
+        transition: $transition-speed-tile-zoom;
+        @media (min-width: $screen-md) {
+          width: 80%;
+        }
+
+        a {
+          @extend %font-cta-body;
+          padding: $spacing-md;
+          display: block;
+          width: 100%;
+          overflow-wrap: break-word;
+        }
+
+        &:hover {
+          background-color: $white;
+          cursor: pointer;
+        }
+      }
+
+      .cmp-teaser__action-container::after {
+        @include arrow-right-icon($color: $black);
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 50%;
+        right: $spacing-md;
+        transform: translateY(-50%);
+        z-index: 1;
+        transition: transform $transition-speed $transition-ease;
+      }
+
+      .cmp-teaser__action-container:hover::after {
+        //animation for the arrow to move 5px to the right when hover over the button. Used in all buttons.
+        transform: translate3d(5px, -50%, 0);
+      }
+    }
+  }
+}

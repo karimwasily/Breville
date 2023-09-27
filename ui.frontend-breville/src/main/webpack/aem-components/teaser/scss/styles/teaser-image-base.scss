@@ -1,0 +1,121 @@
+%teaser-image {
+  background-color: $white;
+  color: $gunmetal;
+  
+  .cmp-teaser {
+    display: block;
+    width: 100%;
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+
+    .cmp-teaser__image {
+      width: 100%;
+      @media (min-width: $screen-md) {
+        width: 50%;
+      }
+
+      .cmp-image {
+        height: 100%;
+        overflow: hidden;
+
+        .cmp-image__image {
+          height: 100%;
+          object-fit: cover;
+          transition: transform $transition-speed-slow $transition-easing;
+        }
+      }
+    }
+
+    .cmp-teaser__content {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      transition: background-color $transition-speed-slow $transition-easing;
+      @media (min-width: $screen-md) {
+        width: 50%;
+      }
+      @media (min-width: $screen-lg) {
+        align-self: center;
+      }
+
+      .cmp-teaser__title {
+        font-size: $font-size-h1-mobile;
+        margin-bottom: 0;
+        font-family: $font-family-primary-light;
+        font-weight: $font-weight-normal;
+        color: $gunmetal;
+        line-height: $line-height-ratio-base;
+
+        &::after {
+          display: block;
+          content: '';
+          height: 4px;
+          width: 24px;
+          background-color: $black;
+          margin: 1.8rem auto 0;
+        }
+      }
+
+      .cmp-teaser__action-container {
+        font-weight: $font-weight-bold;
+
+        .cmp-teaser__action-link {          
+          font-family: $font-family-secondary;
+
+          &::after {
+            @include arrow-icon($color: $black);
+            display: inline-block;
+            content: '';
+            width: 0.6rem;
+            height: 0.6rem;
+            margin-left: 0.5rem;
+            mask-size: contain;
+            transition: left $transition-speed-slow $transition-easing;           
+          }
+        }
+      }
+    }
+  } 
+
+  &:hover,
+  &:focus {
+    overflow: hidden;
+    background-color: $dark-purple;
+    color: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    .cmp-teaser__image {
+      img {
+        transform: scale(1.15);
+      }
+    }
+
+    .cmp-teaser__content {
+      color: $white;
+      
+      .cmp-teaser__title {
+        color: $white;
+
+        &::after {
+          background-color: $white;         
+        }
+      }
+    }
+
+    .cmp-teaser__action-container {
+      font-weight: $font-weight-bold;
+
+      .cmp-teaser__action-link {
+        color: $white;
+
+        &::after {
+          @include arrow-icon($color: $white  !important);
+          position: relative;
+          left: 0.5rem;          
+        }
+      }
+    }
+  }
+} 
+  

@@ -1,0 +1,28 @@
+.cmp-container--support-tile {
+  padding: $spacing-lg $spacing-xs 0;
+  @media (min-width: $screen-lg) {
+    padding: $spacing-xxl $spacing-xxl 0;
+  }
+  @media (min-width: $screen-xxl) {
+    max-width: 81.25rem;
+    float: none !important;
+    clear: both !important;
+    margin: 0 auto;
+  }
+
+  .cmp-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .title {
+      flex: 1 0 100%;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
+      flex: 1 0 100%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "presets": [
+        "@babel/typescript",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-proposal-optional-chaining",
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./"
+                ],
+                "alias": {
+                    "containers": "./src/main/webpack/containers",
+                    "components": "./src/main/webpack/components",
+                    "shared-ui": "./src/main/webpack/components/shared-ui",
+                    "aem-components": "./src/main/webpack/aem-components",
+                    "library": "./src/main/webpack/library",
+                    "router": "./src/main/webpack/library/router",
+                    "redux-utils": "./src/main/webpack/library/utils/redux-utility",
+                    "resources": "./src/main/webpack/resources",
+                    "react": "./node_modules/react",
+                    "react-dom": "./node_modules/react-dom",
+                    "react-hook-form": "./node_modules/react-hook-form",
+                    "react-router-dom": "./node_modules/react-router-dom"
+                }
+            }
+        ]
+    ]
+}

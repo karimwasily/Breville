@@ -1,0 +1,54 @@
+<!-- coffee select pop up starts-->
+<div id="id-coffee-selection-popup" class="change-coffee-popup" data-sly-use.beanzProducts="com.breville.aem.brands.core.models.BeanzProduct">
+    <div class="add-to-cart-popup--main-content">
+       <div class="add-to-cart-popup--container">
+          <div class="add-to-cart-popup--close">
+             <button id="add-to-coffee-selection-popup-close" class="add-to-cart-popup--close-button add-to-coffee-selection-popup-close"></button>
+          </div>
+          <div class="cmp-text--add-to-cart-heading">
+             ${properties.coffeeSelectionHeading}
+          </div>
+          <div class="add-to-cart-popup--content">
+             <img class="add-to-cart-popup-content--image" src="" alt="">
+             <div class="add-to-cart-popup-content--details">
+                <div id="coffee-selection-productName" class="add-to-cart-popup-content--title"></div>
+                <sly data-sly-test="${beanzProducts.isDiscoveryBean}">
+                   <div class="add-to-cart-popup-content--detail-items center-single-item">
+                      <div class="add-to-cart-popup-content--detail-item">
+                        <label class="add-to-cart-popup-content--detail-item-label">${properties.flavourText}</label>
+                        <p class="add-to-cart-popup-content--detail-item-p flavourNote"></p>
+                      </div>
+                   </div>
+                </sly>
+                <div class="add-to-cart-popup-content--detail-items">
+                  <div class="add-to-cart-popup-content--detail-item">
+                    <label class="add-to-cart-popup-content--detail-item-label">${beanzProducts.isDiscoveryBean == 'true' ? properties.methodText : properties.frequencyText}</label>
+                    <p class="add-to-cart-popup-content--detail-item-p ${beanzProducts.isDiscoveryBean == 'true' ? 'popupmethod' : 'popupsubscriptionfrequency'}"></p>
+                  </div>
+                  <div class="add-to-cart-popup-content--detail-item">
+                    <label class="add-to-cart-popup-content--detail-item-label">${beanzProducts.isDiscoveryBean == 'true' ? properties.frequencyText : properties.weightText}</label>
+                    <p class="add-to-cart-popup-content--detail-item-p ${beanzProducts.isDiscoveryBean == 'true' ? 'popupsubscriptionfrequency' : 'popupquantity'}"></p>
+                  </div>
+                  <div class="add-to-cart-popup-content--detail-item">
+                    <label class="add-to-cart-popup-content--detail-item-label">${properties.quantityText}</label>
+                    <p class="add-to-cart-popup-content--detail-item-p popupbags"></p>
+                  </div>
+                  <div class="add-to-cart-popup-content--detail-item">
+                    <label class="add-to-cart-popup-content--detail-item-label">${properties.grindText}</label>
+                    <p class="add-to-cart-popup-content--detail-item-p popupgrind"></p>
+                  </div>
+                </div>
+             </div>
+          </div>
+          <div class="add-to-cart-popup--footer">
+             <a href="#" class="btn btn-primary-faded  fluid add-to-coffee-selection-popup-close">${properties.noBtnLbl}</a>
+             <button type="button" class="btn btn-primary fluid change-coffee-select"
+                data-dismiss="modal">${properties.yesBtnLbl}
+                <img class="loadingSpinner hidden"
+                        src="/content/dam/marketplace/global/icons/processing-circle-white.svg" alt="loadingSpinner" />
+               </button>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- coffee select popup end-->

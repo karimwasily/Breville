@@ -1,0 +1,68 @@
+//Payment
+.paymentSection {
+  .cmp-toggle__checkout-accordion-body {
+    max-height: 100% !important;
+    opacity: 1 !important;
+
+    .credit-card {
+      .cmp-text__small-font {
+        margin-top: $spacing-xxs;
+      }
+    }
+
+    .adyen-checkout__button--pay {
+      @extend %light-green-large-btn;
+      background: $oyster-bay;
+      border-color: $oyster-bay;
+      color: $violet;
+      border-radius: 0;
+      font-size: $font-size-large;
+      margin-top: $spacing-ml;
+
+      .adyen-checkout__button__icon {
+        display: none;
+      }
+  
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
+        background-color: $gray95;
+        color: $white-overlay;
+        border: 1px solid transparent;
+        box-shadow: none;
+      }
+
+      &:hover {
+        box-shadow: none;
+        background: $oyster-bay;
+      }
+    }
+
+    .adyen-paypal-payment-btn {
+      &.disabled {
+        margin-top: $spacing-ml;
+        max-width: 300px;
+        margin: 0 auto;
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
+        background-color: $gray95;
+        color: $white-overlay;
+        box-shadow: none;
+
+        .cmp-btn__checkout-submit-btn {
+          background-color: unset;
+          color: unset;
+        }
+      }  
+    }
+
+    .paypalAdditional {
+      .cmp-text__small-font {
+        text-align: center;
+        margin-top: $spacing-xs;
+      }
+    }
+  }
+}

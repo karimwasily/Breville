@@ -1,0 +1,9 @@
+// this style wrapper relies on LINKED TEASER
+.cmp-teaser--content-tile-zoom-large {
+  grid-column: span 1;
+  grid-row: span 1;
+  @media (min-width: $screen-md) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}

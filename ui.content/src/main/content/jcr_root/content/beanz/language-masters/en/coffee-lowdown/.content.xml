@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-03T18:21:31.570-06:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/beanz/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Coffee Lowdown"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <teaser_878599839_cop
+                        cq:styleIds="[1614814251169]"
+                        jcr:created="{Date}2021-02-25T17:07:23.731-06:00"
+                        jcr:createdBy="admin"
+                        jcr:description="&lt;p>Myths busted, roasts defined, blends and single origins explained. This&amp;nbsp;guide breaks down the basics to help you choose the right beans for you, no matter how you brew.&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2021-02-25T17:15:55.470-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Coffee Lowdown"
+                        sling:resourceType="breville-brands/components/teaser"
+                        actionsEnabled="false"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/breville-brands/marketplace/us/roasting-brands/Coffee-Lowdown-Header.jpg"
+                        textIsRich="true"
+                        titleFromPage="false"
+                        titleType="h1"/>
+                    <container_copy
+                        cq:styleIds="[1614814944587]"
+                        jcr:created="{Date}2021-03-03T00:48:24.946-06:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-03T00:48:24.946-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/container">
+                        <teaser
+                            cq:styleIds="[1614814669426]"
+                            jcr:created="{Date}2021-02-22T23:23:40.016-06:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>Thinking of brewing a great coffee using stale beans? Impossible. Even with the fanciest machine. As a general rule, try using your beans within 5-30 days of roasting. Look out for the 'roasted on' date on the bag, never the 'use by'. This is rarely guaranteed with with the stuff you get from a supermarket shelf. So seek out freshness, and your tastebuds will thank you for it.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-02-22T23:27:08.163-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="The importance of roasting to order"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/marketplace/global/Coffee-lowdown_roastingtoorder.jpg"
+                            textIsRich="true"
+                            titleFromPage="false"/>
+                        <teaser_copy
+                            cq:styleIds="[1614814693388]"
+                            jcr:created="{Date}2021-02-22T23:23:40.016-06:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>Thinking of brewing a great coffee using stale beans? Impossible. Even with the fanciest machine. As a general rule, try using your beans within 5-30 days of roasting. Look out for the 'roasted on' date on the bag, never the 'use by'. This is rarely guaranteed with with the stuff you get from a supermarket shelf. So seek out freshness, and your tastebuds will thank you for it.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-02-22T23:27:08.163-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="The importance of roasting to order"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/marketplace/global/Coffee-lowdown_roastingtoorder.jpg"
+                            textIsRich="true"
+                            titleFromPage="false"/>
+                        <teaser_copy_939569187
+                            cq:styleIds="[1614814669426]"
+                            jcr:created="{Date}2021-02-22T23:23:40.016-06:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>Thinking of brewing a great coffee using stale beans? Impossible. Even with the fanciest machine. As a general rule, try using your beans within 5-30 days of roasting. Look out for the 'roasted on' date on the bag, never the 'use by'. This is rarely guaranteed with with the stuff you get from a supermarket shelf. So seek out freshness, and your tastebuds will thank you for it.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-02-22T23:27:08.163-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="The importance of roasting to order"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/marketplace/global/Coffee-lowdown_roastingtoorder.jpg"
+                            textIsRich="true"
+                            titleFromPage="false"/>
+                        <teaser_copy_1421973398
+                            cq:styleIds="[1614814693388]"
+                            jcr:created="{Date}2021-02-22T23:23:40.016-06:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>Thinking of brewing a great coffee using stale beans? Impossible. Even with the fanciest machine. As a general rule, try using your beans within 5-30 days of roasting. Look out for the 'roasted on' date on the bag, never the 'use by'. This is rarely guaranteed with with the stuff you get from a supermarket shelf. So seek out freshness, and your tastebuds will thank you for it.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-02-22T23:27:08.163-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="The importance of roasting to order"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/marketplace/global/Coffee-lowdown_roastingtoorder.jpg"
+                            textIsRich="true"
+                            titleFromPage="false"/>
+                        <teaser_1495956637
+                            cq:styleIds="[1614814251169,1614814654786]"
+                            jcr:created="{Date}2021-03-03T00:52:45.872-06:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>We connect you to the best specialty coffee roasters in the country, and deliver them to your door-for free. Subscribe and save, or order whenever you like.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-03-03T00:54:07.708-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Let's get started"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/Beanz_quiz-banner.jpg"
+                            textIsRich="true"
+                            titleFromPage="false"
+                            titleType="h2">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="/content/campaigns"
+                                    text="Take our quiz"/>
+                            </actions>
+                        </teaser_1495956637>
+                        <teaser_copy_14219733
+                            cq:styleIds="[1614814693388]"
+                            jcr:created="{Date}2021-02-22T23:23:40.016-06:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>Thinking of brewing a great coffee using stale beans? Impossible. Even with the fanciest machine. As a general rule, try using your beans within 5-30 days of roasting. Look out for the 'roasted on' date on the bag, never the 'use by'. This is rarely guaranteed with with the stuff you get from a supermarket shelf. So seek out freshness, and your tastebuds will thank you for it.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-02-22T23:27:08.163-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="The importance of roasting to order"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/marketplace/global/Coffee-lowdown_roastingtoorder.jpg"
+                            textIsRich="true"
+                            titleFromPage="false"/>
+                        <teaser_copy_14219733_1760734967
+                            cq:styleIds="[1614814669426]"
+                            jcr:created="{Date}2021-02-22T23:23:40.016-06:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>Thinking of brewing a great coffee using stale beans? Impossible. Even with the fanciest machine. As a general rule, try using your beans within 5-30 days of roasting. Look out for the 'roasted on' date on the bag, never the 'use by'. This is rarely guaranteed with with the stuff you get from a supermarket shelf. So seek out freshness, and your tastebuds will thank you for it.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2021-02-22T23:27:08.163-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="The importance of roasting to order"
+                            sling:resourceType="breville-brands/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            fileReference="/content/dam/marketplace/global/Coffee-lowdown_roastingtoorder.jpg"
+                            textIsRich="true"
+                            titleFromPage="false"/>
+                    </container_copy>
+                    <teaser_copy
+                        cq:styleIds="[1614814251169]"
+                        jcr:created="{Date}2021-03-03T00:55:58.235-06:00"
+                        jcr:createdBy="admin"
+                        jcr:description="&lt;p>Hand-picked by us, this discovery pack is for beginners, explorers, or even seasoned experts, who want variety or to try new flavors.&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2021-03-03T01:00:26.812-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Discovery Beanz"
+                        sling:resourceType="breville-brands/components/teaser"
+                        actionsEnabled="true"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/Beanz_Website_2880x800_DiscoveryBeanzBags_Banner_NEW_compressed.jpg"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <actions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/campaigns"
+                                text="Explore new bean"/>
+                        </actions>
+                    </teaser_copy>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

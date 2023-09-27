@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <folderReference
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                        fieldLabel="Reference to article folder"
+                        fieldDescription="Path to the folder storing all the articles"
+                        rootPath="/content/coffeehub"
+                        required="{Boolean}true"
+                        name="./folderReference"/>
+                    <showCategoryNav
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        text="Option to show category navigation."
+                        name="./showCategoryNav"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <tags
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                        multiple="{Boolean}true"
+                        fieldLabel="Navigation categories tag"
+                        fieldDescription="Categories for navigation"
+                        rootPath="/content/cq:tags/coffee-hub"
+                        name="./tags"/>
+                    <noFullRows
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldLabel="Number of full rows"
+                        min="{Double}0"
+                        max="{Double}10"
+                        value="2"
+                        name="./noFullRows"
+                        required="{Boolean}true"/>
+                    <noHalfRows
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldLabel="Number of half rows"
+                        min="{Double}0"
+                        max="{Double}10"
+                        value="1"
+                        name="./noHalfRows"
+                        required="{Boolean}true"/>
+                    <noThirdsRows
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldLabel="Number of third rows"
+                        min="{Double}0"
+                        max="{Double}10"
+                        value="1"
+                        name="./noThirdsRows"
+                        required="{Boolean}true"/>
+                    <loadMoreButton
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Button text"
+                        name="./loadMoreButton"/>
+                    <loadMoreNoOfItems
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldLabel="Load More No. Of Items"
+                        name="./loadMoreNoOfItems"/>
+                    <viewMoreHref
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                        fieldLabel="Button link"
+                        fieldDescription="Page path to a different page"
+                        rootPath="/content/coffeehub"
+                        name="./viewMoreHref"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,166 @@
+.cmp-reactcarousel--cs-community {
+  .cmp-reactcarousel {
+    .slick-slider {
+      width: 100%;
+      min-width: 100%;
+    }
+
+    .slick-slide {
+      // * gap between reactcarousel slide items
+      padding: $cs-spacing-5;
+    }
+
+    .slick-active {
+      // width: 400px !important;
+    }
+
+    // .slick-track {
+    //   width: fit-content !important;
+    // }
+
+    .cmp-teaser-two-images {
+      --avatar-dimension: 80px;
+      --avatar-large-tile: 30%;
+      --avatar-small-tile: 10%;
+      position: relative;
+      // * create a square aspect ratio
+      padding-top: 100%;
+
+      .cmp-teaser__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        .cmp-image {
+          width: 100%;
+          height: 100%;
+
+          .cmp-image__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .cmp-teaser-two-images__second-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        background-color: $cs-social-overlay;
+        color: $cs-white;
+        padding-top: var(--avatar-small-tile);
+        transition: opacity $cs-transition-speed-250 $cs-transition-easing;
+
+        //Increase padding for big tile.
+        @media (min-width: $cs-screen-sm) {
+          padding-top: var(--avatar-large-tile);
+        }
+
+        //Remove avatar as tile is too small.
+        @media (min-width: $cs-screen-md) {
+          display: none; 
+        }
+
+        @media (min-width: $cs-screen-lg) {
+          display: flex;
+          padding-top: var(--avatar-small-tile);
+        }
+
+        img {
+          display: inline-block;
+          width: var(--avatar-dimension);
+          height: var(--avatar-dimension);
+          border-radius: 50%;
+          background-color: $cs-color-primary;
+          border: 3px solid $cs-color-gray-10;
+          flex-shrink: 0;
+        }
+      }
+
+      .cmp-teaser-two-images__content {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: calc(100% - var(--avatar-dimension) - var(--avatar-small-tile));
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $cs-social-overlay;
+        color: $cs-white;
+        padding: $cs-spacing-15;
+        margin-top: calc(var(--avatar-dimension) + var(--avatar-small-tile));
+
+        transition: opacity $cs-transition-speed-250 $cs-transition-easing;
+
+        //Add margin and change height as avatar position changed.
+        @media (min-width: $cs-screen-sm) {
+          height: calc(100% - var(--avatar-dimension) - var(--avatar-large-tile));
+          margin-top: calc(var(--avatar-dimension) + var(--avatar-large-tile));
+        }
+
+        //Remove margin as tile is too small.
+        @media (min-width: $cs-screen-md) {
+          height: 100%;
+          margin-top: 0;
+        }
+
+        @media (min-width: $cs-screen-lg) {
+          height: calc(100% - var(--avatar-dimension) - var(--avatar-small-tile));
+          margin-top: calc(var(--avatar-dimension) + var(--avatar-small-tile));
+        }
+
+        .cmp-teaser__title,
+        .cmp-teaser__title-link {
+          @extend %cs-font-p-2;
+          color: $cs-white;
+          font-weight: $cs-font-weight-bold;
+          margin-bottom: $cs-spacing-10;
+
+          @media (min-width: $cs-screen-md) {
+            margin-bottom: $cs-spacing-20;
+          }
+        }
+
+        .cmp-teaser__description {
+          text-align: center;
+
+          p {
+            @extend %cs-font-p-2;
+          }
+
+          // * hide on this breakpoint since slide is too small
+          @media (min-width: $cs-screen-md) {
+            display: none; 
+          }
+
+          @media (min-width: $cs-screen-lg) {
+            display: unset;
+          }
+        }
+
+        
+      }
+
+      &:hover,
+      &:focus {
+        .cmp-teaser-two-images__content,
+        .cmp-teaser-two-images__second-image {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.react-button {
+  cursor: pointer;
+
+  // Color Shemes
+  &.react-button--color-scheme {
+    &-green {
+      @include cs-button($cs-white, $cs-color-secondary);
+
+      &.react-button--active {
+        color: $cs-color-secondary;
+
+        background-color: $cs-white; }
+    }
+
+    &-purple {
+      @include cs-button($cs-color-commercial, $cs-white);
+
+      &.react-button--active {
+        color: $cs-white;
+
+        background-color: $cs-color-commercial;}
+    }
+
+    &-purple-inverted {
+      @include cs-button($cs-white, $cs-color-commercial);
+
+      &.react-button--active {
+        color: $cs-color-commercial;
+
+        background-color: $cs-white;
+      }
+    }
+
+    &-black {
+      @include cs-button($cs-gunmetal, $cs-white);
+
+      &.react-button--active {
+        color: $cs-white;
+
+        background-color: $cs-gunmetal;}
+    }
+
+    &-purpleFill {
+      @include cs-button($cs-white, $cs-color-commercial);
+    }
+
+    &-none {
+      background: none;
+      border: 0;
+    }
+  }
+  
+  // Size
+  &.react-button--size {
+    &-small {
+      @extend %cs-button-small;
+    }
+    
+    &-medium {
+      @extend %cs-button-medium;
+    }
+
+    &-large {
+      @extend %cs-button-large;
+    }
+
+    &-stretch {
+      @extend %cs-button;
+      flex: 1;
+      width: 100%;
+      padding: $cs-spacing-15 $cs-spacing-30;
+    }
+  }
+
+  // textType
+
+  &.react-button--textType {
+    &-bold {
+      font-weight: $cs-font-weight-bold;
+    }
+
+    &-normal {
+      font-weight: $cs-font-weight-normal;
+    }
+  }
+
+  // Icons
+  &.react-button__icon {
+    &--compare {
+      &::before {
+        @extend %compare-icon;
+        position: relative;
+        top: 0.25rem;
+
+        margin-right: 7.7px;
+
+        transition: background-color 250ms ease-in-out;
+
+        content: '';
+      }
+    }
+
+    &--arrow-right {
+      &::after {
+        @extend %arrow-right-icon;
+        position: relative;
+        top: 0;
+
+        margin-left: 7.7px;
+
+        transition: background-color 250ms ease-in-out;
+
+        content: '';
+      }
+    }
+
+    &--arrow-left {
+      display: inline-flex;
+
+      &::before {
+        @extend %arrow-right-icon;
+        position: relative;
+
+        align-self: center;
+        margin-right: 0.5rem;
+
+        background-color: $cs-color-primary;
+        transform: rotate(180deg);
+
+        transition: background-color 250ms ease-in-out;
+
+        content: '';
+      }
+    }
+  }
+  
+  // Type link (not button)
+  &.react-button--type-link {
+    @extend %cs-font-p-4;
+    color: $cs-gunmetal !important;
+    text-decoration: underline !important;
+
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+
+  &.react-button--type-link-normal {
+    @extend %cs-font-p-4;
+    color: $cs-gunmetal !important;
+    text-decoration: none !important;
+
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+
+  &:disabled {
+    @include cs-button($text-color: $cs-white, $background-color: $cs-color-gray-30);
+    pointer-events: none;
+  }
+}

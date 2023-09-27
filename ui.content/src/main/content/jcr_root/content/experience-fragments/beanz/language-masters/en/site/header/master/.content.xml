@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-22T22:48:40.534-05:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/beanz/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Header"
+        sling:resourceType="breville-brands/components/xfpage">
+        <root
+            jcr:lastModified="{Date}2021-03-12T08:38:01.951-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="simple">
+            <image
+                jcr:created="{Date}2021-02-15T00:49:04.900-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-12T08:42:04.492-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/image"
+                alt="Beanz Logo"
+                altValueFromDAM="false"
+                displayPopupTitle="true"
+                fileReference="/content/dam/marketplace/global/icons/beanz-white.svg"
+                isDecorative="false"
+                linkURL="/content/beanz/language-masters/en"
+                titleValueFromDAM="false">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="2"/>
+                </cq:responsive>
+            </image>
+            <navigation
+                jcr:lastModified="{Date}2021-02-17T20:53:07.997-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/navigation"
+                collectAllPages="false"
+                disableShadowing="false"
+                navigationRoot="/content/breville-brands/language-masters/en"
+                skipNavigationRoot="false"
+                structureDepth="1"
+                structureStart="1">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="7"/>
+                </cq:responsive>
+            </navigation>
+            <minicart
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/commerce/minicart"/>
+            <container
+                cq:styleIds="[1616471262815]"
+                jcr:created="{Date}2021-03-19T20:09:28.158+04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-19T20:09:28.158+04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container">
+                <title
+                    jcr:created="{Date}2021-03-19T20:09:37.048+04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-03-19T20:43:41.200+04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="My Beanz"
+                    sling:resourceType="breville-brands/components/title"/>
+                <button
+                    jcr:created="{Date}2021-03-19T20:38:36.039+04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-03-19T20:39:02.108+04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Create accout"
+                    sling:resourceType="breville-brands/components/button"
+                    id="auth-signup"/>
+                <button_615925506
+                    jcr:created="{Date}2021-03-19T20:39:09.495+04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-03-19T20:43:15.795+04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Login"
+                    sling:resourceType="breville-brands/components/button"
+                    id="auth-login-button"/>
+                <button_362155000
+                    jcr:created="{Date}2021-03-19T20:43:21.987+04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-01T09:06:44.875Z"
+                    jcr:lastModifiedBy="yogiraj.mahajan@breville.com.au"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Close"
+                    sling:resourceType="breville-brands/components/button"
+                    id="auth-logout"/>
+            </container>
+            <container_1402549746
+                cq:styleIds="[1624607684291]"
+                jcr:created="{Date}2021-06-19T03:19:28.036Z"
+                jcr:createdBy="yogiraj.mahajan@breville.com.au"
+                jcr:lastModified="{Date}2021-06-19T03:19:28.036Z"
+                jcr:lastModifiedBy="yogiraj.mahajan@breville.com.au"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container">
+                <button_1077546261
+                    cq:styleIds="[1624268045012]"
+                    jcr:created="{Date}2021-06-21T15:27:26.568+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-07-07T07:15:59.182Z"
+                    jcr:lastModifiedBy="yogiraj.mahajan@breville.com.au"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="0"
+                    sling:resourceType="breville-brands/components/button"
+                    accessibilityLabel="Cart"
+                    link="/content/beanz/language-masters/en/transaction/cart"/>
+                <beanzloggedin
+                    jcr:created="{Date}2021-08-10T10:29:20.252Z"
+                    jcr:createdBy="asad.shafi@royalcyber.com"
+                    jcr:lastModified="{Date}2021-09-02T07:00:54.635Z"
+                    jcr:lastModifiedBy="aravind.kannan@breville.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/beanz/beanzLoggedIn"
+                    accountDetaiLabel="Account Details"
+                    availabilityText="We'are available on phone and Live chat Monday - Friday from 8AM - 4:30PM PT"
+                    callNowLink="tel:18662778455"
+                    callNumber="18662778455"
+                    callUslabel="Call Us"
+                    createSupportTicketLabel="Create a Support Ticket"
+                    createSupportTicketPath="https://brevilleusa.secure.force.com/reg/WebToCaseforBeanz?param=US&amp;language=english&amp;brand=beanz"
+                    helpAndSupportLabel="HELP AND SUPPORT"
+                    myBeanzLabel="My Beanz "
+                    orderlabel="Orders"
+                    orderPagePath="/content/beanz/language-masters/en/my-beanz/purchases.html#orders"
+                    personalDetaillabel="Personal Details"
+                    personalDetailPagePath="/content/beanz/language-masters/en/my-beanz/account-details.html"
+                    purchaseAndAppliancesLabel="Purchase &amp; Appliances"
+                    subscriptionlabel="Subscriptions"
+                    subscriptionPagePath="/content/beanz/language-masters/en/my-beanz/purchases.html#subscriptions"
+                    updateASupportTicketLabel="Update A Support Ticket"
+                    updateASupportTicketPath="https://brevilleusa.secure.force.com/reg/CaseUpdateBeanz?param=US&amp;language=english&amp;brand=beanz"/>
+            </container_1402549746>
+            <beanzsearch
+                jcr:created="{Date}2021-07-07T12:33:04.141+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-07-07T12:33:35.632+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/beanz/beanzSearch"
+                allCoffeesLbl="All Coffees"
+                categoriesLbl="Categories"
+                coffeesLbl="Coffees"
+                plpPagePath="/content/beanz/language-masters/en/beans"
+                popularCoffees="Popular Coffees"
+                popularSearches="Popular Searches"
+                productPagePath="/content/beanz/language-masters/en/beans/product/"
+                roasterPagePath="/content/beanz/language-masters/en/our-roasters/"
+                roastersLbl="Roasters"/>
+        </root>
+    </jcr:content>
+</jcr:root>

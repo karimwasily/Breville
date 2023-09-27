@@ -1,0 +1,21 @@
+.cmp-container--beanz-return {
+  .cmp-container {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    margin: auto;
+    flex: auto;
+    max-width: 83.33%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 0.625rem;
+    padding-left: 0.635rem;
+  }
+
+  @include breakpoint-up(xl) {
+    display: block;
+    max-width: $max-width !important;
+    float: unset !important;
+    margin: 0 auto !important;
+    clear: both !important;
+  }
+}

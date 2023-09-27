@@ -1,0 +1,39 @@
+// this style wrapper relies on LINKED TEASER
+.cmp-teaser--content-wave-number {
+  display: flex;
+  flex-direction: column;
+
+  .cmp-teaser {
+    padding: $spacing-md;
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    @media (min-width: $screen-md) {
+      padding: $spacing-xxl;
+    }
+
+    // IMAGE
+    &__image {
+      position: absolute;
+      margin-left: $spacing-md;
+
+      .cmp-image {
+        .cmp-image__image {
+          width: rem(50px);
+          height: rem(55px);
+        }
+      }
+    }
+
+    &__content {
+      position: absolute;
+
+      // SECONDARY BACKGROUND
+      .cmp-teaser__title {
+        @extend %font-h5;
+        color: $white;
+      }
+    }
+  }
+}

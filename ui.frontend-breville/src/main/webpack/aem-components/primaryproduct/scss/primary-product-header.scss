@@ -1,0 +1,22 @@
+%cmp-primary-product--machine-header {
+  .cmp-primary-product--machine-detail__title {
+    @extend %cs-font-h1;
+    margin-bottom: $cs-spacing-5;
+    font-weight: $cs-font-weight-bold;
+    font-family: $cs-font-family-bold;
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-10; 
+    }     
+  }
+
+  .cmp-primary-product--machine-detail--model-type {
+    @extend %cs-font-p-5;
+    color: $cs-silver-dark;
+
+    @media (min-width: $cs-screen-md) {
+      font-size: $cs-font-size-base; 
+    } 
+
+  }
+  
+}

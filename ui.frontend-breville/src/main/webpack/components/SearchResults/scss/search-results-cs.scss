@@ -1,0 +1,80 @@
+.search-results {
+  .search-results__inner {
+    padding: $cs-spacing-30 0;
+    margin: auto;
+    max-width: $cs-max-width;
+
+    .search-results__title {
+
+      @extend %cs-font-h4;
+      text-align: center;
+    }
+
+    .search-results__query {
+      font-weight: $cs-font-weight-normal;
+    }
+
+    .search-results__subtitle {
+      @extend %cs-font-h4;
+      text-transform: capitalize;
+      padding: $cs-spacing-50 0 0 $cs-spacing-15;
+      margin-bottom: 0;
+  
+      .search-results__subtitle-count {
+        font-size: 0.75em;
+        font-weight: $cs-font-weight-normal;
+      }
+    }
+
+    .search-results__results {
+      display: block;
+      margin-top: $cs-spacing-30;
+      // target the <ul> for either Hits OR InfiniteHits react component
+      .ais-Hits-list,
+      .ais-InfiniteHits-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: $cs-spacing-15;
+
+        margin-left: $cs-spacing-15;
+        margin-right: $cs-spacing-15;
+
+        @media (min-width: $cs-screen-md) {
+          grid-template-columns: repeat(3, 1fr);
+          gap: $cs-spacing-30;
+        }
+
+        .ais-Hits-item {
+          .search-dropdown__item {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .search-results__btn-wrapper {
+      padding-top: $cs-spacing-30;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .search-results__btn {
+        display: flex;
+        align-items: center;
+
+        &::after {
+          height: 0.75em;
+          width: 0.75em;
+          margin-left: $cs-spacing-10;
+          transition: transform $cs-transition-speed-250 ease-in-out,
+            background-color $cs-transition-speed-250 ease-in-out;
+        }
+
+        &:hover::after {
+          transform: translateX($cs-spacing-10);
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,386 @@
+@use 'sass:math';
+
+.cmp-reactplp {
+  // COMPARISON
+  // initial comparison functionality toggle button
+  .cmp-comparison__toggle {
+    @extend %cs-button-large;
+    @include cs-button(
+      $text-color: $cs-color-primary,
+      $background-color: $cs-white,
+      $arrow-direction: 'none'
+    );
+    width: 100%;
+
+    font-weight: $cs-font-weight-bold;
+
+    cursor: pointer;
+
+    transition: background-color $cs-transition-speed-250 $cs-transition-easing,
+      color $cs-transition-speed-250 $cs-transition-easing;
+
+    @media (min-width: $cs-screen-md) {
+      width: $cs-spacing-150;
+      height: $cs-spacing-40;
+      padding: 0.5rem 0;
+    }
+
+    &::before {
+      @extend %compare-icon;
+      position: relative;
+      top: 0.25rem;
+
+      margin-right: $cs-spacing-10;
+
+      background-color: $cs-color-primary;
+
+      transition: background-color $cs-transition-speed-250
+        $cs-transition-easing;
+
+      content: '';
+    }
+
+    &:hover,
+    &:focus {
+      color: $cs-white;
+
+      background-color: $cs-black-transparent-dark;
+
+      &::before {
+        background-color: $cs-white;
+      }
+    }
+  }
+
+  // top banner bar for comparison information
+  .cmp-comparison__banner {
+    --image-width: #{$cs-spacing-100};
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    width: 100%;
+    overflow: hidden;
+
+    background-color: $cs-color-gray-60;
+
+    // comparison header info
+    .cmp-comparison__banner-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: $cs-spacing-30 $cs-spacing-15;
+
+      font-weight: $cs-font-weight-bold;
+
+      background-color: $cs-color-gray-60;
+
+      @media (min-width: $cs-screen-md) {
+        padding: $cs-spacing-35 $cs-spacing-40;
+      }
+
+      .cmp-comparison__banner-title {
+        @extend %cs-font-p-2;
+        display: inline-block;
+        margin: 0;
+      }
+
+      .cmp-comparison__banner-close {
+        @extend %close-icon;
+        position: relative;
+        top: 0.25rem;
+
+        font-weight: $cs-font-weight-bold;
+
+        background-color: $cs-color-primary;
+        border: 0;
+        cursor: pointer;
+      }
+    }
+
+    // wrap comparison items and link to results page
+    .cmp-comparison__results {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      width: 100%;
+      padding-bottom: $cs-spacing-30;
+
+      @media (min-width: $screen-md) {
+        padding: 0 $cs-spacing-15 $cs-spacing-30;
+      }
+
+      .cmp-comparison__result-btn {
+        margin-left: auto;
+
+        @media (max-width: $screen-md) {
+          flex-basis: auto;
+          margin: 0 $cs-spacing-15;
+        }
+      }
+
+      // empty slots
+      .cmp-comparison__emptyslots {
+        display: flex;
+        flex-direction: row;
+        padding-top: $cs-spacing-20;
+
+        &-block {
+          @extend %cs-font-p-4;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: var(--image-width);
+          max-height: $cs-spacing-100;
+          padding: $cs-spacing-15 $cs-spacing-5;
+
+          color: $cs-monsoon;
+          text-align: center;
+
+          background-color: $cs-whitesmoke;
+          border: dashed 1px $cs-light-grey;
+          border-radius: $cs-border-radius-10;
+
+          @media (min-width: $screen-lg) {
+            width: 100%;
+            padding: $cs-spacing-40 $cs-spacing-45;
+          }
+        }
+      }
+
+      .cmp-comparison__list {
+        .horizontal-list {
+          padding-right: $cs-spacing-15;
+          padding-left: $cs-spacing-15;
+        }
+
+        .cmp-comparison__list-item {
+          position: relative;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: var(--image-width);
+
+          @media (min-width: $cs-screen-lg) {
+            width: 100%;
+            margin-right: $cs-spacing-30;
+          }
+
+          .cmp-comparison__list-item-remove {
+            position: absolute;
+            top: 0;
+            // * since we know the image dimension we will use this to place the remove button
+            left: var(--image-width);
+            z-index: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1rem;
+            height: 1rem;
+            padding: 0.25rem;
+
+            font-size: 1rem;
+
+            background-color: black;
+            border: 0;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            &::before {
+              @extend %close-icon;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+
+              width: 0.4375rem;
+              height: 0.4375rem;
+
+              background-color: $cs-white;
+              transform: translate(-50%, -50%);
+
+              content: '';
+            }
+          }
+
+          .producttile {
+            width: 100%;
+            height: 100%;
+
+            border: 0;
+
+            .cmp-producttile {
+              display: block;
+              align-items: center;
+              width: 100%;
+
+              background-color: transparent;
+              // * unset base style
+              border: 0;
+              @media (min-width: $screen-lg) {
+                display: flex;
+                flex-direction: row;
+              }
+
+              .cmp-producttile__primary-content-wrapper {
+                align-items: flex-start;
+                margin-left: $cs-spacing-20;
+                padding: 0;
+
+                .cmp-producttile__header-content {
+                  flex-direction: initial;
+                }
+              }
+
+              &__image {
+                width: var(--image-width);
+                height: var(--image-width);
+                margin-right: $cs-spacing-15;
+                padding: $cs-spacing-10;
+                overflow: hidden;
+
+                background-color: $cs-white;
+                border: 1px solid $cs-color-gray-20;
+                border-radius: $cs-spacing-10;
+                transform: unset;
+
+                @media (min-width: $cs-screen-lg) {
+                  width: auto;
+                  max-width: var(--image-width);
+                  margin-right: 0;
+                }
+
+                .cmp-image__image {
+                  width: 100%;
+                  height: 100%;
+                  // square image banner fill
+                  object-fit: contain;
+                }
+              }
+
+              &__content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                padding: 0;
+
+                @media (min-width: $cs-screen-lg) {
+                  margin-left: $cs-spacing-25;
+                }
+              }
+
+              &__title {
+                @extend %cs-font-p-4;
+                margin: 0;
+
+                font-family: $cs-font-family;
+
+                @media (min-width: $cs-screen-lg) {
+                  max-width: $cs-spacing-200;
+
+                  text-align: left;
+                }
+              }
+
+              &__price {
+                @extend %cs-font-p-4;
+                margin: 0 auto;
+
+                font-weight: $cs-font-weight-bold;
+                text-align: left;
+
+                @media (min-width: $cs-screen-lg) {
+                  margin: 0;
+                }
+              }
+
+              &__description {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      // link to comparison results page
+      .cmp-comparison__result-btn {
+        align-self: flex-end;
+        width: $cs-spacing-200;
+        margin-top: $cs-spacing-30;
+
+        text-align: center;
+
+        &.cmp-comparison__result-btn--inactive {
+          @extend %cs-button-medium;
+          @include cs-button(
+            $text-color: $cs-white,
+            $background-color: $cs-color-gray-30
+          );
+          width: $cs-spacing-200;
+
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  // wrapped around each plp list item
+  .cmp-comparison__item {
+    position: relative;
+
+    height: 100%;
+  }
+  // select plp item for comparison
+  .cmp-comparison__item-select {
+    position: absolute;
+    top: $cs-spacing-10;
+    left: $cs-spacing-10;
+    z-index: 1;
+
+    width: $cs-spacing-25;
+    height: $cs-spacing-25;
+
+    background-color: $cs-color-gray-60;
+    border: 1px solid $cs-color-gray-20;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+
+    transition: background-color $cs-transition-speed-250 $cs-transition-easing;
+
+    @media (min-width: $cs-screen-md) {
+      width: $cs-spacing-40;
+      height: $cs-spacing-40;
+    }
+
+    &:hover {
+      background-color: $cs-black-transparent;
+    }
+
+    &--selected {
+      background-color: $cs-color-primary;
+
+      &::before {
+        @extend %comparison-check-icon;
+        display: flex;
+        width: 0.5625rem;
+        height: 0.5rem;
+        margin: auto;
+
+        background-color: $cs-white;
+
+        content: '';
+        mask-size: cover;
+
+        @media (min-width: $cs-screen-md) {
+          width: 0.9375rem;
+          height: 0.8125rem;
+        }
+      }
+    }
+  }
+}

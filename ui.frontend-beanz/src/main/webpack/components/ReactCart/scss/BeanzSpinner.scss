@@ -1,0 +1,120 @@
+.loading-spinner {
+  padding: 1rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.lds-spinner {
+  position: relative;
+  margin: 0 auto;
+}
+
+.lds-spinner div {
+  left: 94px;
+  top: 18px;
+  position: absolute;
+  animation: lds-spinner linear 1s infinite;
+  background: $wine-berry;
+  width: 12px;
+  height: 36px;
+  border-radius: 30%;
+  transform-origin: 6px 82px;
+}
+
+.form .has-error,
+.form .is-valid,
+.select {
+  background-position: right 0.5rem top 50%;
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+}
+
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0);
+  animation-delay: -875ms;
+}
+
+.lds-spinner div:nth-child(2) {
+  transform: rotate(45deg);
+  animation-delay: -0.75s;
+}
+
+.lds-spinner div:nth-child(3) {
+  transform: rotate(90deg);
+  animation-delay: -625ms;
+}
+
+.lds-spinner div:nth-child(4) {
+  transform: rotate(135deg);
+  animation-delay: -0.5s;
+}
+
+.lds-spinner div:nth-child(5) {
+  transform: rotate(180deg);
+  animation-delay: -375ms;
+}
+
+.lds-spinner div:nth-child(6) {
+  transform: rotate(225deg);
+  animation-delay: -0.25s;
+}
+
+.lds-spinner div:nth-child(7) {
+  transform: rotate(270deg);
+  animation-delay: -125ms;
+}
+
+.lds-spinner div:nth-child(8) {
+  transform: rotate(315deg);
+  animation-delay: 0s;
+}
+
+.lds-spinner {
+  width: 100px !important;
+  height: 100px !important;
+  transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+}
+
+
+.dialog__overlay {
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.66);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.dialog__content_spinner {
+  z-index: 4;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+.dialog__content_spinner {
+  padding: 1em;
+  max-width: 90%;
+  width: 600px;
+}

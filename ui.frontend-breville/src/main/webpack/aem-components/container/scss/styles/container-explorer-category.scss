@@ -1,0 +1,25 @@
+.cmp-container--explorer-category {
+  width: 100%;
+  margin: 0 auto;
+  @media (min-width: $screen-md) {
+    max-width: $max-width;
+  }
+  
+  .cmp-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    padding: 0 $spacing-xs;
+    margin: 0 -0.3125rem;
+
+    @media (min-width: $screen-sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width: $screen-lg) {
+      padding: 0 $spacing-xxs;
+    }
+  }
+}

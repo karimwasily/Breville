@@ -1,0 +1,77 @@
+@use 'sass:math';
+
+.cmp-teaser--cs-image-top-small {
+  max-width: 16rem; // max width of each tile
+  margin: 0 0 $cs-spacing-35;
+  @media (min-width: $screen-md) {
+    padding: $cs-spacing-40 $cs-spacing-20 0;
+  }
+
+  .cmp-teaser {
+    text-align: center;
+
+    .cmp-teaser__image {
+      position: relative;
+      margin: 0 0 $cs-spacing-15;
+      @media (min-width: $screen-md) {
+        margin: 0 0 $cs-spacing-30;
+      }
+
+      .cmp-image__image {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        height: $cs-spacing-70;
+        object-fit: contain;
+        @media (min-width: $screen-md) {
+          width: auto;
+          height: $cs-spacing-110;
+        }
+      }
+    }
+
+    .cmp-teaser__content {
+      position: relative;
+
+      .cmp-teaser__pretitle {
+        @extend %cs-badge;
+        position: absolute;
+        top: -($cs-spacing-15 + $cs-spacing-15); // -(image bottom margin - badge offset)
+        left: 50%;
+        margin-left: math.div(-$cs-spacing-110, 2);
+        @media (min-width: $screen-md) {
+          top: -($cs-spacing-30 + $cs-spacing-15); // -(image bottom margin - badge offset)
+        }
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-p;
+        font-weight: $cs-font-weight-bold;
+        margin: 0 0 $cs-spacing-10;
+
+        @media (min-width: $screen-md) {
+          font-size: $cs-font-size-h7;
+          line-height: $cs-line-height-h6;
+          margin: 0 0 $cs-spacing-15;
+          padding: 0 $cs-spacing-25;
+        }
+      }
+
+      .cmp-teaser__description {
+        margin: 0 auto;
+
+        @media (min-width: $screen-md) {
+          max-width: 200px;
+        }
+
+        p {
+          @extend %cs-font-p-4;
+          margin: 0;
+          @media (min-width: $screen-md) {
+            font-size: $font-size-base;
+          }
+        }
+      }
+    }
+  }
+}

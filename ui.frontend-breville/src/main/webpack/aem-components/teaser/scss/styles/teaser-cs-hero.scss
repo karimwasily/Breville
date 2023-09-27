@@ -1,0 +1,72 @@
+%cmp-teaser--cs-hero {
+  .cmp-teaser {
+    margin: auto;
+    max-width: $cs-max-width-banners;
+    position: relative;
+    height: 420px;
+
+    @media (min-width: $screen-xxl) {
+      height: 500px;
+    }
+  
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+  
+      .cmp-image {
+        height: 100%;
+          
+        &__image {
+          height: 100%;
+          width: 100%;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+    }
+  
+    &__content {
+      position: relative;
+      z-index: 1;
+      padding-top: $cs-spacing-70;
+      width: 90%;
+      max-width: 60rem;
+      margin: auto;
+      text-align: center;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+  
+      .cmp-teaser__title {
+        @extend %cs-font-h2;
+        margin: 0 0 $cs-spacing-15;
+        text-align: center;
+        color: $white;
+        font-weight: $cs-font-weight-semi-bold;
+      }
+  
+      .cmp-teaser__description {
+        width: 100%;
+
+        p {
+          @extend %cs-font-p-4;
+          color: $white;
+
+          @media (min-width: $cs-screen-md) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cmp-teaser--cs-hero {
+  @extend %cmp-teaser--cs-hero;
+}

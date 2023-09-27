@@ -1,0 +1,83 @@
+.cmp-teaser--cs-hero-banner-plp {
+  .cmp-teaser {
+    max-width: $cs-max-width-banners;
+    margin: auto;
+    padding-top: $cs-spacing-35;
+    background-color: $cs-whitesmoke;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: $cs-screen-lg) {
+      padding: $cs-spacing-40 $cs-spacing-80;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      direction: rtl;
+
+    }
+
+    &__image {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+
+      @media (min-width: $cs-screen-lg) {
+        height: unset;
+        overflow: unset;
+      }
+
+      .cmp-image {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        // explicit width applied to cause hero image to overflow horizontal edges
+        width: 640px;
+        transform: translateX(-50%);
+
+        @media (min-width: $cs-screen-lg) {
+          display: inline-block;
+          position: unset;
+          transform: unset;
+          width: 540px;
+        }
+
+        @media (min-width: $cs-screen-xl) {
+          width: 740px;
+        }
+
+        &__image {
+          @media (min-width: $cs-screen-lg) {
+            vertical-align: middle;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 $cs-spacing-15;
+
+      @media (min-width: $cs-screen-lg) {
+        direction: ltr;
+        text-align: left;
+        padding: 0 $cs-spacing-30 0 $cs-spacing-70;
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-h2;
+        margin-bottom: $cs-spacing-15;
+      }
+
+      .cmp-teaser__description {
+        p {
+          @extend %cs-font-p;
+        }
+      }
+    }
+  }
+}

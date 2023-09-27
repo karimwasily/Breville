@@ -1,0 +1,133 @@
+.my-product-tutorials {
+  margin-bottom: $cs-spacing-45;
+
+  &__header {
+    @extend %cs-font-h8-bold;
+    margin-bottom: $cs-spacing-25;
+    padding-bottom: $cs-spacing-20;
+
+    border-bottom: 1px solid $cs-gainsboro;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-bottom: $cs-spacing-30;
+    }
+  }
+
+  &__playlist {
+    margin-bottom: $cs-spacing-25;
+    padding-bottom: $cs-spacing-25;
+
+    border-bottom: 1px solid $cs-gainsboro;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-bottom: $cs-spacing-30;
+    }
+
+    .playlist__header {
+      display: grid;
+      grid-template-columns: 9fr 1fr;
+      gap: $cs-spacing-5;
+      margin-bottom: $cs-spacing-25;
+
+      @media (min-width: $cs-screen-xl) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: $cs-spacing-30;
+      }
+
+      .header__start {
+        text-align: left;
+
+        .header__start__title {
+          @extend %cs-font-p-bold;
+          margin-bottom: $cs-spacing-5;
+        }
+
+        .header__start__desc {
+          @extend %cs-font-p-2; 
+          margin-bottom: 0;
+        }
+      }
+
+      .header__end {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: end;
+
+        @media (max-width: $cs-screen-xl) {
+          display: none;
+        }
+
+        .header__end__arrows {
+          %arrows {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            background-color: $cs-black;
+            border: 0;
+          }
+
+          .arrows--left {
+            @extend %arrow-left-circled-icon;
+            @extend %arrows;
+            margin-right: $cs-spacing-15;
+          }
+      
+          .arrows--right {       
+            @extend %arrow-right-circled-icon;
+            @extend %arrows;
+          }
+
+          button:hover {
+            background-color: $cs-forest-green;
+            cursor: pointer;
+          }
+
+          button:disabled {
+            background-color: $cs-silver;
+            cursor: initial;
+          }
+         
+        }
+      }
+    }
+
+
+    .playlist__slide {
+      margin-left: -$cs-spacing-10;
+
+      @media (min-width: $cs-screen-xl) {
+        margin-left: -$cs-spacing-20;
+      }
+
+      .slick-slide {
+        width: 80vw;
+
+        @media (min-width: $cs-screen-md) {
+          width: 45vw;
+        }
+
+        @media (min-width: $cs-screen-xl) {
+          width: 20vw;
+        }
+      }
+
+      .slick-slide > div {
+        margin-left: $cs-spacing-10;
+
+        @media (min-width: $cs-screen-xl) {
+          margin-left: $cs-spacing-20;
+        }
+      }
+ 
+      .product-tutorial:hover {
+        cursor: pointer;
+      }
+            
+      .product-tutorial__chef {
+        background-color: unset;
+      }
+    }
+  }
+}

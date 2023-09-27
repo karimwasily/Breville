@@ -1,0 +1,113 @@
+<VirtualHost *:80>
+
+ServerName  beanz.com
+ServerAlias dev-new.beanz.com dev.beanz.com
+ServerAlias uat-new.beanz.com uat.beanz.com
+ServerAlias prod-new.beanz.com www.beanz.com
+
+DocumentRoot ${DOCROOT}
+
+<IfModule mod_headers.c>
+  Header add X-Vhost "publish"
+</IfModule>
+
+# If the module loads correctly then apply base settings for the module
+<IfModule disp_apache2.c>
+	# if turned to 1, the dispatcher uses the URL already processed
+	# by handlers preceeding the dispatcher (i.e. mod_rewrite)
+	# instead of the original one passed to the web server.
+	DispatcherUseProcessedURL On
+	# Default value of 0 but if its set to 1 then the dispatcher will have apache handle all errors
+	# If set to a string of error numbers it will only hand off those errors to apache to handle
+  #DispatcherPassError		403,404
+	DispatcherPassError		1
+</IfModule>
+
+
+<Directory />
+  <IfModule disp_apache2.c>
+    # Some items cache with the wrong mime type
+    # Use this option to use the name to auto-detect mime types when cached improperly
+    ModMimeUsePathInfo On
+    # Use this option to avoid cache poisioning
+    # Sling will return /content/image.jpg as well as /content/image.jpg/ but apache can't search /content/image.jpg/ as a file
+    # Apache will treat that like a directory.  This assures the last slash is never stored in cache
+    DirectorySlash Off
+    # Enable the dispatcher file handler for apache to fetch files from AEM
+    SetHandler dispatcher-handler
+  </IfModule> 
+  Options FollowSymLinks
+  AllowOverride None
+  # Insert filter
+  SetOutputFilter DEFLATE
+  # Don't compress images
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+  # Make sure proxies don't deliver the wrong content
+  Header append Vary User-Agent env=!dont-vary
+  # Prevent clickjacking
+  Header always append X-Frame-Options SAMEORIGIN
+</Directory>
+
+<Directory "${DOCROOT}">
+  AllowOverride None
+  Require all granted
+</Directory>
+
+<IfModule disp_apache2.c>
+  # Enabled to allow rewrites to take affect and not be ignored by the dispatcher module
+  DispatcherUseProcessedURL	On
+  # Default setting to allow all errors to come from the aem instance
+  DispatcherPassError		0
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+  RewriteEngine	on
+  Include conf.d/rewrites/rewrite.rules
+  
+  RewriteEngine On
+    
+# Sitemap, robots.txt and favicon redirects
+
+RewriteRule ^/us/en/sitemap.xml$ /content/beanz/us/en.sitemap.xml [PT,L]
+RewriteRule ^/sitemap.xml$ /content/dam/marketplace/sitemap.xml [PT,L]
+
+RewriteRule ^/favicon.ico$ /etc/designs/beanz/fevicon.ico [PT,L]
+
+<IfDefine LIVE>
+    RewriteRule ^/robots.txt$ /content/dam/marketplace/robots.txt [L,PT]
+</IfDefine>
+
+<IfDefine !LIVE>
+    RewriteRule ^/robots-test.txt$ /content/dam/marketplace/robots.txt [L,PT]
+    RewriteRule ^/robots.txt$ /content/dam/marketplace/no-robots.txt [L,PT]
+</IfDefine>
+
+RewriteRule    ^/$ /content/beanz/us/en.html [PT,L]
+RewriteRule    ^/content/beanz/(.*\.html)$     /$1 [R=302,L]
+RewriteRule    ^(/content.*)$  $1 [PT,L]
+RewriteRule    ^/(.*\.html)$   /content/beanz/$1 [PT,L]
+
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteCond %{REQUEST_URI} !^/robots.txt [NC]
+RewriteRule ^/(.*)$ /content/beanz/$1 [PT,L]
+
+# For the US site 500 & 404 Pages.
+ErrorDocument 500 /us/en/500.html
+ErrorDocument 404 /us/en/pageNotFound.html
+
+# Fix to force short URL by re-writting the href response.
+AddOutputFilterByType Substitute text/html
+Substitute "s|href=\"\/content\/beanz\/(.*?)\.html|href=\"/$1.html|i"
+Substitute "s|action=\"\/content\/beanz\/(.*?)\.html|action=\"/$1.html|i"
+
+ </IfModule>
+</VirtualHost>

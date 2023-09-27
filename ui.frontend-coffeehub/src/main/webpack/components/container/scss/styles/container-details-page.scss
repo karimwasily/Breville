@@ -1,0 +1,25 @@
+.cmp-container--details-page {
+  .cmp-container {  
+    .cmp-separator {
+      margin-bottom: $spacing-lg;
+    }
+  
+    .cmp-title__text {
+      h2 {
+        @extend %font-h1;
+      }
+    }
+  
+    .text {
+      h2 {
+        @extend %font-h3;
+        margin-top: $spacing-xl;
+      }
+  
+      p {
+        margin-top: $spacing-sm;
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+}

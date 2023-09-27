@@ -1,0 +1,7 @@
+# Generate clientlibs 
+src/main/content/jcr_root/apps/breville-brands/clientlibs/clientlib-breville-site/
+src/main/content/jcr_root/apps/breville-brands/clientlibs/clientlib-coffeehub-site/
+src/main/content/jcr_root/apps/breville-brands/clientlibs/clientlib-beanz-site/
+src/main/content/jcr_root/apps/breville-brands/clientlibs/clientlib-beanz-dependencies
+src/main/content/jcr_root/apps/breville-brands/clientlibs/clientlib-site
+src/main/content/jcr_root/apps/breville-brands/clientlibs/clientlib-dependencies

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-02T23:28:02.723+11:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/coffeehub/settings/wcm/templates/blog-article-old"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Coffee and Climate Change"
+        jcr:uuid="e5c0ba10-3a09-411f-90b1-3611f64b0af2"
+        sling:resourceType="breville-brands/components/coffeehub/blog-page"
+        publicationAuthor="Dan Yee"
+        publicationDate="{Date}2021-03-10T22:18:00.000+11:00">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <v_blog_listing
+                    jcr:created="{Date}2021-03-09T12:39:22.132+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-03-09T12:41:25.504+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/coffeehub/v-blog-listing"
+                    noFullRows="0"
+                    noHalfRows="0"
+                    noThirdsRows="1"/>
+            </container>
+            <container_156323465
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container">
+                <image_1032877176
+                    jcr:created="{Date}2021-03-02T22:28:14.558+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-03-02T22:28:14.558+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/image"
+                    fileReference="/content/dam/coffeehub/en/us/blogs/DanYee.jpg"/>
+                <text
+                    jcr:created="{Date}2021-03-02T22:26:55.822+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-03-02T22:27:03.351+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/text"
+                    text="&lt;h2>&lt;b>Lorem ipsum dolor sit amet&lt;/b>&lt;/h2>&#xd;&#xa;&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et congue neque. Nam consectetur bibendum ultrices. Vivamus facilisis sodales sapien et posuere. Suspendisse mi magna, auctor et placerat sit amet, semper in est. Aenean dignissim sollicitudin odio, porta pretium magna consectetur at. Phasellus aliquet libero orci, et efficitur risus pellentesque sit amet. Maecenas mollis, magna at fringilla pretium, nisi ligula ornare felis, quis porta velit ligula sit amet enim. Praesent placerat bibendum tellus, quis sodales nisl maximus vitae. Curabitur pulvinar non mi non pulvinar. Donec semper diam mauris, mollis vulputate eros feugiat molestie.&lt;/p>&#xd;&#xa;&lt;h2>&lt;b>Lorem ipsum dolor sit amet&lt;/b>&lt;/h2>&#xd;&#xa;&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et congue neque. Nam consectetur bibendum ultrices. Vivamus facilisis sodales sapien et posuere. Suspendisse mi magna, auctor et placerat sit amet, semper in est. Aenean dignissim sollicitudin odio, porta pretium magna consectetur at. Phasellus aliquet libero orci, et efficitur risus pellentesque sit amet. Maecenas mollis, magna at fringilla pretium, nisi ligula ornare felis, quis porta velit ligula sit amet enim. Praesent placerat bibendum tellus, quis sodales nisl maximus vitae. Curabitur pulvinar non mi non pulvinar. Donec semper diam mauris, mollis vulputate eros feugiat molestie.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+            </container_156323465>
+            <container_895104790 jcr:primaryType="nt:unstructured">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container">
+                    <text
+                        jcr:created="{Date}2021-03-02T23:27:39.944+11:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-02T23:28:02.717+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/text"
+                        text="&lt;p>WRITTEN BY DAN YEE&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                </container>
+            </container_895104790>
+        </root>
+    </jcr:content>
+</jcr:root>

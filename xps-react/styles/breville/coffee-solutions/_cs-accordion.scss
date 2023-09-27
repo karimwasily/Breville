@@ -1,0 +1,91 @@
+.accordion-item__header {
+  @extend %cs-font-h2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $cs-color-primary;
+  width: 100%;
+}
+
+.accordion-item__header--closed {
+  @extend %cs-font-h4;
+}
+
+.accordion-item__header--disabled {
+  @extend %cs-font-h4;
+  color: $cs-color-gray-20;
+}
+
+.accordion-item__edit {
+  @extend %cs-font-p-2;
+  font-weight: $cs-font-weight-normal;
+  text-decoration: underline;
+  height: 22px;
+  color: $cs-color-primary;
+    
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.accordion-item__title {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-item__icon {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: $cs-color-secondary;
+  color: $cs-white;
+  margin-right: $cs-spacing-15;
+  position: relative;
+}
+  
+.accordion-item__white-tick {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+  
+// for PR review only; will be removed after merge with each section
+.item-new {
+  padding: 20px;
+  background-color: #eee;
+  text-align: center;
+}
+
+
+// for PR review only; will be replaced with button component after merge with each section
+.form-button {
+  width: 50%;
+  border: 0;
+  height: 52px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+  background-color: $cs-color-secondary;
+
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: $cs-white;
+
+  //margin-bottom: 80px;
+  //margin-top: 20px;
+}
+
+.form-button:hover {
+  cursor: pointer;
+  border: 1px solid $cs-color-secondary;
+  background-color: $cs-white;
+  color: $cs-color-secondary;
+}
+
+button[disabled].form-button {
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  background-color: #d0d0d0;
+  color: $cs-white;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-18T13:19:57.444+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/breville/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Returns Policy"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        cq:styleIds="[1615947849628]"
+                        jcr:created="{Date}2021-03-17T12:16:34.880+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-17T12:16:34.880+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/title"/>
+                    <text
+                        cq:styleIds="[1615963107576,1616037911306]"
+                        jcr:created="{Date}2021-03-17T12:16:45.460+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-18T13:18:50.249+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/text"
+                        text="&lt;p>If you are not satisfied with your purchase of a Breville appliance from &lt;u>&lt;a href=&quot;https://www.breville.com/us/en/home/index.html&quot;>Breville USA&lt;/a>&lt;/u>, you may be eligible to return your appliance to Breville within 30 days from receipt of shipment. Please contact us for a Return Authorization (RA) number and begin our Returns Process.&lt;/p>&#xd;&#xa;&lt;p>Terms and conditions of Return &amp;amp; Refund Policy:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li> The appliance must have been purchased directly from &lt;u>&lt;a href=&quot;https://www.breville.com/us/en/home/index.html&quot;>Breville USA&lt;/a>&lt;/u>. Breville cannot accept returns of Breville branded appliances purchased from other retailers or resellers.&lt;br />&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>The purchased appliance must be in brand new condition with original packaging and accessories. Please note that Breville does not permit the return of or offer refunds for parts or accessories.&lt;br />&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Please contact us to commence the return process. Please do not return your appliance to Breville without first obtaining a Return Authority number. Please note that Breville is not responsible for appliance that is lost or damaged without following our return process and without obtaining a valid Return Authority number.&lt;br />&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>The Return Authority number is valid for 14 calendar days from issuance.&lt;br />&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>If the item is returnable and you send it back to us packed in the original, unmarked packaging, including any accessories, manuals and documentation that shipped with the appliance, Breville will offer you a refund based on your original method of payment.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Dead On Arrival (DOA): Product Failure Out of the Box                                            &lt;/p>&#xd;&#xa;&lt;p>A Breville appliance is considered DOA if it shows symptoms of an equipment failure, preventing basic operability, when you first use it after opening the box. If you believe that your product is DOA, please call Breville within 30 calendar days of the invoice date. Breville will determine whether the product is DOA and will arrange for the DOA product's return and ship you a replacement product at Breville's expense.&lt;/p>&#xd;&#xa;&lt;p>For further information on warranty related claims, please refer to the Breville USA Warranty.&lt;/p>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                            <phone
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                        </cq:responsive>
+                    </text>
+                    <text_522156141
+                        cq:styleIds="[1615963096918,1615963107576]"
+                        jcr:created="{Date}2021-03-17T12:56:08.653+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-18T13:19:57.414+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/text"
+                        text="&lt;p style=&quot;text-align: left;&quot;>Breville USA Contact Information&lt;/p>&#xd;&#xa;&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;>&#xd;&#xa;&lt;tbody>&lt;tr>&lt;th>&lt;p style=&quot;text-align: left;&quot;>Method of Contact&lt;/p>&#xd;&#xa;&lt;/th>&#xd;&#xa;&lt;th>&lt;p style=&quot;text-align: left;&quot;>Contact Details&lt;/p>&#xd;&#xa;&lt;/th>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>&lt;p style=&quot;text-align: left;&quot;>Online Form:&lt;/p>&#xd;&#xa;&lt;/td>&#xd;&#xa;&lt;td style=&quot;text-align: left;&quot;>&lt;a href=&quot;https://www.brevilleusa.com/pages/cases&quot;>&lt;u>Click here to obtain online form.&lt;/u>&lt;/a>&lt;br>&#xd;&#xa;&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>&lt;p style=&quot;text-align: left;&quot;>Toll free phone number:&lt;/p>&#xd;&#xa;&lt;/td>&#xd;&#xa;&lt;td>&lt;p style=&quot;text-align: left;&quot;>1-866-BREVILLE (1-866-273-8455)&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>Hours of operation:&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>8am to 5pm (Pacific Time)&lt;br>&#xd;&#xa;Monday through Friday, excluding holidays.&lt;/p>&#xd;&#xa;&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>&lt;p style=&quot;text-align: left;&quot;>Head Office Address:&lt;/p>&#xd;&#xa;&lt;/td>&#xd;&#xa;&lt;td>&lt;p style=&quot;text-align: left;&quot;>19400 S. Western Ave&lt;br>&#xd;&#xa;Torrance, CA 90501&lt;br>&#xd;&#xa;(Please do not return product to this address&lt;br>&#xd;&#xa;without speaking to Breville and obtaining&lt;br>&#xd;&#xa;a Return Authority number).&lt;/p>&#xd;&#xa;&lt;/td>&#xd;&#xa;&lt;/tr>&lt;/tbody>&lt;/table>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                        </cq:responsive>
+                    </text_522156141>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,58 @@
+.cmp-recipeinstruction {
+  &__step {
+    margin: $spacing-lg 0;
+    display: block;
+    @media (min-width: $screen-md) {
+      margin: $spacing-xxxl 0;
+      display: flex;
+    }
+
+    &:last-of-type {
+      margin: $spacing-lg 0 0 0;
+      @media (min-width: $screen-md) {
+        margin: $spacing-xxxl 0 $spacing-md 0;
+      }
+    }
+
+    .cmp-recipeinstruction__video {
+      @media (min-width: $screen-md) {
+        flex: 7;
+      }
+    }
+    
+    .cmp-recipeinstruction__content {
+      display: flex;
+      flex-direction: column;
+      margin: $spacing-md 0 $spacing-lg 0;
+      @media (min-width: $screen-md) {
+        display: block;
+        flex: 3;
+        margin: 0 calc(100% * 1 / 12);
+      }
+
+      .cmp-recipeinstruction__title {
+        flex: 1;
+        margin-bottom: $spacing-xs;
+        @media (min-width: $screen-md) {
+          margin-bottom: $spacing-md;
+        }
+      }
+
+      .cmp-recipeinstruction__text {
+        flex: 5;
+        @media (min-width: $screen-md) {
+          margin-bottom: $spacing-md;
+        }
+
+        a {                
+          color: $aubergine;
+
+          &:hover {
+            text-decoration: underline;
+            transition: $transition-speed;
+          }
+        }
+      }
+    }
+  }
+}

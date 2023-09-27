@@ -1,0 +1,51 @@
+.masterclasses__container {
+
+  margin: $cs-spacing-15 0;
+  padding: $cs-spacing-25 $cs-spacing-20;
+
+  background-color: $cs-white;
+  border-radius: $cs-border-radius-8;
+
+  @media (min-width: $cs-screen-xl) {
+    text-align: center;
+  }
+        
+  .masterclasses__title {
+    @extend %cs-font-h8;
+    margin-bottom: $cs-spacing-10;
+  }
+    
+  .masterclasses__description {      
+    @extend %cs-font-p-2;
+    margin-bottom: $cs-spacing-25;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-bottom: $cs-spacing-30;
+    }
+  }
+
+  .masterclasses_subtitle {
+    @extend %cs-font-p-bold;
+    margin-bottom: $cs-spacing-30;
+  }
+  
+  .masterclasses__button-container {
+    margin-top: $cs-spacing-30;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-top: $cs-spacing-30;
+    }
+      
+    .masterclasses__button {
+      padding: $cs-spacing-10;
+
+      font-weight: $cs-font-weight-bold;
+      font-size: $cs-font-size-base;
+      line-height: $cs-font-size-h6;
+
+      @media (min-width: $cs-screen-xl) {
+        padding: $cs-spacing-10 $cs-spacing-30;
+      }
+    }
+  }
+}

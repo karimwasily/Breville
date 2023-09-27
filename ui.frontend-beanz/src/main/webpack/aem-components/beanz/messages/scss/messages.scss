@@ -1,0 +1,27 @@
+.message-popup{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    background: white;
+    top: 0;
+    width: 100%;
+    height:$spacing-xl;
+    max-width: $beanz-spacing-500;
+    transform: translate(-50%, 0);
+    @include breakpoint-down (sm) {
+        width: 90%;
+    }
+    .message-popup_text{
+        padding-left: $spacing-ml;
+        color: $black;
+    }
+    .message-popup_button{
+        padding-left: $beanz-spacing-300;
+        color: $black;
+        text-decoration: underline;
+        @include breakpoint-down (sm) {
+            padding-left: $beanz-spacing-120;
+     }
+    }    
+
+}

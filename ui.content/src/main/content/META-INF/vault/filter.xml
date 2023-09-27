@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<!-- Breville Brands -->
+    <filter root="/conf/breville-brands"/>
+	<filter root="/etc/languages"/>
+	<filter root="/etc/map/http"/>
+	<filter root="/etc/map/https"/>
+	<filter root="/etc/acs-commons/lists/breville-brands"/>
+	<filter root="/etc/designs/beanz"/>
+   <!-- <filter root="/content/breville-brands" mode="merge"/> 
+    <filter root="/content/breville-brands-style-system" mode="merge"/>
+    <filter root="/content/dam/breville-brands" mode="merge"/>
+    <filter root="/content/experience-fragments/breville-brands"/> -->
+
+    <!-- Coffee Hub -->
+    <filter root="/conf/coffeehub"/>
+    <!--<filter root="/content/coffeehub" mode="merge"/>
+    <filter root="/content/dam/coffeehub" mode="merge"/>
+    <filter root="/content/experience-fragments/coffeehub"/>
+    <filter root="/content/cq:tags/coffee-hub" mode="merge"/>
+    <filter root="/content/experience-fragments/coffeehub" mode="merge"/> -->
+
+    <!-- Beanz --> 
+    <filter root="/conf/beanz"/>
+    <!-- <filter root="/content/beanz" mode="merge"/>
+    <filter root="/content/experience-fragments/beanz" mode="merge"/>
+    <filter root="/content/dam/beanz" mode="merge"/>-->
+
+    <!-- Breville --> 
+    <filter root="/conf/breville"/>
+   <!-- <filter root="/content/breville" mode="merge"/>
+    <filter root="/content/experience-fragments/breville" mode="merge"/> --> 
+
+</workspaceFilter>

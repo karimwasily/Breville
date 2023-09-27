@@ -1,0 +1,300 @@
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.beanzSearch {
+  background-color: $white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 73px;
+  z-index: 9999;
+  overflow-y: scroll;
+  transition: opacity $transition-speed linear;
+  opacity: 0;
+  visibility: hidden;
+  @include breakpoint-up(md) {
+    top: 130px;
+  }
+  @include breakpoint-up(lg) {
+    top: 150px;
+  }
+  @include breakpoint-up(xl) {
+    top: 105px;
+  }
+
+  &.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .cmp-container-beanz-search__roasters--search-box {
+    border-bottom: 1px solid $cart-gray-border;
+    padding: 0 $spacing-sm;
+
+    .aa-input-container {
+      position: relative;
+      max-width: 760px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .cmp-input-clear {
+      position: absolute;
+      width: 40px;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+  
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 1px;
+        margin-top: -1px;
+        top: 50%;
+        left: $spacing-xs;
+        right: $spacing-xs;
+        background: $violet;
+        
+        @include breakpoint-up(md) {
+          height: 2px;
+        }
+      }
+  
+      &::before {
+        transform: rotate(45deg);
+      }
+  
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      
+    }
+
+    .cmp-input-beanz-search__roasters-input-search {
+      @extend %navigation-icon-svg;
+      @extend %font-search-input;
+      height: 65px;
+      border: 0;
+      outline: none;
+      width: 100%;
+      padding: 0 $spacing-lg;
+      background-size: 30px;
+      background-position: center left;
+      background-repeat: no-repeat;
+
+      @include breakpoint-up(md) {
+        height: 100px;
+        background-size: 40px;
+        padding: 0 $spacing-xl;
+      }
+
+      &::placeholder {
+        font-weight: $font-weight-medium-bold;
+        color: $violet;
+        font-style: italic;
+      }
+    }
+  }
+
+  .cmp-container-beanz-search__result-box {
+    display: block;
+    max-width: $max-width;
+    margin: auto;
+    padding-bottom: $spacing-xxl;
+    @include breakpoint-up(sm) {
+      display: table;
+    }
+
+    .cmp-container-beanz-search__coffee {
+      display: block;
+      padding: 0 $spacing-sm;
+      width: 100%;
+      margin: auto;
+      padding: 0 $spacing-sm;
+      @include breakpoint-up(sm) {
+        display: table-cell;
+        width: 450px;
+      }
+    }
+
+    .cmp-container-beanz-search__result-box--category-col {
+      display: block;
+      width: 100%;
+      @include breakpoint-up(sm) {
+        display: table-cell;
+        width: 50%;
+      }
+      @include breakpoint-up(xl) {
+        display: block;
+        width: auto;
+      }
+      
+      .cmp-container-beanz-search__categories,
+      .cmp-container-beanz-search__roasters {
+        display: block;
+        padding: 0 $spacing-md;
+        display: block;
+        width: auto;
+        max-width: 100%;
+        @include breakpoint-up(xl) {
+          display: table-cell;
+          width: 450px;
+        }
+
+        .cmp-text-beanz-search__roasters--item-p,
+        .cmp-text-beanz-search__categories--item-p {
+          @extend %font-sarech-category-item-p;
+          padding: $spacing-xxs 0;
+          display: block;
+        }
+      
+      }
+      
+    }
+
+    .cmp-container-beanz-search__coffee {
+      .cmp-container-beanz-search__coffee--item {
+        padding: $spacing-md $spacing-xs;
+        border-bottom: 1px solid $cart-gray-border;
+
+        .cmp-text-beanz-search__coffee--media-a {
+          display: flex;
+
+          .cmp-image-beanz-search__coffee--image {
+            max-width: 100px;
+            width: 100%;
+            height: auto;
+            align-self: flex-start;
+            object-fit: contain;
+          }
+
+          .cmp-container-beanz-search__coffee--media-body {
+            flex: 1;
+            align-self: center;
+            padding-left: $spacing-xs;
+
+            .cmp-text-beanz-search__coffee--product-catergory {
+              @extend %font-small-medium-bold-p;
+              color: $font-brown;
+            }
+
+            .cmp-text-beanz-search__coffee--product-title {
+              @extend %font-sarech-category-item-p;
+              margin-top: $spacing-xxs;
+              color: $jaguar;
+            }
+          }
+        }
+      }
+
+      .cmp-text-beanz-search__coffee--all-coffee {
+        @extend %font-sarech-category-item-p;
+        margin-top: $spacing-xs;
+        display: block;
+      }
+    }
+
+    .cmp-text-beanz-search__coffees--title,
+    .cmp-text-beanz-search__categories--title,
+    .cmp-text-beanz-search__roasters--title {
+      @extend %font-sarech-category-title;
+      border-bottom: 1px solid $cart-gray-border;
+      color: $jaguar;
+      padding: $spacing-xs 0;
+      margin: $spacing-ml 0 $spacing-xs;
+      @include breakpoint-up(sm) {
+        margin: $spacing-lg 0 $spacing-sm;
+      }
+    }
+  }
+
+  .cmp-container-beanz-search__popular-row {
+    display: table;
+    margin: auto;
+    width: 100%;
+    @include breakpoint-up(sm) {
+      width: auto;
+    }
+  }
+
+  .cmp-container-beanz-search__popular-search,
+  .cmp-container-beanz-search__popular-coffees {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 $spacing-sm;
+    @include breakpoint-up(sm) {
+      display: table-cell;
+      width: 450px;
+    }
+
+    .cmp-text-beanz-search__popular-search--title,
+    .cmp-text-beanz-search__popular-coffees--title {
+      @extend %font-sarech-category-title;
+      border-bottom: 1px solid $cart-gray-border;
+      color: $jaguar;
+      padding: $spacing-xs 0;
+      margin: $spacing-ml 0 $spacing-xs;
+      @include breakpoint-up(sm) {
+        margin: $spacing-lg 0 $spacing-sm;
+      }
+    }
+
+    .cmp-text-beanz-search__popular-search--item-p {
+      @extend %font-sarech-category-item-p;
+      padding: $spacing-xxs 0;
+      display: block;
+    }
+          
+    .cmp-container-beanz-search__coffee--item {
+      padding: $spacing-md $spacing-xs;
+      border-bottom: 1px solid $cart-gray-border;
+
+      .cmp-text-beanz-search__coffee--media-a {
+        display: flex;
+
+        .cmp-image-beanz-search__coffee--image {
+          max-width: 100px;
+          width: 100%;
+          height: auto;
+          align-self: flex-start;
+          object-fit: contain;
+        }
+
+        .cmp-container-beanz-search__coffee--media-body {
+          flex: 1;
+          align-self: center;
+          padding-left: $spacing-xs;
+
+          .cmp-text-beanz-search__coffee--product-catergory {
+            @extend %font-small-medium-bold-p;
+            color: $font-brown;
+          }
+
+          .cmp-text-beanz-search__coffee--product-title {
+            @extend %font-sarech-category-item-p;
+            margin-top: $spacing-xxs;
+            color: $jaguar;
+          }
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    
+  }
+}

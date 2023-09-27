@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2019-01-29T05:41:29.822Z"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2021-05-31T08:29:46.134Z"
+        cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Ireland"
+        jcr:uuid="5f047e13-3ec5-47be-8b26-7c5c825d2bb6"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            cq:lastReplicated="{Date}2021-05-31T08:29:48.483Z"
+            cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+            cq:lastReplicationAction="Activate"
+            jcr:mixinTypes="[cq:ReplicationStatus]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <english
+                cq:lastReplicated="{Date}2021-05-31T08:29:51.188Z"
+                cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+                cq:lastReplicationAction="Activate"
+                jcr:lastModified="{Date}2019-01-29T05:41:29.821Z"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="English"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="Default:en;https://www.sageappliances.com/ie/en/home/index.html"/>
+        </list>
+    </jcr:content>
+</jcr:root>

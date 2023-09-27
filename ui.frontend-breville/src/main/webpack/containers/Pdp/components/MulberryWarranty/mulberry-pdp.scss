@@ -1,0 +1,38 @@
+.mulberry-pdp__wrapper {
+  margin-top: $cs-spacing-20;
+  margin-bottom: $cs-spacing-20;
+
+  @media (min-width: $cs-screen-md) {
+    margin-top: $cs-spacing-10;
+  }
+
+  .mulberry-warranty__wrapper {
+    margin: 0;
+
+    .mulberry-warranty__title {
+      @extend %cs-font-p-2-bold;
+    }
+
+    .mulberry-warranty__description {
+      margin-top: $cs-spacing-10;
+
+      &-text {
+        @extend %cs-font-p-4;
+      }
+
+      &-icon {
+        margin-top: auto;
+      }
+    }
+
+    .mulberry-warranty__options {
+      grid-template-columns: 1fr 1fr;
+      margin-top: $cs-spacing-15;
+
+      .mulberry-warranty__option-item {
+        @extend %cs-font-p-4;
+        font-weight: normal;
+      }
+    }
+  }
+}

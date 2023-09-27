@@ -1,0 +1,90 @@
+.signin__wrapper {
+  display: inline;
+}
+    
+.modal-signin {
+  overflow-y: auto;
+  max-width: 500px;
+  width: 100%;
+      
+  @media (min-width: $cs-screen-lg) {
+    margin: $cs-spacing-70 0;
+  }
+}
+    
+.overlay-signin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: Rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+    
+  @media (min-width: $cs-screen-md) {
+    justify-content: center;
+  }
+}
+    
+.signin-modal__container {
+  position: relative;
+  padding: $cs-spacing-50 $cs-spacing-15;
+  background-color: $cs-white;
+    
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-50 $cs-spacing-40;
+  }
+    
+  .signin-modal-header {
+    margin-bottom: $cs-spacing-35;
+    
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-40;
+    }
+    
+    &__title {
+      @extend %cs-font-h4;
+      margin-bottom: $cs-spacing-20;
+    }
+    
+    &__desc {
+      @extend %cs-font-bundle-tiles;
+      margin-bottom: 0 !important;
+    
+      span {
+        @media (min-width: $cs-screen-md) {
+          display: block;
+        }
+      }
+    }
+    
+    .signin-modal__close-icon {
+      position: absolute;
+      top: $cs-spacing-20;
+      right: $cs-spacing-20;
+    
+      @media (min-width: $cs-screen-md) {
+        top: $cs-spacing-40;
+        right: $cs-spacing-40;
+      }
+    }
+  }
+    
+  .signin-modal-content {
+    .react-flex {
+      padding: 0;
+      gap: 15px;
+      flex-wrap: wrap;
+    
+    }
+  }
+    
+  .signin-modal-footer {
+    margin-top: $cs-spacing-40;
+    text-align: center;
+  }
+}

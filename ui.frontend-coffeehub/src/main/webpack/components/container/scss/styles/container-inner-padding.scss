@@ -1,0 +1,9 @@
+.cmp-container--inner-padding {
+  > .cmp-container {
+    padding: $spacing-lg $spacing-md $spacing-sm;
+    
+    @media (min-width: $screen-md) {
+      padding: $spacing-xxl;
+    }
+  }
+}

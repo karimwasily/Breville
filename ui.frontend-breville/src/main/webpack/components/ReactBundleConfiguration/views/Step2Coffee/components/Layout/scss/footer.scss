@@ -1,0 +1,99 @@
+.coffee-conf-footer {
+  margin: auto;
+  margin-top: $cs-spacing-50;
+
+  @media (min-width: $cs-screen-lg) {
+    margin-top: $cs-spacing-90;
+    background-color: $cs-whitesmoke;
+  }
+
+  &__inner {
+    max-width: $cs-max-width-bundle-config;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+                                                  
+    @media (min-width: $cs-screen-lg) {
+      display: flex;
+      flex-direction: row;
+      background-color: $cs-whitesmoke;
+      padding: $cs-spacing-30 $cs-spacing-20 $cs-spacing-35;
+    }
+    @media (min-width: $cs-screen-xxl) {
+      padding: $cs-spacing-30 0 $cs-spacing-35;
+    }
+
+    .coffee-conf-footer__content {
+      margin: 0 $cs-spacing-15;
+      padding: $cs-spacing-20 $cs-spacing-20 $cs-spacing-25;
+      border-radius: $cs-border-radius-16;
+      background-color: $cs-whitesmoke;
+
+      @media (min-width: $cs-screen-lg) {
+        flex: 50%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .coffee-conf-footer__title {
+        @extend %cs-font-h10;
+        margin-bottom: $cs-spacing-15;
+
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: $cs-spacing-5;
+        }
+      }
+
+      .coffee-conf-footer__desc {
+        @extend %cs-font-p-4;
+        margin-bottom: 0;
+      }
+    }
+
+    .coffee-conf-footer__links {
+      display: flex;
+      flex: 50%;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 3rem; // using rem instead of variable to match the alignment as per designs
+
+      @media (min-width: $cs-screen-lg) {
+        align-items: flex-end;
+        text-align: left;
+        padding: 0;
+      }
+
+      .coffee-conf-footer__submit {
+        margin-top: $cs-spacing-30;
+        width: 100%;
+        padding: $cs-spacing-15 0;
+
+        @media (min-width: $cs-screen-md) {
+          max-width: 17.5rem;
+        }
+
+        @media (min-width: $cs-screen-lg) {
+          margin-top: 0;
+        }
+
+        &:hover,
+        &:focus {          
+          background-color: $cs-color-secondary;
+          color: $cs-white;
+        }  
+      }
+
+      .coffee-conf-footer__skip {
+        @extend %cs-link-underline;
+        font-size: $cs-font-size-base;
+        padding: $cs-spacing-20 0;
+        text-align: center;
+
+        @media (min-width: $cs-screen-lg) {
+          padding: $cs-spacing-20 0 0;
+          text-align: right;
+        }
+      }     
+    }
+  }
+}

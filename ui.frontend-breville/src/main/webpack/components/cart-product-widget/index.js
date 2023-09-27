@@ -1,0 +1,1 @@
+export { default as CartProductWidget } from './cart-product-widget';

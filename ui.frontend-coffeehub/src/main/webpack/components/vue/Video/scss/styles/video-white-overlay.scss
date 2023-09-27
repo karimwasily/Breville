@@ -1,0 +1,55 @@
+.cmp-v-video--white-overlay {
+  @extend %video-default;
+
+  .cmp-v-video {
+    &__underlay,
+    &__overlay {
+      .cmp-v-video__image {
+      }
+        
+    }
+    
+    &__underlay {
+    }
+    
+    // IMAGE OVERLAY
+    &__overlay {
+    
+      // PARENT CONTAINER FOR ICON AND TITLE
+      .cmp-v-video__parent {
+        
+        // ARROW ICON
+        .cmp-v-video__icon-wrapper {
+          $size: 20px;
+
+          .cmp-v-video__icon-play {
+            border-left: $size solid $black;
+          }
+    
+          // CIRCLE ICON
+          .cmp-v-video__icon-circle {
+            border: 1px solid $black;
+          }
+        }
+    
+        .cmp-v-video__title {
+          color: $black;
+        }
+      }
+    
+      .cmp-v-video__parent-background {
+        background-color: rgba(255, 255, 255, 0.65);
+      }
+    }
+    
+    // YOUTUBE PLAYER
+    .cmp-v-video__player {
+      
+    }
+    
+    &__disclaimer {
+      background-color: rgba(255, 255, 255, 0.65);
+      color: $black;
+    }
+  } 
+}

@@ -1,0 +1,434 @@
+.modal-open {
+  overflow: hidden;
+}
+
+.page {
+  .add-to-cart-popup,
+  .bundle-subscription-popup,
+  .change-coffee-popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $transition-speed;
+    background-color: $background-overlay;
+    overflow-y: auto;
+
+    .add-to-cart-popup--main-content {
+      position: relative;
+      width: auto;
+      margin: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      min-height: calc(100%);
+      justify-content: center;
+    }
+
+    .add-to-cart-popup--container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      pointer-events: auto;
+      background-color: $white;
+      border: 1px solid $background-overlay;
+      border-radius: $border-radius-base;
+      padding: 0 $spacing-xxs;
+      max-width: 100%;
+      opacity: 0;
+      margin: 0;
+      @include breakpoint-up (sm) {
+        max-width: 540px;
+        margin: $spacing-xs;
+      }
+
+      .add-to-cart-popup--content {
+        text-align: center;
+
+        .add-to-cart-popup-content--image {
+          max-width: 100%;
+          margin: auto;
+          max-height: 240px;
+          display: table;
+          @include breakpoint-up (sm) {
+            max-height: 300px;
+          }
+        }
+
+        .add-to-cart-popup-content--details {
+          .modalDetailTopList {
+            span {
+              @extend %font-small-p;
+              font-size: $font-size-xsmall;
+              text-transform: capitalize;
+              display: inline-block;
+              color: $jaguar;
+              padding: 0 $spacing-xxs;
+              position: relative;
+              font-weight: $font-weight-bold;
+
+              +span::before {
+                content: '';
+                position: absolute;
+                background-color: $jaguar;
+                width: 1px;
+                top: 3px;
+                bottom: 3px;
+                left: -1px;
+              }
+            }
+          }
+
+          .add-to-cart-popup-content--title {
+            font-family: $font-family-secondary;
+            font-size: $font-size-large;
+            font-weight: $font-weight-bold;
+            color: $jaguar;
+            line-height: $line-height-base;
+            letter-spacing: $letter-spacing-base;
+            text-align: center;
+            margin-top: $spacing-xxs;
+            margin-bottom: $spacing-xxs;
+          }
+
+          .add-to-cart-popup-content--sub-title {
+            span {
+              @extend %font-small-p;
+              font-size: $font-size-xsmall;
+              display: inline-block;
+              color: $gray;
+              text-transform: uppercase;
+              padding: 0 5px;
+              position: relative;
+              font-weight: $font-weight-bold;
+
+              +span::before {
+                content: '';
+                position: absolute;
+                background-color: $gray-dark;
+                width: 1px;
+                top: 3px;
+                bottom: 3px;
+                left: -1px;
+              }
+            }
+          }
+        }
+      }
+
+      .cmp-text--add-to-cart-heading {
+        @extend %font-p;
+        font-size: $font-size-mlarge;
+        font-family: $font-family-secondary;
+        text-align: center;
+        color: $jaguar;
+        width: auto;
+        margin: 0;
+        border-bottom: 1px solid $gray-dark;
+        padding: $spacing-xxs;
+        font-weight: $font-weight-bold;
+          
+      }
+
+      .add-to-cart-popup--close {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        display: block;
+        top: $spacing-xs;
+        right: $spacing-xs;
+        cursor: pointer;
+        opacity: 0.5;
+
+        .add-to-cart-popup--close-button {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          border: 0;
+          background: $gray-davy;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 2px;
+            margin-top: -1px;
+            top: 50%;
+            left: $spacing-xs;
+            right: $spacing-xs;
+            background: $white;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      
+
+      .add-to-cart-popup--footer {
+        margin-left: $spacing-xs;
+        margin-right: $spacing-xs;
+        padding: $spacing-md 0;
+        border-top: 1px solid $black;
+        margin-top: $spacing-sm;
+        @include breakpoint-up (sm) {
+          margin-left: $spacing-coffee-lowdown;
+          margin-right: $spacing-coffee-lowdown;
+        }
+
+        .btn {
+          &.btn-primary {
+            @extend %solid-large-green-btn;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            max-width: 100%;
+          }
+
+          &.btn-primary-faded {
+            @extend %large-green-btn;
+            margin: $spacing-sm auto 0;
+            display: block;
+            max-width: 100%;
+            @include breakpoint-up (sm) {
+              margin: $spacing-ml auto 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.shown {
+      visibility: visible;
+      opacity: 1;
+
+      .add-to-cart-popup--container {
+        opacity: 1;
+      }
+    }
+  }
+
+  .bundle-subscription-popup {
+    .add-to-cart-popup--container {
+      @include breakpoint-up (sm) {
+        border-radius: $border-radius-16px;
+      }
+
+      .cmp-text--add-to-cart-heading {
+        padding-top: $spacing-sm;
+        border-bottom: 0;
+      }
+
+      .add-to-cart-popup--content {
+        max-width: 450px;
+        margin: 0 auto;
+      }
+
+      .bundle-subscription--content--text {
+        @extend %font-semi-bold-p;
+        display: block;
+        margin: $spacing-sm;
+      }
+
+      .add-to-cart-popup--footer {
+        border-top: 0;
+        margin-top: 0;
+        margin-bottom: $spacing-sm;
+
+        .btn-primary {
+          text-align: center !important;
+          max-width: 115px !important;
+          font-size: $font-size-base !important;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+     
+    }
+  }
+}
+// .modal-open {
+//   overflow: hidden;
+// }
+
+// .page {
+//   .cmp-container--order-help {
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     z-index: 99999;
+//     left: 0;
+//     top: 0;
+//     visibility: hidden;
+//     opacity: 0;
+//     transition: opacity $transition-speed;
+//     background-color: $background-overlay;
+//     overflow-y: auto;
+
+//     .cmp-container {
+//       margin-top: 0;
+//       position: absolute;
+//       background-color: $white;
+//       background-clip: padding-box;
+//       border: 1px solid $background-overlay;
+//       border-radius: 0.3rem;
+//       padding-bottom: $spacing-md;
+//       left: 0;
+//       width: auto;
+//       max-width: 100%;
+//       top: 0;
+//       right: 0;
+//       opacity: 0;
+//       @include breakpoint-up (sm) {
+//         width: 100%;
+//         max-width: 540px;
+//         transform: translate(-50%, -50%);
+//         margin-left: 0;
+//         overflow-y: auto;
+//         max-height: 95vh;
+//         top: 50%;
+//         left: 50%;
+//       }
+
+//       .cmp-text--order-help-heading {
+//         p {
+//           @extend %font-p;
+//           font-size: $font-size-mlarge;
+//           font-family: $font-family-secondary;
+//           text-align: center;
+//           color: $font-brown;
+//           width: auto;
+//           margin: $spacing-sm 0;
+//           border-bottom: 1px solid $gray80;
+//           padding-bottom: $spacing-md;
+//           padding-top: $spacing-xxs;
+//           @include breakpoint-up(sm) {
+//             margin: $spacing-sm -80px;
+//           }
+//         }
+//       }
+
+//       .cmp-text--order-help-title {
+//         width: 30% !important;
+//         flex: 0 0 30%;
+
+//         p {
+//           @extend %font-p;
+//           font-size: $font-size-base;
+//           font-weight: $font-weight-bold;
+//           margin: 0;
+//         }
+//       }
+
+//       .cmp-text--order-help-description {
+//         @extend %font-small-p;
+//         width: 70% !important;
+//         flex: 0 0 70%;
+//         display: table-cell;
+//         list-style: none;
+//         margin: 0;
+//         padding: $spacing-xxs $spacing-xs;
+//         width: 80%;
+//         color: $black;
+
+//         p {
+//           margin: 0;
+//         }
+//       }
+
+//       hr {
+//         &.cmp-separator__horizontal-rule {
+//           height: 1px;
+//           border: 0;
+//           background-color: $gray80;
+//         }
+//       }
+
+//       .cmp-btn--order-help-close {
+//         position: absolute;
+//         width: 40px !important;
+//         height: 40px;
+//         display: block;
+//         top: 10px;
+//         right: -4px;
+//         cursor: pointer;
+//         opacity: 0.7;
+//         @include breakpoint-up(sm) {
+//           right: -70px;
+//         }
+
+//         button {
+//           position: relative;
+//           width: 40px;
+//           height: 40px;
+//           padding: 0;
+//           border: 0;
+//           background: $gray-davy;
+//           border-radius: 4px;
+//           cursor: pointer;
+
+//           &::before,
+//           &::after {
+//             content: '';
+//             position: absolute;
+//             display: block;
+//             height: 2px;
+//             margin-top: -1px;
+//             top: 50%;
+//             left: 6px;
+//             right: 6px;
+//             background: $white;
+//           }
+
+//           &::before {
+//             transform: rotate(45deg);
+//           }
+
+//           &::after {
+//             transform: rotate(-45deg);
+//           }
+//         }
+//       }
+
+//       .aem-Grid {
+//         display: flex;
+//         flex-wrap: wrap;
+//         position: relative;
+//         width: auto;
+//         margin: 0 $spacing-sm;
+//         @include breakpoint-up(sm) {
+//           margin: 0 80px;
+//         }
+//       }
+//     }
+
+//     &.shown {
+//       visibility: visible;
+//       opacity: 1;
+
+//       .cmp-container {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }

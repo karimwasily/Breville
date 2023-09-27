@@ -1,0 +1,20 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.model="com.breville.aem.brands.core.models.VVideo"></sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}" data-sly-test="${!model.videoId}"></sly>
+<div
+  data-sly-test="${model.videoId}"
+  data-vue-cmp="v-video"
+  data-video-id="${model.videoId}"
+  data-overlay-image="${model.overlayImageReference}"
+  data-image-alt-text="${model.imageAltText}"
+  data-title="${model.title}"
+  data-start-time="${model.startTime}"
+  data-stop-time="${model.stopTime}"
+  data-chapters="${model.chapters}"
+  data-show-timestamp="${model.showTimestamp}"
+  data-disclaimer-text="${'ch-project-video-disclaimer' @ i18n}">
+</div>
+
+
+<!--/* Following line forces the VueJS clientlibs to be included later on the page */-->
+<sly data-sly-use.attribs="${'com.breville.aem.brands.core.models.Attribs' @ attrib='include-vue', value='true'}" />

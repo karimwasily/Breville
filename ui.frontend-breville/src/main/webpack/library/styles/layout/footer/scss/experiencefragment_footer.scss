@@ -1,0 +1,314 @@
+//== XF Footer style, used on page template
+
+footer.experiencefragment {
+  //@extend %page-gutter;
+  padding-bottom: $spacing-page-gutter-mobile;
+
+  color: $footer-foreground;
+  font-family: $font-family-arial;
+
+  background-color: $footer-background;
+
+  a {
+    
+    color: $light-purple;
+    font-size: $font-size-base;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    line-height: $line-height-small;
+
+    li {
+      margin-bottom: $spacing-xxs;
+
+      font-size: $font-size-base;
+      line-height: $line-height-small;
+      @media (min-width: $screen-sm) {
+        margin-bottom: $spacing-xs;
+      }
+
+      a {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+
+  .cmp-container--footer-top {
+    padding: 0 $spacing-ml;
+
+    border-bottom: 1px solid $swamp;
+
+    .cmp-text--footer {
+      padding-top: $spacing-ml;
+      padding-bottom: 0;
+      padding-left: $spacing-ml;
+      @media (min-width: $screen-md) {
+        width: 25% !important;
+        padding-bottom: $spacing-ml;
+      }
+      @media (min-width: $screen-lg) {
+        width: 16.66666667% !important;
+      }
+
+      p {
+        margin-top: $cs-spacing-10; 
+      }
+
+    }
+
+    .cmp-text--footer-left-align {
+      padding-top: 0;
+      padding-bottom: $spacing-xs;
+
+      p {
+        margin-top: $cs-spacing-10;
+      }
+      @media (min-width: $screen-md) {
+        padding-top: $spacing-ml;
+        padding-bottom: $spacing-ml;
+      }
+      @media (max-width: $screen-md) {
+        margin-left: 0 !important;
+        padding-left: $cs-spacing-25;
+      }
+      
+    }
+
+    .cmp-text--black-background {
+      width: 100% !important;
+      margin-left: 0 !important;
+      @media (min-width: $screen-lg) {
+        width: 41.66666667% !important;
+        margin-left: 7.33333333% !important;
+      }
+
+      .cmp-text {
+        display: flex;
+        justify-content: space-between;
+        margin-right: -$spacing-ml;
+        margin-left: -$spacing-ml;
+        padding: $spacing-ml $spacing-xl-2;
+
+        font-style: italic;
+
+        background-color: $swamp;
+        cursor: pointer;
+
+        span {
+          @extend %cs-link-bold-right-arrow;
+        }
+
+        p ,
+        span {
+          margin-top: $cs-spacing-10;
+        }
+
+        @media (max-width: $screen-sm) {
+          span {
+            padding-left: 0;
+          }
+        }
+      }
+
+      .cmp-text  span::after {
+        background-color: $cs-white;
+      } 
+
+     
+    }
+
+    p {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-base;
+      font-family: $font-family-arial;
+    }
+  }
+  
+  .cmp-container--footer-middle {
+    padding: $spacing-ml;
+
+    .cmp-container--footer-logo {
+      float: none !important;
+      width: auto !important;
+      padding-bottom: $spacing-ml;
+      @media (min-width: $screen-lg) {
+        float: left !important;
+        width: 25% !important;
+        margin-left: 8.33333333% !important;
+      }
+
+      @media (max-width: $screen-sm) {
+        margin-left: 0 !important;
+      }
+
+      .cmp-text--footer {
+        display: inline-block;
+
+        color: $white;
+
+        p {
+          margin: $spacing-xs $spacing-xs $spacing-xs 0;
+
+          font-size: $font-size-medium;
+        }
+
+      }
+
+      .text {
+        .cmp-text {
+          p {
+            @extend %cs-font-p-4;
+          }
+
+          @media (max-width: $cs-screen-xxl) {
+            white-space: nowrap;
+            text-align: center;
+          }
+        }
+      }
+     
+      .cmp-image--footer-logo {
+        width: $spacing-xl !important;
+        height: $spacing-xl !important;
+        margin-right: $spacing-sm;
+        margin-left: -2%;
+
+        color: $light-purple;
+
+        cursor: pointer;
+
+      }
+      
+      .footer-social-container {
+        display: flex;
+
+        div {
+          text-align: center;
+         
+          
+        }
+        @media (max-width: $screen-sm) {
+          align-items: center;
+          justify-content: space-evenly;
+        }
+
+        .cmp-text--footer {
+          display: none;
+      
+          @media (min-width: $screen-md) {
+            display: block;
+          }
+          @media (min-width: $screen-lg) {
+            display: block;
+          }
+          @media (min-width: $screen-xl) {
+            display: block;
+          }
+          @media (min-width: $screen-xxl) {
+            display: block;
+          }
+        }
+      }
+        
+      .cmp-container {  
+        .image {
+          display: inline-block;
+          width: $cs-spacing-40;
+          height: $cs-spacing-40;
+          margin-left: $spacing-md;
+
+          div {
+            align-items: center;
+          }
+          
+          
+        }
+        @media (max-width: $screen-sm) {
+          .image {
+            margin-left: 0 !important;
+          }
+          
+        }
+      }
+    }
+
+    .cmp-container--footer-list {
+      float: none !important;
+      width: auto !important;
+      @media (min-width: $screen-lg) {
+        float: left !important;
+        width: 50% !important;
+      }
+      
+      .cmp-text--vertical-link-list {
+        width: 100% !important;
+        @media (min-width: $screen-sm) {
+          width: 31.33% !important;
+        }
+
+        p {
+          margin-bottom: $spacing-xs;
+
+          font-size: $font-size-base;
+          font-family: $font-family-primary;
+          line-height: $line-height-small;
+        }
+      }
+    }
+
+    .cmp-text--footer-font {
+      a {
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  .cmp-container--footer-bottom {
+    padding-right: $spacing-ml;
+    padding-left: $spacing-ml;
+
+    .cmp-text--copyright-link-list {
+      display: block;
+      width: 100% !important;
+      margin-left: 0% !important;
+      @media (min-width: $screen-lg) {
+        display: inline-table;
+        width: 16.66666667% !important;
+        margin-left: 8.33333333% !important;
+      }
+    }
+
+    .cmp-text--reference-link-list {
+      display: block;
+      width: 100% !important;
+      margin-left: 0% !important;
+      @media (min-width: $screen-lg) {
+        display: inline-table;
+        width: 50% !important;
+      }
+    }
+
+    p,
+    a {
+      font-size: $font-size-small;
+      
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        margin-left: $spacing-xxs;
+
+        font-size: $font-size-base;
+        @media (min-width: $screen-sm) {
+          margin-left: $spacing-xs;
+        }
+      }
+    }
+  }
+}

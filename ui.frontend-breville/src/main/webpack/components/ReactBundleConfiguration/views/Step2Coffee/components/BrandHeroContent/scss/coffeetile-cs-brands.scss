@@ -1,0 +1,163 @@
+.cmp-coffeetile {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: $cs-spacing-10 $cs-spacing-5 $cs-spacing-5 $cs-spacing-5;
+  align-items: start;
+  min-width: 240px;
+  border-radius: $cs-border-radius-16;
+  border: solid 1px $cs-gainsboro;
+  background-color: $cs-white;
+  @media (min-width: $cs-screen-md) {
+    flex-direction: column;
+    align-items: center;
+    padding: $cs-spacing-15;
+    text-align: center;
+  }
+
+  .cmp-coffeetile__image {
+    margin-right: $cs-spacing-5;
+    @media (min-width: $cs-screen-md) {
+      margin: 0;
+    }
+
+    .cmp-image {
+      img {
+        width: 70px;
+        height: 70px;
+        @media (min-width: $cs-screen-md) {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .cmp-coffeetile__info {
+    .cmp-coffeetile__title {
+      @extend %cs-font-p-4;
+      margin: $cs-spacing-5 0;
+      color: $cs-dark-blue;
+      font-weight: $cs-font-weight-bold;
+    }
+
+    .cmp-coffeetile__label {
+      @extend %cs-font-p-2;
+      margin-bottom: $cs-spacing-5;
+      font-weight: $cs-font-weight-normal;
+    }
+
+    .cmp-coffeetile__taste {
+      @extend %cs-font-p-4;
+      margin-bottom: $cs-spacing-10;
+      font-weight: $cs-font-weight-normal;
+    }
+
+    .cmp-coffeetile__roast {
+      @extend %cs-font-p-4;
+      margin-bottom: $cs-spacing-5;
+      font-weight: $cs-font-weight-normal;
+    }
+
+    .cmp-coffeetile__price {
+      @extend %cs-font-p-4;
+      font-weight: $cs-font-weight-bold;
+      margin-bottom: $cs-spacing-10;
+      color: $cs-black;
+    }
+
+    .cmp-coffeetile__select {
+      .cmp-coffeetile__select-button {
+        @extend %cs-font-p-2;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 1.37rem;
+        height: 1.37rem;
+        right: $cs-spacing-10;
+        top: $cs-spacing-10;
+        overflow: hidden;
+        border-radius: $cs-border-radius-10;
+        border: solid 1px $cs-gunmetal;
+        border: solid 1px $cs-monsoon;
+        background-color: $cs-whitesmoke;
+        border-radius: 50%;
+        text-indent: 100%;
+        @media (min-width: $screen-md) {
+          position: static;
+          right: auto;
+          top: auto;
+          width: 80%;
+          height: auto;
+          border: solid 1px $cs-monsoon;
+          background-color: $cs-whitesmoke;
+          border-radius: $cs-border-radius-base;
+          text-indent: 0;
+          margin: 0 auto;
+          padding: $cs-spacing-5;
+        }
+
+        &--selected {
+          @extend %cs-font-h11;
+          position: absolute;
+          margin: 0;
+          padding: 0;
+          width: 1.37rem;
+          height: 1.37rem;
+          right: $cs-spacing-10;
+          top: $cs-spacing-10;
+          overflow: hidden;
+          border-radius: $cs-border-radius-10;
+          border: solid 1px $cs-gunmetal;
+          border: solid 1px $cs-monsoon;
+          background-color: $cs-whitesmoke;
+          border-radius: 50%;
+          text-indent: 100%;
+          background-color: $cs-color-primary;
+          @media (min-width: $cs-screen-md) {
+            position: static;
+            right: $cs-spacing-10;
+            top: $cs-spacing-10;
+          }
+
+          &::before {
+            @extend %comparison-check-icon;
+            content: '';
+            mask-size: cover;
+            width: 0.4375rem;
+            height: 0.375rem;
+            position: relative;
+            top: -0.2rem;
+            left: -0.85rem;
+            background-color: $cs-white;
+
+            @media (min-width: $cs-screen-md) {
+              width: 0.7rem;
+              height: 0.6rem;
+              left: -1rem;
+              top: -0.16rem;
+            }
+          }
+         
+          &-label {
+            @extend %cs-font-h15;        
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            right: $cs-spacing-10;
+            top: $cs-spacing-30;
+            overflow: hidden;
+            @media (min-width: $screen-md) {
+              position: static;
+              padding-left: $cs-spacing-10;
+              bottom: $cs-spacing-30;              
+            }
+             
+          }
+        }
+        
+      }
+    }
+  }
+}
+

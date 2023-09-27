@@ -1,0 +1,7 @@
+.cmp-container--half-width {
+    .cmp-container {
+        @media (min-width: $screen-md) {
+            display: flex;
+        }
+    }
+}

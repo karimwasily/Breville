@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2021-03-08T02:57:23.188Z"
+        cq:lastModifiedBy="azharudheen.pp@nirman.io"
+        cq:lastReplicated="{Date}2021-03-08T02:57:52.298Z"
+        cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Portugal"
+        jcr:uuid="15e5638b-d1ee-4b99-997a-82991b6a2136"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <item
+                jcr:created="{Date}2019-01-04T10:25:42.633Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-08T02:57:23.185Z"
+                jcr:lastModifiedBy="azharudheen.pp@nirman.io"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Portugal"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="\[a-zA-Z0-9\\s\\-]{0,20}"/>
+        </list>
+    </jcr:content>
+</jcr:root>

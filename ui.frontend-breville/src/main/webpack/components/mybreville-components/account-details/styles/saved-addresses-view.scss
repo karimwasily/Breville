@@ -1,0 +1,114 @@
+.cmp-mybreville__addresses-view {
+  padding: $cs-spacing-25 0 0 !important;
+
+  .cmp-mybreville__link {
+    @extend %cs-link-bold-right-arrow;
+    margin: 0 $cs-spacing-20;
+
+    font-weight: bold;
+    font-size: $cs-font-size-h10-mobile;
+
+    // H10 in typography with 18 and 16px
+    font-family: $cs-font-family-paragraph;
+    line-height: $cs-line-height-h10-mobile;
+
+    cursor: pointer;
+    
+    @media (min-width: $cs-screen-xl) {
+      margin: 0 $cs-spacing-25;
+
+      font-size: $cs-font-size-h10;
+      line-height: $cs-line-height-h10;
+    }
+  }
+
+  .cmp-mybreville__address-tile-wrapper {
+    padding: $cs-spacing-20 $cs-spacing-20 $cs-spacing-15;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: $cs-spacing-25;
+    }
+
+    .cmp-mybreville__address-tile {
+      display: none;
+
+      @media (min-width: $screen-sm) {
+        display: block;
+        flex: 0 0 calc(50% - (#{$cs-spacing-10}/2));
+        padding: $cs-spacing-15;
+
+        border: 1px solid $cs-gainsboro;
+        border-radius: $cs-border-radius-8;
+      }
+
+      &:nth-child(odd) {
+        @media (min-width: $screen-sm) {
+          margin-right: $cs-spacing-10;
+        }
+      }
+
+      &:nth-child(n+3) {
+        @media (min-width: $screen-sm) {
+          margin-top: $cs-spacing-15;
+        }
+      }
+
+      .cmp-mybreville__address-default {
+        display: none;
+      }
+  
+      .cmp-mybreville__address-text {
+        @extend %cs-font-p-4;
+  
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .cmp-mybreville__address-tile-default {
+      display: block;
+
+      .cmp-mybreville__address-default {
+        @extend %cs-font-p-4;
+        display: block;
+        margin: 0;
+
+        font-weight: bold;
+      }
+    }
+  }
+
+  .cmp-mybreville__address-button-wrapper {
+    .cmp-mybreville__address-button {
+      &-desktop,
+      &-mobile {
+        padding: $cs-spacing-15 0;
+
+        text-align: center;
+
+        border-top: 1px solid $cs-gainsboro;
+      }
+
+      &-desktop {
+        @extend %cs-font-p-4-bold;
+        display: none;
+
+        @media (min-width: $cs-screen-xl) {
+          display: block;
+        }
+      }
+
+      &-mobile {
+        @extend %cs-font-p-4-bold;
+        display: block;
+
+        @media (min-width: $cs-screen-xl) {
+          display: none;
+        }
+      }
+    }
+  }
+}

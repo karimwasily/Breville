@@ -1,0 +1,13 @@
+.cmp-teaser--hero-small-title {
+  .cmp-teaser {
+    &__content {
+      .cmp-teaser__title {
+        font-size: $font-size-mlarge;
+        margin-bottom: $spacing-md;
+        @media screen and (min-width: $screen-md) {
+          font-size: $font-size-xxlarge;
+        }
+      }
+    }
+  } 
+}

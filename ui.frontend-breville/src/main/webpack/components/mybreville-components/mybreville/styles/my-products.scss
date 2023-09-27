@@ -1,0 +1,108 @@
+
+.mybreville__my-product {
+  margin-bottom: $cs-spacing-20;
+
+  .my-product__count {
+    @extend %cs-font-p-bold;
+    display: inline-flex;
+    align-items: center;
+
+    &-number {
+      @extend %cs-font-p-5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-left: $cs-spacing-10;
+
+      color: $cs-white;
+
+      background-color: $cs-gunmetal;
+      border-radius: 50%;
+    }
+  }
+  
+  .my-product__accordion {
+    position: relative;
+
+    margin-top: $cs-spacing-15;
+    padding: $cs-spacing-30 0 $cs-spacing-30 $cs-spacing-20;
+    overflow: hidden;
+
+    background-color: $cs-white;
+    border-radius: $cs-border-radius-8;
+
+    @media (min-width: $cs-screen-xl) {
+      padding: $cs-spacing-30;
+    }
+
+    .accordion-collapse__title {
+      width: 75%;
+      margin: 0;
+
+      font-size: $cs-font-size-h9;
+      line-height: $cs-line-height-h9;
+      @media (min-width: $cs-screen-xl) {
+        width: unset;
+      }
+    }
+
+    .accordion-collapse__button {
+      @include button-remove-style;
+      @include cs-arrow($cs-black, 'down');
+      position: absolute;
+      top: $cs-spacing-35;
+      right: $cs-spacing-20;
+
+      align-items: center;
+
+      font-size: $cs-font-size-xsmall;
+      line-height: $cs-line-height-h6;
+
+      &::after {
+        margin-left: $cs-spacing-10;
+      }
+
+      @media (min-width: $cs-screen-xl) {
+        right: $cs-spacing-30;
+      }
+    }
+  }
+
+  .accordion-collapse--open {
+    .accordion-collapse__button {
+      @include cs-arrow($cs-black, 'up');
+    }
+  }
+
+  &-tutorial {
+    margin: $cs-spacing-15 0;
+    padding: $cs-spacing-25 $cs-spacing-20;
+
+    background-color: $white;
+    border-radius: $cs-border-radius-8;
+
+    &-title {
+      @extend %cs-font-h8;
+      margin-bottom: $cs-spacing-10;
+  
+      text-align: left;
+      @media (min-width: $cs-screen-xl) {
+        text-align: center;
+      }
+    }
+
+    &-subtext {
+      @extend %cs-font-p-2;
+      margin: 0 auto $cs-spacing-30;
+  
+      text-align: left;
+      @media (min-width: $cs-screen-xl) {
+        width: 45%;
+  
+        text-align: center;
+      }
+    }
+  }
+}

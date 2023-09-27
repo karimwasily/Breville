@@ -1,0 +1,88 @@
+// original production site design, using coffee solution design instead
+.search-results--archived {
+  background-color: $gray-95;
+
+  .search-results__inner {
+    padding: $spacing-lg 0;
+    margin: auto;
+    max-width: $max-width;
+
+    .search-results__title {
+      text-align: center;
+      font-family: $font-family-helvetica;
+      font-size: $font-size-h4;
+      margin-bottom: $spacing-xxl;
+
+      @media (min-width: $cs-screen-md) {
+        font-size: $font-size-h3;
+      }
+    }
+
+    .search-results__query {
+      font-weight: $font-weight-normal;
+      font-family: $font-family-primary-light;
+    }
+
+    .search-results__subtitle {
+      margin-left: $spacing-sm;
+      font-size: $font-size-h3;
+
+      @media (min-width: $cs-screen-md) {
+        font-size: $font-size-h2;
+      }
+    }
+
+    .search-results__results {
+      display: block;
+      margin-top: $spacing-lg;
+      // target the <ul> for either Hits OR InfiniteHits react component
+      .ais-Hits-list,
+      .ais-InfiniteHits-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: $spacing-sm;
+        margin-left: $spacing-sm;
+        margin-right: $spacing-sm;
+
+        @media (min-width: $cs-screen-md) {
+          grid-template-columns: repeat(3, 1fr);
+          gap: $spacing-sm;
+        }
+      }
+    }
+
+    .search-results__btn-wrapper {
+      padding-top: $spacing-lg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .search-results__btn {
+        font-size: $font-size-h4;
+
+        &::after {
+          height: $spacing-sm;
+          width: $spacing-sm;
+          transition: transform $transition-speed-slow $transition-easing;
+        }
+
+        &:hover::after {
+          transform: translateX($spacing-xs);
+        }
+      }
+    }
+
+    .search-dropdown__item {
+      height: 100%;
+
+      .cmp-producttile {
+        border: 1px solid $light-gray-2;
+
+        &:hover {
+          box-shadow: 0 0 0 0.2rem $wine-berry-transparent;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

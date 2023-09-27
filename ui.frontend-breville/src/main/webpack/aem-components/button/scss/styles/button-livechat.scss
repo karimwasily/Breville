@@ -1,0 +1,31 @@
+.cmp-button--livechat {
+  button {
+    color: $white;
+    border-color: $green-cola;
+    background-color: $green-cola;
+    line-height: $line-height-base;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-mlarge;
+    width: auto;
+    min-width: 18.75rem;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 1rem;
+    border-radius: 6px;
+    outline: 0;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto 1rem;
+
+    &:hover {
+      border-color: $green-cola;
+      color: $green-cola;
+      background-color: $white;
+      background: 0 0;
+      border: 1px solid;
+    }
+  }
+}

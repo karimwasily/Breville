@@ -1,0 +1,9 @@
+.cmp-container--third-wave-outer {
+    .cmp-container {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $screen-md) {
+            flex-direction: row;
+        }
+    }
+}

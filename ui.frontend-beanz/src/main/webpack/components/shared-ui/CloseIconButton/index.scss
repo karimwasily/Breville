@@ -1,0 +1,46 @@
+.close-icon-button .close-icon-button__btn {
+  border: 0 !important;
+  border-radius: 0;
+  background-color: #fff !important;
+  padding: 0;
+  margin: 0;
+
+  &.close-icon-button__btn--large {
+    width: 24px;
+    height: 24px;  
+  }
+
+  &.close-icon-button__btn--medium {
+    width: 15px;
+    height: 15px;  
+  }
+
+  &.close-icon-button__btn--small {
+    width: 10px;
+    height: 10px;  
+  }
+}
+
+
+.close-icon-button__icon {
+  @extend %close-icon;
+  background-color: $cs-gunmetal;
+  cursor: pointer;
+
+  &.close-icon-button__icon--large {
+    width: 24px;
+    height: 24px;  
+  }
+
+  &.close-icon-button__icon--medium {
+    width: 15px;
+    height: 15px;  
+  }
+
+  &.close-icon-button__icon--small {
+    width: 10px;
+    height: 10px;  
+  }
+  
+}
+

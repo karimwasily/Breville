@@ -1,0 +1,40 @@
+.subscription {
+  margin-bottom: $cs-spacing-45;
+
+  .subscription__header {
+    display: none;
+    @media (min-width: $cs-screen-xl) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      border-bottom: 1px solid $cs-gainsboro;
+  
+      &--view-all-subscriptions {
+        font-size: $cs-font-size-small;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .subscription__count {
+    @extend %cs-font-p-bold;
+    display: inline-flex;
+    align-items: center;
+  
+    &-number {
+      @extend %cs-font-p-5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-left: $cs-spacing-10;
+  
+      color: $cs-white;
+  
+      background-color: $cs-gunmetal;
+      border-radius: 50%;
+    }
+  }
+}

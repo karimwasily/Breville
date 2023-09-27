@@ -1,0 +1,64 @@
+.cmp-mybreville__page {
+  .cmp-mybreville__breadcrumbs {
+    margin-bottom: $cs-spacing-20;
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-10;
+    }
+  }
+
+  .cmp-mybreville__page-title {
+    display: none;
+    @media (min-width: $cs-screen-md) {
+      display: block;
+      margin-bottom: $cs-spacing-50;
+    }
+  }
+
+  .action-notification {
+    @extend %cs-font-p-4;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-bottom: $cs-spacing-30;
+    padding: $cs-spacing-10 $cs-spacing-15;
+
+    color: $cs-forest-green;
+    text-align: center;
+
+    background-color: $cs-white;
+
+    border: 1px solid $cs-forest-green;
+    border-radius: $cs-border-radius-8;
+
+    @media (min-width: $cs-screen-md) {
+      width: unset;
+
+      width: 40%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .action-notification__close-icon {
+      @extend %close-icon;
+      margin-left: $cs-spacing-10;
+
+      background-color: $cs-forest-green;
+      cursor: pointer;
+    }
+
+    &--error {
+      color: $cs-scarlet;
+
+      border: 1px solid $cs-scarlet;
+
+      .action-notification__close-icon {
+        background-color: $cs-scarlet;
+      }
+    }
+  }
+}

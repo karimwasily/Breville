@@ -1,0 +1,89 @@
+// global plp layout
+.plp-container {
+  margin: auto;
+  padding: $cs-spacing-100 0;
+  position: relative;
+
+  .plp-header-mobile {
+    margin: 0 $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      display: none; 
+    }
+  }
+
+  .plp-header-desktop {
+    display: none;
+    margin: 0 $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      display: block; 
+    }
+  }
+
+  // * helper utility
+  .hidden {
+    display: none;
+  }
+}
+
+// product listings
+.cmp-reactplp__list {
+  display: block;
+  margin: $cs-spacing-35 $cs-spacing-15 0;
+
+  @media (min-width: $cs-screen-md) {
+    // margin: auto;
+    padding-bottom: $cs-spacing-40;
+  }
+
+  .ais-Hits {
+    max-width: $cs-max-width;
+    margin: auto;
+
+    // target the <ul> for either Hits OR InfiniteHits react component
+    .ais-Hits-list,
+    .ais-InfiniteHits-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: $cs-spacing-15;
+
+      @media (min-width: $cs-screen-md) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $cs-spacing-30;
+      }
+
+      // CUSTOM PRODUCT TILE STYLE
+      .cmp-producttile__primary-content-wrapper {
+        flex-direction: column-reverse;
+        
+        .cmp-producttile__header-content {
+          margin-top: 0;
+
+          .cmp-producttile__title {
+            margin: $cs-spacing-10 0 $cs-spacing-5;
+          }
+
+          .cmp-producttile__description {
+            display: none;
+            @media (min-width: $cs-screen-md) {
+              display: unset;
+            }
+          }
+
+        }
+
+        .cmp-producttile__price-wrapper {
+          .cmp-producttile__price {
+            @extend %cs-font-p-2;
+            font-weight: $cs-font-weight-bold;
+            margin-bottom: 0;
+          }
+          
+        }
+
+      }
+
+    }
+  }
+}

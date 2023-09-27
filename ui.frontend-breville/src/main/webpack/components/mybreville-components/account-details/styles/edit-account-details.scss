@@ -1,0 +1,62 @@
+.cmp-mybreville--edit-account-details {
+  .col--mr {
+
+    @media (min-width: $cs-screen-md) {
+      margin-right: $cs-spacing-10;
+    }
+  }
+
+  .col--ml {
+
+    @media (min-width: $cs-screen-md) {
+      margin-left: $cs-spacing-10;
+    }
+  }
+
+  .col--pr {
+    padding-right: $cs-spacing-5;
+
+    @media (min-width: $cs-screen-md) and (max-width: $cs-screen-xl) {
+      margin-right: $cs-spacing-10;
+      padding-right: 0;
+    }
+  }
+
+  .col--pl {
+    padding-left: $cs-spacing-5;
+
+    @media (min-width: $cs-screen-md) and (max-width: $cs-screen-xl) {
+      margin-left: $cs-spacing-10;
+      padding-left: 0;
+    }
+  }
+
+  input {
+    background-color: inherit;
+    outline: none;
+  }
+
+  input:read-only {
+    color: rgba($cs-color-primary, 0.5);
+
+    background-color: $cs-color-gray-50;
+  }
+
+  .cmp-mybreville__link--button {
+    @extend %cs-font-p-2-bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+
+    background-color: inherit;
+  }
+
+  .cmp-mybreville__link--button:hover {
+    background-color: $cs-dark-purple;
+  }
+
+  .react-button {
+    height: 54px;
+  }
+}

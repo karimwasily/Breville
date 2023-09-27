@@ -1,0 +1,12 @@
+@import 'container-details-page-default';
+
+.cmp-container--details-page-righttile {
+  @extend %detailspage-default;
+
+  .cmp-container {
+    @media (min-width: $screen-md) {
+      text-align: end;
+      padding: $spacing-sm 0% $spacing-md $spacing-xs !important;
+    }
+  }
+}

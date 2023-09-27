@@ -1,0 +1,7 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "newsLetterSalesForceURL":"https://brevilleusa.secure.force.com/eComm/services/apexrest/SignUpForNewsLetter",
+  "newsLetterSalesForceCountryMapping":[
+    "CA=CA", "US=US", "UK=UK", "AU=AU", "NZ=NZ", "DE=DE", "AT=DE", "CH=CH", "EU=DE", "GB=GB", "AE=AE", "MX=MX", "IE=IE"
+  ]
+}

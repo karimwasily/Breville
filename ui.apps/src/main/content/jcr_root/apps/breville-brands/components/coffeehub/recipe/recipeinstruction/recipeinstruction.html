@@ -1,0 +1,28 @@
+<sly data-sly-use.model="com.breville.aem.brands.core.models.recipe.RecipeInstruction"></sly>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${model.isEmpty != true && model.isError != true}"></sly>
+
+<div class="cmp-recipeinstruction">
+    <sly data-sly-list=${model.stepInstructions}>
+        <div class="cmp-recipeinstruction__step">
+            <div class="cmp-recipeinstruction__video">
+                <div data-vue-cmp="v-video"
+                     data-video-id="${item.stepVideoLink}"
+                     data-overlay-image="${item.stepImage}"
+                     data-image-alt-text="${'ch-Instruction step video' @ i18n}"
+                     data-title="${'ch-Watch this step' @ i18n}"
+                     data-start-time=${item.startTime}
+                     data-stop-time=${item.endTime}
+                     data-disclaimer-text="${'ch-project-video-disclaimer' @ i18n}">
+                </div>
+            </div>
+            <div class="cmp-recipeinstruction__content">
+                <h2 class="cmp-recipeinstruction__title">${item.stepTitle}</h2>
+                <div class="cmp-recipeinstruction__text">${item.stepText @ context='html'}</div>
+            </div>
+        </div>
+        <div class="cmp-recipeinstruction__separator" data-sly-resource="${'separator' @ resourceType='breville-brands/components/separator'}" data-sly-test="${!itemList.last}"></div>
+    </sly>
+</div>
+
+<sly data-sly-use.attribs="${'com.breville.aem.brands.core.models.Attribs' @ attrib='include-vue', value='true'}" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

@@ -1,0 +1,40 @@
+.my-orders__order-strip {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $cs-spacing-5;
+  padding: $cs-spacing-15 $cs-spacing-20;
+
+  background-color: $cs-gray-95;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  @media (min-width: $cs-screen-xl) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: $cs-spacing-20 $cs-spacing-30;
+  }
+
+  .order-number {
+    text-align: left;
+  }
+
+  .order-date {
+    @media (min-width: $cs-screen-xl) {
+      text-align: center;
+    }
+  }
+
+  .order-status {
+    @media (min-width: $cs-screen-xl) {
+      text-align: end;
+    }
+  }
+
+  .label-font-weight-bold {
+    font-weight: $cs-font-weight-bold;
+  }
+
+  p {
+    @extend %cs-font-p-4;
+    margin-bottom: 0 !important;
+  }
+}

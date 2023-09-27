@@ -1,0 +1,112 @@
+.cmp-cart-subscription-summary {
+  position: relative;
+
+  .img-thumbnail {
+    width: 80px;
+    height: 80px;
+    margin-right: $cs-spacing-15;
+    object-fit: cover;
+
+    border-radius: $cs-border-radius-8;
+
+    @media (min-width: $cs-screen-sm) {
+      width: 110px;
+      height: 110px;
+      margin-right: $cs-spacing-25;
+    }
+  }
+
+  &__title {
+    @extend %cs-font-h12-bold;
+    @media (min-width: $cs-screen-md) {
+      float: left;
+    }
+  }
+
+  &__info {
+    @extend %cs-font-p-4;
+    @media (min-width: $cs-screen-md) {
+      float: left;
+      clear: left;
+    }
+  }
+  
+  &__meta {
+    margin-top: $cs-spacing-10;
+    @media (min-width: $cs-screen-md) {
+      float: right;
+      margin-top: 0;
+
+      text-align: right;
+    }
+
+    .cmp-cart-subscription-summary__badge {
+      @extend %cs-badge;
+      @extend %cs-font-p-5;
+      display: inline-block;
+      width: auto;
+    }
+
+    .cmp-cart-subscription-summary__price {
+      @extend %cs-font-p-6;
+
+      .cmp-cart-subscription-summary__new-price {
+        font-weight: $cs-font-weight-bold;
+      }
+    }
+    
+    .cmp-cart-subscription-summary__link {
+      display: none;
+      margin-top: $cs-spacing-20;
+      @media (min-width: $cs-screen-md) {
+        display: inline-block;
+      }
+    }
+    
+  }
+
+  &__old-price {
+    color: $cs-monsoon;
+    text-decoration: line-through;
+  }
+
+  &__text {
+    clear: left;
+
+    p {
+      @extend %cs-font-p-4;
+      clear: both;
+
+      color: $cs-monsoon;
+      @media (min-width: $cs-screen-md) {
+        margin-right: $cs-spacing-25;
+      }
+
+      &:first-child {
+        margin-top: $cs-spacing-15;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+  }
+  
+  .cart-bundle-summary__remove {
+    top: 2px;
+    @media (min-width: $cs-screen-md) {
+      top: $cs-spacing-15;
+    }
+  }
+  
+  &__link {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    @media (min-width: $cs-screen-md) {
+      display: none;
+    }
+  }
+
+}

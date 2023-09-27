@@ -1,0 +1,122 @@
+{
+    "full_info": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "breville-brands/components/coffeehub/recipecard",
+        "fileReference": "/content/dam/coffeehub/en/us/heroes/third-wave-hero-video.jpg",
+        "recipeContentFragmentPath": "/content/cf_full_info"
+    },
+    "blank_info": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "breville-brands/components/coffeehub/recipecard",
+        "fileReference": "",
+        "recipeContentFragmentPath": ""
+    },
+    "null_info": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "breville-brands/components/coffeehub/recipecard"
+    },
+    "incorrect_info": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "breville-brands/components/coffeehub/recipecard",
+        "fileReference": "",
+        "recipeContentFragmentPath": "/content/cf_incorrect_info"
+    },
+    "cf_full_info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "4735b9ba-0726-4a5f-9d95-659aa873c378"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "4735b9ba-0726-4a5f-9d95-659aa873c378",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Mon Mar 08 2021 12:57:50 GMT+0700",
+            "lastFragmentSave": "Mon Mar 08 2021 12:57:50 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "recipeIntroText": "The point of this drink is to have an espresso slightly moderated or subdued by a splash of milk.",
+                    "recipeName": "Macchiato",
+                    "heroThumbnail": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png"
+                }
+            }
+        }
+    },
+    "cf_incorrect_info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "4735b9ba-0726-4a5f-9d95-659aa873c378"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "4735b9ba-0726-4a5f-9d95-659aa873c378",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Mon Mar 08 2021 12:57:50 GMT+0700",
+            "lastFragmentSave": "Mon Mar 08 2021 12:57:50 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail-incorrect",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "recipeIntroTextIncorrect": "The point of this drink is to have an espresso slightly moderated or subdued by a splash of milk.",
+                    "recipeNameIncorrect": "Macchiato",
+                    "heroThumbnailIncorrect": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png"
+                }
+            }
+        }
+    }
+}

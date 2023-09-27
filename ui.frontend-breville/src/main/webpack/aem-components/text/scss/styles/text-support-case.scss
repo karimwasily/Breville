@@ -1,0 +1,11 @@
+.cmp-text--support-case {
+  .cmp-title {
+    &__text {            
+      @extend %font-h2;
+      color: $black;
+      padding: $spacing-xxl $spacing-ml;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2021-01-27T06:51:43.034Z"
+        cq:lastModifiedBy="pradeep.mc@breville.com"
+        cq:lastReplicated="{Date}2021-03-01T08:33:05.931Z"
+        cq:lastReplicatedBy="azharudheen.pp@nirman.io"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Portugal"
+        jcr:uuid="4589d606-29be-4f2c-b8dc-5c55e5fe1376"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <item
+                jcr:created="{Date}2021-01-27T06:51:27.256Z"
+                jcr:createdBy="pradeep.mc@breville.com"
+                jcr:lastModified="{Date}2021-01-27T06:51:43.033Z"
+                jcr:lastModifiedBy="pradeep.mc@breville.com"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Portuguese"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="Default:pt;https://www.sageappliances.com/eu/pt/home/index.html?reg=pt"/>
+        </list>
+    </jcr:content>
+</jcr:root>

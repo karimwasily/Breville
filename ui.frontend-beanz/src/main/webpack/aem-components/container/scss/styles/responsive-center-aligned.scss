@@ -1,0 +1,22 @@
+.container--responsive-center-aligned {
+  width: 100%;
+
+  > .cmp-container {
+    padding: 0 $spacing-xs;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @include breakpoint-up (lg) {
+      max-width: $max-width;
+    }
+    @include breakpoint-up (md) {
+      padding: 0 $spacing-sm;
+    }
+  }
+}
+
+.cmp-container--background-seashell + .container--responsive-center-aligned {
+  .cmp-container {
+    @extend %container-with-button;
+  }
+}

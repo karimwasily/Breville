@@ -1,0 +1,134 @@
+.cmp-teaser--image-right-perfect-beans {
+  width: 45%;
+  float: right;
+
+  @include breakpoint-up(md) {
+    width: 42%;
+  }
+
+  @include breakpoint-up(lg) {
+    width: 59%;
+    display: inline-block;
+    position: relative;
+    left: 14%;
+    top: -0.5rem;
+  }
+
+  @include breakpoint-up(xl) {
+    left: unset;
+    top: unset;
+    width: 45%;
+  }
+
+  .cmp-teaser {
+    bottom: 0.5%;
+    @include breakpoint-up(lg) {
+      bottom: unset;
+    }
+
+    &__image {
+      @include breakpoint-up(lg) {
+        display: inline-block;
+        float: right;
+        margin-right: -5%;
+      }
+      @include breakpoint-up(xl) {
+        margin-right: -47%;
+      }
+      @include breakpoint-up(xxl) {
+        margin-right: -146px;
+      }
+
+      .cmp-image__image {
+        width: auto;
+        height: 220px;
+        max-width: 206px;
+        margin-right: -42%;
+        float: right;
+        @include breakpoint-up(md) {
+          width: unset;
+          margin-right: unset;
+          float: unset;
+          max-width: 220px;
+          height: 285px;
+        }
+        @include breakpoint-up(lg) {
+          height: auto;
+          width: auto;
+          max-width: 330px;
+        }
+        @include breakpoint-up(xl) {
+          height: 600px;
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    }
+
+    &__content {
+      float: left;
+      margin-bottom: 2rem;
+      margin-right: 0.8rem;
+      padding-top: $spacing-md;
+      @include breakpoint-up(md) {
+        max-width: 269px;
+        margin: auto;
+        padding-top: 0.9375rem;
+      }
+      @include breakpoint-up(lg) {
+        margin-bottom: unset;
+        margin-right: unset;
+        max-width: unset;
+        margin: unset;
+        width: 46%;
+        padding-right: 2%;
+        padding-top: 15%;
+      }
+
+      @include breakpoint-up(xl) {
+        width: 49%;
+        padding-right: 0;
+        padding-left: 1%;
+        padding-top: 31%;
+        max-width: 278px;
+        margin-left: -1%;
+      }
+      @include breakpoint-up(xxl) {
+        padding-top: 170px;
+        width: 43%;
+        margin-left: -39px;
+      }
+
+      .cmp-teaser__title {
+        font-family: $font-family-secondary;
+        margin: 0 0 0.5rem;
+        letter-spacing: -0.5px;
+        color: $pure-black;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base-title;
+        @include breakpoint-up(md) {
+          font-size: $font-size-h2;
+        }
+      }
+
+      .cmp-teaser__description {
+        p {
+          font-family: $font-family-primary;
+          margin: 0;
+          line-height: $line-height-paragraph;
+          color: $jaguar;
+          font-stretch: normal;
+          letter-spacing: normal;
+          margin-bottom: 1rem;
+          font-size: $font-size-xsmall;
+          @include breakpoint-up(md) {
+            font-size: $font-size-medium;
+          }
+          @include breakpoint-up(lg) {
+            //  margin-top: -1rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+// header layout inclusive of controls
+.plp-header-desktop {
+  margin-bottom: $cs-spacing-35;
+
+  .plp-header-desktop__inner {
+    @media (min-width: $cs-screen-md) {
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    .plp-title {
+      @extend %cs-font-h4;
+      text-transform: capitalize;
+
+      .stats-hits {
+        font-weight: 400;
+        font-size: 0.75em;
+      }
+    }
+
+    .plp-controls {    
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: $cs-spacing-20;
+
+      &__right {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        button {
+          font-weight: $cs-font-weight-bold !important;         
+        }
+
+        .plp-controls__filter-title {
+          @extend %cs-font-p-2;
+          margin-right: 0;          
+        }       
+
+        .select-box {
+          .select-box__current {
+            margin: -$cs-spacing-5 $cs-spacing-20 0 $cs-spacing-15;
+            
+            .select-box__icon {
+              margin-top: $cs-spacing-3;      
+            }            
+          }         
+        }
+      }
+
+      &__left {  
+        display: flex;
+        flex-direction: row;
+        
+        // horizontal gaps between items
+        > *:not(:last-child) {
+          margin-right: $cs-spacing-30;
+        }
+
+        .plp-controls__filter-title {
+          @extend %cs-font-p-2;
+       
+          @media (min-width: $cs-screen-md) {
+            display: none; 
+          }
+
+          // * custom breakpoint based on navigation width (avoiding text content overflow)
+          @media (min-width: 880px) {
+            display: inline-block; 
+          }
+        }
+
+        .plp-controls__filter-link {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+
+          cursor: pointer;
+
+          button {
+            @extend %cs-font-bundle-tiles;
+            padding: 0 0 5px !important;// default top padding of button made 0   
+          }
+
+          .plp-controls__filter-link-icon {
+            @extend %arrow-down-selectbox;
+            margin-left: $cs-spacing-5;
+            padding-bottom: $cs-spacing-5;
+
+            content: '';          
+          }    
+        }
+
+        .plp-controls__filter-link-active {    
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+
+          border-bottom: 1px solid $cs-gunmetal;
+
+          button {
+            @extend %cs-font-bundle-tiles;
+            padding: 0 !important;   
+          
+          }
+
+          .plp-controls__filter-link-icon {
+            @extend %arrow-down-selectbox;
+            padding-bottom: $cs-spacing-5;
+
+            transform: rotate(-180deg);
+
+            content: '';         
+          }
+        }
+      } 
+    }
+    
+    .facet-container-active {
+      @extend %facet-price-container;
+      @extend %facet-feature-container;    
+      position: absolute;
+      left: 0;
+      z-index: 1;
+
+      width: 100%;
+      padding: $cs-spacing-20 0 $cs-spacing-30;
+
+      background-color: $cs-white;
+      // * custom drop shadow of filters overlaying plp
+      box-shadow: 0 100px 50px 20px rgba(0, 0, 0, 0.05);
+
+      .facet-container-section {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 $cs-spacing-15;
+
+        @media (min-width: $cs-screen-xxl) {          
+          max-width: 1440px;
+          margin: auto;
+        }
+
+        .facet-price {
+          min-width: 100%;
+          padding: $cs-spacing-35 $cs-spacing-110 $cs-spacing-40;
+          
+          .rheostat.rheostat_1 {
+            top: $cs-spacing-15 !important;
+            left: $cs-spacing-10;
+
+            max-width: 400px;
+    
+      
+          }
+        }
+
+        .rheostat-marker.rheostat-marker--large-left {        
+          top: -$cs-spacing-30;
+          left: -$cs-spacing-80;
+
+          margin-left: $cs-spacing-15;
+        }
+
+        .rheostat-marker.rheostat-marker--large-right {      
+          top: -$cs-spacing-30;
+          right: -$cs-spacing-50;
+        }
+
+        .rheostat-value {
+          &::after {      
+            padding-top: $cs-spacing-3;  
+          }
+        }
+
+        .desktop-facet-action-btn {
+          @extend %cs-font-p-2;
+          display: block;
+          height: max-content;
+
+          white-space: nowrap;
+
+          background-color: transparent;
+          border: 0;
+          cursor: pointer;
+      
+          .desktop-facet-close-btn-icon {
+            @extend %close-icon;
+            width: 0.6875rem;
+            height: 0.6875rem;
+            margin-right: $cs-spacing-5;
+
+            background-color: $cs-gunmetal;
+
+            content: '';
+          }
+        }
+      }
+    }
+
+    .current-refinements {
+    
+      display: flex;
+      align-items: center;
+      padding: $cs-spacing-15 0;
+
+      .current-refinements__title {
+        @extend %cs-font-p-2;
+        display: inline-block;
+        margin-right: $cs-spacing-20;
+        margin-bottom: 0;
+      }
+
+      .current-refinements__inner {
+        display: inline-block;
+
+        .current-refinements__item {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0;
+          padding: $cs-spacing-5 $cs-spacing-10;
+
+          border: 1px solid $cs-color-gray-30;
+          border-radius: $cs-border-radius-8;
+
+          // gap spacing between items
+          &:not(:last-child) {
+            margin-right: $cs-spacing-10;
+          }
+
+          .current-refinements__item-text {
+            @extend %cs-font-small-p;    
+            color: $cs-gunmetal;     
+          }
+
+          .current-refinements__item-cancel {
+            --icon-size: 0.5rem;
+            @extend %close-icon;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            margin-left: $cs-spacing-10;
+
+            background-color: $cs-black;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .current-refinements__reset {
+        @extend %cs-font-p-4;
+        text-decoration: underline;
+
+        background: transparent;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

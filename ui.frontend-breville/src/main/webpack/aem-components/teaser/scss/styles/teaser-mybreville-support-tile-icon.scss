@@ -1,0 +1,27 @@
+%mybreville-support-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: $cs-spacing-10;
+
+  background-color: $cs-gunmetal;
+
+  content: '';
+}
+
+.cmp-teaser--mybreville-support-tile-call {
+  .cmp-teaser__title {
+    &::before {
+      @extend %phone-icon;
+      @extend %mybreville-support-icon;
+    }
+  }
+}
+
+.cmp-teaser--mybreville-support-tile-chat {
+  .cmp-teaser__title {
+    &::before {
+      @extend %chat-icon;
+      @extend %mybreville-support-icon;
+    }
+  }
+}

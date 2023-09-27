@@ -1,0 +1,30 @@
+.cmp-aosteaser--history {
+  .cmp-aosteaser {  
+    $tile-banner-background: transparent;
+    
+    .cmp-teaser {
+      background-color: $tile-banner-background;
+      @media (min-width: $screen-md) {
+        width: 50%;
+      }
+      @media (min-width: $screen-lg) {
+        width: 45%;
+      }
+    
+      &__content {
+        color: white;
+        width: 100%;
+        @media (min-width: $screen-md) {
+          padding: $spacing-xxl;
+        }
+                
+        .cmp-teaser__pretitle {
+          @extend %font-h5;
+          position: relative;
+          color: $white;
+        }
+        
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// to be used with secondary navigation default
+.cmp-secondary-navigation--dark {
+  .cmp-secondary-navigation {
+    --foreground: #{$white};
+    --background: #{$black};
+
+    &__group {
+      // RIGHT LINEAR GRADIENT OVERLAY
+      &::after {
+        // * for safari compatability when we go to 'transparent' it needs to be an exact match of previous color with 0 alpha
+        // https://css-tricks.com/thing-know-gradients-transparent-black/
+        background: linear-gradient(to left, $black 0%, rgba($black, 0) 40%) !important;
+      }
+    }
+  }
+}

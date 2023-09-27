@@ -1,0 +1,87 @@
+@mixin reactvideo-theme($darkTheme: false) {
+  height: min(540px, 56.25vw); /* 720 / 1280 = 0.5625 */
+  padding-top: 0;
+
+  .cmp-teaser {
+    height: 100%;
+
+    .cmp-teaser__image {
+      .cmp-image__mask {
+        background: none;
+      }
+    }
+
+    .cmp-teaser__content {
+      justify-content: center;
+
+      width: auto;
+      min-width: 175px;
+      max-width: 45vw;
+
+      padding: $cs-spacing-20;
+
+      @if $darkTheme {
+        background-color: $cs-black-transparent;
+      } @else {
+        background-color: $cs-white-transparent;
+      }
+
+      backdrop-filter: blur(4px);
+
+      @media (min-width: $screen-md) {
+        padding: $cs-spacing-40;
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-h12-bold;
+        margin-bottom: $cs-spacing-10;
+
+        @if $darkTheme {
+          color: $cs-white;
+        } @else {
+          color: $cs-gunmetal;
+        }
+        text-shadow: none;
+
+        @media (min-width: $screen-md) {
+          margin-bottom: $cs-spacing-20;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .cmp-teaser__action-container {
+        .button {
+          margin: 0;
+
+          .cmp-button {
+            @if $darkTheme {
+              @extend %play-button-svg-white-filled;
+            } @else {
+              @extend %play-button-svg-black;
+            }
+            width: $cs-spacing-30;
+            height: $cs-spacing-30;
+
+            background-color: transparent;
+
+            @media (min-width: $screen-md) {
+              width: $cs-spacing-40;
+              height: $cs-spacing-40;
+            }
+
+            &:hover {
+              @if $darkTheme {
+                @extend %play-button-hover-svg-white-filled;
+              } @else {
+                @extend %play-button-hover-svg-black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

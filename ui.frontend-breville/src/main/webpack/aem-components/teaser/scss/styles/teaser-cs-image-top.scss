@@ -1,0 +1,43 @@
+.cmp-teaser--cs-image-top {
+  .cmp-teaser {
+    .cmp-teaser__image {
+      .cmp-image {
+        overflow: hidden;
+
+        .cmp-image__image {
+          height: 185px;
+          display: block;
+          object-fit: cover;
+          transition: transform $cs-transition-speed-250 $cs-transition-easing;
+        
+          @media (min-width: $cs-screen-md) {
+            height: unset;
+          }
+        }
+      }
+    }
+
+    .cmp-teaser__content {
+      text-align: center;
+
+      .cmp-teaser__title {
+        @extend %cs-font-h3;
+        padding: $cs-spacing-15 0;
+        font-weight: $cs-font-weight-normal;
+        
+        @media (min-width: $cs-screen-md) {
+          padding: $cs-spacing-30 0;
+        }
+      }
+    }
+  } 
+
+  &:hover,
+  &:focus {
+    .cmp-teaser__image {
+      img {
+        transform: scale($cs-transition-scale-110);
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.showcase {
+  display: grid;
+  grid-template-columns: 12fr;
+  margin-bottom: $cs-spacing-30;
+  padding-bottom: $cs-spacing-15;
+  overflow: hidden;
+
+  background-color: $cs-color-gray-60;
+  border-radius: $cs-border-radius-16;
+
+  @media (min-width:$cs-screen-xxl) {
+    grid-template-columns: 5fr 7fr;
+    padding: 0;
+  }
+
+  .showcase__header {
+    position: relative;
+
+    margin: $cs-spacing-25 $cs-spacing-20 $cs-spacing-15;
+
+    @media (min-width: $cs-screen-xxl) {
+      margin: $cs-spacing-40 $cs-spacing-50 $cs-spacing-25 $cs-spacing-40;
+    }
+
+    .showcase__badge {
+      @extend %cs-font-p;
+      position: absolute;
+      right: 0;
+
+      font-weight: $cs-font-weight-bold;
+      text-transform: uppercase;
+    }
+  
+    .showcase__img {
+      width: 6.575rem;
+      margin-bottom: $cs-spacing-20;
+
+      border-radius: 1rem;
+    }
+  
+    .showcase__title {
+      @extend %cs-font-p;
+      margin-bottom: 0.5rem;
+
+      @media (min-width: $cs-screen-md) {
+        font-size: $cs-font-size-h6;
+        line-height: $cs-line-height-h6;
+      }
+    }
+  
+    .showcase__desc {
+      @extend %cs-font-p-4;
+      width: 100%;
+      margin-bottom: 0;
+
+      @media (min-width: $cs-screen-xxl) {
+        width: 17.5rem;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    overflow: hidden;
+
+    .showcase__carousel-list {
+      margin: auto $cs-spacing-20;
+
+      @media (min-width: $cs-screen-xxl) {
+        margin: 0 $cs-spacing-50 0 $cs-spacing-40;
+      }
+
+      .showcase__carousel-list-item {
+      }
+    }
+
+    .showcase__header {
+      margin-bottom: 0;
+
+      .showcase__title {
+        margin-bottom: $cs-spacing-15;
+      }
+
+      .showcase__desc {
+        @media (min-width: $cs-screen-xxl) {
+          width: 20.875rem;
+        }
+      }
+    }
+  }
+
+  &__feature {
+    @media (min-width: $cs-screen-xxl) {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 2;
+    }
+
+    &:first-child {
+      @media (min-width: $cs-screen-xxl) {
+        grid-row-end: 2;
+      }
+    }
+
+    .showcase__carousel {
+      max-width: calc(100vw - 70px);
+      height: 85%;
+      margin: auto auto $cs-spacing-20;
+      overflow: hidden;
+
+      border-radius: $cs-border-radius-16;
+
+      @media (min-width: $cs-screen-md) {
+        max-width: 43.75rem;
+        height: 23.125rem;
+      }
+
+      @media (min-width: $cs-screen-lg) {
+        max-width: 59.75rem;
+        height: 28.125rem;
+      }
+
+      @media (min-width: $cs-screen-xxl) {
+        max-width: 43.75rem;
+        height: 23.125rem;
+        margin: 0;
+      }
+    }
+  
+
+    .showcase__video {
+      @extend %cmp-reactvideo--embed;
+      height: 10.9375rem;
+      height: fit-content;
+      margin-bottom: $cs-spacing-10;
+      overflow: hidden;
+
+      border-radius: $cs-border-radius-16;
+
+      @media (min-width: $cs-screen-xxl) {
+        margin: 0;
+      }
+
+      .teaser {
+        .cmp-teaser__image {
+          .cmp-image .cmp-image__image {
+            position: relative;
+            z-index: 1;
+          }
+
+          .cmp-image__mask {
+            background-color: $cs-black;
+          }
+        }
+
+        .cmp-teaser__content .cmp-teaser__action-container .button .cmp-button {
+          @extend  %play-button-svg-white;
+          width: $cs-spacing-40;
+          height: $cs-spacing-40;
+
+          background-color: transparent;
+          background-color: $cs-black-transparent;
+          border: 0;
+          border-radius: 50%;
+          cursor: pointer;
+
+          @media (min-width: $cs-screen-xxl) {
+            width: $cs-spacing-80;
+            height: $cs-spacing-80;
+          }
+
+          &:hover {
+            @extend  %play-button-hover-svg-white;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    .showcase__image-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      border-radius: $cs-border-radius-16;
+
+      .showcase__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

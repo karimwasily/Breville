@@ -1,0 +1,10 @@
+.cmp-container--page-text {
+  .cmp-container {
+    padding: 0 $spacing-md $spacing-ml $spacing-md;
+    
+    @media (min-width: $screen-md) {
+      padding: 0 $spacing-xxl $spacing-lg $spacing-xxl;
+      margin-top: -$spacing-lg;
+    }
+  }
+}

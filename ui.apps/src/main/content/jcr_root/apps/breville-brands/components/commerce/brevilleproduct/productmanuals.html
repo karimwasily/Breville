@@ -1,0 +1,59 @@
+<template data-sly-template.productSupport="${@ prodPdfManual, productType}">
+	<sly data-sly-use.manuals="com.breville.aem.brands.core.models.BrevilleProductManuals">
+		<section class="manuals-links container">
+			<div class="cmp-container--rectangular-tile">
+				<div class="title">
+					<div class="cmp-title">
+						<h2 class="cmp-title__text">${'pdp-productmanualslinkstitle' @ i18n}</h2> </div>
+				</div>
+				<div class="cmp-container responsivegrid">
+					<sly data-sly-list.manualsList="${manuals.productManuals}">
+						<sly data-sly-test="${manualsList.type == 'pdf' && (productType == 'FG' || productType == 'BN')}">
+							<a href="${prodPdfManual}" target="${manualsList.target}">
+								<div class="teaser cmp-teaser--cs-pdp-machine-manuals-and-links">
+									<div class="cmp-teaser">
+										<div class="cmp-teaser__image">
+											<div class="cmp-image"> <img src="${manualsList.imgPath}" class="cmp-image__image" alt="${manualsList.imgAlt}" /> </div>
+										</div>
+										<div class="cmp-teaser__content">
+											<h3 class="cmp-teaser__title">${manualsList.title}</h3> </div>
+									</div>
+								</div>
+							</a>
+						</sly>
+						<sly data-sly-test="${manualsList.type == 'partsandacc' && (productType == 'AC' || productType == 'SP')}">
+							<sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=manualsList.link}">
+								<a href="${brevilleUtil.formatURL @ context = 'uri'}" target="${manualsList.target}">
+								<div class="teaser cmp-teaser--cs-pdp-machine-manuals-and-links">
+									<div class="cmp-teaser">
+										<div class="cmp-teaser__image">
+											<div class="cmp-image"> <img src="${manualsList.imgPath}" class="cmp-image__image" alt="${manualsList.imgAlt}" /> </div>
+										</div>
+										<div class="cmp-teaser__content">
+											<h3 class="cmp-teaser__title">${manualsList.title}</h3> </div>
+									</div>
+								</div>
+							</a>
+						</sly>
+						</sly>
+						<sly data-sly-test="${!(manualsList.type == 'pdf'|| manualsList.type == 'partsandacc')}">
+							<sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=manualsList.link}">
+							<a href="${brevilleUtil.formatURL @ context = 'uri'}" target="${manualsList.target}">
+								<div class="teaser cmp-teaser--cs-pdp-machine-manuals-and-links">
+									<div class="cmp-teaser">
+										<div class="cmp-teaser__image">
+											<div class="cmp-image"> <img src="${manualsList.imgPath}" class="cmp-image__image" alt="${manualsList.imgAlt}" /> </div>
+										</div>
+										<div class="cmp-teaser__content">
+											<h3 class="cmp-teaser__title">${manualsList.title}</h3> </div>
+									</div>
+								</div>
+							</a>
+						</sly> 
+					</sly>
+					</sly>
+				</div>
+			</div>
+		</section>
+	</sly>
+</template>

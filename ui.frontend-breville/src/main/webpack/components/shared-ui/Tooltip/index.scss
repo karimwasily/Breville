@@ -1,0 +1,29 @@
+.tooltip {
+  cursor: pointer;
+
+  // Default Tooltip Style from Zeplin
+  // !important tags used to override react-tooltip defaults
+  .default-tooltip {
+    --tooltip-max-width: 280px;
+    max-width: var(--tooltip-max-width) !important;
+    padding: $cs-spacing-15 $cs-spacing-20 !important;
+
+    color: $cs-color-primary !important;
+    font-size: $cs-font-size-small !important;
+    font-family: $cs-font-family-paragraph !important;
+    text-align: left !important;
+
+    background-color: $cs-white !important;
+    border-radius: $cs-border-radius-8 !important;
+    box-shadow: 0 2px $cs-spacing-15 0 rgba(0, 0, 0, 0.1) !important;
+    opacity: 1 !important;
+  }
+
+  .info-icon {
+    @extend %info-icon;
+    vertical-align: middle;
+
+    background-color: $cs-color-primary;
+    cursor: pointer;
+  }
+}

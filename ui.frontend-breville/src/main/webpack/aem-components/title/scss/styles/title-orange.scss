@@ -1,0 +1,10 @@
+.cmp-title--orange {
+  padding: $spacing-xs 0;
+
+  .cmp-title .cmp-title__text {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-normal;
+    text-align: left;
+    color: $harley-davidson-orange;
+  }
+}

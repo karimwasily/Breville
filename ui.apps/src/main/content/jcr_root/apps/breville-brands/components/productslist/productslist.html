@@ -1,0 +1,16 @@
+<!--Breville ProductsList Component -->
+<!--/*
+    This component fetch data from Algolia and display list of product tiles using reactJS
+*/-->
+<div class='products-list'>
+	<div data-react-app='ProductsList' class='cmp-products-list' data-cmp-is="productslist" data-sly-use.productsList="com.breville.aem.brands.core.models.ProductsList">
+		<script type="application/json">
+				${productsList.asJson @context="scriptComment"}
+		</script>
+	</div>
+	<sly data-sly-test="${wcmmode.edit}">
+		<p data-react-app-placeholder>Product Listing Component</p>
+	</sly>
+</div>
+
+<!--Breville ProductsListing Component -->

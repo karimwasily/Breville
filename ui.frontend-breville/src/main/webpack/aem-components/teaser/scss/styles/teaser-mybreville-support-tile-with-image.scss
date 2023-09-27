@@ -1,0 +1,97 @@
+.cmp-teaser--mybreville-support-tile-with-image {
+  background-color: $cs-white;
+  border-radius: $cs-border-radius-8;
+
+  .cmp-teaser {
+    @media (min-width: $cs-screen-md) {
+      display: grid;
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cmp-teaser__title-link {
+      display: none;
+    }
+  
+    .cmp-teaser__pretitle {
+      display: none;
+    }
+  
+    .cmp-teaser__image {
+      display: none;
+
+      @media (min-width: $cs-screen-md) {
+        display: flex;
+        grid-row-start: 1;
+        grid-column-start: 2;
+        justify-content: center;
+      }
+    }
+  
+    .cmp-teaser__content {
+      padding: $cs-spacing-20;
+      @media (min-width: $cs-screen-md) {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        padding: $cs-spacing-25;
+      }
+
+      .cmp-teaser__title {
+        @extend %cs-font-h8;
+        display: flex;
+        align-items: center;
+        margin-bottom: $cs-spacing-15;
+
+        font-weight: $cs-font-weight-bold; 
+      }
+  
+      .cmp-teaser__description {
+        @extend %cs-font-p-4;
+
+        p {
+          font-family: $cs-font-family-paragraph !important;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+  
+      .cmp-teaser__action-container {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: $cs-spacing-25;
+  
+        @media (min-width: $cs-screen-md) {
+          flex-direction: row;
+          margin-top: $cs-spacing-30;
+        }
+  
+        .cmp-teaser__action-link {
+          @extend %cs-font-p-6-bold;
+          @extend %cs-button;
+          @include cs-button($cs-gunmetal, $cs-white);
+          display: block;
+          width: 100%;
+          padding: $cs-spacing-15 0;
+  
+          text-align: center;
+          @media (min-width: $cs-screen-md) {
+            width: unset;
+            min-width: 40%;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: $cs-spacing-15;
+
+            @media (min-width: $cs-screen-md) {
+              margin-right: $cs-spacing-10;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

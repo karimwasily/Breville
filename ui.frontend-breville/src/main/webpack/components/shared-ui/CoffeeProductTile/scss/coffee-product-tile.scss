@@ -1,0 +1,206 @@
+.coffee-product-tile {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  padding: $cs-spacing-30;
+
+  text-align: center;
+
+  background-color: $cs-white;
+  border: solid 1px $cs-gainsboro;
+
+  .coffee-product-tile__image {
+    margin-bottom: $cs-spacing-20;
+
+    .image {
+      img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .coffee-product-tile__info {
+    width: 100%;
+
+    .coffee-product-tile__brand {
+      @extend %cs-font-p-2;
+      margin-bottom: $cs-spacing-5;
+
+      color: $cs-dark-blue;
+      font-weight: $cs-font-weight-bold;
+    }
+
+    .coffee-product-tile__title {
+      @extend %cs-font-h12-bold;
+      margin-bottom: $cs-spacing-15;
+
+      color: $cs-color-primary;
+      font-weight: $cs-font-weight-normal;
+    }
+
+    .coffee-product-tile__flavour {
+      @extend %cs-font-p-4;
+      margin-bottom: $cs-spacing-5;
+
+      color: $cs-color-gray-10;
+      font-weight: $cs-font-weight-normal;
+    }
+
+    .coffee-product-tile__roast {
+      @extend %cs-font-p-4;
+      margin-bottom: $cs-spacing-15;
+
+      color: $cs-color-gray-10;
+      font-weight: $cs-font-weight-normal;
+    }
+
+    .coffee-product-tile__price {
+      @extend %cs-font-p-2;
+      margin-bottom: $cs-spacing-5;
+
+      color: $cs-color-primary;
+      font-weight: $cs-font-weight-bold;
+
+      // * conditionally render this if discount is shown
+      .coffee-product-tile__price-before {
+        @extend %cs-font-p-4;
+        margin-right: 1ch;
+
+        font-weight: $cs-font-weight-normal;
+        text-decoration: line-through;
+      }
+
+      .coffee-product-tile__price-after {
+        @extend %cs-font-p-4;
+        font-weight: $cs-font-weight-bold;
+      }
+    }
+
+    .coffee-product-tile__select {
+      background-color: transparent;
+
+      .coffee-product-tile__select-button {
+        @extend %cs-font-p-2;
+        position: absolute;
+        top: $cs-spacing-10;
+        right: $cs-spacing-10;
+
+        width: 1.37rem;
+        height: 1.37rem;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        font-weight: $cs-font-weight-bold;
+        text-indent: 100%;
+
+        background-color: $cs-whitesmoke;
+        border: solid 1px $cs-gunmetal;
+        border: solid 1px $cs-monsoon;
+        border-radius: $cs-border-radius-10;
+        border-radius: 50%;
+
+        @media (min-width: $screen-md) {
+          position: static;
+          top: auto;
+          right: auto;
+
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
+          padding: $cs-spacing-5;
+
+          text-indent: 0;
+
+          background-color: transparent;
+          border: solid 1px $cs-monsoon;
+          border-radius: $cs-border-radius-base;
+        }
+
+        &--selected {
+          @extend %cs-font-h11;
+          position: absolute;
+          top: $cs-spacing-10;
+          right: $cs-spacing-10;
+
+          width: 1.37rem;
+          height: 1.37rem;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+
+          color: $cs-color-primary;
+          text-indent: 100%;
+
+          background-color: $cs-whitesmoke;
+          background-color: $cs-color-primary;
+          border: solid 1px $cs-gunmetal;
+          border: solid 1px $cs-monsoon;
+          border-radius: $cs-border-radius-10;
+          border-radius: 50%;
+
+          @media (min-width: $cs-screen-md) {
+            position: static;
+            top: $cs-spacing-10;
+            right: $cs-spacing-10;
+          }
+
+          &::before {
+            @extend %comparison-check-icon;
+            position: relative;
+            top: -0.2rem;
+            left: -0.85rem;
+
+            width: 0.4375rem;
+            height: 0.375rem;
+
+            background-color: $cs-white;
+
+            content: '';
+            mask-size: cover;
+
+            @media (min-width: $cs-screen-md) {
+              top: -0.1rem;
+              left: -0.95rem;
+
+              width: 0.7rem;
+              height: 0.6rem;
+            }
+          }
+         
+          &-label {
+            @extend %cs-font-h15;
+            position: absolute;
+            top: $cs-spacing-30;
+            right: $cs-spacing-10;
+
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+            color: $cs-color-primary;
+            font-weight: $cs-font-weight-bold;
+
+            @media (min-width: $screen-md) {
+              position: static;
+              bottom: $cs-spacing-30;
+
+              padding-left: $cs-spacing-10;              
+            }
+             
+          }
+        }
+        
+      }
+    }
+
+  }
+}
+

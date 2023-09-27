@@ -1,0 +1,75 @@
+.cmp-showcase-carousel {
+  .cmp-title {
+    @extend %cs-font-p-4;
+    outline: 0;
+
+    &::before {
+      margin-right: $cs-spacing-15;
+      padding: 0 1px;
+
+      background-color: $cs-color-primary;
+      opacity: 0.1;
+
+      content: '';
+    }
+  }
+
+  .activeSlideItem {
+    .cmp-title {
+      font-weight: $cs-font-weight-bold;
+
+      &::before {
+        opacity: unset;
+      }
+    }
+  }
+}
+
+.showcase__carousel {
+  .splide__arrow--prev {
+    left: $cs-spacing-10;
+
+    @media (min-width: $cs-screen-lg) {
+      left: $cs-spacing-30;
+    }
+  }
+
+  .splide__arrow--next {
+    right: $cs-spacing-10;
+
+    @media (min-width: $cs-screen-lg) {
+      right: $cs-spacing-30;
+    }
+  }
+
+  .splide__list {
+    .cmp-image__image {
+      width: 100%;
+      height: 100%;
+      
+      @media (min-width: $cs-screen-md) {
+        height: 18.75rem;
+      }
+
+      @media (min-width: $cs-screen-lg) {
+        height: 21.875rem;
+      }
+
+      @media (min-width: $cs-screen-xxl) {
+        height: 23.125rem;
+      }
+    }
+  }
+}
+
+.showcase__carousel-list {
+  .splide__track {
+    .splide__slide {
+      .react-button {
+        padding: 0;
+
+        outline: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+// convert px to rem
+@function rem($size) {
+  @return math.div($size, 16px) * 1rem;
+}
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// convert rem to px
+@function rem-to-px($rem) {
+  @return strip-unit($rem) * 16px;
+}

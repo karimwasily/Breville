@@ -1,0 +1,12 @@
+@import 'container-content-tiles-base';
+  
+.cmp-container--content-tiles-homepage {
+  @extend %multimedia-base;
+
+  .cmp-container {
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(2, 1fr) !important;
+      padding: $spacing-xxl;
+    }
+  }
+}

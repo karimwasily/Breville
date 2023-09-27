@@ -1,0 +1,40 @@
+//== Fonts
+
+@font-face {
+  font-family: 'ArcherSSm';
+  src: url('../resources/fonts/ArcherSSm-Light-Pro.eot');
+  src: url('../resources/fonts/ArcherSSm-Light-Pro.eot?#iefix') format('embedded-opentype'), 
+    url('../resources/fonts/ArcherSSm-Light-Pro.otf') format('opentype'), 
+    url('../resources/fonts/ArcherSSm-Light-Pro.svg') format('svg'), 
+    url('../resources/fonts/ArcherSSm-Light-Pro.ttf') format('truetype'), 
+    url('../resources/fonts/ArcherSSm-Light-Pro.woff') format('woff'), 
+    url('../resources/fonts/ArcherSSm-Light-Pro.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ArcherSSm';
+  src: url('../resources/fonts/ArcherSSm-Semibold-Pro.eot');
+  src: url('../resources/fonts/ArcherSSm-Semibold-Pro.eot?#iefix') format('embedded-opentype'), 
+    url('../resources/fonts/ArcherSSm-Semibold-Pro.otf') format('opentype'), 
+    url('../resources/fonts/ArcherSSm-Semibold-Pro.svg') format('svg'), 
+    url('../resources/fonts/ArcherSSm-Semibold-Pro.ttf') format('truetype'), 
+    url('../resources/fonts/ArcherSSm-Semibold-Pro.woff') format('woff'), 
+    url('../resources/fonts/ArcherSSm-Semibold-Pro.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArcherSSm';
+  src: url('../resources/fonts/ArcherSSm-Bold-Pro.eot');
+  src: url('../resources/fonts/ArcherSSm-Bold-Pro.eot?#iefix') format('embedded-opentype'), 
+    url('../resources/fonts/ArcherSSm-Bold-Pro.otf') format('opentype'), 
+    url('../resources/fonts/ArcherSSm-Bold-Pro.svg') format('svg'), 
+    url('../resources/fonts/ArcherSSm-Bold-Pro.ttf') format('truetype'), 
+    url('../resources/fonts/ArcherSSm-Bold-Pro.woff') format('woff'), 
+    url('../resources/fonts/ArcherSSm-Bold-Pro.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,92 @@
+.ReactModal__Body--open{
+  overflow-y: hidden!important;
+  
+.action-modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: rgba($cs-black, 0.5);
+
+  @media (min-width: $cs-screen-md) {
+    justify-content: center;
+  }
+
+  .action-modal__modal {
+    overflow-y: auto;
+  }
+
+  .action-modal__container {
+    position: relative;
+  
+    width: 375px;
+    max-width: 100%;
+    padding: $cs-spacing-50 $cs-spacing-30;
+  
+    background-color: $cs-white;
+  
+    @media (min-width: $cs-screen-md) {
+      width: 552px;
+      padding: $cs-spacing-50 $cs-spacing-70 $cs-spacing-50 $cs-spacing-50;
+    }
+       
+    .action-modal__header {
+      margin-bottom: $cs-spacing-20;
+  
+      .action-modal__title {
+        @extend %cs-font-h4;
+      }
+  
+      .action-modal__close-icon {
+        position: absolute;
+        top: $cs-spacing-20;
+        right: $cs-spacing-20;
+
+        @media (min-width: $cs-screen-md) {
+          top: $cs-spacing-40;
+          right: $cs-spacing-40;
+        }
+      }
+    }
+  
+    .action-modal__content {
+      @extend %cs-font-p-2;
+      margin-bottom: $cs-spacing-50;
+
+      a.external-link {
+        text-decoration: underline;
+      }
+    }
+
+    .action-modal__footer {
+      .row {
+        gap: 1rem;
+      }
+
+      .action-modal__btn {
+        width: 100%;
+        padding: $cs-spacing-15 !important;
+        font-weight: 700;
+  
+        &.cancel {
+          @extend %cs-button-purple-large; 
+  
+        }
+  
+        &.cta {
+          @extend %cs-button-purple-fill-large; 
+  
+        }
+      }
+    }
+  }
+}
+}

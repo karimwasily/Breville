@@ -1,0 +1,47 @@
+<sly data-sly-use.model="com.breville.aem.brands.core.models.recipe.RecipeMaterial"></sly>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${model.isEmpty != true && model.isError != true}"></sly>
+
+<div class="cmp-recipematerial">
+    <h2 class="cmp-recipematerial__title">${'What you need' @ i18n}</h2>
+    <div class="cmp-recipematerial__material">
+        <sly data-sly-list=${model.equipments}>
+            <div class="cmp-recipematerial__equipment">
+                <img class="cmp-recipematerial__image" alt="" src="${item.equipmentImage}"></img>
+                <div class="cmp-recipematerial__name">
+                    <p class="cmp-recipematerial__name-text">${item.equipmentName}</p>
+                    <div class="cmp-recipematerial__tooltip" id="tooltip-equipment-${itemList.index}" data-sly-test="${item.tooltipKeyword}" data-keyword='${item.tooltipKeyword}' role="button" tabindex="0">
+                        ${item.tooltipKeyword}
+                        <div class="cmp-recipematerial__tooltip-content">
+                            <h3 class="cmp-recipematerial__tooltip-content-header">${item.tooltipKeyword}</h3>
+                            <p class="cmp-recipematerial__tooltip-content-description">${item.tooltipText @ context='html'}</p>
+                        </div>
+                    </div>
+                    <p class="cmp-recipematerial__name-text-after" data-sly-test="${item.tooltipKeyword}"></p>
+                    <span class="cmp-recipematerial__tooltip-icon" id="tooltip-equipment-icon-${itemList.index}" data-sly-test="${item.tooltipKeyword}"></span> 
+                </div>
+                <a data-sly-test="${item.equipmentPurchaseLink}" class="cmp-recipematerial__link" href="${item.equipmentPurchaseLink}" target="_blank">${item.equipmentPurchaseLinkTitle}</a>
+            </div>
+        </sly>
+        <sly data-sly-list=${model.ingredients}>
+            <div class="cmp-recipematerial__ingredient">
+                <img class="cmp-recipematerial__image" alt="" src="${item.ingredientImage}"></img>
+                <div class="cmp-recipematerial__name">
+                    <p class="cmp-recipematerial__name-text">${item.ingredientAmount} ${item.ingredientName}</p>
+                    <div class="cmp-recipematerial__tooltip"  id="tooltip-ingredient-${itemList.index}" data-sly-test="${item.tooltipKeyword}" data-keyword='${item.tooltipKeyword}' role="button" tabindex="0">
+                        ${item.tooltipKeyword}
+                        <div  class="cmp-recipematerial__tooltip-content">
+                            <h3 class="cmp-recipematerial__tooltip-content-header">${item.tooltipKeyword}</h3>
+                            <p class="cmp-recipematerial__tooltip-content-description">${item.tooltipText @ context='html'}</p>
+                        </div>
+                    </div>
+                    <p class="cmp-recipematerial__name-text-after" data-sly-test="${item.tooltipKeyword}"></p>
+                    <span class="cmp-recipematerial__tooltip-icon" id="tooltip-ingredient-icon-${itemList.index}" data-sly-test="${item.tooltipKeyword}"></span> 
+                </div>
+                <p class="cmp-recipematerial__subtext" data-sly-test="${item.ingredientSubtext}">${item.ingredientSubtext}</p>
+                <a class="cmp-recipematerial__link" data-sly-test="${item.ingredientPurchaseLink}" href="${item.ingredientPurchaseLink}" target="_blank">${item.ingredientPurchaseLinkTitle}</a>
+            </div>
+        </sly>
+    </div>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

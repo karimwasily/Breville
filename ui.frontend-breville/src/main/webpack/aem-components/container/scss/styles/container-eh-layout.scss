@@ -1,0 +1,47 @@
+.cmp-container--eh-layout-6-6 {
+  .cmp-container {
+    @extend %cs-layout-6-6;
+    display: block;
+    margin-bottom: $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      display: grid;
+      grid-gap: $cs-spacing-30;
+      margin-bottom: $cs-spacing-30;
+    }
+  }
+}
+
+.cmp-container--eh-layout-8-4 {
+  .cmp-container {
+    @extend %cs-layout-8-4;
+    display: block;
+    margin-bottom: $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      display: grid;
+      grid-gap: $cs-spacing-30;
+      margin-bottom: $cs-spacing-30;
+    }
+  }
+}
+
+.cmp-container--eh-layout-4-8 {
+  .cmp-container {
+    @extend %cs-layout-4-8;
+    display: block;
+    margin-bottom: $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      display: grid;
+      grid-gap: $cs-spacing-30;
+      margin-bottom: $cs-spacing-30;
+    }
+  }
+}
+
+.cmp-container--eh-layout-12 {
+  .cmp-container {
+    @extend %cs-layout-base;
+  }
+}

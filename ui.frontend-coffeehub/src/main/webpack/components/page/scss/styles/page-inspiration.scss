@@ -1,0 +1,7 @@
+.cmp-page--inspiration {
+  background-color: $creme;
+  height: 295px;
+  @media (min-width: $screen-md) {
+    height: 345px;
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2021-07-29T15:20:23.758Z"
+        cq:lastModifiedBy="yogiraj.mahajan@breville.com.au"
+        cq:lastReplicated="{Date}2021-07-29T15:20:29.181Z"
+        cq:lastReplicated_publish="{Date}2021-07-29T15:20:29.181Z"
+        cq:lastReplicatedBy="yogiraj.mahajan@breville.com.au"
+        cq:lastReplicatedBy_publish="yogiraj.mahajan@breville.com.au"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:templateType="/conf/beanz/settings/wcm/template-types/page"
+        jcr:description="Beanz Generic Lean Footer Page Template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Beanz Generic Lean Footer Page"
+        status="enabled"/>
+</jcr:root>

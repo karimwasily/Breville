@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-17T12:13:42.613+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/breville/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Patents"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        cq:styleIds="[1615947849628]"
+                        jcr:created="{Date}2021-03-17T09:13:50.794+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-17T09:13:50.794+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/title"/>
+                    <text
+                        cq:styleIds="[1615963096918,1615963107576]"
+                        jcr:created="{Date}2021-03-17T09:14:12.413+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-17T12:13:42.595+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/text"
+                        text="&lt;p>Breville invests heavily in finding new and better ways to do things in the kitchen. This often leads to breakthroughs in the form of inventions and designs. We also respect the rights of others who have new kitchen ideas and patents. To help ensure that we don’t tread on each other’s toes we have included here a list of Breville products protected by U.S. patents.&amp;nbsp; The following list may not be all inclusive, and other Breville Products not listed here may be protected by one or more patents. Component, replacement, or associated parts or products bearing the same model number as a product as a whole identified below are not covered by the patents or patent applications pending specified for that particular product.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>35 U.S.C. §287(a) Notice: Please take notice that the following Breville products are protected by the corresponding listed United States patents:&lt;u> &lt;b>&lt;a href=&quot;https://www.google.com&quot; target=&quot;_blank&quot;>Please click here to download Breville's patents&lt;/a>&lt;/b>&lt;/u>&lt;/p>&#xd;&#xa;&lt;p>Additionally, please click&lt;u> &lt;a href=&quot;https://www.google.com&quot; target=&quot;_blank&quot;>&lt;b>here&lt;/b>&lt;/a>&lt;/u> to download a list of Breville products with old marking removed from the updated list.&amp;nbsp; Breville products with old marking may appear in retail channels for a short time until new stock with updated marking replaces them.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Inquiries:&amp;nbsp;&lt;u>&lt;a href=&quot;mailto:patents.usa@breville.com.au?Subject=Patent%20Inquires&quot; target=&quot;_blank&quot;>&lt;b>patents.usa@breville.com.au&lt;/b>&lt;/a>&lt;/u>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                        </cq:responsive>
+                    </text>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

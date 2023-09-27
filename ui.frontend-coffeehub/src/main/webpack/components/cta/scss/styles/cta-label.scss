@@ -1,0 +1,63 @@
+.cmp-cta--label {
+  $transition-duration: 0.3s;
+
+  .cmp-cta {
+    background: transparent;
+    border: 1px solid $black;
+    text-align: left;
+    cursor: pointer;
+    display: inline-block;
+
+    .cmp-cta__text {
+      @extend %font-cta;
+      position: relative;
+      display: block;
+      padding: $spacing-md;
+      padding-right: $spacing-md + 4.5rem;
+      z-index: 2;
+
+      // ICON
+      &::after {
+        @include arrow-right-icon($color: $black);
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: $spacing-md;
+        transition: transform $transition-speed $transition-ease;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        transform: translate3d(-100%, 0, 0);
+        z-index: -1;
+        transition: transform $transition-duration $transition-ease;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &:hover {
+      .cmp-cta__text {
+        &::after {
+          transform: translate3d(5px, -50%, 0);
+        }
+
+        &::before {
+          transform: translate3d(0, 0, 0);
+          pointer-events: none;
+        }
+      }
+    }
+
+    &:focus {
+      outline: 1px auto;
+      background-color: $white;
+    }
+  }
+}

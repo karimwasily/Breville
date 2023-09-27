@@ -1,0 +1,235 @@
+@use 'sass:math';
+
+////////////////////
+// Form inputs
+////////////////////
+
+%cs-form-input {
+  @extend %cs-font-p-3;
+  min-width: 260px;
+  padding: math.div($cs-spacing-15, 1.1) $cs-spacing-20;
+  color: $cs-gunmetal;
+  border: 1px solid $cs-silver;
+  border-radius: $cs-border-radius-base * 1.33;
+
+  &:disabled {
+    @extend %cs-form-input-disabled;
+  }
+}
+
+%cs-form-input-disabled {
+  opacity: $cs-opacity-dark;
+  color: #{$cs-gunmetal + '80'};
+  background-color: $cs-gray-95;
+}
+
+%cs-form-input-label {
+  @extend %cs-font-p-3;
+  color: $cs-monsoon;
+}
+
+%cs-form-checkbox-label {
+  @extend %cs-font-p-3;
+  color: $cs-gunmetal;
+}
+
+%cs-form-selectbox {
+  @extend %cs-form-input;
+  @extend %arrow-down-selectbox;
+  width: auto;
+  height: auto;
+  appearance: none;
+  background-position: center right $cs-spacing-15;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+%cs-form-checkbox {
+  position: absolute;
+  opacity: 0;
+
+  +label {
+    @extend %cs-form-checkbox-label;
+    padding-left: $cs-spacing-30;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 22px !important;
+      height: 22px !important;
+      border: 1px solid $cs-monsoon;
+      border-radius: $cs-border-radius-base * 0.66;
+    }
+  }
+
+  &:checked {
+    +label {
+      &::after {
+        @extend %checkbox-green-icon;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 12px;
+        border: 2px solid $cs-gunmetal;
+      }
+    }
+  }
+
+  &:disabled {
+    +label {
+      opacity: $cs-opacity-light;
+    }
+  }
+}
+
+
+
+
+// Dummy styles for static html forms which addedm for your references
+.form-base-styles {
+  max-width: 320px;
+  margin: auto;
+  position: relative;
+
+  .form-input-field {
+    margin-bottom: $cs-spacing-35;
+
+    label {
+      @extend %cs-form-input-label;
+      display: block;
+      margin-bottom: $cs-spacing-5;
+    }
+
+    .form-input-control {
+      @extend %cs-form-input;
+
+    }
+
+    .form-select-control {
+      @extend %cs-form-selectbox;
+    }
+  }
+
+  .form-checkbox-field {
+    margin-bottom: $cs-spacing-35;
+
+    .form-checkbox-control {
+      @extend %cs-form-checkbox;
+    }
+  }
+
+}
+
+// Styles initally used for a cart page
+
+.form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: $cs-spacing-30;
+}
+
+.form-label {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  display: inline-block;
+  margin-bottom: $cs-spacing-3;
+  color: $cs-color-gray-10;
+}
+
+.form-control {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  display: block;
+  width: 100%;
+  height: $cs-spacing-50;
+  padding: $cs-spacing-20 $cs-spacing-15;
+  border-radius: 8px;
+  border: solid 1px $cs-color-gray-15;
+  outline: none;
+  color: $cs-color-primary;
+
+  &__prefix-wrapper {
+    @extend .form-control;
+    display: flex;
+    align-items: center;
+
+    .form-control--prefix {
+      display: block;
+      margin-right: $cs-spacing-10;
+    }
+
+    .form-control {
+      padding: 0;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.form-control-information {
+  @extend %cs-font-small-p;
+  margin: $cs-spacing-10 0;
+  text-align: left;
+  color: $cs-monsoon; 
+}
+
+.form-select { 
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  outline: 0;
+  display: block;
+  width: 100%;
+  height: $cs-spacing-50;
+  padding: 0 $cs-spacing-20;
+  border-radius: 8px;
+  border: solid 1px $cs-color-gray-15;
+  background-color: $cs-white;
+  color: $cs-color-primary;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%313638' viewBox='0 0 10 7' id='play-outline' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.278 1.746c-.37-.397-.37-1.028 0-1.425.387-.415 1.028-.415 1.415 0l3.302 3.542L8.306.31c.388-.415 1.03-.415 1.416 0 .188.202.278.461.278.713 0 .252-.09.511-.278.713L5.767 5.979l-.003.004c-.01.015-.03.04-.056.07-.387.414-1.029.415-1.416 0L.278 1.745z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: $cs-spacing-10 7px;
+  background-position: center right $cs-spacing-20;
+}
+
+.form-button {
+  width: 100% !important; // overwriting styles from cs-buttons
+}
+
+.form-control--error-input {
+  border: 3px solid red;
+}
+
+.form-error--error-message {
+  @extend %cs-font-p-4;
+  position: absolute;
+  bottom: 0;
+  transform: translate(0%, 50%);
+  color: $cs-notice-error;
+  margin: $cs-spacing-10 0;
+  display: block;
+}
+
+.form-success {
+  color: $cs-forest-green;
+  margin: .5rem 0;
+  display: block;
+}
+
+.form-error {
+  color: $cs-scarlet;
+}
+
+input:read-only {
+  background-color: $cs-color-gray-50;
+}
+
+input::placeholder {
+  color: $cs-color-gray-15;
+}

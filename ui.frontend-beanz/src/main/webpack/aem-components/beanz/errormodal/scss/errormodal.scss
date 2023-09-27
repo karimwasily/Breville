@@ -1,0 +1,147 @@
+.error_modal {
+    position: fixed;
+    z-index: 10;
+  
+    .errormodal_dialog-overlay {
+      z-index: 4;
+      background-color: $error-modal-overlay-color;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  
+    .errormodal_dialog-content {
+      box-shadow: 0 2px 4px 0 $error-modal-overlay-shadow-color;
+      border-radius: $border-radius-base;
+      border: 1px solid $gray-light;
+      text-align: center;
+      max-height: 92vh;
+      overflow: auto;
+      z-index: 4;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $white;
+      padding: $spacing-xxxxs;
+      max-width: 90%;
+      width: 600px;
+  
+      .errormodal_modal-dialog-parent {
+        position: relative;
+        width: 100%;
+  
+        .errormodal_dialog-close {
+          position: absolute;
+          opacity: 1;
+          top: $beanz-spacing-20;
+          right: $beanz-spacing-20;
+          width: $beanz-spacing-40;
+          height: $beanz-spacing-40;
+          border: 0;
+          background-color: $gray;
+          backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+          border-radius: $border-radius-base;
+  
+          .errormodal_icn-close {
+            width: $spacing-xs;
+            height: $spacing-xs;
+            display: inline-block;
+            vertical-align: middle;
+            fill: $white;
+          }
+        }
+      }
+  
+      .errormodal_content-holder {
+        padding-top: $spacing-sm;
+  
+        .errormodal_icon-size {
+          display: inline-block;
+          width: $spacing-xxl;
+          height: $spacing-xxl;
+          overflow: hidden;
+        }
+      }
+  
+      .errormodal_text-content {
+        .errormodal_seperator {
+          font-size: $spacing-lg;
+          font-weight: $font-weight-bold;
+          color: $jaguar;
+          margin-bottom: $font-size-mlarge;
+          line-height: $line-height-paragraph;
+          letter-spacing: $letter-spacing-base;
+          font-family: $font-family-secondary;
+        }
+  
+        .errormodal_modal-body {
+          color: $pure-black;
+          font-size: $font-size-base;
+          margin-bottom: $spacing-lg;
+          line-height: $line-height-small;
+          font-weight: $font-weight-medium-bold;
+          font-family: $font-family-primary;
+          letter-spacing: $letter-spacing-base;
+          position: relative;
+          flex: 1 1 auto;
+          padding: $spacing-sm;
+        }
+      }
+  
+      .errormodal_cart-modal-button {
+        margin: $spacing-md auto $spacing-xl;
+  
+        .errormodal_btn--primary {
+          @extend %light-green-btn;
+          padding: $spacing-xs $spacing-xl * 3;
+        }
+      }
+    }
+    .add-to-cart-popup--close {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      display: block;
+      top: $spacing-xs;
+      right: $spacing-xs;
+      cursor: pointer;
+      opacity: 0.5;
+
+      .add-to-cart-popup--close-button {
+        position: relative;
+        width: $spacing-xl;
+        height: $spacing-xl;
+        padding: 0;
+        border: 0;
+        background: $gray-davy;
+        border-radius: $border-radius-base;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          height: $spacing-xxxs;
+          margin-top: -$spacing-xxxxs;
+          top: 50%;
+          left: $spacing-xs;
+          right: $spacing-xs;
+          background: $white;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  

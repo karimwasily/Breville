@@ -1,0 +1,62 @@
+{
+  "id": "cmp-id-question",
+  "questionAnswers": [
+    {
+      "serial": "1/4",
+      "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+      "imageAltText": "Quiz image",
+      "customClass": "cmp-questionnaire--q1",
+      "question": "What kind of coffee brewer are you at home?",
+      "answers": [
+        { "ansText": "I love espresso", "ansId": "1" },
+        { "ansText": "It's drip or pourover coffee for me", "ansId": "2" }
+      ]
+    },
+    {
+      "serial": "2/4",
+      "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+      "imageAltText": "Quiz image",
+      "customClass": "cmp-questionnaire--q1",
+      "question": "What flavors do you look for in your coffee beans?",
+      "answers": [
+        { "ansText": "Chocolate and caramel", "ansId": "1" },
+        { "ansText": "Citrus and floral", "ansId": "2" },
+        { "ansText": "Nutty and spice", "ansId": "3" },
+        { "ansText": "Fruity", "ansId": "4" },
+        { "ansText": "I can't decide! Let's skip this question.", "ansId": "5" }
+      ]
+    },
+    {
+      "serial": "3/4",
+      "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+      "imageAltText": "Quiz image",
+      "customClass": "cmp-questionnaire--q1",
+      "question": "Any particular way you like to serve your brew?",
+      "answers": [
+        { "ansText": "I like it black.", "ansId": "1" },
+        {
+          "ansText": "Milk or a non-dairy milk alternative is best for me.",
+          "ansId": "2"
+        },
+        { "ansText": "Cream and sugar, all the way.", "ansId": "3" },
+        {
+          "ansText": "All of the above! Let's skip this question.",
+          "ansId": "4"
+        }
+      ]
+    },
+    {
+      "serial": "4/4",
+      "imagePath": "/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg",
+      "imageAltText": "Quiz image",
+      "customClass": "cmp-questionnaire--q1",
+      "question": "Caffeine or decaf?",
+      "answers": [
+        { "ansText": "Give me the buzz, please.", "ansId": "1" },
+        { "ansText": "Decaf's how I like it.", "ansId": "2" }
+      ]
+    }
+  ],
+  "startOver": null,
+  "resultPageText": null
+}

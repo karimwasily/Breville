@@ -1,0 +1,54 @@
+// this relies on the vue blog-listing-article component markup
+// styles a two article row
+.cmp-v-blog-listing--article-two-row {
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+    padding: 0 $spacing-xxl;
+  }
+
+  .cmp-v-blog-listing__article {
+    .cmp-article {
+
+      // ARTICLE IMAGE
+      .cmp-article__image {
+        .cmp-image {
+          @media (min-width: $screen-md) {
+            // using padding-top to control image dimensions
+            padding-top: 80%;
+          }
+
+          &__image {
+          }
+        }
+      }
+
+      // ARTICLE CONTENT
+      &__content {
+        .cmp-article__category {
+          @media (min-width: $screen-md) {
+            padding-top: $spacing-lg !important;  
+          }
+        }
+
+        .cmp-article__title {
+          @media (min-width: $screen-md) {
+            margin-top: $spacing-md !important;  
+          }
+        }
+
+        .cmp-article__description {
+          @media (min-width: $screen-md) {
+            margin-top: $spacing-xs !important;  
+          }
+        }
+
+        .cmp-article__action-container {
+          .cmp-article__action-link {
+          }
+        }
+      }
+    }
+  }
+}

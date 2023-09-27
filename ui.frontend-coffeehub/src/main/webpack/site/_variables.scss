@@ -1,0 +1,175 @@
+@use 'sass:math';
+
+////////////////////
+// COLORS
+////////////////////
+// RAW
+
+$white: #fff;
+$creme: #f6f2ef;
+// ! TBC
+$espresso: #dcd5cf;
+$aubergine: #3a1537;
+$black: #000;
+$light-brown: #c9c09b;
+$white-smoke: #f5f5f5;
+$grey: #888;
+$green: #8e7763;
+$sandrift: #a68f7b;
+$light-grey: #d0bdaf;
+$blue: #2a74ac;
+
+///////////////////////////
+// ASSIGN
+$brand-primary: $black;
+$brand-secondary: $black;
+
+$foreground-color: $black;
+$background-color: $white;
+
+$footer-background: $aubergine;
+
+$text-color: $black;
+
+$link-color: $black;
+
+$cmp-content-separator-color: $light-brown;
+
+////////////////////
+// TYPOGRAPHY
+////////////////////
+
+$font-family-primary: 'ArcherSSm', sans-serif;
+$font-family-secondary: Arial, -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto, sans-serif;
+
+///////////////////////////
+@function rem($size) {
+  @return math.div($size, 16px) * 1rem;
+}
+
+$font-size-base: rem(16px);
+
+$font-size-h1: rem(45px);
+$font-size-h2: rem(34px);
+$font-size-h3: rem(28px);
+$font-size-h5-subcategory: rem(16px);
+$font-size-playerlink: rem(22px);
+$font-size-playerlink-large: rem(26px);
+$font-size-playerlink-mobile: rem(18px);
+$font-size-h1-subtext: rem(22px);
+$font-size-largetext: rem(20px);
+$font-size-body: rem(18px);
+$font-size-navmenu: rem(19px);
+$font-size-navmenu-mobile: rem(22px);
+$font-size-navmenu-breadcrumb: rem(14px);
+$font-size-circle-xs: rem(20px);
+$font-size-circle-md: rem(28px);
+$font-size-pretitle-mobile: rem(14px);
+$font-size-banner-tagline: rem(16px);
+$font-size-banner-tagline-mobile: rem(14px);
+
+
+// * guidlines says 30px here however designs say 38px (38px seems to look a better)
+$font-size-h1-mobile: rem(30px);
+$font-size-h2-mobile: rem(27px);
+$font-size-h3-mobile: rem(22px);
+$font-size-h1-subtext-mobile: rem(20px);
+
+$font-size-cta: rem(18px);
+///////////////////////////
+
+$line-height-cta-body: rem(25.29px);
+$line-height-base: rem(24px);
+$line-height-h1: rem(56.5px);
+$line-height-h2: rem(45.6px);
+$line-height-h3: rem(36.8px);
+$line-height-h5-subcategory: rem(22.86px);
+$line-height-playerlink: rem(31.44px);
+$line-height-playerlink-mobile: rem(25.29px);
+$line-height-h1-subtext: rem(30.91px);
+$line-height-largetext: rem(28.1px);
+$line-height-body: rem(27px);
+$line-height-navmenu: rem(27.13px);
+$line-height-navmenu-breadcrumb: rem(20.01px);
+
+// todo: confirm mobile font sizes (difference in tech sheet vs mobile guidelines)
+// * guidelines says 33.9px here however designs say 41.64px (41.64px seems to look a better)
+$line-height-h1-mobile: rem(41.64px);
+$line-height-h2-mobile: rem(30.51px);
+$line-height-h3-mobile: rem(24.86px);
+$line-height-h1-subtext-mobile: rem(30.91px);
+
+$line-height-cta: rem(25.29px);
+///////////////////////////
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-h3-bold: 600;
+
+
+////////////////////
+// BREAKPOINTS
+////////////////////
+
+// designs
+$screen-xs: 375px;
+// non design helpers
+$screen-sm: 576px;
+$screen-md: 769px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+// designs
+$screen-xxl: 1440px;
+$screen-xxxl: 1920px;
+
+////////////////////
+// LAYOUT
+////////////////////
+$max-width: $screen-xxxl;
+
+// * tbc
+$header-height: rem(200px);
+$header-mobile-height: rem(100px);
+
+// * tbc
+$footer-height: rem(500px);
+$footer-mobile-height: rem(945px);
+
+$recipe-carousel-height: rem(650px);
+
+////////////////////
+// SPACING
+////////////////////
+$spacing-xxs: rem(5px);
+$spacing-xs: rem(10px);
+$spacing-sm: rem(15px);
+$spacing-md: rem(20px);
+$spacing-ml: rem(25px);
+$spacing-lg: rem(30px);
+$spacing-xl: rem(40px);
+$spacing-xxl: rem(50px);
+$spacing-xxxl: rem(70px);
+
+// This spacing varibles are additional varible for Third wave page
+$spacing-tw-xxs: rem(100px);
+$spacing-tw-xs: rem(125px);
+$spacing-tw-sm: rem(150px);
+$spacing-tw-md: rem(200px);
+$spacing-tw-xl: rem(250px);
+$spacing-tw-xxl: rem(400px);
+$spacing-tw-xxxl: rem(500px);
+
+
+$spacing-page-gutter: $spacing-xxl;
+$spacing-page-gutter-mobile: $spacing-md;
+
+// box-shadow
+$box-shadow-secondary-navigation: 10px 10px 10px rgba(0, 0, 0, 0.1);
+$box-shadow-tooltip: rgba(59, 57, 57, 0.2) 0 rem(10px) rem(16px) 0, rgba(0, 0, 0, 0.2) 0 rem(6px) rem(20px) 0;
+
+//Opacity
+$opacity-light: 0.5;
+$opacity-dark: 0.8;
+
+//Text Shadow
+$text-shadow: -1px 0 8px $black, 1px 0 8px $black, 0 1px 8px $black, 0 -1px 8px $black;

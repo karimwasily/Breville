@@ -1,0 +1,26 @@
+.cmp-button--continue-shopping {
+    position: absolute;
+    left: $cs-spacing-15;
+    top:$cs-spacing-3;
+    @media (min-width: $screen-md) {
+    top:$cs-spacing-40;
+    }
+    a.cmp-button {
+        @extend %cs-font-p-4;
+         color: $gunmetal;
+        position: relative;
+        padding-left: $cs-spacing-15;
+        text-decoration: underline;
+    }
+    a.cmp-button::before {
+        @extend %arrow-right-icon-small;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 10px;
+        width: 6.5px;
+        left: 0;
+        top: 0.2em;
+        transform: rotateZ(180deg);
+    }
+}

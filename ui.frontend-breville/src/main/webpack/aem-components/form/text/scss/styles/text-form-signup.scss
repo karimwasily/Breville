@@ -1,0 +1,225 @@
+.cmp-text--signup {
+  background-color: $wine-berry;
+  border-bottom: 1px solid $swamp;
+
+  .cmp-text {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        flex: 1 0 0%;
+        margin-bottom: 0;
+
+        a {
+          font-family: $font-family-arial;
+          font-weight: $font-weight-bold;
+          font-size: rem(11px);
+          padding: $spacing-ml 0.3rem;
+          color: $submarine;
+          display: block;
+          width: 100%;
+          line-height: 2.125rem;
+          border-right: 1px solid $swamp;
+          @media (min-width:$screen-xs) {
+            font-size: $font-size-small;
+            padding: $spacing-ml 0.5rem;
+          }
+          @media (min-width:$screen-sm) {
+            font-size: rem(13px);
+          }
+          @media (min-width:$screen-md) {
+            font-size: $font-size-medium;
+            padding: $spacing-ml $spacing-md;
+          }
+          @media (min-width:$screen-lg) {
+            padding: $spacing-ml $spacing-sm;
+          }
+          @media (min-width:$screen-xl) {
+            padding: $spacing-ml $spacing-md;
+          }
+
+          &:hover {
+            color: $white;
+            text-decoration: underline;
+          }
+        }
+
+        &:first-child {
+          @media (min-width:$screen-lg) {
+            padding-left: $spacing-ml;
+          }
+        }
+
+        &:last-child {
+          background-color: $swamp;
+          flex: 0 0 100%;
+          max-width: 100%;
+          position: relative;
+          @media (min-width:$screen-lg) {
+            flex: 0 0 41.6666666667%;
+            max-width: 41.6666666667%;
+            padding-right: $spacing-ml;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cmp-form-container--signup {
+  .text {
+    .cmp-text {
+      h3 {
+        @extend %font-h3;
+        font-family: $font-family-ArcherSSm;
+        font-size: $font-size-h3;
+        line-height: $line-height-base;
+        padding-bottom: $spacing-md;
+        width: auto;
+        color: $gunmetal;
+        margin-bottom: 0;
+      }
+
+      .cmp-text__subtitle {
+        padding: $spacing-xs 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        position: relative;
+        font-size: $font-size-base;
+        line-height: $line-height-small;
+        color: $grape;
+        font-family: $font-family-ArcherSSm;
+        font-weight: $font-weight-bold;
+        margin-bottom: 0;
+        text-transform: capitalize;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          height: 1px;
+          background-color: $regent-gray;
+        }
+
+        &::before {
+          top: 0;
+        }
+
+        &::after {
+          bottom: 0;
+        }
+      }
+
+      .cmp-text__description {
+        @extend %font-signup-description;
+        padding: $spacing-md 0;
+        max-width: $screen-xl;
+        width: 100%;
+        color: $cape-cod;
+
+        a {
+          color: $wine-berry;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.cmp-form-text--signup-first-name,
+    &.cmp-form-text--signup-last-name,
+    &.cmp-form-text--signup-email {
+      float: left;
+      width: 100%;
+      @media (min-width:$screen-lg) {
+        width: 30%;
+        max-width: 30%;
+        padding-top: 0;
+      }
+
+      &::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+
+    &.cmp-form-text--signup-first-name,
+    &.cmp-form-text--signup-last-name {
+      @media (min-width:$screen-md) {
+        width: 50%;
+      }
+      @media (min-width:$screen-lg) {
+        width: 27%;
+        max-width: 27%;
+        padding-top: 0;
+      }
+    }
+
+    &.cmp-form-text--signup-first-name {
+      @media (min-width:$screen-md) {
+        padding-right: 0;
+      }
+      @media (min-width:$screen-lg) {
+        padding-right: $spacing-xs;
+      }
+    }
+
+    &.cmp-form-text--signup-last-name {
+      padding-top: 12px;
+      @media (min-width:$screen-md) {
+        padding-top: $spacing-xs;
+        padding-left: 0;
+      }
+      @media (min-width:$screen-lg) {
+        padding-left: $spacing-xs;
+        padding-right: $spacing-xs;
+        padding-top: 0;
+      }
+    }
+
+    &.cmp-form-text--signup-email {
+      padding-top: 12px;
+      margin-bottom: 12px;
+      @media (min-width:$screen-md) {
+        max-width: 80%;
+        padding-right: $spacing-md;
+      }
+      @media (min-width:$screen-lg) {
+        padding-top: 0;
+        padding-left: $spacing-xs;
+        width: 27%;
+        max-width: 27%;
+      }
+    }
+
+    >.cmp-form-text {
+      >label {
+        @extend %font-p;
+        display: block;
+        height: $spacing-md;
+        margin-bottom: $spacing-xxs;
+        color: $abbey;
+        padding-bottom: $spacing-xxs;
+      }
+
+      >input {
+        height: 48px;
+        max-height: 48px;
+        border: 1px solid $regent-gray;
+        background-color: $white;
+        padding: $spacing-xs;
+        font-size: $font-size-medium;
+        width: 100%;
+        color: $wine-berry;
+      }
+    }
+  }
+}

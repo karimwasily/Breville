@@ -1,0 +1,18 @@
+@import 'teaser-cs-image-left';
+
+.cmp-teaser--cs-image-right {
+  @extend %cmp-teaser--cs-image-left;
+
+  @media (min-width: $cs-screen-md) {
+    direction: rtl;
+
+    .cmp-teaser {
+
+      &__content,
+      &__image {
+        direction: ltr;
+      }
+    }
+  }
+
+}

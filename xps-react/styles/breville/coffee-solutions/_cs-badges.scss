@@ -1,0 +1,22 @@
+%cs-badge {
+  @extend %cs-font-p-4;
+  width: $cs-spacing-110;
+  padding: $cs-spacing-5 $cs-spacing-10;
+  border-radius: $cs-border-radius-3;
+  background-color: $cs-color-primary;
+  color: $cs-white;
+  line-height: 1;
+  font-weight: $cs-font-weight-bold;
+  text-transform: uppercase;
+}
+
+%cs-badge-xsmall {
+  @extend %cs-font-p-5;
+  width: fit-content;
+  padding: $cs-spacing-5 $cs-spacing-10;
+  border-radius: $cs-border-radius-3;
+  background-color: $cs-color-primary;
+  color: $cs-white;
+  font-weight: $cs-font-weight-bold;
+  text-transform: uppercase;
+}

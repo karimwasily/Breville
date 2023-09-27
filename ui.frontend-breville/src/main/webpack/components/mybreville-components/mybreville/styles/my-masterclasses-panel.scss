@@ -1,0 +1,69 @@
+.my-masterclasses-panel {
+  display: flex;
+  align-items: center;
+  padding: $cs-spacing-25;
+  
+  background-color: $cs-white;
+  border-radius: $cs-border-radius-8;
+
+  &__wrapper {
+    .my-masterclasses-panel__header {
+      @extend %cs-font-h10;
+      display: none;
+  
+      font-weight: $cs-font-weight-bold;
+  
+      @media (min-width: $cs-screen-xl) {
+        display: block;
+        margin-bottom: $cs-spacing-30;
+  
+      } 
+    }
+    
+    .my-masterclasses-panel__content {
+      @extend %cs-font-h10;
+      display: block;
+      margin-bottom: 0;
+  
+      color: $cs-monsoon;
+      font-weight: $cs-font-weight-normal;
+  
+      @media (min-width: $cs-screen-xl) {
+        margin-bottom: $cs-spacing-20;
+      }
+  
+    }
+  
+    .my-masterclasses-panel__button-container {
+      &--button {
+        @extend %cs-font-p-4;
+        text-decoration: underline;
+    
+        @media (min-width: $cs-screen-xl) {
+          padding: $cs-spacing-5 $cs-spacing-20;
+    
+          font-weight: $cs-font-weight-bold;
+          text-decoration: none;
+    
+          border: 1px solid $cs-gunmetal;
+          border-radius: $cs-border-radius-8;
+  
+          &:hover {
+            color: $cs-white;
+    
+            background-color: $cs-black;
+            outline: 0;
+  
+            transition: background-color 250ms;
+          }
+        }
+      }
+    }
+  }
+
+  &__right-chevron {
+    @media (min-width: $cs-screen-xl) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use 'sass:math';
+
+.cmp-teaser--cs-image-top-small-beanz {
+  width: 22rem; // uniform width of each tile 
+  margin: $cs-spacing-25 $cs-spacing-5 $cs-spacing-10;
+
+  @media (min-width: $screen-md) {
+    width: 18rem; // uniform width of each tile 
+    margin: $cs-spacing-45 $cs-spacing-5 math.div($cs-spacing-130, 2);
+  }
+
+  .cmp-teaser {
+    text-align: center;
+
+    .cmp-teaser__image {
+      margin: 0 0 $cs-spacing-10;
+
+      @media (min-width: $screen-md) {
+        margin: 0 0 $cs-spacing-20;
+      }
+
+      .cmp-image__image {
+        --image-dimension-desktop: 90px;
+        --image-dimension-mobile: 70px;
+        width: auto;
+        height: var(--image-dimension-mobile);
+        object-fit: contain;
+
+        @media (min-width: $screen-md) {
+          height: var(--image-dimension-desktop);
+        }
+      }
+    }
+
+    .cmp-teaser__content {
+      .cmp-teaser__title {
+        @extend %cs-font-h8;
+        font-weight: $cs-font-weight-bold;
+        margin: 0 0 $cs-spacing-10;
+
+        @media (min-width: $screen-md) {
+          margin: 0 0 $cs-spacing-15;
+          padding: 0 $cs-spacing-5;
+        }
+      }
+
+      .cmp-teaser__description {
+        margin: 0 auto;
+
+        @media (min-width: $screen-md) {
+          max-width: 240px;
+        }
+
+        p {
+          @extend %cs-font-p-4;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

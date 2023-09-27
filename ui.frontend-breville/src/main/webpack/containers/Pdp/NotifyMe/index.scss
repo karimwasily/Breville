@@ -1,0 +1,281 @@
+
+
+.notify-modal-overlay {
+  @extend %cs-modal-overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (min-width: $cs-screen-md) {
+    justify-content: center;
+  }
+
+  .notify-modal-wrapper {
+    @include create-scrollbar(
+      $foreground: $cs-color-gray-40,
+      $background: $cs-white,
+      $border-width: 2px,
+      $border-radius: $cs-border-radius-8
+    );
+    position: relative;
+  
+    overflow-y: auto;
+  
+    background-color: $cs-white;
+  
+    @media (min-width: $cs-screen-md) {  
+      max-width: 1000px;   
+    }
+  
+    .notify__close-btn {
+      @extend %cs-modal-close-btn;  
+      position: sticky;
+      z-index: 1;
+
+      float: right;
+    }
+
+    .modal__header {
+      display: flex;
+      margin: $cs-spacing-20 $cs-spacing-15 0;
+     
+    
+      .modal__title {
+        @extend %cs-font-h2;  
+        margin-right: $cs-spacing-60;
+        padding-top: $cs-spacing-15;
+      }  
+      @media (min-width: $cs-screen-md) {
+        margin: $cs-spacing-40 $cs-spacing-50 0; 
+      } 
+  
+    }
+
+    .modal__container {
+      background-color: $cs-white;
+
+      .modal__header--product-detail {
+        display: flex;
+        align-items: center;
+        margin-top: $cs-spacing-60;
+        padding: 0 $cs-spacing-50;
+
+        .modal__header--variant-image {
+          max-width: 160px;
+
+          img {        
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .modal__header--variant-detail {
+          display: block;
+          margin-left: $cs-spacing-15;
+          @media (min-width: $cs-screen-md) {
+            margin-left: $cs-spacing-50; 
+          }     
+
+          .modal__header--variant-swatch {
+            position: relative;
+
+            width: 45px;
+            height: 45px;
+          
+            overflow: hidden;
+            //* hide color name text
+            font-size: 0;
+            vertical-align: middle;
+            vertical-align: text-bottom;
+
+            border: 0 !important;
+            border-radius: 50%;
+    
+            img {        
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }     
+          }
+
+          .modal__header--variant-color {
+            @extend %cs-font-p-2-bold;
+            margin-bottom: $cs-spacing-15;
+
+            color: $cs-gunmetal;
+          }       
+        }
+      }
+  
+      .modal__content {
+        display: flex;
+        flex-direction: column;
+        margin: $cs-spacing-20 $cs-spacing-15 0;
+        
+        @media (min-width: $cs-screen-md) {
+          max-width: 550px;
+          margin: $cs-spacing-60 $cs-spacing-50 0; 
+        }      
+
+        p {
+          @extend %cs-font-p-3;
+          margin-bottom: $cs-spacing-30;
+
+          font-family: $cs-font-family-paragraph;
+        }
+
+        .form-label {
+          @extend %cs-font-p-4;
+          color: $cs-monsoon !important;
+        }
+
+        .form-control {
+          @extend %cs-font-p-2;
+          border: 1px solid $cs-dark-silver;
+          border-radius: $cs-border-radius-8 !important;
+        } 
+      }
+
+      .modal__row {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $cs-screen-md) {
+          flex-direction: row;      
+        }
+
+        .mb-25 {
+          display: flex;
+
+          span {
+            p {
+              @extend %cs-font-p-2;
+  
+              a {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        .form-group {
+          position: relative;
+
+          width: 100%;
+          @media (min-width: $cs-screen-md) {
+            margin-right: $cs-spacing-20;     
+          }
+
+          .form-error--error-message {
+            position: absolute;
+            top: $cs-spacing-70;
+     
+            display: block;
+            padding-top: $cs-spacing-3;
+      
+            color: $cs-scarlet;
+      
+            transform: translate(0%, 50%);
+            transform: translate(0%, 50%);
+          }
+        }
+      }  
+    }
+
+    .modal__confirm-section {
+      display: flex;
+      margin: 0 $cs-spacing-15 0;
+    
+      @media (min-width: $cs-screen-md) {
+        margin: 0 $cs-spacing-50 0; 
+      } 
+
+      .form-checkbox-wrap {
+        display: flex;
+        align-items: start;
+        max-width: 550px;
+      
+
+        .form-checkbox {
+          border: 1px solid $cs-dark-silver;
+          border-radius: $cs-border-radius-8 !important;
+        }
+    
+        .form-checkbox-label {
+         
+          @extend %cs-font-p-2;
+          
+        }      
+        
+      }
+
+      .recaptcha {   
+        @media (min-width: $cs-screen-md) {
+          float: right;
+          margin-left: $cs-spacing-70;
+          padding-left: $cs-spacing-5;
+        }     
+      }
+    }		
+		
+    .modal__footer {
+      @media (min-width: $cs-screen-md) {
+        display: grid;
+        grid-template-areas: 'content button';
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      }
+    }
+
+    .modal__confirm-content {
+      @extend %cs-font-p-2;
+      z-index: 100;
+
+      grid-area: content;
+      max-width: 600px;
+      margin: $cs-spacing-20 $cs-spacing-15;
+      @media (min-width: $cs-screen-md) {
+        margin: $cs-spacing-20 $cs-spacing-50;
+      };
+    }  
+
+    .modal__footer > .modal__confirm-action {
+      display: inline-block;
+      width: 100%;
+
+      background-color: $cs-whitesmoke;
+
+      @media (min-width: $cs-screen-md) {
+        right: 0;
+
+        grid-row: content-start/button-end;
+        grid-column: content-start/button-end;
+    
+        padding: 0; 
+      }
+
+      .react-flex {
+        float: right;
+        margin: $cs-spacing-20 $cs-spacing-15;
+   
+        padding: 0;
+
+        background-color: $cs-whitesmoke;
+        @media (min-width: $cs-screen-md) {
+          margin: $cs-spacing-20 $cs-spacing-50;
+        }
+  
+        button {
+          width: 100%;
+          height: unset;     
+        }  
+      }
+    }
+
+  
+
+
+  }
+
+}

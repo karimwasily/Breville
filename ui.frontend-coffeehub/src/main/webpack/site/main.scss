@@ -1,0 +1,61 @@
+/* Order of import is important */
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'animations';
+@import 'fonts';
+
+@import url('~aos/dist/aos.css');
+
+/* page styles */
+@import '../components/page/scss/page';
+
+/* Component imports (order not important) */
+@import '../components/accordion/scss/accordion';
+@import '../components/breadcrumb/scss/breadcrumb';
+@import '../components/button/scss/button';
+@import '../components/cta/scss/cta';
+@import '../components/carousel/scss/carousel';
+@import '../components/contentfragment/scss/contentfragment';
+@import '../components/contentfragmentlist/scss/contentfragmentlist';
+@import '../components/download/scss/download';
+@import '../components/embed/scss/embed';
+@import '../components/experiencefragment/scss/experiencefragment';
+@import '../components/image/scss/image';
+@import '../components/container/scss/container';
+@import '../components/aos-container/scss/aos-container';
+@import '../components/languagenavigation/scss/languagenavigation';
+@import '../components/list/scss/list';
+@import '../components/navigation/scss/navigation';
+@import '../components/pdfviewer/scss/pdfviewer';
+@import '../components/progressbar/scss/progressbar';
+@import '../components/search/scss/search';
+@import '../components/separator/scss/separator';
+@import '../components/tabs/scss/tabs';
+@import '../components/teaser/scss/teaser';
+@import '../components/aos-teaser/scss/aos-teaser';
+@import '../components/text/scss/text';
+@import '../components/title/scss/title';
+@import '../components/sticky-section/scss/sticky-section';
+@import '../components/secondarynavigation/scss/secondarynavigation';
+@import '../components/layout-container/scss/layout-container';
+@import '../components/recipe/recipeoverview/scss/recipeoverview';
+@import '../components/recipe/recipematerial/scss/recipematerial';
+@import '../components/recipe/recipeinstruction/scss/recipeinstruction';
+@import '../components/recipe/recipecard/scss/recipecard';
+@import '../components/recipe/recipecarousel/scss/recipecarousel';
+@import '../components/recipe/recipecarouselmulti/scss/recipecarouselmulti';
+@import '../components/multimedia/scss/multimedia';
+@import '../components/mapbox/scss/mapbox';
+@import '../components/parallax-scroll/scss/parallax-scroll';
+@import '../components/image-map/scss/image-map';
+
+@import '../components/vue/BlogListing/scss/blog-listing';
+@import '../components/vue/Video/scss/video';
+
+/* Form */
+@import '../components/form/button/scss/button';
+@import '../components/form/container/scss/container';
+@import '../components/form/options/scss/options';
+@import '../components/form/text/scss/text';

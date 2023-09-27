@@ -1,0 +1,106 @@
+.shop-accessories-beans {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  gap: $cs-spacing-20;
+  margin: $cs-spacing-50 0;
+  @media (min-width: $cs-screen-xl) {
+    grid-template: 1fr / 1fr 1fr;
+  }
+
+  &__title {
+    @extend %cs-font-h8;
+    order: 1;
+    margin-bottom: $cs-spacing-10;
+    @media (min-width: $cs-screen-xl) {
+      margin-bottom: $cs-spacing-20;
+    }
+  }
+
+  &__link-wrapper {
+    order: 3;
+
+    text-align: center;
+
+    @media (min-width: $cs-screen-xl) {
+      order: 2;
+
+      text-align: right;
+
+    }
+  }
+
+  &__link {
+    @extend %cs-font-p-4;
+    margin: $cs-spacing-20 0;
+
+    text-decoration: underline;
+    @media (min-width: $cs-screen-xl) {
+      margin: unset;
+
+    }
+  }
+
+  .shop-accessories-beans__tile-shop {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    order: 4;
+
+    &-wrapper {
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      max-width: 90%;
+
+      white-space: normal;
+
+      &-text {
+        @extend %cs-font-h7;
+        max-width: 80%;
+        margin-bottom: $cs-spacing-20;
+
+        text-align: center;
+      }
+
+      &-button {
+        font-weight: $cs-font-weight-bold !important;
+        white-space: normal !important;
+      }
+    }
+    
+  }
+
+  .shop-accessories-beans__tile-maintenance {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    @media (min-width: $cs-screen-xl) {
+      order: 3;
+    }
+  }
+
+  .shop-accessories-beans__tile-img {
+    width: 100%;
+
+    border-radius: $cs-border-radius-8;
+  }
+
+  &__button {
+    position: absolute;
+
+    max-width: 90%;
+
+    font-weight: $cs-font-weight-bold !important;
+    white-space: normal !important;
+  } 
+}

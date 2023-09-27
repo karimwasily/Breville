@@ -1,0 +1,108 @@
+%facet-feature-container {
+  .ais-RefinementList.facet-features {
+    width: 100%;
+
+    .ais-RefinementList-list {
+      .ais-RefinementList-item {
+        @extend %cs-button-purple-large;          
+        display: inline-block;
+        border: 1px solid $cs-light-grey;
+        padding: unset;
+        margin: 0 $cs-spacing-15 $cs-spacing-15 0;
+        min-width: 20%;
+        
+
+        @media(min-width:$cs-screen-md) {
+          min-width: 45%;
+        }
+        @media(min-width:$cs-screen-lg) {
+          min-width: 40%;
+        }
+        @media(min-width:$cs-screen-xl) {
+          min-width: 30%;
+        }
+        @media(min-width:$cs-screen-xl) {
+          min-width: 25%;
+        }
+        
+        .ais-RefinementList-label {
+          cursor: pointer;
+
+          input {
+            display: none;
+         
+          }
+
+          &:hover,
+          &:focus {
+            .ais-RefinementList-labelText {
+              color: $cs-white;
+            }
+
+            .ais-RefinementList-count {                 
+              color: $cs-white !important;
+            }
+          
+          }  
+
+          .ais-RefinementList-labelText {
+            @extend %cs-font-p-4;
+            color: $cs-gunmetal;
+            padding: $cs-spacing-15 0 0 $cs-spacing-15;
+            padding: $cs-spacing-10 0 $cs-spacing-10 $cs-spacing-15;
+            display: flex;
+            flex-direction: row;         
+                   
+          }
+
+          .ais-RefinementList-count {
+            @extend %cs-font-p-4;
+            color: $cs-monsoon !important;
+            padding-right: $cs-spacing-10;
+            float: right;
+            top: 0;
+            margin: -$cs-spacing-30 0;
+
+            &::before {
+              content: '(';
+            }
+
+            &::after {
+              content: ')';
+            }
+          }
+                
+        }
+
+        &.ais-RefinementList-item--selected {
+          @extend %cs-button-purple-fill-small;
+          color: $cs-white;
+          padding: 0;
+          margin-bottom: 0 $cs-spacing-15 $cs-spacing-15 0;
+
+          &:hover,
+          &:focus {          
+            background-color: $cs-dark-purple;
+            color: $cs-white !important;          
+          } 
+
+          .ais-RefinementList-label {
+            .ais-RefinementList-count {             
+              color: $cs-white !important;
+            }
+
+            .ais-RefinementList-labelText {
+              color: $cs-white;
+            }
+          }
+         
+         
+        } 
+
+          
+      }
+    }
+
+   
+  }
+}

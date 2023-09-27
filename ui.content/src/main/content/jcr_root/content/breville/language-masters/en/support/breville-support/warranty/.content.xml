@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-18T13:11:18.064+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/breville/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Warranty"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        cq:styleIds="[1615947849628]"
+                        jcr:created="{Date}2021-03-17T16:00:16.686+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-17T16:00:35.761+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Breville Warranty"
+                        sling:resourceType="breville-brands/components/title"
+                        type="h1"/>
+                    <text
+                        jcr:created="{Date}2021-03-17T16:00:43.214+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-18T13:11:18.022+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/text"
+                        text="&lt;p>&lt;b>Breville® Limited Product Warranty&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>All Breville® products have at least a one-year limited product warranty, valid from the date of purchase. Should your Breville® product have a defect in product material or workmanship within the Warranty period, Breville® will arrange to have your original product returned to us, and either deliver an identical or comparable replacement to you, free of charge or apply such other remedy as described below. Some models may have longer warranty periods on the product or specific components so please consult the individual product warranty for complete terms and conditions.&lt;/p>&#xd;&#xa;&lt;p>&lt;i>DO NOT RETURN PRODUCT TO THE STORE*&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>Please follow these instructions, subject to the terms of the Warranty, to receive faster service:&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Write down the product model number, batch code (this is a 3 or 4 digit number) and/or serial number. These can be found on a sticker or molded into the product housing and are typically located underneath or on the back of the product&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                        </cq:responsive>
+                    </text>
+                    <image
+                        cq:styleIds="[1616034828924]"
+                        jcr:created="{Date}2021-03-17T16:02:23.014+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-18T07:52:57.057+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/image"
+                        fileReference="/content/dam/breville/global/support/Batch-code-serial-number.jpg">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                        </cq:responsive>
+                    </image>
+                    <text_1636776970
+                        cq:styleIds="[1615963096918]"
+                        jcr:created="{Date}2021-03-17T16:02:27.183+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-17T16:03:18.361+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/text"
+                        text="&lt;p>2. Have the original or a copy of the sales receipt.&lt;/p>&#xd;&#xa;&lt;p>3. Contact Breville®. Please see Breville® USA contact information below.&lt;/p>&#xd;&#xa;&lt;p>4. If the product, or one of its parts, qualifies for replacement or service under the Warranty, Breville® will send a pre-paid shipping label via email so that the product may be sent to Breville® at no cost to you. Upon receipt of the product, Breville® may ship the replacement or contact you with further information regarding repair of the product. Typical turnaround time to address Warranty claims is up to 10 business days, plus shipping, depending on your geographical location and type of damage or Warranty claim.&lt;/p>&#xd;&#xa;&lt;p>5. For additional protection of the product and to ensure secure handling while a product is being returned for any Warranty repair, Breville® recommends that you use Breville’s shipping label or a traceable, insured delivery service. Breville® is not responsible for any damage while a product is in transit.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>For the complete terms of the warranty, see the warranty PDF:&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;a title=&quot;One Year Limited Product Warranty&quot; href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf's-/1-yr-limited-product-warranty-M6%20(7).pdf&quot;>One-Year Limited Product Warranty&lt;/a>&lt;br>&#xd;&#xa;* California residents – please see paragraph entitled “Warranty Notice to California Residents Only” on page 4.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Product Specific Warranties&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>the Dual Boiler™ BES920XL and the Oracle™ BES980XL have a Limited Product Warranty:&lt;br>&#xd;&#xa;&lt;a title=&quot;BES920XL &amp;amp; BES980XL 2-Year Limited Product Warranty&quot; href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf%27s-/USA_Two_Year_BES%20920XL%20Limited_Product_Warranty_B13_M6%20(4).pdf&quot;>BES920XL &amp;amp; BES980XL 2-Year Limited Product Warranty&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>the Boss™ Blender has a 7 year Limited Product Warranty:&lt;br>&#xd;&#xa;&lt;a title=&quot;BBL910XL 7-Year Limited Product Warranty&quot; href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf%27s-/BBL910XL_US_619%20(1).pdf&quot;>BBL910XL 7-Year Limited Product Warranty&lt;/a>&lt;br>&#xd;&#xa;* California residents – please see paragraph entitled “Warranty Notice to California Residents Only” on page 4 for each of the above warranties.&lt;/p>&#xd;&#xa;&lt;p>the Big Squeeze™ has a 10 year Limited Product Warranty:&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf%27s-/BJS700_619%20(1).pdf&quot; title=&quot;BJS700SIL1BUS1 10-Year Limited Product Warranty&quot;>BJS700SIL1BUS1 10-Year Limited Product Warranty&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>the Super Q™ has a 10 year Limited Product Warranty:&lt;br>&#xd;&#xa;&lt;a title=&quot;BBL920 10-Year Limited Product Warranty&quot; href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf%27s-/BBL920%20USA_619%20(1).pdf&quot;>BBL920 10-Year Limited Product Warranty&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>the Q™ has a 7 year Limited Product Warranty:&lt;br>&#xd;&#xa;&lt;a title=&quot;BBL820SHY1BUS1 7-Year Limited Product Warranty&quot; href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf%27s-/BBL820_US_617M.pdf&quot;>BBL820SHY1BUS1 7-Year Limited Product Warranty&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Products with additional supplemental warranties&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>the Juice Fountain™ Crush BJS600XL, the Sous Chef® 12 BFP660SIL and the Sous Chef® 12 Plus BFP680BAL Warranties include a Motor Warranty:&lt;br>&#xd;&#xa;&lt;a title=&quot;BJS600-BFP660SIL-BFP680BAL 1-Year Limited Product &amp;amp; 10-Year Induction Motor Warranty&quot; href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf%27s-/BJS600_US_617M.pdf&quot;>BJS600-BFP660SIL-BFP680BAL 1-Year Limited Product &amp;amp; 10-Year Induction Motor Warranty&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>the Breville® Sous Chef® BFP800XL Warranty includes a Motor Warranty:&lt;br>&#xd;&#xa;&lt;a title=&quot;BFP800XL 1-Year Limited Product &amp;amp; 25-Year Induction Motor Warranty&quot; href=&quot;https://www.breville.com/content/dam/breville/us/assets/miscellaneous/pdfs/warranty-pdf%27s-/BFP800_US_619%20(1).pdf&quot;>BFP800XL 1-Year Limited Product &amp;amp; 25-Year Induction Motor Warranty&lt;/a>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                        </cq:responsive>
+                    </text_1636776970>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

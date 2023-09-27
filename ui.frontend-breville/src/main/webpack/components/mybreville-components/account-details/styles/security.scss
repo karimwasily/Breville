@@ -1,0 +1,115 @@
+.cmp-mybreville__security {
+  .cmp-mybreville__link {
+    @extend %cs-font-h10;
+    font-weight: bold;
+  }
+  
+  .cmp-mybreville__links {
+    margin-top: $cs-spacing-20;
+
+    @media (min-width: $screen-sm) {
+      margin-top: $cs-spacing-25;
+    }
+
+    .cmp-mybreville__linkbox {
+      ~ .cmp-mybreville__linkbox {
+        margin-top: $cs-spacing-10;
+      }
+    }
+
+    .cmp-mybreville__link {
+      @extend %cs-link-underline;
+      @extend %cs-font-p-4;
+      display: inline-block;
+      margin-bottom: $cs-spacing-10;
+
+      cursor: pointer;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.remove-account__modal-link {
+  cursor: pointer;
+}
+
+.remove-account__modal {
+  overflow-y: auto;
+}
+
+.remove-account__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: Rgba(0, 0, 0, 0.5);
+
+  @media (min-width: $cs-screen-md) {
+    justify-content: center;
+  }
+}
+
+.remove-account__container {
+  position: relative;
+
+  padding: $cs-spacing-50 $cs-spacing-50 $cs-spacing-50 $cs-spacing-30;
+
+  background-color: $cs-white;
+
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-50 $cs-spacing-70 $cs-spacing-50 $cs-spacing-50;
+  }
+  
+  .remove-account__header {
+    margin-bottom: $cs-spacing-20;
+
+    .remove-account__title {
+      @extend %cs-font-h4;
+    }
+
+    .remove-account__close-icon {
+      position: absolute;
+      top: $cs-spacing-20;
+      right: $cs-spacing-20;
+      @media (min-width: $cs-screen-md) {
+        top: $cs-spacing-40;
+        right: $cs-spacing-40;
+      }
+    }
+  }
+
+  .remove-account__content {
+    @extend %cs-font-p-2;
+
+    .remove-account__actions {
+      margin-top: $cs-spacing-20;
+  
+      p {
+        display: flex;
+        align-items: center;
+        margin-top: $cs-spacing-15;
+        margin-bottom: 0;
+      }
+    }
+
+    .remove-account__icon {
+      margin-right: $cs-spacing-10;
+    }
+
+    .remove-account__email {
+      @extend %cs-link-underline;
+    }
+  }
+}
+

@@ -1,0 +1,130 @@
+.cmp-recipematerial {
+  display: block;
+  overflow: visible;
+  margin: 0 0 $spacing-lg 0;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    margin: rem(70px) 0;
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+
+    @media (min-width: $screen-md) {
+      flex: 2;
+      margin: 0 $spacing-xxl $spacing-md 0;
+    }
+  }
+
+  &__material {
+    @extend %scrollbar-styling;
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 0 0 $spacing-md 0;
+
+    .cmp-recipematerial__equipment,
+    .cmp-recipematerial__ingredient {
+      position: relative;
+      min-width: rem(200px);
+      width: rem(200px);
+      margin-right: $spacing-md;
+      border: solid 1px $espresso;
+      padding: $spacing-md $spacing-ml $spacing-lg $spacing-ml;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        background-color: $white;
+        transition: $transition-speed;
+      }
+
+      .cmp-recipematerial__image {
+        height: rem(100px);
+        width: fit-content;
+        margin-bottom: $spacing-ml;
+      }
+
+      .cmp-recipematerial__name-text,
+      .cmp-recipematerial__name-text-after {
+        font-size: $font-size-largetext;
+        display: inline;
+      }
+
+      .cmp-recipematerial__tooltip {
+        position: relative;
+        font-size: $font-size-largetext;
+        color: $aubergine;
+        display: inline-block;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+
+        &-content {
+          display: none;
+        }
+
+        &-icon {
+          @include question-icon;
+          display: inline-block;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .cmp-recipematerial__subtext {
+        font-size: $font-size-largetext;
+      }
+
+      .cmp-recipematerial__link {
+        margin-top: auto;
+        color: $aubergine;
+        font-size: $font-size-largetext;
+
+        &:hover {
+          text-decoration: underline;
+          transition: $transition-speed;
+        }
+      }
+    }
+    @media (min-width: $screen-md) {
+      flex: 10;
+      display: flex;
+    }
+  }
+}
+
+.tippy-box {
+  transition-duration: 0ms !important;
+
+  .tippy-content {
+    transition-duration: 0ms !important;
+
+    .cmp-recipematerial__tooltip-content {
+      position: relative;
+      padding: $spacing-md $spacing-lg $spacing-lg $spacing-lg;
+      background-color: white;
+      box-shadow: $box-shadow-tooltip;
+
+      &-header {
+        font-size: $font-size-h1-subtext;
+      }
+    }
+  }
+
+  .tippy-arrow {
+    width: 0;
+    height: 0;
+    border-left: rem(15px) solid transparent;
+    border-right: rem(15px) solid transparent;
+    border-top: rem(10px) solid white;
+    background-color: transparent;
+  }
+}

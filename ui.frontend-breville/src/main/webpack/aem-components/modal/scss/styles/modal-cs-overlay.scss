@@ -1,0 +1,63 @@
+.cmp-modal--cs-overlay {
+  .cmp-modal__wrapper {
+    .cmp-modal {
+      display: none;
+    }
+      
+    .cmp-modal--open {
+      display: block;
+      overflow-y: auto;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: unset;
+
+      @media (min-width: $screen-md) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: $cs-max-width;
+        height: fit-content;
+      }
+
+      .cmp-modal__close-button {
+        height: 1.5rem;
+        width: 1.5rem;
+        top: 1.25rem;
+        right: 1.25rem;
+
+        @media (min-width: $screen-md) {
+          top: 2.5rem;
+          right: 2.5rem;
+        }
+
+        &:focus {
+          outline: 1px dotted $cs-gunmetal;
+        }
+      }
+  
+      > .cmp-container {
+        display: block;
+        min-height: 100%;
+        min-width: 100%;
+  
+        @media (min-width: $screen-md) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .cmp-modal__wrapper--open {
+    .cmp-modal__backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $background-overlay;
+    }
+  }
+}

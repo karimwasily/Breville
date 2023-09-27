@@ -1,0 +1,122 @@
+<!--/*
+    Copyright 2017 Adobe Systems Incorporated
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&amp;display=swap" rel="stylesheet">
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='breville-brands.base'}">
+</sly>
+
+<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
+
+
+<sly data-sly-test="${inheritedPageProperties['cq:conf'] == '/conf/beanz'}">
+	<sly data-sly-use.multiRegion="com.breville.aem.brands.core.models.MultiRegionModel" />
+    <sly data-sly-test="${multiRegion.brand == 'Beanz'}">
+        <div class="awsAPIconfig" data-aws-api-config='{"awsApiUrl":"${multiRegion.awsApiURL}","projectKey":"${multiRegion.ctp_project_key}", "clientSecret":"${multiRegion.ctp_client_secret}", "clientId": "${multiRegion.ctp_client_id}","authUrl": "${multiRegion.ctp_auth_url}","apiUrl": "${multiRegion.ctp_api_url}","scopes": "${multiRegion.ctp_scopes}","cartUrl": "${multiRegion.cart_url}","shippingMethodId": "${multiRegion.ctp_shippment_method_id}","currencySymbol": "${multiRegion.currencySymbol}","grindId": "${multiRegion.ctp_grind_id}","supplyChannelId": "${multiRegion.ctp_supply_channel_id}"}'></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=${multiRegion.googlePredictiveAddress}&callback=initAutocomplete&libraries=places&v=weekly" async></script>
+    </sly>
+    <!-- Analytics Digital Data Setup -->
+    <sly data-sly-use.analytics="com.breville.aem.brands.core.models.AnalyticsModel">
+        <script type="text/javascript">
+           digitalData = window.digitalData || {};
+           digitalData = JSON.parse("${analytics.genericDataJson @context='scriptString'}");
+           analyticsFlag = true;
+        </script>
+    </sly>
+   <sly data-sly-resource="${'metaData' @ resourceType='/apps/breville-brands/components/beanz/metaData'}"/>   
+</sly>
+
+<sly data-sly-test="${inheritedPageProperties['cq:conf'] == '/conf/breville'}">
+	<sly data-sly-use.analytics="com.breville.aem.brands.core.models.BrevilleAnalyticsModel">
+        <script type="text/javascript">
+            digitalData = window.digitalData || {};
+            digitalData = JSON.parse("${analytics.genericDataJson @context='scriptString'}");
+            analyticsFlag = true;
+        </script>
+    </sly>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <sly data-sly-use.brevilleMultiConfig="com.breville.aem.brands.core.models.BrevilleMultiRegionConfigurationsModel">
+        <sly data-sly-test="${pageProperties.mulberry}">
+            <script type="text/javascript" src="${brevilleMultiConfig.mulberryJsUrl}"></script>
+        </sly>
+        <sly data-sly-test="${brevilleMultiConfig.isAffirmEnabled == 'true'}">
+            <!-- Affirm -->
+            <script>
+                _affirm_config = {
+                public_api_key:  "${brevilleMultiConfig.affirmPublicKey @context='html'}",
+                script:          "${brevilleMultiConfig.affirmScriptUrl @context='html'}",
+                session_id:      ""
+                };
+                (function(l,g,m,e,a,f,b){var d,c=l[m]||{},h=document.createElement(f),n=document.getElementsByTagName(f)[0],k=function(a,b,c){return function(){a[b]._.push([c,arguments])}};c[e]=k(c,e,"set");d=c[e];c[a]={};c[a]._=[];d._=[];c[a][b]=k(c,a,b);a=0;for(b="set add save post open empty reset on off trigger ready setProduct".split(" ");a<b.length;a++)d[b[a]]=k(c,e,b[a]);a=0;for(b=["get","token","url","items"];a<b.length;a++)d[b[a]]=function(){};h.async=!0;h.src=g[f];n.parentNode.insertBefore(h,n);delete g[f];d(g);l[m]=c})(window,_affirm_config,"affirm","checkout","ui","script","ready");
+            </script>
+            <!-- End Affirm -->
+        </sly>
+    </sly>
+</sly>
+
+<sly data-sly-test="${inheritedPageProperties['cq:conf'] == '/conf/coffee-hub'}">
+	<sly data-sly-use.analytics="com.breville.aem.brands.core.models.CoffeeHubAnalyticsModel">
+        <script type="text/javascript">
+            digitalData = window.digitalData || {};
+            digitalData = JSON.parse("${analytics.genericDataJson @context='scriptString'}");
+            analyticsFlag = true;
+        </script>
+    </sly>
+</sly>
+
+<script>
+    window.addEventListener('load', (event) => {
+      analyticsFlag = true;     
+      var historyTraversal = (typeof event != "undefined" && event.persisted) || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+      if (historyTraversal) {
+          window.location.reload();
+      } else if(analyticsFlag){
+        (window.observerService = window.observerService || []).push(["notify", 'pageLoadSuccess']);
+      }
+    });
+  </script>
+
+<div id='react-root'></div>
+<!--Loading Icon-->
+<sly data-sly-test="${inheritedPageProperties['cq:conf'] == '/conf/beanz'}">
+    <div class="spinner__dialog hidden">
+        <div class="dialog__overlay"></div>
+        <div role="dialog" class="dialog__content_spinner" aria-label="dialog spinner">
+            <div role="document">
+                <div>
+                    <div class="lds-spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <div id="spinnerTitle" class="spinnerTitle"></div>
+                    <div class="modal-body js-modal-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+<!-- Loading Icon-->

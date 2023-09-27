@@ -1,0 +1,38 @@
+.cmp-container--background-half-half {
+  .cmp-container {
+    position: relative;
+
+    // next nested element to be layered on top
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    // create half height bg relative to container
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      height: 50%;
+      width: 100%;
+    }
+
+    // top
+    &::before {
+      top: 0;
+      left: 0;
+      background-color: $espresso;
+      @media (min-width: $screen-md) {
+        background-color: $white;
+      }
+    }
+
+    // bottom
+    &::after {
+      bottom: 0;
+      left: 0;
+      background-color: $creme;
+    }
+  }
+}

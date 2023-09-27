@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+.cmp-container--cs-video-annotation {
+  .cmp-container {
+    padding: math.div($cs-spacing-70, 2) $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      padding: math.div($cs-spacing-90, 2) $cs-spacing-35;
+    }
+
+    > .teaser {
+      grid-row: 2;
+      margin-top: $cs-spacing-35;
+      @media (min-width: $cs-screen-md) {
+        grid-row: auto;
+        margin: auto;
+      }
+    }
+  }
+}

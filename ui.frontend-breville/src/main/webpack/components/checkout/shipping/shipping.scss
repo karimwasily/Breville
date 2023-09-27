@@ -1,0 +1,82 @@
+
+.shipping__form {
+  margin-top: $cs-spacing-25;
+}
+
+.shipping__address {
+  @extend %cs-font-h8;
+  text-align: left;
+  color: $cs-color-primary;
+  margin: $cs-spacing-10 0 $cs-spacing-30;
+
+  @media (min-width: $cs-screen-xl) {
+    margin: $cs-spacing-15 0 $cs-spacing-30;
+  }
+}
+
+.shipping__grid {
+  padding: 0;
+}
+
+.shippingAuth__address-forms {
+  .radio-btn-type-2 {
+    &--checked {
+      padding: $cs-spacing-35 $cs-spacing-25;
+
+      .shipping__grid {
+        margin-bottom: 0;
+
+        .row {
+          &:last-child {
+            .form-group {
+              margin-bottom: 0;
+
+              .form-error--error-message {
+                margin: -$cs-spacing-15 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.shipping__shipping {
+  margin-top: $cs-spacing-60;
+  margin-bottom: $cs-spacing-50;
+}
+
+.shipping__shipping-title {
+  @extend %cs-font-h8;
+  text-align: left;
+  color: $cs-color-primary;
+}
+
+.shipping-valid {
+  display: flex;
+  margin-top: $cs-spacing-30;
+  margin-bottom: $cs-spacing-70;
+}
+
+.shipping-valid__card {
+  min-width: 50%;
+  padding-right: $cs-spacing-60;
+}
+
+.shipping-valid__title {
+  @extend %cs-font-h11;
+  font-weight: $cs-font-weight-bold;
+  text-align: left;
+  color: $cs-color-primary;
+  margin-bottom: $cs-spacing-15;
+}
+
+.shipping-valid__txt {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  text-align: left;
+  color: $cs-color-primary;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}

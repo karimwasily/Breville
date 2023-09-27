@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!--/* fonts to match designs */-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="/etc.clientlibs/breville-brands/clientlibs/clientlib-coffeehub-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/breville-brands/clientlibs/clientlib-coffeehub-dependencies.css" type="text/css">
+    <link rel="stylesheet" href="/etc.clientlibs/breville-brands/clientlibs/clientlib-dependencies.css" type="text/css">
+    <link rel="stylesheet" href="/etc.clientlibs/breville-brands/clientlibs/clientlib-coffeehub-site.css" type="text/css">
+  </head>
+  <body>
+    <h2>Blog Listing</h2>
+    <div data-vue-cmp="v-blog-listing">
+      <script type="application/json">
+        {
+          "categories": [
+            {
+              "tag": "*",
+              "value": "All"
+            },
+            {
+              "tag": "history",
+              "value": "History"
+            },
+            {
+              "tag": "regions",
+              "value": "Regions"
+            },
+            {
+              "tag": "culture",
+              "value": "Culture"
+            },
+            {
+              "tag": "sustainability",
+              "value": "Sustainability"
+            },
+            {
+              "tag": "environmental",
+              "value": "Environmental"
+            },
+            {
+              "tag": "beans",
+              "value": "Beans"
+            },
+            {
+              "tag": "roasting",
+              "value": "Roasting"
+            }
+          ],
+          "loadMoreButton": "More Articles",
+          "searchUrl": "/api/articles",
+          "noFullRows": 2,
+          "noHalfRows": 1,
+          "noThirdsRows": 1,
+          "showCategoryNav": true
+        }
+      </script>
+    </div>
+
+    <h1>v-teaser Example</h1>
+    <div data-vue-cmp="v-teaser" class="vue-teaser-app">
+      <script type="application/json">
+        {
+          "img": "https://www.goodfood.com.au/content/dam/images/h/0/x/h/4/u/image.related.articleLeadwide.620x349.h0y074.png/1522113238751.jpg",
+          "title": "Hello  Barista!"
+        }
+      </script>
+    </div>
+
+    <div data-vue-cmp="v-teaser">
+      <script type="application/json">
+        {
+          "img": "https://www.goodfood.com.au/content/dam/images/h/0/x/h/4/u/image.related.articleLeadwide.620x349.h0y074.png/1522113238751.jpg",
+          "title": "Hello  Barista!"
+        }
+      </script>
+    </div>
+
+    <div data-vue-cmp="v-button">
+      <div data-slot-name="default" style="display: none;">
+        <b>What is The meaning of this</b>
+      </div>
+    </div>
+
+  <div data-vue-cmp="v-video"
+    data-video-id="A_af256mnTE"
+    data-overlay-image="https://www.breville.com/content/dam/breville/cmh/backgrounds/bg-home.jpg"
+    data-image-alt-text="Here's alternative text for image"
+    data-title="say hi to my little friend"
+    data-start-time="40"
+    data-stop-time="120"
+    data-show-timestamp=true
+    data-chapters='[{"chapterDescription":"Chapter 1","chapterTime":62},{"chapterDescription":"Chapter 2","chapterTime":2}]'
+  >
+  </div>
+  </body>
+</html>

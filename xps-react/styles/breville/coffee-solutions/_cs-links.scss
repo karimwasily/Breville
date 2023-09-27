@@ -1,0 +1,23 @@
+////////////////////
+// LINKS
+////////////////////
+
+%cs-link-bold {
+  @include cs-link($color: $cs-color-primary, $font-weight: $cs-font-weight-bold, $text-decoration: none);
+}
+
+%cs-link-bold-right-arrow {
+  @include cs-link($color: $cs-color-primary, $font-weight: $cs-font-weight-bold, $text-decoration: none, $arrow-direction: 'right');
+}
+
+%cs-link-bold-left-arrow {
+  @include cs-link($color: $cs-color-primary, $font-weight: $cs-font-weight-bold, $text-decoration: none, $arrow-direction: 'left');
+}
+
+%cs-link-underline {
+  @include cs-link($color: $cs-color-primary, $font-weight: $cs-font-weight-normal, $text-decoration: underline);
+}
+
+%cs-link-bold-underline {
+  @include cs-link($color: $cs-color-primary, $font-weight: $cs-font-weight-bold, $text-decoration: underline);
+}

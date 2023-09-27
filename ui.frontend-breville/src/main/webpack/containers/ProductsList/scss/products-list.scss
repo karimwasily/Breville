@@ -1,0 +1,33 @@
+.products-list {
+  @include column-overflow-scroll();
+
+  .item-title {
+    @extend %cs-font-h8;
+    text-align: center;
+    margin-bottom: $cs-spacing-25;
+
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-30; 
+    }
+  }
+
+  // * additional scenarios concerning particular nested children
+  .producttile {
+    .cmp-producttile__price {
+      @extend %cs-font-p-2-bold;
+    }
+
+    .cmp-producttile__title {
+      // typography placeholder does not have enought specifity so we need to directly apply it
+      // @extend %cs-font-h12-medium;
+      font-family: $cs-font-family !important;
+      font-size: $cs-font-size-h12-mobile !important;
+      line-height: $cs-line-height-h12-mobile !important;
+  
+      @media (min-width: $cs-screen-md) {
+        font-size: $cs-font-size-h12 !important;
+        line-height: $cs-line-height-h12 !important;
+      }
+    }
+  }
+}

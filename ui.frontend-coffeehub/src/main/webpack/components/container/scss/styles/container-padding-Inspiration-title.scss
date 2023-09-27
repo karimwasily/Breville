@@ -1,0 +1,10 @@
+.cmp-container--padding-inspiration-title {
+  > .cmp-container {
+    padding: 0 $spacing-md $spacing-sm $spacing-md;
+      
+    @media (min-width: $screen-md) {
+      margin-top: -$spacing-md;
+      padding: 0 $spacing-xxl $spacing-md $spacing-xxl;
+    }
+  }
+}

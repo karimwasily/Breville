@@ -1,0 +1,42 @@
+.my-product-support {
+  margin: $cs-spacing-30 0;
+  padding: $cs-spacing-25 $cs-spacing-25 $cs-spacing-30;
+
+  background-color: $white;
+  border-radius: $cs-border-radius-8;
+
+  &__title {
+    @extend %cs-font-p-bold;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-row-gap: $cs-spacing-20;
+    grid-column-gap: $cs-spacing-10;
+    grid-template-columns: auto auto;
+    justify-items: start;
+
+    @media (min-width: $cs-screen-md) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: $cs-spacing-30;
+      justify-items: center;
+    }
+  }
+
+  &__support-hub,
+  &__instruction-manual,
+  &__order-parts,
+  &__bilt-app {
+    @extend %cs-font-p-5;
+    display: flex;
+    flex-direction: row;
+    gap: $cs-spacing-10;
+    align-items: center;
+
+    font-weight: $cs-font-weight-bold;
+    text-align: center;
+    @media (min-width: $cs-screen-md) {
+      flex-direction: column; 
+    }
+  }
+}

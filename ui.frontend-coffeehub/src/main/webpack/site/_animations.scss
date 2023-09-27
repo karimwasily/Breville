@@ -1,0 +1,44 @@
+////////////////////
+// ANIMATION VARIABLES
+////////////////////
+
+$transition-speed: 0.3s;
+// designer requests slow zoom motion
+$transition-speed-tile-zoom: 0.75s;
+$transition-ease: ease-in-out;
+$animation-speed-recipe-carousel: 1.2s;
+
+////////////////////
+// ANIMATION KEYFRAMES
+////////////////////
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+//AOS Line animation
+[data-aos='line-animation'] {
+  opacity: 0;
+  width: 0;
+  transition-property: opacity, width;
+
+  &.aos-animate {
+    opacity: 1;
+    width: 100%;
+  }
+}

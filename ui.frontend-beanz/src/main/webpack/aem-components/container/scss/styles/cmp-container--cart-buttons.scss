@@ -1,0 +1,144 @@
+.cmp-container--cart-buttons {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  .cmp-title {
+    text-align: center;
+
+    .cmp-title__text {
+      font-weight: $font-weight-demi-bold !important;
+      color: $jaguar;
+    }
+  }
+
+  #container_cart--continue_login_buttons {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint-up (md) {
+      display: flex;
+    }
+
+    @include breakpoint-up (md) {
+      margin-top: 0;
+    }
+  }
+
+  #container_cart--create-account-btn {
+    margin: 0 $beanz-spacing-20;
+
+    .cmp-text {
+      font-size: $font-size-medium;
+      margin: $spacing-xs auto;
+
+      @include breakpoint-up (sm) {
+        margin: $spacing-md auto;
+      }
+    }
+
+    .cmp-button {
+      display: flex;
+      margin: auto;
+      padding: 0;
+    }
+  }
+
+  .cmp-button--background-white {
+    .cmp-button__text {
+      display: flex;
+    }
+  }
+
+  .cmp-button--background-blue {
+    .cmp-button {
+      cursor: pointer;
+      border: 1px solid $oyster-bay;
+      margin: 0 $spacing-md;
+      padding: 0;
+      
+      .cmp-button__text {
+        border: 1px solid $oyster-bay;
+      }
+    }
+
+    .checkout-btn {
+      .cmp-button__text {
+        border: 1px solid $oyster-bay;
+        padding: $spacing-xs 0;
+        max-width: initial;
+        @include breakpoint-up (sm) {
+          padding: $spacing-sm 0;
+        }
+      }
+    }
+  }
+
+  #container_cart--login-btn,
+  .container_cart--create-account-btn {
+    .cmp-text {
+      font-size: $font-size-medium;
+      margin: $spacing-xs auto;
+
+      @include breakpoint-up (sm) {
+        margin: $spacing-md auto;
+      }
+    }
+
+    margin: 0 $beanz-spacing-20;
+  }
+}
+
+.checkout-btn {
+  margin: 0 $beanz-spacing-20;
+}
+
+.button {
+  &.cmp-button--background-blue {
+    width: 100%;
+  }
+}
+
+#container_cart--continue_login_buttons,
+.cmp-button--background-blue {
+  .cmp-button__text {
+    padding: $spacing-xs 0;
+    max-width: initial;
+
+    @include breakpoint-up (sm) {
+      padding: $spacing-sm 0;
+    }
+  }
+
+  .cmp-text {
+    p {
+      @extend %font-p;
+      font-size: $font-size-xsmall;
+
+      @include breakpoint-up (sm) {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+}
+
+#cart-page-container{
+  .title{
+    padding-bottom: $spacing-md;
+    @include breakpoint-up (md) {
+      padding-top: $spacing-xl;
+    }
+  }
+  #to_continue{
+    .cmp-title__text{
+      color: $font-brown;
+      letter-spacing: normal;
+      font-family: $font-family-secondary;
+      font-size: $font-size-base-title;
+      @include breakpoint-down (sm) {
+        font-size: $font-size-large;
+      }
+    }
+  }
+}

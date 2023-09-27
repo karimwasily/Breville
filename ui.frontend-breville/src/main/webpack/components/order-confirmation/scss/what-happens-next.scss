@@ -1,0 +1,41 @@
+.cmp-what-happens-next {
+  &__title {
+    @extend %cs-font-h14;
+    margin-bottom: $cs-spacing-30;
+    text-align: center;
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-35;
+      text-align: left;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    border-radius: $cs-spacing-10;
+    background-color: $cs-color-gray-60;
+    padding: $cs-spacing-30 $cs-spacing-25 $cs-spacing-20 $cs-spacing-25;
+    text-align: left;
+
+    svg {
+      width: 29px;
+    }
+  }
+
+  &__subtitle {
+    @extend %cs-font-p-2-bold;
+    margin: 0;
+  }
+
+  &__description {
+    @extend %cs-font-p-4;
+  }
+  
+  &__link {
+    text-decoration: underline;
+  }
+
+  svg {
+    flex: 0 0 auto;
+    margin-top: $cs-spacing-5;
+  }
+}

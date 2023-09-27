@@ -1,0 +1,16 @@
+.coffee-conf-layout__container {
+  // main body area
+  .coffee-conf-layout__content {
+    max-width: $cs-max-width-bundle-config;
+    margin: auto $cs-spacing-15;
+    border: solid 1px $cs-color-gray-40;
+    border-radius: $cs-border-radius-16;
+    overflow: hidden;
+
+    @media (min-width: $cs-screen-xl) {
+      margin: auto;
+    }
+
+
+  }
+}

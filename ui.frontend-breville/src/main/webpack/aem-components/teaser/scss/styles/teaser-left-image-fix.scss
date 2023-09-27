@@ -1,0 +1,9 @@
+@import 'teaser-image-base-fix';
+
+.cmp-teaser--left-image-fix {
+  @extend %teaser-image-fix;
+  margin: $spacing-sm 0;
+  @media (min-width: $screen-md) {
+    margin: $spacing-lg-2 0;
+  }
+}

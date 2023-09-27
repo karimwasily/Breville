@@ -1,0 +1,148 @@
+.cmp-side-navigation--dashbaord {
+  background: $cs-whitesmoke;
+  position: relative;
+
+  @media (min-width: $screen-md) {
+    background: $cs-white;
+    min-height: 500px;
+    position: sticky;
+    top: 0; 
+  }
+
+  .cmp-side-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--background);
+    // * avoid seeing scrollbars in firefox
+    overflow: hidden;
+    overflow-x: auto;
+       
+    &__group {
+      --scrollbar-invisible-height: 15px;
+      --spacing: #{$spacing-md};
+  
+      @extend %hide-scrollbar;
+      @include flex-gap($spacing-lg);
+      display: flex;
+      white-space: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      z-index: 99;
+      overflow-x: scroll;
+      padding-left: var(--spacing);
+      padding-top: var(--spacing);
+   
+      @media (min-width: $screen-md) {
+        @include flex-gap($spacing-md);
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: $spacing-md 0;
+        overflow-x: unset;
+        padding-top: $cs-spacing-35;
+        padding-left: $cs-spacing-35;
+      }
+  
+      // RIGHT LINEAR GRADIENT OVERLAY
+      &::after {
+        content: '';
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        // * for safari compatability when we go to 'transparent' it needs to be an exact match of previous color with 0 alpha
+        // https://css-tricks.com/thing-know-gradients-transparent-black/
+        background: linear-gradient(to left, $white 0%, rgba($white, 0) 40%);
+        @media (min-width: $screen-md) {
+          display: none;
+        }
+      }
+  
+      &__item {
+        a {
+          @extend %cs-font-p-2;
+          font-size: $cs-font-size-medium;
+          text-decoration: none;
+          cursor: pointer;
+          @media (min-width: $screen-md) {
+            font-size: $cs-font-size-base;
+          }
+        }
+        // * provide right space on the last item so it can be seen due to the gradient overlay
+        &:last-child {
+          padding-right: $spacing-xxl;
+          @media (min-width: $screen-md) {
+            padding-right: 0;
+          }
+        }
+      }
+      @media (min-width: $screen-md) {
+        &__item:hover::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          border-left: 2px solid;
+          height: 11px;
+          margin-top: $cs-spacing-10;
+        }
+
+        &__item:hover {
+          a {
+            font-weight: bold;
+          }
+        }
+      }
+
+      &__item-active {
+        @extend %cs-font-p-2;
+        font-size: $cs-font-size-medium;
+        font-weight: bold;
+        color: $cs-dark-purple;
+        outline: none;
+        position: relative;
+        @media (min-width: $screen-md) {
+          position: unset;
+          font-size: $cs-font-size-base;
+        }        
+      }
+      
+      &__item-active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 3px solid black;
+        margin-bottom: -$cs-spacing-20;
+        width: 100%;
+  
+        @media (min-width: $screen-md) {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: unset;
+          border-left: 2px solid;
+          height: 11px;
+          width: unset;
+          margin-top: $cs-spacing-10;
+          border-bottom: unset;        
+        }
+      }
+    }
+
+    .cmp-side-navigation__group-left-overlay {
+      @extend .cmp-side-navigation__group;
+    }
+
+    .cmp-side-navigation__group-left-overlay::after {
+      background: linear-gradient(135deg, $cs-white 0, hsla(0, 0%, 100%, 0) 40%) !important;  
+    } 
+  } 
+}

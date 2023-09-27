@@ -1,0 +1,35 @@
+<sly data-sly-use.model="com.breville.aem.brands.core.models.ImageMap" />
+
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${!model.isEmpty}" class="cmp-focuspoint">
+    <div class="cmp-focuspoint-desktop">
+        <div class="cmp-focuspoint-container">
+            <div class="cmp-focuspoint__image-wrapper">
+                <img class="cmp-focuspoint__image" src="${model.fileReferenceDesktop}"
+                    alt="${model.imageAltTextDesktop}">
+                <sly data-sly-list=${model.buttonListDesktop}>
+                    <button data-modal-url="${item.modalUrl}" class="cmp-focuspoint__button" type="button" aria-label="${item.accessibilityLabel}"
+                        style="left: ${item.coordinateX @context='styleString'}%; top: ${item.coordinateY @context='styleString'}%;">
+                        <span class="cmp-focuspoint__icon-outter-cirle">Modal</span>
+                    </button>
+                </sly>
+                </img>
+            </div>
+        </div>
+    </div>
+    <div class="cmp-focuspoint-mobile">
+        <div class="cmp-focuspoint-container">
+            <div class="cmp-focuspoint__image-wrapper">
+                <img class="cmp-focuspoint__image" src="${model.fileReferenceMobile}" alt="${model.imageAltTextMobile}">
+                <sly data-sly-list=${model.buttonListMobile}>
+                    <button data-modal-url="${item.modalUrl}" class="cmp-focuspoint__button" type="button" aria-label="${item.accessibilityLabel}"
+                        style="left: ${item.coordinateX @context='styleString'}%; top: ${item.coordinateY @context='styleString'}%;">
+                        <span class="cmp-focuspoint__icon-outter-cirle">Modal</span>
+                    </button>
+                </sly>
+                </img>
+            </div>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

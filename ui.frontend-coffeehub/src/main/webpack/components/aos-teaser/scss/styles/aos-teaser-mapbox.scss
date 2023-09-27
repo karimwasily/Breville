@@ -1,0 +1,126 @@
+.cmp-aosteaser--mapbox {
+  .cmp-aosteaser {
+    .cmp-teaser {
+      color: $black;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__content {
+        width: 100%;
+        padding-top: $spacing-xl;
+        padding-right: $spacing-md;
+        padding-bottom: 0;
+        padding-left: $spacing-md;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $screen-md) {
+          width: 80%;
+        } 
+
+        @media (min-width: $screen-xl) {
+          width: 65%;
+        } 
+
+        @media (min-width: $screen-xxxl) {
+          width: 53%;
+        } 
+
+        .cmp-teaser__pretitle {
+          @extend %font-h5;
+        }
+
+        hr {
+          margin: $spacing-md 0;
+          border: 0;
+          border-top: 1px solid $black;
+          z-index: 1;
+        }
+
+        .cmp-teaser__title {
+          margin-top: $spacing-xs;
+        }
+
+        .cmp-teaser__description {
+          margin-top: $spacing-md;
+
+          @media (min-width: $screen-md) {
+            margin-bottom: 0;
+          }
+          @media (min-width: $screen-lg) {
+            margin-top: $spacing-lg;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.cmp-aoscontainer--mapbox {
+  .cmp-container {
+    color: $white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .cmp-cta--label {
+      width: 100%;
+      padding: $spacing-xl $spacing-md $spacing-xxl $spacing-md;
+      flex-direction: column;
+
+      @media (min-width: $screen-md) {
+        width: 80%;
+        padding-bottom: $spacing-tw-xxs;
+      } 
+
+      @media (min-width: $screen-xl) {
+        width: 65%;
+      } 
+
+      @media (min-width: $screen-xxxl) {
+        width: 53%;
+      } 
+
+      .cmp-cta {
+        width: 100%;
+        transition: $transition-speed-tile-zoom;
+        @media (min-width: $screen-md) {
+          max-width: 340px;
+        }
+    
+        .cmp-cta__text {
+          @extend %font-cta-body;
+
+        
+          // ICON
+          &::after {
+            @include arrow-right-icon($color: $black);
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            top: 50%;
+            right: $spacing-md;
+            transform: translateY(-50%);
+            z-index: 1;
+            transition: transform $transition-speed ease-in-out;
+          }
+    
+        }
+    
+        &:hover,
+        &:focus {
+          background-color: $white;
+    
+          .cmp-cta__text {
+            &::after {
+              transform: translate3d(5px, -50%, 0);
+            }        
+          }
+        }
+      }
+    }
+  }
+}

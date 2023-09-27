@@ -1,0 +1,26 @@
+// shared-ui scss registry
+
+@import './AlgoliaCustomWidgets/';
+@import './Flex/scss/flex';
+@import './ProductTile/scss/producttile';
+@import './CoffeeProductTile';
+@import './Selector/index';
+@import './product-promo-card/index'; //Unconfirmed
+@import './Hr/index';
+@import './ProductWarrantyCard/index';
+@import './HelpfulAccessCard/index';
+@import './ProductDetailCard/index';
+@import './SelectWrapper/scss/selectwrapper';
+@import './CloseIconButton/index';
+@import './variant-picker';
+@import './button/button';
+@import './dropdown-menu';
+@import './Dropdown';
+@import './BrandCarousel';
+@import './Tooltip';
+@import './VendorCarousel/';
+@import './Tooltip';
+@import './HorizontalScrollList';
+
+// third party libraries
+@import url('~@splidejs/splide/dist/css/themes/splide-default.min.css');

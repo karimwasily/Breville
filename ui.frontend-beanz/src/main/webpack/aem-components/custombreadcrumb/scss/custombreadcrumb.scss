@@ -1,0 +1,25 @@
+.custom-breadcrumb__root {
+  padding: $spacing-sm;
+  white-space: nowrap;
+  display: inline-block;
+  list-style-type: none;
+
+  .cmp-container__custom-breadcrumb-li {
+    display: inline-block;
+    vertical-align: middle;
+
+    .cmp-text__custom-breadcrumb-item--a {
+      @extend %font-breadcrumb-green-anchor;
+    }
+
+    &:not(:last-child)::after {
+      color: $violet;
+      vertical-align: middle;
+      content: '/';
+    }
+
+    &.active {
+      @extend %font-breadcrumb-active-green-anchor;
+    }
+  }
+}

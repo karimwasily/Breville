@@ -1,0 +1,147 @@
+%ratings {
+  min-width: 310px;
+  margin-top: $cs-spacing-20;
+
+  @media (min-width: $cs-screen-lg) {
+    margin-top: $cs-spacing-35;
+  } 
+  @media (min-width: $cs-screen-md) {
+    flex-direction: column;
+    margin-top: $cs-spacing-25;
+  } 
+  @media (min-width: $cs-screen-lg) {
+    flex-direction: row;    
+  } 
+
+  .pdp_rating_summary {
+    line-height: 0 !important;   
+  }
+ 
+
+  .bv_main_container {
+    padding: 0 !important;
+
+    .bv_button_buttonMinimalist,
+    .primary-product-container .primary-product-container__social .bv_main_container .bv_numReviews_text,
+    .bv_numReviews_text,
+    .bv_avgRating_component_container {
+      line-height: 1.25 !important;//To match the height of bazaar voice div
+    }  
+
+    .bv_stars_component_container,
+    .bv_main_container_row_flex {
+      padding-right: $cs-spacing-5 !important;
+
+      @media (min-width: $cs-screen-md) {
+        white-space: nowrap !important;
+      }  
+      @media (min-width: $cs-screen-lg) {        
+        padding-right: $cs-spacing-5 !important;
+      }   
+    }    
+
+    .bv_avgRating_component_container.notranslate,
+    .bv_button_buttonMinimalist,
+    .bv_numReviews_text {
+      @extend %cs-link-underline;
+      margin-left: $cs-spacing-5 !important;
+      // important override default style
+      color: $cs-gunmetal !important;
+      font-size: $cs-font-size-small !important;
+      font-family: $cs-font-family-paragraph !important;
+      text-decoration: underline solid $cs-gunmetal 1px !important;
+      text-decoration-skip-ink: none;
+      @media (min-width: $cs-screen-md) {
+        margin-left: $cs-spacing-5 !important;
+
+        font-size: $cs-font-size-base !important; 
+
+      }
+
+      &:hover {
+        font-size: $cs-font-size-small !important;
+        font-family: $cs-font-family-paragraph !important;
+        text-decoration: underline solid $cs-gunmetal 1px !important;
+        @media (min-width: $cs-screen-md) {
+          font-size: $cs-font-size-base !important;   
+        }
+      }
+    }  
+  }
+
+  .primary-product-container__share {
+    @extend %cs-font-p-2;
+    display: flex;
+    align-items: flex-start;
+    margin-top: $cs-spacing-2;
+    padding-left: $cs-spacing-5;
+
+    color: $cs-gunmetal;
+    line-height: 1.25;//To match the height of bazaar voice div
+    text-decoration: underline solid $cs-gunmetal 1px;
+  
+    cursor: pointer;
+    @media (min-width: $cs-screen-md) { 
+      margin-top: $cs-spacing-5;
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $cs-color-commercial;
+    }
+
+    .share-icon {
+      @extend %share-icon;
+      position: relative;
+      top: $cs-spacing-5;
+
+      margin-left: $cs-spacing-5;
+
+      background-color: $cs-gunmetal;
+
+      content: '';
+    }
+
+    // hover style for share icon
+    &:hover::after {
+      background-color: $cs-color-commercial;
+    }
+    
+    @media (min-width: $cs-screen-md) {
+      margin-top: $cs-spacing-10; 
+    }
+
+    @media (min-width: $cs-screen-lg) {
+      margin-top: 0;
+    }
+  }
+
+  .tooltip-content {
+    margin-top: $cs-spacing-5;
+
+    background-color: $cs-gunmetal;
+
+    &:hover {
+      background-color: $cs-color-commercial;
+    }
+  }
+
+  .tooltip-content-facebook {
+    @extend %facebook-icon;
+    margin-right: $cs-spacing-15;
+  }
+
+  .tooltip-content-pinterest {
+    @extend %pinterest-icon;
+    margin-right: $cs-spacing-15;
+  }
+
+  .tooltip-content-twitter {
+    @extend %twitter-icon;
+    margin-right: $cs-spacing-15;
+  }
+
+  .tooltip-content-email {
+    @extend %email-icon;
+  }
+}

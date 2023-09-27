@@ -1,0 +1,17 @@
+<div class="RoasterDetails" data-sly-use.beanzRoasterTile="com.breville.aem.brands.core.models.BeanzRoasterTile">
+    <div class="beanzRoasters__root">
+        <div class="cmp-container-roasters__container">
+            <div class="cmp-container-roasters__content--row">
+                <sly data-sly-list.roasterDetails="${beanzRoasterTile.roasterData}">
+                    <div class="cmp-container-roasters__content--col">
+                        <a  href="${roasterDetails.pagePath}.html" class="cmp-card-roasters__item">
+                            <img src=${roasterDetails.imagePath} alt="" title="" class="cmp-image-roasters__item--img">
+                            <h2 class="cmp-text-roasters__item--title">${roasterDetails.title}</h2>
+                            <h3 class="cmp-text-roasters__item--sub-title">${roasterDetails.description}</h3>
+                        </a>
+                    </div>
+                </sly>
+            </div>
+        </div>
+    </div>
+</div>

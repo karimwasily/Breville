@@ -1,0 +1,16 @@
+.cmp-page--details-contrast-background {
+  position: relative;
+  background: $creme;
+  z-index: 1;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 630px;
+    background-color: $espresso;
+    z-index: -1;
+  }
+}

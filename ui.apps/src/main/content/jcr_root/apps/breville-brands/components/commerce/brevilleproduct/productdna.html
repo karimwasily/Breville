@@ -1,0 +1,18 @@
+<template data-sly-template.productDna="${ @ productImage, className}">         
+        <div class="teaser cmp-teaser--cs-pdp-dna-${className}-image">
+            <div class="cmp-teaser">
+                <div class="cmp-teaser__image">
+                    <div class="cmp-image">
+                        <img alt="" src="${productImage.productImage}" class="cmp-image__image" />
+                    </div>
+                </div>
+                <div class="cmp-teaser__content">
+					<!-- Need to handle condition for different locale -->
+                    <h3 class="cmp-teaser__title">${productImage.imageText.en_US.imageTitle.toLowerCase}</h3>
+                    <div class="cmp-teaser__description">
+                        <p>${productImage.imageText.en_US.imageDesc}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</template>

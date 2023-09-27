@@ -1,0 +1,42 @@
+
+<sly data-sly-use.model="com.breville.aem.brands.core.models.Mapbox"
+     data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${property.hasContent}"></sly>
+
+<div class="cmp-mapbox" id="${component.id}">
+     <script id="cmp-mapbox__data" type="application/json">
+          ${model.asJson @ context='unsafe'}
+     </script>
+     <div class="cmp-mapbox__map" id="cmp-mapbox-map"></div>
+     <div class="cmp-mapbox__content">
+          <div class="cmp-mapbox__intro-wrapper">
+               <div class="cmp-mapbox__intro">
+                    <div class="cmp-mapbox__intro-subtitle">${model.tagline}</div>
+                    <h2 class="cmp-mapbox__intro-title">${model.title}</h2>
+                    <p class="cmp-mapbox__intro-byline">${model.byline}</p>
+               </div>
+          </div>
+          <div class="cmp-mapbox__story" id="${wcmmode.edit ? '' : 'cmp-mapbox-story'}" data-sly-list=${model.chapters}>
+               <div id="${item.id}" class="cmp-mapbox__featured-story ${model.theme} ${item.alignment}" data-scrollama-index=${itemList.index}>
+                    <div class="cmp-mapbox__story-tagline">${item.tagline}</div> 
+                    <div class="cmp-mapbox__separator" data-sly-resource="${'separator' @ resourceType='breville-brands/components/separator'}"></div>
+                    <h2 class="cmp-mapbox__story-title">${item.title}</h2>
+                    <div class="cmp-mapbox__story-description">${item.description @ context='html'}</div>
+                    <div class="cmp-mapbox__story-image-wrapper">
+                         <sly data-sly-list.image="${item.imageList}">
+                              <img class="cmp-mapbox__story-image" src="${image.fileReference}" alt="${image.alt}">
+                              <p class="cmp-mapbox__story-image-description">${image.description}</p>
+                         </sly>
+                    </div>
+               </div>
+          </div>
+          <div class="cmp-mapbox__footer-wrapper ${model.theme}" data-sly-test="${model.footerText}">
+               <div class="cmp-mapbox__footer">
+                    <p class="cmp-mapbox__footer-text">${model.footerText}</p>
+               </div>
+          </div>
+     </div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-mapbox'}"></sly>

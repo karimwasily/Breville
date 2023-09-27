@@ -1,0 +1,21 @@
+@import 'account-details';
+@import 'my-orders';
+@import 'my-subscriptions';
+@import 'mybreville';
+@import 'support';
+@import 'template/user-widget';
+@import 'template/side-navigation';
+@import 'template/breadcrumbs';
+@import 'my-machine-details';
+@import 'template/addresses';
+
+.my-breville-2-column {
+  @extend %cs-layout-6-6;
+  grid-gap: $cs-spacing-10;
+  margin-bottom: $cs-spacing-20;
+
+  @media (min-width: $cs-screen-md) {
+    grid-gap: $cs-spacing-20;
+    margin-bottom: $cs-spacing-50;
+  }
+}

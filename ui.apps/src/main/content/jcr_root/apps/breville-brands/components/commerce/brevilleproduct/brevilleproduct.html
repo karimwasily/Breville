@@ -1,0 +1,155 @@
+<div class="aem-ct-data-wrapper" data-sly-use.brevilleMultiConfig="com.breville.aem.brands.core.models.BrevilleMultiRegionConfigurationsModel">
+   <sly data-sly-use.productDetails="com.breville.aem.brands.core.models.BrevilleProduct">
+      <sly data-sly-resource="${'sfcustomerform' @ resourceType='breville-brands/components/breville/sfcustomerform'}"></sly>
+      <div data-react-app="ReactPdp" class='add-to-cart'>
+         <script type="application/json">
+            ${productDetails.variantsInfoJson @context="scriptComment"}
+         </script>
+      </div>
+      <sly data-sly-test="${productDetails.productType == 'FG'}">
+         <div class="breadcrumb">
+            <a href="${productDetails.categoryPagePath @ context = 'uri'}">${'pdp-returnToAll' @ i18n} ${productDetails.categoryName}</a>
+         </div>
+      </sly>
+      <!-- /* PDP - PRIMARY PRODUCT AREA -->      
+      <section class="primary-product-container">
+        <sly data-sly-list.resultsItem="${productDetails.resultsList}">
+           <div class="primary-product-container__title">
+              <h2>${resultsItem.masterData.current.name @context = 'html'}</h2>
+           </div>
+           <div class="primary-product-container__image_wrapper">
+              <div class="primary-product-container__hero_image">
+                 <!--/* REACT HERO IMAGE PDP */-->
+                 <div data-react-app="HeroPDP"></div>
+                 <!--/* END: REACT HERO IMAGE PDP */-->
+              </div>
+           </div>
+           <div class="primary-product-container__right-content">
+              <div class="primary-product-container__side_by_side primary-product-container__basic_info">
+                 <div class="primary-product-container__color_label">
+                    <div data-react-app="VariantColorInfoPDP"></div>
+                 </div>
+                 <div class="primary-product-container__side_by_side primary-product-container__model">
+                    <div data-react-app="ModelPDP"></div>
+                 </div>
+              </div>
+              <div class="primary-product-container__swatch">
+                 <div data-react-app='VariantPickerPDP' ></div>
+              </div>
+              <div class="primary-product-container__side_by_side primary-product-container__social">
+                 <div class="primary-product-container__ratings">
+                    <div data-bv-show="rating_summary" class="pdp_rating_summary" data-bv-product-id="BES880BSS1BUS1" id="pdp_rating_summary"></div>
+                 </div>
+                 <div data-react-app="SharePDP"></div>
+              </div>
+              <div class="primary-product-container__side_by_side primary-product-container__price_info">
+                 <div class="primary-product-container__price">
+                    <div data-react-app="PricePDP" class='price'></div>
+                 </div>
+                 <sly data-sly-test="${brevilleMultiConfig.isAffirmEnabled == 'true'}">
+                     <div class="primary-product-container__affirm">
+                        <p id='affirm-hook' class="affirm-as-low-as" data-page-type="product" data-amount="50000"></p>
+                     </div>
+                 </sly>
+              </div>
+              <div class="primary-product-container__side_by_side">
+                  <div class="primary-product-container__add_to_cart">
+                    <div data-react-app="AddToCartPDP" class='add-to-cart'></div>                
+                  </div>         
+              </div>
+              <sly data-sly-test="${productDetails.productCategory == 'espresso'}">
+               <div class="primary-product-container__side_by_side primary-product-container__coffee_cta">
+                  <div class="primary-product-container__coffee_cta-icon-coffee">
+                     <img src="/content/dam/breville-brands/coffee-solution/svg/coffee-bag.svg"/>
+                  </div>
+                  <div class="primary-product-container__coffee_cta-content">
+                     <p>${properties.fcMessage}</p>
+                  </div>
+                  <div class="primary-product-container__coffee_cta-icon-info">
+                     <div data-react-app="FreeCoffeeTooltip" class='coffee_cta-tooltip'></div>
+                  </div>
+               </div>
+               <div class="primary-product-container__bundle_cta">
+                  <!--/* START: Upgrade to a Complete Coffee Bundle Section */--> 
+                  <div class="cta-container__bundle_cta">
+                     <div class="cta__title">
+                        <h2 class="title">
+                           ${properties.cbTitle}
+                        </h2>
+                     </div>
+                     <div class="cta__content">
+                        ${properties.cbDescription @context = 'html'}
+                     </div>
+                     <div class="cta-image">
+                        <div id="image-a4df63251f" class="cmp-image">
+                           <img src="/content/dam/breville-brands/coffee-solution/pdp/BaristaPro_Bundle%402x.png" class="cmp-image__image" />
+                        </div>
+                     </div>
+                     <div class="cta__action-container">
+                        <a class="cta__action-link" href="/#">${'pdp-shopThisBundle' @ i18n}</a>
+                     </div>
+                     <div class="cta__pretitle">
+                        <a href="#complete-coffee-bundle">${'pdp-viewBundleLinkLable' @ i18n, format=[resultsItem.masterData.current.name],context='html'}</a>
+                     </div>
+                  </div>
+                  <!--/* END: Upgrade to a Complete Coffee Bundle Section */-->
+               </div>
+               </sly>
+           </div>
+        </sly>
+
+        <!-- ANCHOR POINT FOR THE STICKY HEADER -->
+        <div class="primary-product-container__tracker" data-react-app="PDPStickerHeaderTracker"></div>
+    </section>
+   </sly>
+
+   <sly data-sly-test="${productDetails.resultsList}">
+      <sly data-sly-test="${productDetails.resultsList[0].masterData.current.description || productDetails.productCallOut}">
+         <sly data-sly-use.productDescription="productdescription.html"
+            data-sly-call="${productDescription.productDesc @ productDesc=productDetails.resultsList[0].masterData.current.description, productCallout=productDetails.productCallOut}"></sly>
+      </sly>
+   </sly>
+
+   <sly data-sly-test="${productDetails.youtubeJson}">
+         <sly data-sly-use.productYoutube="productyoutube.html"
+            data-sly-call="${productYoutube.youtube @ youtubeJson=productDetails.youtubeJson}"></sly>
+   </sly>
+   
+   <!-- /* END: PDP - PRIMARY PRODUCT AREA -->
+	<sly data-sly-test="${productDetails.productImages}">
+		<section class="product-dna">
+            <h2 class="cmp-product-dna--title">${'pdp.productDnaTitle' @ i18n}</h2>
+            <sly data-sly-list.prodImage="${productDetails.productImages}">
+				<sly data-sly-test="${prodImage.imageType == 'dna'}">
+               <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=prodImage.imageIndex}"></sly>
+                    <sly data-sly-use.productDnaTemp="productdna.html"
+                     data-sly-call="${productDnaTemp.productDna @ productImage=prodImage, className= brevilleUtil.isEven ? 'right': 'left'}"></sly>
+				</sly>
+            </sly>
+		</section>
+	</sly>
+
+   <sly data-sly-test="${productDetails.resultsList}">
+      <sly data-sly-use.prodInfoTemplate="productinformation.html"
+         data-sly-call="${prodInfoTemplate.productInformation @ description=productDetails.resultsList[0].masterData.current.description, productInfo=productDetails.productInformation}"></sly>
+   </sly>
+</div>
+<sly data-sly-test="${productDetails.productCategory == 'espresso'}">
+   <sly data-sly-use.makeItCompleteBundleTmp="makeitcompletebundle.html"
+      data-sly-call="${makeItCompleteBundleTmp.completeBundle @ items=productDetails.makeItCompleteBundleData}"></sly>
+</sly>
+<!-- /* END:PDP - MACHINE - PRIMARY PRODUCT -->
+<sly data-sly-resource="${'container_cust' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+
+<section data-react-app="RelatedProducts" class="related-products__react-root related-products container"></section>
+
+<section data-react-app="WorksWith" class="works-with__react-root works-with container"></section>
+
+<section data-react-app="PDPReviews"></section>
+
+<section data-react-app="MayAlsoLike" class="may-also-like__react-root may-also-like container"></section>
+
+<sly data-sly-test="${productDetails.productUserGuide || productDetails.productType}">
+   <sly data-sly-use.prodManualTemp="productmanuals.html"
+      data-sly-call="${prodManualTemp.productSupport @ prodPdfManual=productDetails.productUserGuide, productType=productDetails.productType}"></sly>
+</sly>

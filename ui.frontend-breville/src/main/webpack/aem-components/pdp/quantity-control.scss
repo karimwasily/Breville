@@ -1,0 +1,40 @@
+@import './quantity-input-new';
+%quantity-control {
+  .primary-product-container__product_quantity {
+    @extend %quantity-input;
+      
+    // targeting the .quantity div and NOT the .quantity input
+    > div.quantity {
+      margin-right: $cs-spacing-15;
+         
+      @media (min-width: $cs-screen-md) {        
+        margin-right: $cs-spacing-5;
+      } 
+      @media (min-width: $cs-screen-lg) {        
+        margin-right: $cs-spacing-10;
+      } 
+      @media (min-width: $cs-screen-xl) {        
+        margin-right: $cs-spacing-15;
+      } 
+      @media (min-width: $cs-screen-xxl) {  
+        min-width: 140px;
+      }
+    }
+
+    .product-quantity {
+      height: 100%;
+  
+      .quantity {
+        // different width applied to aviod overflow of button
+        min-width: 140px;
+        height: 100%;
+        @media (min-width: $cs-screen-md) {        
+          min-width: 130px;
+        } 
+        @media (min-width: $cs-screen-lg) {        
+          min-width: 140px;
+        } 
+      }
+    }
+  }
+}

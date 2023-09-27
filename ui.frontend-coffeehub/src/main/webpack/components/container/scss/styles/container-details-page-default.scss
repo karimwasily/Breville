@@ -1,0 +1,8 @@
+%detailspage-default {
+  .cmp-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    padding: 0% 0% $spacing-md 0%;
+  }
+}

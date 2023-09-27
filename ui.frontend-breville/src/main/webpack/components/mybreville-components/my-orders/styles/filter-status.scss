@@ -1,0 +1,85 @@
+.my-orders__filter-status {
+  margin-bottom: $cs-spacing-25;
+
+  > *:not(:last-child) {
+    margin-right: $cs-spacing-20; 
+  }
+
+  .my-orders__filter-status-title {
+    display: inline-block;
+    margin-bottom: $cs-spacing-20;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  .my-orders__filters-status-wrapper {
+    display: inline-block;
+
+    .my-orders__filter-status-option {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: $cs-spacing-5 $cs-spacing-10;
+
+      border: 1px solid $cs-color-gray-30;
+      border-radius: $cs-border-radius-8;
+
+      // gap spacing between items
+      &:not(:last-child) {
+        margin: 0 $cs-spacing-10 $cs-spacing-10 0;
+
+        @media (min-width: $cs-screen-xl) {
+          margin: 0 $cs-spacing-10 0 0;
+        }
+      }
+
+      .my-orders__filter-option-labelText {
+        @extend %cs-font-small-p;
+        display: inline-flex;
+        padding: 0;
+
+        color: $cs-gunmetal;
+      }
+
+      .my-orders__filter-option-cancel {
+        --icon-size: 0.5rem;
+        @extend %close-icon;
+        display: inline-flex;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        margin-left: $cs-spacing-10;
+
+        background-color: $cs-black;
+        cursor: pointer;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $cs-whitesmoke;
+
+        .my-orders__filter-option-labelText {
+          color: $cs-gunmetal;
+        }
+      }
+    }
+  }
+
+  .my-orders__filter-clear-all {
+    @extend %cs-font-p-4;
+    margin-top: $cs-spacing-15;
+
+    text-decoration: underline;
+
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-top: 0;
+    }
+  }
+}

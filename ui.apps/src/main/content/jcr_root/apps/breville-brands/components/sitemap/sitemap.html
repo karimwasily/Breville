@@ -1,0 +1,15 @@
+<section class="cmp__sitemap--root"
+   data-sly-use.sitemap="com.breville.aem.brands.core.models.HtmlSiteMapModel">
+      <h1 class="cmp-text__sitemap--header">${'sitemap' @i18n}</h1>
+   <div data-sly-list.siteMapList="${sitemap.siteMapDetails}" class="cmp-container__sitemap-row">
+      <div class="cmp-container__sitemap-column" data-sly-test.pageObject="${sitemap.siteMapDetails[siteMapList]}">
+         <a class="cmp-text__sitemap-item-title" href="${pageObject.link}">${pageObject.label}</a>
+         <ul class="cmp-container__sitemap-ul">
+            <sly data-sly-list.links=${pageObject.linkDetails}>
+               <li class="cmp-container__sitemap-li"><a href=" ${links.url} " class="cmp-text__sitemap-item-a">
+                     ${links.label}</a></li>
+            </sly>
+         </ul>
+      </div>
+   </div>
+</section>

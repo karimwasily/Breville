@@ -1,0 +1,136 @@
+.vendors {
+  max-width: 1135px;
+  margin: auto;
+
+  .vendors__container {
+    --border-radius: #{$cs-border-radius-16};
+    margin: $cs-spacing-25 $cs-spacing-15;
+    overflow: hidden;
+
+    border: 1px solid $cs-color-gray-40;
+    border-radius: var(--border-radius);
+
+    @media (min-width: $cs-screen-xl) {
+      margin: $cs-spacing-25 0;
+    }
+
+    .vendors__header {
+      border-bottom: 1px solid $cs-color-gray-40;
+    }
+
+    .vendors__content {
+
+      @media (min-width: $cs-screen-md) {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+      }
+
+      .vendor__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // * min-height is required to avoid the component resizing on change of items when content is varying
+        min-height: 240px;
+        // * original min-height breaks on slightly larger viewports causing excess space
+        // min-height: 310px;
+        margin: $cs-spacing-30 $cs-spacing-20;
+
+        @media (min-width: $cs-screen-md) {
+          flex-flow: column-reverse;
+          justify-content: center;
+        }
+
+        @media (min-width: $cs-screen-lg) {
+          padding: $cs-spacing-50;
+        }
+
+        .vendor__inner {
+          display: flex;
+          align-items: center;
+          margin-bottom: $cs-spacing-20;
+
+          @media (min-width: $cs-screen-md) {
+            margin-bottom: 0;
+          }
+
+          .vendor__secondary-image {
+            display: grid;
+            place-items: center;
+
+            .vendor__secondary-image__image {
+              width: $cs-spacing-70;
+              height: $cs-spacing-70;
+              object-fit: cover;
+
+              @media (min-width: $cs-screen-md) {
+                width: $cs-spacing-80;
+                height: $cs-spacing-80;
+              }
+            }
+          }
+
+          .vendor__details {
+            margin-left: 25px;
+
+            .vendor__title {
+              @extend %cs-font-p-2-bold;
+            }
+
+            .vendor__location {
+              @extend %cs-font-p-5;
+            }
+          }
+        }
+
+        .vendor__info {
+          @media (min-width: $cs-screen-md) {
+            margin-bottom: $cs-spacing-25; 
+          }
+          
+          p {
+            @extend %cs-font-p-4;
+            margin: 0;
+          }
+        }
+
+        .vendor__logo {
+          display: none;
+
+          @media (min-width: $cs-screen-md) {
+            display: block;
+            height: 100px;
+            margin-bottom: $cs-spacing-25;
+          }
+
+          .vendor__logo__image {
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .vendor__primary-image {
+        display: grid;
+
+        // temp
+        min-height: 250px;
+        place-items: center;
+        
+        @media (min-width: $cs-screen-md) {
+          min-height: 535px;
+        }
+
+        .vendor__primary-image__image {
+          // * using 101% to guarantee full coverage against the right border line
+          width: 101%;
+          height: 100%;
+          object-fit: cover;
+
+          @media (min-width: $cs-screen-md) {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

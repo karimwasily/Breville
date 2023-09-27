@@ -1,0 +1,29 @@
+.cmp-mybreville-template {
+  border-top: 1px solid $cs-gainsboro;
+    
+  &__left-column {
+    position: sticky;
+    top: 0;
+    z-index: 98;
+
+    padding: unset;
+
+    text-align: left;
+
+    border-right: 1px solid $cs-gainsboro;
+    border-bottom: 1px solid $cs-gainsboro;
+    @media (min-width: $cs-screen-md) {
+      position: unset;
+    }
+  }
+
+  &__right-column {
+    padding: $cs-spacing-40 $cs-spacing-15;
+
+    background-color: $cs-whitesmoke;
+
+    @media (min-width: $cs-screen-md) {
+      padding: $cs-spacing-40 $cs-spacing-60;
+    } 
+  }
+}

@@ -1,0 +1,9 @@
+.cmp-separator--light-brown {
+	.cmp-separator {
+		.cmp-separator__horizontal-rule {
+			border: 0;
+			height: 1px;
+			background-color: $cmp-content-separator-color;
+		}
+	}
+}

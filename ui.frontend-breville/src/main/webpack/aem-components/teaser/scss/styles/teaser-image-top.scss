@@ -1,0 +1,25 @@
+@import 'teaser-image-base';
+
+.cmp-teaser--image-top {
+  @extend %teaser-image;
+  width: auto;
+  margin: 0 $spacing-xs;
+  @media (min-width: $screen-md) {
+    width: 50%;
+  }
+
+  .cmp-teaser {
+    flex-direction: column;
+    max-height: none;
+
+    .cmp-teaser__image {
+      @media (min-width: $screen-md) {
+        width: 100%;
+      }
+    }
+
+    .cmp-teaser__content {
+      width: 100%;
+    }
+  }
+}

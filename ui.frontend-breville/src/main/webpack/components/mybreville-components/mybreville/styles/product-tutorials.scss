@@ -1,0 +1,167 @@
+.product-tutorial {
+  &__wrapper {
+    display: grid;
+    grid-auto-columns: 80%;
+    grid-auto-flow: column;
+    grid-gap: $cs-spacing-10;
+    margin: $cs-spacing-35 0 $cs-spacing-40;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    @media (min-width: $cs-screen-xl) {
+      grid-auto-columns: unset;
+      grid-auto-flow: unset;
+      grid-template-columns: repeat(2, 1fr);
+      overflow: unset;
+    }
+    @media (min-width: $cs-screen-xl) {
+      grid-gap: $cs-spacing-20;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__tile {
+    cursor: pointer;
+
+    &:nth-child(n+4) {
+      @media (min-width: $cs-screen-xl) {
+        display: none;
+      }
+    }
+  }
+
+  &__video {
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+
+    border-radius: $cs-border-radius-10;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 14.81%, rgba(0, 0, 0, 0) 56.92%);
+
+      content: '';
+    }
+
+    .product-tutorial__video-time-wrapper {
+      position: absolute;
+      z-index: 10;
+
+      display: flex;
+      align-items: center;
+      padding: $cs-spacing-15 0 0 $cs-spacing-15;
+    }
+
+    .product-tutorial__video-icon {
+      @extend %watch-video-icon;
+      width: 0.875rem;
+      height: 0.875rem;
+      margin-right: $cs-spacing-5;
+    }
+
+    .product-tutorial__video-duration {
+      @extend %cs-font-p-2-bold;
+      color: $cs-white;
+    }
+  }
+  
+  &__category {
+    @extend %cs-font-p-5;
+    display: inline-block;
+    margin: $cs-spacing-15 0 0;
+    padding: $cs-spacing-3 $cs-spacing-10;
+
+    color: $cs-white;
+    font-weight: $cs-font-weight-bold;
+
+    background-color: $cs-dark-cream;
+    border-radius: $cs-border-radius-3;
+  }
+
+  &__name {
+    @extend %cs-font-h12-bold;
+    display: block;
+    margin: $cs-spacing-10 0;
+  }
+
+  &__chef {
+    @extend %tutorial-chef-icon;
+    @extend %cs-font-p-4;
+    width: unset;
+    padding-left: $cs-spacing-30;
+
+    background-repeat: no-repeat;
+  }
+
+  &__video-size {
+    width: 100%;
+    //height: 220px; for youtube video height is require TBC
+  }
+
+  &__button-wrapper {
+    display: flex;
+    margin-bottom: $cs-spacing-15;
+  }
+
+  &__button {
+    font-weight: $cs-font-weight-bold !important;
+    white-space: normal !important;
+    @media (min-width: $cs-screen-xl) {
+      margin: auto;
+    }
+  }
+
+  &__category-cream {
+    @extend %cs-font-p-5;
+    display: inline-block;
+    margin: $cs-spacing-15 0 0;
+    padding: $cs-spacing-3 $cs-spacing-10;
+
+    color: $cs-white;
+    font-weight: $cs-font-weight-bold;
+
+    background-color: $cs-dark-cream;
+    border-radius: $cs-border-radius-3;
+  }
+
+  &__category-orange {
+    @extend %cs-font-p-5;
+    display: inline-block;
+    margin: $cs-spacing-15 0 0;
+    padding: $cs-spacing-3 $cs-spacing-10;
+
+    color: $cs-white;
+    font-weight: $cs-font-weight-bold;
+
+    background-color: $cs-orange-light;
+    border-radius: $cs-border-radius-3;
+  }
+
+  &__category-green {
+    @extend %cs-font-p-5;
+    display: inline-block;
+    margin: $cs-spacing-15 0 0;
+    padding: $cs-spacing-3 $cs-spacing-10;
+
+    color: $cs-white;
+    font-weight: $cs-font-weight-bold;
+
+    background-color: $cs-apple-green;
+    border-radius: $cs-border-radius-3;
+  }
+}

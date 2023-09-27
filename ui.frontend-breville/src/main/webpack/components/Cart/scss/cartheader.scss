@@ -1,0 +1,113 @@
+.cart-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: $cs-spacing-30 0 $cs-spacing-5;
+
+  @media (min-width: $cs-screen-sm) {
+    flex-direction: row;
+    margin: $cs-spacing-30 0;
+  }
+  
+  &__item {
+    width: 100%;
+
+    @media (min-width: $cs-screen-sm) {
+      width: 33%;
+    }
+  }
+  
+  &__link::before {
+    @extend %arrow-right-icon-small;
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+
+    display: block;
+    width: 0.75em;
+    height: 0.75em;
+
+    transform: rotateZ(180deg);
+
+    content: '';
+  }
+  
+  &__link {  
+    @extend %cs-font-p-4; 
+    position: relative;
+
+    padding-left: 1.1em;
+
+    text-decoration: underline;
+  }
+  
+  &__link:hover {
+    cursor: pointer;
+  }
+  
+  &__title {
+    @extend %cs-font-h2;
+    margin-top: $cs-spacing-30;
+
+    text-align: center;
+    @media (min-width: $cs-screen-sm) {
+      margin: 0;
+    }
+  }
+
+  &__spacer {
+    display: none;
+    @media (min-width: $cs-screen-sm) {
+      display: inline-block;
+    }
+  }
+}
+
+.cart__table {
+  &:not(.readonly) {
+    @media (min-width: $cs-screen-md) {
+      .cart-table-header >.row {
+        padding-right: $cs-spacing-35;
+  
+        &.no-gutters > [class*=col-]:last-child {
+          padding-right: $cs-spacing-10;
+        }
+      }
+
+      .cart-bundle-summary {
+        .row {
+          &:first-child {
+            padding-right: $cs-spacing-35;
+          }
+
+          &.no-gutters > [class*=col-]:last-child {
+            padding-right: $cs-spacing-10;
+          }
+        }
+      }
+
+      .coffee-bundle-breakdown-product {
+        &.row {
+          padding-right: $cs-spacing-35;
+  
+          &.no-gutters > [class*=col-]:last-child {
+            padding-right: $cs-spacing-10;
+          }
+        }
+      }
+  
+      .cmp-cart-subscription-summary {
+        padding-right: $cs-spacing-20;
+  
+        &__meta {
+          margin-right: $cs-spacing-25;
+        }
+      }
+  
+      .free-bundle-promo {
+        padding-right: $cs-spacing-45;
+      }
+    }
+  }
+}

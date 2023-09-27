@@ -1,0 +1,210 @@
+// ! be very careful adjusting styles for ProductTile, it is used in many places
+// used > ui.frontend-breville/src/main/webpack/components/shared-ui/ProductTile/scss/producttile.scss
+%cmp-producttile--base {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 0;
+
+  .cmp-producttile {
+    height: 100%;
+
+    background-color: $cs-white;
+    border: solid 1px $cs-gainsboro;
+
+    transition: border $cs-transition-speed-250 ease-in-out;
+
+    &:hover {
+      border: solid 1px $cs-color-primary;
+
+      .cmp-producttile__image {
+        .cmp-image__image {
+          position: relative;
+
+          transform: scale($cs-transition-scale-108);
+        }
+      }
+    }
+
+    .cmp-producttile__image {
+      padding: $cs-spacing-20 $cs-spacing-15 0;
+
+      text-align: center;
+
+      @media (min-width: $cs-screen-md) {
+        padding: $cs-spacing-30 $cs-spacing-30 0;
+      }
+
+      .cmp-image {
+        overflow: hidden;
+
+        .cmp-image__image {
+          width: 100%;
+          object-fit: contain;
+
+          transition: transform $cs-transition-speed-250 ease-in-out;
+        }
+      }
+    }
+
+    .cmp-producttile__primary-content-wrapper {
+      display: flex;
+      // * this is to display the pirce at the top by default
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      // * padding is matching the image wrapper padding to keep the border spacing across the whole tile even
+      padding: 0 $cs-spacing-15 $cs-spacing-20;
+
+      @media (min-width: $cs-screen-md) {
+        padding: 0 $cs-spacing-30 $cs-spacing-30;
+      }
+  
+      .cmp-producttile__header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      // TITLE
+      .cmp-producttile__title {
+        @extend %cs-font-h12-medium;
+        margin-bottom: $cs-spacing-5;
+
+        text-align: center;
+      }
+
+      // DESCRIPTION
+      .cmp-producttile__description {
+        p {
+          @extend %cs-font-p-4;
+          margin-bottom: $cs-spacing-20;
+
+          color: $cs-monsoon;
+          text-align: center;
+        }
+      }
+
+      .cmp-producttile__attribute-list {
+        .cmp-producttile__attribute-item {
+          display: flex;
+          padding: $cs-spacing-20;
+
+          text-align: left;
+        }
+      }
+
+      // PRICE (top)
+      .cmp-producttile__price-wrapper {
+        margin: 0;
+
+        .cmp-producttile__price {
+          // @extend %cs-font-h14;
+          @extend %cs-font-p-2-bold;
+          margin-top: $cs-spacing-10;
+
+          @media (min-width: $cs-screen-md) {
+            margin-top: $cs-spacing-5;
+          }
+        }
+      }
+    }
+
+    .cmp-producttile__footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+      // * this is the conditionally rendered product specifications
+      .cmp-producttile__attribute-list {
+        width: 100%;
+
+        .cmp-producttile__attribute-item {
+          display: flex;
+          flex-direction: row;
+          padding: $cs-spacing-20 $cs-spacing-25;
+
+          @media (min-width: $cs-screen-md) {
+            padding: $cs-spacing-20 $cs-spacing-30;
+          }
+
+          &:nth-child(odd) {
+            background-color: $cs-color-gray-60;
+          }
+        }
+
+        // icon-based attributes (e.g. auto/manual control, grinder type, heatup, etc.
+        .cmp-producttile__attribute-item--icon {
+          align-items: center;
+
+          @media (min-width: $cs-screen-md) {
+          }
+
+          .cmp-producttile__attribute-name--icon {
+            width: $cs-spacing-40;
+          }
+
+          .cmp-producttile__attribute-value--icon {
+            @extend %cs-font-p-2;
+            margin-bottom: 0;
+            margin-left: $cs-spacing-25;
+
+            color: $cs-color-gray-10;
+          }
+        }
+
+        // text-based attributes (e.g. dimensions, warranty, capacity, etc.
+        .cmp-producttile__attribute-item--text {
+          flex-direction: column;
+
+          text-align: left;
+
+          .cmp-producttile__attribute-name--text {
+            @extend %cs-font-p-bold;
+            margin-bottom: $cs-spacing-5;
+          }
+
+          .cmp-producttile__attribute-value--text {
+            @extend %cs-font-p-4;
+            display: flex;
+            align-content: center;
+            margin-bottom: 0;
+
+            white-space: pre;
+          }
+
+          .dimensions-icon {
+            width: $cs-spacing-20;
+            margin-left: $cs-spacing-10;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  // PRICE (2nd variation at the bottom)
+  .producttile-footer__price {
+    @extend %cs-font-h8;
+    margin-bottom: 0;
+    padding: $cs-spacing-40 $cs-spacing-25;
+  }
+
+  // conditional display add to cart button
+  .producttile-add-to-cart__btn {
+    margin: auto;
+  }
+}
+
+.cmp-producttile--base {
+  @extend %cmp-producttile--base;
+}

@@ -1,0 +1,36 @@
+Example address from current Breville app:
+
+address: {country-name: "us", street-address: "1250 Waters Place", extended-address: "", locality: "New york",…}
+name: {given-name: "Mark", family-name: "Mackenzie"}
+organization: {company-name: ""}
+phone: {phone-number: "+1 4216364801"}
+
+
+CT Fields for Address:
+
+id: String
+title: String
+salutation: String
+firstName: String
+lastName: String
+streetName: String
+streetNumber: String
+additionalStreetInfo: String
+postalCode: String
+city: String
+region: String
+state: String
+country: Country!
+company: String
+department: String
+building: String
+apartment: String
+pOBox: String
+phone: String
+mobile: String
+email: String
+fax: String
+additionalAddressInfo: String
+externalId: String
+key: String
+custom: CustomFieldsDraft

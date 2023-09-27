@@ -1,0 +1,11 @@
+%cmp-container--cs-centered {
+  .cmp-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.cmp-container--cs-centered {
+  @extend %cmp-container--cs-centered;
+}

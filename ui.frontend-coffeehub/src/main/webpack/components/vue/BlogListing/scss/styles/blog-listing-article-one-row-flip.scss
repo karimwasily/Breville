@@ -1,0 +1,46 @@
+// this relies on the vue blog-listing-article component markup
+// styles a single row (standard)
+.cmp-v-blog-listing--article-one-row-flip {
+  .cmp-v-blog-listing__article {
+    .cmp-article {
+      @media (min-width: $screen-md) {
+        flex-direction: row-reverse;
+      }
+
+      // ARTICLE IMAGE
+      .cmp-article__image {
+        @media (min-width: $screen-md) {
+          margin-right: 0;
+        }
+
+        .cmp-image {
+          &__image {
+          }
+        }
+      }
+
+      // ARTICLE CONTENT
+      &__content {
+
+        @media (min-width: $screen-md) {
+          flex: 4;
+          margin: 0 $spacing-xxl;
+        }
+
+        .cmp-article__category {
+        }
+
+        .cmp-article__title {
+        }
+
+        .cmp-article__description {
+        }
+
+        .cmp-article__action-container {
+          .cmp-article__action-link {
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/acs-commons"
+        cq:lastModified="{Date}2020-11-12T14:32:12.545Z"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-12-03T10:45:33.562Z"
+        cq:lastReplicatedBy="pradeep.mc@breville.com"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/breville-platform/templates/genericlist"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Mexico"
+        jcr:uuid="6d2ffe4b-a54a-476d-8c0b-f453e7750c79"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <item
+                jcr:created="{Date}2020-11-12T14:31:59.154Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-11-12T14:32:12.543Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mexico"
+                sling:resourceType="acs-commons/components/utilities/genericlist/item"
+                value="mx"/>
+        </list>
+    </jcr:content>
+</jcr:root>

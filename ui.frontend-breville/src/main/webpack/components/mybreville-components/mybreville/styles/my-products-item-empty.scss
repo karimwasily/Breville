@@ -1,0 +1,134 @@
+.my-product-empty {
+  display: flex;
+  flex-wrap: wrap;
+  order: 1;
+  
+  padding: $cs-spacing-25 $cs-spacing-20;
+
+  background-color: $white;
+  border-radius: $cs-border-radius-8;
+
+  @media (min-width: $cs-screen-xl) {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    padding: $cs-spacing-30;
+
+    column-gap: $cs-spacing-10;
+  }
+
+  &__title {
+    @extend %cs-font-h7;
+    margin-bottom: $cs-spacing-30;
+
+    @media (min-width: $cs-screen-xl) {
+      grid-row: 1;
+      grid-column: 1;
+      margin: 0;
+    }
+  }
+
+  &__button-wrapper {
+    grid-row: 2;
+    grid-column: 1;
+    order: 5;
+    margin-top: $cs-spacing-25;
+
+    .my-product-empty__button {
+      @extend %cs-font-p-3;
+  
+      font-weight: bold !important;
+    }
+  }
+
+  &__tile {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    width: 100%;
+    padding: $cs-spacing-15 $cs-spacing-20;
+
+    column-gap: $cs-spacing-10;
+
+    background-color: $cs-whitesmoke;
+    border-radius: $cs-border-radius-8;
+
+    &:not(:last-child) {
+      margin-bottom: $cs-spacing-10;
+    }
+
+    @media (min-width: $cs-screen-xl) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: $cs-spacing-25 $cs-spacing-15;
+
+      &:not(:last-child) {
+        margin: 0;
+      }
+    }
+
+    .my-product-empty__tile-text {
+      @extend %cs-font-p-4-bold;
+      display: inline-block;
+      margin-top: $cs-spacing-15;
+
+      text-align: left;
+
+      @media (min-width: $cs-screen-xl) {
+        position: relative;
+
+        text-align: center;
+      }
+    }
+
+    .my-product-empty__tile-icon {
+      display: inline-block;
+      margin: auto;
+
+      background-color: transparent;
+      @media (min-width: $cs-screen-xl) {
+        margin: 0;
+      }
+    }
+
+    &--warranty {
+      order: 2;
+
+      @media (min-width: $cs-screen-xl) {
+        grid-row: 1/3;
+        grid-column: 2;
+      }
+
+      .my-product-empty__tile-icon {
+        @extend %warranty-no-background-icon-purple-color;
+      }
+    }
+
+    &--tutorial {
+      order: 3;
+
+      @media (min-width: $cs-screen-xl) {
+        grid-row: 1/3;
+        grid-column: 3;
+      }
+
+      .my-product-empty__tile-icon {
+        @extend %tutorials-icon;
+      }
+    }
+
+    &--machine {
+      order: 4;
+
+      @media (min-width: $cs-screen-xl) {
+        grid-row: 1/3;
+        grid-column: 4;
+      }
+
+      .my-product-empty__tile-icon {
+        @extend %machine-icon;
+      }
+    }
+  }
+}

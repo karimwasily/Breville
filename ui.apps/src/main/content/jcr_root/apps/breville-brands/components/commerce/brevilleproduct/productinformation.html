@@ -1,0 +1,181 @@
+<template data-sly-template.productInformation="${ @ description, productInfo}">
+   <section class="productinformation">
+     <div class="cmp-product-information">
+        <div class="cmp-product-information__detail">
+           <div class="cmp-product-information__detail-left-column">
+               <sly data-sly-test="${productInfo.accessories}">
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-accessories"
+                        src="/content/dam/breville-brands/coffee-solution/svg/accessories.svg"
+                        alt="Accessories icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.accessories' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                              <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.accessories}">
+                              ${brevilleUtil.formatText @ context = 'html'}
+                              </sly>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </sly>
+               <sly data-sly-test="${productInfo.constructionMaterial}">
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-materials"
+                        src="/content/dam/breville-brands/coffee-solution/svg/materials.svg"
+                        alt="Materials icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.constructionMat' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                           <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.constructionMaterial}">
+                                 ${brevilleUtil.formatText @ context = 'html'}
+                           </sly>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </sly>
+               <sly data-sly-test="${productInfo.settings}"> 
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-settings"
+                        src="/content/dam/breville-brands/coffee-solution/svg/settings.svg"
+                        alt="Settings icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.settings' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                           <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.settings}">
+                              ${brevilleUtil.formatText @ context = 'html'}
+                           </sly>
+                           </ul>
+                        </div>
+                     </div>				   
+                  </div>
+               </sly>
+           </div>
+           <div id="more-details-toggle" class="cmp-product-information__show-more-details-toggle">Show more details</div>
+           <div id='more-details-selector' class="cmp-product-information__detail-right-column">
+            <sly data-sly-test="${productInfo.capacity}">
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-capacity"
+                        src="/content/dam/breville-brands/coffee-solution/svg/capacity.svg"
+                        alt="Capacity icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.capacity' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                              <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.capacity}">
+                                 ${brevilleUtil.formatText @ context = 'html'}
+                              </sly> 
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+            </sly>
+            <sly data-sly-test="${productInfo.dimentions}">
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-dimensions"
+                        src="/content/dam/breville-brands/coffee-solution/svg/dimensions-ruler.svg"
+                        alt="Dimensions icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.dimensions' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                              <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.dimentions}">
+                                 ${brevilleUtil.formatText @ context = 'html'}
+                              </sly>  
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+            </sly>
+            <sly data-sly-test="${productInfo.power}">
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-power"
+                        src="/content/dam/breville-brands/coffee-solution/svg/power.svg"
+                        alt="Power icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.power' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                              <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.power}">
+                                 ${brevilleUtil.formatText @ context = 'html'}
+                              </sly> 
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+            </sly>
+            <sly data-sly-test="${productInfo.voltage}">
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-voltage"
+                        src="/content/dam/breville-brands/coffee-solution/svg/voltage.svg"
+                        alt="Voltage icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.voltage' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                              <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.voltage}">
+                                 ${brevilleUtil.formatText @ context = 'html'}
+                              </sly> 
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+            </sly>
+            <sly data-sly-test="${productInfo.warranty}">
+                  <div class="cmp-product-information__detail-feature">
+                     <img 
+                        class=" cmp-product-information__detail-feature-icon cmp-product-information__detail-feature-icon-warranty"
+                        src="/content/dam/breville-brands/coffee-solution/svg/warranty.svg"
+                        alt="Warranty icon"
+                        />
+                     <div class="cmp-product-information__detail-feature-content">
+                        <h4 class="cmp-product-information__detail-feature-title">
+                           ${'pdp.warranty' @ i18n}
+                        </h4>
+                        <div class="cmp-product-information__detail-feature-description">
+                           <ul class="cmp-product-information__detail-feauture-list">
+                              <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=productInfo.warranty}">
+                                 ${brevilleUtil.formatText @ context = 'html'}
+                              </sly>  
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+            </sly>
+           </div>
+        </div>
+     </div>
+  </section>
+</template>

@@ -1,0 +1,219 @@
+.navigation-account-logged-in--popup-active {
+  .cmp-navigation__account-button {
+    @include breakpoint-up(md) {
+      &::before {
+        content: '';
+        position: absolute;
+        right: $spacing-xs;
+        bottom: -$spacing-md;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid $white;
+        z-index: 999999;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.navigation-account-logged-in--account-menu-active {
+  .cmp-navigation__account-button {
+    @extend %account-active-icon-svg;
+    background-size: cover;
+  }
+}
+
+.ReactLoggedIn {
+  position: relative;
+
+  .navigation-logged-in--account-container {
+    right: 0 !important;
+    top: 0 !important;
+    margin: 0;
+    overflow: auto;
+    z-index: 99999;
+    position: fixed;
+    left: 100%;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    pointer-events: none;
+    transition: left var(--transition-speed);
+    box-sizing: border-box;
+    background-color: $white;
+
+    @include breakpoint-up (md) {
+      position: absolute;
+      display: none;
+      left: auto;
+      bottom: auto;
+      height: auto;
+      width: 392px;
+      box-shadow: $box-shadow-popup;
+      top: $spacing-35 !important;
+      right: -$spacing-sm !important;
+    }
+    
+    .cmp-title__text {
+      @extend %font-title-small;
+      margin-bottom: $spacing-md;
+      color: $font-brown;
+      text-align: center;
+      padding: $spacing-md 0;
+      margin-bottom: 0;
+      margin-top: $spacing-sm;
+      @include breakpoint-up (md) {
+        margin-top: 0;
+      }
+    }
+
+    .cmp-container {
+      display: block;
+      background-color: $white;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .cmp-container-loggedin__content {
+      display: block;
+      width: 100%;
+
+      .cmp-text-my-beanz__email {
+        @extend %font-base-medium-h4;
+        color: $jaguar;
+        background-color: $lighter-green;
+        padding: $spacing-ml $spacing-xs;
+        word-break: break-all;
+        width: 100%;
+        text-align: center;
+      }
+
+      .cmp-container-my-beanz__content--ul {
+        text-align: left;
+        padding: $spacing-xxs $spacing-lg;
+
+        @include breakpoint-up (md) {
+          padding: $spacing-xxs $spacing-md;
+        }
+
+        .cmp-text-my-beanz__content--header {
+          @extend %font-bold-xsmall-p;
+          text-transform: uppercase;
+          padding: $spacing-xs 0;
+          color: $font-brown;
+          margin-top: 0;
+        }
+
+        .cmp-container-my-beanz__content--li {
+          padding: $spacing-xs 0;
+          border-top: 1px solid $gray-dove;
+          
+          .cmp-text-my-beanz__content--a {
+            @extend %font-semi-bold-p;
+            display: table;
+            width: 100%;
+            color: $gray-dark;
+            position: relative;
+  
+            .cmp-icon-my-beanz__content--icons {
+              display: table-cell;
+              text-align: right;
+            }
+          } 
+
+          .cmp-text-my-beanz__content--a--call-now {
+            @extend %font-bold-p;
+            padding: 0 $spacing-xs;
+            color: $forest-green;
+          }
+        } 
+      }
+
+      .cmp-text-my-beanz__contact-time {
+        @extend %font-small-p;
+        color: $jaguar;
+        font-weight: $font-weight-medium-bold;
+        padding: $spacing-sm $spacing-ml $spacing-md;
+        text-align: center;
+
+      }
+    }
+
+    .cmp-button-logged-in__button {
+      margin: 0 !important;
+      padding: 0 $spacing-lg $spacing-lg !important;
+      display: block;
+      width: 100%;
+
+      @include breakpoint-up (md) {
+        padding: 0 $spacing-md $spacing-lg !important;
+      }
+
+      .cmp-button {
+        @extend %border-base-green-btn;
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        padding: $spacing-xs;
+        width: 100%;
+      }
+    }
+
+    .close-logged-in-popup {
+      .cmp-button-logged-in__popup--close-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: 0;
+        background: $silver;
+        border-radius: $border-radius-base;
+        cursor: pointer;
+        top: $spacing-xs;
+        right: $spacing-xs;
+        @include breakpoint-up (md) {
+          display: none;
+        }
+
+        .cmp-button__text {
+          display: none;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          height: 2px;
+          margin-top: -$spacing-xxxxs;
+          top: 50%;
+          left: $spacing-xs;
+          right: $spacing-xs;
+          background: $white;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    
+    }
+
+    &--popup-active {
+      left: 0;
+      pointer-events: all;
+      background-color: $white;
+      @include breakpoint-up(md) {
+        display: block;
+        left: auto;
+      }
+    }
+  }
+}

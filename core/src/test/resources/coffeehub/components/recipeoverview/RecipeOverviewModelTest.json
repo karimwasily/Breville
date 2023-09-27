@@ -1,0 +1,138 @@
+{
+    "full_info": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "/content/recipe-detail_full-info",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "blank_info": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "/content/recipe-detail_blank-info",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "null_info": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:title": "recipe-subpage",
+            "cq:template": "/conf/coffeehub/settings/wcm/templates/page-recipe-template",
+            "recipeContentFragmentPath": "",
+            "sling:resourceType": "breville-brands/components/coffeehub/recipe/page-recipe"
+        }
+    },
+    "recipe-detail_full-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "1a54636b-89d0-42f3-93da-28b9f74c54d8"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "1a54636b-89d0-42f3-93da-28b9f74c54d8",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Mon Mar 08 2021 11:55:19 GMT+0700",
+            "lastFragmentSave": "Mon Mar 08 2021 11:55:19 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                        "cq:Taggable"
+                    ],
+                    "heroImage": "/content/Macchiato 2.png",
+                    "heroVideo": "/content/Macchiato 2.mp4",
+                    "recipeAuthor": "test author",
+                    "recipeOwner": "test owner",
+                    "region": "Australia",
+                    "modelNumbers": "abc123",
+                    "skillLevel": "Hard",
+                    "totalTime": "50",
+                    "yield": "10",
+                    "recipeDescription": "<p>With a Macchiato coffee, the idea is to place a dash of nicely steamed, microfoam (bubbly) milk on top of an espresso shot, to add a touch of sweetness. Macchiato roughly translates as ‘mark’ or ‘spot’ in Italian, reflecting the mark or ‘stain’ left by the milk so Baristas could quickly distinguish it from an Espresso.&nbsp;&nbsp;</p>\n",
+                    "totalTime@LastModified": "Thu Mar 04 2021 08:46:24 GMT+0700",
+                    "recipeDescription@ContentType": "text/html",
+                    "ingredientList@LastModified": "Mon Mar 08 2021 11:55:19 GMT+0700",
+                    "stepInstructionList@LastModified": "Mon Mar 08 2021 11:55:19 GMT+0700",
+                    "recipeIntroText@LastModified": "Thu Mar 04 2021 09:07:40 GMT+0700",
+                    "recipeName": "Macchiato",
+                    "heroThumbnail": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato/Macchiato 2.png",
+                    "recipeAuthor@LastModified": "Thu Mar 04 2021 08:46:24 GMT+0700",
+                    "equipmentList@LastModified": "Mon Mar 08 2021 11:55:05 GMT+0700"
+                }
+            }
+        }
+    },
+    "recipe-detail_blank-info": {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable",
+            "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:versionHistory": "2920a3db-ec74-4523-9852-ddd953beab18",
+        "jcr:predecessors": [
+            "fb9967aa-e204-4186-88da-2edd70e0574e"
+        ],
+        "jcr:created": "Thu Mar 04 2021 09:23:04 GMT+0700",
+        "jcr:baseVersion": "fb9967aa-e204-4186-88da-2edd70e0574e",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d79e24bb-ce66-475d-84cd-9e1773055919",
+        "jcr:content": {
+            "jcr:primaryType": "dam:AssetContent",
+            "jcr:title": "Macchiato recipe",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:description": "",
+            "contentFragment": true,
+            "cq:name": "macchiato-recipe",
+            "jcr:lastModified": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "lastFragmentSave": "Thu Mar 04 2021 09:07:40 GMT+0700",
+            "cq:parentPath": "/content/dam/coffeehub/en/us/recipes/recipes-detail/recipe/macchiato",
+            "related": {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            },
+            "data": {
+                "jcr:primaryType": "nt:unstructured",
+                "cq:model": "/conf/coffeehub/settings/dam/cfm/models/recipe-detail",
+                "master": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<div data-vue-cmp="v-teaser">
+  <script type="application/json">
+    {
+      "img": "https://www.goodfood.com.au/content/dam/images/h/0/x/h/4/u/image.related.articleLeadwide.620x349.h0y074.png/1522113238751.jpg",
+      "title": "${properties.text  @ context='unsafe'}"
+    }
+  </script>
+</div>
+<!--/* Following line forces the VueJS clientlibs to be included later on the page */-->
+<sly data-sly-use.attribs="${'com.breville.aem.brands.core.models.Attribs' @ attrib='include-vue', value='true'}" />

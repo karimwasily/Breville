@@ -1,0 +1,220 @@
+.cmp-recipecarouselmulti {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: $spacing-lg 0;
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    align-items: center;
+    padding: $spacing-xl 0 $spacing-xxl 0;
+  }
+
+  &__content {
+    padding: 0 $spacing-page-gutter-mobile;
+    @media (min-width: $screen-md) {
+      padding: 0 $spacing-page-gutter;
+      flex: 2;
+    }
+
+    .cmp-recipecarouselmulti__title {
+      @extend %font-h2;
+      @media (min-width: $screen-md) {
+
+      }
+    }
+
+    .cmp-recipecarouselmulti__text {
+      font-size: $font-size-largetext;
+      margin: $spacing-xs 0 $spacing-md 0;
+      @media (min-width: $screen-md) {
+        margin: $spacing-ml $spacing-xl $spacing-ml 0;
+      }
+    }
+
+    .cmp-recipecarouselmulti__button {
+      width: 100%;
+      @media (min-width: $screen-md) {
+        width: 60%;
+      }
+    }
+  }
+
+  &__carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    @media (min-width: $screen-md) {
+      flex: 3;
+    }
+
+    .cmp-recipecarouselmulti__carousel {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      margin: $spacing-xl 0;
+      @media (min-width: $screen-md) {
+        margin: 0;
+      }
+
+      .cmp-recipecarouselmulti__item {
+        --item-width: 60%;
+        --item-width-mobile: 25%;
+        position: absolute;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        width: var(--item-width);
+        transition: 500ms;
+        
+        @media (min-width: $screen-md) {
+          width: var(--item-width-mobile);
+        }
+
+        &:hover {
+          .cmp-recipecarouselmulti__item--title {
+            text-decoration: underline;
+          }
+        }
+
+        &:focus {
+          outline-offset: -2px;
+        }
+
+        &--active {
+          &--left {
+            opacity: 1;
+            left: calc((100% - var(--item-width)) / 2);
+            pointer-events: auto;
+            @media (min-width: $screen-md) {
+              position: absolute;
+              left: calc(var(--item-width-mobile) * 0.5);
+            }
+          }
+
+          &--middle {
+            opacity: 1;
+            left: calc(((100% - var(--item-width)) / 2) + var(--item-width));
+            pointer-events: none;
+            @media (min-width: $screen-md) {
+              position: absolute;
+              pointer-events: auto;
+              left: calc(var(--item-width-mobile) * 1.5);
+            }
+          }
+
+          &--right {
+            pointer-events: none;
+            left: calc(100% + var(--item-width));
+            @media (min-width: $screen-md) {
+              opacity: 1;
+              pointer-events: auto;
+              position: absolute;
+              left: calc(var(--item-width-mobile) * 2.5);
+            }
+          }
+
+          &--fade {
+            &-left {
+              opacity: 1;
+              left: calc((100% - var(--item-width)) * -1);
+              pointer-events: none;
+              @media (min-width: $screen-md) {
+                position: absolute;
+                left: calc(var(--item-width-mobile) * -0.5);
+              }
+            }
+
+            &-right {
+              pointer-events: none;
+              @media (min-width: $screen-md) {
+                position: absolute;
+                opacity: 1;
+                left: calc(var(--item-width-mobile) * 3.5);
+              }
+            }
+          }
+        }
+
+        &--prev {
+          pointer-events: none;
+          left: calc((100% + var(--item-width)) * -1);
+          @media (min-width: $screen-md) {
+            position: absolute;
+            pointer-events: auto;
+            left: calc(var(--item-width-mobile) * -1.5);
+          }
+        }
+
+        &--next {
+          pointer-events: none;
+          @media (min-width: $screen-md) {
+            position: absolute;
+            left: calc(var(--item-width-mobile) * 4.5);
+          }
+        }
+
+        .cmp-recipecarouselmulti__item--image {
+          position: relative;
+          width: 100%;
+          height: auto; 
+        }
+
+        .cmp-recipecarouselmulti__item--title {
+          position: relative;
+          color: $aubergine;
+          word-break: break-word;
+          hyphens: auto;
+        }
+      }
+    }
+
+    .cmp-recipecarouselmulti__buttons {
+      width: 100%;
+      height: 0;
+      pointer-events: none;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 $spacing-page-gutter-mobile;
+      z-index: 3;
+
+      @media (min-width: $screen-md) {
+        padding: 0 $spacing-page-gutter;
+      }
+
+      .cmp-recipecarouselmulti__button {
+        @include button-with-arrow($width: 50px, $height: 50px);
+        background: $white-smoke;
+        pointer-events: auto;
+        font-size: 0;
+      }
+    }
+
+    .cmp-recipecarouselmulti__mask {
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+
+      &-before {
+        // * for safari compatability when we go to 'transparent' it needs to be an exact match of previous color with 0 alpha
+        // https://css-tricks.com/thing-know-gradients-transparent-black/
+        background: linear-gradient(to right, $creme 0%, rgba($creme, 0) 10%);
+      }
+
+      &-after {
+        // * for safari compatability when we go to 'transparent' it needs to be an exact match of previous color with 0 alpha
+        // https://css-tricks.com/thing-know-gradients-transparent-black/
+        background: linear-gradient(to left, $creme 0%, rgba($creme, 0) 10%);
+      }
+    }
+  } 
+}

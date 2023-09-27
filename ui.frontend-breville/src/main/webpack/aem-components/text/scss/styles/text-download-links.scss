@@ -1,0 +1,16 @@
+.cmp-text--download-links {
+  p {
+    font-family: $font-family-primary-light;
+    margin-bottom: 0;
+      
+    a {
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: $green-cola;
+        text-decoration: underline;
+      }
+    }
+  }
+} 

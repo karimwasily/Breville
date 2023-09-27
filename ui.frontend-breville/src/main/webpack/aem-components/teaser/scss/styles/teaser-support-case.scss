@@ -1,0 +1,54 @@
+.cmp-teaser--support-case {
+  .cmp-teaser {
+    padding: 0 $spacing-lg;
+    margin: $spacing-sm auto $spacing-xxl;
+    text-align: center;
+    @media (min-width:$screen-md) {
+      max-width: 20rem;
+      padding: 0;
+    }
+    @media (min-width:$screen-lg) {
+      max-width: 25rem;
+    }
+
+    &__content {
+      .cmp-teaser__title {
+        @extend %font-h2;
+        font-family: $font-family-arial;
+        color: $black;
+        margin-bottom: 1.5rem;
+      }
+
+      .cmp-teaser__description {
+        p {
+          font-size: $font-size-base;
+          font-family: $font-family-secondary;
+          color: $black;
+          line-height: $line-height-base;
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      .cmp-teaser__action-container {
+        .cmp-teaser__action-link {
+          @extend %action-link;
+          color: $white;
+          border: 1px solid $purple;
+          background-color: $purple;
+          width: 100%;
+          display: block;
+          padding: $spacing-sm;
+          border-radius: 6px;
+          outline: none;
+
+          &:hover,
+          &:focus {
+            color: $purple;
+            background-color: $white;
+            box-shadow: 0 0 0 0.2rem rgba(57 , 21 , 56 , 0.5);
+          }
+        }
+      }
+    }
+  }
+}

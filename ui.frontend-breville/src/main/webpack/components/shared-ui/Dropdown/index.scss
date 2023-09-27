@@ -1,0 +1,119 @@
+.select-box {
+  --dropdown-height: 34px;
+  --dropdown-width: 150px;
+  position: relative;
+  display: block;
+  min-width: var(--dropdown-width);
+  height: var(--dropdown-height);
+  margin: 0 auto;
+  z-index: 2; // Set to higher index to layer over Features or Price Range Facet Containers
+  
+  &__current {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    
+    &:focus {
+      + .select-box__list {
+        border: 1px solid $cs-color-gray-30;
+        background: $cs-white;
+        border-radius: $cs-border-radius-8;
+        opacity: 1;
+        animation-name: none;
+        margin-top: $cs-spacing-5;
+        padding-top: $cs-spacing-10;
+        padding-bottom: $cs-spacing-10;
+        
+        .select-box__option {
+          height: var(--dropdown-height);
+          cursor: pointer;
+          padding: $cs-spacing-15;
+        }
+      }
+      
+      .select-box__icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: $cs-spacing-15;
+    transform: translateY(-50%);
+    transition: $cs-transition-speed-250 $cs-transition-easing;
+  }
+  
+  // Selected item
+  &__value {
+    @extend %cs-font-p-2-bold;
+    display: flex;
+    text-align: right;
+    padding-right: $cs-spacing-35;
+  }
+  
+  &__input {
+    display: none;
+    
+    &:checked + .select-box__input-text {
+      display: block;
+    }
+
+    // * react component dynamiclly applies this classname
+    + .show-text {
+      display: block;
+    }
+  }
+  
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding-top: $cs-spacing-5;
+    height: var(--dropdown-height);
+    background-color: $cs-white;
+  }
+  
+  &__list {
+    position: absolute;
+    width: 100%;
+    margin-top: $cs-spacing-5;
+    padding-top: $cs-spacing-10;
+    list-style: none;
+    opacity: 0;
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    overflow: hidden;
+  }
+  
+  // Dropdown list options
+  &__option {
+    @extend %cs-font-p-4;
+    display: flex;
+    justify-content: flex-start; // Left align dropdown list options
+    align-items: center;
+    padding-left: $cs-spacing-15;
+    background-color: $cs-white;
+    height: var(--dropdown-height);
+    overflow: hidden;
+    
+    &:hover,
+    &:focus {
+      background-color: $cs-color-gray-50;
+    }
+  }
+}
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+}

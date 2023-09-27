@@ -1,0 +1,96 @@
+.ReactModal__Body--open {
+  overflow-y: hidden !important;
+
+  .video-modal__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: rgba($cs-black, 0.65);
+
+    @media (min-width: $cs-screen-md) {
+      justify-content: center;
+    }
+
+    .ReactModal__Content {
+      outline: none !important;
+
+      .video-modal__modal {
+        overflow-y: auto;
+      }
+
+      .video-modal__container {
+        position: relative;
+
+        width: 100vw;
+        height: 100vh;
+        padding: $cs-spacing-20 $cs-spacing-40;
+
+        background-color: $cs-white-grey;
+
+        .video-modal__header {
+          margin-bottom: $cs-spacing-20;
+  
+          .video-modal__close-icon {
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            z-index: 1;
+            @media (min-width: $cs-screen-lg) {
+              top: 50%;
+              right: 6%;
+
+              transform: translate(0%, -50%);
+            }
+
+            .close-icon-button__btn {
+              background: unset !important;
+
+              .close-icon-button__icon {
+                background-color: $cs-black !important;
+              }
+            }
+          
+          }
+        }
+  
+        .video-modal__content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          width: 70vw;
+          height: 60vh;
+
+          transform: translate(-50%, -50%);
+          @media (min-width: $cs-screen-lg) {
+            width: 80vw;
+            height: 80vh;
+          }
+
+          .player-wrapper {
+            position: relative;
+
+            padding: unset !important;
+
+            .react-player {
+              width: 100% !important;
+              height: 50vh !important;
+              @media (min-width: $cs-screen-lg) {
+                height: 80vh !important;      
+              }
+            }  
+          }
+        }
+      }
+    }
+  }
+}

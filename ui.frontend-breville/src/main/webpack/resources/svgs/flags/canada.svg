@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg viewBox="0 0 20 20" id="Flag_CAN" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<path id="da" d="M0 0h20v20H0z"/>
+			<rect id="dc" x="0" y="0" width="28" height="20" rx="2"/>
+		</defs>
+		<g fill="none" fill-rule="evenodd">
+			<mask id="db" fill="#fff">
+				<use xlink:href="#da"/>
+			</mask>
+			<use fill="#D8D8D8" xlink:href="#da"/>
+			<g mask="url(#db)">
+				<g transform="translate(-4)">
+					<mask id="dd" fill="#fff">
+						<use xlink:href="#dc"/>
+					</mask>
+					<use fill="#FFF" xlink:href="#dc"/>
+					<rect stroke="#F5F5F5" stroke-width=".5" x=".25" y=".25" width="27.5" height="19.5" rx="2"/>
+					<path fill="#9B9B9B" mask="url(#dd)" d="M20 0h8v20h-8zM0 0h8v20H0zM15.566 9.768c-.129.128-.204.089-.166-.1l.6-3.001-1.333.666-.667-2-.667 2L12 6.667l.6 3.001c.037.183-.038.227-.166.1l-.868-.87a.331.331 0 0 0-.473.01l-.426.425-1.334-.666L10 10l-.426.426a.337.337 0 0 0-.011.47l1.77 1.77h2l.334 2h.666l.334-2h2l1.77-1.77a.33.33 0 0 0-.011-.47L18 10l.667-1.333-1.334.666-.426-.426a.335.335 0 0 0-.473-.008l-.868.869z"/>
+				</g>
+			</g>
+		</g>
+	</svg>
+</svg>

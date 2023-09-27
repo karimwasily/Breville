@@ -1,0 +1,278 @@
+<!--/*
+    Copyright 2015 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<sly data-sly-test="${wcmmode.edit}">
+  <p data-react-app-placeholder>MyBreville Component</p>
+</sly>
+<div data-react-app="MyBrevilleApplication" id="mybreville" class="cmp-mybreville" data-cmp-is="mybreville" data-sly-test="${!wcmmode.edit}"
+  data-sly-use.model="com.breville.aem.brands.core.models.MyBreville"
+  data-sly-use.address="com.breville.aem.brands.core.models.CheckoutModel">
+  <script type="application/json">
+    { "aemData" : {
+        "general": ${ model.getGeneralSettingJson @ context='unsafe' },
+        "myBreville": ${ model.getDashboardPageJson @ context='unsafe' },
+        "mySubscription": ${ model.getSubscriptionPageJson @ context='unsafe' }
+      },
+      "countryState": [ {
+      "displayName" : "United States",
+      "code" : "us",
+      "states" : [ {
+        "displayName" : "Alabama",
+        "code" : "AL"
+      }, {
+        "displayName" : "Alaska",
+        "code" : "AK"
+      }, {
+        "displayName" : "American Samoa",
+        "code" : "AS"
+      }, {
+        "displayName" : "Arizona",
+        "code" : "AZ"
+      }, {
+        "displayName" : "Arkansas",
+        "code" : "AR"
+      }, {
+        "displayName" : "Armed Forces Pacific",
+        "code" : "AP"
+      }, {
+        "displayName" : "California",
+        "code" : "CA"
+      }, {
+        "displayName" : "Colorado",
+        "code" : "CO"
+      }, {
+        "displayName" : "Connecticut",
+        "code" : "CT"
+      }, {
+        "displayName" : "Delaware",
+        "code" : "DE"
+      }, {
+        "displayName" : "District of Columbia",
+        "code" : "DC"
+      }, {
+        "displayName" : "Federated Micronesia",
+        "code" : "FM"
+      }, {
+        "displayName" : "Florida",
+        "code" : "FL"
+      }, {
+        "displayName" : "Georgia",
+        "code" : "GA"
+      }, {
+        "displayName" : "Guam",
+        "code" : "GU"
+      }, {
+        "displayName" : "Hawaii",
+        "code" : "HI"
+      }, {
+        "displayName" : "Idaho",
+        "code" : "ID"
+      }, {
+        "displayName" : "Illinois",
+        "code" : "IL"
+      }, {
+        "displayName" : "Indiana",
+        "code" : "IN"
+      }, {
+        "displayName" : "Iowa",
+        "code" : "IA"
+      }, {
+        "displayName" : "Kansas",
+        "code" : "KS"
+      }, {
+        "displayName" : "Kentucky",
+        "code" : "KY"
+      }, {
+        "displayName" : "Louisiana",
+        "code" : "LA"
+      }, {
+        "displayName" : "Maine",
+        "code" : "ME"
+      }, {
+        "displayName" : "Marshall Islands",
+        "code" : "MH"
+      }, {
+        "displayName" : "Maryland",
+        "code" : "MD"
+      }, {
+        "displayName" : "Massachusetts",
+        "code" : "MA"
+      }, {
+        "displayName" : "Michigan",
+        "code" : "MI"
+      }, {
+        "displayName" : "Minnesota",
+        "code" : "MN"
+      }, {
+        "displayName" : "Mississippi",
+        "code" : "MS"
+      }, {
+        "displayName" : "Missouri",
+        "code" : "MO"
+      }, {
+        "displayName" : "Montana",
+        "code" : "MT"
+      }, {
+        "displayName" : "Nebraska",
+        "code" : "NE"
+      }, {
+        "displayName" : "Nevada",
+        "code" : "NV"
+      }, {
+        "displayName" : "New Hampshire",
+        "code" : "NH"
+      }, {
+        "displayName" : "New Jersey",
+        "code" : "NJ"
+      }, {
+        "displayName" : "New Mexico",
+        "code" : "NM"
+      }, {
+        "displayName" : "New York",
+        "code" : "NY"
+      }, {
+        "displayName" : "North Carolina",
+        "code" : "NC"
+      }, {
+        "displayName" : "North Dakota",
+        "code" : "ND"
+      }, {
+        "displayName" : "Northern Mariana Islands",
+        "code" : "MP"
+      }, {
+        "displayName" : "Ohio",
+        "code" : "OH"
+      }, {
+        "displayName" : "Oklahoma",
+        "code" : "OK"
+      }, {
+        "displayName" : "Oregon",
+        "code" : "OR"
+      }, {
+        "displayName" : "Palau",
+        "code" : "PW"
+      }, {
+        "displayName" : "Pennsylvania",
+        "code" : "PA"
+      }, {
+        "displayName" : "Puerto Rico",
+        "code" : "PR"
+      }, {
+        "displayName" : "Rhode Island",
+        "code" : "RI"
+      }, {
+        "displayName" : "South Carolina",
+        "code" : "SC"
+      }, {
+        "displayName" : "South Dakota",
+        "code" : "SD"
+      }, {
+        "displayName" : "Tennessee",
+        "code" : "TN"
+      }, {
+        "displayName" : "Texas",
+        "code" : "TX"
+      }, {
+        "displayName" : "US Virgin Islands",
+        "code" : "VI"
+      }, {
+        "displayName" : "United States Minor Outlying Islands",
+        "code" : "UM"
+      }, {
+        "displayName" : "Utah",
+        "code" : "UT"
+      }, {
+        "displayName" : "Vermont",
+        "code" : "VT"
+      }, {
+        "displayName" : "Virginia",
+        "code" : "VA"
+      }, {
+        "displayName" : "Washington",
+        "code" : "WA"
+      }, {
+        "displayName" : "West Virginia",
+        "code" : "WV"
+      }, {
+        "displayName" : "Wisconsin",
+        "code" : "WI"
+      }, {
+        "displayName" : "Wyoming",
+        "code" : "WY"
+      } ],
+      "isdCode" : "+1",
+      "countryCode" : "USA",
+      "shippingCountryCode" : "us",
+      "zipCodeRegexPattern" : "^[^\\\\s\\\\D][^<>;\\\\D]{4}$",
+      "countryName" : null,
+      "countryNumericCode" : null,
+      "phoneNumberPlaceHolder" : null,
+      "phoneNumberRegex" : null,
+      "phoneNumberMask" : null
+    }, {
+      "displayName" : "Canada",
+      "code" : "ca",
+      "states" : [ {
+        "displayName" : "Alberta",
+        "code" : "AB"
+      }, {
+        "displayName" : "British Columbia",
+        "code" : "BC"
+      }, {
+        "displayName" : "Manitoba",
+        "code" : "MB"
+      }, {
+        "displayName" : "New Brunswick",
+        "code" : "NB"
+      }, {
+        "displayName" : "Newfoundland and Labrador",
+        "code" : "NL"
+      }, {
+        "displayName" : "Northwest Territories",
+        "code" : "NT"
+      }, {
+        "displayName" : "Nova Scotia",
+        "code" : "NS"
+      }, {
+        "displayName" : "Nunavut",
+        "code" : "NU"
+      }, {
+        "displayName" : "Ontario",
+        "code" : "ON"
+      }, {
+        "displayName" : "Prince Edward Island",
+        "code" : "PE"
+      }, {
+        "displayName" : "Quebec",
+        "code" : "QC"
+      }, {
+        "displayName" : "Saskatchewan",
+        "code" : "SK"
+      }, {
+        "displayName" : "Yukon Territories",
+        "code" : "YT"
+      } ],
+      "isdCode" : "+1",
+      "countryCode" : "CAN",
+      "shippingCountryCode" : "us",
+      "zipCodeRegexPattern" : "^[A-Za-z]\\d[A-Za-z][ ]?\\d[A-Za-z]\\d$",
+      "countryName" : null,
+      "countryNumericCode" : null,
+      "phoneNumberPlaceHolder" : null,
+      "phoneNumberRegex" : null,
+      "phoneNumberMask" : null
+    } ] }
+  </script>
+</div>

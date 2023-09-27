@@ -1,0 +1,6 @@
+.cmp-container--cs-empty-cart {
+    padding-bottom: $cs-spacing-110;
+    @media (min-width: $screen-md) {
+        padding-bottom: $cs-spacing-130;
+    }
+}

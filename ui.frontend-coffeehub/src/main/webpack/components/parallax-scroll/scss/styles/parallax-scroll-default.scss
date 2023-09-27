@@ -1,0 +1,60 @@
+.parallax-scroll,
+.cmp-parallax-scroll--default {
+  .cmp-parallax-scroll {
+    position: relative;
+    width: 100%;
+    display: flex;
+    
+    .cmp-parallax-scroll__background {
+      > img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: 0;
+        @media (min-width: $screen-md) {
+          width: 100%;
+        }
+      }
+    }
+
+    .cmp-parallax-scroll__background-top {
+      > img {
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    .cmp-parallax-scroll__background-middle {
+      > img {
+        position: absolute;
+        top: 40%;
+        @media (min-width: $screen-md) {
+          top: 0;
+        }
+      }
+    }
+
+    .cmp-parallax-scroll__background-bottom {
+      > img {
+        position: absolute;
+        bottom: 0;
+        @media (min-width: $screen-md) {
+          top: 0;
+        }
+      }
+    }
+    
+    .cmp-parallax-scroll__content {
+      position: relative;
+      width: 100%;
+      height: fit-content;
+      z-index: 1;
+    }
+    
+    .cmp-parallax-scroll__content--editor {
+      margin: $spacing-lg 0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+// Commercetools configurations
+{
+	"Factory PID": "com.breville.aem.brands.core.services.impl.CommerceToolsConfigurationsImpl",
+	"hostURL": "https://auth.us-central1.gcp.commercetools.com",
+	"apiURL": "https://api.us-central1.gcp.commercetools.com/",
+	"clientSecret": "KzPcZT61IIMdSisnvH2Nm6rpevt2zBU4",
+	"clientId": "60POUJBC6-LWsnMsTyBhJhaj",
+	"projectKey": "breville-dev",
+	"scope": "view_published_products:breville-dev view_products:breville-dev create_anonymous_token:breville-dev view_categories:breville-dev manage_my_profile:breville-dev introspect_oauth_tokens:breville-dev manage_my_orders:breville-dev manage_my_shopping_lists:breville-dev manage_my_payments:breville-dev"
+}

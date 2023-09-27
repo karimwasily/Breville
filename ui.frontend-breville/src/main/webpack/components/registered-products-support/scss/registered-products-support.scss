@@ -1,0 +1,150 @@
+.cmp-registered-products {
+
+  margin-bottom: $cs-spacing-20;
+  padding: $cs-spacing-25;
+
+  background-color: $cs-white;
+  border-radius: $cs-border-radius-8;
+
+  @media (min-width: $cs-screen-md) {
+    margin: 0;
+  }
+
+  .cmp-registered-products__header {
+    position: relative;
+
+    display: block;
+    
+    padding-bottom: $cs-spacing-30;
+    
+
+    &-title {
+      @extend %cs-font-p-bold;
+      margin-bottom: $cs-spacing-10;
+
+      line-height: $cs-line-height-h6;
+    }
+
+    &-description {
+      margin-bottom: $cs-spacing-30;
+
+    }
+
+    .all-product-guides-link {
+      position: absolute;
+      bottom: $cs-spacing-15;
+
+      text-align: left;
+  
+      text-decoration: underline;
+  
+      @media (min-width: $cs-screen-md) {
+        top: 0;
+        right: $cs-spacing-25;
+        bottom: unset;
+
+        text-align: right;
+      }
+  
+    }
+  }
+
+  &__tiles {
+    position: relative;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template: repeat(4, 1fr);
+    width: 100%;
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .splide {
+      .splide__track {
+        width: 100%;
+
+        .splide__list {
+          display: grid;
+          grid-auto-flow: column;
+          grid-gap: $cs-spacing-10;
+          width: unset;
+          margin: $cs-spacing-35 0 $cs-spacing-40;
+          overflow-x: auto;
+          overflow-y: hidden;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .splide__slide {
+            width: unset;
+
+            &:not(:last-child) {
+              margin-right: $cs-spacing-10;
+            }
+
+            @media (min-width: $cs-screen-md) {
+              width: calc(25% - #{$cs-spacing-40});
+
+              &:not(:last-child) {
+                margin-right: $cs-spacing-40;
+              }
+            }
+          }
+          
+          @media (min-width: $cs-screen-md) {
+            display: flex;
+            width: 100%;
+          }
+        }
+
+        @media (min-width: $cs-screen-md) {
+          width: 90%;
+          margin: auto;
+        }
+      }
+    }
+
+    &-product-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      .tile-image {
+        text-align: center;
+      }
+    
+      .tile-product-name {
+        @extend %cs-font-p-3;
+        font-weight: $cs-font-weight-bold;
+        text-align: center;
+      }
+    }
+
+    &__title {
+      @media (min-width: $cs-screen-md) {
+        margin-bottom: $cs-spacing-15;
+
+        line-height: $cs-line-height-h5;
+      }
+    }
+
+    @media (min-width: $cs-screen-md) {
+      display: block;
+      overflow: hidden;
+
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.cmp-text--livechat {
+  .cmp-text {
+    p {
+      @extend %font-h4;
+      color: $black;
+      text-align: center;
+      padding: $spacing-lg 0;
+      margin-bottom: 0;
+      @media (min-width:$screen-md) {
+        padding: $spacing-lg 0;
+      }
+    }
+
+    h2 {
+      &::after {
+        display: block;
+        content: '';
+        height: 4px;
+        width: 24px;
+        background-color: $black;
+        margin: 1rem auto;
+      }
+    }
+  }
+}
+
+.cmp-text--livechat-home {
+  .cmp-text {
+    p {
+      padding: 0;
+    }
+  }
+}

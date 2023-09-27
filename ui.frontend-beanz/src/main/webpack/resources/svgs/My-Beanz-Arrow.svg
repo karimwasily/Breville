@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="17px" viewBox="0 0 11 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>My Beanz Arrow</title>
+    <g id="visual-design-02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07.00-Homepage---logged-in---menu---desktop" transform="translate(-1314.000000, -118.000000)" fill="#A25E41" fill-rule="nonzero">
+            <g id="My-Beanz-Arrow-Group" transform="translate(1164.000000, 103.000000)">
+                <path d="M158.046493,15.4604813 L150.520695,22.3419231 C149.826488,22.9766922 149.826488,24.0227572 150.520375,24.6579982 L150.608346,24.7305451 L150.643867,24.755875 L158.062883,31.5393046 C158.390722,31.8390734 158.824674,32 159.271328,32 C159.717946,32 160.151461,31.8390784 160.479305,31.5393046 L160.569673,31.4502653 C161.172131,30.8102183 161.142008,29.8293274 160.479305,29.2233648 L154.211533,23.4922083 L160.462447,17.7768493 C161.156653,17.1413155 161.156653,16.0952505 160.462447,15.4604813 C159.790981,14.8465062 158.717959,14.8465062 158.046493,15.4604813 Z" id="My-Beanz-Arrow" transform="translate(155.500000, 23.500000) rotate(180.000000) translate(-155.500000, -23.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

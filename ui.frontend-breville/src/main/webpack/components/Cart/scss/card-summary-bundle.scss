@@ -1,0 +1,146 @@
+.cart-bundle-summary {
+  position: relative;
+
+  padding: 0;
+
+  &__thumnail_title {
+    display: flex;
+
+    .cart-bundle-summary__thumbnail {
+      width: 100%;
+      max-width: 90px;
+      height: 90px;
+      margin-right: $cs-spacing-20;
+      overflow: hidden;
+
+      border-radius: $cs-border-radius-8;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (min-width: $cs-screen-sm) {
+        max-width: 125px;
+        height: 125px;
+      }
+    }
+  }
+
+  &__title {
+    &--desktop {
+      @extend %cs-font-h12-bold;
+      display: none;
+      @media (min-width: $cs-screen-md) {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      @extend %cs-font-h12-bold;
+      margin-bottom: $cs-spacing-10;
+      padding-right: $cs-spacing-20;
+      @media (min-width: $cs-screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__warranty {
+    @extend %cs-font-p-4;
+  }
+
+  &__price {
+    @extend %cs-font-p-2-bold;
+
+    &--mobile {
+      @extend %cs-font-p-2-bold;
+      margin-bottom: $cs-spacing-10;
+      @media (min-width: $cs-screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__quantity {
+
+    @extend %cs-font-p-2-bold;
+    display: none;
+
+    &--mobile {
+      @extend %cs-font-p-2;
+      display: block;
+      margin-bottom: $cs-spacing-15;
+      @media (min-width: $cs-screen-md) {
+        display: none;
+      }
+    }
+    @media (min-width: $cs-screen-md) {
+      display: block;
+
+      text-align: center;
+    }
+  }
+
+  &__save-later {
+    @extend %cs-font-p-4;
+    display: inline-block;
+    margin-top: $cs-spacing-15;
+
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__total {
+    @extend %cs-font-p-2-bold;
+    width: 100%;
+
+    text-align: right;
+
+    &--mobile {
+      margin-top: $cs-spacing-15;
+
+      span {
+        @extend %cs-font-p-2-bold;
+      }
+      @media (min-width: $cs-screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $cs-screen-md) {
+    .quantity {
+      max-width: 100%;
+      margin: -$cs-spacing-10 auto;
+    }
+
+    >.row {
+      justify-content: flex-end;
+
+      &.no-gutters > [class*=col-] {
+        padding: 0 $cs-spacing-10;
+  
+        &:first-child {
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .col-xs-4 {
+    max-width: max-content;
+    @media (min-width: $cs-screen-md) {
+      max-width: 100%;
+    }
+  }  
+}

@@ -1,0 +1,48 @@
+{
+  "totalSize":2,
+  "done":true,
+  "records":[
+     {
+        "attributes":{
+           "type":"ContactPointAddress",
+           "url":"/services/data/v49.0/sobjects/ContactPointAddress/8lW1h0000008ORqEAM"
+        },
+        "Id":"8lW1h0000008ORqEAM",
+        "ParentId":"0011h00000mglyZAAQ",
+        "Name":"shippingAltAddressOneForm",
+        "Street":"137 W\n111th St",
+        "City":"New York",
+        "PostalCode":"10006",
+        "State":"NY",
+        "StateCode":"NY",
+        "CountryCode":"US",
+        "Country":"USA",
+        "IsDefault":true,
+        "AddressType":"Shipping",
+        "Shipping_Street_Line_1__c":"137 W",
+        "Shipping_Street_Line_2__c":"111th St",
+        "CreatedDate":"2020-12-08T09:58:26.000+0000"
+     },
+     {
+        "attributes":{
+           "type":"ContactPointAddress",
+           "url":"/services/data/v49.0/sobjects/ContactPointAddress/8lW1h0000008ORvEAM"
+        },
+        "Id":"8lW1h0000008ORvEAM",
+        "ParentId":"0011h00000mglyZAAQ",
+        "Name":"newAddress",
+        "Street":"416 W\n8th St",
+        "City":"Los Angeles",
+        "PostalCode":"90014",
+        "State":"CA",
+        "StateCode":"CA",
+        "CountryCode":"US",
+        "Country":"USA",
+        "IsDefault":false,
+        "AddressType":"Shipping",
+        "Shipping_Street_Line_1__c":"416 W",
+        "Shipping_Street_Line_2__c":"8th St",
+        "CreatedDate":"2020-12-08T10:00:04.000+0000"
+     }
+  ]
+}

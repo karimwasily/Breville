@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-07-01T02:39:39.880Z"
+        cq:lastModifiedBy="Mahesh.Kotapali@breville.com"
+        cq:lastReplicated="{Date}2021-07-01T02:39:52.649Z"
+        cq:lastReplicatedBy="Mahesh.Kotapali@breville.com"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Beanz Analytics"
+        jcr:uuid="b3e422c4-f011-4b54-8130-44ea9ffc954e"
+        sling:resourceType="cq/dtm-reactor/components/conf/page"
+        company="CO64603558513e4e5d966f21803bd8107a"
+        imsConfigId="Adobe Launch"
+        includeProdOnAuthor="{Boolean}false"
+        property="PRa05cf883b1c640b48f60f807cff849ee"
+        tagComponentFooter="cq/dtm-reactor/components/scripttag/footer"
+        tagComponentFooterRank="{Long}100"
+        tagComponentHeader="cq/dtm-reactor/components/scripttag/header"
+        tagComponentHeaderRank="{Long}100">
+        <development
+            jcr:primaryType="nt:unstructured"
+            environment="EN48a48fac17f84c72992eac7fb8083e3f"/>
+        <staging
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}false"
+            enablePollingImporter="false"
+            environment="EN0cd29d7cc531437c9b6519ba6bce35bb"
+            libraryUri="//assets.adobedtm.com/65ae8132784a/c98989a2baa3/launch-ed43f6552448-development.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+        <production
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}false"
+            enablePollingImporter="false"
+            environment="ENe9cbde1ecf6f46d5a0564c735dcc95fa"
+            libraryUri="//assets.adobedtm.com/65ae8132784a/c98989a2baa3/launch-ed43f6552448-development.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+    </jcr:content>
+</jcr:root>

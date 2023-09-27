@@ -1,0 +1,14 @@
+// Configuration Externalizer Key
+{
+  "externalizer.domains":[
+    "local https://author-p34580-e132605.adobeaemcloud.com",
+    "author https://author-p34580-e132605.adobeaemcloud.com",
+    "publish https://dev-new.breville.com",
+    "publishsage https://dev-new.sage.com",
+    "publishae https://dev-new.sage.ae",
+    "publishBeanz https://dev-new.beanz.com"    
+  ],
+  "externalizer.host":"",
+  "externalizer.contextpath":"",
+  "externalizer.encodedpath":false
+}

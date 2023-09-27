@@ -1,0 +1,9 @@
+.cmp-container-eh-background-light-grey {
+  padding: 0 $cs-spacing-15;
+
+  background-color: $cs-gray-95;
+
+  @media (min-width: $cs-screen-md) {
+    padding: 0 $cs-spacing-25;
+  }
+}

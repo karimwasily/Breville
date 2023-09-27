@@ -1,0 +1,46 @@
+@import 'cmp-teaser-cs-pdp-dna-left-image';
+
+.product-dna {
+  max-width: $cs-max-width-900;
+  margin: $cs-spacing-100 auto;
+
+  .cmp-product-dna--title {
+    margin-bottom: $cs-spacing-40;
+
+    text-align: center;
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-35;
+    }
+  }
+
+  // subheadings
+  .cmp-teaser__title {
+    text-transform: capitalize;
+  }
+
+  .cmp-teaser--cs-pdp-dna-left-image {
+    @extend %cmp-teaser--cs-pdp-dna-left-image;
+  }
+
+  .cmp-teaser--cs-pdp-dna-right-image {
+    @extend %cmp-teaser--cs-pdp-dna-left-image;
+    margin: $cs-spacing-40 0;
+    @media (min-width: $cs-screen-md) {
+      direction: rtl;
+
+      .cmp-teaser {
+        &__content {
+          padding-right: 50px;
+          padding-left: 0;
+
+
+          direction: ltr;
+        }
+
+        &__image {
+          direction: ltr;
+        }
+      }
+    }
+  }
+}

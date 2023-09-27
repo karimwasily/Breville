@@ -1,0 +1,18 @@
+.container--grid-wrapper > div {
+    margin-top: 10px;
+    > div {
+        &::before {
+            display: none;
+        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        @include breakpoint-up (md) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .cmp-teaser--tile {
+            width: 100% !important;
+        }
+    }
+}

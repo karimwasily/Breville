@@ -1,0 +1,36 @@
+// this style wrapper modifies '.cmp-teaser--tile-banner'
+.cmp-teaser--tile-banner-middle {
+  $arrow-spacing: 5rem;
+  @extend %cmp-teaser--tile-banner;
+
+  .cmp-teaser {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .cmp-teaser__title {
+        display: block;
+        text-align: center;
+      }
+
+      .cmp-teaser__description {
+        display: block;
+        text-align: center;
+        font-size: $font-size-largetext;
+      }
+      
+      .cmp-teaser__action-container {
+        .cmp-teaser__action-link {
+          font-size: $font-size-body;
+          padding-right: $spacing-xs + $arrow-spacing;
+        }
+      }
+    }
+  }   
+}

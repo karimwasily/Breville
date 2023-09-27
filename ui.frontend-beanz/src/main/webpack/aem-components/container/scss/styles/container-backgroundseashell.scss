@@ -1,0 +1,24 @@
+.cmp-container--background-seashell {
+  background-color: $seashell;
+
+  .cmp-container {
+    @extend %container-with-button;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint-up(xl) {
+      padding-bottom: $spacing-xxl;
+    }
+    @include breakpoint-up(xxl) {
+      max-width: $max-width + 10px;
+      float: none;
+      clear: both;
+      margin: auto;
+      overflow: unset;
+    }
+
+    .cmp-title--brown {
+      margin-bottom: $spacing-xxl;
+      padding-top: $spacing-lg;
+    }
+  }
+}

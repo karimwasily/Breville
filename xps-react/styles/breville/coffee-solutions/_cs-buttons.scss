@@ -1,0 +1,721 @@
+////////////////////
+// BUTTONS
+////////////////////
+
+////////////////////
+// Basic Button Properties
+%cs-button {
+  font-family: $cs-font-family-paragraph;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid;
+  transition: color $transition-speed-fast $transition-easing, background-color $transition-speed-fast $transition-easing, border $transition-speed-fast $transition-easing, border-color $transition-speed-fast $transition-easing, text-shadow $transition-speed-fast $transition-easing, outline $transition-speed-fast $transition-easing;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+%cs-button-cta {
+  display: flex;
+  justify-content: center;
+
+  .cmp-button {
+    display: flex;
+    text-align: center;
+    border: 0;
+
+    .cmp-button__text {
+      // @extend %cs-button-purple-fill-medium;
+      font-weight: $cs-font-weight-bold;
+    }
+  }
+}
+
+////////////////////
+// Button Sizes
+%cs-button-small {
+  @extend %cs-button;
+  padding: $cs-spacing-5 $cs-spacing-40;
+}
+%cs-button-medium {
+  @extend %cs-button;
+  padding: $cs-spacing-15 $cs-spacing-50;
+}
+%cs-button-large {
+  @extend %cs-button;
+  padding: $cs-spacing-15 $cs-spacing-110;
+}
+
+////////////////////
+// General Buttons
+%cs-button-green-fill-small {
+  @extend %cs-button-small;
+  @include cs-button($cs-white, $cs-color-secondary);
+}
+
+.cmp-button--cs-green--fill--small {
+  @extend %cs-button-cta;
+
+  .cmp-button__text {
+    @extend %cs-button-green-fill-small;
+  }
+}
+
+%cs-button-green-fill-medium {
+  @extend %cs-button-medium;
+  @include cs-button($cs-white, $cs-color-secondary);
+}
+
+.cmp-button--cs-green--fill--medium {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-green-fill-medium;
+  }
+}
+
+%cs-button-green-fill-large {
+  @extend %cs-button-large;
+  @include cs-button($cs-white, $cs-color-secondary);
+}
+
+.cmp-button--cs-green--fill--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-green-fill-large;
+  }
+}
+
+%cs-button-purple-small {
+  @extend %cs-button-small;
+  @include cs-button($cs-color-commercial, $cs-white);
+}
+
+.cmp-button--cs-purple--small {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-small;
+  }
+}
+
+%cs-button-purple-medium {
+  @extend %cs-button-medium;
+  @include cs-button($cs-color-commercial, $cs-white);
+}
+
+.cmp-button--cs-purple--medium {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-medium;
+  }
+}
+
+%cs-button-purple-large {
+  @extend %cs-button-large;
+  @include cs-button($cs-color-commercial, $cs-white);
+}
+
+.cmp-button--cs-purple--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-large;
+  }
+}
+
+%cs-button-purple-large-bold {
+  @extend %cs-button-purple-large;
+  font-weight: $cs-font-weight-bold;
+}
+
+.cmp-button--cs-purple--large--bold {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-large-bold;
+  }
+}
+
+%cs-button-black-small {
+  @extend %cs-button-small;
+  @include cs-button($cs-black, $cs-white);
+}
+
+.cmp-button--cs-black--small {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-black-small;
+  }
+}
+
+%cs-button-black-medium {
+  @extend %cs-button-medium;
+  @include cs-button($cs-black, $cs-white);
+}
+
+%cs-button-gunmetal-medium {
+  @extend %cs-button-medium;
+  @include cs-button($cs-gunmetal, $cs-white);
+}
+
+%cs-button-gunmetal-medium-bold {
+  @extend %cs-button-gunmetal-medium;
+  font-weight: $cs-font-weight-bold;
+}
+
+%cs-button-gunmetal-medium-transparent {
+  @extend %cs-button-gunmetal-medium;
+  background-color: transparent;
+}
+
+.cmp-button--cs-black--medium {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-black-medium;
+  }
+}
+
+%cs-button-black-large {
+  @extend %cs-button-large;
+  @include cs-button($cs-black, $cs-white);
+}
+
+.cmp-button--cs-black--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-black-large;
+  }
+}
+
+%cs-button-purple-fill-small {
+  @extend %cs-button-small;
+  @include cs-button($cs-white, $cs-color-commercial);
+}
+
+.cmp-button--cs-purple--fill--small {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-fill-small;
+  }
+}
+
+%cs-button-purple-fill-medium {
+  @extend %cs-button-medium;
+  @include cs-button($cs-white, $cs-color-commercial);
+}
+
+.cmp-button--cs-purple--fill--medium {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-fill-medium;
+  }
+}
+
+%cs-button-purple-fill-large {
+  @extend %cs-button-large;
+  @include cs-button($cs-white, $cs-color-commercial);
+}
+
+.cmp-button--cs-purple--fill--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-fill-large;
+  }
+}
+
+%cs-button-white-transparent-large {
+  @extend %cs-button-large;
+  @include cs-button($text-color: $cs-white, $background-color: transparent);
+  font-weight: $cs-font-weight-bold;
+  padding: $cs-spacing-15 $cs-spacing-50;
+}
+
+.cmp-button--cs-white--transparent--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-white-transparent-large;
+  }
+}
+
+////////////////////
+// Inverted Buttons (Refer to Button 2 Inversed in Style Guide)
+%cs-button-inverted-transparent-medium {
+  @extend %cs-button-medium;
+  @include cs-button($text-color: $cs-white, $background-color: transparent);
+}
+
+.cmp-button--cs-inverted {
+  @extend %cs-button-inverted-transparent-medium;
+}
+
+////////////////////
+// Circle Button
+%cs-circle-button {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: $cs-spacing-10;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+////////////////////
+
+
+////////////////////
+// Buttons with Arrows
+////////////////////
+
+////////////////////
+// Right Arrow
+%cs-button-purple-right-arrow-small {
+  @extend %cs-button-small;
+  @include cs-button($text-color: $cs-color-commercial, $background-color: $cs-white, $arrow-direction: 'right');
+}
+
+.cmp-button--cs-purple--right-arrow--small {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-right-arrow-small;
+  }
+}
+
+%cs-button-purple-right-arrow-medium {
+  @extend %cs-button-medium;
+  @include cs-button($text-color: $cs-color-commercial, $background-color: $cs-white, $arrow-direction: 'right');
+}
+
+.cmp-button--cs-purple--right-arrow--medium {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-right-arrow-medium;
+  }
+}
+
+%cs-button-purple-right-arrow-large {
+  @extend %cs-button-large;
+  @include cs-button($text-color: $cs-color-commercial, $background-color: $cs-white, $arrow-direction: 'right');
+}
+
+.cmp-button--cs-purple--right-arrow--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-right-arrow-large;
+  }
+}
+
+////////////////////
+// Left Arrow
+%cs-button-purple-left-arrow-small {
+  @extend %cs-button-small;
+  @include cs-button($text-color: $cs-color-commercial, $background-color: $cs-white, $arrow-direction: 'left');
+}
+
+.cmp-button--cs-purple--left-arrow--small {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-left-arrow-small;
+  }
+}
+
+%cs-button-purple-left-arrow-medium {
+  @extend %cs-button-medium;
+  @include cs-button($text-color: $cs-color-commercial, $background-color: $cs-white, $arrow-direction: 'left');
+}
+
+.cmp-button--cs-purple--left-arrow--medium {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-left-arrow-medium;
+  }
+}
+
+%cs-button-purple-left-arrow-large {
+  @extend %cs-button-large;
+  @include cs-button($text-color: $cs-color-commercial, $background-color: $cs-white, $arrow-direction: 'left');
+}
+
+.cmp-button--cs-purple--left-arrow--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-left-arrow-large;
+  }
+}
+
+////////////////////
+// Down Arrow
+%cs-button-purple-fill-down-arrow-small {
+  @extend %cs-button-small;
+  @include cs-button($text-color: $cs-white, $background-color: $cs-color-commercial, $arrow-direction: 'down');
+}
+
+.cmp-button--cs-purple--fill--down-arrow--small {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-fill-down-arrow-small;
+  }
+}
+
+%cs-button-purple-fill-down-arrow-medium {
+  @extend %cs-button-medium;
+  @include cs-button($text-color: $cs-white, $background-color: $cs-color-commercial, $arrow-direction: 'down');
+}
+
+.cmp-button--cs-purple--fill--down-arrow--medium {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-fill-down-arrow-medium;
+  }
+}
+
+%cs-button-purple-fill-down-arrow-large {
+  @extend %cs-button-large;
+  @include cs-button($text-color: $cs-white, $background-color: $cs-color-commercial, $arrow-direction: 'down');
+}
+
+.cmp-button--cs-purple--fill--down-arrow--large {
+  @extend %cs-button-cta;
+  
+  .cmp-button__text {
+    @extend %cs-button-purple-fill-down-arrow-large;
+  }
+}
+
+%cs-down-arrow-vertical {
+  @extend %cs-font-p-2;
+  @include cs-arrow($color: $cs-white, $direction: 'down', $arrow-width: 1.3rem, $arrow-height: 1.3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+}
+
+////////////////////
+// REACT BUTTON
+
+.react-button {
+  cursor: pointer;
+
+  // Color Shemes
+  &.react-button--color-scheme {
+    &-green {
+      @include cs-button($cs-white, $cs-color-secondary);
+
+      &.react-button--active {
+        background-color: $cs-white;
+        color: $cs-color-secondary;
+      }
+    }
+
+    &-purple {
+      @include cs-button($cs-color-commercial, $cs-white);
+
+      &.react-button--active {
+        background-color: $cs-color-commercial;
+        color: $cs-white;
+      }
+    }
+
+    &-black {
+      @include cs-button($cs-gunmetal, $cs-white);
+
+      &.react-button--active {
+        background-color: $cs-gunmetal;
+        color: $cs-white;
+      }
+    }
+
+    &-purpleFill {
+      @include cs-button($cs-white, $cs-color-commercial);
+    }
+  }
+
+  // Size
+  &.react-button--size {
+    &-small {
+      @extend %cs-button-small;
+    }
+
+    &-medium {
+      @extend %cs-button-medium;
+    }
+
+    &-large {
+      @extend %cs-button-large;
+    }
+  }
+
+  // textType
+
+  &.react-button--textType {
+    &-bold {
+      font-weight: $cs-font-weight-bold;
+    }
+
+    &-normal {
+      font-weight: $cs-font-weight-normal;
+    }
+  }
+
+  // Icons
+  &.react-button__icon {
+    &--compare {
+      &::before {
+        @extend %compare-icon;
+        content: '';
+        margin-right: 7.7px;
+        transition: background-color 250ms ease-in-out;
+        position: relative;
+        top: 0.25rem;
+      }
+    }
+  }
+
+  // Type link (not button)
+  &.react-button--type-link {
+    @extend %cs-font-p-4;
+    color: $cs-gunmetal !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    text-decoration: underline !important;
+  }
+
+  &:disabled {
+    @include cs-button(
+      $text-color: $cs-white,
+      $background-color: $cs-color-gray-30
+    );
+    pointer-events: none;
+  }
+}
+
+////////////////////
+// Radio button type 1
+
+/* The container */
+.radio-btn-type-1 {
+  display: block;
+  position: relative;
+  padding-top: $cs-spacing-25;
+  padding-bottom: $cs-spacing-25;
+  padding-left: $cs-spacing-70;
+  padding-right: $cs-spacing-20;
+  margin-bottom: $cs-spacing-15;
+  cursor: pointer;
+  font-size: $cs-font-size-h8;
+  user-select: none;
+
+  border-radius: $cs-spacing-10;
+  box-sizing: border-box;
+  border: solid 1px $cs-dark-silver;
+}
+
+/* Hide the browser's default radio button */
+.radio-btn-type-1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: $cs-spacing-25;
+  left: 22px; // icon positioning
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: solid 1px $cs-dark-silver;
+  background-color: $cs-color-gray-60;
+}
+
+.radio-btn-type-1--checked {
+  border: solid 3px $cs-color-primary;
+}
+
+/* When the radio button is checked, add a black background */
+.radio-btn-type-1 input:checked ~ .checkmark {
+  background-color: $cs-color-primary;
+  border: solid 1px $cs-color-primary;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-btn-type-1 input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-btn-type-1 .checkmark::after {
+  top: 7px; // icon positioning
+  right: 7px; // icon positioning
+  width: 11px;
+  height: $cs-spacing-10;
+  background-color: $cs-color-primary;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 14' id='play-outline' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 6.8l4.148 4.8L13.2 2'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+.radio-btn-type-1__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radio-btn-type-1__title {
+  @extend %cs-font-h11;
+  font-weight: $cs-font-weight-bold;
+  text-align: left;
+  color: $cs-color-primary;
+  margin-bottom: $cs-spacing-3;
+}
+  
+.radio-btn-type-1__description {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  text-align: left;
+  color: $cs-color-gray-10;
+  margin: 0;
+}
+  
+  
+.radio-btn-type-1__price {
+  @extend %cs-font-h11;
+  font-weight: $cs-font-weight-bold;
+  text-align: right;
+  color: $cs-color-primary;   
+}
+
+////////////////////
+// Radio button type 2
+
+/* The container */
+.radio-btn-type-2 {
+  display: block;
+  position: relative;
+  padding-top: $cs-spacing-25;
+  padding-bottom: $cs-spacing-25;
+  padding-left: $cs-spacing-20;
+  padding-right: $cs-spacing-20;
+  margin-bottom: $cs-spacing-15;
+  cursor: pointer;
+  font-size: $cs-font-size-h8;
+  user-select: none;
+  
+  border-radius: $cs-spacing-10;
+  box-sizing: border-box;
+  border: solid 1px $cs-color-gray-15;
+}
+  
+/* Hide the browser's default radio button */
+.radio-btn-type-2 input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+  
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: $cs-spacing-25;
+  left: 22px; // icon positioning
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: solid 1px $cs-color-gray-15;
+  background-color: $cs-color-gray-60;
+}
+  
+.radio-btn-type-2--checked {
+  border: solid $cs-spacing-3 $cs-color-primary;
+}
+  
+/* When the radio button is checked, add a black background */
+.radio-btn-type-2 input:checked ~ .checkmark {
+  background-color: $cs-color-primary;
+  border: solid 1px $cs-color-primary;
+}
+  
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+  
+/* Show the indicator (dot/circle) when checked */
+.radio-btn-type-2 input:checked ~ .checkmark::after {
+  display: block;
+}
+  
+/* Style the indicator (dot/circle) */
+.radio-btn-type-2 .checkmark::after {
+  top: 7px; // icon positioning
+  right: 7px;  // icon positioning
+  width: 11px;
+  height: $cs-spacing-10;
+  background-color: $cs-color-primary;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 14' id='play-outline' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 6.8l4.148 4.8L13.2 2'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+  
+.radio-btn-type-2__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.radio-btn-type-2__title {
+  @extend %cs-font-h11;
+  text-align: left;
+  color: $cs-color-primary;
+  margin-bottom: $cs-spacing-3;
+}
+    
+.radio-btn-type-2__description {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  text-align: left;
+  color: $cs-color-gray-10;
+  margin: 0;
+}
+    
+    
+.radio-btn-type-2__lnk {
+  @extend %cs-font-p-2;
+  font-weight: $cs-font-weight-normal;
+  text-align: right;
+}
+
+.radio-btn-type-2__lnk--edit {
+  text-decoration: underline;
+  color: $cs-color-primary;
+}
+
+.radio-btn-type-2__label {
+  padding-left: $cs-spacing-50;
+}

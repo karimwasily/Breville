@@ -1,0 +1,375 @@
+////////////////////
+// Arrows
+////////////////////
+// Note: Upon using this mixin, a pseudo selector is created - ::before if the arrow is left and ::after for all other arrows
+@mixin cs-arrow($color: $cs-color-primary, $direction: 'right', $arrow-width: 0.4rem, $arrow-height:0.625rem) {
+  $pseudo-direction: 'after';
+  @if $direction == 'left' {
+    $pseudo-direction: 'before';
+    position: relative;
+  }
+
+  &::#{$pseudo-direction} {
+    @include cs-arrow-color($color: $color);
+    position: relative;
+    display: inline-block;
+    content: '';
+    width: $arrow-width;
+    height: $arrow-height;
+    left: 0;
+    transition: background-color $cs-transition-speed-250 $cs-transition-easing, left $cs-transition-speed-250 $cs-transition-easing, right $cs-transition-speed-250 $cs-transition-easing;
+
+    @if $direction == 'left' {
+      transform: rotate(180deg);
+      margin-bottom: 0.25rem;
+      margin-right: $cs-spacing-15;
+    }
+    @if $direction == 'right' {
+      margin-left: $cs-spacing-15;
+    }
+    @if $direction == 'down' {
+      transform: rotate(90deg);
+    }
+    @if $direction == 'up' {
+      transform: rotate(270deg);
+      margin-left: $cs-spacing-15;
+    }
+  }
+}
+
+@mixin cs-arrow-color($color: $cs-color-primary) {
+  @extend %arrow-right-icon;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  background-color: $color;
+}
+
+////////////////////
+// Arrows - Carousel
+////////////////////
+//size of the arrow icon
+$arrow-image-size: 10px;
+//direction variables
+$left: 'left';
+$right: 'right';
+
+//util function, flips direction to opposite
+@function flip-direction($direction) {
+  @if $direction == $left {
+    @return $right;
+  }
+  @return $right;
+}
+
+// $direction - left | right
+@mixin reactcarousel-arrow($direction, $arrowImgSize) {
+  $flipDir: flip-direction($direction);
+  z-index: 1000;
+  width: $arrowImgSize;
+  height: auto;
+
+  [dir='rtl'] & {
+    left: auto;
+  }
+
+  &::before {
+    // @extend %arrow-#{$direction}-circled-icon;
+    @extend %arrow-right-icon;
+    background-color: $cs-black;
+    content: '' !important;
+    width: $arrow-image-size;
+    height: $arrow-image-size;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 50%;
+
+    @if $direction == $left {
+      left: 50%;
+      transform: translate(-75%, -50%) rotate(180deg);
+    } @else {
+      transform: translate(75%, -50%);
+      right: 50%;
+    }
+  }
+}
+
+
+////////////////////
+// Buttons
+////////////////////
+@mixin cs-button($text-color: $cs-color-commercial, $background-color: $cs-white, $arrow-direction: 'none', $arrow-width: 0.4rem, $arrow-height:0.625rem) {
+  $hover-arrow-color: $cs-color-commercial;
+  // Setting styles for icons    
+  color: $text-color;
+  background-color: $background-color;
+  border: 1px solid;
+  transition: background-color $cs-transition-speed-250 $cs-transition-easing, color $cs-transition-speed-250 $cs-transition-easing;
+  // Setting border color based on background color
+  @if $background-color == $cs-white {
+    border-color: $text-color;
+  }
+  @else if $background-color == transparent {
+    border-color: $text-color;
+  }
+  @else {
+    border-color: $background-color;
+  }
+
+  //Setting hover and focus styles
+  &:hover {
+    @if $background-color == transparent {
+      $hover-arrow-color: $cs-gunmetal;
+      background-color: $cs-white;
+      border-color: $cs-white;
+      color: $cs-gunmetal;
+    }
+    @else {
+      $hover-arrow-color: $background-color;
+      background-color: $text-color;
+      color: $background-color;
+    }
+    outline: 0;
+
+    &::before,
+    &::after {
+      background-color: $background-color;
+      transition: background-color $cs-transition-speed-250 $cs-transition-easing, color $cs-transition-speed-250 $cs-transition-easing;
+    }
+  }
+
+  @if $arrow-direction != 'none' {
+    @include cs-arrow($text-color, $arrow-direction, $arrow-width, $arrow-height);
+
+    &:hover,
+    &:focus {
+      @include cs-arrow($hover-arrow-color, $arrow-direction, $arrow-width, $arrow-height);
+    }
+  }
+  
+  &::before,
+  &::after {
+    background-color: $text-color;
+    transition: background-color $cs-transition-speed-250 $cs-transition-easing, color $cs-transition-speed-250 $cs-transition-easing;
+  }
+  
+}
+
+@mixin button-remove-style() {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+@mixin cs-round-button($arrow-direction: 'none', $height: 2.125rem, $width: 2.125rem, $arrow-width: 0.4rem, $arrow-height:0.625rem) {
+  height: $height;
+  width: $width;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $cs-white;
+  color: $cs-black;
+  border: solid 2px $cs-black;
+  
+  //Add arrow
+  @if $arrow-direction != 'none' {
+    @include cs-arrow($cs-black, $arrow-direction, $arrow-width, $arrow-height);
+  }
+
+  //Margin depending upon arrow direction
+  &::after {
+    @if $arrow-direction == 'right' {
+      margin-left: calc(#{$arrow-width} / 2);
+    }
+  }
+
+  &::before {
+    @if $arrow-direction == 'left' {
+      margin-right: calc(#{$arrow-width} / 2);
+      margin-bottom: 0;
+    }
+  }
+
+  //Hover color change
+  &:hover {
+    @include cs-arrow($cs-white, $arrow-direction, $arrow-width, $arrow-height);
+    background-color: $cs-black;
+    color: $cs-white;
+    transition: background-color $cs-transition-speed-250 $cs-transition-easing;
+    
+    &::after {
+      @if $arrow-direction == 'right' {
+        margin-left: calc(#{$arrow-width} / 2);
+      }
+    }
+  
+    &::before {
+      @if $arrow-direction == 'left' {
+        margin-right: calc(#{$arrow-width} / 2);
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+////////////////////
+// Links
+////////////////////
+@mixin cs-link($color: $cs-color-primary, $hover-color: $cs-color-secondary, $font-weight: $cs-font-weight-normal, $text-decoration: none, $arrow-direction: 'none', $arrow-width: 0.4rem, $arrow-height:0.625rem) {
+  @extend %cs-font-p-2;
+  font-weight: $font-weight;
+  text-align: left;
+  text-decoration: $text-decoration;
+  color: $color;
+  transition: color $cs-transition-speed-250 $cs-transition-easing, text-decoration $cs-transition-speed-250 $cs-transition-easing;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+
+    @if $arrow-direction == 'left' {
+      &::before {
+        right: $cs-spacing-10 !important;
+      }
+    }
+    @if $arrow-direction == 'right' {
+      &::after {
+        left: $cs-spacing-20 !important;
+      }
+    }
+    @if $arrow-direction == 'none' {
+      @if $text-decoration == 'none' {
+        text-decoration: underline;
+      }
+      @else {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @if $arrow-direction != 'none' {
+    @include cs-arrow($color, $arrow-direction, $arrow-width, $arrow-height);
+
+    &:hover,
+    &:focus {
+      @include cs-arrow($hover-color, $arrow-direction, $arrow-width, $arrow-height);
+    }
+  }
+}
+
+// util to create a grid with flexbox
+// allows for gaps and centering the last row
+// currently enables by default at desktop screen size
+@mixin flex-grid($childWidth: 33%, $gap: 1rem, $bpStart: $cs-screen-md) {
+  @media (min-width: $bpStart) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    > * {
+      margin: $gap / 2 !important;
+      flex: 0 0 calc(#{$childWidth} - #{$gap});
+      align-self: stretch;
+    }
+  }
+}
+
+%hide-scrollbar {
+  // There is a CSS rule that can hide scrollbars in IE 10+.
+  -ms-overflow-style: none;
+
+  /* this will hide the scrollbar in mozilla based browsers */
+  overflow: -moz-scrollbars-none;
+  scrollbar-color: transparent transparent;
+  
+  // Use -ms-autohiding-scrollbar if you wish to display on hover.
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
+  
+  // There used to be a CSS rule that could hide scrollbars in Firefox, but it has since been deprecated.
+  // scrollbar-width: none;
+  // https://blogs.msdn.microsoft.com/kurlak/2013/11/03/hiding-vertical-scrollbars-with-pure-css-in-chrome-ie-6-firefox-opera-and-safari/
+  // There is a CSS rule that can hide scrollbars in Webkit-based browsers (Chrome and Safari).
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@mixin create-scrollbar($foreground: $cs-color-primary, $background: $cs-color-secondary, $width: 12px, $border-radius: $cs-border-radius-8, $border-width: 3px) {
+  /* Works on Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: $foreground $background;
+
+  &::-webkit-scrollbar {
+    width: $width;               /* width of the entire scrollbar */
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $background;        /* color of the tracking area */
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $foreground;    /* color of the scroll thumb */
+    border-radius: $border-radius;       /* roundness of the scroll thumb */
+
+    border-width: $border-width;
+    border-style: solid;
+    border-color: $background;
+    // border: 3px solid $background;  /* creates padding around scroll thumb */
+  }
+}
+
+// this creates a generic overflow horizontal scroll with defined tile sizes and gap sizes
+@mixin column-overflow-scroll($gap-mobile : $cs-spacing-10, $gap-desktop: $cs-spacing-15, $tile-width-mobile : 240px, $tile-width-desktop : 370px) {
+  // * css vars get changed dynamically at breakpoint
+  --spacer: #{$gap-mobile};
+  --tile-size: #{$tile-width-mobile};
+
+  // @extend %hide-scrollbar;
+  @include create-scrollbar($foreground: $cs-color-gray-40, $background: $cs-white, $border-width: 5px, $border-radius: $cs-border-radius-8);
+
+  // max-width: $cs-max-width;
+  margin: auto;
+  overflow-y: auto;
+
+  // * target custom class or algolia default
+  .list,
+  .ais-Hits-list {
+    // @include flex-grid($childWidth: 33%, $gap: $cs-spacing-30);
+    display: grid;
+    grid-auto-flow: column;
+    margin: auto;
+    width: fit-content;
+
+    // grid-auto-columns: max-content;
+    grid-auto-columns: var(--tile-size);
+    gap: var(--spacer);
+    padding: $cs-spacing-10 var(--spacer);
+
+    .item,
+    .ais-Hits-item {
+      // width: var(--tile-size);
+      // height: max-content;
+      display: flex;
+      flex-direction: column;
+
+      // * presume last elem is the tile
+      > :last-child {
+        flex: 1;
+      }
+    }
+  }
+
+  // change layout
+  @media (min-width: $cs-screen-md) {
+    --spacer: #{$gap-desktop};
+    --tile-size: #{$tile-width-desktop};
+  }
+}

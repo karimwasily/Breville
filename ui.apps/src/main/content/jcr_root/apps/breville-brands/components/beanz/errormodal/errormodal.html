@@ -1,0 +1,39 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Edit ${component.title}"></div>
+<div class="error_modal ${properties.errorClass} ${properties.errorId} hidden">
+   <div class="dialog errormodal_dialog-popup">
+      <div class="errormodal_dialog-overlay" tabindex="-1" ></div>
+      <div role="dialog" aria-labelledby="errorPopUp__title" class="errormodal_dialog-content text-center">
+         <div role="document">
+            <div class="errormodal_modal-dialog-parent add-to-cart-popup--close">
+               <button type="button"  aria-label="Close this dialog window" class="errormodal_dialog-close add-to-cart-popup--close-button" alt="Close">
+               </button>
+            </div>
+            <div class="errormodal_content-holder">
+               <div class="msg-box-icon">
+                  <svg class="icon errormodal_icon-size" focusable="false" aria-hidden="true">
+                     <use xlink:href="#Alert">
+                        <svg viewBox="0 0 40 37"  xmlns="http://www.w3.org/2000/svg">
+                           <g fill="none" fill-rule="evenodd">
+                              <path d="M17.926 3.34c1.11-1.907 2.909-1.907 4.019 0l16.448 28.268c1.11 1.907.224 3.453-1.99 3.453H3.468c-2.21 0-3.1-1.545-1.99-3.453L17.925 3.34z" stroke="#313638" stroke-width="2"></path>
+                              <text font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="20" fill="#313638" transform="translate(1 1.91)">
+                                 <tspan x="16.313" y="26">i</tspan>
+                              </text>
+                           </g>
+                        </svg>
+                     </use>
+                  </svg>
+               </div>
+            </div>
+            <div class="errormodal_text-content">
+               <div class="errormodal_seperator">${properties.title}</div>
+               <div class="errormodal_modal-body dialog__modal-body">
+                  ${properties.description}
+               </div>
+            </div>
+            <div class="errormodal_cart-modal-button">
+               <a role="button" class="btn errormodal_btn--primary">Ok</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

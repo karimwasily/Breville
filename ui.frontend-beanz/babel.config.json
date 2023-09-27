@@ -1,0 +1,27 @@
+{
+  "presets": ["@babel/typescript", "@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-optional-chaining",
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@breville-utils": "../xps-utils",
+          "@redux-utils": "../breville-utils/redux-utils",
+          "components": "./src/main/webpack/components",
+          "containers": "./src/main/webpack/containers",
+          "resources": "./src/main/webpack/resources",
+          "library": "./src/main/webpack/library",
+          "api": "./src/main/webpack/library/api",
+          "schema": "./src/main/webpack/library/schema",
+          "react": "./node_modules/react",
+          "react-dom": "./node_modules/react-dom",
+          "react-router-dom": "./node_modules/react-router-dom"
+        }
+      }
+    ]
+  ]
+}

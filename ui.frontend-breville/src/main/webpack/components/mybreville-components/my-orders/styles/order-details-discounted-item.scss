@@ -1,0 +1,128 @@
+.order-details__discounted-item {
+  display: flex;
+  flex-direction: row;
+  padding: $cs-spacing-30 0;
+
+  background-color: $cs-white;
+  border-top: 1px solid $cs-gainsboro;
+
+  .item-image {
+    .image {
+      width: 80px;
+      height: 80px;
+      @media (min-width: $cs-screen-xl) {
+        width: 110px;
+        height: 110px;        
+      }
+    }
+  }
+
+  .item-text {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin-left: $cs-spacing-15;
+    @media (min-width: $cs-screen-xl) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $cs-spacing-10;
+      margin-left: $cs-spacing-25;
+    }
+
+    .item-details {
+      p {
+        margin-bottom: $cs-spacing-5;
+      }
+
+      .item-name {
+        @extend %cs-font-h12-bold;
+      }
+
+      .item-description {
+        @extend %cs-font-p-4;
+      }
+    }
+
+    .item-quantity {
+      @extend %cs-font-p-2;
+      margin-bottom: $cs-spacing-5;
+      @media (min-width: $cs-screen-xl) {
+        text-align: end;
+      }
+
+      .quantity-text {
+        font-weight: $cs-font-weight-bold;
+      }
+    }
+    
+    .item-discount {
+      display: flex;
+      flex-direction: column;
+      gap: $cs-spacing-5;
+
+      .discount {
+        @media (min-width: $cs-screen-xl) {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+  
+        .discount-percentage {
+          @extend %cs-font-p-5;
+          width: fit-content;
+          margin-bottom: 0;
+          padding: $cs-spacing-3 $cs-spacing-5;
+
+          color: $cs-white;
+          font-weight: $cs-font-weight-bold;
+          white-space: nowrap;
+
+          background-color: $cs-gunmetal;
+        }
+        
+      }
+
+      .price-values {
+        @media (min-width: $cs-screen-xl) {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+
+        .item-pricing {
+          display: flex;
+          flex-direction: row;
+          gap: $cs-spacing-3;
+          align-items: baseline;
+
+          .item-price-value {
+            @extend %cs-font-p-2;
+            position: relative;
+
+            margin-bottom: 0;
+
+            color: $cs-monsoon;
+          }
+  
+          .item-price-value::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: 13px;
+
+            border-top: 1px solid $cs-monsoon;
+
+            content: ' ';
+          }
+  
+          .item-discount-price-value {
+            @extend %cs-font-p-2;
+            margin-bottom: 0;
+
+            font-weight: $cs-font-weight-bold;
+          }
+        }
+      }
+    }
+  }
+}

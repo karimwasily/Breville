@@ -1,0 +1,51 @@
+/* stylelint-disable -- SCSS mixins and iterators require greater nesting depth, as well to override other rules */
+// START mixins for media queries
+
+// ALTERNATE APPROACH:
+// https://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+// apply to specific named breakpoint
+@mixin mq($bp) {
+    $min: map-get($breakpointMap, $bp, 'min');
+    $max: map-get($breakpointMap, $bp, 'max');
+
+    @if $bp == sm {
+        @media screen and (max-width: $max) {
+            @content;
+        }
+    } @else if $bp == lg {
+        @media screen and (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    }
+}
+
+// apply to named breakpoint and up
+// TODO: rename "mq-up"
+@mixin mq-min($bp) {
+    $min: map-get($breakpointMap, $bp, 'min');
+    @if $bp == sm {
+        @content;
+    } @else {
+        @media screen and (min-width: $min) {
+            @content;
+        }
+    }
+}
+
+// apply to named breakpoint and down
+// TODO: rename "mq-down"
+@mixin mq-max($bp) {
+    $max: map-get($breakpointMap, $bp, 'max');
+    @if $bp == lg {
+        @content;
+    } @else {
+        @media screen and (max-width: $max) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,279 @@
+////////////////////
+// LAYOUT
+////////////////////
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: floor(($gutter / 2));
+  padding-right: ceil(($gutter / 2));
+}
+
+@mixin container-content() {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $gutter-padding;
+  float: unset !important;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// provide font-size with px fallback
+@mixin font-size($rem) {
+  font-size: rem-to-px($rem);
+  font-size: $rem;
+}
+
+// polyfill so we can use 'gap' when using flex
+@mixin flex-gap ($gap: 1rem) {
+  --gap: #{$gap};
+  --column-gap: var(--gap);
+  --row-gap: var(--gap);
+  margin: calc(var(--row-gap) / -2) calc(var(--column-gap) / -2);
+
+  > * {
+    margin: calc(var(--row-gap) / 2) calc(var(--column-gap) / 2);
+  }
+}
+
+%hide-scrollbar {
+  // There is a CSS rule that can hide scrollbars in IE 10+.
+  -ms-overflow-style: none;
+
+  /* this will hide the scrollbar in mozilla based browsers */
+  overflow: -moz-scrollbars-none;
+  scrollbar-color: transparent transparent;
+  
+  // Use -ms-autohiding-scrollbar if you wish to display on hover.
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
+  
+  // There used to be a CSS rule that could hide scrollbars in Firefox, but it has since been deprecated.
+  // scrollbar-width: none;
+  // https://blogs.msdn.microsoft.com/kurlak/2013/11/03/hiding-vertical-scrollbars-with-pure-css-in-chrome-ie-6-firefox-opera-and-safari/
+  // There is a CSS rule that can hide scrollbars in Webkit-based browsers (Chrome and Safari).
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+%scrollbar-styling {
+  &::-webkit-scrollbar {
+    width: rem(9px);
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $white;
+    border-radius: rem(33px);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $creme;
+    border-style: solid;
+    border-color: $white;
+    border-radius: rem(31px);
+    border-width: rem(4px);
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: $espresso;
+  }
+}
+
+////////////////////
+// HELPERS
+////////////////////
+// front end dev helper utility for layout
+@mixin dev($borders: false) {
+  @if $borders {
+    border: 1px solid red;
+
+    * {
+      border: 1px solid red;
+    }
+  }
+
+  &::before {
+    content: 'XS';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: darkorange;
+    color: white;
+    padding: 1rem;
+    z-index: 9999999;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 1rem;
+
+    @media (min-width: $screen-sm) {
+      content: 'SM';
+      background-color: teal;
+      color: white;
+    }
+    @media (min-width: $screen-md) {
+      content: 'MD';
+      background-color: salmon;
+      color: white;
+    }
+    @media (min-width: $screen-lg) {
+      content: 'LG';
+      background-color: burlywood;
+      color: white;
+    }
+    @media (min-width: $screen-xl) {
+      content: 'XL';
+      background-color: cornflowerblue;
+      color: white;
+    }
+    @media (min-width: $screen-xxl) {
+      content: 'XXL';
+      background-color: lightcoral;
+      color: white;
+    }
+  }
+}
+
+// NOTIFY DEVELOPER IF USING A DISALLOWED ELEMENT
+%disallowed-element {
+  $disallowedElement-color: rgba(255, 0, 0, 1);
+  // background-color: $disallowedElement-color;
+  outline: 5px solid $disallowedElement-color;
+  animation: alerter 1.5s ease-in-out infinite;
+
+  &::before {
+    content: '<ELEMENT NOT ALLOWED>';
+    padding: 1rem;
+  }
+
+  @keyframes alerter {
+    0% {
+      background-color: $disallowedElement-color;
+    }
+
+    50% {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    100% {
+      background-color: $disallowedElement-color;
+    }
+  }
+}
+
+@mixin button-remove-style() {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+
+// todo: use webpack to convert iconography
+// base 64 version of 'right arrow' svg
+@mixin arrow-right-icon($color: black, $height: 1rem, $width: 1rem) {
+  @if $color == white {
+    // WHITE
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNiAxNyIgZmlsbD0iY3VycmVudENvbG9yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNC41Nzc2NGUtMDUgOS4xNjU0M0wxMS42Nzg0IDkuMTY1NDNMNi4zNDMxNiAxNC42MDI2TDcuNzY4MTYgMTYuMDU1N0wxNS41MzY0IDguMTM4MDZMNy43NjgxNiAwLjIyMDQ2Mkw2LjM0MzE2IDEuNjcyODZMMTEuNjc4NCA3LjExMDcxTDQuNTc3NjRlLTA1IDcuMTEwNzFWOS4xNjU0M1oiIGZpbGw9IndoaXRlIi8+PC9zdmc+');
+  } @else if $color == $green {
+    //#8e7763
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNC4wOTk5IDAuMjE0MDE2TDI0LjA5OTkgMzAuOTc2M0wzOC4xNTE4IDE2LjkyMjZMNDEuOTA3MiAyMC42NzYyTDIxLjQ0NDggNDEuMTM4N0wwLjk4MjMgMjAuNjc2Mkw0LjczNTkyIDE2LjkyMjZMMTguNzg5NiAzMC45NzYzTDE4Ljc4OTYgMC4yMTQwMTZMMjQuMDk5OSAwLjIxNDAxNloiIGZpbGw9IiM4RTc3NjMiLz4KPC9zdmc+Cg==');
+  }
+  @else {
+    // BLACK
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNiAxNyIgZmlsbD0iY3VycmVudENvbG9yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNC41Nzc2NGUtMDUgOS4xNjU0M0wxMS42Nzg0IDkuMTY1NDNMNi4zNDMxNiAxNC42MDI2TDcuNzY4MTYgMTYuMDU1N0wxNS41MzY0IDguMTM4MDZMNy43NjgxNiAwLjIyMDQ2Mkw2LjM0MzE2IDEuNjcyODZMMTEuNjc4NCA3LjExMDcxTDQuNTc3NjRlLTA1IDcuMTEwNzFWOS4xNjU0M1oiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjwvc3ZnPg==');
+  }
+  // match icon svg dimensions
+  height: $height;
+  width: $width;
+  // fill icon into the div
+  background-size: 100% 100%;
+}
+
+// todo: use webpack to convert iconography
+// base 64 version of 'right arrow' svg
+@mixin arrow-left-icon($color: black, $height: 1rem, $width: 1rem) {
+  @if $color == white {
+    // WHITE
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNiAxNyIgZmlsbD0iY3VycmVudENvbG9yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNC41Nzc2NGUtMDUgOS4xNjU0M0wxMS42Nzg0IDkuMTY1NDNMNi4zNDMxNiAxNC42MDI2TDcuNzY4MTYgMTYuMDU1N0wxNS41MzY0IDguMTM4MDZMNy43NjgxNiAwLjIyMDQ2Mkw2LjM0MzE2IDEuNjcyODZMMTEuNjc4NCA3LjExMDcxTDQuNTc3NjRlLTA1IDcuMTEwNzFWOS4xNjU0M1oiIGZpbGw9IndoaXRlIi8+PC9zdmc+');
+  }
+  @else {
+    // BLACK
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNiAxNyIgZmlsbD0iY3VycmVudENvbG9yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNC41Nzc2NGUtMDUgOS4xNjU0M0wxMS42Nzg0IDkuMTY1NDNMNi4zNDMxNiAxNC42MDI2TDcuNzY4MTYgMTYuMDU1N0wxNS41MzY0IDguMTM4MDZMNy43NjgxNiAwLjIyMDQ2Mkw2LjM0MzE2IDEuNjcyODZMMTEuNjc4NCA3LjExMDcxTDQuNTc3NjRlLTA1IDcuMTEwNzFWOS4xNjU0M1oiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjwvc3ZnPg==');
+  }
+  // match icon svg dimensions
+  height: $height;
+  width: $width;
+  // fill icon into the div
+  background-size: 100% 100%;
+  //rotate arrow 180 to make it point left
+  transform: rotate(180deg);
+}
+
+// todo: use webpack to convert iconography
+
+@mixin question-icon($height: rem(20px), $width: rem(20px)) {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZGF0YS10YWdzPSJxdWVzdGlvbiI+PGcgZmlsbD0iIzQ0NCIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxOTUzMTI1IDAuMDE5NTMxMjUpIj48cGF0aCBkPSJNNTEyIDEwMjRjLTI4Mi43NyAwLTUxMi0yMjkuMjMtNTEyLTUxMnMyMjkuMjMtNTEyIDUxMi01MTJ2MGMyODIuNzcgMCA1MTIgMjI5LjIzIDUxMiA1MTJzLTIyOS4yMyA1MTItNTEyIDUxMnYwek02MTQuNCAzNTguNGMwIDE0LjMzNi0xMC43NTIgNDAuOTYtMjEuNTA0IDUxLjJsLTgwLjg5NiA4MC44OTZjLTI5LjE4NCAyOS42OTYtNTEuMiA4MS45Mi01MS4yIDEyMy45MDR2NTEuMmgxMDIuNHYtNTEuMmMwLTE0Ljg0OCAxMC43NTItNDAuOTYgMjEuNTA0LTUxLjJsODAuODk2LTgwLjg5NmMyOS4xODQtMjkuNjk2IDUxLjItODEuOTIgNTEuMi0xMjMuOTA0IDAtMTEzLjEwOC05MS42OTItMjA0LjgtMjA0LjgtMjA0LjhzLTIwNC44IDkxLjY5Mi0yMDQuOCAyMDQuOHYwaDEwMi40YzAtNTYuNTU0IDQ1Ljg0Ni0xMDIuNCAxMDIuNC0xMDIuNHMxMDIuNCA0NS44NDYgMTAyLjQgMTAyLjR2MHpNNDYwLjggNzY4djEwMi40aDEwMi40di0xMDIuNGgtMTAyLjR6IiAvPjwvZz48L3N2Zz4=');
+  width: $width;
+  height: $height;
+  background-size: 100% 100%;
+}
+
+// styling for button
+// arrow included but need display field
+@mixin button-with-arrow($width: 50px, $height: 50px) {
+  height: $height;
+  width: $width;
+  background-color: transparent;
+  border-radius: 0;
+  border: solid rem(0.5px) $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .icon-arrow-left {
+    @include arrow-left-icon($color: $black, $height: rem(30px), $width: rem(30px));
+  }
+
+  .icon-arrow-right {
+    @include arrow-right-icon($color: $black, $height: rem(30px), $width: rem(30px));
+  }
+}
+
+// todo: use webpack to convert iconography
+// base 64 version of 'play arrow' svg
+@mixin play-icon($color: black, $height: 1rem, $width: 1rem) {
+  @if $color == white {
+    // WHITE
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxMyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjQ5MTIgNy42Njk1OUwxLjYyOTgzIDAuMTYwNDI0QzAuOTUxNDM4IC0wLjI0ODU3MiAwIDAuMTYwNDI0IDAgMC45Nzk4MjFWMTUuOTk2N0MwIDE2Ljk1MTkgMC45NTAwMDMgMTcuMjI1MSAxLjYyOTgzIDE2LjgxNjFMMTIuNDkxMiA5LjQ0NDE3QzEzLjE2OTYgOS4wMzUxNyAxMy4xNjk2IDguMDc4NDggMTIuNDkxMiA3LjY2OTQ4VjcuNjY5NTlaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K');
+  }
+  @else {
+    // BLACK
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxMyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjQ5MTIgNy42Njk1OUwxLjYyOTgzIDAuMTYwNDI0QzAuOTUxNDM4IC0wLjI0ODU3MiAwIDAuMTYwNDI0IDAgMC45Nzk4MjFWMTUuOTk2N0MwIDE2Ljk1MTkgMC45NTAwMDMgMTcuMjI1MSAxLjYyOTgzIDE2LjgxNjFMMTIuNDkxMiA5LjQ0NDE3QzEzLjE2OTYgOS4wMzUxNyAxMy4xNjk2IDguMDc4NDggMTIuNDkxMiA3LjY2OTQ4VjcuNjY5NTlaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K');
+  }
+  // match icon svg dimensions
+  height: $height;
+  width: $width;
+  // fill icon into the div
+  background-size: 100% 100%;
+}
+
+@mixin bg-contrast($bg: $black) {
+  @if $bg == $white {
+    background: $black;
+  }
+  @else {
+    background: $white;
+  }
+}

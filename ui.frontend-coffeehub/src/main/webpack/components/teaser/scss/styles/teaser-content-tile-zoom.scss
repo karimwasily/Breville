@@ -1,0 +1,170 @@
+// this style wrapper relies on LINKED TEASER
+.cmp-teaser--content-tile-zoom {
+  --background: #{$creme};
+  --background-hover: #{$white};
+  --arrow-spacing: 2.5rem;
+
+  .cmp-teaser {
+    position: relative;
+    overflow: hidden;
+    // create dynamic height based on width
+    // portrait
+    padding-top: 125%;
+    height: 0;
+
+    @media (min-width: $screen-sm) {
+      // square
+      padding-top: 100%;
+    }
+
+    // IMAGE
+    &__image {
+      .cmp-image {
+        &__link {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          overflow: hidden;
+
+          &:focus {
+            outline-offset: -1px;
+            outline: 1px auto;
+          }
+        }
+
+        .cmp-image__image {
+          width: 100%;
+          height: 100%;
+          object-position: center;
+          object-fit: contain;
+
+          transition: transform $transition-speed-tile-zoom $transition-ease;
+        }
+      }
+    }
+
+    &__content {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      background-color: var(--background);
+      width: 100%;
+    
+      @media (min-width: $screen-md) {
+        width: 240px;
+        bottom: $spacing-md;
+        left: $spacing-xs;
+        border: 1px solid $black;
+      }
+      @media (min-width: $screen-lg) {
+        left: $spacing-md;
+      } 
+
+      // SECONDARY BACKGROUND
+      .cmp-teaser__title {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          z-index: 1;
+          height: 100%;
+          width: 200%;
+          background: var(--background-hover);
+          background: linear-gradient(90deg, var(--background-hover) 0%, var(--background-hover) 50%, transparent 100%);
+          transform: translate3d(-100%, 0, 0);
+          opacity: 0;
+
+          transition: transform $transition-speed $transition-ease, opacity $transition-speed $transition-ease;
+        }
+
+      }
+
+
+      // CTA BUTTON
+      .cmp-teaser__title-link {
+        @extend %font-cta;
+        font-size: rem(12px);
+        position: relative;
+        display: block;
+        padding: $spacing-xs;
+        padding-right: $spacing-xs + var(--arrow-spacing);
+        z-index: 2;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        @media (min-width: $screen-xs) {
+          font-size: $font-size-cta;
+          padding: $spacing-md;
+          padding-right: $spacing-md + var(--arrow-spacing);
+        }
+
+        // ICON
+        &::after {
+          @include arrow-right-icon($color: $black, $width: 0.7rem, $height: 0.7rem);
+          content: '';
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: $spacing-xs;
+
+          transition: transform $transition-speed $transition-ease;
+          @media (min-width: $screen-xs) {
+            @include arrow-right-icon($color: $black);
+          }
+        }
+
+        //Focus 
+        &:focus {
+          outline-offset: -1px;
+          outline: 1px auto;
+        }
+
+      }
+
+    }
+
+    // HOVER ANIMATION
+    &:hover {
+      .cmp-image__image {
+        transform: scale(1.05);
+      }
+
+      .cmp-teaser__title {
+        &::before {
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+      }
+
+      .cmp-teaser__title-link {
+        &::after {
+          transform: translate3d(5px, -50%, 0);
+        }
+      }
+    }
+
+    // ! ELEMS DISABLED FOR THIS THEME
+    &__action-link {
+      display: none;
+    }
+
+    .cmp-teaser__description {
+      display: none;
+    }
+
+    p {
+      display: none;
+    }
+  }
+}

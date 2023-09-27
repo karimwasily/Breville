@@ -1,0 +1,227 @@
+@use 'sass:math';
+
+////////////////////
+// COLORS
+////////////////////
+// RAW
+
+$white: #fff;
+$white-gray: #d3d3d3;
+$white-transparent: rgba(226, 226, 226, 0.2);
+$gray-95: #f2f2f2;
+$gray80: #ccc;
+$gunmetal: #313638;
+$dark-purple: #3a1538;
+$gainsboro: #e2e2e2;
+$gray-x-11-gray: #bcbcbc;
+$dim-gray: #6c6b6b;
+$light-gray: #8f949a;
+$light-gray-2: #767676;
+$very-light-gray: #c9c9c9;
+$fulvous: #e2851d;
+$harley-davidson-orange: #e63312;
+$green-cola: #4c8314;
+$brown: #9a6947;
+$submarine: #a492a3;
+$swamp: #211020;
+$black-transparent: rgba(0, 0, 0, 0.4);
+$wine-berry: #391538;
+$wine-berry-transparent: rgba(57, 21, 56, 0.5);
+$regent-gray: #8c9ba7;
+$abbey: #4a5053;
+$cape-cod: #383e40;
+$grape: #411642;
+$vida-loca: #4c8313;
+$black-transparent: rgba(0, 0, 0, 0.4);
+$hd-orange: #df3312;
+$persian-blue: #2020e0;
+
+// OVERLAY
+$background-overlay: rgba(0, 0, 0, 0.65);
+$background-overlay-video-embed: rgba(0, 0, 0, 0);
+
+///////////////////////////
+// CONVENTIONAL NAMING
+$black: $gunmetal;
+$purple: $dark-purple;
+$light-purple: $submarine;
+$gray: $gray-x-11-gray;
+$dark-gray: $dim-gray;
+$orange: $fulvous;
+$green: $green-cola;
+
+// ASSIGN
+$brand-primary: $black;
+$brand-secondary: $black;
+
+$foreground-color: $black;
+$background-color: $white;
+
+$header-foreground: $black;
+$header-background: $white;
+
+$footer-foreground: $light-purple;
+$footer-background: $purple;
+
+$text-color: $black;
+$text-shadow-dark: -1px -1px 5px #000, 1px -1px 5px #000, 1px 1px 5px #000, -1px 1px 5px #000;
+
+$link-color: $black;
+
+////////////////////
+// TYPOGRAPHY
+////////////////////
+
+/*$font-family-primary: 'ArcherSSm-Bold', 'Archer-Book-Pro', sans-serif;
+$font-family-primary-light: 'Archer-Book-Pro', sans-serif;
+$font-family-secondary: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+$font-family-arial: 'arial';
+
+$font-family-ArcherBold: 'Archer SSm Bold';
+//$font-family-ArcherBoldItalic: 'ArcherSSm-BoldItalic';
+//$font-family-ArcherSSm-Book: 'ArcherSSm-Book';
+$font-family-ArcherSSmBookItalic: 'Archer SSm BookItalic';
+//$font-family-ArcherSSm-Light: 'ArcherSSm-Light';
+//$font-family-ArcherSSm-LightItalic: 'ArcherSSm-LightItalic';
+$font-family-ArcherSSm-Medium: 'ArcherSSm-Medium';
+//$font-family-ArcherSSm-MediumItalic: 'ArcherSSm-MediumItalic';
+//$font-family-ArcherSSm-Semibold: 'ArcherSSm-Semibold';
+//$font-family-ArcherSSm-SemiboldItalic: 'ArcherSSm-SemiboldItalic';
+$font-family-ArcherSSm-Bold: 'ArcherSSm-Bold';
+$font-family-slick: 'slick';*/
+
+$font-family-primary: 'Archer-Ssm', 'Archer-Book', sans-serif;
+$font-family-primary-light: 'Archer-Book', sans-serif;
+$font-family-secondary: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+// todo: check whether all 'secondary' breville font can be 'helvetica' and if so refactor
+$font-family-helvetica: 'Helvetica-Neue', Arial, -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+$font-family-arial: 'arial';
+$font-family-ArcherSSm: 'Archer-Ssm';
+$font-family-ArcherSSmBook: 'Archer SSm Book';
+$font-family-ArcherSSmBookItalic: 'ArcherSSm-BookItalic';
+$font-family-slick: 'slick';
+
+///////////////////////////
+@function rem($size) {
+  @return math.div($size, 16px) * 1rem;
+}
+
+$font-size-base: rem(16px);
+$font-size-small: rem(12px);
+$font-size-medium: rem(14px);
+$font-size-mlarge: rem(18px);
+$font-size-xlarge: rem(22px);
+$font-size-h1: 2.1875rem;
+$font-size-h2: 2.1875rem;
+$font-size-h3: 1.56rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.81rem;
+$font-size-h1-pdp: 3.4375rem;
+
+// todo: overwrite 
+// $font-size-navmenu: rem(19px);
+// $font-size-navmenu-mobile: rem(22px);
+// $font-size-navmenu-breadcrumb: rem(14px);
+
+$font-size-h1-mobile: 1.87rem;
+$font-size-h2-mobile: 1.5625rem;
+$font-size-h3-mobile: 1.25rem;
+$font-size-h4-mobile: 1rem;
+
+// todo: overwrite 
+// $font-size-cta: rem(18px);
+///////////////////////////
+
+$line-height-base: 1.5rem;
+$line-height-small: 1.325rem;
+$line-height-h1: 3.125rem;
+$line-height-h2: 3.125rem;
+$line-height-h3: 2.18rem;
+$line-height-h4: 1.75rem;
+$line-height-h5: 1.4rem;
+$line-height-h6: 1.13rem;
+$line-height-pdp: 4.81rem;
+
+$line-height-h1-mobile: 3.06rem;
+$line-height-h2-mobile: 2.25rem;
+$line-height-h3-mobile: 1.75rem;
+$line-height-h4-mobile: 1.4rem;
+
+$line-height-ratio-base: 1.5;
+$line-height-promotext: 1.3;
+
+// todo: overwrite 
+// $line-height-cta: rem(25.29px);
+///////////////////////////
+
+//todo: uncomment when used
+// $font-weight-thin: 100;
+// $font-weight-extra-light: 200;
+// $font-weight-light: 300;
+$font-weight-normal: 400;
+// $font-weight-medium: 500;
+// $font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+// $font-weight-black: 900;
+// $font-weight-extra-black: 950;
+
+////////////////////
+// BREAKPOINTS
+////////////////////
+
+$screen-xs: 375px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1440px;
+$screen-xxxl: 1920px;
+
+////////////////////
+// LAYOUT
+////////////////////
+$max-width: rem(1200px);
+
+// * these are just min-height placeholders to create some initial height
+$header-height: rem(60px);
+$header-mobile-height: rem(40px);
+
+// * these are just min-height placeholders to create some initial height
+$footer-height: rem(500px);
+$footer-mobile-height: rem(700px);
+
+////////////////////
+// SPACING
+////////////////////
+$spacing-xxxs: rem(2px);
+$spacing-xxs: rem(5px);
+$spacing-xs: rem(10px);
+$spacing-sm: rem(15px);
+$spacing-md: rem(20px);
+$spacing-ml: rem(25px);
+$spacing-lg: rem(30px);
+$spacing-lg-2: rem(35px);
+$spacing-xl: rem(40px);
+$spacing-xl-2: rem(45px);
+$spacing-xxl: rem(50px);
+
+$spacing-page-gutter: $spacing-xxl;
+$spacing-page-gutter-mobile: $spacing-xs;
+
+////////////////////
+// BOX SHADOW
+////////////////////
+$box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+
+////////////////////
+// TEXT SHADOW
+////////////////////
+$text-shadow: -1px -1px 5px #000, 1px -1px 5px #000, 1px 1px 5px #000, -1px 1px 5px #000;
+
+////////////////////
+// BORDER
+////////////////////
+$border-radius-circle: 50%;
+$border-radius-base: rem(6px);

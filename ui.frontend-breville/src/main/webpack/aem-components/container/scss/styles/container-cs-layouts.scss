@@ -1,0 +1,35 @@
+.cmp-container--cs-layout-6-6 {
+  .cmp-container {
+    @extend %cs-layout-6-6;
+  }
+}
+
+.cmp-container--cs-layout-6-6-mobile {
+  .cmp-container {
+    @extend %cs-layout-6-6-mobile;
+  }
+}
+
+.cmp-container--cs-layout-4-4-4 {
+  .cmp-container {
+    @extend %cs-layout-4-4-4;
+  }
+}
+
+.cmp-container--cs-layout-3-3-3-3 {
+  .cmp-container {
+    @extend %cs-layout-3-3-3-3;
+  }
+}
+
+.cmp-container--cs-layout-5-7 {
+  .cmp-container {
+    @extend %cs-layout-5-7;
+  }
+}
+
+.cmp-container--cs-layout-7-5 {
+  .cmp-container {
+    @extend %cs-layout-7-5;
+  }
+}

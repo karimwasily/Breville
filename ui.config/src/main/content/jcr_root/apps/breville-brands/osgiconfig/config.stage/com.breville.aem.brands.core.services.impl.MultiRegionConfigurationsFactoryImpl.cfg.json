@@ -1,0 +1,23 @@
+// MultiRegion configurations
+{
+	"Factory PID": "com.breville.aem.brands.core.services.impl.MultiRegionConfigurationsFactoryImpl",
+	"aws.api.url": "https://stage-api.foodthinkers.com",
+	"brand": "Beanz",
+	"ctp.project.key": "breville-stage",
+	"ctp.client.secret": "uat-my.breville.com",
+	"ctp.client.id": "jHnqmi3jwQRsGS10y5ANQ9uj7Equ3Qag",
+	"ctp.auth.url": "iden-uat.us.auth0.com",
+	"ctp.api.url": "https://iden-uat.us.auth0.com/api/v2/",
+	"ctp.scopes": "read:current_user update:current_user_metadata",
+	"ctp.shipping.method.id": "82c97aa9-2f23-4f5d-ad79-8d98d1df1982",
+	"ctp.supply.channel.id": "23194907-5e95-414a-8579-83a49d266126",
+	"cart.url": "/content/beanz/language_master/en/transaction/cart.html",
+	"grind.id": "71c26678-1b3b-4687-b100-8212824853f2",
+	"currency.symbol": "$",
+	"algolia.index.name": "Beanz",
+	"algolia.app.id": "S83ELHQBRF",
+	"algolia.search.api.key": "9fa6aa2f14b022b0c829f3425aa9a666",
+	"locale":"en-US",
+	"google.predictive.address":"AIzaSyBF-156SSlFPOcw4HOzzz9e6r1rZJY8u9s",
+	"externalizer.key":"publishBeanz"
+}

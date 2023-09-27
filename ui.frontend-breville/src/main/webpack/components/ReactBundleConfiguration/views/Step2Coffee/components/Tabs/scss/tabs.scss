@@ -1,0 +1,61 @@
+.coffee-conf-tab {
+  .coffee-conf-tab__content {
+    padding: $cs-spacing-25 $cs-spacing-20;
+
+    @media (min-width: $cs-screen-md) {
+      padding: $cs-spacing-25 $cs-spacing-50 $cs-spacing-30;
+
+    }
+
+    .coffee-conf-tab__header-title {
+      @extend %cs-font-h8; // Closest match Title/H8 - Helvetica-Neue - 22px (Desktop) - 18px (Mobile)
+      font-weight: $cs-font-weight-bold;
+      margin-bottom: $cs-spacing-5;
+    }
+
+    .coffee-conf-tab__header-desc {
+      @extend %cs-font-p-4; // Helvetica-Neue - 14px (Desktop & Mobile)
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__item-wrapper {
+    @extend %cs-font-p-2;
+    line-height: $cs-line-height-h3-mobile;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: $cs-color-gray-60;
+    width: 50%;
+    box-shadow: 
+      0 1px 0 $cs-color-gray-40 inset, // Top box shadow
+      0.5px 0 0 $cs-color-gray-40 inset,  // Right box shadow
+      -0.5px 0 0 $cs-color-gray-40 inset,  // Left box shadow
+      0 -1px 0 $cs-color-gray-40 inset; // Bottom box shadow
+
+    &.active {
+      font-weight: bold;
+      background-color: $cs-white;
+      box-shadow: 
+        0 1px 0 $cs-color-gray-40 inset, // Top box shadow
+        0.5px 0 0 $cs-color-gray-40 inset,  // Right box shadow
+        -0.5px 0 0 $cs-color-gray-40 inset,  // Left box shadow
+        0 -4px 0 $cs-color-commercial inset; // Purple active bottom box shadow
+    }
+  }
+
+  &__item {
+    height: 60px;
+    width: 100%;
+    border: 0;
+    padding-left: $cs-spacing-35;
+    padding-right: $cs-spacing-35;
+    background-color: unset;
+    cursor: pointer;
+  }
+}

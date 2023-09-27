@@ -1,0 +1,168 @@
+.registered-product-tile {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-items: center;
+  padding: $cs-spacing-25 $cs-spacing-20;
+    
+  background-color: $cs-white;
+  border-radius: $cs-border-radius-8;
+
+  @media (min-width: $cs-screen-xl) {
+    flex-direction: row;
+    padding: $cs-spacing-25 $cs-spacing-30;
+  }
+
+  .subscription__header {
+    @extend %cs-font-p-4;
+    position: relative;
+
+    width: 100%;
+
+    text-decoration: underline;
+
+    @media (min-width: $cs-screen-xl) {
+      position: absolute;
+      top: $cs-spacing-25;
+      right: $cs-spacing-30;
+
+      width: unset;
+    }
+  }
+
+  .label-font-weight-bold {
+    font-weight: $cs-font-weight-bold;
+  }
+
+  .registered-product {
+    display: flex;
+    align-items: start;
+    justify-items: center;
+    
+    background-color: $cs-white;
+        
+    @media (min-width: $cs-screen-xl) {
+      flex-grow: 2;
+      align-items: center;
+      justify-items: start;
+      height: 100%;
+      margin: auto;
+      padding: 0;
+    }
+  
+    &__item-image {
+      margin-right: $cs-spacing-15;
+
+      @media (min-width: $cs-screen-xl) {
+        margin-right: $cs-spacing-25;;
+      }
+    }
+        
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $cs-screen-xl) {
+        margin-right: $cs-spacing-60;
+      }
+    }
+  
+    &__item-name {
+      @extend %cs-font-h12-bold;
+    }
+  
+    &__serial {
+      @extend %cs-font-p-5;
+      margin: $cs-spacing-5 0 $cs-spacing-15;
+  
+      color: $cs-gunmetal;
+    }
+  
+    &__registered {
+      @extend %cs-font-p-4;
+      display: grid;
+      grid-template: auto/auto 1fr;
+      align-items: center;
+  
+      color: $cs-gunmetal;
+    }
+  
+    &__warranty {
+      @extend %cs-font-p-4;
+      display: grid;
+      grid-template: auto/auto 1fr;
+      margin-top: $cs-spacing-10;
+  
+      color: $cs-gunmetal;
+      line-height: normal;
+
+      @media (min-width: $cs-screen-xl) {
+        align-items: center;
+      }
+    }
+  
+    &__icon-registered {
+      @extend %registered-icon;
+      width: $cs-spacing-20;
+      height: $cs-spacing-20;
+      margin-right: $cs-spacing-10;
+    }
+  
+    &__icon-warranty {
+      @extend %warranty-with-background-icon;
+  
+      width: 19px;
+      height: 22px;
+      margin-right: $cs-spacing-10;
+    }
+  }
+
+  .subscription-product {
+    width: 100%;
+    padding: $cs-spacing-30 0 $cs-spacing-20;
+
+    border-top: 1px solid $cs-gainsboro;
+
+    @media (min-width: $cs-screen-xl) {
+      flex-grow: 3;
+      width: unset;
+      margin: auto;
+      padding: 0 $cs-spacing-25;
+
+      border-top: 0;
+      border-left: 1px solid $cs-gainsboro;
+    }
+    
+    &__tiles {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+
+      @media (min-width: $cs-screen-xl) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: start;
+        margin: $cs-spacing-35 0;
+      }
+    }
+
+    &__container {
+      align-items: center;
+      justify-content: start;
+      padding: 0;
+
+      border-bottom: 0;
+
+      &:not(:last-child) {
+        margin-bottom: $cs-spacing-25;
+
+        @media (min-width: $cs-screen-xl) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

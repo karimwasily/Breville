@@ -1,0 +1,10 @@
+.cmp-container--order {
+  .cmp-container {
+    .aos-teaser {
+      order: 1;
+      @media (min-width: $screen-md) {
+        order: 0;
+      }
+    }
+  }
+}

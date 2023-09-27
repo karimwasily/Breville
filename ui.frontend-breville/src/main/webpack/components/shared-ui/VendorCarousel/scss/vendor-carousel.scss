@@ -1,0 +1,179 @@
+//size of the arrow icon
+.vendorcarousel {
+  --image-height: $cs-spacing-75;
+
+  $arrow-image-size: $cs-spacing-10;
+
+  // carousel arrows
+  .splide__arrow--prev {
+    @media (min-width: $cs-screen-lg) {
+      left: $cs-spacing-30;
+    }
+  }
+
+  .splide__arrow--next {
+    @media (min-width: $cs-screen-lg) {
+      right: $cs-spacing-30;
+    }
+  }
+
+  .splide__list {
+    text-align: center;
+  }
+
+  .splide__track {
+    margin: $cs-spacing-15 $cs-spacing-50 0;
+
+    @media (min-width: $cs-screen-sm) {
+      margin-bottom: $cs-spacing-15;
+    }
+
+    @media (min-width: $cs-screen-lg) {
+      margin: $cs-spacing-30 $cs-spacing-80;
+    }
+  }
+
+  // select border
+  .splide__slide.is-active {
+    .carousel-item__item {
+      @media (min-width: $screen-sm) {
+        border: solid 2px $cs-gunmetal;
+        border-radius: $cs-border-radius-8;
+      }
+    }
+  }
+
+  .carousel-item__wrapper {
+    height: 100%;
+    padding: 0;
+
+    vertical-align: middle;
+
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    .carousel-item__item {
+      width: $cs-spacing-110;
+      height: 100%;
+      padding: $cs-spacing-10;
+      object-fit: cover;
+
+      @media (min-width: $cs-screen-md) {
+        width: $cs-spacing-130;
+        padding: $cs-spacing-5 $cs-spacing-15;
+      }
+    }
+  }
+
+  .vendorcarousel-roaster-modal {
+    @extend %cs-font-small-p;
+    display: block;
+    width: 100%;
+    margin: $cs-spacing-10 0 $cs-spacing-20;
+    padding: 0;
+
+    color: $cs-color-primary;
+
+    text-align: center;
+    text-decoration: underline;
+
+    background: none;
+    border: 0;
+
+    outline: none;
+
+    @media (min-width: $cs-screen-sm) {
+      display: none;
+    }
+  }
+  @media (min-width: $cs-screen-lg) {
+    --image-height: 5.3125rem;
+  }
+}
+
+.modal-vendor {
+  width: 100%;
+  overflow-y: auto;
+  @media (min-width: $screen-sm) {
+    width: auto;
+  }
+  @media (min-width: $screen-lg) {
+    margin: $cs-spacing-70 0;
+  }
+}
+
+.overlay-vendor {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $cs-black-transparent-dark;
+
+  @media (min-width: $cs-screen-md) {
+    justify-content: center;
+  }
+}
+
+.vendor-modal__container {
+  position: relative;
+
+  padding: $cs-spacing-15;
+
+  background-color: $cs-white;
+
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-50 $cs-spacing-40;
+  }
+
+  .vendor-modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $cs-spacing-35;
+
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-40;
+    }
+
+    &__title {
+      @extend %cs-font-h2;
+      margin-bottom: 0;
+    }
+
+    .vendor-modal__close-icon {
+      position: relative;
+    }
+  }
+
+  .vendor-modal-content {
+    .react-flex {
+      flex-wrap: wrap;
+      gap: $cs-spacing-25 $cs-spacing-15;
+      padding: 0;
+      overflow-x: auto;
+
+      .carousel-item__item {
+        width: 145px;
+        height: 95px;
+        margin-bottom: $cs-spacing-10;
+        padding: $cs-spacing-5;
+        object-fit: cover;
+
+        border: solid 1px $cs-color-gray-40;
+        border-radius: $cs-border-radius-10;
+
+        &.is-active {
+          border: solid 2px $cs-gunmetal;
+        }
+      }
+    }
+  }
+}

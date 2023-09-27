@@ -1,0 +1,56 @@
+////////////////////
+// COLORS
+////////////////////
+
+////////////////////
+// RAW
+////////////////////
+$cs-white: #fff;
+$cs-black: #000;
+$cs-gunmetal: #313638;
+$cs-dark-purple: #421540;
+$cs-forest-green: #4c8314;
+$cs-summer-sky: #d34300;
+$cs-orange: #ff8a14;
+$cs-orange-light: #e37536;
+$cs-scarlet: #e61f02;
+$cs-monsoon: #717578;
+$cs-silver: #c0c0c0;
+$cs-silver-dark: #767676;
+$cs-white-grey: #d3d3d3;
+$cs-light-grey: #d0d0d0;
+$cs-gainsboro: #e2e2e2;
+$cs-gray-95: #f2f2f2;
+$cs-whitesmoke: #f8f8f8;
+$cs-dark-blue: #317381;
+$cs-dark-silver: #949494;
+$cs-facebook-blue: #1877f2;
+$cs-cerulean: #0fa0ea;
+$cs-dark-cream: #aa8262;
+$cs-apple-green: #6CA84D;
+
+////////////////////
+// ASSIGN
+////////////////////
+$cs-color-primary: $cs-gunmetal;
+$cs-color-secondary: $cs-forest-green;
+$cs-color-commercial: $cs-dark-purple;
+$cs-color-notice: $cs-summer-sky;
+$cs-notice-error: $cs-scarlet;
+
+$cs-color-background: $cs-gunmetal;
+
+// Gray Shades
+$cs-color-gray-10: $cs-monsoon;
+$cs-color-gray-15: $cs-dark-silver;
+$cs-color-gray-15: #949494;
+$cs-color-gray-20: $cs-silver;
+$cs-color-gray-30: $cs-light-grey;
+$cs-color-gray-40: $cs-gainsboro;
+$cs-color-gray-50: $cs-gray-95;
+$cs-color-gray-60: $cs-whitesmoke;
+
+// Transparency
+$cs-black-transparent: rgba($cs-black, 0.3);
+$cs-black-transparent-dark: rgba($cs-black, 0.8); //unconfirmed
+$cs-white-transparent: rgba($cs-white, 0.5);

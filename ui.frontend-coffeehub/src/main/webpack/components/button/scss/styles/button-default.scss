@@ -1,0 +1,89 @@
+// converted to placeholder, style wrapper is at the bottom of this stylesheet
+// * this will allow us to import this style in to other variations
+// * and remove the dependency for the author to select default AND light or dark theme styles.  All styles can be standalone
+
+%cmp-button--default {
+  --foreground: #{$black};
+  --background: #{$white};
+
+  .cmp-button {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-md;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    border: 1px solid var(--foreground);
+    background-color: transparent;
+    min-width: max-content;
+
+    &__icon {
+      @include arrow-right-icon($color: $black);
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: 50%;
+      right: $spacing-md;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &__text {
+      @extend %font-cta;
+      color: var(--foreground);
+      text-decoration: none;
+      z-index: 1;
+      order: 1;
+      // gap of 40px + icon width
+      margin-right: 3.5rem; 
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 200%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0;
+      transform: translate3d(-200%, 0, 0);
+      transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+      background: var(--background);
+      background: linear-gradient(90deg, var(--background) 0%, var(--background) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    &:hover {
+      outline: none;
+
+      &::before {
+        transform: translate3d(0%, 0, 0);
+        opacity: 1;
+      }
+
+      .cmp-button__icon {
+        transform: translate3d(5px, -50%, 0);
+      }
+    }
+
+    &:focus {
+      &::before {
+        transform: translate3d(0%, 0, 0);
+        opacity: 1;
+      }
+
+      .cmp-button__icon {
+        transform: translate3d(5px, -50%, 0);
+      }
+    }
+  }
+}
+
+// ACTUAL STYLEWRAPPER
+.cmp-button--default {
+  @extend %cmp-button--default;
+}

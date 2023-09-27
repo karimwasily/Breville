@@ -1,0 +1,38 @@
+.cmp-button--background-white {
+  text-align: center;
+
+  // clearfix
+  &::before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .cmp-button {
+    background-color: $color-background;
+    border: 2px solid $violet;
+    border-radius: $spacing-xxs;
+    width: 100%;
+
+    .cmp-button__text {
+      @extend %btn-text;
+      color: $violet;
+      text-decoration: none;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+      justify-content: center;
+    }
+  }
+}
+
+.cmp-container--coffeelowdown {
+  &>.cmp-container {
+    .cmp-button--background-white {
+      .cmp-button {
+        background-color: $color-background;
+        border: 2px solid $violet;
+      }
+    }
+  }
+}

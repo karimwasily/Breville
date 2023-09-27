@@ -1,0 +1,40 @@
+{
+  "name": "breville-aem-brands",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.",
+  "main": "index.js",
+  "dependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-router-dom": "5.2.0",
+    "react-hook-form": "^7.9.0"
+  },
+  "workspaces": [
+    "xps-utils",
+    "xps-react",
+    "ui.frontend-beanz",
+    "ui.frontend-breville"
+  ],
+  "nohoist": [
+    "**"
+  ],
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "style-loader": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://rishabshrestha@bitbucket.org/brevilledigital/breville-aem-brands.git"
+  },
+  "resolutions": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "author": "Rishab Shreshta",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/brevilledigital/breville-aem-brands#readme"
+}

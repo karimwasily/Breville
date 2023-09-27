@@ -1,0 +1,134 @@
+
+// * unsetting some styles from default coffee product tile component
+%browse-view-coffee-tile {
+  .coffee-product-tile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: $cs-spacing-15;
+
+    border: 1px solid $cs-color-gray-40;
+    border-radius: $cs-border-radius-16;
+
+    @media (min-width: $cs-screen-md) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: $cs-spacing-20 $cs-spacing-30 $cs-spacing-30 $cs-spacing-30;
+    }
+
+    .coffee-product-tile__info {
+      @media (min-width: $cs-screen-md) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .coffee-product-tile__title {
+        @extend %cs-font-h12-medium;
+        margin-bottom: $cs-spacing-5 !important;
+
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: $cs-spacing-15 !important;
+        }
+      }
+
+      .coffee-product-tile__flavour {
+        color: $cs-color-gray-10;
+      }
+
+      .coffee-product-tile__roast {
+        margin-bottom: $cs-spacing-5 !important;
+      }
+
+      .coffee-product-tile__price {
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: $cs-spacing-20;
+        }
+      }
+
+      .coffee-product-tile__select {
+        @media (min-width: $cs-screen-md) {
+          display: flex;
+          flex: 1;
+          align-items: flex-end;
+          justify-content: center;
+        }
+
+        .coffee-product-tile__select-inner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          min-height: 36px;
+
+          .coffee-product-tile__select-button {
+            @media (min-width: $cs-screen-md) {
+              flex: 1;
+              max-width: $cs-spacing-140;
+            }
+          }
+
+          .coffee-product-tile__select-button--selected {
+            @media (min-width: $cs-screen-md) {
+              flex: unset;
+              width: 1.375rem;
+              height: 1.375rem;
+            }
+
+            &::before {
+              top: -0.15rem;
+              left: -0.8rem;
+
+              width: 0.3875rem;
+              height: 0.33125rem;
+
+              @media (min-width: $cs-screen-md) {
+                top: -0.3rem;
+              }
+            }
+          }
+
+          .coffee-product-tile__select-button--selected-label {
+            @extend %cs-font-p-6-bold;
+            top: $cs-spacing-35;
+
+            display: none;
+
+            @media (min-width: $cs-screen-md) {
+              display: inline-block; 
+            }
+          }
+        }
+      }
+    }
+
+    .coffee-product-tile__image {
+      flex: 1;
+      min-width: 70px;
+      min-height: 70px;
+
+      @media (min-width: $cs-screen-md) {
+        width: 100%;
+        min-width: unset;
+        height: 100%;
+        min-height: unset;
+      }
+    }
+
+    .coffee-product-tile__info {
+      flex: 3;
+      padding-left: $cs-spacing-15;
+
+      text-align: left;
+
+      @media (min-width: $cs-screen-md) {
+        padding: 0;
+
+        text-align: center;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,65 @@
+.form-btn {
+  width: 100%;
+}
+  
+.google-btn,
+.facebook-btn {
+  width: 50%;
+}
+
+.google-btn:hover { 
+  cursor: pointer;
+}
+
+.facebook-btn:hover { 
+  cursor: pointer;
+}
+  
+.google-btn {
+  border: 0;
+  font-size: $cs-font-size-base;
+  font-weight: $cs-font-weight-medium;
+  color: rgba(0, 0, 0, 0.54);
+  height: 48px;
+  margin-right: $cs-spacing-10;
+  border-radius: $cs-spacing-10;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.17), 0 0 3px 0 rgba(0, 0, 0, 0.08);
+  background-color: $cs-white;
+}
+  
+.facebook-btn {
+  border: 0;
+  height: 48px;
+  margin-left: $cs-spacing-10;
+  border-radius: $cs-spacing-10;
+  background-color: $cs-facebook-blue;
+  font-size: $cs-font-size-base;
+  font-weight: $cs-font-weight-bold;
+  color: $cs-white;
+}
+  
+.social-media-btn-wrap {
+  display: flex;
+}
+  
+.signin__btn {
+  @extend %cs-font-p-4;
+  font-weight: $cs-font-weight-normal;
+  text-align: left;
+  color: $cs-color-primary;
+  text-decoration: underline;
+}
+  
+.signin__btn:hover {
+  cursor: pointer;
+}
+  
+.signin-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.signin-icon-txt {
+  margin-left: $cs-spacing-10;
+}

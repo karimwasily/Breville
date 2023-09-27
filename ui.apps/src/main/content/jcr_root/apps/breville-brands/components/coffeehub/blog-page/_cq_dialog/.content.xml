@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <blog
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Article Details"
+                        sling:orderBefore="advanced"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <publicationDate
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                        fieldDescription="Article Publication Date"
+                                        fieldLabel="Publishing Date"
+                                        name="./publicationDate"
+                                        required="{Boolean}true"
+                                        type="datetime">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./publicationDate"/>
+                                    </publicationDate>
+                                    <publicationRank
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldDescription="An optional ranking for the featured articles to override other featured articles sort order (use high numbers to bump featured articles to the top)"
+                                        fieldLabel="Featured Article Rank"
+                                        max="{Long}10000"
+                                        min="{Long}0"
+                                        name="./publicationRank"
+                                        required="{Boolean}false">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./publicationRank"/>
+                                    </publicationRank>
+                                    <publicationAuthor
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Optional name of the Author"
+                                        fieldLabel="Author"
+                                        max="{Long}10000"
+                                        min="{Long}0"
+                                        name="./publicationAuthor"
+                                        required="{Boolean}false">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./publicationAuthor"/>
+                                    </publicationAuthor>
+                                    <articleReadMoreText
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please configure required custom Article Read More Label"
+                                        fieldLabel="Article Read More Label"
+                                        max="{Long}10000"
+                                        min="{Long}0"
+                                        name="./articleReadMoreText"
+                                        required="{Boolean}false">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./publicationAuthor"/>
+                                    </articleReadMoreText>
+                                </items>
+                            </column>
+                        </items>
+                    </blog>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,50 @@
+
+.product-description {  
+  max-width: $cs-max-width-900;
+  margin: 0 auto;
+    
+  .cmp-product-description { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: $cs-spacing-60 $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      margin: $cs-spacing-100 0;
+      padding: 0 $cs-spacing-10;    
+    }
+
+    &__title {
+      @extend %cs-font-h2;
+      margin-bottom: $cs-spacing-20;
+
+      text-align: center;
+      
+      @media (min-width: $cs-screen-md) {
+        margin-bottom: $cs-spacing-25;
+        padding: 0 $cs-spacing-70; 
+      }
+
+      h2 {
+        //to avoid default margin
+        margin-bottom: 0;
+      }
+
+    }      
+
+    &__content {
+      @extend %cs-font-p-2;
+      margin: 0 auto;
+
+      p {
+        @extend %cs-font-p-2;       
+      }
+
+      a {
+        @extend %cs-link-underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

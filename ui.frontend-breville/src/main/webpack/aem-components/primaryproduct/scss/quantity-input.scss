@@ -1,0 +1,105 @@
+// this is used in primaryproductright
+%quantity-input {
+  .quantity input[type=number] {
+    border: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+    
+  .quantity {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .quantity input[type=number]::-webkit-inner-spin-button,
+  .quantity input[type=number]::-webkit-outer-spin-button {
+    display: none;
+  }
+    
+  .quantity button {
+    appearance: none;
+    background-color: transparent;
+    border: unset;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+    
+  .quantity button::before,
+  .quantity button::after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    height: 2px;
+    transform: translate(-50%, -50%);
+  }
+    
+  .quantity button.plus::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .quantity button.plus-active::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+    
+  .quantity input[type=number] {
+    text-align: center;
+  }
+    
+  .quantity {
+    border: 1px solid $cs-dark-silver;
+    width: 2rem;
+    border-radius: $cs-border-radius-8;
+  }
+    
+  .quantity button {
+    width: 14px;
+    height: 14px;
+    padding-right: 0;
+  }
+    
+  .quantity button.minus {
+    padding-left: 0;
+  }
+    
+  button.minus::before {
+    width: 0.7rem;
+    background-color: $cs-silver;
+  }
+
+  button.minus-active::before {
+    width: 0.7rem;
+    background-color: $cs-gunmetal;
+   
+  }
+
+  button.plus::before,
+  button.plus::after {
+    width: 0.7rem;
+    background-color: $cs-silver;
+  }
+
+  button.plus-active::before,
+  button.plus-active::after {
+    width: 0.7rem;
+    background-color: $cs-gunmetal;
+  }
+    
+  .quantity input[type=number] {
+    max-width: $cs-spacing-20;
+    min-width: 3rem;
+    padding: $cs-spacing-10;
+    color: $cs-gunmetal;
+    background-color: transparent;
+  }
+  
+}

@@ -1,0 +1,49 @@
+.cmp-button--background-blue {
+  text-align: center;
+
+  // clearfix
+  &::before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  button.cmp-button {
+    width: 100%;
+  }
+
+  .cmp-button {
+    border-radius: $spacing-xxs;
+    display: flex;
+    margin: auto;
+    padding: 0 $spacing-md;
+
+    .cmp-button__text {
+      @extend %light-green-large-btn;
+      color: $cyan;
+      background-color: $oyster-bay;
+      text-decoration: none;
+      width: 100%;
+      max-width: 480px;
+      margin: auto;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      @include breakpoint-up(md) {
+        height: 65px;
+      }
+    }
+  }
+}
+
+.cmp-container--coffeelowdown {
+  &>.cmp-container {
+    .cmp-button--background-blue {
+      .cmp-button {
+        border: 1px solid $oyster-bay;
+      }
+    }
+  }
+}

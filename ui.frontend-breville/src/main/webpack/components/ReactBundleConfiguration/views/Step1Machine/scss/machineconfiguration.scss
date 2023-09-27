@@ -1,0 +1,180 @@
+// todo: create global machine config page 1 styles
+.machine-conf {
+  --box-shadow-width-selected: 3px;
+
+  // Category Tile Section
+  ////////////////////////
+  .machine-conf__category-title {
+    margin-bottom: 0;
+    padding-top: $cs-spacing-50;
+
+    text-align: center;
+  }
+
+  .machine-conf__category-subtitle {
+    @extend %cs-font-p-4;
+    display: block;
+    padding-top: $cs-spacing-10;
+
+    text-align: center;
+
+    @media (min-width: $cs-screen-md) {
+      display: none;
+    }
+  }
+
+  .machine-conf__category-list {
+    gap: 0;
+    padding-top: $cs-spacing-30;
+
+    @media (min-width: $cs-screen-md) {
+      gap: $cs-spacing-15;
+      padding-top: $cs-spacing-50;
+    }
+  }
+
+  // Selected Category Tile Section
+  /////////////////////////////////
+  .machine-conf__category-list-item--selected {
+    font-weight: $cs-font-weight-bold;
+    // todo: refactor and update current work
+    border-bottom: 2px solid $cs-color-primary;
+  
+    @media (min-width: $cs-screen-md) {
+      border-bottom: 0;
+      border-radius: $cs-border-radius-16;
+      box-shadow: 0 0 0 var(--box-shadow-width-selected) $cs-color-primary;
+    }
+  
+    .category-tile {
+      border: unset; // remove grey border on selected tile
+    }
+
+    .category-tile__subheading {
+      @media (min-width: $cs-screen-md) {
+        font-weight: $cs-font-weight-normal;
+      }
+    }
+  }
+
+  // Product Tile Section
+  ///////////////////////
+  .machine-conf__product-title {
+    @extend %cs-font-h6;
+    display: none;
+
+    @media (min-width: $cs-screen-md) {
+      display: block;
+      padding-top: $cs-spacing-50;
+
+      text-align: center;
+    }
+  }
+  
+  // Unselected Product Tile Section
+  //////////////////////////////////
+
+  .producttile {
+    position: relative;
+
+    cursor: pointer;
+  
+    .cmp-producttile {
+      width: 100%;
+
+      border-color: $cs-color-gray-10;
+      border-bottom: 1px solid $cs-color-gray-40;
+      border-radius: $cs-border-radius-16;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      .cmp-producttile__primary-content-wrapper {
+        flex-direction: column;
+        
+        .cmp-producttile__header-content {
+          .cmp-producttile__title {
+            @extend %cs-font-h8;
+            margin-top: $cs-spacing-20;
+          }
+
+          .cmp-producttile__description {
+          }
+
+          .variant-picker {  
+          }
+        }
+
+        .cmp-producttile__price-wrapper {
+          .cmp-producttile__price {
+            @extend %cs-font-h14;
+          }
+        }
+      }
+  
+      .cmp-producttile__image {
+        padding-top: $cs-spacing-40;
+
+        .cmp-image {
+          width: 210px;
+          height: 210px;
+          margin: auto;
+        }
+      }
+  
+      .cmp-producttile__footer-content {
+        display: flex;
+        flex-direction: column;
+
+        .cmp-producttile__price {
+          @extend %cs-font-h14;
+          order: 2;
+        }
+  
+        .cmp-producttile__title {
+          @extend %cs-font-h13;
+          order: 1;
+          padding-top: $cs-spacing-5;
+
+          font-weight: $cs-font-weight-bold;
+        }
+
+      }
+    }
+  }
+
+  // Selected Product Tile Section
+  ////////////////////////////////
+  .select-wrapper__list-item--selected {
+    .producttile {
+      .cmp-producttile {
+
+        width: 100%;
+
+        border-top: unset; // remove grey border on selected tile
+        border-right: unset;
+        border-left: unset;
+      }
+    }
+  }
+
+  // Shop All Machines and Next: Choose Coffee Section
+  ////////////////////////////////////////////////////
+  .machine-conf__section-link {
+    margin-top: $cs-spacing-10;
+    margin-bottom: $cs-spacing-40;
+
+    text-align: center;
+
+    .machine-conf__section-link-shop-all {
+      @extend %cs-link-bold-underline;
+      @extend %cs-font-p-2;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .machine-conf__section-next {
+    padding-bottom: $cs-spacing-100;
+
+    text-align: center;
+  }
+}

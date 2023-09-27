@@ -1,0 +1,124 @@
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-top: $cs-spacing-30;
+
+  &__step {
+    --distance: 120px;
+    --indicator-size: 1.86em;
+    @extend %cs-font-p-4;
+
+    @media (min-width: $cs-screen-md) {
+      --distance: 260px;
+    }
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: var(--distance);
+
+    font-weight: $cs-font-weight-bold;
+    text-align: center;
+
+    .steps__indicator {
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+    }
+    
+    // line (for every step except last)
+    &:not(:last-child) {
+      .steps__indicator::after {
+        position: absolute;
+        top: 50%;
+        left: calc(50% + var(--indicator-size));
+        z-index: -2;
+
+        display: inline-block;
+        width: calc(var(--distance) - (var(--indicator-size) * 2));
+        height: 1px;
+
+        background-color: $cs-color-gray-30;
+
+        content: '';
+      }
+    }
+  }
+  
+  &__indicator {
+    @extend %cs-font-p-4;
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--indicator-size);
+    height: var(--indicator-size);
+
+    color: $cs-white;
+  
+    // circle
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+      height: 100%;
+
+      background-color: $cs-color-gray-10;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      content: '';
+
+    } 
+  
+    &--active::before {
+      background-color: $cs-gunmetal;
+    }
+  
+    &--disabled::before {
+      background-color: $cs-color-gray-20;
+      cursor: pointer;
+    }
+  }
+  
+  &__text {
+    @extend %cs-font-p-2;
+    margin-top: $spacing-xs;
+
+    color: $cs-color-gray-10;
+    font-weight: $cs-font-weight-normal;
+
+    &--active {
+      color: $cs-gunmetal;
+      font-weight: $cs-font-weight-bold;
+    }
+  }
+  
+  &__tick {
+    width: var(--indicator-size);
+
+    cursor: pointer;
+  
+    &::before {
+      @extend %check-mark-grey;
+      position: absolute;
+      top: 0.42em;
+      left: 0.42em;
+
+      display: block;
+      width: $cs-font-size-small;
+      height: $cs-font-size-small;
+
+      content: '';
+    }
+  }
+  
+}

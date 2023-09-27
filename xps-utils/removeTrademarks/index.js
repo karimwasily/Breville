@@ -1,0 +1,1 @@
+export { removeTrademarks } from './removeTrademarks'

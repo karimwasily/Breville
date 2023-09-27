@@ -1,0 +1,39 @@
+/* stylelint-disable -- SCSS mixins and iterators require greater nesting depth, as well as to override other rules */
+/* _themer.scss */
+
+/* mixin: themer */
+/* iterates over a list of attribute values, outputting a CSS class for each value */
+@mixin themer($attr, $values, $options: null, $units: null) {
+    @each $v in $values {
+        $finalValue: $v;
+        @if $units {
+            $finalValue: $v + $units;
+        }
+        .#{$attr}-#{'' + $v} {
+            #{$attr}: $finalValue;
+            @if $options {
+                @each $key, $val in $options {
+                    #{$key}: $val;
+                }
+            }
+        }
+    }
+}
+
+/* mixin: sizer */
+/* outputs a CSS rule intended for attributes that are sizes */
+@mixin sizer($value, $attr, $side: null, $modifier: null) {
+    @if $side {
+        @if $attr == border {
+            #{$attr}-#{$side}-width: $value;
+        } @else {
+            #{$attr}-#{$side}: $value;
+        }
+    } @else {
+        @if $attr == border {
+            #{$attr}-width: $value;
+        } @else {
+            #{$attr}: $value;
+        }
+    }
+}

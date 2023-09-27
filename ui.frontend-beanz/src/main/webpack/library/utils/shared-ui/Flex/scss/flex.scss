@@ -1,0 +1,7 @@
+.react-flex {
+  display: flex;
+  padding: $spacing-lg;
+  justify-content: center;
+  // todo: update this as it is not browser compatible
+  gap: $spacing-lg;
+}

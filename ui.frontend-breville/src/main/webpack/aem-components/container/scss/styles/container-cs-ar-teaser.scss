@@ -1,0 +1,126 @@
+.cmp-container--cs-ar-teaser {
+  .cmp-container {
+    max-width: $cs-max-width-banners;
+    margin: auto;
+    padding: $cs-spacing-40 0;
+
+    .container {
+      display: flex;
+      order: 1;
+
+      @media (min-width: $cs-screen-md) {
+        order: 0;
+      }
+
+      .cmp-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: $cs-spacing-30 $cs-spacing-15 0 $cs-spacing-15;
+
+        @media (min-width: $cs-screen-md) {
+          max-width: 430px;
+        }
+
+        .teaser {
+          .cmp-teaser__content {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: $cs-screen-md) {
+              max-width: 370px;
+              margin-right: $cs-spacing-20; 
+            }
+
+            .cmp-teaser__title {
+              @extend %cs-font-h2;
+              // flip the order so the 'pretitle' is a subheading
+              order: -1;
+              margin-right: $cs-spacing-40;
+              margin-bottom: $cs-spacing-10;
+
+              @media (min-width: $cs-screen-md) {
+                margin-right: 0;
+                margin-bottom: $cs-spacing-15;
+              }
+            }
+
+            .cmp-teaser__pretitle {
+              @extend %cs-font-h10;
+              margin-bottom: $cs-spacing-20;
+
+              font-weight: $cs-font-weight-bold;
+
+              @media (min-width: $cs-screen-md) {
+                margin-bottom: $cs-spacing-25;
+              }
+            }
+
+            .cmp-teaser__description {
+              p {
+                @extend %cs-font-p-6;
+                margin-bottom: 0;
+              }
+            }
+
+            .cmp-teaser__action-container {
+              .cmp-teaser__action-link {
+                @extend %cs-font-p-2;
+                position: relative;
+
+                display: flex;
+                align-items: center;
+
+                font-weight: $cs-font-weight-bold;
+
+                // create the play button
+                // PLAY ICON
+                &::after {
+                  @extend  %play-button-hover-svg-black;
+                  display: inline-block;
+                  width: 1.4em;
+                  height: 1.4em;
+                  margin-left: $cs-spacing-10;
+
+                  background-color: transparent;
+                  background-repeat: no-repeat;
+                  border: 0;
+                  cursor: pointer;
+
+                  transition: transform $cs-transition-speed-250 $cs-transition-easing;
+
+                  content: '';
+                }
+
+                &:hover {
+                  // PLAY ICON ANIMATION
+                  &::after {
+                    transform: scale($cs-transition-scale-130);
+                  }
+                }
+              }
+
+            }
+          }
+        }
+    
+        // holds the logo link buttons
+        .cmp-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: $cs-spacing-10;
+          margin: 0;
+          padding: 0;
+        }
+
+      }
+    }
+
+    .cmp-image__image {
+      width: 100%;
+    }
+
+  }
+}
+
+

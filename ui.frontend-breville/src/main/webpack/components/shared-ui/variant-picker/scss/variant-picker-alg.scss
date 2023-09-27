@@ -1,0 +1,50 @@
+@use 'sass:math';
+
+.variant-picker-vr {
+  --size: #{$cs-spacing-20};
+  --insetsize: #{math.div($cs-spacing-25, 2)};
+  --gap: #{$cs-spacing-10};
+
+  @extend %variant-picker-base;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .variant-picker__list {
+    margin-right: $cs-spacing-15;
+    cursor: initial;
+
+    .variant-picker__item {
+      display: block;
+      margin-right: 0;
+  
+      .variant-btn {
+        margin-bottom: $cs-spacing-10;
+      }
+      
+      &.variant-picker__item-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .variant-more {
+        @extend %btn-reset;
+        @extend %cs-font-p-5;
+        // MORE text
+        font-size: cs-rem(11px);
+        text-transform: uppercase;
+        // rotate     
+        transform: rotate(90deg);
+        padding-left: var(--gap);
+        width: 100%;
+  
+        &--hidden {
+          display: none !important;
+        }
+      }
+    }
+
+  }
+ 
+}

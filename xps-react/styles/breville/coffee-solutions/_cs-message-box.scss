@@ -1,0 +1,46 @@
+.message-box {
+  @extend %cs-font-p-4;
+  padding: $cs-spacing-20 $cs-spacing-15;
+  border-radius: $cs-border-radius-8;
+  color: $cs-gunmetal;
+  margin: 0;
+  background-color: $cs-gray-95;
+  display: block;
+
+  >span {
+    display: block;
+    @media (min-width: $cs-screen-sm) { 
+      display: inline-block;
+    }
+  }
+  
+  &__label {
+    margin-right: $cs-spacing-10;
+  }
+
+  &__link {
+    @extend %cs-font-p-4;
+    text-decoration: underline;
+    color: inherit;
+  }
+    
+  &.danger {
+    color: $cs-scarlet;
+    background-color: rgba(230, 31, 2, 0.05);
+    
+    .message-box__label,
+    .message-box__link {
+      color: inherit;
+    }
+  }
+
+  &.info {
+    color: $cs-gunmetal;
+    background-color: $cs-gray-95;
+
+    .message-box__label,
+    .message-box__link {
+      color: inherit;
+    }
+  }
+}

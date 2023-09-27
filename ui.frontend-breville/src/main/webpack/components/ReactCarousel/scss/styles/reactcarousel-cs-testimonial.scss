@@ -1,0 +1,196 @@
+@use 'sass:math';
+
+// size of the teaser image
+$teaser-image-size: 80px;
+//size of the arrow icon
+$arrow-image-size: 34px;
+//direction variables
+$left: 'left';
+$right: 'right';
+
+//util function, flips direction to opposite
+@function flip-direction($direction) {
+  @if $direction == $left {
+    @return $right; 
+  }
+  @return $right;
+}
+
+// util function, calculates arrow position
+@function arrow-position($breakpoint, $shift: '0px') {
+  @if ($breakpoint == 1024px) {
+    @return calc((var(--centerPaddingRatio) * 1200px) - #{$shift});
+  }
+  @return calc((var(--centerPaddingRatio) * #{$breakpoint}) - #{$shift});
+}
+
+//placeholder to make image in circle
+%circle-image {
+  border-radius: 50%;
+}
+
+@mixin arrow-position($directon, $arrowImgSize) {
+  $shift: math.div($arrowImgSize, 2);
+  
+  #{$directon}: arrow-position($screen-sm, $shift);
+  @media (min-width: $screen-sm) {
+    #{$directon}: arrow-position($screen-sm, $shift);
+  }
+  @media (min-width: $screen-md) {
+    #{$directon}: arrow-position($screen-md, $shift);
+  }
+  @media (min-width: $screen-lg) {
+    #{$directon}: arrow-position($screen-lg, $shift);
+  }
+  @media (min-width: 1024px) {
+    #{$directon}: arrow-position(1024px, $shift);
+  }
+  @media (min-width: $screen-xl) {
+    #{$directon}: arrow-position($screen-xl, $shift);
+  }
+  @media (min-width: $screen-xxl) {
+    #{$directon}: arrow-position($screen-xxl, $shift);
+  }
+  @media (min-width: $screen-xxxl) {
+    #{$directon}: arrow-position($screen-xxxl, $shift);
+  }
+}
+
+// Mixin for rendering carousel arrows
+// $direction - left | right
+@mixin react-carousel-arrow($direction, $arrowImgSize) {
+  $flipDir: flip-direction($direction);
+  @include arrow-position($direction, $arrowImgSize);
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  
+  [dir='rtl'] & {
+    @include arrow-position($flipDir, $arrowImgSize);
+    left: auto;
+  }
+
+  &::before {
+    @extend %arrow-#{$direction}-circled-icon;
+    background-color: $cs-black;
+    display: none;
+    content: '';
+    width: $arrow-image-size;
+    height: $arrow-image-size;
+    background-repeat: no-repeat;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
+
+    [dir='rtl'] & {
+      @extend %arrow-#{$flipDir}-circled-icon;
+      background-color: $cs-black;
+    }
+  }
+}
+
+// Custom carousel style
+.cmp-reactcarousel--cs-testimonial {
+
+    
+  @extend %cmp-reactcarousel--slick-theme-default;
+  margin: $cs-spacing-90 0;
+  @media (min-width: $screen-md) {
+    margin: $cs-spacing-130 0;
+  }
+
+  // carousel arrows
+  .slick-prev {
+    @include react-carousel-arrow($left, $arrow-image-size);
+  }
+
+  .slick-next {
+    @include react-carousel-arrow($right, $arrow-image-size);
+  }
+
+  .slick-slide {
+    margin: 0;
+
+    > div {
+      height: 100%;
+
+      > div {
+        height: 100%;
+
+        // carousel teaser
+        .cmp-teaser {
+          background-color: $cs-whitesmoke;
+          padding: $cs-spacing-30 $cs-spacing-15;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          // circled image
+          &__image {
+            width: $teaser-image-size;
+            height: $teaser-image-size;
+            margin: 0 auto;
+            margin-bottom: $cs-spacing-10;
+
+            img {
+              @extend %circle-image;
+            }
+          }
+
+          // teaser content
+          &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: $cs-font-family;
+
+            .cmp-teaser {
+              &__pretitle {
+                @extend %cs-font-p-2;
+                color: $cs-gunmetal;
+                font-weight: bold;
+                margin-bottom: $cs-spacing-20;
+              }
+
+              &__title {
+                @extend %cs-font-testimonial;
+                margin-bottom: $cs-spacing-20;
+                color: $cs-black;
+
+                // break line between title and description text
+                &::after {
+                  display: block;
+                  background-color: $cs-light-grey;
+                  content: '';
+                  height: 1px;
+                  width: 100%;
+                  margin-top: 28px;
+                }    
+              }
+
+              &__description {
+                color: $cs-gunmetal;
+
+                p {
+                  @extend %cs-font-p-4;
+                }
+              }
+            }
+          }
+
+          @media (min-width: $screen-md) {
+            padding: $cs-spacing-50;
+          }
+
+          @media (min-width: $screen-xxl) {
+            padding: $cs-spacing-70 $cs-spacing-120;
+          }
+        }
+      }
+    }
+  }
+}
+

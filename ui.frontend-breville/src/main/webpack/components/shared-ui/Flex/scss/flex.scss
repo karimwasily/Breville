@@ -1,0 +1,15 @@
+// todo: handle 2/3/4 col layout and shift to overflow scroll on mobile
+// .react-flex {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   gap: $cs-spacing-30;
+//   padding: $cs-spacing-30;
+// }
+
+.react-flex {
+  display: flex;
+  padding: $cs-spacing-30;
+  justify-content: center;
+  // todo: update this as it is not browser compatible
+  gap: $cs-spacing-30;
+}

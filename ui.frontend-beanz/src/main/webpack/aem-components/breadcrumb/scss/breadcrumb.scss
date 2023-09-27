@@ -1,0 +1,48 @@
+.cmp-breadcrumb {
+  padding: $spacing-sm 0;
+
+  &__list {
+    white-space: nowrap;
+    display: inline-block;
+    list-style-type: none;
+
+    .cmp-breadcrumb__item {
+      a {
+        font-size: $font-size-xsmall;
+        color: $cyan;
+        font-weight: $font-weight-medium-bold;
+        font-family: $font-family-primary;
+        letter-spacing: $letter-spacing-base;
+        text-decoration: none;
+        @include breakpoint-up(md) {
+          font-size: $font-size-small;
+        }
+        @include breakpoint-up(lg) {
+          font-size: $font-size;
+        }
+      }
+
+      &:not(:first-child)::before {
+        vertical-align: middle;
+        content: '/';
+      }
+
+      &--active {
+        span {
+          font-weight: $font-weight-bold;
+          font-size: $font-size-xsmall;
+          color: $cyan;
+          font-family: $font-family-primary;
+          letter-spacing: $letter-spacing-base;
+          margin-top: 0.3rem;
+          @include breakpoint-up(md) {
+            font-size: $font-size-small;
+          }
+          @include breakpoint-up(lg) {
+            font-size: $font-size;
+          }
+        }
+      }
+    }
+  }
+}

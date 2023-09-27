@@ -1,0 +1,362 @@
+<a class="cmp-skip-main_content" href="#skip-nav-holder" tabindex="0">Skip to main content</a>
+<header 
+    id="aemConfig"
+    class="experiencefragment"
+    data-sly-use.multiconfig="com.breville.aem.brands.core.models.BrevilleMultiRegionConfigurationsModel"
+    data-locale="${multiconfig.locale}" data-country="${multiconfig.currentCountryCode}"
+    data-language="${multiconfig.currentLanguageCode}" data-brand="${multiconfig.brand}"
+    data-webchannel="${multiconfig.webChannel}" data-siterootpath="${multiconfig.siteRootPath}"
+    data-base-page="${currentPage.getName}"
+    data-currencysymbol="${multiconfig.currencySymbol}"
+    data-sfNotifyMeUrl="${multiconfig.notifyMeSalesforceURL}"
+    data-sfNotiyMeEnable="${multiconfig.notifyMeEnabled}"
+    data-currencyCode="${multiconfig.currencyCode}"
+    data-algoliaAppId="${multiconfig.algoliaAppId}"
+    data-algoliaApiKey="${multiconfig.algoliaApiKey}"
+    data-algoliaBrevilleIndex="${multiconfig.algoliaBrevilleIndex}"
+    data-algoliaBeanzIndex="${multiconfig.algoliaBeanzIndex}"
+    data-mulberrypublictoken="${multiconfig.mulberryPublicToken}"
+    data-mulberrycoveragekey="${multiconfig.mulberryCoverageKey}"
+    data-mulberry-environment="${multiconfig.mulberryEnvironment}"
+    data-adyenclientkey="${multiconfig.adyenClientKey}"
+    data-recaptchsitekey="${multiconfig.captchaSiteKey}"
+    data-auth0-domain="${multiconfig.auth0Domain}"
+    data-auth0-client-id="${multiconfig.auth0ClientId}"
+    data-auth0-audience="${multiconfig.auth0Audience}"
+    data-purchasepage-url=${multiconfig.purchagePagePath}
+    data-bundlepage-url=${multiconfig.machineSelPagepath}>     
+    <div class="awsAPIconfig"
+        data-aws-api-config='{"awsApiUrl":"${multiconfig.awsCtApiUrl}"}'
+        data-auth0-api-domain="${multiconfig.auth0ApiDomain}"></div>
+    <div id="bv_script" data-bv-src="https://apps.bazaarvoice.com/deployments/${multiconfig.bvClientname}/${multiconfig.bvSiteid}/${multiconfig.bvEnvironment}/${multiconfig.bvLocale}/bv.js"></div>
+    <script language="javascript">
+        function loadBV(){
+            var modified_src = document.getElementById("bv_script").getAttribute("data-bv-src");
+            var fileref=document.createElement('script');
+            fileref.setAttribute("async", "");
+            fileref.setAttribute("src", modified_src);
+            document.getElementsByTagName("body")[0].appendChild(fileref);
+        }
+        setTimeout(loadBV(),1500);
+    </script>
+    <div class="cmp-header-container">
+        <!-- Nav menu item left side end -->
+        <ul class="cmp-navigation cmp-navigation--left">
+            <!-- logo start -->
+            <li class="cmp-navigation__item cmp-navigation__item--logo">
+                <a href="${properties.homePath}.html" class="cmp-navigation__link">
+                     <img class="cmp-navigation-item__logo"src="${properties.logoPath}" alt="${properties.logoAlt}"/>
+                </a>
+            </li>
+            <sly data-sly-test.filePath="${properties.productsNavExpLink}">
+                <sly data-sly-use.brevilleHeader="${'com.breville.aem.brands.core.models.BrevilleHeader' @productsNavExpLink=properties.productsNavExpLink, partsAndAccessoriesNavExpLink=properties.partsAndAccessoriesNavExpLink}"></sly>
+            </sly>
+            <!-- Products dropdown menu start -->
+            <li class="cmp-navigation__item cmp-navigation__item--products visible-md-up">
+                <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                    <span class="cmp-navigation__title">${properties.productsLbl}</span>
+                    <!-- todo icon dropdown markup -->
+                </button>
+                <div class="cmp-dropdown__menu" role="menu" >
+                    <div class="cmp-dropdown__content--products_parts">
+                        <!-- Todo product category listing html -->
+                        <div class="cmp-container">
+                            <div class="cmp-category-grid">
+                                <sly data-sly-list.categoryTiles="${brevilleHeader.categoryTiles}">
+                                    <div class="cmp-category-grid__item">
+                                        <a href="${categoryTiles.categoryLink}" class="cmp-item__link">
+                                           <img src="${categoryTiles.categoryTileImage}" class="cmp-item__image" alt="" />
+                                           <p class="cmp-item__title">${categoryTiles.categoryName}</p>
+                                        </a>
+                                    </div>
+                                </sly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Parts and Accessories dropdown menu start -->
+            <li class="cmp-navigation__item cmp-navigation__item--parts visible-md-up">
+                <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                    <span class="cmp-navigation__title">${properties.partsAccessoryLbl}</span>
+                    <!-- todo icon dropdown markup -->
+                </button>
+                <div class="cmp-dropdown__menu" role="menu">
+                    <div class="cmp-dropdown__content--products_parts">
+                        <!-- Todo product category listing html -->
+                        <div class="cmp-container">
+                            <div class="cmp-category-grid">
+                                <sly data-sly-list.partsAndAccessoriesTiles="${brevilleHeader.partsAndAccessoriesTiles}">
+                                    <div class="cmp-category-grid__item">
+                                        <a href="${partsAndAccessoriesTiles.categoryLink}" class="cmp-item__link">
+                                           <img src="${partsAndAccessoriesTiles.categoryTileImage}" class="cmp-item__image" alt="" />
+                                           <p class="cmp-item__title">${partsAndAccessoriesTiles.categoryName}</p>
+                                        </a>
+                                    </div>
+                                </sly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Recipes -->
+            <li class="cmp-navigation__item visible-xl-up">
+                <a href="${properties.recipeLink}" class="cmp-navigation__link"  target="_blank" rel="noopener">
+                    <span class="cmp-navigation__title">${properties.recipeLbl}</span>
+                </a>
+            </li> 
+        </ul>
+        <!-- Nav menu item right side start -->
+        <ul class="cmp-navigation cmp-header-navigation--right">
+            <!-- Call nav item -->
+            <li class="cmp-navigation__item cmp-navigation__item--call">
+                <a href="#" class="cmp-navigation__link"  target="_blank" rel="noopener">
+                    <div class="cmp-item__call-tooltip">${properties.phoneNumber}</div>
+                    <div class="cmp-item__content">
+                        <img class="cmp-navigation-item__call"src="${properties.phonePath}" alt="${'br-call-icon' @ i18n}" />
+                        <span class="cmp-navigation__title visible-xl-up">${properties.phoneLabel}</span>
+                    </div>
+                </a>
+            </li>
+             <!-- search nav item dropdown-->
+            <li class="cmp-navigation__item cmp-navigation__item--search">
+                <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                    <span class="cmp-item__content cmp-item__search-search">
+                        <img class="cmp-item__search-search-image" src="${properties.searchPath}" alt="${'br-search-icon' @ i18n}" />
+                        <span class="cmp-navigation__title visible-xl-up">${properties.searchLabel}</span>
+                    </span>
+                    <span class="cmp-item__content cmp-item__search-close cmp-item__search-close--hidden">
+                        <img class="cmp-item__search-close-image" src="${properties.closeIconPath}" alt="${'br-search-icon' @ i18n}" />
+                        <span class="cmp-navigation__title visible-xl-up">${properties.closeLabel}</span>
+                    </span>
+                </button>
+                <div class="cmp-dropdown__menu" role="menu">
+                    <div class="cmp-container">
+                        <div class="cmp-dropdown__content--search">
+            
+                            <!--/* ALGOLIA SEARCH DROPDOWN */-->
+                            <div class="search-dropdown">
+                                <div data-react-app='SearchDropdown' class='cmp-search-dropdown'>
+                                    <script type="application/json">
+                                        ${brevilleHeader.searchSuggetionJson @context="scriptComment"}
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Country nav item dropdown -->
+            <sly data-sly-use.tmpl="regionSelect.html"
+                data-sly-call="${tmpl.regionSelect @ switch=brevilleHeader, type='mainmenu'}" />
+            <!-- Cart nav item -->
+            <li class="cmp-navigation__item cmp-navigation__item--cart">
+                <a href="${properties.cartPagePath}.html" class="cmp-navigation__link" rel="noopener">
+                    <div class="cmp-item__content">
+                        <img class="cmp-navigation-item__cart"src="${properties.cartPath}" alt="${'br-cart-icon' @ i18n}" />
+                    <span class="cmp-navigation__title visible-xl-up">${properties.cartLabel}</span>
+                    </div>
+                </a>
+            </li>            
+            <!-- Account nav item dropdown -->
+            <li class="cmp-navigation__item cmp-navigation__item--accounts visible-xl-up">
+                <button class="cmp-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+                    <span class="cmp-item__content">
+                        <svg viewBox="0 0 977 1024" class="cmp-item__icon icon-profile" id="icn-profile">
+                            <path d="M97.588 930.908h781.777c-14.196-184.739-111.895-347.927-252.09-414.953-14.755-7.075-24.762-21.411-26.298-37.795-1.489-16.291 5.725-32.209 19.037-41.844 50.083-36.445 78.801-92.3 78.801-153.274 0-104.727-85.225-189.952-189.952-189.952s-189.905 85.225-189.905 189.952c0 54.737 24.529 107.101 67.258 143.686a46.416 46.416 0 0115.686 43.148c-2.746 16.105-13.777 29.649-29.044 35.561-153.786 59.904-260.701 227.561-275.27 425.472zm830.091 93.091H49.32c-25.693 0-46.545-20.806-46.545-46.545 0-229.702 108.87-434.083 276.62-530.199-34.49-47.663-53.527-104.96-53.527-164.212C225.868 126.976 352.797 0 508.864 0s283.043 126.976 283.043 283.043c0 66.793-24.25 131.165-66.932 181.76 153.228 102.493 249.251 296.401 249.251 512.652 0 25.74-20.806 46.545-46.545 46.545z"></path>
+                        </svg>
+                        <span class="cmp-navigation__title">${properties.loginOrCreateAccountLbl}</span>
+                        <span class="cmp-navigation__title" style="display: none;">${properties.mybrevilleLbl}</span>
+                    </span>
+                </button>
+                <div class="cmp-dropdown__menu" role="menu">
+                    <div class="cmp-dropdown__content--login-menu">
+                        <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=properties.createUrl}">
+                        <button class="cmp-dropdown__button--signup" onclick="location.href='${brevilleUtil.formatURL @ context = 'uri'}'" type="button">
+                            ${properties.createAccountLbl}
+                        </button>
+                        </sly>
+                        <hr class="cmp-button__hr">
+                        <sly data-sly-use.brevilleUtil="${'com.breville.aem.brands.core.models.BrevilleUtilModel' @ formatStr=properties.loginUrl}">
+                        <button class="cmp-dropdown__button--login"  onclick="location.href='${brevilleUtil.formatURL @ context = 'uri'}'" type="button">${properties.loginLbl}
+                            <span>
+                                <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow"><path d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        </sly>
+                    </div>
+                    <div class="cmp-dropdown__content--loggedin-menu">
+                        <!-- Todo loggedin html -->
+                    </div>
+                </div>
+            </li>
+            <li class="cmp-navigation__item cmp-navigation__item--hamburger hidden-xl-up">
+                <div role="button" tabindex="0" class="cmp-navigation__link" aria-haspopup="true" aria-expanded="false" aria-label='main menu navigation'>
+                    <svg role="img" class="icon cmp-icon_menu" focusable="false" aria-hidden="true">
+                        <title id="title">${properties.mainmenuLbl}</title>
+                        <desc id="desc">Recipes, Sign up for Newsletter, and Country selection menu</desc>
+                        <use xlink:href="#HamburgerMenu">
+                            <svg version="1.1" id="HamburgerMenu" x="0" y="0" viewBox="0 0 20.1 16.2" xml:space="preserve"><g id="aeSymbols"><g id="aeMain-Top-Nav" transform="translate(-285 -79)"><g id="aeGroup-4"><g id="aeGroup-5" transform="translate(0 64)"><g id="aetop-Nav"><g id="aePage-1" transform="translate(285.667 15)"><path class="aest0" d="M18.4 2.1H.4c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.5 1-1 1z" id="aeStroke-1"></path><path class="aest0" d="M18.4 9.1h-15c-.6 0-1-.4-1-1s.4-1 1-1h15c.6 0 1 .4 1 1s-.5 1-1 1z" id="aeStroke-1_1_"></path><path class="aest0" d="M18.4 16.1h-12c-.6 0-1-.4-1-1s.4-1 1-1h12c.6 0 1 .4 1 1s-.5 1-1 1z" id="aeStroke-1_2_"></path></g></g></g></g></g></g></svg>
+                        </use>
+                      </svg>
+                </div>
+                <div class="cmp-hamburger__menu" role="menu">
+                    <div class="cmp-hamburger__header">
+                        <p class="cmp-header__title">${properties.mainmenuLbl}</p>
+                        <button  class="cmp-hamburger_close">
+                            <svg viewBox="0 0 1024 1024" class="icon-close">
+                                <path d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z"></path>
+                                <path d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z"></path>
+                            </svg>
+                        </button>
+                      </div>
+                      <nav>
+                          <ul class="cmp-hamburger__menu-item">
+                              <li class="cmp-hamburger__item--signup ">
+                                    <button class="cmp-hamburger__button">${properties.createAccountLbl}</button>
+                              </li>
+                              <li class="cmp-hamburger__item">
+                                <a href='#' class="cmp-hamburger__link">${properties.loginLbl}
+                                    <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow"><path d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z"></path>
+                                    </svg>
+                                </a>	
+                              </li>
+                              <li class="cmp-hamburger__item products_hamburger_menu_item">
+                                <a href='#' class="cmp-hamburger__link">${properties.productsLbl}
+                                    <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow"><path d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z"></path>
+                                    </svg>
+                                </a>
+                                <div class="cmp-hamburger__menu-overlay cmp-hamburger__products-overlay">
+                                    <div class="cmp-hamburger__menu-header">
+                                        <div class="cmp-menu_title-content">
+                                            <svg viewBox="0 0 444.531 444.531" class="cmp-icon-back " id="left-arrow">
+                                                <path d="M213.13 222.409L351.88 83.653c7.05-7.043 10.567-15.657 10.567-25.841 0-10.183-3.518-18.793-10.567-25.835l-21.409-21.416C323.432 3.521 314.817 0 304.637 0s-18.791 3.521-25.841 10.561L92.649 196.425c-7.044 7.043-10.566 15.656-10.566 25.841s3.521 18.791 10.566 25.837l186.146 185.864c7.05 7.043 15.66 10.564 25.841 10.564s18.795-3.521 25.834-10.564l21.409-21.412c7.05-7.039 10.567-15.604 10.567-25.697 0-10.085-3.518-18.746-10.567-25.978L213.13 222.409z"></path>
+                                            </svg>
+                                            <span class="cmp-menu__title">${properties.productsLbl}</span>
+                                        </div>
+                                        <button type="button" class="cmp-menu__close">
+                                            <svg viewBox="0 0 1024 1024" class="cmp-icon-close" >
+                                                <path d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z"></path>
+                                                <path d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="cmp-dropdown__content cmp-hamburger__menu--products_parts">
+                                        <div class="cmp-dropdown__content--products_parts">
+                                            <div class="cmp-container">
+                                                <div class="cmp-category-grid">
+                                                    <sly data-sly-list.categoryTiles="${brevilleHeader.categoryTiles}">
+                                                        <div class="cmp-category-grid__item">
+                                                            <a href="${categoryTiles.categoryLink}" class="cmp-item__link">
+                                                               <img src="${categoryTiles.categoryTileImage}" class="cmp-item__image" alt="" />
+                                                               <p class="cmp-item__title">${categoryTiles.categoryName}</p>
+                                                            </a>
+                                                        </div>
+                                                    </sly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>	
+                              </li>
+                              <li class="cmp-hamburger__item parts_hamburger_menu_item">
+                                <a href='#' class="cmp-hamburger__link">${properties.partsAccessoryLbl}
+                                    <svg viewBox="0 0 614 1024" class="icon-arrow-right" id="icn-arrow"><path d="M374.643 517.205L52.033 829.409c-41.627 41.627-41.627 104.068 0 145.695s104.068 41.627 145.695 0l395.458-385.051s10.407-10.407 10.407-20.814S614 558.832 614 548.425v-20.814-20.814-20.814-20.814c0-10.407-10.407-10.407-10.407-20.814s-10.407-10.407-10.407-20.814L187.321 38.49c-20.814-20.814-41.627-31.22-72.847-31.22S62.44 17.677 41.627 38.49C0 80.117 0 142.558 41.627 184.185l333.017 333.017z"></path>
+                                    </svg>
+                                </a>
+                                <div class="cmp-hamburger__menu-overlay cmp-hamburger__parts-overlay">
+                                      <div class="cmp-hamburger__menu-header">
+                                          <div class="cmp-menu_title-content">
+                                              <svg viewBox="0 0 444.531 444.531" class="cmp-icon-back " id="left-arrow">
+                                                  <path d="M213.13 222.409L351.88 83.653c7.05-7.043 10.567-15.657 10.567-25.841 0-10.183-3.518-18.793-10.567-25.835l-21.409-21.416C323.432 3.521 314.817 0 304.637 0s-18.791 3.521-25.841 10.561L92.649 196.425c-7.044 7.043-10.566 15.656-10.566 25.841s3.521 18.791 10.566 25.837l186.146 185.864c7.05 7.043 15.66 10.564 25.841 10.564s18.795-3.521 25.834-10.564l21.409-21.412c7.05-7.039 10.567-15.604 10.567-25.697 0-10.085-3.518-18.746-10.567-25.978L213.13 222.409z"></path>
+                                              </svg>
+                                              <span class="cmp-menu__title">${properties.partsAccessoryLbl}</span>
+                                          </div>
+                                          <button type="button" class="cmp-menu__close">
+                                              <svg viewBox="0 0 1024 1024" class="cmp-icon-close">
+                                                  <path d="M26.797 123.838l873.364 873.364c26.797 26.797 70.244 26.797 97.041 0s26.797-70.244 0-97.041L123.838 26.797C97.041 0 53.594 0 26.797 26.797s-26.797 70.244 0 97.041z"></path>
+                                                  <path d="M900.161 26.798L26.797 900.162C0 926.959 0 970.406 26.797 997.203s70.244 26.797 97.041 0l873.364-873.364c26.797-26.797 26.797-70.244 0-97.041s-70.244-26.797-97.041 0z"></path>
+                                              </svg>
+                                          </button>
+                                      </div>
+                                      <div class="cmp-dropdown__content cmp-hamburger__menu--products_parts">
+                                          <div class="cmp-dropdown__content--products_parts">
+                                              <div class="cmp-container">
+                                                  <div class="cmp-category-grid">
+                                                      <sly data-sly-list.partsAndAccessoriesTiles="${brevilleHeader.partsAndAccessoriesTiles}">
+                                                          <div class="cmp-category-grid__item">
+                                                              <a href="${partsAndAccessoriesTiles.categoryLink}" class="cmp-item__link">
+                                                                  <img src="${partsAndAccessoriesTiles.categoryTileImage}" class="cmp-item__image" alt="" />
+                                                                  <p class="cmp-item__title">${partsAndAccessoriesTiles.categoryName}</p>
+                                                              </a>
+                                                          </div>
+                                                      </sly>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                </div>
+                              </li>
+                              <li class="cmp-hamburger__item">
+                                <a href="${properties.recipeLink}" class="cmp-hamburger__link" target="_blank">${properties.recipeLbl}</a>	
+                              </li>
+                            <!-- Country nav item dropdown -->
+                            <sly data-sly-use.tmpl="regionSelect.html"
+                                data-sly-call="${tmpl.regionSelect @ switch=brevilleHeader, type='hamburger'}" />
+                          </ul>
+                      </nav>
+                </div>
+                <div class="cmp-hamburger__menu-bg-overlay"></div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Region pop-up modal -->
+    <div class="bg-modal">
+      <div class="modal-contents">
+        <div class="close"> 
+          <button class="btn-close" type="button" alt="Close">
+            <svg class="modal-icon-close" focusable="false" aria-hidden="true">
+              <use xlink:href="#icn-close"></use>
+            </svg>
+          </button>  
+        </div>
+        <form action="">
+          <div class="content-holder">
+            <div>
+              <svg class="msg-box-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg viewBox="0 0 38 39" id="Update_location">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M2.765 23L1 38h35.75l-1.764-15H2.765z" stroke="#313638" stroke-width="2">
+                    </path>
+                    <path
+                        d="M18.216 34.668c.224.221.448.332.784.332s.56-.11.784-.332C20.233 34.225 32 22.816 32 12.958 31.888 5.87 26.06 0 19 0 11.828 0 6 5.87 6 13.07c0 9.746 11.655 21.155 12.216 21.598z"
+                        fill="#FFF" fill-rule="nonzero"></path>
+                    <path
+                        d="M18.397 30.744c.172.17.344.256.603.256a.786.786 0 00.603-.256C19.948 30.402 29 21.6 29 13.997 28.914 8.528 24.431 4 19 4 13.483 4 9 8.528 9 14.082c0 7.52 8.966 16.32 9.397 16.662zM18.937 6c4.383 0 7.939 3.606 7.939 8.031 0 5.491-5.954 12.293-7.938 14.26C16.953 26.242 11 19.522 11 14.031 11 9.606 14.555 6 18.938 6z"
+                        fill="#313638" fill-rule="nonzero"></path>
+                    <circle fill="#313638" fill-rule="nonzero" cx="19" cy="13" r="2"></circle>
+                  </g>
+                </svg>
+              </svg>
+            </div>
+          </div>
+
+          <h1 class="modal-heading h1-seperator">${'cs-region-popup-header' @ i18n}</h1>
+          <p class="modal-desc">${'cs-region-popup-paragraph' @ i18n}</p>
+
+          <div class="modal-btn">
+            <a href="#" class="region-continue-btn">${'cs-region-popup-button' @ i18n} </a>
+          </div>
+
+          <a href="#" class="region-cancel-btn"> ${'cs-region-popup-cancel' @ i18n}
+            <svg class="icon-cancel icon overlay-arrow-icon" focusable="false" aria-hidden="true" viewBox="0 0 10 10">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icn-arrow"></use>
+            </svg> 
+          </a>
+        </form>
+      </div>
+    </div>
+</header>
+<div id="skip-nav-holder"></div>    

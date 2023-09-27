@@ -1,0 +1,65 @@
+@import 'mixin-utils/_breakpoints';
+// START utility classes for showing & hiding as breakpoints
+
+/* iterate over sizes array... */
+@each $bp in $breakpoints {
+  // generates classes that SHOW element at specified breakpoint:
+  .#{$bp}-only {
+    display: none;
+    @include mq($bp) {
+      display: block;
+    }
+  }
+  // uses 'flex' instead fo 'block' for display attribute value
+  .col-#{$bp}-only {
+    display: none;
+    @include mq($bp) {
+      display: flex;
+    }
+  }
+
+  // generates classes that HIDE element at specified breakpoint:
+  .#{$bp}-hide {
+    display: block;
+    @include mq($bp) {
+      display: none;
+    }
+  }
+  // uses 'flex' instead fo 'block' for display attribute value
+  .col-#{$bp}-hide {
+    display: flex;
+    @include mq($bp) {
+      display: none !important;
+    }
+  }
+
+  // generates classes that SHOW element at specified breakpoint AND UP:
+  .#{$bp}-up {
+    display: none;
+    @include mq-min($bp) {
+      display: block;
+    }
+  }
+  // uses 'flex' instead fo 'block' for display attribute value
+  .col-#{$bp}-up {
+    display: none;
+    @include mq-min($bp) {
+      display: flex;
+    }
+  }
+
+  // generates classes that SHOW element at specified breakpoint AND DOWN:
+  .#{$bp}-down {
+    display: none;
+    @include mq-max($bp) {
+      display: block;
+    }
+  }
+  // uses 'flex' instead fo 'block' for display attribute value
+  .col-#{$bp}-down {
+    display: none;
+    @include mq-max($bp) {
+      display: flex;
+    }
+  }
+}

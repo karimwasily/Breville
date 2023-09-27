@@ -1,0 +1,18 @@
+{
+  "name": "xps-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "constants.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "algoliasearch": "^4.9.3",
+    "axios": "^0.21.1",
+    "lodash.throttle": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react-hook-form": "^7.9.0"
+  },
+  "author": "Rishab Shrestha",
+  "license": "ISC"
+}

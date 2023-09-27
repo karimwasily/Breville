@@ -1,0 +1,11 @@
+<div data-react-app="ButtonModalList" id="buttonModalList" class="cmp-buttonmodallist" data-cmp-is="buttonmodallist" data-sly-use.buttonModalList="com.breville.aem.brands.core.models.ButtonModalList">
+    <script type="application/json">
+        {   "title" : "${buttonModalList.getTitle @context="unsafe"}",
+            "buttonList" : ${buttonModalList.asJson @context="unsafe"} }
+    </script>
+ 
+    <sly data-sly-test="${wcmmode.edit}">
+        <p data-react-app-placeholder>Button Modal List</p>
+    </sly>
+ </div>
+ 

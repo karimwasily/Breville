@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:icon="SF CustomerForm"
+    jcr:description="SF Customer Form component will provide SF integration information for Notify Me and others"
+    jcr:primaryType="cq:Component"
+    jcr:title="SF Customer Form Component"
+    componentGroup="Breville Brands - Content"/>

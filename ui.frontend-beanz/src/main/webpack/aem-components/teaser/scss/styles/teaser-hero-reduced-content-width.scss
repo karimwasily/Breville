@@ -1,0 +1,40 @@
+.cmp-teaser--hero.cmp-teaser--hero-reduced-content-width {
+    width: 94% !important;
+    clear: both !important;
+    float: unset !important;
+    margin: 10px 0 0 10px;
+
+    @include breakpoint-up (md) {
+        width: 97% !important;
+        margin: 0 auto;
+    }
+    @include breakpoint-up (xxl) {
+        width: 100% !important;
+    }
+    .cmp-teaser__content {
+        .cmp-teaser__title {
+            margin: 0 0 10px;
+            @include font-size(32px);
+            padding-top: 30px;
+            @include breakpoint-up (md) {
+                margin: 0 0 20px;
+                @include font-size(54px);
+            }
+            @include breakpoint-up (lg) {
+                margin: 0 auto 20px;
+                padding-top: 80px;
+            }
+        }
+        .cmp-teaser__description {
+            max-width: 100%;
+            padding: 0 16px;
+            p {
+                margin: 0;
+                @include font-size($font-size-small);
+                @include breakpoint-up (md) {
+                    @include font-size(30px);
+                }
+            }
+        }
+    }
+}

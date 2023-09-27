@@ -1,0 +1,161 @@
+.my-orders__order-summary {
+  $button-padding: $cs-spacing-5 + $cs-spacing-3;
+
+  margin-bottom: $cs-spacing-20;
+  @media (min-width: $cs-screen-xl) {
+    margin-bottom: $cs-spacing-30;
+  }
+
+  .label-font-weight-bold {
+    font-weight: $font-weight-bold;
+  }
+
+  .my-order {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $cs-spacing-25;
+    padding: $cs-spacing-25 $cs-spacing-20;
+
+    background-color: $white;
+    border-bottom: 1px solid $cs-gainsboro;
+
+    @media (min-width: $cs-screen-xl) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $cs-spacing-10;
+      padding: $cs-spacing-30 $cs-spacing-30;
+    }
+  
+    %orders-detail {
+      display: flex;
+      flex-direction: row;
+      gap: $cs-spacing-15;
+      align-items: center;
+
+      text-align: left;
+      @media (min-width: $cs-screen-xl) {
+        grid-column: 1/3;
+        gap: $cs-spacing-5;
+      }
+      @media (min-width: $screen-xl) {
+        gap: $cs-spacing-15;     
+      }
+
+      .order-image {
+        flex-grow: 1;
+        width: 100%;
+        min-width: 10px;
+        max-width: 70px;
+        max-height: 70px;
+        @media (min-width: $screen-xl) {
+          max-width: 110px;
+          max-height: 110px;
+        }
+      }
+
+      .order-single-image {
+        max-width: 80px;
+        max-height: 80px;
+        @media (min-width: $cs-screen-xl) {
+          max-width: 110px;
+          max-height: 110px;
+        }
+      }
+
+      .images-button {
+        @extend %cs-font-p-4-bold;
+        margin-left: $cs-spacing-5;
+        padding: $cs-spacing-5 $button-padding;
+
+        border: 1px solid $cs-gunmetal;
+        border-radius: 50%;
+      }
+
+      .order-name {
+        @extend %cs-font-p-3;
+        font-weight: $cs-font-weight-bold;
+        font-family: $cs-font-family-bold;
+        @media (min-width: $cs-screen-xl) {
+          font-size: $cs-font-size-h12;
+        }
+
+        .subscription-icon {
+          @extend %subscription-icon;
+          position: relative;
+          top: $cs-spacing-3;
+
+          width: 15px;
+          height: 15px;
+          margin-left: $cs-spacing-3;
+        }
+      }
+    } 
+
+    .order-detail {
+      @extend %orders-detail;
+    }
+
+    .order-detail-single {
+      @extend %orders-detail;
+      align-items: unset;
+      @media (min-width: $cs-screen-xl) {
+        gap: $cs-spacing-20;
+      }
+    }
+
+    .order-tracking-number {
+      @media (min-width: $cs-screen-xl) {
+        text-align: left;
+      }
+
+      .tracking-number {
+        @extend %cs-font-p-4;
+        margin-bottom: $cs-spacing-5;
+      }
+    }
+  }
+
+  .order-total {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $cs-spacing-10;
+    padding: $cs-spacing-25 $cs-spacing-20;
+
+    background-color: $white;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    @media (min-width: $cs-screen-xl) {
+      padding: $cs-spacing-25 $cs-spacing-30;    
+    }
+    
+    .cmp-button {
+      .react-button {
+        @extend %cs-font-p-2-bold;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: 40px;
+        padding: $cs-spacing-5 $cs-spacing-35;
+
+        color: $cs-gunmetal;
+        font-size: $cs-font-size-base;
+
+        background: transparent;
+        border-color: $cs-gunmetal !important;
+      }
+
+      .react-button:hover {
+        color: $cs-white;
+
+        background: $cs-dark-purple;
+      }
+    }
+
+    .cmp-text {
+      .text {
+        @extend %cs-font-p-2;
+        text-align: end;
+      }
+    }
+  }
+}

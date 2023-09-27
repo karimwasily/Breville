@@ -1,0 +1,157 @@
+@use 'sass:math';
+
+.cmp-container--cs-bundle-beanz {
+  --spacer: #{$cs-spacing-10};
+  --image-height-mobile: 135px;
+  --image-height-desktop: 220px;
+  --image-width-desktop: 480px;
+  --title-width-desktop: 500px;
+  --button-width: 240px;
+
+  // Main Layout Container
+  .cmp-container {
+    display: grid;
+    gap: var(--spacer);
+
+    max-width: $cs-max-width;
+    margin: auto;
+    padding: math.div($cs-spacing-90, 2) 0;
+
+    @media (min-width: $cs-screen-md) {
+      padding: math.div($cs-spacing-130, 2) 0;
+    }
+
+    // Container
+    .container {
+      background-color: $cs-color-gray-60;
+
+      .cmp-container {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: $cs-spacing-5 $cs-spacing-10 $cs-spacing-35;
+        
+        @media (min-width: $cs-screen-xl) {
+          padding: $cs-spacing-10 $cs-spacing-50 $cs-spacing-40;
+        }
+        
+        // Title Component
+        .title {
+          padding-bottom: 0;
+
+          .cmp-title h2 {
+            @extend %cs-font-h4;
+            margin: auto;
+            
+            @media (min-width: $cs-screen-md) and (max-width: $cs-screen-xl) {
+              height: $cs-spacing-100;
+            }
+
+            @media (min-width: $cs-screen-xl) {
+              height: $cs-spacing-70;
+              max-width: var(--title-width-desktop);
+            }
+          }
+        }
+
+        // Teaser Component
+        .cmp-teaser {
+          text-align: center;
+
+          @media (min-width: $cs-screen-md) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+
+          .cmp-teaser__image {
+            @media (min-width: $cs-screen-md) {
+              width: 100%;
+            }
+
+            .cmp-image__image {
+              height: var(--image-height-mobile);
+              object-fit: contain;
+              
+              @media (min-width: $cs-screen-md) {
+                height: var(--image-height-desktop);
+                max-width: var(--image-width-desktop);
+              }
+            }
+          }
+
+          .cmp-teaser__content {
+            .cmp-teaser__description {
+              text-align: left;
+              margin: $cs-spacing-10 0;
+
+              @media (min-width: $cs-screen-md) {
+                width: 100%;
+              }
+
+              ul {
+                @extend %cs-font-p-2;
+                margin: 0 0 $cs-spacing-15 $cs-spacing-30;
+
+                @media (min-width: $cs-screen-xl) {
+                  margin: 0;
+                }
+      
+                li {
+                  padding-bottom: $cs-spacing-10;
+
+                  button {
+                    @include button-remove-style;
+                  }
+      
+                  span {
+                    position: relative;
+                    visibility: visible;
+                  }
+      
+                  // replace tooltip span with tooltip svg icon
+                  span::before {
+                    @extend %question-icon;
+                    background: $cs-black;
+                    position: relative;
+                    visibility: visible;
+                    display: inline-block;
+                    content: '';
+                    width: 1.375rem;
+                    height: 1.375rem;
+                    vertical-align: text-bottom;
+                  }
+
+                  a {
+                    @extend %cs-link-underline;
+                  }
+                }
+      
+                // check mark SVG
+                li::before {
+                  @extend %check-list-icon;
+                  display: inline-block;
+                  content: '';
+                  background-color: $cs-color-secondary;
+                  background-repeat: no-repeat;
+                  margin-right: $cs-spacing-10;
+                  margin-left: -$cs-spacing-20; // offset to align <li> text after check mark
+                  height: 0.5em; // vertical align check marks
+                }
+              }
+            }
+          }
+        }
+
+        // Button Component
+        .cmp-button--cs-gunmetal-medium-transparent {
+          margin: 0;
+
+          .cmp-button__text {
+            width: var(--button-width);
+          }
+        }
+      }
+    }
+  }
+}

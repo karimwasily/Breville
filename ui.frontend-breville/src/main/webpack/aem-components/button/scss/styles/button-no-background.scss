@@ -1,0 +1,31 @@
+.cmp-button--no-background {
+  text-align: center;
+  padding: $spacing-xxl 0;
+
+  .cmp-button__text {
+    color: $wine-berry;
+    font-weight: $font-weight-bold;
+
+    &::after {
+      @include arrow-icon($color: $wine-berry);
+      display: inline-block;
+      content: '';
+      width: 0.6rem;
+      height: 0.6rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:visited {
+    .cmp-button__text {
+      color: $green-cola;
+
+      &::after {
+        @include arrow-icon($color: $green-cola);
+        transition: background-image $transition-speed-slow $transition-easing;
+      }
+    }
+  }
+} 

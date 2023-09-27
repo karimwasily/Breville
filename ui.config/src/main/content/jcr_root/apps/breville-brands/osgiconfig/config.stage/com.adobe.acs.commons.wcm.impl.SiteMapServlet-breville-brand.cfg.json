@@ -1,0 +1,28 @@
+// Configuration sitemap generator
+{
+  "sling.servlet.resourceTypes":[
+    "breville-brands/components/sitemap-page/pagebreville"
+  ],
+  "use.vanity":false,
+  "include.lastmod":true,
+  "character.encoding":"UTF-8",
+  "extensionless.urls":false,
+  "exclude.templates":"",
+  "changefreq.properties":[
+    "changefrequency"
+  ],
+  "remove.slash":false,
+  "url.rewrites":[
+    "/content:"
+  ],
+  "include.inherit":false,
+  "damassets.property":"",
+  "damassets.types":[
+    ""
+  ],
+  "priority.properties":[
+    "priority"
+  ],
+  "exclude.property":"hideInSitemap",
+  "externalizer.domain":"publish"
+}

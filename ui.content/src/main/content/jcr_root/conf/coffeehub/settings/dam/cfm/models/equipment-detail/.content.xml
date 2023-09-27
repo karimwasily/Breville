@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Template"
+    allowedPaths="[/content/entities(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-12T08:19:44.101+07:00"
+        cq:lastModifiedBy="admin"
+        cq:scaffolding="/conf/coffee-hub/settings/dam/cfm/models/equipment-detail/jcr:content/model"
+        cq:templateType="/libs/settings/dam/cfm/model-types/fragment"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Equipment Details"
+        sling:resourceSuperType="dam/cfm/models/console/components/data/entity"
+        sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+        status="enabled">
+        <model
+            cq:targetPath="/content/entities"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="wcm/scaffolding/components/scaffolding"
+            dataTypesConfig="/mnt/overlay/settings/dam/cfm/models/formbuilderconfig/datatypes"
+            maxGeneratedOrder="20">
+            <cq:dialog
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog">
+                <content
+                    jcr:lastModified="{Date}2021-03-12T08:19:44.101+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        maxGeneratedOrder="21">
+                        <equipmentName
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            emptyText="Equipment name"
+                            fieldDescription="Equipment that is critical to the recipe"
+                            fieldLabel="Specialised Equipment Name"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="specialisedEquipmentName"
+                            renderReadOnly="false"
+                            required="on"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </equipmentName>
+                        <equipmentImage
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            emptyText="Equipment image"
+                            fieldDescription="Image of the equipment"
+                            fieldLabel="Specialised Equipment Image"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="specialisedEquipmentImage"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            required="on"
+                            rootPath="/content/dam/coffeehub"
+                            showEmptyInReadOnly="true"
+                            validation="cfm.validation.contenttype.image"
+                            valueType="string/reference">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </equipmentImage>
+                        <equipmentLink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            emptyText="URL"
+                            fieldDescription="Link to buy this equipment"
+                            fieldLabel="Equipment Purchase Link"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="equipmentPurchaseLink"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            validation="cfm.validation.url"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </equipmentLink>
+                        <purchaseLinkTitle
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Purchase Link Title"
+                            listOrder="21"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="purchaseLinkTitle"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </purchaseLinkTitle>
+                        <tooltipKeyword
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Keyword that will be used to show tooltip pop-up. (Must be a substring of the ingredient name)"
+                            fieldLabel="Tooltip keyword"
+                            listOrder="22"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="tooltipKeyword"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </tooltipKeyword>
+                        <tooltipText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/admin/components/authoring/contenteditor/multieditor"
+                            cfm-element="Tooltip Text"
+                            checked="false"
+                            default-mime-type="text/html"
+                            fieldDescription="The text within the tooltip pop-up"
+                            listOrder="23"
+                            metaType="text-multi"
+                            name="tooltipText"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/multiline"/>
+                    </items>
+                </content>
+            </cq:dialog>
+        </model>
+    </jcr:content>
+</jcr:root>

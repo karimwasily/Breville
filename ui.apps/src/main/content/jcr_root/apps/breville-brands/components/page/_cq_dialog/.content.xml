@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <socialmedia jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <section jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <field jcr:primaryType="nt:unstructured">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <twitter
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        name="./socialMedia"
+                                                        renderReadOnly="{Boolean}true"
+                                                        text="Twitter"
+                                                        value="twitter">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-msm-lockable="socialMedia"/>
+                                                    </twitter>
+                                                </items>
+                                            </field>
+                                        </items>
+                                    </section>
+                                </items>
+                            </column>
+                        </items>
+                    </socialmedia>
+                    <seo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SEO"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <canonicalUrl
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Canonical URL"
+                                        name="./canonicalUrl"
+                                        required="{Boolean}false"/>
+                                    <seoChangeFrequency
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyOption="{Boolean}true"
+                                        fieldDescription="A hint to search engines on how often this page changes. A value &quot;always&quot; should be used to describe documents that change each time they are accessed. The value &quot;never&quot; should be used to describe archived URLs"
+                                        fieldLabel="SEO Change Frequency"
+                                        name="./changeFrequency">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="changeFrequency"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <always
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Always"
+                                                value="always"/>
+                                            <hourly
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Hourly"
+                                                value="hourly"/>
+                                            <daily
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Daily"
+                                                value="daily"/>
+                                            <weekly
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Weekly"
+                                                value="weekly"/>
+                                            <monthly
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Monthly"
+                                                value="monthly"/>
+                                            <yearly
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Yearly"
+                                                value="yearly"/>
+                                            <never
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Never"
+                                                value="never"/>
+                                        </items>
+                                    </seoChangeFrequency>
+                                    <seoPagePriority
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldDescription="The priority of this page relative to other pages on your site. Valid values range from 0.0 to 1.0 with 0.5 being a default if not specified. Note that assigning a high priority to all of the pages on your site is not likely to help you. Since the priority is relative, it is only used to select between URLs on your site."
+                                        fieldLabel="SEO Page Priority"
+                                        max="{Long}1"
+                                        min="{Long}0"
+                                        name="./pagePriority"
+                                        step="{Double}0.1"
+                                        typeHint="Double"
+                                        value="{Double}0.5">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="pagePriority"/>
+                                    </seoPagePriority>
+                                    <robotsMetaTag
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Robots Meta Tag"
+                                        name="./robotsMetaTag">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="robotsMetaTag"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <index-follow
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Index, Follow (Default)"
+                                                value="index, follow"/>
+                                            <index-nofollow
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Index, Nofollow"
+                                                value="index, nofollow"/>
+                                            <noindex-follow
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Noindex, Follow"
+                                                value="noindex, follow"/>
+                                            <noindex-nofollow
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Noindex, Nofollow"
+                                                value="noindex, nofollow"/>
+                                        </items>
+                                    </robotsMetaTag>
+                                </items>
+                            </column>
+                        </items>
+                    </seo>
+                    <brivilleconfigaration
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Briville Configaration"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Mulberry JS configaration"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <mulberry
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./mulberry"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Mulberry"
+                                                value="mulberry">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-msm-lockable="mulberry"/>
+                                            </mulberry>
+                                        </items>
+                                    </title>
+                                </items>
+                            </column>
+                        </items>
+                    </brivilleconfigaration>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,71 @@
+@import './browse-view-product-tile';
+
+.browse-view {
+  // * create a slightly modified style of the Vendor component from 'meet our roasters'
+  .vendors__container {
+    border: 0;
+    margin: 0;
+
+    // main content
+    .vendors__content {
+      position: relative;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+      z-index: 1;
+      padding: $cs-spacing-30;
+
+      @media (min-width: $cs-screen-md) {
+        padding: $cs-spacing-50;
+      }
+
+      // left
+      .vendor__description {
+        position: relative;
+        z-index: 1;
+        color: $cs-white;
+        margin: 0;
+        padding: 0 $cs-spacing-20 $cs-spacing-20 0;
+
+        @media (min-width: $cs-screen-md) {
+          padding: 0 $cs-spacing-40 0 0;
+          justify-content: flex-end;
+        }
+      }
+
+      // background image
+      .vendor__primary-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+
+        img {
+          height: 100%;
+          filter: brightness(30%);
+        }
+      }
+
+      // new right products
+      .vendor__content-inner {
+        position: relative;
+        z-index: 1;
+        color: white;
+        display: grid;
+        place-items: center;
+
+        .browse-products {
+          @extend %browse-view-coffee-tile;
+          display: grid;
+          gap: $cs-spacing-10;
+
+          @media (min-width: $cs-screen-md) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+
+        }
+      }
+
+    }
+  }
+}

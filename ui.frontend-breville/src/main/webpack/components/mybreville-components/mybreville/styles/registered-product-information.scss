@@ -1,0 +1,116 @@
+.registered-product-information {
+  &__controller {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: $cs-spacing-35 $cs-spacing-25 0 0;
+
+    &-button {
+      @extend %cs-font-p-4;
+      @include cs-button($cs-black, $cs-white);
+      margin-right: 0;
+      padding: $cs-spacing-5 $cs-spacing-15 !important;
+
+      border: 1px solid $cs-light-grey !important;
+
+      @media (min-width: $cs-screen-xl) {
+        min-width: calc((100%/2) / 3);
+        padding: $cs-spacing-10 0 !important;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: $cs-spacing-10;
+      }
+
+      &:hover,
+      :active {
+        color: $cs-white;
+
+        background-color: $cs-dark-purple;
+      }
+
+      &--active {
+        color: $cs-white;
+
+        background-color: $cs-dark-purple;
+      }
+    }
+  }
+
+  &__tutorial {
+    display: flex;
+    flex-direction: column;
+  
+    .registered-product-tutorials__button-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: $cs-spacing-15;
+      @media (min-width: $cs-screen-xl) {
+        justify-content: center;
+      }
+  
+      .registered-product-tutorials__button {
+        font-weight: $cs-font-weight-bold !important;
+        white-space: normal !important;
+        @media (min-width: $cs-screen-xl) {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  &__masterclass {
+    display: flex;
+    flex-direction: column;
+  
+    .registered-product-masterclass__button-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: $cs-spacing-15;
+      @media (min-width: $cs-screen-xl) {
+        justify-content: center;
+      }
+  
+      .registered-product-masterclass__button {
+        font-weight: $cs-font-weight-bold !important;
+        white-space: normal !important;
+        @media (min-width: $cs-screen-xl) {
+          margin: auto;
+        }
+      }
+    }
+
+    &--empty {
+      display: flex;
+      flex-direction: column;
+
+      .registered-product-masterclass__title {
+        @extend %cs-font-p-2;
+        margin: $cs-spacing-40 0 $cs-spacing-30;
+
+        text-align: left;
+
+        @media (min-width: $cs-screen-xl) {
+          text-align: center;
+        }
+      }
+
+      .registered-product-masterclass__button-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: $cs-spacing-15;
+
+        @media (min-width: $cs-screen-xl) {
+          justify-content: center;
+        }
+
+        .registered-product-masterclass__button {
+          @extend %cs-font-p-3;
+          padding: $cs-spacing-5 $cs-spacing-20;
+
+          font-weight: $cs-font-weight-bold; 
+        }
+      }
+    }
+  }
+}

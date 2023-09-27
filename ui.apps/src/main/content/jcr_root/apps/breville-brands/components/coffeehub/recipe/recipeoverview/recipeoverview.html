@@ -1,0 +1,23 @@
+<sly data-sly-use.model="com.breville.aem.brands.core.models.recipe.RecipeOverview"></sly>
+<sly data-sly-set.recipe="${model.recipeDetail}"></sly>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${model.isEmpty != true && model.isError != true}"></sly>
+
+<div class="cmp-recipeoverview">
+    <div class="cmp-recipeoverview__video">
+        <div data-vue-cmp="v-video"
+             data-video-id="${recipe.heroVideo}"
+             data-overlay-image="${recipe.heroImage}"
+             data-image-alt-text="${'Instruction step video' @ i18n}"
+             data-disclaimer-text="${'ch-project-video-disclaimer' @ i18n}">
+        </div>
+    </div>
+    <div class="cmp-recipeoverview__content">
+        <h2 class="cmp-recipeoverview__title">${recipe.recipeName}</h2>
+        <div class="cmp-recipeoverview__description">
+            <p>${recipe.recipeDescription @ context='html'}</p>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-use.attribs="${'com.breville.aem.brands.core.models.Attribs' @ attrib='include-vue', value='true'}" />
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

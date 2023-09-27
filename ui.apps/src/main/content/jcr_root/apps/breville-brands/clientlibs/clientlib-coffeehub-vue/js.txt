@@ -1,0 +1,3 @@
+#base=./js
+
+ui.vue-coffeehub.umd.js

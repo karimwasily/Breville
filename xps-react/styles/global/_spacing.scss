@@ -1,0 +1,55 @@
+/* stylelint-disable -- SCSS mixins and iterators require greater nesting depth, as well as !important to override other rules */
+@import 'mixin-utils/themer';
+// VARIABLES:
+$scale: 5 10 15 20 25 30 35 40 45 50 auto;
+$attrs: margin m, padding p;
+// $mods: width style color;
+$sides: null '', top t, right r, bottom b, left l, x-axis x, y-axis y; // [null ''] creates attribute for all 4 sides
+$baseSpace: 5px;
+$baseBorder: 1px;
+// $color: red;
+
+// MIXINS:
+
+@each $attr, $a in $attrs {
+    @each $size in $scale {
+        $currentIndex: index($scale, $size);
+        $modifier: 0;
+        $value: #{$size}px;
+        
+        @if $size == auto and $attr == border {
+            // don't return rules for auto width borders
+        } @else {
+            @each $side, $s in $sides {
+                .#{$a}#{$s}-#{$size} {
+                    @if $side == 'x-axis' {
+                        @include sizer($value, $attr, right);
+                        @include sizer($value, $attr, left);
+                    } @else if $side == 'y-axis' {
+                        @include sizer($value, $attr, top);
+                        @include sizer($value, $attr, bottom);
+                    } @else {
+                        @include sizer($value, $attr, $side);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// USAGE:
+// .b-0 - no border
+// .m-0 - no margin
+// .p-0 - no padding
+
+// .b-1 - border-width of 1px (base unit of 1px)
+// .bt-2 - border-top-width of 2px (base unit of 1px)
+// .bx-3 - border-right-width and border-left-width of 3px (base unit of 1px)
+
+// .m-1 - margin of 0.25rem/4px (base unit of 1rem/16px)
+// .mt-2 - margin-top of 0.5rem/8px (base unit of 1rem/16px)
+// .mx-3 - margin of 1rem/16px (base unit of 1rem/16px)
+
+// .p-1 - padding of 0.25rem/4px (base unit of 1rem/16px)
+// .pt-2 - padding-top of 0.5rem/8px (base unit of 1rem/16px)
+// .px-3 - padding of 1rem/16px (base unit of 1rem/16px)

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-18T11:27:08.480+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/breville/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="About us"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        cq:styleIds="[1615947849628]"
+                        jcr:created="{Date}2021-03-17T07:52:28.967+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-17T07:58:43.190+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="About Breville"
+                        sling:resourceType="breville-brands/components/title"/>
+                    <text
+                        cq:styleIds="[1615963096918]"
+                        jcr:created="{Date}2021-03-17T07:58:59.205+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-17T07:59:15.914+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/text"
+                        text="&lt;p>Founded in Sydney in 1932, Breville has become an iconic global brand that enhances people’s lives through thoughtful design and brilliant innovation, delivering kitchen products to more than 70 countries around the globe. Breville is the kitchen appliance brand that delivers innovation based on consumer insights, empowering people’s potential to do things more impressively or easily than they’d thought possible in their own kitchen.&lt;/p>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="10"/>
+                        </cq:responsive>
+                    </text>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

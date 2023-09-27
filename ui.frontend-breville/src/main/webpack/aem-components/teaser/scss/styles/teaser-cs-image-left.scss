@@ -1,0 +1,65 @@
+@use 'sass:math';
+
+%cmp-teaser--cs-image-left {
+  .cmp-teaser {
+    max-width: $cs-max-width;
+    margin: auto;
+    // * vertical spacing as per design is split for top and bottom
+    padding: math.div($cs-spacing-70, 2) $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      display: grid;
+      // * 7 + 5 = 12 column layout
+      grid-template-columns: 7fr 5fr;
+      padding: math.div($cs-spacing-90, 2) $cs-spacing-35 $cs-spacing-45;
+
+    }
+
+    &__image {
+      margin-bottom: $cs-spacing-35;
+
+      @media (min-width: $cs-screen-md) {
+        margin-bottom: 0;
+      }
+
+      .cmp-image {
+        height: 100%;
+
+        &__image {
+          vertical-align: middle;
+          height: 100%;
+          object-fit: cover;
+          min-height: 255px;
+          width: 100%;
+
+          @media (min-width: $cs-screen-md) {
+            min-height: 500px;
+          }
+        }
+      }
+    }
+
+    &__content {
+      @extend %teaser-base-typography;
+
+      .cmp-teaser__description {
+        //subheadings
+        h4 {
+          @extend %cs-font-h10;
+          margin-bottom: $cs-spacing-10;
+        }
+        // subscription heading with normal font
+        h6 {
+          @extend %cs-font-p-4;
+          font-weight: $cs-font-weight-normal;
+          color: $cs-monsoon;
+        }
+      }
+    }
+  }
+}
+
+.cmp-teaser--cs-image-left {
+  @extend %cmp-teaser--cs-image-left;
+}
+

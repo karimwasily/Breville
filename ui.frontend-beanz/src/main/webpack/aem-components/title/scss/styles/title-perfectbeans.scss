@@ -1,0 +1,36 @@
+.cmp-title--perfectbeans {
+  padding-top: 1.25rem;
+  @include breakpoint-up(md) {
+    padding-top: 2.5rem;
+  }
+  @include breakpoint-up(lg) {
+    padding-top: 5rem;
+  }
+
+  .cmp-title {
+    padding-bottom: 1.875rem;
+    color: $jaguar;
+    letter-spacing: $letter-spacing-base;
+    margin-bottom: 20px;
+    line-height: normal;
+    font-family: $font-family-secondary;
+    text-align: center;
+    @include breakpoint-up(lg) {
+      padding-bottom: 6.25rem;
+    }
+    @include breakpoint-up(xl) {
+      padding-bottom: 0;
+    }
+
+    h2 {
+      font-size: $font-size-large;
+      font-weight: $font-weight-bold;
+      @include breakpoint-up(md) {
+        font-size: $font-size-h2;
+      }
+      @include breakpoint-up(lg) {
+        font-size: $font-size-xlarge;
+      }
+    }
+  }
+}

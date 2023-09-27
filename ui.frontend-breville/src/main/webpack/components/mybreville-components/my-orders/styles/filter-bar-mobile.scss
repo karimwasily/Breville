@@ -1,0 +1,70 @@
+.my-orders__filter-bar--mobile {
+  display: block;
+
+  @media (min-width: $cs-screen-xl) {
+    display: none;
+  }
+
+  .my-orders__filter-bar-control {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $cs-spacing-30;
+
+    > *:not(:last-child) {
+      margin-right: $cs-spacing-15;
+    }
+
+    .my-orders__filter-bar-button {
+      @extend %cs-font-p-2-bold;
+      width: 50%;
+
+      color: $cs-gunmetal !important;
+
+      background-color: $cs-whitesmoke;
+
+      .my-orders__filter-bar-button-icon {
+        @extend %arrow-down-selectbox;
+        margin-left: $cs-spacing-5;
+        padding-bottom: $cs-spacing-5;
+
+        content: '';         
+      }
+    }
+
+    .my-orders__filter-bar-sort {
+      display: grid;
+
+      border: 1px solid $cs-color-primary;
+      border-radius: $cs-border-radius-8;
+      cursor: pointer;
+      place-items: center;
+
+      .ais-SortBy-select {
+        background-color: inherit;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .my-orders__filter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: $cs-spacing-25 $cs-spacing-15;
+
+    background-color: $cs-white;
+  }
+
+  .my-orders__filter-modal--open {
+    display: block;
+  }
+}
+
+

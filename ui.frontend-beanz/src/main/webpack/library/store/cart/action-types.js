@@ -1,0 +1,18 @@
+import { NAMESPACE } from './constant';
+
+export const FETCH_REQUEST = `${ NAMESPACE }/FETCH_REQUEST`;
+export const FETCH_SUCCESS = `${ NAMESPACE }/FETCH_SUCCESS`;
+export const FETCH_FAIL = `${ NAMESPACE }/FETCH_FAIL`;
+export const UPDATE_LINEITEM = `${ NAMESPACE }/UPDATE_LINEITEM`;
+export const UPDATE_QUANTITYOFBAGS = `${ NAMESPACE }/UPDATE_QUANTITYOFBAGS`;
+export const UPDATE_GRIND = `${ NAMESPACE }/UPDATE_GRIND`;
+export const DELETE_CART = `${ NAMESPACE }/DELETE_CART`;
+export const MERGE_CART = `${ NAMESPACE }/MERGE_CART`;
+export const ADD_PROMO = `${ NAMESPACE }/ADD_PROMO`;
+export const REMOVE_PROMO = `${ NAMESPACE }/REMOVE_PROMO`;
+export const IS_LOADING = `${ NAMESPACE }/IS_LOADING`;
+export const CART_EMPTY = `${ NAMESPACE }/CART_EMPTY`;
+export const WRONG_PROMO = `${ NAMESPACE }/WRONG_PROMO`;
+export const GET_PRODUCT = `${ NAMESPACE }/GET_PRODUCT`;
+export const ADD_PRODUCT = `${ NAMESPACE }/ADD_PRODUCT`;
+export const AUTH_USERNAME = `${ NAMESPACE }/AUTH_USERNAME`;

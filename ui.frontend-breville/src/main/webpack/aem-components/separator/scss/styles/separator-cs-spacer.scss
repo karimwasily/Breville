@@ -1,0 +1,73 @@
+%cmp-separator--cs-spacer-30 {
+  .cmp-separator {
+    padding-top: $cs-spacing-30;
+
+    .cmp-separator__horizontal-rule {
+      height: 0;
+      margin: 0;
+      padding: 0;
+
+      border: 0;
+    }
+  }
+}
+
+.cmp-separator--cs-spacer-30 {
+  @extend %cmp-separator--cs-spacer-30;
+
+}
+
+.cmp-separator--cs-spacer-50 {
+  @extend %cmp-separator--cs-spacer-30;
+
+  .cmp-separator {
+    padding-top: $cs-spacing-40;
+    @media (min-width: $screen-md) {
+      padding-top: $cs-spacing-50;
+    }
+  }
+}
+
+.cmp-separator--cs-spacer-70 {
+  @extend %cmp-separator--cs-spacer-30;
+
+  .cmp-separator {
+    padding-top: $cs-spacing-60;
+    @media (min-width: $screen-md) {
+      padding-top: $cs-spacing-70;
+    }
+  }
+}
+
+.cmp-separator--cs-spacer-90 {
+  @extend %cmp-separator--cs-spacer-30;
+
+  .cmp-separator {
+    padding-top: $cs-spacing-80;
+    @media (min-width: $screen-md) {
+      padding-top: $cs-spacing-90;
+    }
+  }
+}
+
+.cmp-separator--cs-spacer-110 {
+  @extend %cmp-separator--cs-spacer-30;
+
+  .cmp-separator {
+    padding-top: $cs-spacing-100;
+    @media (min-width: $screen-md) {
+      padding-top: $cs-spacing-110;
+    }
+  }
+}
+
+.cmp-separator--cs-spacer-130 {
+  @extend %cmp-separator--cs-spacer-30;
+
+  .cmp-separator {
+    padding-top: $cs-spacing-110;
+    @media (min-width: $screen-md) {
+      padding-top: $cs-spacing-130;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/breville-brands/clientlibs"/>
+    <filter root="/apps/breville-brands/components"/>
+    <filter root="/apps/breville-brands/i18n"/>
+    <filter root="/apps/msm/breville-brands_blueprint" mode="merge"/>
+    <filter root="/apps/msm/coffeehub_blueprint" mode="merge"/>
+    <filter root="/apps/msm/breville-sites-blueprint" mode="merge"/>
+</workspaceFilter>

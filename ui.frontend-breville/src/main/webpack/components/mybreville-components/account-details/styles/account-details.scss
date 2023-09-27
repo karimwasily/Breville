@@ -1,0 +1,34 @@
+.cmp-mybreville__account-details {
+  .cmp-mybreville__account-details-column {
+    &:first-of-type {
+      padding: 0;
+
+      @media (min-width: $cs-screen-xl) {
+        padding: 0 $cs-spacing-20 0 0;
+      }
+    }
+
+    &:last-of-type {
+      padding: 0;
+    }
+
+    .cmp-mybreville__tile {
+      margin-bottom: $cs-spacing-15;
+
+      background: $cs-white;
+      border-radius: $cs-border-radius-8;
+
+      @media (min-width: $cs-screen-xl) {
+        margin-bottom: $cs-spacing-20;
+      }
+
+      > * {
+        padding: $cs-spacing-20;
+
+        @media (min-width: $cs-screen-xl) {
+          padding: $cs-spacing-25;
+        }
+      }
+    }
+  }
+}

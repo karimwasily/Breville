@@ -1,0 +1,26 @@
+.cmp-container--overlap-xs {
+  > .cmp-container:first-child {
+    margin-top: -3.125rem;
+    @media (min-width: $screen-md) {
+      margin-top: -12.5rem;
+    }
+  }
+}
+
+.cmp-container--overlap-sm {
+  > .cmp-container:first-child {
+    @media (min-width: $screen-md) {
+      margin-top: -12.5rem;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: -18.75rem;
+    }
+    @media (min-width: $screen-xxl) {
+      margin-top: -25rem;
+    }
+    @media (min-width: $screen-xxxl) {
+      margin-top: -31.25rem;
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+.dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: $cs-color-primary;
+  width: 100%;
+          
+  &__title {
+    display: flex;
+    flex-direction: column;
+  }
+    
+  &__label {
+    @extend %cs-font-h11;
+    font-weight: $cs-font-weight-bold;
+  }
+    
+  &__edit {
+    @extend %cs-font-p-4;
+    font-weight: $cs-font-weight-normal;
+    text-decoration: underline;
+    margin-top: 8px;
+    color: $cs-color-primary;
+  }
+            
+  &__icon-wrap {
+    height: 22px;
+    width: 22px;
+    color: $cs-color-primary;
+    outline: none;
+  }
+  
+  &__icon {
+    &--open {
+      transform-origin: center;
+      transform: rotate(180deg);
+    }
+  }
+      
+  &:hover {
+    cursor: pointer;
+  }
+}

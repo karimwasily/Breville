@@ -1,0 +1,228 @@
+.payment-selection {
+  &__title {
+    @extend %cs-font-h8;
+    margin-bottom: $cs-spacing-30;
+  }
+
+  .rc-collapse {
+    background: none;
+    border: unset;
+    border-radius: 0;
+
+    >.rc-collapse-item {
+      margin-bottom: $cs-spacing-15;
+      padding: 0 $cs-spacing-20 0 $cs-spacing-20;
+
+      border: 1px solid $cs-dark-silver !important;
+      border-radius: $cs-spacing-10;
+
+      @media (min-width: $cs-screen-md) {
+        padding: 0 $cs-spacing-25 0 $cs-spacing-25;
+      }
+     
+      >.rc-collapse-header {
+        @extend %cs-font-p-6-bold;
+        position: relative;
+
+        margin-right: -$cs-spacing-20;
+        margin-left: -$cs-spacing-20;
+        padding: $cs-spacing-20 $cs-spacing-20 $cs-spacing-20 $cs-spacing-60;
+
+        color: $cs-gunmetal;
+        @media (min-width: $cs-screen-md) {
+          margin-right: -$cs-spacing-25;
+          margin-left: -$cs-spacing-25;
+          padding: $cs-spacing-25 $cs-spacing-25 $cs-spacing-25 $cs-spacing-70;
+        }
+
+        .show-on-expanded {
+          display: none;
+          
+          font-weight: normal;
+        }
+
+        .rc-collapse-extra {
+          margin-right: 0;
+
+          .card-type {
+            svg {
+              margin-left: $cs-spacing-15;
+            }
+          }
+        }
+
+        &::before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: $cs-spacing-20;
+
+          width: 26px;
+          height: 26px;
+          margin: auto;
+
+          background-color: $cs-whitesmoke;
+          border: solid 1px $cs-dark-silver;
+          border-radius: 50%;
+
+          content: '';
+
+          @media (min-width: $cs-screen-md) {
+            left: 25px;
+          }
+        }
+      }
+
+      &.rc-collapse-item-active {
+        border: solid 3px $cs-gunmetal !important;
+
+        >.rc-collapse-header {
+          .show-on-expanded {
+            display: inline-block;
+          }
+
+          &::before {
+            background-color: $cs-gunmetal;
+            border-color: $cs-gunmetal;
+          }
+
+          &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 28px;
+
+            width: 11px;
+            height: $cs-spacing-10;
+            margin: auto;
+
+            background-color: $cs-color-primary;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 14' id='play-outline' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 6.8l4.148 4.8L13.2 2'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+
+            content: '';
+            @media (min-width: $cs-screen-md) {
+              left: 33px;
+            }
+          }
+        }
+
+        .rc-collapse-content {
+          padding: 0;
+
+          .rc-collapse-content-box {
+            margin-top: 0;
+            margin-bottom: $cs-spacing-40;
+
+            .credit-card-container {
+              @media (min-width: $cs-screen-md) {
+                padding-left: $cs-spacing-45;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Credit card container
+.credit-card-container {
+  p {
+    @extend %cs-font-p-4;
+    max-width: 365px;
+    margin-bottom: $cs-spacing-25;
+
+    color: $cs-gunmetal;
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-30;
+    }
+  }
+
+  .adyen-checkout__card-input {
+    .adyen-checkout__loading-input__form {
+      max-width: 365px;
+
+      .adyen-checkout {
+        &__field {
+          margin-bottom: $cs-spacing-25;
+          @media (min-width: $cs-screen-md) {
+            margin-bottom: $cs-spacing-30;
+          }
+        }
+
+        &__card__exp-cvc {
+          .adyen-checkout__field {
+            margin-bottom: 0;
+          }
+        }
+
+        &__label {
+          &__text {
+            @extend %cs-font-p-4;
+            color: $cs-monsoon;
+          }
+        }
+
+        &__input-wrapper {
+          .adyen-checkout__input {
+            @extend %cs-font-p-4;
+            height: 50px;
+            padding: $cs-spacing-15 $cs-spacing-20;
+
+            color: $cs-gunmetal;
+
+            border: solid 1px $cs-dark-silver;
+            border-radius: $cs-border-radius-8;
+            box-shadow: none !important;
+          }
+        }
+
+        &__error-text {
+          @extend %cs-font-p-5;
+          color: $cs-scarlet;
+        }
+      }
+    }
+  }
+}
+
+// Affirm container
+.affirm-container {
+  p {
+    @extend %cs-font-p-4;
+    margin-bottom: $cs-spacing-20;
+
+    color: $cs-gunmetal;
+  }
+
+  .adyen-checkout {
+    &__button {
+      @extend %cs-font-p-6-bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 270px;
+      height: auto;
+      padding: $cs-spacing-10 $cs-spacing-50;
+
+      background-color: $cs-cerulean;
+      border-color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $cs-white;
+
+        background-color: $cs-cerulean;
+        border-color: inherit;
+        box-shadow: none;
+      }
+
+      .affirm-svg {
+        @extend %affirmWhite-icon;
+        width: 3.5rem;
+        height: 2rem;
+      }
+    }
+  }
+}

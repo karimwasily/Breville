@@ -1,0 +1,960 @@
+{
+  "data": {
+    "products": {
+      "results": [
+        {
+          "key": "BES980-1",
+          "skus": [
+            "BES980XL"
+          ],
+          "productType": {
+            "name": "FinishGoods-1",
+            "key": "finishgoods-1"
+          },
+          "masterData": {
+            "published": true,
+            "current": {
+              "name": "the Oracle1",
+              "description": "&lt;p&gt;The Oracle® creates third wave specialty coffee that tastes like you’d get in your favorite café. The Oracle® has automatic grinding, dosing, tamping and milk texturing, automating the two most difficult parts of manual espresso. You can extract espresso and texture milk simultaneously, enabling you to go from beans to latte in under a minute simultaneously.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"https://www.breville.com/us/en/third-wave-specialty-coffee/third-wave-specialty-coffee.html\" tabindex=\"-1\" target=\"_blank\"&gt;Learn more about third wave specialty coffee.&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Purchase or Register a Breville coffee machine/espresso machine/Grinder and join our community to receive a  get FREE bag of specialty beans&lt;/p&gt;\n&lt;p&gt; &lt;a href=\"https://www.beanz.com/us/en/legal/beanz-promotional-terms-and-conditions.html\" tabindex=\"-1\" target=\"_blank\"&gt;Free Beans Promotional Terms here. Free beans promotion may be discontinued at any time.&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;",
+              "slug": "the-oracle-1",
+              "masterVariant": {
+                "key": "BES980XL-1",
+                "sku": "BES980XL-1",
+                "prices": [
+                  {
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "USD",
+                      "centAmount": 199995,
+                      "fractionDigits": 2
+                    },
+                    "country": "US"
+                  }
+                ],
+                "images": [
+                  {
+                    "label": "checkout",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/checkout.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "cart",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/cart.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "tile",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/tile.jpg",
+                    "dimensions": {
+                      "width": 400,
+                      "height": 400
+                    }
+                  },
+                  {
+                    "label": "pdp",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/pdp.jpg",
+                    "dimensions": {
+                      "width": 1300,
+                      "height": 1300
+                    }
+                  }
+                ],
+                "assets": [],
+                "availability": {
+                  "channels": {
+                    "results": []
+                  }
+                },
+                "attributesRaw": [
+                  {
+                    "name": "productType",
+                    "value": "FG"
+                  },
+                  {
+                    "name": "brand",
+                    "value": "Breville"
+                  },
+                  {
+                    "name": "region",
+                    "value": "US"
+                  },
+                  {
+                    "name": "productImages",
+                    "value": {
+                      "en-US": "<Images>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna1.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">AUTO GRIND, DOSE &amp; TAMP</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Fully-integrated conical burr grinder automatically grinds, doses and tamps 22 grams of coffee straight into the portafilter.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna2.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">PRECISE ESPRESSO EXTRACTION</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Dual stainless steel boilers and heated group head controlled by digital temperature control (PID), brings water to precisely the right temperature to extract maximum flavor potential.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna3.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">MICRO-FOAM MILK TEXTURING</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Self-cleaning steam wand, powered by a dedicated boiler, textures milk to your liking and delivers Barista-quality micro-foam that enhances flavor and is essential for creating latte art. Allows you to adjust the milk temperature and texture to suit  your taste.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel2.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes990-the-oracle-touch/bes990bss1bca1/images/BES990BSS1BUS1-the-oracle-touch-beverages-espresso-carousel5.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Accessories that belong to the Oracle.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel3.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna4.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>4</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the control buttons for single or double shot.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">FLEXIBLE SHOT CONTROL</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Choose between one shot, two shots or manual control over how much espresso ends up in your cup for the perfect dose every time.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna5.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>5</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">LCD display showing the settings.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">LCD DISPLAY</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">LCD provides you all the information you need to make coffee exactly the way you like it, everytime.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna6.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>6</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the Americano size and strength button.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">ONE TOUCH AMERICANO</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">The innovative One Touch Americano feature delivers a double espresso, and then separately through a dedicated spout, fills the cup with hot water, the same way as any good commercial machine.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t</Images>"
+                    }
+                  },
+                  {
+                    "name": "productVideos",
+                    "value": {
+                      "en-US": "<Videos>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">1</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Learn more about the Breville Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=sjBPrJJ6qtU</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">2</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Never settle for average coffee at home again thanks to Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=ngVEmXmI1VE</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">3</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Discover the magic of microfoam with Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=767R1dX1P9M</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">4</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\">Make a latte with the Oracle™</VideoTitle>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">herobanner</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\"/>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t</Videos>"
+                    }
+                  },
+                  {
+                    "name": "userGuides",
+                    "value": {
+                      "en-US": "<UserGuides>\n\t\t\t\t<UserGuide language=\"en_US\">\n\t\t\t\t\t<URL>https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES980/BES980BSS/BES980-USC-instruction-manual.pdf</URL>\n\t\t\t\t\t<UserGuideAltText>Instruction Manual</UserGuideAltText>\n\t\t\t\t</UserGuide>\n\t\t\t</UserGuides>"
+                    }
+                  },
+                  {
+                    "name": "productDNAs",
+                    "value": {
+                      "en-US": "Product DNA"
+                    }
+                  },
+                  {
+                    "name": "productSpecifications",
+                    "value": {
+                      "en-US": "Product Specifications"
+                    }
+                  },
+                  {
+                    "name": "fullSpecifications",
+                    "value": {
+                      "en-US": "Full Specifications"
+                    }
+                  },
+                  {
+                    "name": "WEB_STATUS",
+                    "value": {
+                      "en-US": "Visible for Sale"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_OPV",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Over Pressure Value\"\n\"value\" : \"This commercial feature limits the 15 bar Italian pump pressure throughout the extraction, preventing bitter flavors in the shot.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_PREINFUSFUNC",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Pre Infusion Function\"\n\"value\" : \"Gradually increases water pressure to gently expand grinds for an even extraction.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TIMER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Timer\"\n\"value\" : \"Espresso shot clock displays shot duration as a guide to extraction consistency.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TRIPHEATSYST",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Triple Heat System\"\n\"value\" : \"1. Dedicated steam boiler with integrated Heat Exchange aids thermal stability.\n2. Dedicated espresso boiler with Digital PID control delivers precise water temperature.\n3. Heated group head–PID controlled embedded element maintains thermal stability.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_CAPACITY",
+                    "value": {
+                      "en-US": {"name": "Capacity", "value": "Bean Hopper Capacity: 1/2 lb. Water Tank Capacity: 84 oz."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour\"\n\"value\" : \"Brushed Stainless Steel\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_DIMENSIONS",
+                    "value": {
+                      "en-US": {"name" : "Dimensions", "value": "14.5 x 14.7 x 17.6"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_POWER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Power\"\n\"value\" : \"1800 Watts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_SETTINGS",
+                    "value": {
+                      "en-US": {"name": "Settings", "value": "Adjustable Grind Control. Programmable Milk Temperature and Texture. One Two Shots. Long Black. Hot Water."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_VOLTAGE",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Voltage\"\n\"value\" : \"110–120 Volts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_WARRANTY",
+                    "value": {
+                      "en-US": {"name": "Warranty", "value": "2 Year Repair Warranty"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_ACCESSORIES",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Accessories\"\n\"value\" : \"Included Accessories:\nMini Grinds Bin.\n58mm Full Stainless Steel Portafilter.\n1 cup &amp; 2 cup Single Wall Filter Baskets.\n16oz Stainless Steel Milk Jug. \nSteam Wand Spare Parts.\nCleaning Kit. \nWater Hardness Test Strip.\nWater Filter Holder and Water Filter.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "colour_Option",
+                    "value": {
+                      "en-US": "brushed_stainless_steel"
+                    }
+                  },
+                  {
+                    "name": "barcodes",
+                    "value": [
+                      {
+                        "en-US": "{\n\"Setup\" : \"GTIN14\"\t\n\"Code\" : \"10021614053838\"\n}"
+                      },
+                      {
+                        "en-US": "{\n\"Setup\" : \"UPC A\"\t\n\"Code\" : \"021614053831\"\n}"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "WEB_PROD_SIGN_REQD",
+                    "value": false
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR_ORDER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour Order\"\n\"value\" : \"1\"\n}"
+                    }
+                  },
+                  {
+                    "name": "accessoriesAssociation",
+                    "value": [
+                      {
+                        "typeId": "product",
+                        "id": "0acd9c6a-4bc8-4de3-8e97-476be53f4021"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "variants": []
+            }
+          }
+        },
+        {
+          "key": "BES980-2",
+          "skus": [
+            "BES980XL"
+          ],
+          "productType": {
+            "name": "FinishGoods-2",
+            "key": "finishgoods-2"
+          },
+          "masterData": {
+            "published": true,
+            "current": {
+              "name": "the Oracle-2",
+              "description": "&lt;p&gt;The Oracle® creates third wave specialty coffee that tastes like you’d get in your favorite café. The Oracle® has automatic grinding, dosing, tamping and milk texturing, automating the two most difficult parts of manual espresso. You can extract espresso and texture milk simultaneously, enabling you to go from beans to latte in under a minute simultaneously.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"https://www.breville.com/us/en/third-wave-specialty-coffee/third-wave-specialty-coffee.html\" tabindex=\"-1\" target=\"_blank\"&gt;Learn more about third wave specialty coffee.&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Purchase or Register a Breville coffee machine/espresso machine/Grinder and join our community to receive a  get FREE bag of specialty beans&lt;/p&gt;\n&lt;p&gt; &lt;a href=\"https://www.beanz.com/us/en/legal/beanz-promotional-terms-and-conditions.html\" tabindex=\"-1\" target=\"_blank\"&gt;Free Beans Promotional Terms here. Free beans promotion may be discontinued at any time.&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;",
+              "slug": "the-oracle-2",
+              "masterVariant": {
+                "key": "BES980XL-3",
+                "sku": "BES980XL-3",
+                "prices": [
+                  {
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "USD",
+                      "centAmount": 299995,
+                      "fractionDigits": 2
+                    },
+                    "country": "US"
+                  }
+                ],
+                "images": [
+                  {
+                    "label": "checkout",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/checkout.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "cart",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/cart.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "tile",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/tile.jpg",
+                    "dimensions": {
+                      "width": 400,
+                      "height": 400
+                    }
+                  },
+                  {
+                    "label": "pdp",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/pdp.jpg",
+                    "dimensions": {
+                      "width": 1300,
+                      "height": 1300
+                    }
+                  }
+                ],
+                "assets": [],
+                "availability": {
+                  "channels": {
+                    "results": []
+                  }
+                },
+                "attributesRaw": [
+                  {
+                    "name": "productType",
+                    "value": "FG"
+                  },
+                  {
+                    "name": "brand",
+                    "value": "Breville"
+                  },
+                  {
+                    "name": "region",
+                    "value": "US"
+                  },
+                  {
+                    "name": "productImages",
+                    "value": {
+                      "en-US": "<Images>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna1.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">AUTO GRIND, DOSE &amp; TAMP</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Fully-integrated conical burr grinder automatically grinds, doses and tamps 22 grams of coffee straight into the portafilter.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna2.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">PRECISE ESPRESSO EXTRACTION</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Dual stainless steel boilers and heated group head controlled by digital temperature control (PID), brings water to precisely the right temperature to extract maximum flavor potential.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna3.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">MICRO-FOAM MILK TEXTURING</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Self-cleaning steam wand, powered by a dedicated boiler, textures milk to your liking and delivers Barista-quality micro-foam that enhances flavor and is essential for creating latte art. Allows you to adjust the milk temperature and texture to suit  your taste.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel2.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes990-the-oracle-touch/bes990bss1bca1/images/BES990BSS1BUS1-the-oracle-touch-beverages-espresso-carousel5.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Accessories that belong to the Oracle.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel3.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna4.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>4</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the control buttons for single or double shot.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">FLEXIBLE SHOT CONTROL</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Choose between one shot, two shots or manual control over how much espresso ends up in your cup for the perfect dose every time.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna5.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>5</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">LCD display showing the settings.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">LCD DISPLAY</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">LCD provides you all the information you need to make coffee exactly the way you like it, everytime.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna6.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>6</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the Americano size and strength button.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">ONE TOUCH AMERICANO</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">The innovative One Touch Americano feature delivers a double espresso, and then separately through a dedicated spout, fills the cup with hot water, the same way as any good commercial machine.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t</Images>"
+                    }
+                  },
+                  {
+                    "name": "productVideos",
+                    "value": {
+                      "en-US": "<Videos>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">1</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Learn more about the Breville Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=sjBPrJJ6qtU</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">2</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Never settle for average coffee at home again thanks to Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=ngVEmXmI1VE</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">3</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Discover the magic of microfoam with Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=767R1dX1P9M</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">4</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\">Make a latte with the Oracle™</VideoTitle>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">herobanner</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\"/>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t</Videos>"
+                    }
+                  },
+                  {
+                    "name": "userGuides",
+                    "value": {
+                      "en-US": "<UserGuides>\n\t\t\t\t<UserGuide language=\"en_US\">\n\t\t\t\t\t<URL>https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES980/BES980BSS/BES980-USC-instruction-manual.pdf</URL>\n\t\t\t\t\t<UserGuideAltText>Instruction Manual</UserGuideAltText>\n\t\t\t\t</UserGuide>\n\t\t\t</UserGuides>"
+                    }
+                  },
+                  {
+                    "name": "productDNAs",
+                    "value": {
+                      "en-US": "Product DNA"
+                    }
+                  },
+                  {
+                    "name": "productSpecifications",
+                    "value": {
+                      "en-US": "Product Specifications"
+                    }
+                  },
+                  {
+                    "name": "fullSpecifications",
+                    "value": {
+                      "en-US": "Full Specifications"
+                    }
+                  },
+                  {
+                    "name": "WEB_STATUS",
+                    "value": {
+                      "en-US": "Visible for Sale"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_OPV",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Over Pressure Value\"\n\"value\" : \"This commercial feature limits the 15 bar Italian pump pressure throughout the extraction, preventing bitter flavors in the shot.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_PREINFUSFUNC",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Pre Infusion Function\"\n\"value\" : \"Gradually increases water pressure to gently expand grinds for an even extraction.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TIMER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Timer\"\n\"value\" : \"Espresso shot clock displays shot duration as a guide to extraction consistency.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TRIPHEATSYST",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Triple Heat System\"\n\"value\" : \"1. Dedicated steam boiler with integrated Heat Exchange aids thermal stability.\n2. Dedicated espresso boiler with Digital PID control delivers precise water temperature.\n3. Heated group head–PID controlled embedded element maintains thermal stability.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_CAPACITY",
+                    "value": {
+                      "en-US": {"name": "Capacity", "value": "Bean Hopper Capacity: 1/2 lb. Water Tank Capacity: 84 oz."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour\"\n\"value\" : \"Brushed Stainless Steel\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_DIMENSIONS",
+                    "value": {
+                      "en-US": {"name" : "Dimensions", "value": "14.5 x 14.7 x 17.6"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_POWER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Power\"\n\"value\" : \"1800 Watts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_SETTINGS",
+                    "value": {
+                      "en-US": {"name": "Settings", "value": "Adjustable Grind Control. Programmable Milk Temperature and Texture. One Two Shots. Long Black. Hot Water."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_VOLTAGE",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Voltage\"\n\"value\" : \"110–120 Volts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_WARRANTY",
+                    "value": {
+                      "en-US": {"name": "Warranty", "value": "2 Year Repair Warranty"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_ACCESSORIES",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Accessories\"\n\"value\" : \"Included Accessories:\nMini Grinds Bin.\n58mm Full Stainless Steel Portafilter.\n1 cup &amp; 2 cup Single Wall Filter Baskets.\n16oz Stainless Steel Milk Jug. \nSteam Wand Spare Parts.\nCleaning Kit. \nWater Hardness Test Strip.\nWater Filter Holder and Water Filter.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "colour_Option",
+                    "value": {
+                      "en-US": "brushed_stainless_steel"
+                    }
+                  },
+                  {
+                    "name": "barcodes",
+                    "value": [
+                      {
+                        "en-US": "{\n\"Setup\" : \"GTIN14\"\t\n\"Code\" : \"10021614053838\"\n}"
+                      },
+                      {
+                        "en-US": "{\n\"Setup\" : \"UPC A\"\t\n\"Code\" : \"021614053831\"\n}"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "WEB_PROD_SIGN_REQD",
+                    "value": false
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR_ORDER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour Order\"\n\"value\" : \"1\"\n}"
+                    }
+                  },
+                  {
+                    "name": "accessoriesAssociation",
+                    "value": [
+                      {
+                        "typeId": "product",
+                        "id": "0acd9c6a-4bc8-4de3-8e97-476be53f4021"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "variants": []
+            }
+          }
+        },
+        {
+          "key": "BES980-3",
+          "skus": [
+            "BES980XL"
+          ],
+          "productType": {
+            "name": "FinishGoods-3",
+            "key": "finishgoods-3"
+          },
+          "masterData": {
+            "published": true,
+            "current": {
+              "name": "the Oracle-3",
+              "description": "&lt;p&gt;The Oracle® creates third wave specialty coffee that tastes like you’d get in your favorite café. The Oracle® has automatic grinding, dosing, tamping and milk texturing, automating the two most difficult parts of manual espresso. You can extract espresso and texture milk simultaneously, enabling you to go from beans to latte in under a minute simultaneously.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"https://www.breville.com/us/en/third-wave-specialty-coffee/third-wave-specialty-coffee.html\" tabindex=\"-1\" target=\"_blank\"&gt;Learn more about third wave specialty coffee.&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Purchase or Register a Breville coffee machine/espresso machine/Grinder and join our community to receive a  get FREE bag of specialty beans&lt;/p&gt;\n&lt;p&gt; &lt;a href=\"https://www.beanz.com/us/en/legal/beanz-promotional-terms-and-conditions.html\" tabindex=\"-1\" target=\"_blank\"&gt;Free Beans Promotional Terms here. Free beans promotion may be discontinued at any time.&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;",
+              "slug": "the-oracle-3",
+              "masterVariant": {
+                "key": "BES980XL-3",
+                "sku": "BES980XL-3",
+                "prices": [
+                  {
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "USD",
+                      "centAmount": 399995,
+                      "fractionDigits": 2
+                    },
+                    "country": "US"
+                  }
+                ],
+                "images": [
+                  {
+                    "label": "checkout",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/checkout.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "cart",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/cart.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "tile",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/tile.jpg",
+                    "dimensions": {
+                      "width": 400,
+                      "height": 400
+                    }
+                  },
+                  {
+                    "label": "pdp",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/pdp.jpg",
+                    "dimensions": {
+                      "width": 1300,
+                      "height": 1300
+                    }
+                  }
+                ],
+                "assets": [],
+                "availability": {
+                  "channels": {
+                    "results": []
+                  }
+                },
+                "attributesRaw": [
+                  {
+                    "name": "productType",
+                    "value": "FG"
+                  },
+                  {
+                    "name": "brand",
+                    "value": "Breville"
+                  },
+                  {
+                    "name": "region",
+                    "value": "US"
+                  },
+                  {
+                    "name": "productImages",
+                    "value": {
+                      "en-US": "<Images>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna1.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">AUTO GRIND, DOSE &amp; TAMP</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Fully-integrated conical burr grinder automatically grinds, doses and tamps 22 grams of coffee straight into the portafilter.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna2.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">PRECISE ESPRESSO EXTRACTION</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Dual stainless steel boilers and heated group head controlled by digital temperature control (PID), brings water to precisely the right temperature to extract maximum flavor potential.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna3.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">MICRO-FOAM MILK TEXTURING</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Self-cleaning steam wand, powered by a dedicated boiler, textures milk to your liking and delivers Barista-quality micro-foam that enhances flavor and is essential for creating latte art. Allows you to adjust the milk temperature and texture to suit  your taste.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel2.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes990-the-oracle-touch/bes990bss1bca1/images/BES990BSS1BUS1-the-oracle-touch-beverages-espresso-carousel5.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Accessories that belong to the Oracle.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel3.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna4.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>4</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the control buttons for single or double shot.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">FLEXIBLE SHOT CONTROL</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Choose between one shot, two shots or manual control over how much espresso ends up in your cup for the perfect dose every time.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna5.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>5</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">LCD display showing the settings.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">LCD DISPLAY</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">LCD provides you all the information you need to make coffee exactly the way you like it, everytime.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna6.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>6</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the Americano size and strength button.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">ONE TOUCH AMERICANO</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">The innovative One Touch Americano feature delivers a double espresso, and then separately through a dedicated spout, fills the cup with hot water, the same way as any good commercial machine.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t</Images>"
+                    }
+                  },
+                  {
+                    "name": "productVideos",
+                    "value": {
+                      "en-US": "<Videos>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">1</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Learn more about the Breville Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=sjBPrJJ6qtU</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">2</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Never settle for average coffee at home again thanks to Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=ngVEmXmI1VE</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">3</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Discover the magic of microfoam with Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=767R1dX1P9M</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">4</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\">Make a latte with the Oracle™</VideoTitle>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">herobanner</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\"/>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t</Videos>"
+                    }
+                  },
+                  {
+                    "name": "userGuides",
+                    "value": {
+                      "en-US": "<UserGuides>\n\t\t\t\t<UserGuide language=\"en_US\">\n\t\t\t\t\t<URL>https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES980/BES980BSS/BES980-USC-instruction-manual.pdf</URL>\n\t\t\t\t\t<UserGuideAltText>Instruction Manual</UserGuideAltText>\n\t\t\t\t</UserGuide>\n\t\t\t</UserGuides>"
+                    }
+                  },
+                  {
+                    "name": "productDNAs",
+                    "value": {
+                      "en-US": "Product DNA"
+                    }
+                  },
+                  {
+                    "name": "productSpecifications",
+                    "value": {
+                      "en-US": "Product Specifications"
+                    }
+                  },
+                  {
+                    "name": "fullSpecifications",
+                    "value": {
+                      "en-US": "Full Specifications"
+                    }
+                  },
+                  {
+                    "name": "WEB_STATUS",
+                    "value": {
+                      "en-US": "Visible for Sale"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_OPV",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Over Pressure Value\"\n\"value\" : \"This commercial feature limits the 15 bar Italian pump pressure throughout the extraction, preventing bitter flavors in the shot.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_PREINFUSFUNC",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Pre Infusion Function\"\n\"value\" : \"Gradually increases water pressure to gently expand grinds for an even extraction.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TIMER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Timer\"\n\"value\" : \"Espresso shot clock displays shot duration as a guide to extraction consistency.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TRIPHEATSYST",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Triple Heat System\"\n\"value\" : \"1. Dedicated steam boiler with integrated Heat Exchange aids thermal stability.\n2. Dedicated espresso boiler with Digital PID control delivers precise water temperature.\n3. Heated group head–PID controlled embedded element maintains thermal stability.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_CAPACITY",
+                    "value": {
+                      "en-US": {"name": "Capacity", "value": "Bean Hopper Capacity: 1/2 lb. Water Tank Capacity: 84 oz."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour\"\n\"value\" : \"Brushed Stainless Steel\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_DIMENSIONS",
+                    "value": {
+                      "en-US": {"name" : "Dimensions", "value": "14.5 x 14.7 x 17.6"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_POWER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Power\"\n\"value\" : \"1800 Watts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_SETTINGS",
+                    "value": {
+                      "en-US": {"name": "Settings", "value": "Adjustable Grind Control. Programmable Milk Temperature and Texture. One Two Shots. Long Black. Hot Water."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_VOLTAGE",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Voltage\"\n\"value\" : \"110–120 Volts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_WARRANTY",
+                    "value": {
+                      "en-US": {"name": "Warranty", "value": "2 Year Repair Warranty"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_ACCESSORIES",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Accessories\"\n\"value\" : \"Included Accessories:\nMini Grinds Bin.\n58mm Full Stainless Steel Portafilter.\n1 cup &amp; 2 cup Single Wall Filter Baskets.\n16oz Stainless Steel Milk Jug. \nSteam Wand Spare Parts.\nCleaning Kit. \nWater Hardness Test Strip.\nWater Filter Holder and Water Filter.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "colour_Option",
+                    "value": {
+                      "en-US": "brushed_stainless_steel"
+                    }
+                  },
+                  {
+                    "name": "barcodes",
+                    "value": [
+                      {
+                        "en-US": "{\n\"Setup\" : \"GTIN14\"\t\n\"Code\" : \"10021614053838\"\n}"
+                      },
+                      {
+                        "en-US": "{\n\"Setup\" : \"UPC A\"\t\n\"Code\" : \"021614053831\"\n}"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "WEB_PROD_SIGN_REQD",
+                    "value": false
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR_ORDER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour Order\"\n\"value\" : \"1\"\n}"
+                    }
+                  },
+                  {
+                    "name": "accessoriesAssociation",
+                    "value": [
+                      {
+                        "typeId": "product",
+                        "id": "0acd9c6a-4bc8-4de3-8e97-476be53f4021"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "variants": []
+            }
+          }
+        },
+        {
+          "key": "BES980-4",
+          "skus": [
+            "BES980XL"
+          ],
+          "productType": {
+            "name": "FinishGoods-4",
+            "key": "finishgoods-4"
+          },
+          "masterData": {
+            "published": true,
+            "current": {
+              "name": "the Oracle-4",
+              "description": "&lt;p&gt;The Oracle® creates third wave specialty coffee that tastes like you’d get in your favorite café. The Oracle® has automatic grinding, dosing, tamping and milk texturing, automating the two most difficult parts of manual espresso. You can extract espresso and texture milk simultaneously, enabling you to go from beans to latte in under a minute simultaneously.&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"https://www.breville.com/us/en/third-wave-specialty-coffee/third-wave-specialty-coffee.html\" tabindex=\"-1\" target=\"_blank\"&gt;Learn more about third wave specialty coffee.&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Purchase or Register a Breville coffee machine/espresso machine/Grinder and join our community to receive a  get FREE bag of specialty beans&lt;/p&gt;\n&lt;p&gt; &lt;a href=\"https://www.beanz.com/us/en/legal/beanz-promotional-terms-and-conditions.html\" tabindex=\"-1\" target=\"_blank\"&gt;Free Beans Promotional Terms here. Free beans promotion may be discontinued at any time.&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;",
+              "slug": "the-oracle-4",
+              "masterVariant": {
+                "key": "BES980XL-4",
+                "sku": "BES980XL-4",
+                "prices": [
+                  {
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "USD",
+                      "centAmount": 499995,
+                      "fractionDigits": 2
+                    },
+                    "country": "US"
+                  }
+                ],
+                "images": [
+                  {
+                    "label": "checkout",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/checkout.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "cart",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/cart.jpg",
+                    "dimensions": {
+                      "width": 150,
+                      "height": 150
+                    }
+                  },
+                  {
+                    "label": "tile",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/tile.jpg",
+                    "dimensions": {
+                      "width": 400,
+                      "height": 400
+                    }
+                  },
+                  {
+                    "label": "pdp",
+                    "url": "https://www.breville.com/content/dam/breville/us/catalog/products/images/bes/bes980xl/pdp.jpg",
+                    "dimensions": {
+                      "width": 1300,
+                      "height": 1300
+                    }
+                  }
+                ],
+                "assets": [],
+                "availability": {
+                  "channels": {
+                    "results": []
+                  }
+                },
+                "attributesRaw": [
+                  {
+                    "name": "productType",
+                    "value": "FG"
+                  },
+                  {
+                    "name": "brand",
+                    "value": "Breville"
+                  },
+                  {
+                    "name": "region",
+                    "value": "US"
+                  },
+                  {
+                    "name": "productImages",
+                    "value": {
+                      "en-US": "<Images>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna1.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">AUTO GRIND, DOSE &amp; TAMP</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Fully-integrated conical burr grinder automatically grinds, doses and tamps 22 grams of coffee straight into the portafilter.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna2.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">PRECISE ESPRESSO EXTRACTION</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Dual stainless steel boilers and heated group head controlled by digital temperature control (PID), brings water to precisely the right temperature to extract maximum flavor potential.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna3.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">MICRO-FOAM MILK TEXTURING</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Self-cleaning steam wand, powered by a dedicated boiler, textures milk to your liking and delivers Barista-quality micro-foam that enhances flavor and is essential for creating latte art. Allows you to adjust the milk temperature and texture to suit  your taste.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel2.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>1</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes990-the-oracle-touch/bes990bss1bca1/images/BES990BSS1BUS1-the-oracle-touch-beverages-espresso-carousel5.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>2</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Accessories that belong to the Oracle.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-carousel3.jpg</URL>\n\t\t\t\t\t<Type>carousel</Type>\n\t\t\t\t\t<Alignment/>\n\t\t\t\t\t<Index>3</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\"/>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles/>\n\t\t\t\t\t<Descriptions/>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna4.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>4</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the control buttons for single or double shot.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">FLEXIBLE SHOT CONTROL</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">Choose between one shot, two shots or manual control over how much espresso ends up in your cup for the perfect dose every time.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna5.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>left</Alignment>\n\t\t\t\t\t<Index>5</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">LCD display showing the settings.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">LCD DISPLAY</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">LCD provides you all the information you need to make coffee exactly the way you like it, everytime.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t\t<Image>\n\t\t\t\t\t<URL>https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980-the-oracle/bes980xl-the-oracle/images/BES980XL-the-oracle-beverages-espresso-dna6.jpg</URL>\n\t\t\t\t\t<Type>dna</Type>\n\t\t\t\t\t<Alignment>right</Alignment>\n\t\t\t\t\t<Index>6</Index>\n\t\t\t\t\t<Publish>true</Publish>\n\t\t\t\t\t<AltTexts>\n\t\t\t\t\t\t<AltText language=\"en_US\">Close up of the Americano size and strength button.</AltText>\n\t\t\t\t\t</AltTexts>\n\t\t\t\t\t<Titles>\n\t\t\t\t\t\t<Title language=\"en_US\">ONE TOUCH AMERICANO</Title>\n\t\t\t\t\t</Titles>\n\t\t\t\t\t<Descriptions>\n\t\t\t\t\t\t<Description language=\"en_US\">The innovative One Touch Americano feature delivers a double espresso, and then separately through a dedicated spout, fills the cup with hot water, the same way as any good commercial machine.</Description>\n\t\t\t\t\t</Descriptions>\n\t\t\t\t</Image>\n\t\t\t</Images>"
+                    }
+                  },
+                  {
+                    "name": "productVideos",
+                    "value": {
+                      "en-US": "<Videos>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">1</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Learn more about the Breville Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=sjBPrJJ6qtU</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">2</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Never settle for average coffee at home again thanks to Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=ngVEmXmI1VE</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">3</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Discover the magic of microfoam with Third Wave Specialty Coffee.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\"/>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">carousel</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=767R1dX1P9M</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\">4</VideoIndex>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t\t<Video>\n\t\t\t\t\t<VideoAltTexts>\n\t\t\t\t\t\t<VideoAltText language=\"en_US\">Make a perfectly balanced latte in under a minute with the Oracle.</VideoAltText>\n\t\t\t\t\t</VideoAltTexts>\n\t\t\t\t\t<VideoTitles>\n\t\t\t\t\t\t<VideoTitle language=\"en_US\">Make a latte with the Oracle™</VideoTitle>\n\t\t\t\t\t</VideoTitles>\n\t\t\t\t\t<VideoTypes>\n\t\t\t\t\t\t<VideoType language=\"en_US\">herobanner</VideoType>\n\t\t\t\t\t</VideoTypes>\n\t\t\t\t\t<VideoURLs>\n\t\t\t\t\t\t<VideoURL language=\"en_US\">https://www.youtube.com/watch?v=rZs1Ss-Da9c</VideoURL>\n\t\t\t\t\t</VideoURLs>\n\t\t\t\t\t<VideoIndexes>\n\t\t\t\t\t\t<VideoIndex language=\"en_US\"/>\n\t\t\t\t\t</VideoIndexes>\n\t\t\t\t</Video>\n\t\t\t</Videos>"
+                    }
+                  },
+                  {
+                    "name": "userGuides",
+                    "value": {
+                      "en-US": "<UserGuides>\n\t\t\t\t<UserGuide language=\"en_US\">\n\t\t\t\t\t<URL>https://breville-production-aem-assets.s3-us-west-2.amazonaws.com/BES980/BES980BSS/BES980-USC-instruction-manual.pdf</URL>\n\t\t\t\t\t<UserGuideAltText>Instruction Manual</UserGuideAltText>\n\t\t\t\t</UserGuide>\n\t\t\t</UserGuides>"
+                    }
+                  },
+                  {
+                    "name": "productDNAs",
+                    "value": {
+                      "en-US": "Product DNA"
+                    }
+                  },
+                  {
+                    "name": "productSpecifications",
+                    "value": {
+                      "en-US": "Product Specifications"
+                    }
+                  },
+                  {
+                    "name": "fullSpecifications",
+                    "value": {
+                      "en-US": "Full Specifications"
+                    }
+                  },
+                  {
+                    "name": "WEB_STATUS",
+                    "value": {
+                      "en-US": "Visible for Sale"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_OPV",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Over Pressure Value\"\n\"value\" : \"This commercial feature limits the 15 bar Italian pump pressure throughout the extraction, preventing bitter flavors in the shot.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_PREINFUSFUNC",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Pre Infusion Function\"\n\"value\" : \"Gradually increases water pressure to gently expand grinds for an even extraction.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TIMER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Timer\"\n\"value\" : \"Espresso shot clock displays shot duration as a guide to extraction consistency.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_TRIPHEATSYST",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Triple Heat System\"\n\"value\" : \"1. Dedicated steam boiler with integrated Heat Exchange aids thermal stability.\n2. Dedicated espresso boiler with Digital PID control delivers precise water temperature.\n3. Heated group head–PID controlled embedded element maintains thermal stability.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_CAPACITY",
+                    "value": {
+                      "en-US": {"name": "Capacity", "value": "Bean Hopper Capacity: 1/2 lb. Water Tank Capacity: 84 oz."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour\"\n\"value\" : \"Brushed Stainless Steel\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_DIMENSIONS",
+                    "value": {
+                      "en-US": {"name" : "Dimensions", "value": "14.5 x 14.7 x 17.6"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_POWER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Power\"\n\"value\" : \"1800 Watts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_SETTINGS",
+                    "value": {
+                      "en-US": {"name": "Settings", "value": "Adjustable Grind Control. Programmable Milk Temperature and Texture. One Two Shots. Long Black. Hot Water."}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_VOLTAGE",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Voltage\"\n\"value\" : \"110–120 Volts.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_WARRANTY",
+                    "value": {
+                      "en-US": {"name": "Warranty", "value": "2 Year Repair Warranty"}
+                    }
+                  },
+                  {
+                    "name": "WEB_TS_ACCESSORIES",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Accessories\"\n\"value\" : \"Included Accessories:\nMini Grinds Bin.\n58mm Full Stainless Steel Portafilter.\n1 cup &amp; 2 cup Single Wall Filter Baskets.\n16oz Stainless Steel Milk Jug. \nSteam Wand Spare Parts.\nCleaning Kit. \nWater Hardness Test Strip.\nWater Filter Holder and Water Filter.\"\n}"
+                    }
+                  },
+                  {
+                    "name": "colour_Option",
+                    "value": {
+                      "en-US": "brushed_stainless_steel"
+                    }
+                  },
+                  {
+                    "name": "barcodes",
+                    "value": [
+                      {
+                        "en-US": "{\n\"Setup\" : \"GTIN14\"\t\n\"Code\" : \"10021614053838\"\n}"
+                      },
+                      {
+                        "en-US": "{\n\"Setup\" : \"UPC A\"\t\n\"Code\" : \"021614053831\"\n}"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "WEB_PROD_SIGN_REQD",
+                    "value": false
+                  },
+                  {
+                    "name": "WEB_TS_COLOUR_ORDER",
+                    "value": {
+                      "en-US": "{\n\"name\" : \"Colour Order\"\n\"value\" : \"1\"\n}"
+                    }
+                  },
+                  {
+                    "name": "accessoriesAssociation",
+                    "value": [
+                      {
+                        "typeId": "product",
+                        "id": "0acd9c6a-4bc8-4de3-8e97-476be53f4021"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "variants": []
+            }
+          }
+        }
+      ]
+    }
+  }
+}

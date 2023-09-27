@@ -1,0 +1,86 @@
+.checkout {
+  margin-bottom: $cs-spacing-50;
+  margin-left: $cs-spacing-15;
+  margin-right: $cs-spacing-15;
+    
+  &__grid {
+    padding: 0;
+    max-width: 1135px;
+
+    .message-box {
+      @media (max-width: $cs-screen-xl) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @media (min-width: $cs-screen-xl) {
+        //  margin-right: $cs-spacing-30;
+      }
+    }
+  }
+    
+  &__forms {
+    margin-bottom: $cs-spacing-30;
+    margin-bottom: $cs-spacing-30;
+    margin-bottom: $cs-spacing-30;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-right: $cs-spacing-30;
+      margin-bottom: 0;
+    }
+  }  
+  
+  &__summary {
+    margin-top: $cs-spacing-60;
+    position: sticky;
+    top: $cs-spacing-10;
+    //todo,
+    // creatd for timebeing, will be Modified when merging the summary section
+    @media (min-width: $cs-screen-xl) {
+      // margin-top: $cs-spacing-5;
+      margin-top: $cs-spacing-200;
+      margin-left: $cs-spacing-30;
+    }
+
+    .dropdown-menu {
+      padding: 0;
+    }   
+  }
+  .cmp-cart-pay-with { display: none; }
+  @media (min-width: $cs-screen-md) {
+    .cmp-cart-pay-with { display: block; }
+  }
+}
+
+.shipping-title {
+  @extend %cs-font-h8;
+  color: $cs-gunmetal;
+}
+
+.checkout-header {
+  &__txt {
+    @extend %cs-font-p-4;
+    font-weight: $cs-font-weight-normal;
+    color: $cs-gunmetal;
+  }
+
+  &__signOut {
+    @extend %cs-font-p-4;
+    font-weight: $cs-font-weight-normal;
+    text-decoration: underline;
+    color: $cs-gunmetal;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+

@@ -1,0 +1,10 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.model="com.breville.aem.brands.core.models.SecondaryNavigation"></sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
+<div class="cmp-secondary-navigation">
+    <ul class="cmp-secondary-navigation__group">
+        <sly data-sly-list.navigationItem="${model.navigationLinks}">
+            <li class="cmp-secondary-navigation__group__item"><a href="${navigationItem.linkHref}">${navigationItem.linkText}</a></li>
+        </sly>
+    </ul>
+</div>

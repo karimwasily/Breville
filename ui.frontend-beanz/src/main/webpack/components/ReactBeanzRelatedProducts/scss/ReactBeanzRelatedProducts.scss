@@ -1,0 +1,204 @@
+.related-products__root {
+  margin: $spacing-xxl auto;
+    
+  .slick-dots {
+    position: absolute;
+    bottom: $spacing-xxs;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    // Tag generating from React Carousel
+    li {
+      position: relative;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 0 $spacing-xxs;
+      padding: 0;
+      cursor: pointer;
+
+      // Tag generating from React Carousel
+      button {
+        border: 0;
+        background: transparent;
+        display: block;
+        height: 15px;
+        width: 15px;
+        font-size: 0;
+        color: transparent;
+        padding: $spacing-xxs;
+        cursor: pointer;
+  
+        &:hover,
+        &:focus {
+          outline: none;
+  
+          &::before {
+            opacity: 1;
+          }
+        }
+  
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 15px;
+          height: 15px;
+          background-color: $gray-suva;
+          opacity: 1;
+          border-radius: $border-radius-circle;
+        }
+      }
+
+      &.slick-active button::before {
+        background-color: $gray-dark;
+        opacity: 1;
+      }
+    }
+  }
+
+  .cmp-container__related-products {
+    padding-top: $spacing-xl;
+    @include breakpoint-up (md) {
+      padding-top: 0;
+    }
+      
+    .cmp-text__related-products--title {
+      @extend %font-h2;
+      color: $jaguar;
+      margin-top: 0;
+      margin-bottom: $spacing-md;
+      text-align: center;
+    }
+  }
+    
+  .related-products__items--row {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 $spacing-md;
+    display: flex;
+    flex-wrap: wrap;
+
+    .related-products__item--column {
+      width: 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      @include breakpoint-up (md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @include breakpoint-up (lg) {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
+
+    .slick-slider {
+      padding-bottom: $spacing-lg;
+      width: 100%;
+      min-width: 100%;
+
+      .slick-slide {
+        // * gap between reactcarousel slide items
+        padding: $spacing-xs;
+      }
+    }
+    
+    .related-products__item--card {
+      
+      flex: 1;
+      border: 1px solid $gray-davy;
+      margin: $spacing-xs;
+      max-width: auto;
+      border-radius: $border-radius-base;
+      background-color: $seashell;
+      position: relative;
+      white-space: break-spaces;
+      max-width: 100%;
+      @include breakpoint-up (lg) {
+        max-width: 380px;
+      }
+    
+      .related-products__item-gotocart {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+      }
+    
+      .related-products__item--card-image {
+        background: $white;
+    
+        .related-products__item--card-image-img {
+          width: 100%;
+          max-width: 274px;
+          object-fit: contain;
+          display: block;
+          padding: $spacing-lg;
+          margin: auto;
+        }
+      }
+    
+      .related-products__item--card-body {
+        padding: $spacing-xs $spacing-xs $spacing-md;
+        text-align: center;
+        word-break: break-word;
+    
+        .related-products__item--roaster-name {
+          @extend %font-green-bold-p;
+          text-align: center;
+        }
+    
+        .related-products__item--coffee-name {
+          @extend %font-h3-large;
+          margin: 0;
+          height: 75px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          line-height: $line-height-xsmall;
+    
+          .related-products__item--coffee-name-a {
+            color: $black;
+          }
+        }
+    
+        .related-products__item--darkroast {
+          @extend %font-p;
+        }
+    
+        .related-products__item--price-from-oz {
+          @extend %font-h4;
+          color: $font-brown;
+        }
+    
+        .cmp-container-related-products__item--btn {
+          margin: $spacing-sm;
+          position: relative;
+          z-index: 99;
+    
+          .related-products__item--coffee-buy-now-btn {
+            @extend %solid-light-green-large-btn;
+          }
+        }
+            
+    
+        .related-products__item--subscribe-save-note {
+          @extend %font-p;
+        }
+      }
+    
+    }
+  }
+}

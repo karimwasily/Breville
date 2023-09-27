@@ -1,0 +1,4 @@
+@import 'teaser-image-base';
+.cmp-teaser--left-image {
+    @extend %teaser-image;
+}

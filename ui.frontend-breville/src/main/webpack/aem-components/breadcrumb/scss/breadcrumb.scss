@@ -1,0 +1,9 @@
+.cmp-breadcrumb {
+  &__list {
+    .cmp-breadcrumb__item {
+      a {
+        color: red !important;
+      }
+    }
+  }
+}

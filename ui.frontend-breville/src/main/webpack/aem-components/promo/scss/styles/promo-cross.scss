@@ -1,0 +1,47 @@
+.cmp-container--promo {
+  .cmp-button {
+    background: transparent;
+    border: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+
+    &:active {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $white;
+  
+      &::before,
+      &::after {
+        background-color: $black;
+      }  
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: $spacing-sm;
+      top: $spacing-xxs;
+      content: ' ';
+      height: 20px;
+      width: 2px;
+      background-color: $white;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    @media screen and (min-width: $screen-md) {
+      right: $spacing-sm;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.cmp-container--float-left {
+  .cmp-container {
+    .cmp-image__image {
+      float: left;
+      margin: 21% 0;
+      padding: 0;
+      position: relative;
+      left: 0;
+      z-index: 1;
+    }
+
+    .cmp-focuspoint__image {
+      float: left;
+      margin: 21% 0;
+      padding: 0;
+      position: relative;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.cmp-container--float-right {
+  .cmp-container {
+    .cmp-image__image {
+      float: right;
+      margin: 21% 0;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .cmp-focuspoint__image {
+      float: right;
+      margin: 21% 0;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

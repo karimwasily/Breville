@@ -1,0 +1,15 @@
+.cmp-cart-pay-with {
+  text-align: center;
+
+  .cmp-cart-pay-with__title {
+    @extend %cs-font-p-4;
+    font-weight: $cs-font-weight-normal;
+  }
+
+  .cmp-cart-pay-with__options {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: $cs-spacing-10;
+    grid-row-gap: $cs-spacing-10;
+  }
+}

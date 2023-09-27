@@ -1,0 +1,40 @@
+%cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: $cs-spacing-35 $cs-spacing-15 0;
+  @media (min-width: $cs-screen-md) {
+    padding: $cs-spacing-35 0 0;
+  }
+  
+  .primary-product-container__coffee_cta-content {
+    margin: auto 0;
+
+    p {
+      @extend %cs-font-p-4;
+      margin-bottom: 0;
+      @media (min-width: $cs-screen-md) {
+        text-align: center;
+      }
+      
+    }
+    
+  }
+
+  .primary-product-container__coffee_cta-icon-coffee {
+    margin-right: $cs-spacing-15;
+
+    img {
+      width: 26px;
+      height: 36px;
+    }
+  }
+
+  .primary-product-container__coffee_cta-icon-info {
+    margin-left: $cs-spacing-10;
+
+    cursor: pointer;
+  }
+    
+}

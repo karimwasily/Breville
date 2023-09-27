@@ -1,0 +1,54 @@
+.cmp-container--cs-community {
+  .cmp-container {
+    max-width: $cs-max-width;
+    width: 100%;
+    margin: $cs-spacing-50 auto 0;
+    padding-left: $cs-spacing-15;
+
+    @media (min-width: $cs-screen-md) {
+      display: flex;
+      margin: $cs-spacing-90 auto 0;
+      padding-left: $cs-spacing-35;
+    }
+
+    .teaser,
+    .cmp-teaser--cs-community {
+      margin-right: $cs-spacing-15;
+
+      @media (min-width: $cs-screen-md) {
+        margin-right: $cs-spacing-30;
+      }
+
+      .cmp-teaser {
+        min-width: 320px;
+        text-align: left;
+        margin-bottom: $cs-spacing-30;
+
+        @media (min-width: $cs-screen-md) {
+          margin-bottom: 0;
+        }
+
+        .cmp-teaser__content {
+          .cmp-teaser__pretitle {
+            @extend %cs-font-h8;
+            font-weight: $cs-font-weight-bold;
+            margin-bottom: $cs-spacing-15;
+          }
+  
+          .cmp-teaser__title {
+            @extend %cs-font-h4;
+            font-weight: $cs-font-weight-bold;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .carousel,
+    .cmp-carousel--cs-community {
+      overflow: hidden;
+      margin: auto;
+
+    }
+  }
+}

@@ -1,0 +1,187 @@
+@import './reactvideo-theme';
+
+// style wrapper applied to video app policy
+.cmp-reactvideo--hero {
+  position: relative;
+
+  background-color: $black;
+
+  .player-wrapper { 
+    @extend %popup-player-style;
+  }
+
+  .teaser {
+    &.light {
+      @include reactvideo-theme();
+    }
+
+    &.dark {
+      @include reactvideo-theme(true);
+    }
+
+    .cmp-teaser {
+      display: flex;
+      justify-content: center;
+
+      background: $background-overlay;
+      &__mask { }
+
+      &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        .cmp-image__mask {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          color: $white;
+          background: $background-overlay; 
+        }
+
+        .cmp-image {
+          height: 100%;
+
+          &__image {
+            height: 100%;
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &__content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        z-index: 1;
+        padding: 10vw 0;
+        width: 90%;
+        max-width: 58rem;
+        margin: auto;
+        text-align: center;
+        text-shadow: $text-shadow-dark;
+          
+        .cmp-teaser__title {
+          flex: 0 0 100%;
+          order: 1;
+          text-align: center;
+          color: $white;
+          font-family: $font-family-primary-light;
+          font-size: $font-size-h3-mobile;
+          font-weight: $font-weight-normal;
+
+          line-height: 1.4rem;
+          padding-bottom: 0.3rem;
+          margin-bottom: 0;
+          text-shadow: $text-shadow;
+
+          @media (min-width: $screen-sm) {
+            font-size: $font-size-h1-pdp;
+            line-height: $line-height-pdp;
+          }
+
+          &::after {
+            display: block;
+            content: '';
+            height: 4px;
+            width: 40px;
+            background-color: $white;
+            margin: 1rem auto;
+            @media (min-width: $screen-sm) {
+              margin-top: 0;
+            }              
+          }            
+        }
+
+        .cmp-teaser__subtitle {
+          flex: 0 0 100%;
+          order: 2;
+          text-align: center;
+          color: $white;
+          font-size: $font-size-base;
+          letter-spacing: 2px;
+          margin-bottom: 2.125rem;
+          text-shadow: $text-shadow-dark;
+          @media (min-width: $screen-sm) {
+            line-height: 1.1rem;
+          }
+        }
+
+        .cmp-teaser__description {
+          flex: 1;
+          order: 4;
+          max-width: 800px;
+          color: $white;
+          text-align: center;
+          padding-left: $spacing-sm;
+
+          p {
+            color: $white;
+            margin: 0;
+            text-align: left;
+          }
+        }
+
+        .cmp-teaser__action-container {
+          flex: 0;
+          order: 3;
+
+          .button {
+            .cmp-button {
+              @extend  %play-button-svg-white;
+              width: 3.125rem;
+              height: 3.125rem;
+              background-color: transparent;
+              border: 0;
+              cursor: pointer;
+
+              &:hover {
+                @extend  %play-button-hover-svg-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cmp-reactvideo-close-button {
+    @extend  %close-icon-svg;
+    position: fixed;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: transparent;
+    border: 0;
+    z-index: 99999;
+    right: 5%;
+    top: 15%;
+    cursor: pointer;
+    display: block;
+
+    .cmp-button {
+      border: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      right: 5%;
+      top: 48%;
+      transform: translateY(-50%);
+      transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}

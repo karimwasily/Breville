@@ -1,0 +1,15 @@
+
+@import 'styles/text-hidden';
+
+.cmp-text {
+  a {
+    color: $blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cmp-text__paragraph {
+}

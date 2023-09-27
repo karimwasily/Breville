@@ -1,0 +1,63 @@
+.cmp-teaser--third-wave-main { 
+  .cmp-teaser {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-xl;
+
+    &__image {
+      .cmp-image {
+        .cmp-image__image {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover {
+          transform: translateY(50%);
+          cursor: pointer;
+          transition: transform $transition-speed $transition-ease;
+        }
+      }
+    }
+
+    &__content {
+      text-align: center;
+
+      .cmp-teaser__title {
+        margin-bottom: $spacing-sm;
+        margin-top: $spacing-xs;
+      }
+
+      .cmp-teaser__description {        
+        margin-bottom: $spacing-sm;
+        @media (min-width: $screen-md) {
+          margin-bottom: $spacing-md;
+        }
+      }
+    }
+
+    .cmp-teaser__action-container {
+      @include arrow-right-icon($color: $green);
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(0deg) scale(1.5);
+      z-index: 1;
+      transition: transform $transition-speed $transition-ease;
+
+      a {
+        display: block;
+        padding-bottom: $spacing-md;
+        font-size: 0;
+        color: transparent;
+      }
+    }
+
+    .cmp-teaser__action-container:hover {
+      //animation for the arrow to move 5px to the bottom when hover over the button. Used in all buttons.
+      transform: translate(0, 5px) scale(1.5);
+      cursor: pointer;
+    }
+  }
+}

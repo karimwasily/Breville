@@ -1,0 +1,28 @@
+.cmp-title--beanz-return {
+  .cmp-title {
+    margin: 0.67em 0;
+    margin-top: -0.625rem;
+    margin-bottom: 1.25rem;
+    @include breakpoint-up(lg) {
+      margin: 0;
+    }
+
+    .cmp-title__text {
+      font-size: $font-size-large !important;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      letter-spacing: $letter-spacing-base;
+      color: $cyan;
+      margin-top: -0.625rem;
+      line-height: normal;
+      font-family: $font-family-secondary;
+      font-style: normal;
+      @include breakpoint-up(md) {
+        font-size: $font-size-h2 !important;
+      }
+      @include breakpoint-up(lg) {
+        font-size: $font-size-xlarge !important;
+      }
+    }
+  }
+}

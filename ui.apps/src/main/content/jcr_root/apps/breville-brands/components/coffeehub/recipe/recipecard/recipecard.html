@@ -1,0 +1,17 @@
+<sly data-sly-use.model="com.breville.aem.brands.core.models.recipe.RecipeCard"/>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${model.isEmpty != true && model.isError != true}"></sly>
+
+<div class="cmp-recipecard" data-sly-test="${hasContent}">
+    <div class="cmp-recipecard__tagline-wrapper">
+        <h2 class="cmp-recipecard__name">${model.recipe.recipeName}</h2>
+    </div>
+    <div class="cmp-recipecard__image-wrapper">
+        <img class="cmp-recipecard__image" src="${model.recipe.thumbnail}">
+    </div>
+    <div class="cmp-recipecard__content">
+        <p class="cmp-recipecard__text">${model.recipe.introText}</p>
+        <div class="cmp-recipecard_button button cmp-button--dark" data-sly-resource="${'button' @ resourceType='breville-brands/components/button'}"></div>
+    </div>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

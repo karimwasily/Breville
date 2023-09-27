@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-05-07T08:41:34.889Z"
+        cq:lastModifiedBy="Mahesh.Kotapali@breville.com"
+        cq:lastReplicated="{Date}2021-05-07T08:41:51.365Z"
+        cq:lastReplicatedBy="Mahesh.Kotapali@breville.com"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Coffee Hub Analytics"
+        jcr:uuid="52e329f4-c76c-4c1f-90b6-fcb4c111b8b2"
+        sling:resourceType="cq/dtm-reactor/components/conf/page"
+        company="CO64603558513e4e5d966f21803bd8107a"
+        imsConfigId="Adobe Launch"
+        includeProdOnAuthor="{Boolean}false"
+        property="PRa5d70068bf5c4c3abf2d3e7078ccc1dd"
+        tagComponentFooter="cq/dtm-reactor/components/scripttag/footer"
+        tagComponentFooterRank="{Long}100"
+        tagComponentHeader="cq/dtm-reactor/components/scripttag/header"
+        tagComponentHeaderRank="{Long}100">
+        <development
+            jcr:primaryType="nt:unstructured"
+            environment="EN72217e5575b9432f84771abac1e12132"/>
+        <staging
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}true"
+            enablePollingImporter="false"
+            environment="EN44c7185db6844ce19de2370360114c74"
+            libraryUri="assets.adobedtm.com/65ae8132784a/ed58b3eaa6b2/launch-4efc3e61cbb7-development.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+        <production
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}true"
+            enablePollingImporter="false"
+            environment="ENadc2f2c03f2c4988ab717b87a1443d4e"
+            libraryUri="//assets.adobedtm.com/65ae8132784a/ed58b3eaa6b2/launch-6f06e05ef02d.min.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+    </jcr:content>
+</jcr:root>

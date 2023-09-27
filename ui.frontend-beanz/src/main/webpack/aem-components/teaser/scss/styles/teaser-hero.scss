@@ -1,0 +1,138 @@
+.cmp-teaser--hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .cmp-teaser {
+    overflow: hidden;
+    height: 100%;
+
+    &__image {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+
+      .cmp-image {
+        height: 100%;
+
+        &__image {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+    }
+
+    &__content {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      text-align: center;
+      padding-bottom: $spacing-xxl;
+      position: relative;
+      background-color: $background-overlay;
+
+      @media (min-width: $screen-lg) {
+        min-height: 400px;
+      }
+
+      .cmp-teaser__title {
+        @include font-size($font-size-h2);
+        padding-top: 40px;
+        margin: 0 0 0.5rem;
+        font-family: $font-family-secondary;
+        font-weight: bold;
+        color: $white;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-base;
+        @include breakpoint-up (md) {
+          @include font-size(68px);
+          margin: 0 0 0.5rem;
+        }
+        @include breakpoint-up (lg) {
+          @include font-size($font-size-heading);
+          max-width: 1440px;
+          width: 100%;
+          padding-top: 80px;
+          margin: 0 auto;
+        }
+        @include breakpoint-up (xl) {
+          margin: auto;
+        }
+      }  
+
+      .cmp-teaser__description {
+        margin-bottom: 1rem;
+        padding: 0 17px;
+        @include breakpoint-up (md) {
+          padding: 0 10px;
+        }
+        @include breakpoint-up (lg) {
+          max-width: 990px;
+          margin: auto;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          @include font-size($font-size-h4);
+          font-family: $font-family-primary;
+          font-weight: 500;
+          line-height: normal;
+          margin-bottom: 0;
+          letter-spacing: $letter-spacing-base;
+          @include breakpoint-up (md) {
+            @include font-size($font-size-h3);
+          }
+          @include breakpoint-up (lg) {
+            @include font-size($font-size-h2);
+            margin: 0;
+          }
+        }
+      } 
+
+      .cmp-teaser__action-container {
+        width: 100%;
+        margin: 0 auto -10px;
+        display: flex;
+        padding: 20px 0 0;
+        position: relative;
+        justify-content: center;
+        @include breakpoint-up (md) {
+          padding: 40px 0 0;
+          margin-bottom: 0;
+        }
+        @include breakpoint-up (lg) {
+          padding: 80px 0 30px;
+        }
+
+        .cmp-teaser__action-link {
+          @include font-size($font-size-h4);
+          color: $white;
+          background-color: $background-overlay;
+          backdrop-filter: blur(4px);
+          border: 2px solid $button-border;
+          max-width: 340px;
+          border-radius: 4px;
+          font-family: $font-family-primary;
+          letter-spacing: $letter-spacing-base;
+          font-weight: bold;
+          text-align: center;
+          margin: auto;
+          line-height: $line-height-base;
+          text-decoration: none;
+          text-transform: none;
+          min-width: 210px;
+          width: 300px;
+          padding: 7px 0;
+          @include breakpoint-up (md) {
+            @include font-size($font-size-large);
+            min-width: 240px;
+            padding: 14px 30px;
+          }
+        }
+      }
+    }
+  }
+}

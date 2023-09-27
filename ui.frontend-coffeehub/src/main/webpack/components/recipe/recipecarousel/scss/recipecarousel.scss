@@ -1,0 +1,111 @@
+.cmp-recipecarousel {
+  position: relative;
+  width: 100%;
+  background: $white-smoke;
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: $recipe-carousel-height;
+  }
+
+  &__image {
+    display: none;
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: $white-smoke;
+    }
+  }
+
+  &__tagline-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: $spacing-xl $spacing-page-gutter-mobile 0 $spacing-page-gutter-mobile;
+    @media (min-width: $screen-md) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: rem(180px) 0 0 $spacing-page-gutter;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+
+    .cmp-recipecarousel_separator {
+      margin: $spacing-md 0;
+      @media (min-width: $screen-md) {
+        margin: $spacing-lg 0 $spacing-xl 0;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: $spacing-xl;
+    min-height: 90px;
+    @media (min-width: $screen-md) {            
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: rem(180px) 0 rem(75px) 0;
+      margin: 0 0 0 $spacing-page-gutter;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 5;
+    }
+
+    .cmp-carousel__item {
+      display: none;
+      width: 100%;
+      height: 100%;
+      animation: fade-out $animation-speed-recipe-carousel;
+      margin: 0 $spacing-page-gutter-mobile;
+      @media (min-width: $screen-md) { 
+        margin: 0;
+      }
+
+      &--active {
+        display: block;
+        animation: fade-in $animation-speed-recipe-carousel;
+      }
+            
+      > * {
+        height: 100%;
+      }
+    }
+
+    .cmp-recipecarousel__actions {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0;
+      @media (min-width: $screen-md) {
+        right: 0;
+        width: 50%;
+        padding: 0 calc(100% * 0.3 / 12);
+      }
+      @media (min-width: $screen-lg) {
+        padding: 0 calc(100% * 0.8 / 12);
+      }
+
+      .cmp-recipecarousel__action {
+        @include button-with-arrow($width: 50px, $height: 50px);
+      }
+    }
+  }
+
+  &__indicators {
+    display: none;
+  }
+}

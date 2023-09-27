@@ -1,0 +1,20 @@
+.cmp-button--cs-commercial {
+  display: flex;
+  justify-content: center;
+  margin: $cs-spacing-5 0 $cs-spacing-60;
+  @media (min-width: $screen-md) {
+    margin: $cs-spacing-35 0 $cs-spacing-80;
+  }
+
+  .cmp-button {
+    display: flex;
+    text-align: center;
+    border: 0;
+
+    .cmp-button__text {
+      @extend %cs-button-purple-fill-medium;
+      font-weight: $cs-font-weight-bold;
+    }
+  }
+ 
+}

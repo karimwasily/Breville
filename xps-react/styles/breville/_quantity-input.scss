@@ -1,0 +1,38 @@
+.quantity {
+    @extend %cs-font-p-4-bold;
+    width: $cs-spacing-120;
+    border: 1px solid $cs-gainsboro;
+    border-radius: $cs-border-radius-8;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .quantity__button {
+    width: $cs-spacing-40;
+    height: $cs-spacing-40;
+    border-radius: $cs-border-radius-8;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+    &.decrease{
+      span{
+        margin-top: -$cs-spacing-20;
+      }
+    }
+    & span{
+      display: block;
+      margin-top: -5px;
+      font-weight: normal;
+    }
+  
+    &:hover {
+      cursor: pointer;
+    }
+    &:disabled{
+      color: $cs-silver;
+    }
+  }
+  

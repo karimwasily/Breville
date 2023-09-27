@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-04-14T06:12:37.858Z"
+        cq:lastModifiedBy="Mahesh.Kotapali@breville.com"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Breville Analytics"
+        sling:resourceType="cq/dtm-reactor/components/conf/page"
+        company="CO64603558513e4e5d966f21803bd8107a"
+        imsConfigId="Adobe Launch"
+        includeProdOnAuthor="{Boolean}false"
+        property="PR431dcbfec48e4630aa015fddeac45d33"
+        tagComponentFooter="cq/dtm-reactor/components/scripttag/footer"
+        tagComponentFooterRank="{Long}100"
+        tagComponentHeader="cq/dtm-reactor/components/scripttag/header"
+        tagComponentHeaderRank="{Long}100">
+        <development
+            jcr:primaryType="nt:unstructured"
+            environment="EN74a7525ef0d74b8fb53b416cb8b29cf7"/>
+        <staging
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}false"
+            enablePollingImporter="false"
+            environment="EN5d1f68daa24f441e95b5cd161ef0d39e"
+            libraryUri="//assets.adobedtm.com/65ae8132784a/ed58b3eaa6b2/launch-4efc3e61cbb7-development.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+        <production
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}false"
+            enablePollingImporter="false"
+            environment="EN1def848b19754613a814bc34a86ac592"
+            libraryUri="//assets.adobedtm.com/65ae8132784a/ed58b3eaa6b2/launch-6f06e05ef02d.min.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+    </jcr:content>
+</jcr:root>

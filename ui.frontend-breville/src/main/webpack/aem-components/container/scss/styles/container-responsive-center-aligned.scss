@@ -1,0 +1,12 @@
+.cmp-container--responsive-center-aligned {
+  padding: 0 25px;
+  overflow: hidden;
+  font-family: $font-family-primary-light;
+
+  .teaser {
+    margin-bottom: 2rem;
+    @media (min-width: $screen-md) {
+      margin-bottom: 3.125rem;
+    }
+  }
+}

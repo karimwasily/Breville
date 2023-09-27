@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <roaster
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Beanz Roaster Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                granite:class="mab-long-dialog"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <id
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Vendor ID"
+                                        name="./roasterId"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterId"/>
+                                    </id>
+                                    <name
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Vendor Name"
+                                        name="./roasterName"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterName"/>
+                                    </name>
+                                    <brandImage
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        damRoot="{Boolean}true"
+                                        fieldDescription="The logo used on various areas of the site for this Roaster. Image should be a transparent png"
+                                        fieldLabel="Brand Logo"
+                                        name="./brandImage"
+                                        pickerSrc="/aem/assetpicker.html?dialog=true"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./brandImage"/>
+                                    </brandImage>
+                                    <brandImageAltTxt
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Brand Image Alt Text"
+                                        name="./brandImageAltTxt"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./brandImageAltTxt"/>
+                                    </brandImageAltTxt>
+                                    <description
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldDescription="Short description of the Roaster"
+                                        fieldLabel="Vendor Description"
+                                        name="./roasterDescription"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterDescription"/>
+                                    </description>
+                                    <roasterLocation
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldDescription="Short description of the Roaster Location"
+                                        fieldLabel="Vendor Location"
+                                        name="./roasterLocation"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterLocation"/>
+                                    </roasterLocation>
+                                    <roasterAddressLine
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldDescription="Short description of the Roaster Location"
+                                        fieldLabel="Vendor Address"
+                                        name="./roasterAddressLine"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterAddressLine"/>
+                                    </roasterAddressLine>
+                                    <roasterCity
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Short description of the Roaster Location"
+                                        fieldLabel="Vendor City"
+                                        name="./roasterCity"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterCity"/>
+                                    </roasterCity>
+                                    <roasterState
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Short description of the Roaster Location"
+                                        fieldLabel="Vendor State"
+                                        name="./roasterState"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterState"/>
+                                    </roasterState>
+                                    <roasterPostCode
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Short description of the Roaster Location"
+                                        fieldLabel="Vendor Post Code"
+                                        name="./roasterPostCode"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./roasterPostCode"/>
+                                    </roasterPostCode>
+                                    <rightImage
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        damRoot="{Boolean}true"
+                                        fieldDescription="The logo used on various areas of the site for this Roaster. Image should be a transparent png"
+                                        fieldLabel="Right Image"
+                                        name="./rightImage"
+                                        pickerSrc="/aem/assetpicker.html?dialog=true"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./rightImage"/>
+                                    </rightImage>
+                                    <rightImageAltTxt
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Right Image Alt Text"
+                                        name="./rightImageAltTxt"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./rightImageAltTxt"/>
+                                    </rightImageAltTxt>
+									<thumbnailImage
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        damRoot="{Boolean}true"
+                                        fieldDescription="Thumbnail image of the Roaster"
+                                        fieldLabel="Thumbnail Image"
+                                        name="./thumbnailImage"
+                                        pickerSrc="/aem/assetpicker.html?dialog=true"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./thumbnailImage"/>
+                                    </thumbnailImage>
+                                    <thumbnailImageAltTxt
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Thumbnail Image Alt Text"
+                                        name="./thumbnailImageAltTxt"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="./thumbnailImageAltTxt"/>
+                                    </thumbnailImageAltTxt>
+                                </items>
+                            </column>
+                        </items>
+                    </roaster>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

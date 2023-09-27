@@ -1,0 +1,259 @@
+@import 'styles/blog-listing-article-one-row';
+@import 'styles/blog-listing-article-one-row-flip';
+@import 'styles/blog-listing-article-two-row';
+@import 'styles/blog-listing-article-three-row';
+
+// general template (design for mobile stacked view)
+.cmp-v-blog-listing {
+  padding-bottom: $spacing-md;
+
+  // NAVIGATION
+  &__nav {
+    @extend %font-cta;
+    padding: $spacing-md;
+    margin: 0 $spacing-md $spacing-lg;
+    border: 1px solid $black;
+
+    &-group {
+      li {
+        outline: none;
+
+        &:hover {
+          cursor: pointer;
+          padding-bottom: 2px;
+          border-bottom: 2px solid $black;
+        }
+      }
+      @media (min-width: $screen-md) {
+        display: flex;
+        width: 100%;
+        gap: $spacing-md;
+      }
+      @media (min-width: $screen-lg) {
+        gap: $spacing-xxl;
+      }
+
+      &-firstelement {
+        :nth-child(2) {
+          font-weight: $font-weight-bold;
+          padding-bottom: 2px;
+          border-bottom: 2px solid $black;
+          outline: none;
+        }
+      }
+
+      &-default {
+        :not(:first-child) {
+          // hide the categories in mobile view  
+          display: none;
+        }
+    
+        @media (min-width: $screen-md) {
+          :not(:first-child) {
+            // show all the categories in the desktop view
+            display: unset;
+          }
+        }
+      }
+
+    }
+
+    &-item {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: inline-block;
+      }
+
+      &-focus {
+        font-weight: $font-weight-bold;
+        padding-bottom: 2px;
+        border-bottom: 2px solid $black;
+        outline: none;
+      }
+
+      &--all-categories {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-bottom: 0 !important;
+        border: 0 !important;
+
+        &::after {
+          $arrow-size: 0.75rem;
+          content: '';
+          width: 0;
+          height: 0;
+          border-top: $arrow-size solid $black;
+          border-left: $arrow-size * 0.75 solid transparent;
+          border-right: $arrow-size * 0.75 solid transparent;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+
+        @media (min-width: $screen-md) {
+          display: none;
+        }
+      }
+    }
+    
+    @media (min-width: $screen-md) {
+      border: 0;
+    }
+  }
+
+  // LOAD MORE BUTTON
+  &__load-more {
+    @extend %font-cta;
+    padding: $spacing-md;
+    margin: $spacing-md $spacing-md $spacing-lg;
+    border: 1px solid $black;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: $transition-speed-tile-zoom;
+
+    &:hover,
+    &:focus {
+      background-color: $grey;
+      cursor: pointer;
+      color: $white;
+    }
+
+    @media (min-width: $screen-md) {
+      // todo: this will need to change when the 'load more' button is created
+      max-width: 303px;
+      margin-left: $spacing-xxl;
+    }
+
+    &-inspiration {
+      display: flex;
+      align-items: left;
+      @media (min-width: $screen-md) {
+        margin: auto;
+      }
+    }
+  }
+
+  &__load-more::after {
+    @include arrow-right-icon($color: $black); 
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    right: $spacing-md;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__load-more:hover::after,
+  &__load-more:focus::after {
+    @include arrow-right-icon($color: $white);
+    transform: translate3d(5px, -50%, 0);
+  } 
+
+  // LISTINGS CONTAINER
+  &__content {
+    padding: 0 $spacing-md;
+
+    @media (min-width: $screen-md) {
+      padding: 0;
+    }
+
+    // ARTICLE
+    .cmp-v-blog-listing__article {
+      margin: auto;
+      padding-bottom: $spacing-ml;
+      width: 100%;
+
+      .cmp-article {
+        // ARTICLE IMAGE
+        .cmp-image {
+          position: relative;
+          overflow: hidden;
+          // * use height 0 but generate it with 'padding-top' as it relates to width > thus creating a square box for the image
+          width: 100%;
+          height: 0;
+          padding-top: 100%;
+          margin: 0;
+          cursor: pointer;
+
+          &__image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            vertical-align: middle;
+          }
+        }
+
+        // ARTICLE CONTENT
+        &__content {
+          padding-bottom: $spacing-md;
+
+          .cmp-article__category-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+            .cmp-article__category {
+              @extend %font-h5;
+              text-transform: uppercase;
+              padding-top: $spacing-md;
+              padding-right: $spacing-md;
+
+              @media (min-width: $screen-md) {
+                padding-right: $spacing-lg;
+              }
+
+              &:last-of-type {
+                padding-right: 0;
+              }
+            }
+          }
+
+          .cmp-article__title {
+            @extend %font-h3;
+            margin-top: $spacing-sm;
+            font-weight: $font-weight-h3-bold;
+            cursor: pointer;
+          }
+
+          .cmp-article__description {
+            margin-top: $spacing-md;
+          }
+
+          .cmp-article__action-container {
+            margin-top: $spacing-md;
+
+            .cmp-article__action-link {
+              @extend %font-cta;
+              text-decoration: underline;
+              color: $aubergine;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cmp-v-blog-listing-outline {
+    outline: unset;
+  }
+
+  .cmp-v-blog-listing-outline:focus {
+    outline-style: solid;
+  }
+
+  .infinite-status-prompt {
+    display: none;
+  }
+}

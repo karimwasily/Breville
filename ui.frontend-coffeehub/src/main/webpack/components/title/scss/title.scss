@@ -1,0 +1,11 @@
+
+@import 'styles/title-header';
+@import 'styles/title-padding';
+
+.cmp-title {}
+
+.cmp-title__text {
+  @extend %font-h1;
+  font-weight: 600;
+}
+.cmp-title__link {}

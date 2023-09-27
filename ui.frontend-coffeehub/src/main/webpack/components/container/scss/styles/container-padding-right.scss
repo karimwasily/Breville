@@ -1,0 +1,7 @@
+.cmp-container--padding-right {
+  .cmp-container {
+    @media (min-width: $screen-md) {
+      padding-right: $spacing-md;
+    }
+  }
+}

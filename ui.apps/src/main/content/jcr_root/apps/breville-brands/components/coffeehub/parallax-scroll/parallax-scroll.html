@@ -1,0 +1,18 @@
+<sly data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     data-sly-use.model="com.breville.aem.brands.core.models.ParallaxScroll"></sly>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${model.parallaxImages}"></sly>
+
+<div class="cmp-parallax-scroll" id=${component.id} style="${'background-color: {0};' @ format=[model.backgroundColor], context='styleString'}"
+     data-cmp-is="parallax-scroll">
+    <div class="cmp-parallax-scroll__background cmp-parallax-scroll__background-${model.imageLocation}" data-background="${model.bottomBackground}">
+        <sly data-sly-list=${model.parallaxImages}>
+            <img id="cmp-parallax-scroll__item-${itemList.index}" class="cmp-parallax-scroll__background-image" src=${item.src} alt=${item.alt} data-scroll=${item.scrollSpeed} data-configuration=${item.scrollConfiguration}>
+        </sly>
+    </div>
+    <div class="${(wcmmode.edit || wcmmode.preview) ? 'cmp-parallax-scroll__content-edittor' : 'cmp-parallax-scroll__content'}" 
+         style="${model.location == 'top' ? 'margin-bottom: auto; ' : '' @ context='styleString'}${model.location == 'middle' ? 'margin: auto; ' : '' @ context='styleString'}${model.location == 'bottom' ? 'margin-top: auto;' : '' @ context='styleString'}">
+        <sly data-sly-resource="${@path='container', resourceType='breville-brands/components/container'}"></sly>
+    </div>
+</div>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

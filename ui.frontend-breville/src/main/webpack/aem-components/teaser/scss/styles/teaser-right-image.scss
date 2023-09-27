@@ -1,0 +1,10 @@
+@import 'teaser-image-base';
+
+.cmp-teaser--right-image {
+  @extend %teaser-image;
+
+  .cmp-teaser {
+    flex-direction: row-reverse;
+    padding: $cs-spacing-130 0;
+  }
+}

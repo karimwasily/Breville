@@ -1,0 +1,27 @@
+.cmp-mybreville__contact-preference {
+  .cmp-mybreville__link {
+    @extend %cs-link-bold-right-arrow;
+    font-weight: bold;
+    font-size: $cs-font-size-h10-mobile;
+
+    // H10 in typography with 18 and 16px
+    font-family: $cs-font-family-paragraph;
+    line-height: $cs-line-height-h10-mobile;
+
+    cursor: pointer;
+    
+    @media (min-width: $cs-screen-md) {
+      font-size: $cs-font-size-h10;
+      line-height: $cs-line-height-h10;
+    }
+  }
+  
+  .cmp-mybreville_text {
+    @extend %cs-font-p-4;
+    margin-top: $cs-spacing-20;
+
+    @media (min-width: $cs-screen-xl) {
+      margin-top: $cs-spacing-25;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+module.exports = require('xps-utils/eslint-config')

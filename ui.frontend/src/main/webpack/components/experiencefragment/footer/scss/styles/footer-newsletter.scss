@@ -1,0 +1,49 @@
+.cmp-experiencefragment--footer-newsletter {
+  // Please remove this line to show the NewsLetter button
+  display: none;
+  // Above line was added temporarily
+
+  background-color: $mardi-gras-dark;
+  padding: $spacing-xs $spacing-sm;
+  @media (min-width: $screen-md) {
+    padding: $spacing-lg 0 $spacing-lg $spacing-xl;
+  }
+
+  .cmp-text {
+    position: relative;
+
+    a {
+      color: $light-violet;
+      font-weight: $font-weight-bold;
+      font-style: italic;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &::after {
+        @include arrow-right-small-icon;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: $spacing-sm;
+        transition: transform $transition-speed $transition-ease;
+        filter: invert(1) opacity(0.6);
+        @media (min-width: $screen-lg) {
+          right: $spacing-xxxl;
+        }
+      }
+    }
+
+    &:hover {
+      a {
+        &::after {
+          transform: translate3d(5px, -50%, 0);
+        }
+      }
+    }
+  }
+}

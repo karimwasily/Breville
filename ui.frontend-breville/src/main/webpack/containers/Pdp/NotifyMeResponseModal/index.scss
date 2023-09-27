@@ -1,0 +1,86 @@
+.notify-reponse-modal-overlay {
+  @extend %cs-modal-overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (min-width: $cs-screen-md) {
+    justify-content: center;
+  }
+
+  .notify-reponse-modal-wrapper {
+    @include create-scrollbar(
+      $foreground: $cs-color-gray-40,
+      $background: $cs-white,
+      $border-width: 2px,
+      $border-radius: $cs-border-radius-8
+    );
+    position: relative;
+  
+    width: 100%;
+  
+    overflow-y: auto;
+  
+    background-color: $cs-white;
+  
+    @media (min-width: $cs-screen-md) {
+      width: unset;
+      min-width: 620px;
+    }
+
+    .notify__close-btn {
+      --btn-distance-to-corner: #{$cs-spacing-20};
+      @extend %cs-modal-close-btn; 
+    }
+    
+    .modal__container-response {  
+    
+      background-color: $cs-white;
+  
+      .modal__header {
+        display: flex;
+        justify-content: center;
+          
+        .modal__title {
+          @extend %cs-font-h2;
+          margin-top: $cs-spacing-25;
+  
+          &::after {
+            display: block;
+            justify-content: center;
+            width: 40px;
+            height: 4px;
+            margin: $cs-spacing-15 auto;
+    
+            background-color: $cs-gunmetal;
+    
+            content: '';
+          }
+        }
+      }
+      
+      .modal__content {
+        margin: auto;
+        padding: $cs-spacing-40;
+  
+        text-align: center;
+  
+        p {
+          @extend %cs-font-p-3;
+          margin-bottom: $cs-spacing-30;
+    
+          font-family: $cs-font-family-paragraph;
+        }      
+      }
+      
+      .modal__footer { 
+        display: flex;
+        justify-content: center;
+        margin-bottom: $cs-spacing-40;
+      }  
+    }    
+  }
+}
+
+

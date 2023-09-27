@@ -1,0 +1,44 @@
+.cmp-text--perfectbeans-blue-text {
+  width: 16%;
+  position: absolute;
+  top: 36%;
+  left: 48%;
+  height: 100%;
+  transform: translate(-50%);
+  @media (min-width: 600px) {
+    top: 26%;
+  }
+  @include breakpoint-up(md) {
+    transform: translate(-63%);
+    top: 30%;
+  }
+  @include breakpoint-up(lg) {
+    width: 1%;
+    top: 52%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50px);
+  }
+  @include breakpoint-up(xl) {
+    left: 48%;
+    top: 48%;
+    transform: translateX(-26px);
+  }
+  @include breakpoint-up(xxl) {
+    left: 50%;
+    top: 52%;
+    transform: translateX(-54px);
+    margin-left: -0.5%;
+  }
+
+  .cmp-text {
+    p {
+      font-weight: $font-weight-bold;
+      font-family: $font-family-secondary;
+      letter-spacing: $letter-spacing-base;
+      color: $jaguar;
+      font-size: $font-size-xlarge;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,278 @@
+.ReactModal__Body--open {
+  overflow: hidden !important;
+
+  .cs-modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+  
+    background-color: Rgba(0, 0, 0, 0.5);
+  
+    .cs-modal-content {
+      width: 100%;
+      @media (min-width: $screen-sm) {
+        width: auto;
+      }
+      @media (min-width: $screen-lg) {
+        margin: $cs-spacing-70 0;
+      }
+    }
+  }
+}
+
+.warranty-modal__container {
+  position: relative;
+
+  max-width: 940px;
+  
+  padding: $cs-spacing-50 $cs-spacing-15;
+
+  background-color: $cs-white;
+
+  @media (min-width: $cs-screen-md) {
+    min-width: 940px;
+    padding: $cs-spacing-50 $cs-spacing-40 $cs-spacing-20;
+  }
+
+  .warranty-modal-header {
+    margin-bottom: $cs-spacing-35;
+
+    @media (min-width: $cs-screen-md) {
+      margin-bottom: $cs-spacing-40;
+    }
+
+    &__title {
+      @extend %cs-font-h4;
+      margin-bottom: $cs-spacing-20;
+    }
+
+    &__desc {
+      @extend %cs-font-bundle-tiles;
+      margin-bottom: 0 !important;
+
+      span {
+        @media (min-width: $cs-screen-md) {
+          display: block;
+        }
+      }
+    }
+
+    .warranty-modal__close-icon {
+      position: absolute;
+      top: $cs-spacing-20;
+      right: $cs-spacing-20;
+
+      @media (min-width: $screen-md) {
+        top: $cs-spacing-40;
+        right: $cs-spacing-40;
+      }
+    }
+  }
+
+  .warranty-modal-content {
+    .react-flex {
+      gap: $cs-spacing-15;
+      justify-content: stretch;
+      padding: $cs-spacing-5;
+      overflow-x: auto;
+
+      .waranty-card__item {
+        position: relative;
+
+        min-width: 270px;
+        max-width: 270px;
+        padding: $cs-spacing-20 0 $cs-spacing-45;
+
+        text-align: center;
+
+        border: 1px solid $cs-gainsboro;
+        border-radius: $cs-border-radius-16;
+        cursor: pointer;
+
+        .waranty-card__header {
+          min-height: 130px;
+          padding: $cs-spacing-20;
+
+          border-bottom: 1px solid $cs-gainsboro;
+          
+          .checkmark-icon {
+            position: absolute;
+            top: $cs-spacing-20;
+            left: $cs-spacing-20;
+          }
+
+          .warranty-card-header__include {
+            @extend %cs-font-p-4 ;
+            margin-bottom: $cs-spacing-5;
+
+            text-transform: capitalize;
+          }
+
+          .warranty-card-header__title {
+            @extend %cs-font-h7;
+            margin-bottom: $cs-spacing-5;
+          }
+
+          .warranty-card-header__price {
+            @extend %cs-font-p-2 ;
+            margin-bottom: 0;
+
+            text-transform: capitalize;
+          }
+        }
+
+        .waranty-card__content {
+          .waranty-card-list {
+            margin: $cs-spacing-20 0 $cs-spacing-20;
+            padding: 0 $cs-spacing-20;
+
+            text-align: left;
+
+            .waranty-card-list__item {
+              @extend %cs-font-p-4;
+              position: relative;
+
+              margin-bottom: $cs-spacing-10;
+              padding-left: $cs-spacing-15;
+
+              &::before {
+                @extend %check-list-icon;
+                position: absolute;
+                top: 8px;
+                left: 0;
+
+                background-color: $cs-forest-green;
+
+                content: '';
+              }
+            }
+
+            &.default-warranty {
+              margin-bottom: $cs-spacing-10;
+
+              .waranty-card-list__item {
+                color: $cs-monsoon;
+
+                &::before {
+                  background-color: $cs-monsoon;
+                }
+              }
+            }
+
+            .waranty-terms__link {
+              @extend %cs-font-p-4;
+              display: block;
+              padding-left: $cs-spacing-15;
+
+              text-decoration: underline;
+            }
+
+            .waranty-terms__subnote {
+              @extend %cs-font-p-5;
+              margin-top: $cs-spacing-10;
+              padding-left: $cs-spacing-15;
+            }
+          }
+
+          .waranty-card-select {
+            @extend %cs-font-p-6-bold;
+            position: absolute;
+            right: $cs-spacing-20;
+            bottom: $cs-spacing-20;
+
+            display: flex;
+            align-items: center;
+
+            text-transform: capitalize;
+
+            .checkmark-icon {
+              width: 25px;
+              height: 25px;
+              margin-left: $cs-spacing-10;
+            }
+
+          }
+        }
+
+        .checkmark-icon {
+          position: relative;
+
+          width: 35px;
+          height: 35px;
+
+          background-color: #f8f8f8;
+          border: solid 1px #949494;
+          border-radius: 50%;
+        }
+
+        &.Selected ,
+        &.Included {
+          border-color: transparent;
+
+          .checkmark-icon {
+            background-color: $cs-gunmetal;
+
+            &::before {
+              @extend %checkbox-icon;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 9;
+
+              margin: auto;
+
+              background-color: $cs-white;
+
+              content: '';
+            }
+          }
+
+          &.included {
+            cursor: auto;
+          }
+
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border: 3px solid $cs-gunmetal;
+            border-radius: 1rem;
+
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  .warranty-modal-footer {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $cs-spacing-60;
+
+    .mulberyy-logo {
+      @extend %mulberry-horizontal;
+    }
+
+    .warranty-update__button {
+      min-width: 200px;
+    }
+  }
+}

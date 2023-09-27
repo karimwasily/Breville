@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg viewBox="0 0 20 20" id="Flag_AUS" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<path id="ba" d="M0 0h20v20H0z"/>
+			<rect id="bc" x="0" y="0" width="28" height="20" rx="2"/>
+			<path d="M4.667 3.857L0 0h.667l4.666 3.214h1.334L12 0v.306a.699.699 0 0 1-.278.528L7.333 3.857v1.286l4.416 3.65c.139.114.096.207-.082.207-.184 0-.449-.08-.612-.191L6.667 5.786H5.333L0 9v-.643l4.667-3.214V3.857z" id="be"/>
+			<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="bf">
+				<stop stop-color="#FFF" offset="0%"/>
+				<stop stop-color="#F0F0F0" offset="100%"/>
+			</linearGradient>
+		</defs>
+		<g fill="none" fill-rule="evenodd">
+			<mask id="bb" fill="#fff">
+				<use xlink:href="#ba"/>
+			</mask>
+			<use fill="#D8D8D8" xlink:href="#ba"/>
+			<g mask="url(#bb)">
+				<g transform="translate(-2)">
+					<mask id="bd" fill="#fff">
+						<use xlink:href="#bc"/>
+					</mask>
+					<use fill="#FFF" xlink:href="#bc"/>
+					<path fill="#4A4A4A" mask="url(#bd)" d="M0 0h28v20H0z"/>
+					<g mask="url(#bd)">
+						<use fill="#9B9B9B" xlink:href="#be"/>
+						<path stroke="#FFF" stroke-width=".667" d="M4.333 4.014L-.927-.333H.667l.189.058 4.581 3.156h1.137l5.76-3.471v.896c0 .3-.173.63-.423.803L7.667 4.032v.954l4.294 3.55c.387.32.188.797-.294.797-.256 0-.585-.102-.8-.25L6.562 6.12H5.426L-.334 9.59V8.182l4.667-3.214v-.954z"/>
+					</g>
+					<path d="M0 3.333V6h4.79v3.34c0 .364.292.66.662.66h1.412c.366 0 .662-.3.662-.66V6h4.803c.37 0 .671-.306.671-.673v-1.32a.668.668 0 0 0-.671-.674H7.526V0H4.79v3.333H0z" fill="url(#bf)" mask="url(#bd)"/>
+					<path fill="#9B9B9B" mask="url(#bd)" d="M0 3.857h5.333V0h1.334v3.857H12v1.286H6.667V9H5.333V5.143H0z"/>
+					<path fill="#FFF" mask="url(#bd)" d="M6 16.317L4.764 17 5 15.553l-1-1.025 1.382-.211L6 13l.618 1.317 1.382.21-1 1.026L7.236 17zM20 17.707L19 18l.293-1L19 16l1 .293L21 16l-.293 1L21 18zM20 4.707L19 5l.293-1L19 3l1 .293L21 3l-.293 1L21 5zM16 9.707L15 10l.293-1L15 8l1 .293L17 8l-.293 1L17 10z"/>
+				</g>
+			</g>
+		</g>
+	</svg>
+</svg>

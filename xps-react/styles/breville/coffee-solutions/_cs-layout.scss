@@ -1,0 +1,103 @@
+////////////////////
+// LAYOUT 
+////////////////////
+
+////////////////////
+// BREAKPOINTS
+////////////////////
+
+$cs-screen-xs: 375px;
+$cs-screen-sm: 576px;
+$cs-screen-md: 768px; // designer expects mobile > desktop reflow to occur at this breakpoint
+$cs-screen-lg: 992px;
+$cs-screen-xl: 1200px;
+$cs-screen-xxl: 1440px;
+$cs-screen-xxxl: 1920px;
+
+////////////////////
+// LAYOUT
+////////////////////
+$cs-max-width: $cs-screen-xxl;
+$cs-max-width-banners: 2560px;
+$cs-max-width-900: 920px; // Introduced from PDP redesign
+$cs-max-width-bundle-config: 1136px; // unconfirmed
+
+////////////////////
+// BORDER
+////////////////////
+$cs-border-radius-3: cs-rem(3px);
+$cs-border-radius-base: cs-rem(6px);
+$cs-border-radius-8: cs-rem(8px);
+$cs-border-radius-10: cs-rem(10px);
+$cs-border-radius-16: cs-rem(16px);
+
+
+////////////////////
+// LAYOUT MIXINS
+////////////////////
+%cs-layout-base {
+  display: grid;
+  grid-auto-rows: auto;
+  max-width: $cs-max-width;
+  margin: auto;
+}
+
+%cs-layout-6-6 {
+  @extend %cs-layout-base;
+  @media (min-width: $cs-screen-md) {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+%cs-layout-6-6-mobile {
+  @extend %cs-layout-base;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+
+  @media (min-width: $cs-screen-md) {
+    gap: $cs-spacing-10;
+    padding: 0 $cs-spacing-65 $cs-spacing-35;
+  }
+}
+
+%cs-layout-4-4-4 {
+  @extend %cs-layout-base;
+  @media (min-width: $cs-screen-md) {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+%cs-layout-3-3-3-3 {
+  @extend %cs-layout-base;
+  @media (min-width: $cs-screen-md) {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+%cs-layout-5-7 {
+  @extend %cs-layout-base;
+  @media (min-width: $cs-screen-md) {
+    grid-template-columns: 5fr 7fr; 
+  }
+}
+
+%cs-layout-7-5 {
+  @extend %cs-layout-base;
+  @media (min-width: $cs-screen-md) {
+    grid-template-columns: 7fr 5fr; 
+  }
+}
+
+%cs-layout-8-4 {
+  @extend %cs-layout-base;
+  @media (min-width: $cs-screen-md) {
+    grid-template-columns: 8fr 4fr; 
+  }
+}
+
+%cs-layout-4-8 {
+  @extend %cs-layout-base;
+  @media (min-width: $cs-screen-md) {
+    grid-template-columns: 4fr 8fr; 
+  }
+}

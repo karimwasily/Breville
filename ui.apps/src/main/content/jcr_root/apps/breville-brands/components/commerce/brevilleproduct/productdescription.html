@@ -1,0 +1,14 @@
+<template data-sly-template.productDesc="${ @ productDesc, productCallout}">         
+    <section class="product-description">
+        <div class="cmp-product-description">
+           <div class="cmp-product-description__title">
+              <h2>
+                ${productCallout @ context = 'html'}
+              </h2>
+           </div>
+           <div class="cmp-product-description__content">
+                ${productDesc @ context = 'html'}
+           </div>
+        </div>
+    </section>
+</template>

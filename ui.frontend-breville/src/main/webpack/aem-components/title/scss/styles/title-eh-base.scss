@@ -1,0 +1,14 @@
+.cmp-title--base-h2 {
+  padding: 0;
+
+  .cmp-title__text {
+    @extend %cs-font-h2;
+    flex-grow: 0;
+
+    color: $cs-color-primary;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+  }
+}

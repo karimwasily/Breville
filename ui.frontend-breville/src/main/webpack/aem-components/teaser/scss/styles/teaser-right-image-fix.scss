@@ -1,0 +1,17 @@
+@import 'teaser-image-base-fix';
+
+.cmp-teaser--right-image-fix {
+  @extend %teaser-image-fix;
+  margin: $spacing-sm 0;
+
+  .cmp-teaser {
+    flex-direction: column-reverse;
+    @media (min-width: $screen-md) {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  @media (min-width: $screen-md) {
+    margin: $spacing-lg-2 0;
+  }
+}

@@ -1,0 +1,140 @@
+// style wrapper applied to video app policy
+%cmp-reactvideo--embed {
+  position: relative;
+
+  background-color: $black;
+
+  .teaser {
+    // * used to match height of video player
+    padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+
+    .cmp-teaser {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      background: $background-overlay-video-embed;
+
+      &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+
+        width: 100%;
+        height: 100%;
+
+        .cmp-image__mask {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          color: $white;
+
+          background: $background-overlay-video-embed;
+        }
+
+        .cmp-image {
+          height: 100%;
+
+          &__image {
+            width: 100% !important;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+
+      &__content {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+
+        text-align: center;
+          
+        .cmp-teaser__title {
+          order: 1;
+          margin-bottom: 0;
+          padding-bottom: $spacing-xxs;
+
+          color: $white;
+          font-weight: $font-weight-normal;
+          font-size: $font-size-h3-mobile;
+          font-family: $font-family-primary-light;
+
+          line-height: $line-height-base;
+          text-align: center;
+          text-shadow: $text-shadow;
+
+          @media (min-width: $screen-sm) {
+            font-size: $font-size-h2;
+            line-height: $line-height-h2;
+          }
+        }
+
+        .cmp-teaser__subtitle {
+          display: none;
+        }
+
+        .cmp-teaser__description {
+          display: none;
+        }
+
+        .cmp-teaser__action-container {
+          order: 2;
+
+          .button {
+            margin: $spacing-sm;
+
+            .cmp-button {
+              @extend  %play-button-svg-white;
+              width: 3.95rem;
+              height: 3.95rem;
+
+              background-color: transparent;
+              background-color: $cs-black-transparent;
+              background-repeat: no-repeat;
+              border: 0;
+              border-radius: 50%;
+              cursor: pointer;
+
+              @media (min-width: $screen-md) {
+                width: 5.25rem;
+                height: 5.25rem;
+              }
+
+              &:hover {
+                @extend  %play-button-hover-svg-white;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cmp-reactvideo-close-button {
+    // * removed dynamic close button
+    display: none;
+  }
+}
+
+.cmp-reactvideo--embed {
+  @extend %cmp-reactvideo--embed;
+}

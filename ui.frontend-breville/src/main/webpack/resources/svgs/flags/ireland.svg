@@ -1,0 +1,11 @@
+<svg id="Flag_IRE" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">e>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-671.000000, -116.000000)" fill-rule="nonzero">
+            <g  transform="translate(671.000000, 116.000000)">
+                <polygon id="Path" fill="#696969" points="0 0 16 0 16 48 0 48"></polygon>
+                <polygon id="Path" fill="#FFFFFF" points="16 0 32 0 32 48 16 48"></polygon>
+                <polygon id="Path" fill="#989898" points="32 0 48 0 48 48 32 48"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

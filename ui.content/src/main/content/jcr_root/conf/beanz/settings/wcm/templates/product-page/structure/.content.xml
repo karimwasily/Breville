@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2021-02-16T09:55:36.991+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/beanz/settings/wcm/templates/product-page"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <experiencefragment
+                jcr:created="{Date}2021-02-16T09:54:15.073+11:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-02-16T09:54:33.662+11:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/beanz/language-masters/en/site/header/master"/>
+            <container
+                jcr:lastModified="{Date}2021-02-16T09:55:12.429+11:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <breadcrumb
+                    jcr:created="{Date}2021-02-16T09:55:36.986+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-02-16T09:55:36.986+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/commerce/breadcrumb"/>
+                <container
+                    jcr:created="{Date}2021-02-16T09:55:15.182+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-02-16T09:55:15.182+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    editable="{Boolean}true"/>
+            </container>
+            <beanzproducts
+                jcr:created="{Date}2021-05-28T09:46:39.070+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-05-28T09:46:39.070+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/beanz/beanzProducts"
+                cartPagePath="/content/beanz/us/en/transaction/cart.html"
+                coffeeSelectionHeading="Select this new coffee?"
+                flavourText="Flavor"
+                frequencyText="Frequency"
+                grindText="Grind"
+                methodText="Method"
+                noBtnLbl="No, select again"
+                plpPagePath="/content/beanz/us/en/beans"
+                quantityText="Quantity"
+                subscriptionPagePath="/content/beanz/us/en/my-beanz/purchases.html#subscriptions"
+                weightText="Weight"
+                yesBtnLbl="Yes, keep this one">
+                <customBreadCrumb
+                    jcr:lastModified="{Date}2021-07-07T14:21:55.065+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/custombreadcrumb"
+                    roasterParentUrl="/content/beanz/us/en/our-roasters"
+                    startLevel="3"/>
+            </beanzproducts>
+            <beanzrelatedproducts
+                jcr:created="{Date}2021-06-14T16:40:29.797+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-15T19:10:17.282+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/beanz/beanzRelatedProducts"
+                buyNowBtn="View"
+                productPagePath="/content/beanz/us/en/beans/product/"
+                relatedProductsHeading="Beans you may also like"
+                subscriptionMsg="Subscribe &amp; enjoy Free Shipping. Minimum of 2 bags per delivery applies."/>
+            <teaser
+                cq:styleIds="[1625725969685,1614814251169]"
+                jcr:created="{Date}2021-06-15T09:45:09.522+05:30"
+                jcr:createdBy="admin"
+                jcr:description="&lt;p>Hand-picked by us, this pack is for beginners, explorers, or even seasoned experts, who want variety or to try new flavors.&lt;/p>&#xd;&#xa;"
+                jcr:lastModified="{Date}2021-06-15T09:48:07.103+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Barista's Choice"
+                sling:resourceType="breville-brands/components/teaser"
+                actionsEnabled="true"
+                descriptionFromPage="false"
+                fileReference="/content/dam/marketplace/us/assets/questionnaire/Quiz_Internal_CaffineVdecaf.jpg"
+                textIsRich="true"
+                titleFromPage="false">
+                <actions jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        link="/content/beanz/us/en/baristas-choice.html"
+                        text="Explore new beanz"/>
+                </actions>
+            </teaser>
+            <experiencefragment_50010806
+                jcr:created="{Date}2021-02-16T09:54:17.390+11:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-02-16T09:54:51.527+11:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/beanz/language-masters/en/site/footer/master"/>
+            <experiencefragment_773185849
+                jcr:created="{Date}2021-03-29T14:49:28.921+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-29T14:49:47.189+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/beanz/language-masters/en/site/order-help-popup/master"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

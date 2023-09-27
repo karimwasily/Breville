@@ -1,0 +1,75 @@
+.cmp-form__checkout--form-control {
+  margin: $spacing-ml 0;
+  position: relative;
+
+  .cmp-form__checkout--form-label {
+    @extend %form-label-border-bottom-input;
+    font-weight: $font-weight-normal;
+    text-align: left;
+    top: -$spacing-lg;
+    font-size: $font-size-xsmall;
+
+    &.label_absolute {
+      font-size: $font-size-base;
+      left: 0;
+      margin: 0;
+      padding: $spacing-sm $spacing-xs 0 0;
+      position: absolute;
+      top: -$spacing-xxs;
+      transition: all $animation-duration;
+    }
+  }
+
+  .cmp-form__checkout--form-input {
+    @extend %form-input-border-bottom;
+    margin-top: 0;
+    height: 40px;
+
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 30px $white inset !important;
+    }
+  }
+
+  .cmp-form__checkout--form-textarea {
+    display: block;
+  }
+
+  .select {
+    @extend %form-green-border-select-input;
+  }
+}
+
+.invalid {
+  .cmp-form__error-message {
+    @extend %font-small-p;
+    color: $rosso-corsa;
+    text-align: left;
+  }
+
+  .cmp-form__checkout--form-input,
+  .cmp-form__checkout--form-textarea {
+    border-color: $rosso-corsa;
+  }
+}
+
+.cmp-checkout__shipping-adress-checkobox {
+  margin-bottom: $spacing-md;
+
+  .cmp-col__checkout__shipping-adress-checkobox {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+  }
+
+  .cmp-form__checkout--form-control {
+    display: flex;
+    width: 20px;
+    margin: 0 $spacing-xs 0 0;
+  }
+
+  .cmp-checkout__shipping-adress-checkobox--label {
+    @extend %font-small-p;
+    flex: 1;
+  }
+}

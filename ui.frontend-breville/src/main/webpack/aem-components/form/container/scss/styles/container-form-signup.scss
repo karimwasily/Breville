@@ -1,0 +1,65 @@
+.page {
+  .cmp-form-container--signup {
+    &.container {
+      display: none;
+    }
+  }
+
+  .cmp-container--signup-success,
+  .cmp-container--signup-failure {
+    .cmp-container {
+      margin-top: 0;
+      position: absolute;
+      background-color: $white;
+      background-clip: padding-box;
+      border: 1px solid $background-overlay;
+      width: auto;
+      max-width: 100%;
+      transform: translate(0%, -50%);
+      left: $spacing-sm;
+      right: $spacing-sm;
+      top: 50%;
+      opacity: 0;
+      @media (min-width:$screen-sm) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        max-width: 570px;
+        padding: $spacing-sm;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+.cmp-form-container--signup {
+  &.container {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    width: 100%;
+    animation-name: fadeIn;
+    animation-duration: $transition-speed;
+    max-width: $screen-xxl;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @media (min-width:$screen-md) {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+
+    .cmp-form {
+      overflow-y: auto;
+      max-height: 610px;
+      animation-name: slideInUp;
+      animation-duration: $transition-speed;
+      box-shadow: $box-shadow;
+      background-color: $white;
+      padding: $spacing-md;
+    }
+  }
+}

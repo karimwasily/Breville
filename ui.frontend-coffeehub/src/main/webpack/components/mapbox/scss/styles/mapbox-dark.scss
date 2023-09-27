@@ -1,0 +1,13 @@
+.cmp-mapbox--dark {
+  .cmp-mapbox {
+    .cmp-mapbox__content {
+      color: $white;
+    
+      .cmp-mapbox__intro,
+      .cmp-mapbox__footer,
+      .cmp-mapbox__featured-story {
+        background: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}

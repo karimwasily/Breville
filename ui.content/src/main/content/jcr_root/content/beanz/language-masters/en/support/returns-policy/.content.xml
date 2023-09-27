@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-03-03T19:08:08.481-06:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/beanz/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Return Policy"
+        jcr:uuid="b6dbb24f-bf82-4f9e-aaba-4f577badc039"
+        sling:resourceType="breville-brands/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="breville-brands/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="breville-brands/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container"
+                    layout="responsiveGrid">
+                    <container
+                        cq:styleIds="[1614814916963]"
+                        jcr:created="{Date}2021-03-03T18:46:34.652-06:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-03-03T18:46:34.652-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/container">
+                        <title
+                            cq:styleIds="[1614814439019]"
+                            jcr:created="{Date}2021-03-03T18:46:45.842-06:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-03T18:59:56.075-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Beanz Returns Policy"
+                            sling:resourceType="breville-brands/components/title"
+                            type="h2"/>
+                        <download
+                            cq:styleIds="[1614819119454]"
+                            jcr:created="{Date}2021-03-03T18:54:59.019-06:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-03T18:57:57.551-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Download"
+                            sling:resourceType="breville-brands/components/download"
+                            descriptionFromAsset="false"
+                            fileReference="/content/dam/Beanz_return_policy.pdf"
+                            inline="false"
+                            textIsRich="true"
+                            titleFromAsset="false"/>
+                        <text
+                            jcr:created="{Date}2021-03-03T19:01:23.458-06:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2021-03-03T19:05:47.680-06:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="breville-brands/components/text"
+                            text="&lt;p>If you are not satisfied with your purchase from www.beanz.com, you may be eligible to return it to Breville within 30 days from receipt of shipment. Please contact us for assistance.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Terms and conditions of Return &amp;amp; Refund Policy:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>The coffee must have been purchased directly from www.beanz.com.&lt;/li>&#xd;&#xa;&lt;li>If you believe that your coffee is faulty, damaged or not what you ordered, please contact us so that together we can resolve the situation.. Please do not return your coffee to Breville without first obtaining a Return Authority number. Please note that Breville is not responsible for coffee that is lost or damaged without following this process including obtaining a valid Return Authority number.&lt;/li>&#xd;&#xa;&lt;li>If we ask you to return your coffee, it will be at our expense.&amp;nbsp; The Return Authority number is valid for 14 calendar days from issuance.&lt;/li>&#xd;&#xa;&lt;li>If the item is returnable and you send it back to us packed in the original, &amp;nbsp;packaging and marked with the Return Authority number, Breville will offer you a refund.&amp;nbsp; All refunds will be made based on your original method of payment.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;table cellpadding=&quot;1&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;>&#xd;&#xa;&lt;tbody>&lt;tr>&lt;th scope=&quot;col&quot;>Contact method&lt;/th>&#xd;&#xa;&lt;th scope=&quot;col&quot;>Details&lt;/th>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Online Form:&lt;/td>&#xd;&#xa;&lt;td>&lt;a href=&quot;https://www.brevilleusa.com/pages/cases&quot;>Ask Us&lt;/a>&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>Toll free phone number:&lt;/td>&#xd;&#xa;&lt;td>1-866-BREVILLE (1-866-273-8455)&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>Hours of operation:&lt;/td>&#xd;&#xa;&lt;td>8am to 5pm (Pacific Time)&lt;br>&#xd;&#xa;Monday through Friday, excluding holidays&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>Head Office Address:&lt;/td>&#xd;&#xa;&lt;td>19400 S. Western Ave&lt;br>&#xd;&#xa;Torrance, CA 90501&lt;br>&#xd;&#xa;(Please do not return product to this address without speaking to Breville and obtaining a Return Authority number.)&lt;/td>&#xd;&#xa;&lt;/tr>&lt;/tbody>&lt;/table>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

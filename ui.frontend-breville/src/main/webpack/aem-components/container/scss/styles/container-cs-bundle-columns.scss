@@ -1,0 +1,30 @@
+.cmp-container--cs-bundle-columns {
+  --spacer: #{$cs-spacing-10};
+
+  // @extend %hide-scrollbar;
+  @include create-scrollbar(
+    $foreground: $cs-color-gray-40,
+    $background: $cs-white,
+    $border-width: 5px,
+    $border-radius: $cs-border-radius-8
+  );
+
+  max-width: $cs-max-width;
+  margin: auto;
+  margin-bottom: $cs-spacing-30;
+  overflow-y: auto;
+
+  .cmp-container {
+    display: grid;
+    grid-auto-flow: column;
+    margin: auto;
+    width: auto;
+    gap: var(--spacer);
+    padding: $cs-spacing-10 var(--spacer);
+
+    @media (min-width: $cs-screen-md) {
+      --spacer: #{$cs-spacing-30};
+    }
+
+  }
+}

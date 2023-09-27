@@ -1,0 +1,153 @@
+// todo: icon arrow asset required
+// this style wrapper requires 'TEASER (with CTA button)'
+%cmp-teaser--tile-banner {
+  $transition-duration: 0.3s;
+
+  .cmp-teaser {
+    background: $espresso;
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0;
+    }
+
+    &__image {
+      align-self: stretch;
+
+      .cmp-image {
+        margin: 0;
+        height: 100%;
+
+        &__image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+      }
+    }
+
+    &__content {
+      padding: $spacing-md;
+      direction: initial;
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: $spacing-xxl;
+        margin-top: 0;
+      }
+
+      .cmp-teaser__title {
+        margin-top: $spacing-xs;
+      }
+
+      .cmp-teaser__description {
+        display: none;
+        margin-top: $spacing-md;
+
+        @media (min-width: $screen-md) {
+          display: unset;
+          margin-top: $spacing-lg;
+        }
+      }
+
+      .cmp-teaser__action-container {
+        position: relative;
+        margin-top: $spacing-md;
+        margin-bottom: $spacing-xs;
+        border: 1px solid $black;
+        overflow: hidden;
+        z-index: 1;
+
+        @media (min-width: $screen-md) {
+          margin-top: $spacing-lg;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 200%;
+          height: 100%;
+          background: linear-gradient(to right,
+          $white 0%,
+          $white 50%,
+          rgba($white, 0) 100%);
+
+          transform: translate3d(-100%, 0, 0);
+          z-index: 0;
+
+          transition: transform $transition-duration ease-in-out;
+        }
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+
+          &::before {
+            transform: translate3d(0, 0, 0);
+            pointer-events: none;
+          }
+
+          .cmp-teaser__action-link {
+            &::after {
+              transform: translate3d(5px, -50%, 0);
+            }
+          }
+        }
+
+        .cmp-teaser__action-link {
+          @extend %font-cta;
+          position: relative;
+          z-index: 1;
+          padding: $spacing-md;
+          display: block;
+          height: 100%;
+
+          @media (min-width: $screen-md) {
+            display: inline-block;
+            // gap between text and icon and right button padding
+            padding-right: rem(100px); 
+          }
+
+          &::after {
+            @include arrow-right-icon($color: $black);
+            content: '';
+
+            position: absolute;
+            right: $spacing-md;
+            top: 50%;
+            display: inline-block;
+            z-index: 1;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            transform: translate3d(0, -50%, 0);
+
+            transition: transform $transition-duration ease-in-out;
+          }
+
+          &:focus {
+            outline: 1px auto;
+            outline-offset: -1px;
+            background: $white;
+            transition: transform $transition-duration ease-in-out;
+
+            &::after {
+              transform: translate3d(5px, -50%, 0);
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+.cmp-teaser--tile-banner {
+  @extend %cmp-teaser--tile-banner;
+}

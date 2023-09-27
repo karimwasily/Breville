@@ -1,0 +1,267 @@
+.cmp-myaccount__root {
+  padding: $spacing-xxl $spacing-xs;
+  
+  .cmp-container-myaccount__header {
+    text-align: center;
+    border-bottom: 1px solid $gray80;
+    margin-bottom: $spacing-md;
+  
+    .cmp-text-myaccount__header--h1 {
+      @extend %font-title-small ;
+      color: $font-brown;
+      margin-bottom: $spacing-md;
+    }
+  
+    .cmp-text-myaccount__header--subhead {
+      @extend %font-bold-p;
+      padding-bottom: $spacing-sm;
+      margin-bottom: $spacing-sm;
+      position: relative;
+  
+      &::after {
+        position: absolute;
+        content: '';
+        height: 5px;
+        width: 40px;
+        background-color: $max-blue-green;
+        bottom: 0;
+        left: 50%;
+        margin-left: -$spacing-md;
+        border-radius: $border-radius-base;
+      }
+    }
+  }
+  
+  .cmp-text-myaccount__title--h4 {
+    @extend %font-h4;
+    text-align: center;
+    color: $font-brown;
+  }
+  
+  .cmp-container__myaccount--details {
+    max-width: 400px;
+    margin: auto;
+  
+    .cmp-container__myaccount--filled-details {
+      padding: $spacing-sm 0;
+      position: relative;
+  
+      .cmp-text__myaccount--filled-details-p {
+        @extend %font-semi-bold-p;
+      }
+  
+      .cmp-text__myaccount--filled-details-bold-p {
+        @extend %font-bold-p;
+        margin-bottom: $spacing-xxs;
+      }
+  
+      .cmp-text__myaccount--change-password-a {
+        @extend %font-bold-green-anchor;
+        text-align: center;
+        margin: $spacing-md;
+        display: block;
+      }
+  
+      .cmp-text__myaccount--details-edit,
+      .cmp-text__myaccount--details-save {
+        @extend %font-green-anchor;
+        position: absolute;
+        right: 0;
+        top: $spacing-sm;
+      }
+  
+      .cmp-text__myaccount--filled-details-anchor--set-as-defualt,
+      .cmp-text__myaccount--filled-details-anchor--delete-address {
+        @extend %font-green-anchor;
+        margin: $spacing-xs 0;
+        padding: 0 $spacing-xs;
+        display: inline-block;
+      }
+  
+      .cmp-text__myaccount--filled-details-anchor--set-as-defualt {
+        border-right: 1px solid $gray;
+        padding-left: 0;
+      }
+  
+        
+    }
+  }
+  
+  .cmp-form__myaccount {
+    width: 100%;
+  
+    &.cmp-form__myaccount--address-line-1,
+    &.cmp-form__myaccount--address-line-2 {
+      display: none;
+    }
+
+    .cmp-form__myaccount-form-group {
+      margin-bottom: $spacing-sm;
+    }
+      
+    .cmp-form__myaccount-form-field {
+      display: block;
+      margin-bottom: $spacing-md;
+      position: relative;
+  
+      .cmp-form__myaccount-form-field__label {
+        font-weight: $font-weight-medium-bold;
+        text-transform: none;
+      }
+  
+      &--is-active {
+        margin-bottom: $spacing-md;
+
+        .cmp-form__myaccount-form-field__control {
+          &::after {
+            border-bottom: 1px solid $gray-davy;
+            transform: scaleX(150);
+          }
+        }
+      
+        .cmp-form__myaccount-form-field__label {
+          @include label-active();
+          color: $gray-suva;
+        }
+      }
+
+      .cmp-form__myaccount-form-field__control-error{
+        border-color:$error
+      }
+      
+      &--is-filled {
+        margin-bottom: $spacing-md;
+
+        .cmp-form__myaccount-form-field__label {
+          @include label-active();
+          text-transform: uppercase;
+          color: $gray;
+          font-weight: $font-weight-bold;
+        }
+      }
+  
+      &.phone-number-box {
+        display: flex;
+        align-items: baseline;
+  
+        .cmp-form__myaccount-form-field__input--country-call-code {
+          width: 60px;
+          height: 40px;
+          border: 0;
+          text-align: center;
+          color: $gray;
+          margin-right: $spacing-xs;
+          background: $gray95;
+        }
+      }
+    }
+      
+    .cmp-form__myaccount-form-field__label {
+      @extend %form-label-border-bottom-input;
+    }
+      
+    .cmp-form__myaccount-form-field__control {
+      background: $white;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      
+      &::after {
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        transform: scaleX(0);
+        transition: all $animation-duration;
+        width: 1%;
+      }
+    }
+      
+    .cmp-form__myaccount-form-field__select {
+      @extend %form-green-border-select-input;
+      margin-top: $spacing-md;
+      background-color: $white;
+      padding: $spacing-xs $spacing-xxs;
+    }
+      
+    .cmp-form__myaccount-form-control {
+      width: 100%;
+    }
+      
+    .cmp-form__shipping-country-field {
+      @extend %font-semi-bold-p;
+      border: 1px solid $gray-light;
+      color: $gray-davy;
+      cursor: not-allowed;
+      background: $gray-light;
+      padding: $spacing-sm $spacing-xl $spacing-sm $spacing-xs;
+      width: 100%;
+      margin-top: $spacing-md;
+    }
+      
+    .cmp-form__myaccount-form-field__input,
+    .cmp-form__myaccount-form-field__textarea {
+      @extend %form-input-border-bottom;
+    }
+      
+    .cmp-form__myaccount-form-field__textarea {
+      height: 150px;
+    }
+    
+    .cmp-form__myaccount-form-field_error-p{
+      font-size: $font-size-xsmall;
+      padding-top: $spacing-xxs;
+      color: $error;
+    }
+    .cmp-form__myaccount-form-field_success-p{
+      font-size: $font-size-xsmall;
+      padding-top: $spacing-xxs;
+      color: $forest-green;
+    }
+  }
+  
+  .cmp-container__myaccount--edti-password {
+    padding: $spacing-sm;
+    background-color: $gray-lighter;
+  
+    .cmp-form__myaccount-form-field__control {
+      background-color: transparent;
+      position: relative;
+      margin-bottom: $spacing-md;
+  
+      .cmp-form__myaccount-form-field__label {
+        top: $spacing-xs;
+      }
+  
+      .cmp-form__myaccount-form--show-password,
+      .cmp-form__myaccount-form--hide-password {
+        @extend %font-bold-small-p;
+        color: $gray;
+        position: absolute;
+        right: 0;
+        top: $spacing-ml;
+      }
+
+      .cmp-form__myaccount-form--hide-password {
+        display: none;
+      }
+    }
+  
+    .cmp-button__myaccount-form-field__save {
+      @extend %solid-green-btn;
+      width: 100%;
+      padding: $spacing-xs;
+      margin: $spacing-xs 0;
+    }
+  
+    .cmp-button__myaccount-form-field__cancel {
+      @extend %border-base-green-btn;
+      width: 100%;
+      padding: $spacing-xs;
+      margin: $spacing-xs 0;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-02-16T16:03:46.142+11:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2021-03-08T19:49:46.218-06:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:redirectTarget="/content/breville/language-masters/en/beans/category-page.4.html"
+        cq:template="/conf/breville/settings/wcm/templates/catalogue-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Shop Coffee"
+        jcr:uuid="6a47b932-66f8-43f3-b7cb-5a4e4e8c2378"
+        sling:resourceType="breville-brands/components/commerce/catalogpage"
+        showMainCategories="{Boolean}false">
+        <root jcr:primaryType="nt:unstructured">
+            <container jcr:primaryType="nt:unstructured">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="breville-brands/components/container">
+                    <productlist
+                        jcr:created="{Date}2021-02-16T11:26:48.152+11:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-02-16T11:26:48.152+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="breville-brands/components/commerce/productlist"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+    <category-page/>
+    <product-page/>
+</jcr:root>

@@ -1,0 +1,228 @@
+
+.order-details-shipment {
+  margin-top: $cs-spacing-20;
+  padding: 0 $cs-spacing-20;
+
+  background-color: $cs-white;
+  border-top-left-radius: $cs-border-radius-8;
+  border-top-right-radius: $cs-border-radius-8;
+
+  @media (min-width: $cs-screen-xl) {
+    padding: 0 $cs-spacing-30;
+  }
+
+  .order-details-shipment-strip {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $cs-spacing-5;
+    padding: $cs-spacing-15 0;
+
+    background-color: $cs-white;
+    border-top-left-radius: $cs-spacing-5;
+    border-top-right-radius: $cs-spacing-5;
+  
+    @media (min-width: $cs-screen-xl) {
+      grid-template-columns: repeat(3, 1fr);
+      padding: $cs-spacing-20 0;
+    }
+  
+    .shipment-count {
+      display: flex;
+      flex-direction: row;
+      gap: $cs-spacing-5;
+
+      font-weight: $cs-font-weight-bold;
+    }
+  
+    .shipment-status {
+      @media (min-width: $cs-screen-xl) {
+        text-align: center;
+      }
+    }
+  
+    .label-font-weight-bold {
+      font-weight: $cs-font-weight-bold;
+    }
+
+    .label-font-weight-bold-green {
+      color: $cs-forest-green;
+      font-weight: $cs-font-weight-bold;
+    }
+    
+    .label-font-weight-bold-orange {
+      color: $cs-orange;
+      font-weight: $cs-font-weight-bold;
+    }
+  
+    p {
+      @extend %cs-font-p-4;
+      margin-bottom: 0 !important;
+    }
+  }
+  
+    
+  .shipment-details {
+    .label-font-weight-bold {
+      font-weight: $cs-font-weight-bold;
+    }
+
+    .shipment-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding: $cs-spacing-25 0;
+
+      background-color: $cs-white;
+      border-top: 1px solid $cs-gainsboro;
+      
+      @media (min-width: $cs-screen-xl) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: $cs-spacing-10;
+        padding: $cs-spacing-30 0;
+      }
+    
+      .shipment-detail {
+        display: flex;
+        flex-direction: row;
+
+        text-align: left;
+        @media (min-width: $cs-screen-xl) {
+          grid-column: 1/3;
+          gap: $cs-spacing-5;
+        }
+        @media (min-width: $cs-screen-xl) {
+          gap: $cs-spacing-15;     
+        }
+
+        .shipment-item-image {
+          flex-grow: 1;
+          max-width: $cs-spacing-90;
+          max-height: $cs-spacing-90;
+          margin-right: $cs-spacing-20;
+          @media (min-width: $cs-screen-lg) {
+            max-width: $cs-spacing-110;
+            max-height: $cs-spacing-110;
+            margin-right: 0;
+          }
+        }
+
+        .shipment-item-name {
+          @extend %cs-font-p-3;
+          font-weight: $cs-font-weight-bold;
+          font-family: $cs-font-family-bold;
+          @media (min-width: $cs-screen-xl) {
+            font-size: $cs-font-size-h12;
+          }
+        }
+      }
+
+      .shipment-text-model-container {
+        display: flex;
+        flex-direction: column;
+
+        .shipment-text-model-1 {
+          margin-top: $cs-spacing-5;
+
+          color: $cs-monsoon;
+          font-weight: $cs-font-weight-normal;
+          font-size: $cs-font-size-xsmall;
+          font-family: $cs-font-family-paragraph;
+        }
+
+        .shipment-text-model-2 {
+          display: flex;
+          flex-direction: row;
+          gap: $cs-spacing-5;
+          align-items: center;
+          margin-top: $cs-spacing-10;
+
+          color: $cs-gunmetal;
+          font-weight: $cs-font-weight-normal;
+          font-size: $cs-font-size-small;
+
+          .swatch-image {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      .shipment-quantity {
+        position: relative;
+        bottom: 0;
+
+        display: inline;
+        grid-row-start: 2;
+        width: fit-content;
+        margin-top: $cs-spacing-10;
+        margin-left: $cs-spacing-110;
+        
+        @media (min-width: $cs-screen-xl) {
+          bottom: 0;
+
+          display: inline-block;
+          grid-row-start: unset;
+          width: 100%;
+          margin-top: 0;
+          margin-left: 0;
+
+          text-align: right;
+        }
+
+        .quantity-text {
+          margin-left: $cs-spacing-5;
+
+          font-weight: $cs-font-weight-bold;
+        }
+      }
+
+      .shipment-total-price {
+        position: relative;
+        bottom: 0;
+
+        display: inline;
+        grid-row-start: 2;
+        width: fit-content;
+        margin-top: $cs-spacing-10;
+        margin-left: 0;
+       
+        @media (min-width: $cs-screen-xl) {
+          bottom: 0;
+
+          display: inline-block;
+          grid-row-start: unset;
+          width: 100%;
+          margin-top: 0;
+          margin-left: 0;
+
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.order-total {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: $cs-spacing-20;
+
+  background-color: $cs-white;
+  border-top: 1px solid $cs-gainsboro;
+  border-bottom-right-radius: $cs-border-radius-8;
+  border-bottom-left-radius: $cs-border-radius-8;
+
+  @media (min-width: $screen-md) {
+    padding: $cs-spacing-30;
+  
+  }
+
+  .price {
+    @extend %cs-font-p-2;
+    margin-bottom: 0;
+
+    .value {
+      @extend %cs-font-p-2;
+      font-weight: $cs-font-weight-bold;
+    }
+  }
+}

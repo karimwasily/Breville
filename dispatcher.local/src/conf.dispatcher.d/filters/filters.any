@@ -1,0 +1,18 @@
+#
+# This file contains the filter ACL, and can be customized.
+#
+# By default, it includes the default filter ACL.
+#
+
+$include "./default_filters.any"
+
+# Allow components JSON model
+/0101 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
+
+# Allow manifest.webmanifest files located in the content
+/0102 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
+
+/0200 { /type "allow" /method "GET" /path "/content/breville-brands/*" /selectors '[0-9-]+' /extension "html" }
+/0201 { /type "allow" /method "GET" /path "/content/beanz/*" /selectors '[0-9-]+' /extension "html" }
+/0202 { /type "allow" /method "GET" /path "/content/breville/*" /selectors '[0-9-]+' /extension "html" }
+/0203 { /type "allow" /method "GET" /path "/conf/breville-brands/settings/wcm/templates/*" /extension "svg" }

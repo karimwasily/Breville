@@ -1,0 +1,74 @@
+.cmp-container--responsive-2-column-layout-tw {
+  > .cmp-container:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+    overflow: hidden;
+    z-index: 1;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+
+    .aos-teaser {
+      flex-basis: 57%;
+    }
+
+    .aos-container {
+      flex-basis: 43%;
+    }
+  }
+
+  .cmp-image__image {
+    width: 100%;
+  }
+}
+
+.cmp-container--responsive-2-column-image-layout {
+  .cmp-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-auto-flow: dense;
+    gap: $spacing-xs;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    margin: $spacing-tw-xxs auto $spacing-xxl;
+    @media (min-width: $screen-md) {
+      margin: auto;
+    }
+    @media (min-width: $screen-xxl) {
+      width: fit-content;
+      float: right;
+      margin: 0;
+    }
+  }
+
+  .cmp-image__image {
+    width: 80%;
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+    @media (min-width: $screen-xxxl) {
+      width: inherit;
+    }
+  }
+}
+
+.cmp-container--responsive-2-column-layout-mapbox {
+  > .cmp-container:first-child {
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: $spacing-tw-md;
+
+    @media (min-width: $screen-md) {
+      width: 57%;
+      margin-top: 0;
+    }
+  }
+
+}
